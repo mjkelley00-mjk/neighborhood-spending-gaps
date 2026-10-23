@@ -15,7 +15,7 @@
  * the only thing that decides whether it shows on the site, so changing it in the sheet by hand works too:
  * set an approved area to "removed" to take it off the site. A review link cannot change a removed row.
  *
- * Script properties (Project Settings > Script properties), set by setup():
+ * Script properties (Project Settings > Script properties); setup() creates the first three:
  *   SHEET_ID    the sheet this script writes to
  *   NOTIFY      who gets the emails (comma-separated; defaults to the script owner)
  *   SECRET      signs the review links (changing it invalidates links already sent)
