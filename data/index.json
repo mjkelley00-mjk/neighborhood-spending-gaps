@@ -1,0 +1,754 @@
+{
+ "states": [
+  {
+   "fips": "01",
+   "name": "Alabama",
+   "usps": "AL",
+   "tracts": 1437,
+   "bytes": 791890,
+   "counties": 67
+  },
+  {
+   "fips": "02",
+   "name": "Alaska",
+   "usps": "AK",
+   "tracts": 177,
+   "bytes": 266027,
+   "counties": 30
+  },
+  {
+   "fips": "04",
+   "name": "Arizona",
+   "usps": "AZ",
+   "tracts": 1765,
+   "bytes": 881747,
+   "counties": 15
+  },
+  {
+   "fips": "05",
+   "name": "Arkansas",
+   "usps": "AR",
+   "tracts": 823,
+   "bytes": 469812,
+   "counties": 75
+  },
+  {
+   "fips": "06",
+   "name": "California",
+   "usps": "CA",
+   "tracts": 9129,
+   "bytes": 4629364,
+   "counties": 58
+  },
+  {
+   "fips": "08",
+   "name": "Colorado",
+   "usps": "CO",
+   "tracts": 1447,
+   "bytes": 755097,
+   "counties": 64
+  },
+  {
+   "fips": "09",
+   "name": "Connecticut",
+   "usps": "CT",
+   "tracts": 884,
+   "bytes": 450088,
+   "counties": 9
+  },
+  {
+   "fips": "10",
+   "name": "Delaware",
+   "usps": "DE",
+   "tracts": 262,
+   "bytes": 131362,
+   "counties": 3
+  },
+  {
+   "fips": "11",
+   "name": "District of Columbia",
+   "usps": "DC",
+   "tracts": 206,
+   "bytes": 120046,
+   "counties": 1
+  },
+  {
+   "fips": "12",
+   "name": "Florida",
+   "usps": "FL",
+   "tracts": 5160,
+   "bytes": 2559068,
+   "counties": 67
+  },
+  {
+   "fips": "13",
+   "name": "Georgia",
+   "usps": "GA",
+   "tracts": 2796,
+   "bytes": 1447261,
+   "counties": 159
+  },
+  {
+   "fips": "15",
+   "name": "Hawaii",
+   "usps": "HI",
+   "tracts": 461,
+   "bytes": 218683,
+   "counties": 5
+  },
+  {
+   "fips": "16",
+   "name": "Idaho",
+   "usps": "ID",
+   "tracts": 456,
+   "bytes": 254790,
+   "counties": 44
+  },
+  {
+   "fips": "17",
+   "name": "Illinois",
+   "usps": "IL",
+   "tracts": 3265,
+   "bytes": 1647715,
+   "counties": 102
+  },
+  {
+   "fips": "18",
+   "name": "Indiana",
+   "usps": "IN",
+   "tracts": 1696,
+   "bytes": 849541,
+   "counties": 92
+  },
+  {
+   "fips": "19",
+   "name": "Iowa",
+   "usps": "IA",
+   "tracts": 896,
+   "bytes": 470163,
+   "counties": 99
+  },
+  {
+   "fips": "20",
+   "name": "Kansas",
+   "usps": "KS",
+   "tracts": 829,
+   "bytes": 417921,
+   "counties": 105
+  },
+  {
+   "fips": "21",
+   "name": "Kentucky",
+   "usps": "KY",
+   "tracts": 1306,
+   "bytes": 717362,
+   "counties": 120
+  },
+  {
+   "fips": "22",
+   "name": "Louisiana",
+   "usps": "LA",
+   "tracts": 1388,
+   "bytes": 731527,
+   "counties": 64
+  },
+  {
+   "fips": "23",
+   "name": "Maine",
+   "usps": "ME",
+   "tracts": 407,
+   "bytes": 231641,
+   "counties": 16
+  },
+  {
+   "fips": "24",
+   "name": "Maryland",
+   "usps": "MD",
+   "tracts": 1475,
+   "bytes": 772706,
+   "counties": 24
+  },
+  {
+   "fips": "25",
+   "name": "Massachusetts",
+   "usps": "MA",
+   "tracts": 1620,
+   "bytes": 840204,
+   "counties": 14
+  },
+  {
+   "fips": "26",
+   "name": "Michigan",
+   "usps": "MI",
+   "tracts": 3017,
+   "bytes": 1430263,
+   "counties": 83
+  },
+  {
+   "fips": "27",
+   "name": "Minnesota",
+   "usps": "MN",
+   "tracts": 1505,
+   "bytes": 777381,
+   "counties": 87
+  },
+  {
+   "fips": "28",
+   "name": "Mississippi",
+   "usps": "MS",
+   "tracts": 878,
+   "bytes": 469670,
+   "counties": 82
+  },
+  {
+   "fips": "29",
+   "name": "Missouri",
+   "usps": "MO",
+   "tracts": 1654,
+   "bytes": 872921,
+   "counties": 115
+  },
+  {
+   "fips": "30",
+   "name": "Montana",
+   "usps": "MT",
+   "tracts": 319,
+   "bytes": 213562,
+   "counties": 56
+  },
+  {
+   "fips": "31",
+   "name": "Nebraska",
+   "usps": "NE",
+   "tracts": 553,
+   "bytes": 286165,
+   "counties": 93
+  },
+  {
+   "fips": "32",
+   "name": "Nevada",
+   "usps": "NV",
+   "tracts": 779,
+   "bytes": 379519,
+   "counties": 17
+  },
+  {
+   "fips": "33",
+   "name": "New Hampshire",
+   "usps": "NH",
+   "tracts": 350,
+   "bytes": 185916,
+   "counties": 10
+  },
+  {
+   "fips": "34",
+   "name": "New Jersey",
+   "usps": "NJ",
+   "tracts": 2181,
+   "bytes": 1103405,
+   "counties": 21
+  },
+  {
+   "fips": "35",
+   "name": "New Mexico",
+   "usps": "NM",
+   "tracts": 612,
+   "bytes": 324333,
+   "counties": 33
+  },
+  {
+   "fips": "36",
+   "name": "New York",
+   "usps": "NY",
+   "tracts": 5411,
+   "bytes": 2660252,
+   "counties": 62
+  },
+  {
+   "fips": "37",
+   "name": "North Carolina",
+   "usps": "NC",
+   "tracts": 2672,
+   "bytes": 1416605,
+   "counties": 100
+  },
+  {
+   "fips": "38",
+   "name": "North Dakota",
+   "usps": "ND",
+   "tracts": 228,
+   "bytes": 133443,
+   "counties": 53
+  },
+  {
+   "fips": "39",
+   "name": "Ohio",
+   "usps": "OH",
+   "tracts": 3168,
+   "bytes": 1574583,
+   "counties": 88
+  },
+  {
+   "fips": "40",
+   "name": "Oklahoma",
+   "usps": "OK",
+   "tracts": 1205,
+   "bytes": 607484,
+   "counties": 77
+  },
+  {
+   "fips": "41",
+   "name": "Oregon",
+   "usps": "OR",
+   "tracts": 1001,
+   "bytes": 560096,
+   "counties": 36
+  },
+  {
+   "fips": "42",
+   "name": "Pennsylvania",
+   "usps": "PA",
+   "tracts": 3446,
+   "bytes": 1796898,
+   "counties": 67
+  },
+  {
+   "fips": "44",
+   "name": "Rhode Island",
+   "usps": "RI",
+   "tracts": 250,
+   "bytes": 128031,
+   "counties": 5
+  },
+  {
+   "fips": "45",
+   "name": "South Carolina",
+   "usps": "SC",
+   "tracts": 1323,
+   "bytes": 704695,
+   "counties": 46
+  },
+  {
+   "fips": "46",
+   "name": "South Dakota",
+   "usps": "SD",
+   "tracts": 242,
+   "bytes": 140193,
+   "counties": 66
+  },
+  {
+   "fips": "47",
+   "name": "Tennessee",
+   "usps": "TN",
+   "tracts": 1701,
+   "bytes": 922317,
+   "counties": 95
+  },
+  {
+   "fips": "48",
+   "name": "Texas",
+   "usps": "TX",
+   "tracts": 6896,
+   "bytes": 3453702,
+   "counties": 254
+  },
+  {
+   "fips": "49",
+   "name": "Utah",
+   "usps": "UT",
+   "tracts": 716,
+   "bytes": 389147,
+   "counties": 29
+  },
+  {
+   "fips": "50",
+   "name": "Vermont",
+   "usps": "VT",
+   "tracts": 193,
+   "bytes": 105832,
+   "counties": 14
+  },
+  {
+   "fips": "51",
+   "name": "Virginia",
+   "usps": "VA",
+   "tracts": 2198,
+   "bytes": 1143170,
+   "counties": 133
+  },
+  {
+   "fips": "53",
+   "name": "Washington",
+   "usps": "WA",
+   "tracts": 1784,
+   "bytes": 952950,
+   "counties": 39
+  },
+  {
+   "fips": "54",
+   "name": "West Virginia",
+   "usps": "WV",
+   "tracts": 546,
+   "bytes": 334078,
+   "counties": 55
+  },
+  {
+   "fips": "55",
+   "name": "Wisconsin",
+   "usps": "WI",
+   "tracts": 1542,
+   "bytes": 791098,
+   "counties": 72
+  },
+  {
+   "fips": "56",
+   "name": "Wyoming",
+   "usps": "WY",
+   "tracts": 160,
+   "bytes": 99830,
+   "counties": 23
+  }
+ ],
+ "calib": {
+  "groceries": {
+   "lodes": 1.354948014617727,
+   "zbp": 1.2936947109318493
+  },
+  "fsr": {
+   "lodes": 1.4827318903142346,
+   "zbp": 1.6363919144329542
+  },
+  "qsr": {
+   "lodes": 1.7952216452864362,
+   "zbp": 2.01287316447022
+  },
+  "alcohol": {
+   "lodes": 3.0926666726957044,
+   "zbp": 3.0641848034562185
+  },
+  "tobacco": {
+   "lodes": 3.5402981863997454,
+   "zbp": 3.278970942910614
+  },
+  "household": {
+   "lodes": 2.1282345155186433,
+   "zbp": 2.0211401309240036
+  },
+  "pets_toys": {
+   "lodes": 0.9739431107573147,
+   "zbp": 0.9223632634240092
+  },
+  "perscare": {
+   "lodes": 1.5029076938891437,
+   "zbp": 1.6520729103743317
+  },
+  "apparel": {
+   "lodes": 1.8918704065616494,
+   "zbp": 1.8478579822903496
+  },
+  "home": {
+   "lodes": 1.0632002731733607,
+   "zbp": 1.0279727820635445
+  },
+  "gas": {
+   "lodes": 1.6657055766801387,
+   "zbp": 1.5421841352150798
+  },
+  "auto": {
+   "lodes": 2.8752289455494506,
+   "zbp": 3.345102740665801
+  }
+ },
+ "store_avg": {
+  "groceries": {
+   "label": "supermarket",
+   "code": "445110",
+   "share": 0.7927,
+   "sales": 10413903.050076585
+  },
+  "fsr": {
+   "label": "full-service restaurant",
+   "code": "722511",
+   "share": 0.8135,
+   "sales": 1279010.2960032192
+  },
+  "qsr": {
+   "label": "limited-service restaurant",
+   "code": "722513",
+   "share": 0.9712,
+   "sales": 1377503.8715101664
+  },
+  "apparel": {
+   "label": "clothing or shoe store",
+   "code": "458",
+   "share": 0.9071,
+   "sales": 2926610.6697871266
+  },
+  "home": {
+   "label": "furniture or home furnishings store",
+   "code": "4491",
+   "share": 0.8698,
+   "sales": 3476665.6972564566
+  }
+ },
+ "us_totals": {
+  "d_groceries": 822505907591,
+  "d_restaurants": 534701778965,
+  "d_fsr": 247615653204,
+  "d_qsr": 287086125762,
+  "d_alcohol": 88455735997,
+  "d_tobacco": 45136958788,
+  "d_household": 116339118372,
+  "d_pets_toys": 163148382136,
+  "d_perscare": 132099158212,
+  "d_apparel": 270992138122,
+  "d_home": 326669052475,
+  "d_gas": 335716155119,
+  "d_auto": 125788436251,
+  "d_rx": 116955883137,
+  "d_entertain": 133409792253,
+  "l_groceries": 1114452746502,
+  "z_groceries": 1064071542361,
+  "l_fsr": 367147625546,
+  "z_fsr": 405196252789,
+  "l_qsr": 515383227029,
+  "z_qsr": 577867958437,
+  "l_alcohol": 273564106728,
+  "z_alcohol": 271044722022,
+  "l_tobacco": 159798293338,
+  "z_tobacco": 148002776319,
+  "l_household": 247596927224,
+  "z_household": 235137660938,
+  "l_pets_toys": 158897242812,
+  "z_pets_toys": 150482074169,
+  "l_perscare": 198532841233,
+  "z_perscare": 218237440765,
+  "l_apparel": 512682006524,
+  "z_apparel": 500754985567,
+  "l_home": 347314625829,
+  "z_home": 335806894687,
+  "l_gas": 559204271763,
+  "z_gas": 517736128359,
+  "l_auto": 361670552923,
+  "z_auto": 420775242846
+ },
+ "cats_dem": [
+  "groceries",
+  "fsr",
+  "qsr",
+  "alcohol",
+  "tobacco",
+  "household",
+  "pets_toys",
+  "perscare",
+  "apparel",
+  "home",
+  "gas",
+  "auto",
+  "rx",
+  "entertain"
+ ],
+ "cats_sup": [
+  "groceries",
+  "fsr",
+  "qsr",
+  "alcohol",
+  "tobacco",
+  "household",
+  "pets_toys",
+  "perscare",
+  "apparel",
+  "home",
+  "gas",
+  "auto"
+ ],
+ "fsr_share": 0.46309113405763513,
+ "fsr_share_stores": 0.41409677574316084,
+ "src_names": {
+  "can-databc": "DataBC - British Colombia Open Data Catalogue",
+  "geoplanet": "Yahoo! GeoPlanet",
+  "fra-odp": "Open Data Paris",
+  "us-dshiu": "U.S. Department of State - Humanitarian Information Unit",
+  "oulugov": "City of Oulu",
+  "thelist": "The List - Bay Area Concert Guide",
+  "sfac": "San Francisco Arts Commission",
+  "acgov": "Alameda County Data Sharing Initiative",
+  "begov": "Voorlopig Referentiebestand Gemeentegrenzen",
+  "bra": "Boston Redevelopment Authority",
+  "pedia": "Pediacities",
+  "santabar": "The City of Santa Barbara",
+  "nycgov_dohmh": "New York City Department of Health and Mental Hygiene",
+  "fra-insee": "Institut national de la statistique et des \u00e9tudes \u00e9conomiques (Insee)",
+  "fifa": "Federation Internationale de Football Association",
+  "sfgov_rbl": "City of San Francisco Treasurer & Tax Collector's Office (Registered Business Locations)",
+  "tmpgov": "Tampere City Survey GIS",
+  "vanpds": "Vancouver Planning and Development Services",
+  "dial": "Dial Codes",
+  "lieu": "lieu",
+  "gbr-ons": "Office for National Statistics",
+  "edtf": "Extended Date/Time Format",
+  "hk-gov": "Hong Kong Open Data Portal",
+  "tgn": "Getty Thesaurus of Geographic Names",
+  "ro-ancpi": "Romanian National Agency for Cadastre and Land Registration (ANCPI)",
+  "mapshaper": "Mapshaper",
+  "esp-aytomad": "Portal de datos abiertos del Ayuntamiento de Madrid",
+  "figov": "NLS National Land Survey of Finland",
+  "ordnancesurvey": "Ordnance Survey",
+  "sjp": "San Jose Planning Department",
+  "freebase": "Freebase",
+  "can-qcodp": "Quebec City Open Data Portal",
+  "nycgov": "NYC OpenData",
+  "lacity": "City of Los Angeles Neighborhood Councils (Certified)",
+  "porbps": "City of Portland Bureau of Planning and Sustainability",
+  "baltomoit": "Baltimore Mayor's Office of Information Technology",
+  "can-edmdsd": "City of Edmonton Department of Sustainable Development",
+  "cbsnl": "Centraal Bureau voor de Statistiek",
+  "Open Data Portal for Northern Ireland": "Ordnance Survey of Northern Ireland",
+  "whereonearth": "Yahoo! GeoPlanet (formerly Where On Earth)",
+  "can-nwds": "City of New Westminster Development Services Department",
+  "karmashapes": "Karmashapes",
+  "mx-conanp": "Mexico's Comision Nacional de Areas Naturales Protegidas",
+  "name": "name",
+  "atldpcd": "Atlanta Department of Planning and Community Development",
+  "minitenders": "Mini Tenders",
+  "uk-dgnp": "data.gov.uk's National Parks Dataset",
+  "kuogov": "City of Kuopio",
+  "can-lvlsu": "Laval Service de l'urbanisme",
+  "can-rodca": "City of Regina Open Data - Community Associations",
+  "statoids": "Statoids",
+  "ourairports": "OurAirports",
+  "dbpedia": "DBpedia",
+  "pl-gugik": "Office of Geodesy and Cartography, Poland",
+  "meso": "Mesoshapes",
+  "esp-cnig": "Organismo Autonomo Centro Nacional de Information Geografica (CNIG)",
+  "hsgov": "Helsinki Region Infoshare",
+  "icao": "International Civil Aviation Organization",
+  "unsd": "UNSD (United Nations Statistics Division)",
+  "canvec-hydro": "Natural Resources Canada, CanVec Hydrographic Features",
+  "can-dnvgov": "District of North Vancouver Government",
+  "sdgis": "SanGIS/SANDAG GIS Data Warehouse",
+  "iso": "International Organization for Standardization",
+  "wikipedia": "Wikipedia",
+  "iata": "International Air Transport Association",
+  "addr": "addr",
+  "quattroshapes": "Quattroshapes (algorithmic)",
+  "unlocode": "UN/LOCODE (United Nations Code for Trade and Transport Locations)",
+  "wmo": "World Meteorological Organization",
+  "atgov": "data.gv.at",
+  "seagv": "Seattle City GIS Program",
+  "simplegeo": "SimpleGeo",
+  "can-wpgppd": "City of Winnipeg Department of Planning, Property, and Development",
+  "geonames": "GeoNames",
+  "United Nations Convention for Road Traffic": "United Nations Convention for Road Traffic",
+  "Austria Open Data": "Austria Open Data",
+  "can-surgis": "City of Surrey GIS Section",
+  "mudf": "Institute of Museum and Library Services Museum Universe Data File",
+  "can-saskodp": "City of Saskatoon Open Data Portal - Neighbourhood Areas",
+  "marc": "Machine-Readable Cataloging - Library of Congress",
+  "ausstat": "Australian Bureau of Statistics",
+  "ita-istat": "Istituto nazionale di statistica (Istat)",
+  "lbl": "label",
+  "burritojustice": "Burrito Justice",
+  "mapzenborders": "Mapzen Borders",
+  "arg-caba": "Ciudad Autonoma de Buenos Aires, Iniciativa de Datos Publicos y Transparencia",
+  "nullisland": "Null Island",
+  "can-calcai": "City of Calgary, Corporate Analytics and Innovation",
+  "nolagis": "City of New Orleans, Office of Information Technology and Innovation, Enterprise Information Team",
+  "nycgov_subway": "NYC OpenData - Subway Stations",
+  "nz-linz": "Land Information New Zealand",
+  "nytimes": "The New York Times",
+  "ebc": "Elections BC",
+  "hkigis": "Helsinki City Real Estate Department",
+  "yerbashapes": "Yerbashapes",
+  "lacity_oof": "City of Los Angeles Office of Finance",
+  "foursquare": "Foursquare",
+  "companieshouse": "City of London Companies House",
+  "cooperhewitt": "Cooper Hewitt Smithsonian Design Museum",
+  "naturalearth": "Natural Earth",
+  "metazen": "Metazen",
+  "azavea": "Azavea, Inc.",
+  "can-mtlsmvt": "Montreal Service de la Mise en Valeur du Territoire",
+  "frgov": "Open Data France",
+  "ssuberlin": "Senatsverwaltung fur Stadtentwicklung und Umwelt Berlin",
+  "ie-gov": "Ordnance Survey Ireland",
+  "can-gatsudd": "Gatineau Service de l'urbanisme et du developpement durable (SUDD)",
+  "geom": "geom",
+  "nielsen": "The Nielsen Company",
+  "gaul": "Global Administrative Unit Layers - Food and Agriculture Organization",
+  "factual": "Factual",
+  "au-capad": "Collaborative Australian Protected Areas Database",
+  "pt-dgt": "Directorate-General for the Territorial Development of Portugal",
+  "ccsf-sfo": "San Francisco International Airport",
+  "se-lant": "Lantmateriet Sweden",
+  "unknown": "unknown",
+  "can-vicodc": "City of Victoria Open Data Catalogue",
+  "missing": "Missing",
+  "uszcta": "US ZIP Code Tabulation Area",
+  "wikidata": "Wikidata",
+  "tkugov": "Turku City Government",
+  "sfgov": "City of San Francisco",
+  "denvercpd": "Denver Department of Community Planning and Development",
+  "bebrus": "UrbIS-Adm",
+  "ds": "Distinguishing Signs - United Nations Economic Commission for Europe",
+  "faa": "Federal Aviation Administration",
+  "can-bbygov": "City of Burnaby GIS Department",
+  "uscensus": "United States Census Bureau",
+  "can-clab": "National Framework Canada Lands Administrative Boundaries",
+  "bra-ibge": "Instituto Brasileiro de Geografia e Estatistica (IBGE)",
+  "latimes": "Los Angeles Times",
+  "gbr-datalondon": "London Datastore - Greater London Authority",
+  "itu": "International Telecommunications Union",
+  "torsdfa": "Toronto Social Development, Finance & Administration Department",
+  "inegi": "Instituto Nacional de Estad\u00edstica y Geograf\u00eda (INEGI)",
+  "no-geonorge": "Geonorge Norway",
+  "acme": "Acme Laboratories",
+  "wapo": "Washington Post",
+  "za-mdb": "The Municipal Demarcation Board of South Africa",
+  "transitland": "Transitland",
+  "eurostat": "Eurostat",
+  "loc": "Library of Congress",
+  "osm": "OpenStreetMap",
+  "zolk": "Zolk Chicago Neighborhoods Map",
+  "whosonfirst": "Who's On First",
+  "chgov": "SwissTopo",
+  "svn-sma": "Surveying and Mapping Authority of the Republic of Slovenia",
+  "dk-geodk": "GeoDanmark",
+  "esp-ine": "Instituto Nacional de Estadistica de Espana (INE)",
+  "hasc": "Statoids HASC",
+  "gec": "Geopolitical Entities and Codes",
+  "zetashapes": "Zetashapes (algorithmic)",
+  "quattroshapes_pg": "Quattroshapes Point Gazetteer",
+  "ioc": "International Olympics Committee",
+  "esp-cartobcn": "CartoBCN",
+  "can-abog": "Alberta Open Government - Municipal Boundaries",
+  "fips": "Federal Information Processing Standards",
+  "lu-act": "Luxembourg: Administration du cadastre et de la topographie",
+  "eg": "EuroGeographics",
+  "oakced": "Oakland Community and Economic Development Department",
+  "statcan": "Statistics Canada",
+  "smcgov": "Open San Mateo County",
+  "de-bkg": "Bundesamt fur Kartographie und Geodasie",
+  "us-nps": "U.S. National Park Service Data Store",
+  "nsul": "National Statistics UPRN Lookup",
+  "stpaulgov": "Open Information Saint Paul",
+  "nycgov_dca": "New York City Department of Consumer Affairs",
+  "pol-gus": "G\u0142\u00f3wny Urz\u0105d Statystyczny (GUS)",
+  "ch-cadastre": "Swiss Cadastral System",
+  "btvneighborhoods": "Burlington VT Neighborhoods Project",
+  "can-ons": "Ottawa Neighbourhood Study (ONS)",
+  "sg-sggov": "Singapore Open Data Portal",
+  "localwiki": "LocalWiki",
+  "camgov": "City of Cambridge Geographic Information System Department",
+  "woedb": "WOE DB",
+  "esp-icgc": "Institut Cartografic i Geologic de Catalunya",
+  "outgoing": "OUTgoing",
+  "digitalenvoy": "Digital Envoy",
+  "aus-psma": "Australian Government Open Data Portal",
+  "eu-cdda": "European Environmental Agency CDDA Database",
+  "ee-mamt": "Republic of Estonia's Land Board Geoportal",
+  "amsgis": "Amsterdam Open Datakaart",
+  "mz": "Mapzen",
+  "wof": "Who's On First",
+  "mapzen": "Mapzen"
+ }
+}
