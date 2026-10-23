@@ -655,9 +655,8 @@ const Suggest = (() => {
 function selectionHash() {
   if (!sel.size) return '';
   if (selMeta && selMeta.sgId) return '#sg-' + selMeta.sgId;
-  const p = new URLSearchParams(); p.set('t', [...sel].sort().join(','));
-  const nm = $('selname').value.trim(); if (nm && nm !== 'Custom selection') p.set('n', nm);
-  return '#' + p.toString();
+  const nm = $('selname').value.trim();
+  return '#t=' + [...sel].sort().join(',') + (nm && nm !== 'Custom selection' ? '&n=' + encodeURIComponent(nm) : '');
 }
 function syncHash() {
   const h = selectionHash();
