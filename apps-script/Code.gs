@@ -8,8 +8,8 @@
  *   GET ?a=approved              approved areas, which the site adds to everyone's search
  *   GET ?a=get&id=ID             one suggestion, for the "see it on the map" link
  *   GET ?a=status&ids=ID,ID      statuses of the suggestions a visitor made in their own browser
- *   GET ?a=review&id=ID&do=approve|decline&t=TOKEN
- *                                the confirmation page behind the Approve and Decline links in the email
+ *   POST {review:1, id, act, t}  approve or decline, from the site's review link in the email (act is
+ *                                approve or decline; t is that action's signed token)
  *
  * Each suggestion is a row on the Suggestions tab. Its Status (pending, approved, declined, removed) is
  * the only thing that decides whether it shows on the site, so changing it in the sheet by hand works too:
@@ -17,8 +17,7 @@
  *
  * Script properties (Project Settings > Script properties), set by setup():
  *   NOTIFY      who gets the emails (comma-separated; defaults to the script owner)
- *   SECRET      signs the Approve and Decline links; setup() creates it
- *   WEBAPP_URL  the web app's /exec address, for the links in the email
+ *   SECRET      signs the review links; setup() creates it
  */
 
 var SITE = 'https://mjkelley00-mjk.github.io/neighborhood-spending-gaps/';
@@ -64,8 +63,7 @@ function setup() {
   sh.setColumnWidth(COL.at, 130); sh.setColumnWidth(COL.id, 120); sh.setColumnWidth(COL.name, 180);
   sh.setColumnWidth(COL.note, 260); sh.setColumnWidth(COL.link, 260); sh.setColumnWidth(COL.tracts, 200);
   sh.getRange(1, COL.tracts, sh.getMaxRows(), 1).setWrap(false);
-  Logger.log('Ready. Emails go to: ' + props.getProperty('NOTIFY') +
-             '. After deploying, set WEBAPP_URL to the web app address ending in /exec.');
+  Logger.log('Ready. Emails go to: ' + props.getProperty('NOTIFY'));
 }
 
 // ---------------------------------------------------------------- helpers
@@ -124,9 +122,6 @@ function stCode_(v) {                                  // the State column shows
   var m = String(v).match(/^(\d{2})/);
   return m ? m[1] : '';
 }
-function webappUrl_() {
-  return PropertiesService.getScriptProperties().getProperty('WEBAPP_URL') || ScriptApp.getService().getUrl();
-}
 
 // ---------------------------------------------------------------- GET
 function doGet(e) {
@@ -144,7 +139,6 @@ function doGet(e) {
     ids.forEach(function (id) { if (byId[id]) { out[id] = byId[id]; } });
     return json_({status: out});
   }
-  if (p.a === 'review') { return reviewPage_(p.id, p['do'], p.t); }
   return json_({ok: true, service: 'Neighborhood Spending Gaps suggested areas'});
 }
 
@@ -163,6 +157,7 @@ function approved_() {
 function doPost(e) {
   var b;
   try { b = JSON.parse((e && e.postData && e.postData.contents) || '{}'); } catch (err) { return json_({error: 'bad_request'}); }
+  if (b.review) { return review_(b); }
   if (b.website) { return json_({ok: true, id: 'g000000000000'}); }       // the form's hidden trap field
   var name = clean_(b.name, 80), city = clean_(b.city, 60), note = clean_(b.note, 300);
   var st = String(b.st || '');
@@ -209,69 +204,43 @@ function notify_(s) {
       body: 'More areas were suggested today than the ' + EMAIL_MAX + ' emails a day this sends. The rest are in the sheet: ' + sheetUrl});
     return;
   }
-  var url = webappUrl_();
-  var link = function (act) { return url + '?a=review&id=' + s.id + '&do=' + act + '&t=' + token_(s.id, act); };
   var place = s.name + (s.city ? ', ' + s.city : '') + ' (' + STATES[s.st] + ')';
+  var tracts = s.n + ' census tract' + (s.n === 1 ? '' : 's');
   var view = SITE + '#sg-' + s.id;
+  // the review link opens the area on the site with Approve and Decline buttons; it carries both signed
+  // tokens, so keep it to yourself. The plain map link is safe to forward.
+  var review = SITE + '#review=' + s.id + '.' + token_(s.id, 'approve') + '.' + token_(s.id, 'decline');
   var html = '<div style="font:15px/1.5 Arial,sans-serif;color:#14212b">' +
     '<p>Someone suggested a new area for Neighborhood Spending Gaps:</p>' +
     '<p style="font-size:18px;margin:12px 0"><b>' + esc_(place) + '</b><br><span style="color:#5a6b78;font-size:14px">' +
-    s.n + ' census tract' + (s.n === 1 ? '' : 's') + '</span></p>' +
+    tracts + '</span></p>' +
     (s.note ? '<p style="color:#5a6b78">Their note: “' + esc_(s.note) + '”</p>' : '') +
-    '<p><a href="' + view + '">See it on the map</a></p>' +
-    '<p><a href="' + link('approve') + '" style="background:#0f7d7a;color:#fff;padding:8px 14px;border-radius:6px;text-decoration:none">Approve</a>' +
-    ' &nbsp; <a href="' + link('decline') + '" style="color:#d9573f">Decline</a></p>' +
+    '<p><a href="' + review + '" style="background:#0f7d7a;color:#fff;padding:8px 14px;border-radius:6px;text-decoration:none">Review it on the map</a></p>' +
+    '<p style="color:#5a6b78;font-size:13px">The review link opens the area with Approve and Decline buttons, so keep it to yourself. ' +
+    'To ask someone who knows the area, forward this link instead; it only shows the area: <a href="' + view + '">' + view + '</a></p>' +
     '<p style="color:#5a6b78;font-size:13px">Approving adds it to everyone\'s search on the site, labeled as a suggested area. ' +
-    'You can forward the map link to anyone who knows the area; it only shows the area. ' +
     'Every suggestion is also in <a href="' + sheetUrl + '">the sheet</a>, where you can change its status later.</p></div>';
   MailApp.sendEmail({to: to, name: 'Neighborhood Spending Gaps', subject: 'Suggested area: ' + place, htmlBody: html,
-    body: 'Suggested area: ' + place + ', ' + s.n + ' tracts.\nSee it on the map: ' + view +
-          '\nApprove: ' + link('approve') + '\nDecline: ' + link('decline') + '\nThe sheet: ' + sheetUrl});
+    body: 'Suggested area: ' + place + ', ' + tracts + '.\nReview it on the map (keep this link to yourself): ' + review +
+          '\nMap only, safe to forward: ' + view + '\nThe sheet: ' + sheetUrl});
 }
 
-// ---------------------------------------------------------------- review page and action
-function reviewPage_(id, act, t) {
-  var r = find_(id);
-  var tok = token_(id, act);
-  var ok = r && (act === 'approve' || act === 'decline') && tok && t === tok;
-  var t2 = HtmlService.createTemplate(
-    '<!doctype html><html><head><base target="_top"><meta name="viewport" content="width=device-width,initial-scale=1">' +
-    '<style>body{font:16px/1.5 Arial,sans-serif;color:#14212b;max-width:520px;margin:40px auto;padding:0 16px}' +
-    'h1{font-size:22px;margin:0 0 4px}.m{color:#5a6b78}button{font:600 15px Arial,sans-serif;padding:10px 18px;border-radius:6px;border:0;cursor:pointer}' +
-    '.go{background:#0f7d7a;color:#fff}.no{background:#d9573f;color:#fff}a{color:#0f7d7a}</style></head><body>' +
-    '<? if (!ok) { ?><h1>This link is not valid</h1><p class="m">It may be incomplete. Open the suggestion in the sheet instead.</p>' +
-    '<? } else { ?><p class="m">Suggested area</p><h1><?= place ?></h1><p class="m"><?= n ?> census tracts · now <b id="st"><?= status ?></b></p>' +
-    '<p><a href="<?= view ?>">See it on the map</a></p>' +
-    '<p id="act"><button class="<?= act === "approve" ? "go" : "no" ?>" onclick="go()"><?= act === "approve" ? "Approve it" : "Decline it" ?></button></p>' +
-    '<p id="msg" class="m"></p>' +
-    '<script>function go(){document.getElementById("act").hidden=true;document.getElementById("msg").textContent="Saving…";' +
-    'google.script.run.withSuccessHandler(function(s){document.getElementById("st").textContent=s;' +
-    'document.getElementById("msg").textContent=s==="approved"?"Approved. It shows in everyone\'s search within a couple of minutes.":"Declined. It will not show on the site.";})' +
-    '.withFailureHandler(function(){document.getElementById("act").hidden=false;document.getElementById("msg").textContent="That did not save. Try again, or change the status in the sheet.";})' +
-    '.applyReview(<?!= JSON.stringify(id) ?>,<?!= JSON.stringify(act) ?>,<?!= JSON.stringify(t) ?>);}</script><? } ?></body></html>');
-  t2.ok = !!ok;
-  t2.id = String(id || ''); t2.act = String(act || ''); t2.t = String(t || '');
-  t2.place = r ? r.name + (r.city ? ', ' + r.city : '') + ' (' + (STATES[stCode_(r.st)] || '') + ')' : '';
-  t2.n = r ? r.tracts.length : 0;
-  t2.status = r ? r.status : '';
-  t2.view = r ? SITE + '#sg-' + r.id : SITE;
-  return t2.evaluate().setTitle('Review a suggested area');
-}
-
-function applyReview(id, act, t) {
-  var tok = token_(id, act);
-  if ((act !== 'approve' && act !== 'decline') || !tok || t !== tok) { throw new Error('invalid link'); }
+// ---------------------------------------------------------------- review, from the site's review link
+function review_(b) {
+  var id = String(b.id || ''), act = String(b.act || ''), t = String(b.t || '');
+  var tok = (act === 'approve' || act === 'decline') ? token_(id, act) : null;
+  if (!tok || t !== tok) { return json_({error: 'invalid_link'}); }
   var lock = LockService.getScriptLock();
-  lock.waitLock(20000);
+  if (!lock.tryLock(20000)) { return json_({error: 'busy'}); }
   try {
     var r = find_(id);
-    if (!r) { throw new Error('not found'); }
+    if (!r) { return json_({error: 'not_found'}); }
     var status = act === 'approve' ? 'approved' : 'declined';
     var sh = sheet_();
     sh.getRange(r.row, COL.status).setValue(status);
     sh.getRange(r.row, COL.reviewed).setValue(Utilities.formatDate(new Date(), TZ, 'yyyy-MM-dd HH:mm'));
     CacheService.getScriptCache().remove('approved');
-    return status;
+    return json_({ok: true, status: status});
   } finally {
     lock.releaseLock();
   }

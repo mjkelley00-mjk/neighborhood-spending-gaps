@@ -134,6 +134,7 @@ footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-si
 .badge.approved{background:var(--accent-soft);color:var(--accent-ink)}
 .badge.rejected{background:var(--leak-soft);color:var(--leak)}
 .linkbox{margin-top:6px;font:12px var(--mono)}
+.suggest.review{border-style:solid;border-color:var(--accent)}
 .credits{font-size:13px;color:var(--muted)}
 </style>
 </head>
@@ -180,6 +181,7 @@ footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-si
         <div class="stats" id="stats"></div>
         <p class="headline" id="headline"></p>
         <div class="warn" id="warn" hidden></div>
+        <div class="suggest review" id="reviewbox" hidden></div>
         <div class="suggest" id="suggest" hidden></div>
       </section>
 
@@ -509,6 +511,7 @@ function render() {
   ].map(([b,s]) => `<div class="stat"><b>${b}</b><span>${s}</span></div>`).join('');
   document.querySelectorAll('#dl button').forEach(b => { if (b.dataset.dl !== 'state') b.disabled = !n; });
   Suggest.renderForm(n);
+  Suggest.renderReview(selMeta);
   if (!n) {
     $('headline').textContent = 'Search for a place or click tracts on the map to begin.';
     $('warn').hidden = true; $('tbl').innerHTML = ''; $('stores').innerHTML=''; $('donly').innerHTML=''; d3.select('#chart').selectAll('*').remove();
@@ -648,7 +651,41 @@ const Suggest = (() => {
     };
     $('sgName').focus();
   }
-  return {init, get, areasFor, renderForm, on};
+  // the review link in the owner's email: #review=<id>.<approve token>.<decline token>
+  function renderReview(m) {
+    const box = $('reviewbox');
+    if (!m || !m.review || !sel.size) { box.hidden = true; return; }
+    box.hidden = false;
+    if (box.dataset.busy === '1') return;
+    const st = m.status || 'pending';
+    box.innerHTML = `<b>Review this suggested area</b> <span class="sub">Now ${esc(word(st))}. Approving adds it to everyone's search, labeled as a suggestion; declining keeps it off the site. You can change it later in the sheet.</span>
+      <div class="dl"><button class="btn primary" type="button" data-act="approve">Approve</button><button class="btn" type="button" data-act="decline">Decline</button></div><div class="dlmsg" id="rvMsg" role="status"></div>`;
+    box.querySelectorAll('button[data-act]').forEach(b => b.onclick = () => review(m, b.dataset.act));
+  }
+  async function review(m, act) {
+    const box = $('reviewbox'); box.dataset.busy = '1';
+    box.querySelectorAll('button').forEach(b => b.disabled = true);
+    $('rvMsg').textContent = 'Saving…';
+    let j = null;
+    try {
+      const r = await fetch(SUGGEST_API, {method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'},
+        body:JSON.stringify({review:1, id:m.sgId, act, t:act === 'approve' ? m.review.a : m.review.d})});
+      j = await r.json();
+    } catch (e) { j = null; }
+    box.dataset.busy = '';
+    if (j && j.ok) {
+      m.status = j.status; m.src = j.status === 'approved' ? 'suggested' : 'suggested-pending';
+      try { approved = (await api({a:'approved'})).areas || approved; } catch (e) {}
+      if (status[m.sgId]) { status[m.sgId] = j.status; }
+      refresh(); render();
+      $('rvMsg').textContent = j.status === 'approved' ? 'Approved. It now shows in everyone\'s search.' : 'Declined. It will not show on the site.';
+      return;
+    }
+    renderReview(m);
+    $('rvMsg').textContent = j && j.error === 'invalid_link' ? 'This review link is not valid. Use the link from the latest email, or change the status in the sheet.'
+      : 'That did not save. Try again, or change the status in the sheet.';
+  }
+  return {init, get, areasFor, renderForm, renderReview, on};
 })();
 
 // ---------- links to a selection ----------
@@ -668,12 +705,14 @@ function syncHash() {
 async function openFromHash() {
   const h = decodeURIComponent(location.hash.slice(1));
   if (!h) return false;
-  let m = h.match(/^sg-(g[0-9a-f]{12})$/);
+  let m = h.match(/^sg-(g[0-9a-f]{12})$/), rv = null;
+  const r2 = h.match(/^review=(g[0-9a-f]{12})\.([\w-]{20,64})\.([\w-]{20,64})$/);
+  if (r2) { m = [r2[0], r2[1]]; rv = {a:r2[2], d:r2[3]}; }
   if (m) {
     const s = await Suggest.get(m[1]);
     if (!s || !IDX.states.some(x => x.fips === s.st)) { $('dlmsg').textContent = ''; return false; }
     if (!ST || ST.fips !== s.st) { $('state').value = s.st; await loadState(s.st); }
-    selLabel = s.name; selMeta = {src: s.status === 'approved' ? 'suggested' : 'suggested-pending', status: s.status, city: s.city, sgId: m[1]};
+    selLabel = s.name; selMeta = {src: s.status === 'approved' ? 'suggested' : 'suggested-pending', status: s.status, city: s.city, sgId: m[1], review: rv};
     setSelection(s.tracts, true);
     return true;
   }
@@ -763,7 +802,7 @@ async function main() {
   let opened = false;
   if (location.hash) {
     try { opened = await openFromHash(); } catch (e) { opened = false; }
-    if (!opened) { $('notice').textContent = !location.hash.startsWith('#sg-') ? 'That link could not be opened, so the page starts at South Shore, Chicago.'
+    if (!opened) { $('notice').textContent = !/^#(sg-|review=)/.test(location.hash) ? 'That link could not be opened, so the page starts at South Shore, Chicago.'
       : Suggest.on ? 'That suggested area could not be found. It may have been declined or removed.' : 'Suggested areas are not switched on for this copy of the page, so that link cannot be opened.'; }
   }
   if (!opened) {
