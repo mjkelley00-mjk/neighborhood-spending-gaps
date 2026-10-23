@@ -570,7 +570,7 @@ function drawChart(r) {
 }
 
 // ---------- suggested areas (a Google Sheet behind an Apps Script web app; see apps-script/Code.gs) ----------
-const SUGGEST_API = '__SUGGEST_API__';
+const SUGGEST_API = 'https://script.google.com/macros/s/AKfycbwR48ZyC4ZEarOw8189IP0hOwjyAFH63-HRlRgWWzJSoUcmRp-FFB0B5SIU4BmYMokWiw/exec';
 const Suggest = (() => {
   const on = /^https:\/\/script\.google\.com\/macros\/s\/[\w-]+\/exec$/.test(SUGGEST_API);
   const KEY = 'nsg-my-suggestions';
