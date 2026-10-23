@@ -19,6 +19,7 @@
  *   SHEET_ID    the sheet this script writes to
  *   NOTIFY      who gets the emails (comma-separated; defaults to the script owner)
  *   SECRET      signs the review links (changing it invalidates links already sent)
+ *   accepted:<date>, emails:<date>   per-day counters behind the daily limits (kept two days)
  */
 
 var SITE = 'https://mjkelley00-mjk.github.io/neighborhood-spending-gaps/';

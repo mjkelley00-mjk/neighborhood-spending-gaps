@@ -476,7 +476,7 @@ function fitText(m) {
   if (!m || m.src === 'county') return '';
   if (m.src === 'place') return 'Census place: the tracts with at least half their blocks in the city or town. Edges follow tract lines, not the city limit.';
   if (m.src === 'suggested') return `A suggested area, approved for the page; the tracts are exactly the ones suggested.`;
-  if (m.src === 'suggested-pending') return `A suggested area that ${m.status && m.status !== 'pending' ? 'is ' + (m.status === 'removed' ? 'no longer on the page' : m.status) : 'has not been reviewed yet'}; the tracts are exactly the ones suggested.`;
+  if (m.src === 'suggested-pending') return `A suggested area that ${m.status === 'declined' ? 'was not approved' : m.status === 'removed' ? 'was taken out of the site\'s search' : 'has not been reviewed yet'}; the tracts are exactly the ones suggested.`;
   if (m.fit == null) return '';
   if (m.fit < 0.3 && m.inside < 0.5) return `Boundary from ${SRC_LABEL(m.src)}. This area is much smaller than the census tracts around it: they cover ${pct(m.cover)} of it, but only ${pct(m.inside)} of their own area lies inside it (fit ${pct(m.fit)}). The figures describe the surrounding tract${m.tracts && m.tracts.length === 1 ? '' : 's'}, not the area itself.`;
   if (m.fit < 0.3) return `Boundary from ${SRC_LABEL(m.src)}. The selected tracts lie inside this area but cover only ${pct(m.cover)} of it, because most of its land is in tracts that lie mostly outside it (fit ${pct(m.fit)}). The figures describe part of the area; add tracts on the map to cover more of it.`;
@@ -656,39 +656,40 @@ const Suggest = (() => {
     const box = $('reviewbox');
     if (!m || !m.review || !sel.size) { box.hidden = true; return; }
     box.hidden = false;
-    if (box.dataset.busy === '1') return;
-    const st = m.status || 'pending';
-    box.innerHTML = `<b>Review this suggested area</b> <span class="sub">Now ${esc(word(st))}. Approving adds it to everyone's search, labeled as a suggestion; declining keeps it off the site. You can change it later in the sheet.</span>
-      <div class="dl"><button class="btn primary" type="button" data-act="approve">Approve</button><button class="btn" type="button" data-act="decline">Decline</button></div><div class="dlmsg" id="rvMsg" role="status"></div>`;
+    const st = m.status || 'pending', msg = m.busy ? 'Saving…' : (m.msg || '');
+    const body = st === 'removed'
+      ? `<span class="sub">Now removed: it was taken off the site in the sheet. Change its status there to bring it back.</span>`
+      : `<span class="sub">Now ${esc(word(st))}. Approving adds it to everyone's search, labeled as a suggestion; declining keeps it off the site. You can change it later in the sheet.</span>
+        <div class="dl"><button class="btn primary" type="button" data-act="approve"${m.busy ? ' disabled' : ''}>Approve</button><button class="btn" type="button" data-act="decline"${m.busy ? ' disabled' : ''}>Decline</button></div>`;
+    box.innerHTML = `<b>Review this suggested area</b> ${body}<div class="dlmsg" id="rvMsg" role="status">${esc(msg)}</div>`;
     box.querySelectorAll('button[data-act]').forEach(b => b.onclick = () => review(m, b.dataset.act));
   }
+  // the outcome is kept on the suggestion it belongs to, so a panel never shows another area's result
   async function review(m, act) {
-    const box = $('reviewbox'); box.dataset.busy = '1';
-    box.querySelectorAll('button').forEach(b => b.disabled = true);
-    $('rvMsg').textContent = 'Saving…';
+    m.busy = true; m.msg = ''; renderReview(selMeta);
     let j = null;
     try {
       const r = await fetch(SUGGEST_API, {method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'},
         body:JSON.stringify({review:1, id:m.sgId, act, t:act === 'approve' ? m.review.a : m.review.d})});
       j = await r.json();
     } catch (e) { j = null; }
-    box.dataset.busy = '';
+    m.busy = false;
+    const e = j && j.error;
     if (j && j.ok) {
       m.status = j.status; m.src = j.status === 'approved' ? 'suggested' : 'suggested-pending';
-      try { approved = (await api({a:'approved'})).areas || approved; } catch (e) {}
+      m.msg = j.status === 'approved' ? 'Approved. It now shows in everyone\'s search.' : 'Declined. It will not show on the site.';
+      try { approved = (await api({a:'approved'})).areas || approved; } catch (err) {}
       if (status[m.sgId]) { status[m.sgId] = j.status; }
       refresh(); render();
-      $('rvMsg').textContent = j.status === 'approved' ? 'Approved. It now shows in everyone\'s search.' : 'Declined. It will not show on the site.';
       return;
     }
-    if (selMeta !== m) return;                          // the visitor moved on to another selection
-    renderReview(m);
-    const e = j && j.error;
-    $('rvMsg').textContent = e === 'invalid_link' ? 'This review link is not valid. Use the link from the email, or change the status in the sheet.'
+    if (e === 'removed') { m.status = 'removed'; m.src = 'suggested-pending'; }
+    m.msg = e === 'invalid_link' ? 'This review link is not valid. Use the link from the email, or change the status in the sheet.'
       : e === 'not_found' ? 'This suggestion is no longer in the sheet, so it cannot be reviewed.'
-      : e === 'removed' ? 'This area was removed in the sheet. Change its status there to bring it back.'
+      : e === 'removed' ? ''
       : e === 'busy' ? 'The sheet is busy. Try again in a moment.'
       : 'That did not save. Try again, or change the status in the sheet.';
+    render();
   }
   return {init, get, areasFor, renderForm, renderReview, on};
 })();
