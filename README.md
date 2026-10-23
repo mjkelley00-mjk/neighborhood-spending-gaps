@@ -19,7 +19,7 @@ The page's "Method and limits" section explains how the figures are made and lis
 
 - `#t=<tract ids>&n=<name>` reopens a selection. The address bar always holds the current one, and "Copy link to this selection" copies it.
 - `#sg-<id>` opens a suggested area. It's safe to forward.
-- `#review=<id>.<token>.<token>` opens a suggested area with Approve and Decline buttons. Only the review email has it; the tokens are signed by the script, so keep the link to yourself.
+- `#review=<id>.<token>.<token>` opens a suggested area with Approve and Decline buttons. Only the review email has it. The tokens are signed by the script and don't expire, so anyone holding the link can approve or decline that suggestion: keep it to yourself. A review link can't change a row set to `removed` in the sheet.
 
 ## Suggested areas
 

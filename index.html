@@ -681,15 +681,21 @@ const Suggest = (() => {
       $('rvMsg').textContent = j.status === 'approved' ? 'Approved. It now shows in everyone\'s search.' : 'Declined. It will not show on the site.';
       return;
     }
+    if (selMeta !== m) return;                          // the visitor moved on to another selection
     renderReview(m);
-    $('rvMsg').textContent = j && j.error === 'invalid_link' ? 'This review link is not valid. Use the link from the latest email, or change the status in the sheet.'
+    const e = j && j.error;
+    $('rvMsg').textContent = e === 'invalid_link' ? 'This review link is not valid. Use the link from the email, or change the status in the sheet.'
+      : e === 'not_found' ? 'This suggestion is no longer in the sheet, so it cannot be reviewed.'
+      : e === 'removed' ? 'This area was removed in the sheet. Change its status there to bring it back.'
+      : e === 'busy' ? 'The sheet is busy. Try again in a moment.'
       : 'That did not save. Try again, or change the status in the sheet.';
   }
   return {init, get, areasFor, renderForm, renderReview, on};
 })();
 
 // ---------- links to a selection ----------
-// #t=<tract ids>&n=<name> reopens a selection; #sg-<id> opens a suggested area (the link in the review email).
+// #t=<tract ids>&n=<name> reopens a selection; #sg-<id> opens a suggested area (safe to forward);
+// #review=<id>.<approve token>.<decline token> adds Approve and Decline buttons (the owner's email only).
 function selectionHash() {
   if (!sel.size) return '';
   if (selMeta && selMeta.sgId) return '#sg-' + selMeta.sgId;
@@ -803,7 +809,7 @@ async function main() {
   if (location.hash) {
     try { opened = await openFromHash(); } catch (e) { opened = false; }
     if (!opened) { $('notice').textContent = !/^#(sg-|review=)/.test(location.hash) ? 'That link could not be opened, so the page starts at South Shore, Chicago.'
-      : Suggest.on ? 'That suggested area could not be found. It may have been declined or removed.' : 'Suggested areas are not switched on for this copy of the page, so that link cannot be opened.'; }
+      : Suggest.on ? 'That suggested area could not be found. It may have been deleted from the sheet.' : 'Suggested areas are not switched on for this copy of the page, so that link cannot be opened.'; }
   }
   if (!opened) {
     if (!ST || ST.fips !== '17') { $('state').value = '17'; await loadState('17'); }

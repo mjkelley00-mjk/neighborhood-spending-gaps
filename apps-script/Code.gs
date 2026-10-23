@@ -13,11 +13,12 @@
  *
  * Each suggestion is a row on the Suggestions tab. Its Status (pending, approved, declined, removed) is
  * the only thing that decides whether it shows on the site, so changing it in the sheet by hand works too:
- * set an approved area to "removed" to take it off the site.
+ * set an approved area to "removed" to take it off the site. A review link cannot change a removed row.
  *
  * Script properties (Project Settings > Script properties), set by setup():
+ *   SHEET_ID    the sheet this script writes to
  *   NOTIFY      who gets the emails (comma-separated; defaults to the script owner)
- *   SECRET      signs the review links; setup() creates it
+ *   SECRET      signs the review links (changing it invalidates links already sent)
  */
 
 var SITE = 'https://mjkelley00-mjk.github.io/neighborhood-spending-gaps/';
@@ -129,7 +130,7 @@ function doGet(e) {
   if (p.a === 'approved') { return json_({areas: approved_()}); }
   if (p.a === 'get') {
     var r = find_(p.id);
-    if (!r || r.status === 'declined') { return json_({error: 'not_found'}); }
+    if (!r) { return json_({error: 'not_found'}); }
     return json_({id: r.id, name: r.name, city: r.city, st: stCode_(r.st), tracts: r.tracts, status: r.status});
   }
   if (p.a === 'status') {
@@ -185,6 +186,7 @@ function doPost(e) {
       SpreadsheetApp.newDataValidation().requireValueInList(STATUSES, true).setAllowInvalid(false).build());
     sh.getRange(row, 1, 1, HEAD.length).setValues([[Utilities.formatDate(new Date(), TZ, 'yyyy-MM-dd HH:mm'), id, 'pending',
       name, city, st + ' ' + STATES[st], tracts.length, note, SITE + '#sg-' + id, '', tracts.join(' ')]]);
+    SpreadsheetApp.flush();                             // saved before the next request reads the last row
     notify_({id: id, name: bare_(name), city: bare_(city), st: st, n: tracts.length, note: bare_(note)});
     return json_({ok: true, id: id, status: 'pending'});
   } finally {
@@ -235,10 +237,12 @@ function review_(b) {
   try {
     var r = find_(id);
     if (!r) { return json_({error: 'not_found'}); }
+    if (r.status === 'removed') { return json_({error: 'removed'}); }   // taken off in the sheet; change it there
     var status = act === 'approve' ? 'approved' : 'declined';
     var sh = sheet_();
     sh.getRange(r.row, COL.status).setValue(status);
     sh.getRange(r.row, COL.reviewed).setValue(Utilities.formatDate(new Date(), TZ, 'yyyy-MM-dd HH:mm'));
+    SpreadsheetApp.flush();
     CacheService.getScriptCache().remove('approved');
     return json_({ok: true, status: status});
   } finally {
