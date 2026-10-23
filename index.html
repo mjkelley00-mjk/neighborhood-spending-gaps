@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Neighborhood Spending Gaps</title>
 <meta name="description" content="What residents spend and what local stores sell, for any US neighborhood, census tract, ZIP code, city or county. Built only from public data.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
@@ -60,12 +61,12 @@ select:focus,input:focus,button:focus-visible{outline:2px solid var(--accent);ou
 .maphead{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid var(--line2)}
 .maphead select{width:auto;max-width:100%;padding:6px 9px;font-size:13px}
 .mapbox{position:relative;aspect-ratio:1/1;max-width:100%;width:100%;background:var(--panel)}
-.mapbox svg{display:block;width:100%;height:100%;touch-action:none}
-.tract{fill:var(--tract);stroke:var(--tract-line);stroke-width:.6;vector-effect:non-scaling-stroke;cursor:pointer}
-.tract:hover{fill:var(--tract-hover)}
-.tract.sel{fill:var(--sel);stroke:var(--sel-line)}
-.tract.sel:hover{fill:var(--accent)}
-.maptip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);font:12px/1.35 var(--mono);padding:6px 8px;border-radius:6px;white-space:nowrap;transform:translate(-50%,-120%)}
+.mapbox #map{position:absolute;inset:0}
+.maptip{position:absolute;z-index:3;pointer-events:none;background:var(--ink);color:var(--bg);font:12px/1.4 var(--sans);padding:7px 9px;border-radius:7px;width:max-content;max-width:min(280px,80%);transform:translate(-50%,calc(-100% - 14px))}
+.maptip b{font-family:var(--mono);font-weight:500}
+.maplibregl-ctrl-attrib{font-size:11px}
+.maplibregl-ctrl-attrib.maplibregl-compact{background:var(--panel);color:var(--muted)}
+.maplibregl-ctrl-attrib a{color:var(--muted)}
 .mapfoot{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;padding:10px 14px;border-top:1px solid var(--line2);font-size:13px;color:var(--muted)}
 .btn{font:500 13px/1 var(--sans);border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:8px 12px;border-radius:8px;cursor:pointer}
 .btn:hover{border-color:var(--accent);color:var(--accent-ink)}
@@ -158,7 +159,7 @@ footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-si
         <div id="qres" class="results" hidden role="listbox"></div>
       </div>
     </label>
-    <label class="f">Map shows
+    <label class="f">Go to county
       <select id="county" aria-label="County shown on map"></select>
     </label>
   </div>
@@ -166,10 +167,10 @@ footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-si
   <div class="grid">
     <section class="card mapcard" aria-label="Tract map">
       <div class="maphead">
-        <span style="font-size:13px;color:var(--muted)">Click tracts to add or remove them. Scroll or pinch to zoom.</span>
+        <span style="font-size:13px;color:var(--muted)">Click a tract to add or remove it. Point at one, or tap it on a phone, to see the streets along its edges.</span>
         <button class="btn" id="fit">Fit to selection</button>
       </div>
-      <div class="mapbox" id="mapbox"><svg id="map" role="img" aria-label="Census tracts"></svg><div class="loading" id="loading">Loading…</div><div class="maptip" id="tip" hidden></div></div>
+      <div class="mapbox" id="mapbox"><div id="map" role="region" aria-label="Map of census tracts"></div><div class="loading" id="loading">Loading…</div><div class="maptip" id="tip" hidden></div></div>
       <div class="mapfoot"><span id="selcount">No tracts selected</span><button class="btn" id="clear">Clear selection</button></div>
     </section>
 
@@ -248,6 +249,7 @@ footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-si
             <li><strong>Cities and towns</strong> are Census places: the tracts with at least half their blocks in the place.</li>
             <li><strong>Suggested areas:</strong> anyone can suggest a selection of tracts as a named area. It shows in their own search on that device at once, and in everyone's once it is reviewed and approved, labeled as a suggestion. The page does not ask who is suggesting and saves nothing about them.</li>
             <li>Boundaries are 2024 Census cartographic files (2020 tracts), simplified for the map. Tracts that are only water have no households and are not drawn.</li>
+            <li><strong>Streets</strong> on the map come from OpenStreetMap. Pointing at a tract lists the named streets that run along its edges, matched within about 45 meters of the simplified tract lines, so now and then a name is missed or a nearby parallel street is listed. Only streets in the part of the map on screen are checked.</li>
           </ul>
           <h4>Limits</h4>
           <ul>
@@ -271,6 +273,7 @@ footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-si
             <li><a href="https://www.census.gov/programs-surveys/economic-census/data/2022.html" target="_blank" rel="noopener">2022 Economic Census</a>, including products by industry</li>
             <li><a href="https://whosonfirst.org/" target="_blank" rel="noopener">Who's On First</a> neighborhood boundaries (CC BY 4.0 and the licenses of their sources)</li>
             <li><a href="https://www.census.gov/geographies/reference-files/time-series/geo/relationship-files.2020.html" target="_blank" rel="noopener">Census ZCTA–tract relationship file</a> and <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html" target="_blank" rel="noopener">2024 cartographic boundaries</a></li>
+            <li>Street map: <a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a>, © <a href="https://openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a>, data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> (ODbL)</li>
             <li>City of Chicago: <a href="https://data.cityofchicago.org/d/igwz-8jzy" target="_blank" rel="noopener">community areas</a>, <a href="https://data.cityofchicago.org/d/y6yq-dbs2" target="_blank" rel="noopener">neighborhoods</a> and 2020 tracts by community area</li>
           </ul>
           <h4>Neighborhood boundary credits</h4>
@@ -287,6 +290,7 @@ footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-si
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
 <script>
 (() => {
 const SUP = ['groceries','fsr','qsr','alcohol','tobacco','household','pets_toys','perscare','apparel','home','gas','auto'];
@@ -313,7 +317,6 @@ const $ = id => document.getElementById(id);
 
 let IDX = null, ST = null, FEAT = null, featByCounty = null, hashReady = false;
 let sel = new Set(), selLabel = '', selMeta = null, mapCounties = [];
-let svg, gRoot, zoom, path, proj;
 const cache = new Map();
 
 // ---------- formatting ----------
@@ -433,42 +436,166 @@ function toggle(g) {
   if (!selLabel) selLabel = 'Custom selection';
   selMeta = null;
   $('selname').value = selLabel;
-  d3.select(gRoot).selectAll('path.tract').classed('sel', f => sel.has(f.properties.GEOID));
+  if (map && map.getSource('tracts')) map.setFeatureState({source:'tracts', id:g}, {sel:sel.has(g)});
   render();
 }
 
-// ---------- map ----------
+// ---------- map: census tracts over a street map (MapLibre GL, OpenFreeMap tiles from OpenStreetMap) ----------
+let map = null, mapReady = null, hoverId = null, featById = new Map(), srcFips = null, edgeCache = new Map();
+const darkTheme = () => { const t = document.documentElement.dataset.theme; return t ? t === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches; };
+const styleUrl = () => 'https://tiles.openfreemap.org/styles/' + (darkTheme() ? 'dark' : 'positron');
+const cssVar = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 function initMap() {
-  svg = d3.select('#map');
-  gRoot = svg.append('g').node();
-  zoom = d3.zoom().scaleExtent([1, 40]).on('zoom', e => d3.select(gRoot).attr('transform', e.transform));
-  svg.call(zoom).on('dblclick.zoom', null);
+  map = new maplibregl.Map({container:'map', style:styleUrl(), center:[-87.6, 41.76], zoom:11, minZoom:3, maxZoom:17,
+    dragRotate:false, pitchWithRotate:false, touchPitch:false, attributionControl:{compact:true}, cooperativeGestures:false});
+  map.touchZoomRotate.disableRotation();
+  if (/[?&]debug\b/.test(location.search)) window.__nsg = {map, edgeStreets, get featById() { return featById; }};
+  map.keyboard.disableRotation();
+  map.addControl(new maplibregl.NavigationControl({showCompass:false}), 'top-right');
+  mapReady = new Promise(res => map.once('load', res));
+  // start with the attribution folded to its (i) button, so it doesn't cover the map on a phone
+  map.once('load', () => { const a = document.querySelector('#map .maplibregl-ctrl-attrib'); if (a) a.classList.remove('maplibregl-compact-show'); });
+  map.on('style.load', () => { srcFips = null; if (ST) { addTractLayers(); paintSel(); } });
+  map.on('mousemove', 'tract-fill', e => { const f = e.features && e.features[0]; if (f) hover(f.properties.GEOID, e.point); });
+  map.on('mouseleave', 'tract-fill', () => hover(null));
+  map.on('click', 'tract-fill', e => { const f = e.features && e.features[0]; if (f) { toggle(f.properties.GEOID); hover(f.properties.GEOID, e.point); } });
+  map.on('mouseenter', 'tract-fill', () => { map.getCanvas().style.cursor = 'pointer'; });
+  map.on('mouseleave', 'tract-fill', () => { map.getCanvas().style.cursor = ''; });
+  map.on('idle', () => { if (hoverId) updateTip(); });   // street tiles finished loading
+  const mq = matchMedia('(prefers-color-scheme: dark)');
+  const restyle = () => map.setStyle(styleUrl(), {diff:false});
+  try { mq.addEventListener('change', restyle); } catch (e) {}
+  new MutationObserver(restyle).observe(document.documentElement, {attributes:true, attributeFilter:['data-theme']});
+}
+function addTractLayers() {
+  if (!map.isStyleLoaded() || !ST) return;
+  for (const id of ['tract-sel-line', 'tract-line', 'tract-fill']) if (map.getLayer(id)) map.removeLayer(id);
+  if (map.getSource('tracts')) map.removeSource('tracts');
+  map.addSource('tracts', {type:'geojson', data:{type:'FeatureCollection', features:FEAT}, promoteId:'GEOID'});
+  srcFips = ST.fips;
+  // under the street labels, so names stay readable on top of the tracts
+  const firstLabel = (map.getStyle().layers.find(l => l.type === 'symbol') || {}).id;
+  const sel = cssVar('--sel'), ink = cssVar('--ink'), line = cssVar('--sel-line');
+  map.addLayer({id:'tract-fill', type:'fill', source:'tracts', paint:{
+    'fill-color': ['case', ['boolean', ['feature-state', 'sel'], false], sel, ink],
+    // lighter when zoomed in, so the streets under a selection stay visible
+    'fill-opacity': ['interpolate', ['linear'], ['zoom'],
+      11, ['case', ['boolean', ['feature-state', 'sel'], false], ['case', ['boolean', ['feature-state', 'hover'], false], 0.6, 0.45],
+           ['boolean', ['feature-state', 'hover'], false], 0.14, 0.03],
+      15, ['case', ['boolean', ['feature-state', 'sel'], false], ['case', ['boolean', ['feature-state', 'hover'], false], 0.42, 0.3],
+           ['boolean', ['feature-state', 'hover'], false], 0.1, 0.02]]}}, firstLabel);
+  map.addLayer({id:'tract-line', type:'line', source:'tracts', paint:{'line-color': ink, 'line-opacity': 0.45,
+    'line-width': ['interpolate', ['linear'], ['zoom'], 8, 0.3, 12, 0.8, 15, 1.4]}}, firstLabel);
+  map.addLayer({id:'tract-sel-line', type:'line', source:'tracts', paint:{'line-color': line,
+    'line-opacity': ['case', ['boolean', ['feature-state', 'sel'], false], 1, 0],
+    'line-width': ['interpolate', ['linear'], ['zoom'], 8, 1, 14, 3]}}, firstLabel);
+}
+function paintSel() {
+  if (!map || !map.getSource('tracts')) return;
+  map.removeFeatureState({source:'tracts'});
+  for (const g of sel) map.setFeatureState({source:'tracts', id:g}, {sel:true});
+  if (hoverId) map.setFeatureState({source:'tracts', id:hoverId}, {hover:true});
+}
+function bboxOf(feats) {
+  let x0 = 180, y0 = 90, x1 = -180, y1 = -90;
+  const walk = c => { if (typeof c[0] === 'number') { x0 = Math.min(x0, c[0]); x1 = Math.max(x1, c[0]); y0 = Math.min(y0, c[1]); y1 = Math.max(y1, c[1]); } else c.forEach(walk); };
+  feats.forEach(f => walk(f.geometry.coordinates));
+  return x0 <= x1 ? [[x0, y0], [x1, y1]] : null;
 }
 function drawMap(refit) {
-  const box = $('mapbox').getBoundingClientRect(), W = Math.max(280, box.width), H = Math.max(280, box.height);
-  svg.attr('viewBox', `0 0 ${W} ${H}`);
-  const feats = mapCounties.flatMap(c => featByCounty.get(c) || []);
-  proj = d3.geoMercator().fitExtent([[10,10],[W-10,H-10]], {type:'FeatureCollection', features:feats});
-  path = d3.geoPath(proj);
-  const tip = $('tip');
-  d3.select(gRoot).selectAll('path.tract').data(feats, f => f.properties.GEOID)
-    .join('path').attr('class', 'tract').attr('d', path)
-    .classed('sel', f => sel.has(f.properties.GEOID))
-    .on('click', (e, f) => toggle(f.properties.GEOID))
-    .on('mousemove', (e, f) => { const g = f.properties.GEOID, t = ST.tracts[g]; const r = $('mapbox').getBoundingClientRect();
-      tip.hidden = false; tip.style.left = (e.clientX - r.left) + 'px'; tip.style.top = (e.clientY - r.top) + 'px';
-      tip.textContent = 'Tract ' + g.slice(5,9) + '.' + g.slice(9) + ' · ' + (t ? fmtN(t.h) + ' households' : 'no data'); })
-    .on('mouseleave', () => { tip.hidden = true; });
-  if (refit) fitSel(); else svg.call(zoom.transform, d3.zoomIdentity);
+  if (!map) return;
+  mapReady.then(() => {
+    if (srcFips !== ST.fips || !map.getSource('tracts')) { featById = new Map(FEAT.map(f => [f.properties.GEOID, f])); edgeCache.clear(); hover(null); addTractLayers(); }
+    paintSel();
+    if (refit && sel.size) fitSel(); else fitCounty(mapCounties[0]);
+  });
+}
+function fitCounty(c) {
+  const b = bboxOf(featByCounty.get(c) || FEAT);
+  if (b) map.fitBounds(b, {padding:20, duration:0});
 }
 function fitSel() {
-  const feats = FEAT.filter(f => sel.has(f.properties.GEOID));
-  if (!feats.length) { svg.transition().duration(300).call(zoom.transform, d3.zoomIdentity); return; }
-  const [[x0,y0],[x1,y1]] = path.bounds({type:'FeatureCollection', features:feats});
-  const vb = svg.attr('viewBox').split(' ').map(Number), W = vb[2], H = vb[3];
-  const k = Math.min(40, 0.8 / Math.max((x1-x0)/W, (y1-y0)/H, 1e-6));
-  const t = d3.zoomIdentity.translate(W/2, H/2).scale(Math.max(1,k)).translate(-(x0+x1)/2, -(y0+y1)/2);
-  svg.transition().duration(400).call(zoom.transform, t);
+  const b = bboxOf([...sel].map(g => featById.get(g)).filter(Boolean));
+  if (!b) { fitCounty(mapCounties[0]); return; }
+  map.fitBounds(b, {padding:36, maxZoom:15, duration:400});
+}
+
+// ---------- hover: the tract, its households and the streets along its edges ----------
+let lastPoint = null;
+function hover(g, point) {
+  if (hoverId !== g && map.getSource('tracts')) {
+    if (hoverId) map.setFeatureState({source:'tracts', id:hoverId}, {hover:false});
+    if (g) map.setFeatureState({source:'tracts', id:g}, {hover:true});
+  }
+  hoverId = g;
+  if (point) lastPoint = point;
+  updateTip();
+}
+function updateTip() {
+  const tip = $('tip'), g = hoverId;
+  if (!g) { tip.hidden = true; return; }
+  const t = ST.tracts[g], streets = edgeStreets(g);
+  tip.innerHTML = `<b>Tract ${g.slice(5, 9).replace(/^0+/, '') || '0'}${g.slice(9) === '00' ? '' : '.' + g.slice(9)}</b> · ${t ? fmtN(t.h) + ' households' : 'no households'}` +
+    `<br>${streets === null ? 'Zoom in to see the streets along its edges' : streets.length ? 'Edges: ' + streets.map(esc).join(', ') + (offscreen(g) ? ' (more of it is off screen)' : '') : 'No named streets along its edges at this zoom'}`;
+  tip.hidden = false;
+  if (lastPoint) { tip.style.left = lastPoint.x + 'px'; tip.style.top = lastPoint.y + 'px'; }
+}
+function offscreen(g) {
+  const b = bboxOf([featById.get(g)].filter(Boolean)), v = map.getBounds();
+  return !!b && (b[0][0] < v.getWest() || b[1][0] > v.getEast() || b[0][1] < v.getSouth() || b[1][1] > v.getNorth());
+}
+// Names of streets that run along a tract's boundary: sample the boundary every ~25 m and count, for each
+// named street in the loaded map tiles, how many samples lie within 45 m of it and run in the same direction
+// (tract lines are generalized, so they sit a little off the street centerlines; cross streets don't count).
+function edgeStreets(g) {
+  const z = Math.floor(map.getZoom());
+  if (z < 13) return null;
+  const key = g + '@' + Math.min(z, 14);
+  if (edgeCache.has(key)) return edgeCache.get(key);
+  const f = featById.get(g); if (!f) return [];
+  const polys = f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates;
+  const lat0 = polys[0][0][0][1] * Math.PI / 180, kx = 111320 * Math.cos(lat0), ky = 110540;
+  const P = c => [c[0] * kx, c[1] * ky];
+  const pts = [];
+  for (const poly of polys) for (const ring of poly) for (let i = 1; i < ring.length; i++) {
+    const a = P(ring[i - 1]), b = P(ring[i]), len = Math.hypot(b[0] - a[0], b[1] - a[1]), n = Math.max(1, Math.round(len / 25));
+    if (!len) continue;
+    const ux = (b[0] - a[0]) / len, uy = (b[1] - a[1]) / len;
+    for (let k = 0; k < n; k++) pts.push([a[0] + (b[0] - a[0]) * k / n, a[1] + (b[1] - a[1]) * k / n, ux, uy]);
+  }
+  if (!pts.length) return [];
+  const TOL = 45, xs = pts.map(p => p[0]), ys = pts.map(p => p[1]);
+  const bx0 = Math.min(...xs) - TOL, bx1 = Math.max(...xs) + TOL, by0 = Math.min(...ys) - TOL, by1 = Math.max(...ys) + TOL;
+  const hits = new Map();   // street name -> set of boundary sample indexes it runs along
+  let feats = [];
+  try { feats = map.querySourceFeatures('openmaptiles', {sourceLayer:'transportation_name'}); } catch (e) { feats = []; }
+  for (const rf of feats) {
+    const nm = rf.properties && (rf.properties.name || rf.properties.ref);
+    if (!nm || !rf.geometry) continue;
+    const lines = rf.geometry.type === 'LineString' ? [rf.geometry.coordinates] : rf.geometry.type === 'MultiLineString' ? rf.geometry.coordinates : [];
+    for (const ln of lines) {
+      const q = ln.map(P);
+      // skip streets whose extent misses the tract's (a long straight street may have no vertex near it)
+      let lx0 = Infinity, lx1 = -Infinity, ly0 = Infinity, ly1 = -Infinity;
+      for (const p of q) { lx0 = Math.min(lx0, p[0]); lx1 = Math.max(lx1, p[0]); ly0 = Math.min(ly0, p[1]); ly1 = Math.max(ly1, p[1]); }
+      if (lx1 < bx0 || lx0 > bx1 || ly1 < by0 || ly0 > by1) continue;
+      let set = hits.get(nm); if (!set) hits.set(nm, set = new Set());
+      for (let i = 0; i < pts.length; i++) {
+        if (set.has(i)) continue;
+        const [px, py, ux, uy] = pts[i];
+        for (let j = 1; j < q.length; j++) {
+          const [ax, ay] = q[j - 1], [bx, by] = q[j], dx = bx - ax, dy = by - ay, L = dx * dx + dy * dy;
+          const t = L ? Math.max(0, Math.min(1, ((px - ax) * dx + (py - ay) * dy) / L)) : 0;
+          // near the edge and running along it, not just crossing it
+          if (L && Math.hypot(px - ax - t * dx, py - ay - t * dy) <= TOL && Math.abs((dx * ux + dy * uy) / Math.sqrt(L)) > 0.85) { set.add(i); break; }
+        }
+      }
+    }
+  }
+  const min = Math.max(3, Math.round(pts.length * 0.06));
+  const out = [...hits.entries()].filter(([, s]) => s.size >= min).sort((a, b) => b[1].size - a[1].size).slice(0, 6).map(([n]) => n);
+  if (map.areTilesLoaded()) edgeCache.set(key, out);   // keep only answers from fully loaded tiles
+  return out;
 }
 
 // ---------- render ----------
@@ -836,7 +963,7 @@ async function main() {
     const c = e.target.value;
     const selC = [...new Set([...sel].map(g => g.slice(0,5)))];
     mapCounties = [c, ...selC.filter(x => x !== c)];
-    drawMap(false);
+    fitCounty(c);
   });
   $('q').addEventListener('input', runSearch);
   $('q').addEventListener('keydown', e => {
@@ -847,11 +974,11 @@ async function main() {
   });
   $('qres').addEventListener('click', e => { const b = e.target.closest('button[data-i]'); if (b) pick(qHits[+b.dataset.i]); });
   document.addEventListener('click', e => { if (!e.target.closest('.searchbox')) $('qres').hidden = true; });
-  $('clear').addEventListener('click', () => { $('notice').hidden = true; sel = new Set(); selLabel = ''; selMeta = null; $('selname').value = ''; d3.select(gRoot).selectAll('path.tract').classed('sel', false); render(); });
+  $('clear').addEventListener('click', () => { $('notice').hidden = true; sel = new Set(); selLabel = ''; selMeta = null; $('selname').value = ''; paintSel(); render(); });
   $('fit').addEventListener('click', fitSel);
   $('selname').addEventListener('input', e => { selLabel = e.target.value; if (hashReady) syncHash(); });
   $('dl').addEventListener('click', e => { const b = e.target.closest('button[data-dl]'); if (b) doDownload(b.dataset.dl); });
-  let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { if (FEAT) { drawMap(true); render(); } }, 200); });
+  let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { if (FEAT) render(); }, 200); });
 
   Suggest.init();
 }
