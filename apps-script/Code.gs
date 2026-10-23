@@ -27,6 +27,8 @@ var HEAD = ['Received', 'ID', 'Status', 'Name', 'City', 'State', 'Tracts', 'Note
             'See it on the map', 'Reviewed', 'Tract list'];
 var COL = {at: 1, id: 2, status: 3, name: 4, city: 5, st: 6, n: 7, note: 8, link: 9, reviewed: 10, tracts: 11};
 var STATUSES = ['pending', 'approved', 'declined', 'removed'];
+// stored as plain text, so a tract ID keeps its leading zero and a name like "3/4" is not read as a date
+var TEXT_COLS = [COL.id, COL.name, COL.city, COL.st, COL.note, COL.tracts];
 var STATES = {'01':'AL','02':'AK','04':'AZ','05':'AR','06':'CA','08':'CO','09':'CT','10':'DE','11':'DC','12':'FL',
   '13':'GA','15':'HI','16':'ID','17':'IL','18':'IN','19':'IA','20':'KS','21':'KY','22':'LA','23':'ME','24':'MD',
   '25':'MA','26':'MI','27':'MN','28':'MS','29':'MO','30':'MT','31':'NE','32':'NV','33':'NH','34':'NJ','35':'NM',
@@ -39,6 +41,8 @@ var TZ = 'America/Chicago';
 
 // ---------------------------------------------------------------- setup, run once from the editor
 function setup() {
+  // only the owner, from the editor: a web-app visitor has no active user
+  if (Session.getActiveUser().getEmail() !== Session.getEffectiveUser().getEmail()) { throw new Error('not allowed'); }
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var props = PropertiesService.getScriptProperties();
   props.setProperty('SHEET_ID', ss.getId());
@@ -56,6 +60,7 @@ function setup() {
   sh.setFrozenRows(1);
   var rule = SpreadsheetApp.newDataValidation().requireValueInList(STATUSES, true).setAllowInvalid(false).build();
   sh.getRange(2, COL.status, sh.getMaxRows() - 1, 1).setDataValidation(rule);
+  TEXT_COLS.forEach(function (c) { sh.getRange(2, c, sh.getMaxRows() - 1, 1).setNumberFormat('@'); });
   sh.setColumnWidth(COL.at, 130); sh.setColumnWidth(COL.id, 120); sh.setColumnWidth(COL.name, 180);
   sh.setColumnWidth(COL.note, 260); sh.setColumnWidth(COL.link, 260); sh.setColumnWidth(COL.tracts, 200);
   sh.getRange(1, COL.tracts, sh.getMaxRows(), 1).setWrap(false);
@@ -83,7 +88,8 @@ function esc_(s) {
   });
 }
 function token_(id, act) {
-  var secret = PropertiesService.getScriptProperties().getProperty('SECRET') || '';
+  var secret = PropertiesService.getScriptProperties().getProperty('SECRET');
+  if (!secret) { return null; }                         // no secret, no valid links
   var sig = Utilities.computeHmacSha256Signature(id + '|' + act, secret);
   return Utilities.base64EncodeWebSafe(sig).replace(/=+$/, '').slice(0, 32);
 }
@@ -177,9 +183,13 @@ function doPost(e) {
     if (dup) { return json_({ok: true, id: dup.id, status: dup.status}); }
     if (bump_('accepted') > DAILY_MAX) { return json_({error: 'daily_limit'}); }
     var id = 'g' + Utilities.getUuid().replace(/-/g, '').slice(0, 12);
-    var sh = sheet_();
-    sh.appendRow([Utilities.formatDate(new Date(), TZ, 'yyyy-MM-dd HH:mm'), id, 'pending', name, city,
-                  st + ' ' + STATES[st], tracts.length, note, SITE + '#sg-' + id, '', tracts.join(' ')]);
+    var sh = sheet_(), row = sh.getLastRow() + 1;
+    if (row > sh.getMaxRows()) { sh.insertRowsAfter(sh.getMaxRows(), 200); }
+    TEXT_COLS.forEach(function (c) { sh.getRange(row, c).setNumberFormat('@'); });
+    sh.getRange(row, COL.status).setDataValidation(
+      SpreadsheetApp.newDataValidation().requireValueInList(STATUSES, true).setAllowInvalid(false).build());
+    sh.getRange(row, 1, 1, HEAD.length).setValues([[Utilities.formatDate(new Date(), TZ, 'yyyy-MM-dd HH:mm'), id, 'pending',
+      name, city, st + ' ' + STATES[st], tracts.length, note, SITE + '#sg-' + id, '', tracts.join(' ')]]);
     notify_({id: id, name: bare_(name), city: bare_(city), st: st, n: tracts.length, note: bare_(note)});
     return json_({ok: true, id: id, status: 'pending'});
   } finally {
@@ -222,7 +232,8 @@ function notify_(s) {
 // ---------------------------------------------------------------- review page and action
 function reviewPage_(id, act, t) {
   var r = find_(id);
-  var ok = r && (act === 'approve' || act === 'decline') && t === token_(id, act);
+  var tok = token_(id, act);
+  var ok = r && (act === 'approve' || act === 'decline') && tok && t === tok;
   var t2 = HtmlService.createTemplate(
     '<!doctype html><html><head><base target="_top"><meta name="viewport" content="width=device-width,initial-scale=1">' +
     '<style>body{font:16px/1.5 Arial,sans-serif;color:#14212b;max-width:520px;margin:40px auto;padding:0 16px}' +
@@ -248,7 +259,8 @@ function reviewPage_(id, act, t) {
 }
 
 function applyReview(id, act, t) {
-  if ((act !== 'approve' && act !== 'decline') || t !== token_(id, act)) { throw new Error('invalid link'); }
+  var tok = token_(id, act);
+  if ((act !== 'approve' && act !== 'decline') || !tok || t !== tok) { throw new Error('invalid link'); }
   var lock = LockService.getScriptLock();
   lock.waitLock(20000);
   try {

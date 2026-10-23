@@ -34,6 +34,14 @@ The script's address is the `SUGGEST_API` constant in `index.html`. If you redep
 
 To add another reviewer, add their address to the `NOTIFY` script property (comma-separated) and give them edit access to the sheet.
 
+### Setting it up again from scratch
+
+1. Make a Google Sheet, open Extensions → Apps Script, and paste in `apps-script/Code.gs`.
+2. Run `setup()` from the editor and grant access. It creates the Suggestions tab and the `SECRET`, `NOTIFY` and `SHEET_ID` script properties.
+3. Deploy → New deployment → Web app, execute as **Me**, access **Anyone**. Copy the web app URL (it ends in `/exec`).
+4. In Project Settings → Script properties, add `WEBAPP_URL` with that URL, for the links in the email.
+5. Put the same URL in `SUGGEST_API` in `index.html` and push. Until then the page says suggestions are off.
+
 ## Updating the data
 
 The data files are built by the scripts in the working folder this came from (`build_national.py`, `build_neighborhoods.py`, `build_site_data.py`, `ce_restaurant_split.py`). Replace `data/` with a new build and push; GitHub Pages republishes within a minute or two.

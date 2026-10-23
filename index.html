@@ -226,7 +226,7 @@ footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-si
           <h4>Categories</h4>
           <p>Twelve categories are measured on both sides: groceries; full-service restaurants; quick-service restaurants, coffee and food trucks; alcohol, from stores and bars; tobacco and vaping; household supplies, garden and stationery; pets, toys, hobbies and books; personal care products and services; apparel, shoes and clothing care; furniture, home furnishings, appliances and computers; gasoline; and auto parts and repair. Medicines and entertainment admissions are demand only.</p>
           <p>Stores sell across categories, so local sales are counted by what is sold, not by store type. Each store type's sales are split by what that kind of store sells nationally, from the 2022 Economic Census product lines: a supermarket's sales go mostly to groceries, partly to household supplies, personal care and alcohol, and its pharmacy counter to no category; a gas station's go to gasoline, groceries, tobacco and alcohol. Medicines and vitamins, prescription or over the counter, fall in no category, matching the demand-only medicines line; so do lines no category covers, such as sporting goods and used goods.</p>
-          <p>Full-service and quick-service restaurants split cleanly on the sales side. On the spending side, each tract's restaurant spending is split by the share that households at each income spend at full-service restaurants, from the BLS Consumer Expenditure Diary Survey 2024 public-use files: about 40%–45% for households under $100,000, 46%–48% from $100,000 to $200,000 and 52% above $200,000 (46% for all households; each income range's share is accurate to about ±2–5 points). Food from vending machines and mobile vendors counts as quick-service; employer and school cafeterias and catered events are left out of the split.</p>
+          <p>Full-service and quick-service restaurants split cleanly on the sales side. On the spending side, each tract's restaurant spending is split by the share that households at each income spend at full-service restaurants, from the BLS Consumer Expenditure Diary Survey 2024 public-use files: about 40%–45% for households under $100,000, 46%–48% from $100,000 to $200,000 and 52% above $200,000 (46% for all households; each income range's share has a standard error of 2–5 points). Food from vending machines and mobile vendors counts as quick-service. Employer and school cafeterias and catered events are left out when the share is measured, but their spending stays in restaurant demand and is split in the same proportion.</p>
           <h4>Local sales: two estimates</h4>
           <ul>
             <li><strong>Jobs-based (LEHD LODES 2023):</strong> retail, food-service and personal-service jobs on each block, split into store types by the ZIP's industry mix and aligned with Economic Census employment for the state.</li>
@@ -272,7 +272,7 @@ footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-si
             <li>City of Chicago: <a href="https://data.cityofchicago.org/d/igwz-8jzy" target="_blank" rel="noopener">community areas</a>, <a href="https://data.cityofchicago.org/d/y6yq-dbs2" target="_blank" rel="noopener">neighborhoods</a> and 2020 tracts by community area</li>
           </ul>
           <h4>Neighborhood boundary credits</h4>
-          <p class="credits">Who's On First (CC BY 4.0), compiled from: Atlanta Department of Planning and Community Development (CC BY 4.0); Baltimore Mayor's Office of Information Technology (CC BY 3.0); Washington Post neighborhood boundaries for Washington, DC (CC BY); Zolk Chicago Neighborhoods Map (CC BY 3.0 US); Azavea, Inc., Philadelphia neighborhoods (CC BY 3.0 US); Denver Community Planning and Development (CC BY 3.0); City of Cambridge GIS (CC BY); Quattroshapes, Foursquare (CC BY 2.0); Pediacities NYC neighborhoods (ODC-By 1.0); and, in the public domain or under CC0, Zetashapes, Mapzen, SanGIS/SANDAG, and the cities of Boston, Los Angeles, New Orleans, Oakland, Portland, San Francisco, San Jose, Santa Barbara, Seattle and St. Paul. Chicago community areas and neighborhoods: City of Chicago Data Portal. Boundaries are simplified and matched to census tracts here.</p>
+          <p class="credits">Who's On First (CC BY 4.0), compiled from: Atlanta Department of Planning and Community Development (CC BY 4.0); Baltimore Mayor's Office of Information Technology (CC BY 3.0); Washington Post neighborhood boundaries for Washington, DC (CC BY); Zolk Chicago Neighborhoods Map (CC BY 3.0 US); Azavea, Inc., Philadelphia neighborhoods (CC BY 3.0 US); Denver Community Planning and Development (CC BY 3.0); City of Cambridge GIS (CC BY); Quattroshapes, Foursquare (CC BY 2.0); Pediacities NYC neighborhoods (ODC-By 1.0); and, in the public domain or under CC0, Zetashapes, Mapzen, Mini Tenders, Burrito Justice, SanGIS/SANDAG, and the cities of Boston, Los Angeles, New Orleans, Oakland, Portland, San Francisco, San Jose, Santa Barbara, Seattle and St. Paul. Chicago community areas and neighborhoods: City of Chicago Data Portal. Boundaries are simplified and matched to census tracts here.</p>
         </div>
       </details>
     </div>
@@ -627,6 +627,7 @@ const Suggest = (() => {
     $('sgForm').onsubmit = async e => {
       e.preventDefault();
       const nm = $('sgName').value.trim(); if (!nm) return;
+      if (sel.size > 2500) { $('sgMsg').textContent = 'A suggestion can cover at most 2,500 tracts. Select fewer and try again.'; return; }
       const item = {name:nm, city:$('sgCity').value.trim(), note:$('sgNote').value.trim(), st:ST.fips, tracts:[...sel].sort(), website:$('sgWeb').value};
       $('sgSend').disabled = true; $('sgMsg').textContent = 'Sending…';
       let j = null;
@@ -642,7 +643,7 @@ const Suggest = (() => {
       }
       $('sgSend').disabled = false;
       $('sgMsg').textContent = j && j.error === 'daily_limit' ? 'The page has taken all the suggestions it accepts for today. Please try again tomorrow.'
-        : j && j.error === 'bad_request' ? 'That suggestion could not be sent. Check the name and try again.'
+        : j && j.error === 'bad_request' ? 'That suggestion could not be sent. Check that it has a name and at most 2,500 tracts in one state, then try again.'
         : 'The suggestion could not be sent just now. Please try again in a minute.';
     };
     $('sgName').focus();
@@ -762,7 +763,8 @@ async function main() {
   let opened = false;
   if (location.hash) {
     try { opened = await openFromHash(); } catch (e) { opened = false; }
-    if (!opened) { $('notice').textContent = location.hash.startsWith('#sg-') ? 'That suggested area could not be found. It may have been declined or removed.' : 'That link could not be opened, so the page starts at South Shore, Chicago.'; }
+    if (!opened) { $('notice').textContent = !location.hash.startsWith('#sg-') ? 'That link could not be opened, so the page starts at South Shore, Chicago.'
+      : Suggest.on ? 'That suggested area could not be found. It may have been declined or removed.' : 'Suggested areas are not switched on for this copy of the page, so that link cannot be opened.'; }
   }
   if (!opened) {
     if (!ST || ST.fips !== '17') { $('state').value = '17'; await loadState('17'); }
