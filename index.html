@@ -38,6 +38,15 @@ img{max-width:100%}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
 .wrap{max-width:1280px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px}
+.guide{margin-top:18px;padding:16px 20px}
+.ghead{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between}
+.ghead h2{font:700 18px/1.2 var(--display);margin:0}
+.gbody{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 24px;margin-top:12px}
+@media (max-width:860px){.gbody{grid-template-columns:1fr}}
+.gbody h3{font:600 12px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+.gbody p{margin:0;font-size:14px;line-height:1.55;max-width:62ch}
+.guide .says{background:var(--accent-soft);border-radius:10px;padding:12px 14px}
+.guide.folded .gbody{display:none}
 header.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;padding-block:8px 18px;border-bottom:1px solid var(--line)}
 h1{font:700 clamp(26px,3.4vw,38px)/1.05 var(--display);letter-spacing:-.015em;margin:0;text-wrap:balance}
 .lede{margin:6px 0 0;color:var(--muted);max-width:68ch}
@@ -132,7 +141,7 @@ footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-si
 .mono{font-family:var(--mono)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .fitbox{font-size:13px;color:var(--muted);margin-top:8px;max-width:72ch}
-.suggest{margin-top:14px;padding:12px 14px;border:1px dashed var(--line);border-radius:10px;font-size:14px;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+.suggest{margin-top:14px;padding:12px 14px;border:1px dashed var(--line);border-radius:10px;background:var(--panel);font-size:14px;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
 .suggest .sub{margin:0;flex:1 1 260px}
 .sgform{display:grid;gap:10px;width:100%}
 .sgform label.f{font-size:10.5px}
@@ -156,6 +165,15 @@ footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-si
     </div>
   </header>
 
+  <section class="card guide" id="guide" aria-labelledby="guideTitle">
+    <div class="ghead"><h2 id="guideTitle">How to read this page</h2><button class="btn" type="button" id="guideToggle" aria-controls="guideBody">Hide the guide</button></div>
+    <div class="gbody" id="guideBody">
+      <div><h3>What it measures</h3><p>For any group of census tracts, an estimate of what residents spend in each category, given their incomes, and what stores located there sell. Both come from public data: Census and BLS surveys of households, and Census counts of stores and jobs. It is not card data, so it shows where spending <em>likely</em> goes, not where residents actually shop.</p></div>
+      <div><h3>How to read it</h3><p>The <strong>pull factor</strong> is local store sales divided by what the national pattern predicts from residents' spending. <strong>1.0</strong> is typical; <strong>0.5</strong> means stores sell half of that, so residents likely shop elsewhere; above 1 means the area draws shoppers in. Figures are ranges because store sales are estimated two ways, and real uncertainty is wider. The <strong>spending gap</strong> is residents' spending the area would hold at the national norm but doesn't: a ceiling, not a forecast. <a href="#method" id="guideMethod">Full method and limits</a></p></div>
+      <div class="says"><h3>What it says here</h3><p id="guideSays"></p></div>
+    </div>
+  </section>
+
   <div class="controls">
     <label class="f">State
       <select id="state" aria-label="State"></select>
@@ -170,6 +188,8 @@ footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-si
       <select id="county" aria-label="Go to county"></select>
     </label>
   </div>
+
+  <div class="suggest" id="suggest" hidden></div>
 
   <div class="grid">
     <section class="card mapcard" aria-label="Tract map">
@@ -190,7 +210,6 @@ footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-si
         <p class="headline" id="headline"></p>
         <div class="warn" id="warn" hidden></div>
         <div class="suggest review" id="reviewbox" hidden></div>
-        <div class="suggest" id="suggest" hidden></div>
       </section>
 
       <section class="card sect">
@@ -683,6 +702,35 @@ function edgeStreets(g) {
   return out;
 }
 
+// ---------- the guide at the top: what this measures, how to read it, what it says for the selection ----------
+function guideSays(r) {
+  if (!r.n) return 'Choose a place, or click tracts on the map, and this will say in plain terms what its numbers show.';
+  const name = ($('selname').value || 'This area').replace(/ \(edited\)$/, ''), T = r.tot;
+  const lo = Math.min(T.pfL, T.pfZ), hi = Math.max(T.pfL, T.pfZ);
+  if (!isFinite(lo) || !isFinite(hi)) return `${esc(name)} has too few households for a reading.`;
+  const cents = range(lo * 100, hi * 100, v => Math.round(v));
+  let s = hi < 0.9 ? `Stores in <b>${esc(name)}</b> sell about <b>${cents} cents</b> for every dollar of sales its residents' spending would support at the national norm, so much of that spending likely happens elsewhere.`
+    : lo > 1.1 ? `Stores in <b>${esc(name)}</b> sell more than its residents' spending alone would support (<b>${cents} cents</b> per dollar), so the area draws shoppers from elsewhere.`
+    : `Stores in <b>${esc(name)}</b> sell close to what its residents' spending would support (<b>${cents} cents</b> per dollar of the national norm).`;
+  const short = r.cats.filter(x => Math.max(x.pfL, x.pfZ) < 0.9 && Math.min(x.gL, x.gZ) > 0).sort((a, b) => Math.max(b.gL, b.gZ) - Math.max(a.gL, a.gZ)).slice(0, 3);
+  if (short.length) s += ` The biggest shortfalls are ${short.map(x => `${SHORT[x.c].toLowerCase()} (${range(Math.min(x.pfL, x.pfZ) * 100, Math.max(x.pfL, x.pfZ) * 100, v => Math.round(v))} cents)`).join(', ')}.`;
+  const draw = r.cats.filter(x => Math.min(x.pfL, x.pfZ) > 1.1).map(x => SHORT[x.c].toLowerCase());
+  if (draw.length) s += ` It draws shoppers in for ${draw.slice(0, 3).join(', ')}.`;
+  const wide = short.find(x => Math.max(x.pfL, x.pfZ) > 1.6 * Math.min(x.pfL, x.pfZ) && Math.min(x.pfL, x.pfZ) > 0.05);
+  if (r.h < 2000 || r.n < 3) s += ' It is a small area, so read these as rough indications.';
+  else if (wide) s += ` The two sales estimates differ a lot for ${SHORT[wide.c].toLowerCase()}, so treat that one with care.`;
+  return s;
+}
+function renderGuide(r) { $('guideSays').innerHTML = guideSays(r); }
+function initGuide() {
+  const KEY = 'nsg-guide-hidden', box = $('guide');
+  let hidden = false; try { hidden = localStorage.getItem(KEY) === '1'; } catch (e) {}
+  const apply = () => { box.classList.toggle('folded', hidden); $('guideToggle').textContent = hidden ? 'Show the guide' : 'Hide the guide'; $('guideToggle').setAttribute('aria-expanded', String(!hidden)); };
+  $('guideToggle').onclick = () => { hidden = !hidden; try { localStorage.setItem(KEY, hidden ? '1' : '0'); } catch (e) {} apply(); };
+  $('guideMethod').onclick = e => { e.preventDefault(); $('method').open = true; $('method').scrollIntoView({behavior:'smooth', block:'start'}); };
+  apply();
+}
+
 // ---------- render ----------
 function fitText(m) {
   if (!m || m.src === 'county') return '';
@@ -723,6 +771,7 @@ function render() {
   ].map(([b,s]) => `<div class="stat"><b>${b}</b><span>${s}</span></div>`).join('');
   document.querySelectorAll('#dl button').forEach(b => { if (b.dataset.dl !== 'state') b.disabled = !n; });
   Suggest.renderForm(n);
+  renderGuide(r);
   Suggest.renderReview(selMeta);
   if (!n) {
     $('headline').textContent = 'Search for a place or click tracts on the map to begin.';
@@ -1016,6 +1065,7 @@ function doDownload(kind) {
 
 // ---------- wire up ----------
 async function main() {
+  initGuide();
   initMap();
   await loadIndex();
   let opened = false;
