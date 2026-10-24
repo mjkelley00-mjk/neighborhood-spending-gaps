@@ -469,7 +469,7 @@ function initMap() {
   map.addControl(new maplibregl.NavigationControl({showCompass:false}), 'top-right');
   // tile requests cancelled by a pan, a theme switch or a new state are expected; report anything else quietly
   map.on('error', e => { const err = e && e.error; if (err && err.name !== 'AbortError') console.warn('Map:', err.message || err); });
-  // If the street-tile server can't be reached, draw the tracts on a plain background instead, so the map
+  // If the street-map server can't be reached, draw the tracts on a plain background instead, so the map
   // still works; the street style is tried again on the next visit.
   const plainStyle = () => ({version:8, sources:{}, layers:[{id:'plain', type:'background', paint:{'background-color': cssVar('--panel')}}]});
   const fallBack = () => {
@@ -478,10 +478,11 @@ function initMap() {
     $('mapnote').hidden = false;
     map.setStyle(plainStyle(), {diff:false});
   };
+  // ready once a style is in: the tracts can draw while street tiles are still arriving on a slow connection
   let loaded = false;
-  mapReady = new Promise(res => { map.once('load', () => { loaded = true; res(); }); map.on('style.load', () => { if (noStreets) { loaded = true; res(); } }); });
-  const timer = setTimeout(fallBack, 10000);
-  map.once('load', () => clearTimeout(timer));
+  mapReady = new Promise(res => map.on('style.load', () => { loaded = true; res(); }));
+  const timer = setTimeout(fallBack, 10000);   // no street style after 10 seconds
+  map.once('style.load', () => clearTimeout(timer));
   map.on('error', e => { if (!loaded && !e.sourceId && !(e.error && e.error.name === 'AbortError')) fallBack(); });
   map.on('style.load', () => { styleOk = true; if (ST && FEAT) { addTractLayers(); paintSel(); } });
   map.getCanvas().addEventListener('pointerdown', e => { lastPointer = e.pointerType || 'mouse'; }, true);
