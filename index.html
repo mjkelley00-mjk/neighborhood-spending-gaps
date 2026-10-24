@@ -485,7 +485,14 @@ function initMap() {
   map.once('style.load', () => clearTimeout(timer));
   map.on('error', e => { if (!loaded && !e.sourceId && !(e.error && e.error.name === 'AbortError')) fallBack(); });
   // street tiles failing after the style loaded: say so rather than reporting "no named streets"
-  map.on('error', e => { if (e.sourceId === 'openmaptiles' && !(e.error && e.error.name === 'AbortError')) { tileErr = true; $('mapnote').textContent = 'Some street tiles did not load; street names may be missing.'; $('mapnote').hidden = false; } });
+  let errAt = 0;
+  map.on('error', e => { if (e.sourceId === 'openmaptiles' && !(e.error && e.error.name === 'AbortError')) { tileErr = true; errAt = Date.now(); $('mapnote').textContent = 'Some street tiles did not load; street names may be missing.'; $('mapnote').hidden = false; } });
+  // ...and clear that once street tiles load again
+  map.on('sourcedata', e => {
+    if (tileErr && !noStreets && e.sourceId === 'openmaptiles' && e.tile && e.tile.state === 'loaded' && Date.now() - errAt > 2000) {
+      tileErr = false; edgeCache.clear(); $('mapnote').hidden = true; if (hoverId) updateTip();
+    }
+  });
   map.on('style.load', () => { styleOk = true; if (ST && FEAT) { addTractLayers(); paintSel(); } });
   map.getCanvas().addEventListener('pointerdown', e => { lastPointer = e.pointerType || 'mouse'; }, true);
   map.on('mousemove', 'tract-fill', e => { if (lastPointer === 'touch' || tipPinned) return; const f = e.features && e.features[0]; if (f) hover(f.properties.GEOID, e.point); });
