@@ -785,7 +785,7 @@ function summaryText(r) {
   const w = [];
   if (r.h < 2000 || r.n < 3) w.push('This is a small area. Store sales are allocated to tracts from ZIP and job counts, so one store more or less can swing a category; treat the figures as indicative.');
   const big = r.cats.filter(x => Math.max(x.pfL,x.pfZ) > 3).map(x => SHORT[x.c].toLowerCase());
-  if (big.length) w.push(`Sales above 3 times the national norm (${big.join('; ')}) usually mean a regional destination, a highway corner or a business district, where most buyers live elsewhere.`);
+  if (big.length) w.push(`Sales more than 3 times the national norm on either estimate (${big.join('; ')}) usually mean a regional destination, a highway corner or a business district, where most buyers live elsewhere.`);
   if (gapHi <= 0 && pos.length) w.push('The overall figure nets categories against each other: the area draws shoppers in overall but still falls short in the categories listed above.');
   return {lead, w};
 }
