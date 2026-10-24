@@ -450,7 +450,7 @@ function toggle(g) {
 // If the browser can't run the map (no WebGL, or the map library failed to load), the rest of the page still
 // works: places are chosen from search, and the map box says why it is empty.
 let map = null, mapReady = Promise.resolve(), styleOk = false, hoverId = null, featById = new Map(), srcFips = null, edgeCache = new Map();
-let lastPointer = 'mouse', tipPinned = false, noStreets = false;
+let lastPointer = 'mouse', tipPinned = false, noStreets = false, tileErr = false;
 const darkTheme = () => { const t = document.documentElement.dataset.theme; return t ? t === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches; };
 const styleUrl = () => 'https://tiles.openfreemap.org/styles/' + (darkTheme() ? 'dark' : 'positron');
 const cssVar = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
@@ -484,6 +484,8 @@ function initMap() {
   const timer = setTimeout(fallBack, 10000);   // no street style after 10 seconds
   map.once('style.load', () => clearTimeout(timer));
   map.on('error', e => { if (!loaded && !e.sourceId && !(e.error && e.error.name === 'AbortError')) fallBack(); });
+  // street tiles failing after the style loaded: say so rather than reporting "no named streets"
+  map.on('error', e => { if (e.sourceId === 'openmaptiles' && !(e.error && e.error.name === 'AbortError')) { tileErr = true; $('mapnote').textContent = 'Some street tiles did not load; street names may be missing.'; $('mapnote').hidden = false; } });
   map.on('style.load', () => { styleOk = true; if (ST && FEAT) { addTractLayers(); paintSel(); } });
   map.getCanvas().addEventListener('pointerdown', e => { lastPointer = e.pointerType || 'mouse'; }, true);
   map.on('mousemove', 'tract-fill', e => { if (lastPointer === 'touch' || tipPinned) return; const f = e.features && e.features[0]; if (f) hover(f.properties.GEOID, e.point); });
@@ -591,7 +593,8 @@ function updateTip() {
   const t = ST.tracts[g], streets = noStreets ? undefined : edgeStreets(g);
   const text = `<b>Tract ${g.slice(5, 9).replace(/^0+/, '') || '0'}${g.slice(9) === '00' ? '' : '.' + g.slice(9)}</b> · ${t ? fmtN(t.h) + ' households' : 'no households'}<br>` +
     (streets === undefined ? 'Street names are not available right now' : streets === null ? 'Zoom in to street level to see the streets along its edges'
-      : streets.length ? 'Edges: ' + streets.map(esc).join(', ') + (offscreen(g) ? ' (more of it is off screen)' : '') : 'No named streets along its edges at this zoom');
+      : streets.length ? 'Edges: ' + streets.map(esc).join(', ') + (offscreen(g) ? ' (more of it is off screen)' : '')
+      : tileErr ? 'Street names did not load here' : 'No named streets along its edges at this zoom');
   const btns = tipPinned && t ? `<button class="btn" type="button" id="tipBtn">${sel.has(g) ? 'Remove from selection' : 'Add to selection'}</button> <button class="btn" type="button" id="tipClose">Close</button>` : '';
   const key = text + '|' + btns;
   if (tip.dataset.key !== key) {          // a live region: rewrite it only when what it says changes
