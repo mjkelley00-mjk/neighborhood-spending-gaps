@@ -715,14 +715,16 @@ function guideSays(r) {
   let name = ($('selname').value || '').replace(/ \(edited\)$/, '').trim();
   const where = !name || name === 'Custom selection' ? 'this selection' : `<b>${esc(name)}</b>`;
   const T = r.tot, lo = Math.min(T.pfL, T.pfZ), hi = Math.max(T.pfL, T.pfZ);
-  if (!isFinite(lo) || !isFinite(hi)) return `There are too few households in ${where} for a reading.`;
+  if (!isFinite(lo) || !isFinite(hi)) return `No households live in ${where}, so there is no resident spending to compare with its stores' sales.`;
   const Where = where.charAt(0) === 't' ? 'This selection' : where;
+  const per = `<b>${perDollar(lo, hi)}</b>`;
   let s;
-  if (hi < 0.9) s = `Stores in ${where} sell about <b>${perDollar(lo, hi)}</b> for every dollar of sales its residents' spending would support at the national norm, so ${hi < 0.8 ? 'much' : 'some'} of that spending likely happens elsewhere.`;
-  else if (lo >= 2) s = `Stores in ${where} sell about <b>${lo.toFixed(1)} to ${hi.toFixed(1)} times</b> what its residents' spending would support at the national norm: a shopping destination that draws most of its customers from elsewhere.`;
-  else if (lo > 1.1) s = `Stores in ${where} sell about <b>${perDollar(lo, hi)}</b> for every dollar its residents' spending would support at the national norm, so the area draws shoppers from elsewhere.`;
-  else if (lo >= 0.9 && hi <= 1.1) s = `Stores in ${where} sell close to what its residents' spending would support at the national norm (<b>${perDollar(lo, hi)}</b> per dollar).`;
-  else s = `${Where} is hard to call overall: stores there sell <b>${perDollar(lo, hi)}</b> for every dollar its residents' spending would support at the national norm, depending on which of the two sales estimates is used.`;
+  if (lo >= 2) s = `Stores in ${where} sell about <b>${lo.toFixed(1) === hi.toFixed(1) ? lo.toFixed(1) : lo.toFixed(1) + ' to ' + hi.toFixed(1)} times</b> what its residents' spending would support at the national norm: a shopping destination that draws most of its customers from elsewhere.`;
+  else if (lo > 1.1) s = `Stores in ${where} sell about ${per} for every dollar its residents' spending would support at the national norm, so the area draws shoppers from elsewhere.`;
+  else if (lo >= 0.9 && hi <= 1.1) s = `Stores in ${where} sell close to what its residents' spending would support at the national norm (${per} per dollar).`;
+  else if (hi < 1) s = `Stores in ${where} sell about ${per} for every dollar of sales its residents' spending would support at the national norm, so ${hi < 0.8 ? 'much' : 'some'} of that spending likely happens elsewhere.`;
+  else if (lo >= 1) s = `Stores in ${where} sell somewhat more than its residents' spending would support at the national norm (${per} per dollar), so the area draws some shoppers from elsewhere.`;
+  else s = `${Where} is hard to call overall: stores there sell ${per} for every dollar its residents' spending would support at the national norm, below or above it depending on which of the two sales estimates is used.`;
   const short = r.cats.filter(x => Math.max(x.pfL, x.pfZ) < 0.9 && Math.min(x.gL, x.gZ) > 0)
     .sort((a, b) => Math.max(b.gL, b.gZ) - Math.max(a.gL, a.gZ)).slice(0, 3);
   if (short.length) s += ` The biggest shortfalls are ${short.map(x => `${SHORT[x.c].toLowerCase()} (${perDollar(Math.min(x.pfL, x.pfZ), Math.max(x.pfL, x.pfZ))})`).join(', ')}.`;
