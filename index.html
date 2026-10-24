@@ -764,6 +764,14 @@ function fitText(m) {
   return `Boundary from ${SRC_LABEL(m.src)}. The tracts trace it ${fitWord(m.fit)}ly: they cover ${pct(m.cover)} of the area, and ${pct(m.inside)} of the tracts' own area lies inside it (fit ${pct(m.fit)}).` +
     (m.fit < 0.6 ? ' Click tracts on the map to adjust before relying on the figures.' : '');
 }
+// The headline's retention rate. Above the norm on both estimates it reads as a multiple ("2.2 to 2.4 times what residents'
+// spending would support at the national norm"); at or below it, or straddling it, as the rate against 1.0.
+function retTxt(a, b) {
+  const lo = Math.min(a, b), hi = Math.max(a, b);
+  if (!(lo > 1)) return `a retention rate of <strong>${range(a, b, fmtPF)}</strong> against the national norm of 1.0`;
+  const f = x => x.toFixed(lo >= 2 ? 1 : 2), A = f(lo), B = f(hi);
+  return `<strong>${A === B ? A : A + ' to ' + B} times</strong> what residents' spending would support at the national norm`;
+}
 function summaryText(r) {
   const T = r.tot, gapLo = Math.min(T.gL, T.gZ), gapHi = Math.max(T.gL, T.gZ);
   // no households (a park, an airport, a business district): nothing to compare local sales with
@@ -773,11 +781,11 @@ function summaryText(r) {
     : `The two supply estimates disagree on whether the area holds more or less than the norm overall (${fmtUSD(gapLo)} to ${fmtUSD(gapHi)} of residents' spending).`;
   const pos = r.cats.filter(x => Math.min(x.gL, x.gZ) > 0).sort((a,b) => Math.max(b.gL,b.gZ) - Math.max(a.gL,a.gZ)).slice(0,3);
   const catTxt = pos.length ? ` Largest projected leakage: ${pos.map(x => `${SHORT[x.c].toLowerCase()} ${rangeUSD(x.gL,x.gZ)}`).join('; ')}.` : '';
-  const lead = `In the ${NS} categories public data can measure on both sides, residents spend about <strong>${fmtUSD(T.D)} a year</strong>. Local stores sell ${rangeUSD(T.sL,T.sZ)}: a retention rate of <strong>${range(T.pfL,T.pfZ,fmtPF)}</strong> against the national norm of 1.0. ${gapTxt}${catTxt}`;
+  const lead = `In the ${NS} categories public data can measure on both sides, residents spend about <strong>${fmtUSD(T.D)} a year</strong>. Local stores sell ${rangeUSD(T.sL,T.sZ)}: ${retTxt(T.pfL,T.pfZ)}. ${gapTxt}${catTxt}`;
   const w = [];
   if (r.h < 2000 || r.n < 3) w.push('This is a small area. Store sales are allocated to tracts from ZIP and job counts, so one store more or less can swing a category; treat the figures as indicative.');
   const big = r.cats.filter(x => Math.max(x.pfL,x.pfZ) > 3).map(x => SHORT[x.c].toLowerCase());
-  if (big.length) w.push(`Retention rates above 3 (${big.join(', ')}) usually mean a regional destination, a highway corner or a business district, where most buyers live elsewhere.`);
+  if (big.length) w.push(`Sales above 3 times the national norm (${big.join('; ')}) usually mean a regional destination, a highway corner or a business district, where most buyers live elsewhere.`);
   if (gapHi <= 0 && pos.length) w.push('The overall figure nets categories against each other: the area draws shoppers in overall but still falls short in the categories listed above.');
   return {lead, w};
 }
