@@ -703,31 +703,50 @@ function edgeStreets(g) {
 }
 
 // ---------- the guide at the top: what this measures, how to read it, what it says for the selection ----------
+// A pull factor as money per dollar of the national norm: "35 to 43 cents", "85 cents to $1.44", "$1.08 to $1.53".
+function perDollar(lo, hi) {
+  const c = v => { const n = Math.round(v * 100); return n === 1 ? '1 cent' : n + ' cents'; }, d = v => '$' + v.toFixed(2);
+  if (Math.round(hi * 100) < 100) return Math.round(lo * 100) === Math.round(hi * 100) ? c(lo) : `${Math.round(lo * 100)} to ${c(hi)}`;
+  if (Math.round(lo * 100) >= 100) return d(lo) === d(hi) ? d(lo) : `${d(lo)} to ${d(hi)}`;
+  return `${c(lo)} to ${d(hi)}`;
+}
 function guideSays(r) {
   if (!r.n) return 'Choose a place, or click tracts on the map, and this will say in plain terms what its numbers show.';
-  const name = ($('selname').value || 'This area').replace(/ \(edited\)$/, ''), T = r.tot;
-  const lo = Math.min(T.pfL, T.pfZ), hi = Math.max(T.pfL, T.pfZ);
-  if (!isFinite(lo) || !isFinite(hi)) return `${esc(name)} has too few households for a reading.`;
-  const cents = range(lo * 100, hi * 100, v => Math.round(v));
-  let s = hi < 0.9 ? `Stores in <b>${esc(name)}</b> sell about <b>${cents} cents</b> for every dollar of sales its residents' spending would support at the national norm, so much of that spending likely happens elsewhere.`
-    : lo > 1.1 ? `Stores in <b>${esc(name)}</b> sell more than its residents' spending alone would support (<b>${cents} cents</b> per dollar), so the area draws shoppers from elsewhere.`
-    : `Stores in <b>${esc(name)}</b> sell close to what its residents' spending would support (<b>${cents} cents</b> per dollar of the national norm).`;
-  const short = r.cats.filter(x => Math.max(x.pfL, x.pfZ) < 0.9 && Math.min(x.gL, x.gZ) > 0).sort((a, b) => Math.max(b.gL, b.gZ) - Math.max(a.gL, a.gZ)).slice(0, 3);
-  if (short.length) s += ` The biggest shortfalls are ${short.map(x => `${SHORT[x.c].toLowerCase()} (${range(Math.min(x.pfL, x.pfZ) * 100, Math.max(x.pfL, x.pfZ) * 100, v => Math.round(v))} cents)`).join(', ')}.`;
-  const draw = r.cats.filter(x => Math.min(x.pfL, x.pfZ) > 1.1).map(x => SHORT[x.c].toLowerCase());
-  if (draw.length) s += ` It draws shoppers in for ${draw.slice(0, 3).join(', ')}.`;
+  let name = ($('selname').value || '').replace(/ \(edited\)$/, '').trim();
+  const where = !name || name === 'Custom selection' ? 'this selection' : `<b>${esc(name)}</b>`;
+  const T = r.tot, lo = Math.min(T.pfL, T.pfZ), hi = Math.max(T.pfL, T.pfZ);
+  if (!isFinite(lo) || !isFinite(hi)) return `There are too few households in ${where} for a reading.`;
+  const Where = where.charAt(0) === 't' ? 'This selection' : where;
+  let s;
+  if (hi < 0.9) s = `Stores in ${where} sell about <b>${perDollar(lo, hi)}</b> for every dollar of sales its residents' spending would support at the national norm, so ${hi < 0.8 ? 'much' : 'some'} of that spending likely happens elsewhere.`;
+  else if (lo >= 2) s = `Stores in ${where} sell about <b>${lo.toFixed(1)} to ${hi.toFixed(1)} times</b> what its residents' spending would support at the national norm: a shopping destination that draws most of its customers from elsewhere.`;
+  else if (lo > 1.1) s = `Stores in ${where} sell about <b>${perDollar(lo, hi)}</b> for every dollar its residents' spending would support at the national norm, so the area draws shoppers from elsewhere.`;
+  else if (lo >= 0.9 && hi <= 1.1) s = `Stores in ${where} sell close to what its residents' spending would support at the national norm (<b>${perDollar(lo, hi)}</b> per dollar).`;
+  else s = `${Where} is hard to call overall: stores there sell <b>${perDollar(lo, hi)}</b> for every dollar its residents' spending would support at the national norm, depending on which of the two sales estimates is used.`;
+  const short = r.cats.filter(x => Math.max(x.pfL, x.pfZ) < 0.9 && Math.min(x.gL, x.gZ) > 0)
+    .sort((a, b) => Math.max(b.gL, b.gZ) - Math.max(a.gL, a.gZ)).slice(0, 3);
+  if (short.length) s += ` The biggest shortfalls are ${short.map(x => `${SHORT[x.c].toLowerCase()} (${perDollar(Math.min(x.pfL, x.pfZ), Math.max(x.pfL, x.pfZ))})`).join(', ')}.`;
+  // strongest draws first: sales above what the national norm predicts for residents, in dollars
+  const draw = r.cats.filter(x => Math.min(x.pfL, x.pfZ) > 1.1)
+    .sort((a, b) => Math.min(b.sL - b.eL, b.sZ - b.eZ) - Math.min(a.sL - a.eL, a.sZ - a.eZ)).slice(0, 3).map(x => SHORT[x.c].toLowerCase());
+  if (draw.length) s += ` It draws shoppers in most for ${draw.join(', ')}.`;
   const wide = short.find(x => Math.max(x.pfL, x.pfZ) > 1.6 * Math.min(x.pfL, x.pfZ) && Math.min(x.pfL, x.pfZ) > 0.05);
   if (r.h < 2000 || r.n < 3) s += ' It is a small area, so read these as rough indications.';
   else if (wide) s += ` The two sales estimates differ a lot for ${SHORT[wide.c].toLowerCase()}, so treat that one with care.`;
   return s;
 }
-function renderGuide(r) { $('guideSays').innerHTML = guideSays(r); }
+function renderGuide(r) { $('guideSays').innerHTML = guideSays(r || compute(sel)); }
 function initGuide() {
   const KEY = 'nsg-guide-hidden', box = $('guide');
-  let hidden = false; try { hidden = localStorage.getItem(KEY) === '1'; } catch (e) {}
+  // folded by default on a phone, so the search and the map come first; a visitor's own choice is kept
+  let hidden = matchMedia('(max-width:640px)').matches;
+  try { const v = localStorage.getItem(KEY); if (v === '1' || v === '0') hidden = v === '1'; } catch (e) {}
   const apply = () => { box.classList.toggle('folded', hidden); $('guideToggle').textContent = hidden ? 'Show the guide' : 'Hide the guide'; $('guideToggle').setAttribute('aria-expanded', String(!hidden)); };
   $('guideToggle').onclick = () => { hidden = !hidden; try { localStorage.setItem(KEY, hidden ? '1' : '0'); } catch (e) {} apply(); };
-  $('guideMethod').onclick = e => { e.preventDefault(); $('method').open = true; $('method').scrollIntoView({behavior:'smooth', block:'start'}); };
+  $('guideMethod').onclick = e => {
+    e.preventDefault(); const m = $('method'); m.open = true;
+    m.scrollIntoView({behavior:'smooth', block:'start'}); m.querySelector('summary').focus({preventScroll:true});
+  };
   apply();
 }
 
@@ -745,6 +764,8 @@ function fitText(m) {
 }
 function summaryText(r) {
   const T = r.tot, gapLo = Math.min(T.gL, T.gZ), gapHi = Math.max(T.gL, T.gZ);
+  // no households (a park, an airport, a business district): nothing to compare local sales with
+  if (!(T.D > 0)) return {lead: `No households live in this selection, so there is no resident spending to compare with its stores' sales (${rangeUSD(T.sL, T.sZ)} a year). Add neighboring tracts to see the area around it.`, w: []};
   const gapTxt = gapHi <= 0 ? `Overall, local stores sell more than the national pattern predicts for residents, so the area draws shoppers in.`
     : gapLo >= 0 ? `At the national norm the area would hold a net <strong>${rangeUSD(T.gL,T.gZ)} a year</strong> more of residents' spending.`
     : `The two supply estimates disagree on whether the area holds more or less than the norm overall (${fmtUSD(gapLo)} to ${fmtUSD(gapHi)} of residents' spending).`;
@@ -1111,7 +1132,7 @@ async function main() {
   document.addEventListener('click', e => { if (!e.target.closest('.searchbox')) $('qres').hidden = true; });
   $('clear').addEventListener('click', () => { $('notice').hidden = true; sel = new Set(); selLabel = ''; selMeta = null; $('selname').value = ''; paintSel(); render(); });
   $('fit').addEventListener('click', fitSel);
-  $('selname').addEventListener('input', e => { selLabel = e.target.value; if (hashReady) syncHash(); });
+  $('selname').addEventListener('input', e => { selLabel = e.target.value; if (hashReady) syncHash(); if (ST) renderGuide(); });
   $('dl').addEventListener('click', e => { const b = e.target.closest('button[data-dl]'); if (b) doDownload(b.dataset.dl); });
   let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { if (FEAT) render(); }, 200); });
 
