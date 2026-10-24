@@ -88,11 +88,11 @@ select:focus,input:focus,button:focus-visible{outline:2px solid var(--accent);ou
 .selname{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline}
 .selname input{font:700 22px/1.2 var(--display);border:0;border-bottom:1px dashed var(--line);border-radius:0;padding:2px 0;background:transparent;flex:1 1 240px}
 .sub{color:var(--muted);font-size:14px;margin:4px 0 0}
-.stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:14px}
+.stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:14px;container-type:inline-size}
 @media (max-width:640px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:last-child:nth-child(odd){grid-column:1/-1}}
-.stat{background:var(--bg);border-radius:10px;padding:10px 12px;min-width:0;container-type:inline-size}
+.stat{background:var(--bg);border-radius:10px;padding:10px 12px;min-width:0}
 .stat b{display:block;font:600 20px/1.2 var(--mono);letter-spacing:-.02em;white-space:nowrap}
-@supports (font-size:1cqi){.stat b{font-size:min(20px,17cqi)}}   /* a county's 9,936,690 residents still fits its tile */
+@supports (font-size:1cqi){.stat b{font-size:min(20px,calc(3.4cqi - 5.4px))}@media (max-width:640px){.stat b{font-size:min(20px,calc(8.5cqi - 4.9px))}}}
 .stat span{font-size:12px;color:var(--muted)}
 .headline{font-size:16px;line-height:1.6;margin:16px 0 0;max-width:70ch}
 .headline strong{font-weight:600}
