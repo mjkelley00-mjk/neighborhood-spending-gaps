@@ -88,7 +88,8 @@ select:focus,input:focus,button:focus-visible{outline:2px solid var(--accent);ou
 .selname{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline}
 .selname input{font:700 22px/1.2 var(--display);border:0;border-bottom:1px dashed var(--line);border-radius:0;padding:2px 0;background:transparent;flex:1 1 240px}
 .sub{color:var(--muted);font-size:14px;margin:4px 0 0}
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:14px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:10px;margin-top:14px}
+@media (max-width:520px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:last-child:nth-child(odd){grid-column:1/-1}}
 @media (max-width:520px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .stat{background:var(--bg);border-radius:10px;padding:10px 12px;min-width:0}
 .stat b{display:block;font:600 20px/1.2 var(--mono);letter-spacing:-.02em}
@@ -231,7 +232,7 @@ footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-si
           <h4>What this measures</h4>
           <p>This is a <strong>retail-gap estimate, not observed leakage</strong>. Local sales include shoppers who live elsewhere, and resident demand is modeled from national spending patterns by income. Neither side records where residents actually shop. That takes card data split by cardholder home and store location, which is the next layer (see the bottom of this page).</p>
           <h4>Resident demand</h4>
-          <p>Households by income bracket in each tract (ACS 2020–2024 five-year, table B19001) times what US households at each income spend by category (BLS Consumer Expenditure Survey 2024), interpolated at each bracket's midpoint. The top bracket's mean is solved from aggregate household income (B19025), held between $200K and $1M. Gasoline uses 2022 survey spending at 2022 incomes, restated at 2024 pump prices. Gas, auto repair and vehicle purchases are scaled by the tract's vehicles per household (B25046) against what the survey shows at the same incomes, between 0.2 and 2.5 times.</p>
+          <p>Residents are each tract's total population and households its occupied housing units (ACS 2020–2024 five-year, tables B01003 and B19001). Demand is households by income bracket in each tract (B19001) times what US households at each income spend by category (BLS Consumer Expenditure Survey 2024), interpolated at each bracket's midpoint. The top bracket's mean is solved from aggregate household income (B19025), held between $200K and $1M. Gasoline uses 2022 survey spending at 2022 incomes, restated at 2024 pump prices. Gas, auto repair and vehicle purchases are scaled by the tract's vehicles per household (B25046) against what the survey shows at the same incomes, between 0.2 and 2.5 times.</p>
           <h4>Categories</h4>
           <p>Twelve categories are measured on both sides: groceries; full-service restaurants; quick-service restaurants, coffee and food trucks; alcohol, from stores and bars; tobacco and vaping; household supplies, garden and stationery; pets, toys, hobbies and books; personal care products and services; apparel, shoes and clothing care; furniture, home furnishings, appliances and computers; gasoline; and auto parts and repair. Medicines and entertainment admissions are demand only.</p>
           <p>Stores sell across categories, so local sales are counted by what is sold, not by store type. Each store type's sales are split by what that kind of store sells nationally, from the 2022 Economic Census product lines: a supermarket's sales go mostly to groceries, partly to household supplies, personal care and alcohol, and its pharmacy counter to no category; a gas station's go to gasoline, groceries, tobacco and alcohol. Medicines and vitamins, prescription or over the counter, fall in no category, matching the demand-only medicines line; so do lines no category covers, such as sporting goods and used goods.</p>
@@ -343,10 +344,10 @@ const fitWord = f => f >= 0.8 ? 'close' : f >= 0.6 ? 'fair' : 'loose';
 
 // ---------- compute ----------
 function compute(ids) {
-  const r = {n:0, h:0, jr:0, jf:0, v:0, d:new Array(ND).fill(0), l:new Array(NS).fill(0), z:new Array(NS).fill(0)};
+  const r = {n:0, h:0, p:0, jr:0, jf:0, v:0, d:new Array(ND).fill(0), l:new Array(NS).fill(0), z:new Array(NS).fill(0)};
   for (const g of ids) {
     const t = ST.tracts[g]; if (!t) continue;
-    r.n++; r.h += t.h; r.jr += t.j[0]; r.jf += t.j[1]; r.v += t.v;
+    r.n++; r.h += t.h; r.p += t.p || 0; r.jr += t.j[0]; r.jf += t.j[1]; r.v += t.v;
     for (let i=0;i<ND;i++) r.d[i] += t.d[i];
     for (let i=0;i<NS;i++) { r.l[i] += t.l[i]; r.z[i] += t.z[i]; }
   }
@@ -598,7 +599,7 @@ function updateTip() {
   const tip = $('tip'), g = hoverId;
   if (!g || !ST) { tip.hidden = true; tip.classList.remove('pinned'); tip.dataset.key = ''; return; }
   const t = ST.tracts[g], streets = noStreets ? undefined : edgeStreets(g);
-  const text = `<b>Tract ${g.slice(5, 9).replace(/^0+/, '') || '0'}${g.slice(9) === '00' ? '' : '.' + g.slice(9)}</b> · ${t ? fmtN(t.h) + ' households' : 'no households'}<br>` +
+  const text = `<b>Tract ${g.slice(5, 9).replace(/^0+/, '') || '0'}${g.slice(9) === '00' ? '' : '.' + g.slice(9)}</b> · ${t ? fmtN(t.p || 0) + ' residents · ' + fmtN(t.h) + ' households' : 'no residents'}<br>` +
     (streets === undefined ? 'Street names are not available right now' : streets === null ? 'Zoom in to street level to see the streets along its edges'
       : streets.length ? 'Edges: ' + streets.map(esc).join(', ') + (offscreen(g) ? ' (more of it is off screen)' : '')
       : tileErr ? 'Street names did not load here' : 'No named streets along its edges at this zoom');
@@ -712,13 +713,13 @@ function summaryText(r) {
 function render() {
   const r = compute(sel);
   const n = r.n;
-  $('selcount').textContent = n ? `${n} tract${n===1?'':'s'} selected` : 'No tracts selected';
+  $('selcount').textContent = n ? `${n} tract${n===1?'':'s'} selected · ${fmtN(r.p)} residents · ${fmtN(r.h)} households` : 'No tracts selected';
   const counties = [...new Set([...sel].map(g => ST.counties[g.slice(0,5)]).filter(Boolean))];
   $('selwhere').textContent = n ? (counties.slice(0,3).join(', ') + (counties.length>3 ? ` and ${counties.length-3} more` : '') + ', ' + ST.name) : ST.name;
   const ft = fitText(selMeta);
   $('fitbox').hidden = !ft || !n; $('fitbox').textContent = ft;
   $('stats').innerHTML = [
-    [fmtN(r.h), 'households'], [fmtN(n), 'census tracts'], [fmtN(r.jr), 'retail jobs'], [fmtN(r.jf), 'food-service jobs']
+    [fmtN(r.p), 'residents'], [fmtN(r.h), 'households'], [fmtN(n), 'census tracts'], [fmtN(r.jr), 'retail jobs'], [fmtN(r.jf), 'food-service jobs']
   ].map(([b,s]) => `<div class="stat"><b>${b}</b><span>${s}</span></div>`).join('');
   document.querySelectorAll('#dl button').forEach(b => { if (b.dataset.dl !== 'state') b.disabled = !n; });
   Suggest.renderForm(n);
@@ -964,10 +965,10 @@ function summaryCSV(r) {
   return csv(rows);
 }
 function tractRows(ids) {
-  const head = ['geoid','county','households','retail_jobs','food_service_jobs'].concat(DEM.map(c => 'demand_' + c + '_usd'), SUP.map(c => 'sales_jobs_based_' + c + '_usd'), SUP.map(c => 'sales_zip_based_' + c + '_usd'), ['demand_vehicle_purchases_usd']);
+  const head = ['geoid','county','population','households','retail_jobs','food_service_jobs'].concat(DEM.map(c => 'demand_' + c + '_usd'), SUP.map(c => 'sales_jobs_based_' + c + '_usd'), SUP.map(c => 'sales_zip_based_' + c + '_usd'), ['demand_vehicle_purchases_usd']);
   const rows = [head];
   for (const g of ids) { const t = ST.tracts[g]; if (!t) continue;
-    rows.push([g, ST.counties[g.slice(0,5)] || '', t.h, t.j[0], t.j[1]].concat(t.d.map(usd), t.l.map(usd), t.z.map(usd), [usd(t.v)])); }
+    rows.push([g, ST.counties[g.slice(0,5)] || '', t.p || 0, t.h, t.j[0], t.j[1]].concat(t.d.map(usd), t.l.map(usd), t.z.map(usd), [usd(t.v)])); }
   return csv(rows);
 }
 function reportHTML(r) {
@@ -978,7 +979,7 @@ function reportHTML(r) {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(name)}: spending gaps</title>
 <style>body{font:15px/1.55 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#14212b;background:#fff;max-width:820px;margin:0 auto;padding:32px 20px}h1{font-size:28px;margin:0 0 4px}h2{font-size:18px;margin:28px 0 8px}.m{color:#5a6b78}table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:7px 8px;border-bottom:1px solid #e3e9ed;text-align:right}th:first-child,td:first-child{text-align:left}th{font-size:12px;color:#5a6b78;text-transform:uppercase;letter-spacing:.04em}tr.t td{font-weight:600}.k{display:flex;gap:24px;flex-wrap:wrap;margin:16px 0}.k b{display:block;font-size:20px}.k span{font-size:12px;color:#5a6b78}code{font-size:12px}p.s{font-size:13px;color:#5a6b78}</style></head><body>
 <p class="m">Neighborhood spending gaps · public-data estimate · ${today}</p><h1>${esc(name)}</h1><p class="m">${esc($('selwhere').textContent)}</p>${ft ? `<p class="s">${esc(ft)}</p>` : ''}
-<div class="k"><div><b>${fmtN(r.h)}</b><span>households</span></div><div><b>${r.n}</b><span>census tracts</span></div><div><b>${fmtN(r.jr)}</b><span>retail jobs</span></div><div><b>${fmtN(r.jf)}</b><span>food-service jobs</span></div></div>
+<div class="k"><div><b>${fmtN(r.p)}</b><span>residents</span></div><div><b>${fmtN(r.h)}</b><span>households</span></div><div><b>${r.n}</b><span>census tracts</span></div><div><b>${fmtN(r.jr)}</b><span>retail jobs</span></div><div><b>${fmtN(r.jf)}</b><span>food-service jobs</span></div></div>
 <p>${st.lead.replace(/<(\/?)strong>/g,'<$1b>')} Figures are annual, in 2024 dollars; the spending gap is resident demand × (1 − pull factor).</p>${st.w.length ? `<p style="background:#fff4dc;color:#7a5300;padding:10px 12px;border-radius:8px;font-size:14px">${esc(st.w.join(' '))}</p>` : ''}
 <h2>Pull factor by category</h2><svg width="640" height="${H}" viewBox="0 0 640 ${H}" style="max-width:100%">${s}</svg>
 <p class="s">Local store sales ÷ the sales the national pattern predicts from residents' spending. Bars span the two supply estimates; below 1.0 suggests leakage.</p>
