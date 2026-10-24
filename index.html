@@ -90,8 +90,9 @@ select:focus,input:focus,button:focus-visible{outline:2px solid var(--accent);ou
 .sub{color:var(--muted);font-size:14px;margin:4px 0 0}
 .stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:14px}
 @media (max-width:640px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:last-child:nth-child(odd){grid-column:1/-1}}
-.stat{background:var(--bg);border-radius:10px;padding:10px 12px;min-width:0}
-.stat b{display:block;font:600 20px/1.2 var(--mono);letter-spacing:-.02em}
+.stat{background:var(--bg);border-radius:10px;padding:10px 12px;min-width:0;container-type:inline-size}
+.stat b{display:block;font:600 20px/1.2 var(--mono);letter-spacing:-.02em;white-space:nowrap}
+@supports (font-size:1cqi){.stat b{font-size:min(20px,17cqi)}}   /* a county's 9,936,690 residents still fits its tile */
 .stat span{font-size:12px;color:var(--muted)}
 .headline{font-size:16px;line-height:1.6;margin:16px 0 0;max-width:70ch}
 .headline strong{font-weight:600}
