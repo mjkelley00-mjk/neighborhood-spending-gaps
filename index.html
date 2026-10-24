@@ -64,6 +64,10 @@ select:focus,input:focus,button:focus-visible{outline:2px solid var(--accent);ou
 .mapbox #map{position:absolute;inset:0}
 .maptip{position:absolute;z-index:3;pointer-events:none;background:var(--ink);color:var(--bg);font:12px/1.4 var(--sans);padding:7px 9px;border-radius:7px;width:max-content;max-width:min(280px,80%);transform:translate(-50%,calc(-100% - 14px))}
 .maptip b{font-family:var(--mono);font-weight:500}
+.maptip.below{transform:translate(-50%,18px)}
+.maptip.pinned{pointer-events:auto}
+.maptip .btn{margin-top:7px;font-size:12px;padding:6px 10px}
+.mapfail{position:absolute;inset:0;display:grid;place-items:center;margin:0;padding:24px;text-align:center;color:var(--muted);font-size:14px}
 .maplibregl-ctrl-attrib{font-size:11px}
 .maplibregl-ctrl-attrib.maplibregl-compact{background:var(--panel);color:var(--muted)}
 .maplibregl-ctrl-attrib a{color:var(--muted)}
@@ -160,17 +164,17 @@ footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-si
       </div>
     </label>
     <label class="f">Go to county
-      <select id="county" aria-label="County shown on map"></select>
+      <select id="county" aria-label="Go to county"></select>
     </label>
   </div>
 
   <div class="grid">
     <section class="card mapcard" aria-label="Tract map">
       <div class="maphead">
-        <span style="font-size:13px;color:var(--muted)">Click a tract to add or remove it. Point at one, or tap it on a phone, to see the streets along its edges.</span>
+        <span style="font-size:13px;color:var(--muted)">Click a tract to add or remove it, and point at one to see the streets along its edges. On a phone, tap a tract for its streets and an Add or Remove button.</span>
         <button class="btn" id="fit">Fit to selection</button>
       </div>
-      <div class="mapbox" id="mapbox"><div id="map" role="region" aria-label="Map of census tracts"></div><div class="loading" id="loading">Loading…</div><div class="maptip" id="tip" hidden></div></div>
+      <div class="mapbox" id="mapbox"><div id="map" role="region" aria-label="Map of census tracts"></div><div class="loading" id="loading">Loading…</div><div class="maptip" id="tip" role="status" aria-live="polite" hidden></div></div>
       <div class="mapfoot"><span id="selcount">No tracts selected</span><button class="btn" id="clear">Clear selection</button></div>
     </section>
 
@@ -249,7 +253,7 @@ footer{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-si
             <li><strong>Cities and towns</strong> are Census places: the tracts with at least half their blocks in the place.</li>
             <li><strong>Suggested areas:</strong> anyone can suggest a selection of tracts as a named area. It shows in their own search on that device at once, and in everyone's once it is reviewed and approved, labeled as a suggestion. The page does not ask who is suggesting and saves nothing about them.</li>
             <li>Boundaries are 2024 Census cartographic files (2020 tracts), simplified for the map. Tracts that are only water have no households and are not drawn.</li>
-            <li><strong>Streets</strong> on the map come from OpenStreetMap. Pointing at a tract lists the named streets that run along its edges, matched within about 45 meters of the simplified tract lines, so now and then a name is missed or a nearby parallel street is listed. Only streets in the part of the map on screen are checked.</li>
+            <li><strong>Streets</strong> on the map come from OpenStreetMap. Pointing at a tract (or tapping it on a phone), zoomed in to street level, lists the named streets that run along its edges, matched within about 45 meters of the simplified tract lines, so now and then a name is missed or a nearby parallel street is listed. Only streets in the part of the map on screen are checked.</li>
           </ul>
           <h4>Limits</h4>
           <ul>
@@ -441,34 +445,57 @@ function toggle(g) {
 }
 
 // ---------- map: census tracts over a street map (MapLibre GL, OpenFreeMap tiles from OpenStreetMap) ----------
-let map = null, mapReady = null, hoverId = null, featById = new Map(), srcFips = null, edgeCache = new Map();
+// If the browser can't run the map (no WebGL, or the map library failed to load), the rest of the page still
+// works: places are chosen from search, and the map box says why it is empty.
+let map = null, mapReady = Promise.resolve(), styleOk = false, hoverId = null, featById = new Map(), srcFips = null, edgeCache = new Map();
+let lastPointer = 'mouse', tipPinned = false;
 const darkTheme = () => { const t = document.documentElement.dataset.theme; return t ? t === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches; };
 const styleUrl = () => 'https://tiles.openfreemap.org/styles/' + (darkTheme() ? 'dark' : 'positron');
 const cssVar = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 function initMap() {
-  map = new maplibregl.Map({container:'map', style:styleUrl(), center:[-87.6, 41.76], zoom:11, minZoom:3, maxZoom:17,
-    dragRotate:false, pitchWithRotate:false, touchPitch:false, attributionControl:{compact:true}, cooperativeGestures:false});
+  try {
+    map = new maplibregl.Map({container:'map', style:styleUrl(), center:[-87.6, 41.76], zoom:11, minZoom:3, maxZoom:17,
+      dragRotate:false, pitchWithRotate:false, touchPitch:false, attributionControl:{compact:true}});
+  } catch (e) {
+    map = null;
+    $('map').innerHTML = '<p class="mapfail">The street map can\'t be shown in this browser (it needs WebGL). Search for a place above to choose tracts; everything else works.</p>';
+    return;
+  }
   map.touchZoomRotate.disableRotation();
-  if (/[?&]debug\b/.test(location.search)) window.__nsg = {map, edgeStreets, get featById() { return featById; }};
   map.keyboard.disableRotation();
+  if (/[?&]debug\b/.test(location.search)) window.__nsg = {map, edgeStreets, get featById() { return featById; }};
   map.addControl(new maplibregl.NavigationControl({showCompass:false}), 'top-right');
+  // tile requests cancelled by a pan, a theme switch or a new state are expected; report anything else quietly
+  map.on('error', e => { const err = e && e.error; if (err && err.name !== 'AbortError') console.warn('Map:', err.message || err); });
   mapReady = new Promise(res => map.once('load', res));
-  // start with the attribution folded to its (i) button, so it doesn't cover the map on a phone
-  map.once('load', () => { const a = document.querySelector('#map .maplibregl-ctrl-attrib'); if (a) a.classList.remove('maplibregl-compact-show'); });
-  map.on('style.load', () => { srcFips = null; if (ST) { addTractLayers(); paintSel(); } });
-  map.on('mousemove', 'tract-fill', e => { const f = e.features && e.features[0]; if (f) hover(f.properties.GEOID, e.point); });
-  map.on('mouseleave', 'tract-fill', () => hover(null));
-  map.on('click', 'tract-fill', e => { const f = e.features && e.features[0]; if (f) { toggle(f.properties.GEOID); hover(f.properties.GEOID, e.point); } });
+  map.on('style.load', () => { styleOk = true; if (ST && FEAT) { addTractLayers(); paintSel(); } });
+  map.getCanvas().addEventListener('pointerdown', e => { lastPointer = e.pointerType || 'mouse'; }, true);
+  map.on('mousemove', 'tract-fill', e => { if (lastPointer === 'touch' || tipPinned) return; const f = e.features && e.features[0]; if (f) hover(f.properties.GEOID, e.point); });
+  map.on('mouseleave', 'tract-fill', () => { if (!tipPinned) hover(null); });
+  map.on('click', e => {
+    const f = map.getLayer('tract-fill') && map.queryRenderedFeatures(e.point, {layers:['tract-fill']})[0];
+    if (!f) { tipPinned = false; hover(null); return; }
+    const g = f.properties.GEOID;
+    // on a phone a tap shows the tract's details with an Add or Remove button; with a mouse a click toggles it
+    if (lastPointer === 'touch') { tipPinned = true; hover(g, e.point); }
+    else { toggle(g); hover(g, e.point); }
+  });
   map.on('mouseenter', 'tract-fill', () => { map.getCanvas().style.cursor = 'pointer'; });
   map.on('mouseleave', 'tract-fill', () => { map.getCanvas().style.cursor = ''; });
+  map.on('movestart', () => { tipPinned = false; hover(null); });
   map.on('idle', () => { if (hoverId) updateTip(); });   // street tiles finished loading
-  const mq = matchMedia('(prefers-color-scheme: dark)');
-  const restyle = () => map.setStyle(styleUrl(), {diff:false});
-  try { mq.addEventListener('change', restyle); } catch (e) {}
+  // switch the street style with the page theme; settle first, so quick flips don't start and abort loads
+  let shown = styleUrl(), rt = null;
+  const restyle = () => { clearTimeout(rt); rt = setTimeout(() => {
+    const want = styleUrl(); if (want === shown) return;
+    shown = want; styleOk = false; map.setStyle(want, {diff:false}); }, 250); };
+  try { matchMedia('(prefers-color-scheme: dark)').addEventListener('change', restyle); } catch (e) {}
   new MutationObserver(restyle).observe(document.documentElement, {attributes:true, attributeFilter:['data-theme']});
 }
 function addTractLayers() {
-  if (!map.isStyleLoaded() || !ST) return;
+  if (!map || !ST) return;
+  if (srcFips !== ST.fips) { featById = new Map(FEAT.map(f => [f.properties.GEOID, f])); edgeCache.clear(); }
+  if (!styleOk) return;
   for (const id of ['tract-sel-line', 'tract-line', 'tract-fill']) if (map.getLayer(id)) map.removeLayer(id);
   if (map.getSource('tracts')) map.removeSource('tracts');
   map.addSource('tracts', {type:'geojson', data:{type:'FeatureCollection', features:FEAT}, promoteId:'GEOID'});
@@ -497,32 +524,42 @@ function paintSel() {
   if (hoverId) map.setFeatureState({source:'tracts', id:hoverId}, {hover:true});
 }
 function bboxOf(feats) {
-  let x0 = 180, y0 = 90, x1 = -180, y1 = -90;
-  const walk = c => { if (typeof c[0] === 'number') { x0 = Math.min(x0, c[0]); x1 = Math.max(x1, c[0]); y0 = Math.min(y0, c[1]); y1 = Math.max(y1, c[1]); } else c.forEach(walk); };
+  const xs = [], ys = [];
+  const walk = c => { if (typeof c[0] === 'number') { xs.push(c[0]); ys.push(c[1]); } else c.forEach(walk); };
   feats.forEach(f => walk(f.geometry.coordinates));
-  return x0 <= x1 ? [[x0, y0], [x1, y1]] : null;
+  if (!xs.length) return null;
+  let x0 = Math.min(...xs), x1 = Math.max(...xs);
+  // across the 180th meridian (western Aleutians): measure the east side as west of -180
+  if (x1 - x0 > 180) { const w = xs.map(x => x > 0 ? x - 360 : x); x0 = Math.min(...w); x1 = Math.max(...w); }
+  return [[x0, Math.min(...ys)], [x1, Math.max(...ys)]];
 }
 function drawMap(refit) {
   if (!map) return;
   mapReady.then(() => {
-    if (srcFips !== ST.fips || !map.getSource('tracts')) { featById = new Map(FEAT.map(f => [f.properties.GEOID, f])); edgeCache.clear(); hover(null); addTractLayers(); }
+    if (srcFips !== ST.fips || !map.getSource('tracts')) {
+      tipPinned = false; hover(null);
+      addTractLayers();   // if a restyle is under way, its style.load adds the layers for this state
+    }
     paintSel();
     if (refit && sel.size) fitSel(); else fitCounty(mapCounties[0]);
   });
 }
 function fitCounty(c) {
+  if (!map) return;
   const b = bboxOf(featByCounty.get(c) || FEAT);
   if (b) map.fitBounds(b, {padding:20, duration:0});
 }
 function fitSel() {
+  if (!map) return;
   const b = bboxOf([...sel].map(g => featById.get(g)).filter(Boolean));
   if (!b) { fitCounty(mapCounties[0]); return; }
   map.fitBounds(b, {padding:36, maxZoom:15, duration:400});
 }
 
-// ---------- hover: the tract, its households and the streets along its edges ----------
+// ---------- the tract under the pointer: households and the streets along its edges ----------
 let lastPoint = null;
 function hover(g, point) {
+  if (!map) return;
   if (hoverId !== g && map.getSource('tracts')) {
     if (hoverId) map.setFeatureState({source:'tracts', id:hoverId}, {hover:false});
     if (g) map.setFeatureState({source:'tracts', id:g}, {hover:true});
@@ -533,12 +570,23 @@ function hover(g, point) {
 }
 function updateTip() {
   const tip = $('tip'), g = hoverId;
-  if (!g) { tip.hidden = true; return; }
+  if (!g || !ST) { tip.hidden = true; tip.classList.remove('pinned'); return; }
   const t = ST.tracts[g], streets = edgeStreets(g);
   tip.innerHTML = `<b>Tract ${g.slice(5, 9).replace(/^0+/, '') || '0'}${g.slice(9) === '00' ? '' : '.' + g.slice(9)}</b> · ${t ? fmtN(t.h) + ' households' : 'no households'}` +
-    `<br>${streets === null ? 'Zoom in to see the streets along its edges' : streets.length ? 'Edges: ' + streets.map(esc).join(', ') + (offscreen(g) ? ' (more of it is off screen)' : '') : 'No named streets along its edges at this zoom'}`;
+    `<br>${streets === null ? 'Zoom in to street level to see the streets along its edges' : streets.length ? 'Edges: ' + streets.map(esc).join(', ') + (offscreen(g) ? ' (more of it is off screen)' : '') : 'No named streets along its edges at this zoom'}` +
+    (tipPinned && t ? `<br><button class="btn" type="button" id="tipBtn">${sel.has(g) ? 'Remove from selection' : 'Add to selection'}</button> <button class="btn" type="button" id="tipClose" aria-label="Close">Close</button>` : '');
+  tip.classList.toggle('pinned', tipPinned);
   tip.hidden = false;
-  if (lastPoint) { tip.style.left = lastPoint.x + 'px'; tip.style.top = lastPoint.y + 'px'; }
+  if (tipPinned && $('tipBtn')) {
+    $('tipBtn').onclick = () => { toggle(g); updateTip(); };
+    $('tipClose').onclick = () => { tipPinned = false; hover(null); };
+  }
+  // keep it inside the map: below the point near the top edge, and clear of the sides
+  const W = $('mapbox').clientWidth, p = lastPoint || {x: W / 2, y: 60};
+  const half = tip.offsetWidth / 2;
+  tip.style.left = Math.max(half + 4, Math.min(W - half - 4, p.x)) + 'px';
+  tip.style.top = p.y + 'px';
+  tip.classList.toggle('below', p.y - tip.offsetHeight - 18 < 0);
 }
 function offscreen(g) {
   const b = bboxOf([featById.get(g)].filter(Boolean)), v = map.getBounds();
@@ -548,6 +596,7 @@ function offscreen(g) {
 // named street in the loaded map tiles, how many samples lie within 45 m of it and run in the same direction
 // (tract lines are generalized, so they sit a little off the street centerlines; cross streets don't count).
 function edgeStreets(g) {
+  if (!map) return null;
   const z = Math.floor(map.getZoom());
   if (z < 13) return null;
   const key = g + '@' + Math.min(z, 14);
@@ -594,7 +643,8 @@ function edgeStreets(g) {
   }
   const min = Math.max(3, Math.round(pts.length * 0.06));
   const out = [...hits.entries()].filter(([, s]) => s.size >= min).sort((a, b) => b[1].size - a[1].size).slice(0, 6).map(([n]) => n);
-  if (map.areTilesLoaded()) edgeCache.set(key, out);   // keep only answers from fully loaded tiles
+  // keep only complete answers: every tile loaded and the whole tract on screen
+  if (map.areTilesLoaded() && !offscreen(g)) edgeCache.set(key, out);
   return out;
 }
 
