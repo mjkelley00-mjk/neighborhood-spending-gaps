@@ -15,7 +15,7 @@
   --accent:#0f7d7a; --accent-soft:#d5ecea; --accent-ink:#0a5957;
   --leak:#d9573f; --leak-soft:#f8dfd8; --inflow:#2f6fb0; --inflow-soft:#dbe7f4;
   --tract:#e3e9ed; --tract-line:#ffffff; --tract-hover:#c4d2da; --sel:#14a39e; --sel-line:#0a5957;
-  --warn-bg:#fff4dc; --warn-ink:#7a5300; --shadow:0 1px 2px rgba(20,33,43,.06),0 4px 16px rgba(20,33,43,.05);
+  --ovl:#7a4fc4; --warn-bg:#fff4dc; --warn-ink:#7a5300; --shadow:0 1px 2px rgba(20,33,43,.06),0 4px 16px rgba(20,33,43,.05);
   --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --display:"Bricolage Grotesque","Public Sans",system-ui,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
@@ -25,13 +25,13 @@
   --accent:#3cc3bc; --accent-soft:#16413f; --accent-ink:#8fe3dd;
   --leak:#f07d63; --leak-soft:#4a2620; --inflow:#6fa6e0; --inflow-soft:#1d3247;
   --tract:#22323c; --tract-line:#0f171d; --tract-hover:#33505f; --sel:#2bb3ad; --sel-line:#9de8e3;
-  --warn-bg:#3a2e12; --warn-ink:#f2cf7c; --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25); color-scheme:dark}}
+  --ovl:#b99af2; --warn-bg:#3a2e12; --warn-ink:#f2cf7c; --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25); color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0f171d; --panel:#16222a; --ink:#e4ecf0; --muted:#9fb0bc; --faint:#71838f; --line:#2a3943; --line2:#21303a;
   --accent:#3cc3bc; --accent-soft:#16413f; --accent-ink:#8fe3dd;
   --leak:#f07d63; --leak-soft:#4a2620; --inflow:#6fa6e0; --inflow-soft:#1d3247;
   --tract:#22323c; --tract-line:#0f171d; --tract-hover:#33505f; --sel:#2bb3ad; --sel-line:#9de8e3;
-  --warn-bg:#3a2e12; --warn-ink:#f2cf7c; --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25); color-scheme:dark}
+  --ovl:#b99af2; --warn-bg:#3a2e12; --warn-ink:#f2cf7c; --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25); color-scheme:dark}
 :root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 [hidden]{display:none!important}
 img{max-width:100%}
@@ -69,6 +69,8 @@ select:focus,input:focus,button:focus-visible{outline:2px solid var(--accent);ou
 @media (min-width:981px){.mapcard{position:sticky;top:calc(12px + env(safe-area-inset-top,0px));align-self:start}}
 .maphead{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid var(--line2)}
 .maphead select{width:auto;max-width:100%;padding:6px 9px;font-size:13px}
+.mapctl{display:flex;gap:8px;align-items:center;flex-wrap:wrap;min-width:0}.mapctl select{max-width:min(100%,260px)}
+.ovlkey{flex:1 1 100%;font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px}.ovlkey i{width:14px;height:10px;border-radius:2px;background:var(--ovl);opacity:.7;display:inline-block}
 .mapbox{position:relative;aspect-ratio:1/1;max-width:100%;width:100%;background:var(--panel)}
 .mapbox #map{position:absolute;inset:0}
 .maptip{position:absolute;z-index:3;pointer-events:none;background:var(--ink);color:var(--bg);font:12px/1.4 var(--sans);padding:7px 9px;border-radius:7px;width:max-content;max-width:min(280px,80%);transform:translate(-50%,calc(-100% - 14px))}
@@ -124,6 +126,11 @@ tr.tot td{font-weight:600;border-top:1px solid var(--line);border-bottom:0}
 .leak{color:var(--leak)} .inflow{color:var(--inflow)}
 .pill{display:inline-block;font:500 11px/1 var(--mono);padding:4px 6px;border-radius:5px}
 .pill.leak{background:var(--leak-soft)} .pill.inflow{background:var(--inflow-soft)}
+.commute{margin:4px 0 12px;max-width:72ch}
+#programs,#stores2{min-width:0;max-width:760px}#stores2 td:first-child{min-width:0}@media (max-width:640px){#stores2 th,#stores2 td{padding:8px 5px}#stores2 th{white-space:normal}}#stores2 tr.grp td{font:500 11px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:16px;text-align:left}
+#programs{min-width:0;max-width:760px}#programs td:first-child{min-width:0}
+#programs .pnote{display:block;font-size:12.5px;color:var(--muted);margin-top:2px;white-space:normal;max-width:58ch}
+#programs tr.subrow td:first-child{padding-left:22px}
 #jobs{min-width:0;max-width:640px}#jobs td:first-child{min-width:0}#jobs .tag{display:inline-block;margin-left:6px;font:500 10.5px/1.6 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
 .note{font-size:13px;color:var(--muted);margin:8px 0 0;max-width:72ch}
 .dl{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
@@ -202,7 +209,8 @@ label.chk{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--ink
     <section class="card mapcard" aria-label="Tract map">
       <div class="maphead">
         <span style="font-size:13px;color:var(--muted)">Click a tract to add or remove it, and point at one to see the streets along its edges. On a phone, tap a tract for its streets and an Add or Remove button.</span>
-        <button class="btn" id="fit">Fit to selection</button>
+        <span class="mapctl"><select id="ovl" aria-label="Shade tracts by program"></select><button class="btn" id="fit">Fit to selection</button></span>
+        <span class="ovlkey" id="ovlkey" hidden></span>
       </div>
       <div class="mapbox" id="mapbox"><div id="map" role="region" aria-label="Map of census tracts"></div><div class="loading" id="loading">Loading…</div><div class="maptip" id="tip" hidden><div id="tipText" role="status" aria-live="polite"></div><div id="tipBtns" hidden></div></div><div class="mapnote" id="mapnote" hidden>Street map unavailable right now; tracts are shown without streets.</div></div>
       <div class="mapfoot"><span id="selcount">No tracts selected</span><button class="btn" id="clear">Clear selection</button></div>
@@ -238,9 +246,23 @@ label.chk{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--ink
         <p class="note">Public data cannot match these to local sales: most medicine spending is paid through insurance at the pharmacy, and admissions are dominated by visitors. Vehicle purchases are left out entirely as a category no neighborhood captures.</p>
       </section>
 
+      <section class="card sect" id="storesSect">
+        <h2>Stores here</h2>
+        <p class="sub">Stores counted inside the selected tracts, set against how common each kind is across the US per resident. Food stores come from USDA's list of every store that takes SNAP. The rest come from Overture Maps, an open listing of places that runs high for some kinds (salons, bars and home furnishings especially), so read those as indications, not a census.</p>
+        <div class="tablewrap"><table id="stores2"></table></div>
+        <p class="note" id="storesNote"></p>
+      </section>
+
+      <section class="card sect" id="progSect">
+        <h2>Programs and designations</h2>
+        <p class="sub">How many of the selected tracts qualify for programs that bring investment, credit or food access, from the agencies' own tract lists. Eligibility is decided tract by tract, so a project's own address is what counts; confirm on the agency's map before relying on it. Shade any of these on the map from the menu above it.</p>
+        <div class="tablewrap"><table id="programs"></table></div>
+      </section>
+
       <section class="card sect" id="jobsSect">
         <h2>Jobs located here</h2>
         <p class="sub">Jobs at workplaces in the selected tracts, by industry, wherever the workers live (LEHD LODES 2023; Alaska 2016, Michigan 2021). Self-employed people are not counted.</p>
+        <p class="commute" id="commute"></p>
         <div class="tablewrap"><table id="jobs"></table></div>
         <p class="note">Rows marked <b>store sales</b> are the industries the jobs-based sales estimate starts from. It uses only the store types within them, using each ZIP's industry mix: restaurants but not hotels, and repair shops, salons and dry cleaners but not other services.</p>
       </section>
@@ -280,12 +302,21 @@ label.chk{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--ink
           <ul>
             <li><strong>Jobs-based (LEHD LODES 2023):</strong> retail, food-service and personal-service jobs on each block, split into store types by the ZIP's industry mix and aligned with Economic Census employment for the state.</li>
             <li><strong>ZIP-based (ZIP Business Patterns 2023):</strong> each ZIP's employment by store type, with each Census-suppressed size class given the fewest stores the suppression rule allows, each store counted at its size class's midpoint, and the remainder scaled to the ZIP's published sector total, then allocated to tracts by their share of the ZIP's jobs in that sector.</li>
+            <li><strong>Both estimates</strong> add self-employed businesses (Census Nonemployer Statistics 2024) for restaurants, bars, salons, barbers and other personal care, auto repair, coin laundries and dry cleaners: each county's receipts, placed in tracts by their share of the county's jobs in that industry. Self-employed retail sellers are left out, because most of their sales are online or direct, and so are food trucks, which the Census reports together with caterers.</li>
           </ul>
           <p>Each store type's jobs are multiplied by its 2022 Economic Census sales per employee, taken from the place, county, metro area, state or US, whichever is the smallest with enough stores (pharmacies always at the US rate), split into categories as above, and restated in 2024 dollars (gasoline at 2024 pump prices). Thirty store types are used, from supermarkets and convenience stores to salons, dry cleaners and food trucks; building-material stores, car dealers and online sellers are left out. The two estimates set every range on this page. Alaska uses LODES 2016 and Michigan 2021, the latest each state has published.</p>
           <h4>Retention rate</h4>
           <p>Across the US, store sales run 0.9 to 3.5 times modeled resident spending, depending on the category. Most run above it, because households under-report spending in the survey and stores also sell to businesses, commuters and visitors. Pets, toys and books and home furnishings run near or below it, because much of that spending goes online or to store types left out here. The retention rate divides local sales by resident demand times that national ratio, separately for each estimate, so 1.0 means an area sells what the national pattern predicts for its residents. Projected leakage is resident demand times (1 − retention rate): residents' spending, in survey dollars, that local stores would keep at the national norm but do not. Because the survey under-reports some spending, it leans conservative. Store counts instead use the gap in store-sales terms (the predicted sales minus local sales), divided by a benchmark store's sales in that category.</p>
           <h4>Check against the South Shore baseline</h4>
           <p>For Chicago's South Shore (the City's 15 tracts), this page finds 25,043 households (CMAP's figure is 26,470) and $330M of resident demand in the five categories the hand-built South Shore baseline measured (the baseline has $352M from the same survey items; the difference comes from the household count, the baseline's assumption for top-bracket income, and its single car-ownership adjustment for the whole area where this page adjusts tract by tract). The baseline compared local sales with demand directly, found local sales at 63%–75% of demand and a gap of $88M–$129M. This page measures 12 categories against the national norm and splits store sales by what each kind of store sells, so its figures are larger and not directly comparable: a net projected leakage of $232M–$263M, with retention rates of 0.50–0.57 for groceries, 0.05–0.12 for full-service dining, 0.22–0.45 for quick-service food and 0.12–0.14 for home furnishings. The two agree on where the biggest gaps are: restaurants and everyday goods (here groceries, household supplies, and pets, toys and books). Home furnishings, which the baseline could not measure, shows almost no local sales.</p>
+          <h4>Check against Illinois sales-tax records</h4>
+          <p>Illinois publishes taxable sales by kind of business for every municipality. For restaurants and bars in 398 Illinois cities and towns (calendar 2024), the estimates here track the reported taxable sales closely: a correlation of 0.85 on a log scale and a median ratio of 1.05, and Chicago's $8.8B–$10.0B against $9.5B reported. For store goods the estimates come to a median of 0.60 of taxable sales, as expected, because the taxable figures also include goods outside the twelve categories here (electronics, sporting goods, jewelry, prescriptions and more). The largest misses are small towns where tract lines cut through the commercial district, and places like Rosemont whose sales come mostly from hotels and convention business.</p>
+          <h4>Jobs, stores and programs</h4>
+          <ul>
+            <li><strong>Jobs located here</strong> come from the same LEHD LODES files, by workplace and all 20 industry sectors. <strong>Jobs held by residents</strong> come from LODES residence files, wherever those jobs are. Both count jobs, not people, so their difference is net commuting. Self-employed people are not in either.</li>
+            <li><strong>Stores here:</strong> food stores are USDA's list of every store authorized to take SNAP (downloaded October 2026). Other kinds are places listed in Overture Maps (October 2026 release, places with a confidence score of at least 0.9 and not marked closed), an open dataset compiled from several map sources; it lists more salons, bars and home furnishings stores than Census business counts, so treat those rows as indications. National rates per 10,000 residents use the same sources.</li>
+            <li><strong>Programs and designations</strong> come from the agencies' tract lists: Treasury's 2018 Opportunity Zones and its September 2026 list of tracts eligible for 2027 zones; the CDFI Fund's New Markets Tax Credit and CDFI Investment Area eligibility (2016–2020 ACS); and USDA's food access maps (2019 supermarket access; 2025 access to any SNAP store). Lists drawn on 2010 tracts are carried to a 2020 tract when at least half its land lies in listed 2010 tracts. "Severely distressed" here applies the three main NMTC tests only; a tract can also qualify in other ways.</li>
+          </ul>
           <h4>Neighborhoods and other areas</h4>
           <ul>
             <li><strong>Neighborhoods</strong> outside Chicago come from Who's On First, an open gazetteer. In some cities its boundaries come from the city's own planning or GIS office (Atlanta, Baltimore, Boston, Denver, Los Angeles, New Orleans, Oakland, Portland, San Diego, San Francisco, Seattle and others) or from published maps (Philadelphia, Washington, New York); elsewhere most come from Zetashapes and Quattroshapes, algorithmic boundaries assembled from crowd-sourced place data. Each result names its source. There is no official national neighborhood map, so coverage and quality are uneven. Algorithmic boundaries (Zetashapes, Quattroshapes) that tracts trace poorly (fit under 30%) are left out as noise. Boundaries from every other source are kept at any fit, with a warning when the tracts trace them poorly. Where one city has two overlapping boundaries with the same name, the City's or a city office's own boundary is kept, then the one the tracts trace better; same-name places that do not overlap, such as two Koreatowns in New York, are both kept.</li>
@@ -300,7 +331,7 @@ label.chk{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--ink
           <h4>Limits</h4>
           <ul>
             <li>Small areas are noisy. Jobs are reported by workplace block and can be miscoded, and a single large store can swing a category.</li>
-            <li>Self-employed businesses are not counted, which overstates leakage, most for home-based food businesses, salons and barbers.</li>
+            <li>Self-employed retail sellers and food trucks are not counted (see Local sales above), which overstates leakage a little where those are common.</li>
             <li>Product-line shares are national averages for each store type; a local store can sell a different mix.</li>
             <li>Pet spending in the survey includes veterinary care, but vet clinics are not among the store types, so local sales of pets, toys and books lean low.</li>
             <li>Where a ZIP's figures hide which kind of store holds its jobs (for example, supermarket or convenience store), the jobs are split by the national mix of those store types.</li>
@@ -320,6 +351,10 @@ label.chk{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--ink
             <li><a href="https://whosonfirst.org/" target="_blank" rel="noopener">Who's On First</a> neighborhood boundaries (CC BY 4.0 and the licenses of their sources)</li>
             <li><a href="https://www.census.gov/geographies/reference-files/time-series/geo/relationship-files.2020.html" target="_blank" rel="noopener">Census ZCTA–tract relationship file</a> and <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html" target="_blank" rel="noopener">2024 cartographic boundaries</a></li>
             <li>Street map: <a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a>, © <a href="https://openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a>, data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> (ODbL)</li>
+            <li><a href="https://www.census.gov/programs-surveys/nonemployer-statistics.html" target="_blank" rel="noopener">Census Nonemployer Statistics 2024</a> (self-employed businesses) and <a href="https://lehd.ces.census.gov/data/" target="_blank" rel="noopener">LODES</a> residence files</li>
+            <li><a href="https://www.fns.usda.gov/snap/retailer-locator" target="_blank" rel="noopener">USDA SNAP Retailer Locator</a>, and places from <a href="https://overturemaps.org/" target="_blank" rel="noopener">Overture Maps Foundation</a> (CDLA Permissive 2.0)</li>
+            <li><a href="https://home.treasury.gov/policy-issues/tax-policy/opportunity-zones" target="_blank" rel="noopener">Treasury Opportunity Zones</a>, <a href="https://www.cdfifund.gov/" target="_blank" rel="noopener">CDFI Fund</a> eligibility (New Markets Tax Credits, CDFI Investment Areas) and the <a href="https://www.ers.usda.gov/data-products/food-access-research-atlas" target="_blank" rel="noopener">USDA Food Access Research Atlas</a></li>
+            <li><a href="https://webapps.illinois.gov/rev/sic" target="_blank" rel="noopener">Illinois Department of Revenue</a> taxable sales by kind of business (used only as a check)</li>
             <li>City of Chicago: <a href="https://data.cityofchicago.org/d/igwz-8jzy" target="_blank" rel="noopener">community areas</a>, <a href="https://data.cityofchicago.org/d/y6yq-dbs2" target="_blank" rel="noopener">neighborhoods</a> and 2020 tracts by community area</li>
           </ul>
           <h4>Neighborhood boundary credits</h4>
@@ -383,10 +418,10 @@ const fitWord = f => f >= 0.8 ? 'close' : f >= 0.6 ? 'fair' : 'loose';
 
 // ---------- compute ----------
 function compute(ids) {
-  const r = {n:0, h:0, p:0, ja:0, js:new Array(20).fill(0), v:0, d:new Array(ND).fill(0), l:new Array(NS).fill(0), z:new Array(NS).fill(0)};
+  const r = {n:0, h:0, p:0, ja:0, js:new Array(20).fill(0), wr:0, v:0, d:new Array(ND).fill(0), l:new Array(NS).fill(0), z:new Array(NS).fill(0)};
   for (const g of ids) {
     const t = ST.tracts[g]; if (!t) continue;
-    r.n++; r.h += t.h; r.p += t.p || 0; r.ja += t.j[0]; for (let i=0;i<20;i++) r.js[i] += t.j[i+1] || 0; r.v += t.v;
+    r.n++; r.h += t.h; r.p += t.p || 0; r.ja += t.j[0]; for (let i=0;i<20;i++) r.js[i] += t.j[i+1] || 0; r.wr += t.w || 0; r.v += t.v;
     for (let i=0;i<ND;i++) r.d[i] += t.d[i];
     for (let i=0;i<NS;i++) { r.l[i] += t.l[i]; r.z[i] += t.z[i]; }
   }
@@ -413,6 +448,7 @@ async function loadState(fips) {
   if (!d) { const res = await fetch('data/st/' + fips + '.json'); d = await res.json(); cache.set(fips, d); }
   ST = d;
   FEAT = topojson.feature(ST.geo, ST.geo.objects.t).features;
+  for (const f of FEAT) f.properties.o = (ST.tracts[f.properties.GEOID] || {}).o || 0;   // program flags, for map shading
   featByCounty = d3.group(FEAT, f => f.properties.GEOID.slice(0,5));
   const cs = Object.entries(ST.counties).filter(([k]) => featByCounty.has(k)).sort((a,b)=>a[1].localeCompare(b[1]));
   $('county').innerHTML = cs.map(([k,v]) => `<option value="${k}">${esc(v)}</option>`).join('');
@@ -562,7 +598,7 @@ function addTractLayers() {
   if (!map || !ST) return;
   if (srcFips !== ST.fips) { featById = new Map(FEAT.map(f => [f.properties.GEOID, f])); edgeCache.clear(); }
   if (!styleOk) return;
-  for (const id of ['tract-sel-line', 'tract-line', 'tract-fill']) if (map.getLayer(id)) map.removeLayer(id);
+  for (const id of ['tract-ovl-line', 'tract-ovl', 'tract-sel-line', 'tract-line', 'tract-fill']) if (map.getLayer(id)) map.removeLayer(id);
   if (map.getSource('tracts')) map.removeSource('tracts');
   map.addSource('tracts', {type:'geojson', data:{type:'FeatureCollection', features:FEAT}, promoteId:'GEOID'});
   srcFips = ST.fips;
@@ -582,6 +618,7 @@ function addTractLayers() {
   map.addLayer({id:'tract-sel-line', type:'line', source:'tracts', paint:{'line-color': line,
     'line-opacity': ['case', ['boolean', ['feature-state', 'sel'], false], 1, 0],
     'line-width': ['interpolate', ['linear'], ['zoom'], 8, 1, 14, 3]}}, firstLabel);
+  ovlLayer();                       // program shading, if one is chosen (web_programs.js)
 }
 function paintSel() {
   if (!map || !map.getSource('tracts')) return;
@@ -826,6 +863,96 @@ const Feedback = (() => {
   return {init, sync};
 })();
 
+// ---------- programs and designations: Opportunity Zones, New Markets Tax Credits, CDFI areas, food access ----------
+// Each tract carries a bitmask `o` in the order of IDX.ovl.keys (built by extract_overlays.py and build_site_data.py).
+const OVL_ROWS = [
+  ['oz1', 'Opportunity Zone (2018 zones)', 'Designated in 2018; these zones run through 2028.'],
+  ['oz2e', 'Eligible for a 2027 Opportunity Zone', 'Treasury\'s eligibility list (September 2026). Governors chose their nominations in 2026; Treasury had not published the new zones when this was built.'],
+  ['oz2e_rural', 'Eligible, and rural', 'An eligible tract made up entirely of a rural area, which gets larger tax benefits in the 2027 rules.'],
+  ['nmtc', 'New Markets Tax Credit low-income community', 'CDFI Fund eligibility, 2016–2020 ACS.'],
+  ['nmtc_sd', 'Severely distressed (NMTC)', 'Meets one of the three main severe-distress tests: poverty above 30%, family income at or below 60% of the area benchmark, or unemployment at least 1.5 times the national rate.'],
+  ['cdfi_ia', 'CDFI Investment Area', 'CDFI Fund eligibility, 2016–2020 ACS.'],
+  ['lila', 'Low income, far from a supermarket', 'USDA: a low-income tract where at least 500 people, or a third of residents, live more than 1 mile from a supermarket (10 miles in rural areas). 2019 data.'],
+  ['lila_snap', 'Low income, far from any SNAP store', 'USDA: the same test, measured to any store that takes SNAP, convenience and dollar stores included. 2025 data.'],
+];
+// column names in the tracts CSV, one 0/1 column per row above
+const OVL_CSV = ['opportunity_zone_2018', 'oz_2027_eligible', 'oz_2027_eligible_rural', 'nmtc_low_income_community',
+  'nmtc_severely_distressed', 'cdfi_investment_area', 'low_income_low_supermarket_access', 'low_income_low_snap_store_access'];
+const ovlBit = k => { const i = IDX && IDX.ovl ? IDX.ovl.keys.indexOf(k) : -1; return i < 0 ? 0 : 1 << i; };
+function programsTable(ids) {
+  const has = OVL_ROWS.map(() => ({n: 0, p: 0}));
+  let n = 0, pop = 0;
+  for (const g of ids) {
+    const t = ST.tracts[g]; if (!t) continue;
+    n++; pop += t.p || 0;
+    OVL_ROWS.forEach(([k], i) => { if ((t.o || 0) & ovlBit(k)) { has[i].n++; has[i].p += t.p || 0; } });
+  }
+  const pct = v => pop > 0 ? (v / pop * 100 < 0.5 && v > 0 ? '<1%' : Math.round(v / pop * 100) + '%') : '—';
+  return `<thead><tr><th>Program or designation</th><th>Tracts</th><th>Residents</th></tr></thead><tbody>` +
+    OVL_ROWS.map(([k, label, note], i) => `<tr${i === 2 || i === 4 ? ' class="subrow"' : ''}><td>${esc(label)}<span class="pnote">${esc(note)}</span></td><td class="num">${fmtN(has[i].n)} of ${fmtN(n)}</td><td class="num">${pct(has[i].p)}</td></tr>`).join('') + '</tbody>';
+}
+// map shading: one program at a time, chosen in the map's header
+let ovlKey = '';
+function ovlLayer() {
+  if (!map || !map.getSource('tracts')) return;
+  const bit = ovlBit(ovlKey);
+  if (map.getLayer('tract-ovl')) map.removeLayer('tract-ovl');
+  if (map.getLayer('tract-ovl-line')) map.removeLayer('tract-ovl-line');
+  if (bit) {
+    const has = ['>=', ['%', ['get', 'o'], bit * 2], bit];      // that bit of the mask is set
+    const before = map.getLayer('tract-line') ? 'tract-line' : undefined, c = cssVar('--ovl');
+    map.addLayer({id: 'tract-ovl', type: 'fill', source: 'tracts', filter: has, paint: {'fill-color': c, 'fill-opacity': 0.28}}, before);
+    map.addLayer({id: 'tract-ovl-line', type: 'line', source: 'tracts', filter: has, paint: {'line-color': c, 'line-opacity': 0.8,
+      'line-width': ['interpolate', ['linear'], ['zoom'], 8, 0.6, 14, 1.6]}}, before);
+  }
+  const row = OVL_ROWS.find(r => r[0] === ovlKey);
+  $('ovlkey').hidden = !row;
+  if (row) $('ovlkey').innerHTML = `<i></i>Shaded: ${esc(row[1])}`;
+}
+function initPrograms() {
+  const s = $('ovl');
+  s.innerHTML = '<option value="">No program shading</option>' + OVL_ROWS.map(([k, label]) => `<option value="${k}">${esc(label)}</option>`).join('');
+  s.onchange = () => { ovlKey = s.value; ovlLayer(); };
+}
+
+// ---------- stores and places listed in the selection ----------
+// Each tract may carry `k`: counts in IDX.stores.keys order (extract_stores.py). Food stores come from USDA's list of
+// SNAP-authorized retailers, a full census of stores that take SNAP; everything else from Overture Maps places, a
+// listing that runs high for some types (salons, bars, home furnishings), so those rows say "listed".
+const STORE_ROWS = [
+  ['Food stores that take SNAP (USDA)', [
+    ['snap_supermarket', 'Supermarkets and superstores'], ['snap_grocery', 'Grocery stores'], ['snap_convenience', 'Convenience stores'],
+    ['snap_specialty', 'Specialty food stores'], ['snap_other', 'Other stores that take SNAP (dollar stores, pharmacies, markets)'],
+    ['snap_farmers_market', 'Farmers markets']]],
+  ['Places listed on maps (Overture Maps)', [
+    ['ov_restaurant', 'Restaurants'], ['ov_cafe_snack', 'Cafés, bakeries and snack shops'], ['ov_bar', 'Bars'],
+    ['ov_liquor', 'Liquor stores'], ['ov_tobacco', 'Tobacco and vape shops'], ['ov_general_merch', 'Department, discount and warehouse stores'],
+    ['ov_pharmacy', 'Pharmacies'], ['ov_pets_toys_books', 'Pet, toy, hobby and book stores'], ['ov_beauty_supply', 'Beauty supply stores'],
+    ['ov_salon_barber', 'Salons, barbers and nail shops'], ['ov_laundry', 'Laundries and dry cleaners'], ['ov_apparel', 'Clothing and shoe stores'],
+    ['ov_home_furnishings', 'Furniture and home furnishings'], ['ov_gas', 'Gas stations'], ['ov_auto_parts', 'Auto parts stores'],
+    ['ov_auto_repair', 'Auto repair shops']]],
+];
+function storeCounts(ids) {
+  const keys = IDX.stores.keys, n = new Array(keys.length).fill(0);
+  let pop = 0;
+  for (const g of ids) { const t = ST.tracts[g]; if (!t) continue; pop += t.p || 0; if (t.k) t.k.forEach((v, i) => { n[i] += v; }); }
+  return {keys, n, pop};
+}
+function storesTable(ids) {
+  const {keys, n, pop} = storeCounts(ids), us = IDX.stores.us_per10k;
+  const per = v => pop >= 500 ? (v / pop * 1e4).toFixed(1) : '—';
+  return `<thead><tr><th>Kind of store</th><th>Here</th><th>Per 10k residents</th><th>US, per 10k</th></tr></thead><tbody>` +
+    STORE_ROWS.map(([group, rows]) => `<tr class="grp"><td colspan="4">${esc(group)}</td></tr>` + rows.map(([k, label]) => {
+      const i = keys.indexOf(k); if (i < 0) return '';
+      return `<tr><td>${esc(label)}</td><td class="num">${fmtN(n[i])}</td><td class="num">${per(n[i])}</td><td class="num">${us[i].toFixed(1)}</td></tr>`;
+    }).join('')).join('') + '</tbody>';
+}
+function storesNote(ids) {
+  const {pop} = storeCounts(ids);
+  return pop < 500 ? 'Fewer than 500 people live here, so the per-resident rates are left out.' :
+    `Rates use the ${fmtN(pop)} residents; places where many people work or shop (a downtown, a mall) will show high rates because their stores serve visitors too.`;
+}
+
 // ---------- render ----------
 function fitText(m) {
   if (!m || m.src === 'county') return '';
@@ -881,7 +1008,7 @@ function render() {
   Suggest.renderReview(selMeta);
   if (!n) {
     $('headline').textContent = 'Search for a place or click tracts on the map to begin.';
-    $('warn').hidden = true; $('tbl').innerHTML = ''; $('stores').innerHTML=''; $('donly').innerHTML=''; $('jobs').innerHTML=''; d3.select('#chart').selectAll('*').remove();
+    $('warn').hidden = true; $('tbl').innerHTML = ''; $('stores').innerHTML=''; $('donly').innerHTML=''; $('jobs').innerHTML=''; $('programs').innerHTML=''; $('stores2').innerHTML=''; $('storesNote').textContent=''; d3.select('#chart').selectAll('*').remove();
     if (hashReady) syncHash();
     return;
   }
@@ -901,6 +1028,10 @@ function render() {
   $('donly').innerHTML = `<thead><tr><th>Category</th><th>Resident demand</th><th>Per household</th></tr></thead><tbody>` +
     DEM.slice(NS).map((c,i) => `<tr><td>${LABEL[c]}</td><td class="num">${fmtUSD(r.d[NS+i])}</td><td class="num">${r.h ? '$' + fmtN(r.d[NS+i]*1000/r.h) : '—'}</td></tr>`).join('') + '</tbody>';
   $('jobs').innerHTML = jobsTable(r);
+  $('programs').innerHTML = programsTable(sel);
+  $('stores2').innerHTML = storesTable(sel);
+  $('storesNote').textContent = storesNote(sel);
+  $('commute').innerHTML = commuteText(r);
   if (hashReady) syncHash();
 }
 // LODES workplace sectors CNS01-CNS20, in Census order; the three the store-sales estimate draws on are flagged
@@ -914,6 +1045,17 @@ const JOB_SLUG = ['agriculture', 'mining', 'utilities', 'construction', 'manufac
   'information', 'finance_insurance', 'real_estate', 'professional_technical', 'management', 'administrative_waste', 'education',
   'health_social', 'arts_recreation', 'accommodation_food', 'other_services', 'public_administration'];
 const JOB_USED = new Set([6, 17, 18]);
+// Jobs located in the selection against jobs its residents hold anywhere (LODES WAC vs RAC). Both are job counts, so
+// the difference is net commuting: workers coming in to work here minus residents leaving for work elsewhere.
+function commuteText(r) {
+  if (!(r.ja > 0) && !(r.wr > 0)) return 'No jobs are located here and no residents hold jobs, by these counts.';
+  const net = r.ja - r.wr, big = Math.max(r.ja, r.wr);
+  const lead = `<b>${fmtN(r.ja)}</b> jobs are located here, and residents hold <b>${fmtN(r.wr)}</b> jobs, here or elsewhere. `;
+  if (Math.abs(net) < 0.1 * big) return lead + 'On a workday, roughly as many people come in to work as leave.';
+  return lead + (net > 0
+    ? `On a workday about <b>${fmtN(net)}</b> more people come in to work than leave, and their lunches, coffee and errands are part of local sales.`
+    : `On a workday about <b>${fmtN(-net)}</b> more residents leave for work than workers come in, so some of their weekday spending happens near their jobs.`);
+}
 function jobRows(r) {
   return JOB_SECTORS.map((name, i) => ({name, i, n: r.js[i]})).sort((a, b) => (b.n - a.n) || (a.i - b.i));
 }
@@ -1141,10 +1283,10 @@ function summaryCSV(r) {
   return csv(rows);
 }
 function tractRows(ids) {
-  const head = ['geoid','county','population','households','jobs_all'].concat(JOB_SLUG.map(k => 'jobs_' + k)).concat(DEM.map(c => 'demand_' + c + '_usd'), SUP.map(c => 'sales_jobs_based_' + c + '_usd'), SUP.map(c => 'sales_zip_based_' + c + '_usd'), ['demand_vehicle_purchases_usd']);
+  const head = ['geoid','county','population','households','jobs_all'].concat(JOB_SLUG.map(k => 'jobs_' + k), ['jobs_held_by_residents'], OVL_CSV, IDX.stores.keys.map(k => 'stores_' + k)).concat(DEM.map(c => 'demand_' + c + '_usd'), SUP.map(c => 'sales_jobs_based_' + c + '_usd'), SUP.map(c => 'sales_zip_based_' + c + '_usd'), ['demand_vehicle_purchases_usd']);
   const rows = [head];
   for (const g of ids) { const t = ST.tracts[g]; if (!t) continue;
-    rows.push([g, ST.counties[g.slice(0,5)] || '', t.p || 0, t.h].concat(t.j.slice(0, 21).map(v => v || 0), t.d.map(usd), t.l.map(usd), t.z.map(usd), [usd(t.v)])); }
+    rows.push([g, ST.counties[g.slice(0,5)] || '', t.p || 0, t.h].concat(t.j.slice(0, 21).map(v => v || 0), [t.w || 0], OVL_ROWS.map(([k]) => (t.o || 0) & ovlBit(k) ? 1 : 0), IDX.stores.keys.map((k, i) => t.k ? t.k[i] : 0), t.d.map(usd), t.l.map(usd), t.z.map(usd), [usd(t.v)])); }
   return csv(rows);
 }
 function reportHTML(r) {
@@ -1162,10 +1304,14 @@ function reportHTML(r) {
 <h2>Spending and sales</h2><table><thead><tr><th>Category</th><th>Resident demand</th><th>Local sales</th><th>Retention rate</th><th>Projected leakage</th></tr></thead><tbody>${r.cats.map(tr).join('')}<tr class="t"><td>All ${NS} measured categories (net)</td><td>${fmtUSD(T.D)}</td><td>${rangeUSD(T.sL,T.sZ)}</td><td>${range(T.pfL,T.pfZ,fmtPF)}</td><td>${rangeUSD(T.gL,T.gZ)}</td></tr></tbody></table>
 <h2>What the sales gap could support</h2><table>${storeTable(r)}</table>
 <h2>Demand-only categories</h2><table><thead><tr><th>Category</th><th>Resident demand</th></tr></thead><tbody>${DEM.slice(NS).map((c,i)=>`<tr><td>${LABEL[c]}</td><td>${fmtUSD(r.d[NS+i])}</td></tr>`).join('')}</tbody></table>
-<h2>Jobs located here</h2><table><thead><tr><th>Industry</th><th>Jobs</th><th>Share</th></tr></thead><tbody>${jobRows(r).map(x => `<tr><td>${esc(x.name)}${JOB_USED.has(x.i) ? ' <span class="m">(store sales)</span>' : ''}</td><td>${fmtN(x.n)}</td><td>${r.ja > 0 ? (x.n / r.ja * 100 < 0.5 && x.n > 0 ? '&lt;1%' : Math.round(x.n / r.ja * 100) + '%') : '—'}</td></tr>`).join('')}<tr class="t"><td>All jobs</td><td>${fmtN(r.ja)}</td><td>${r.ja > 0 ? '100%' : '—'}</td></tr></tbody></table>
+<h2>Stores here</h2><table>${storesTable(sel).replace(/ class="num"/g, '')}</table>
+<p class="s">${esc(storesNote(sel))} Food stores: USDA list of stores that take SNAP. Other places: Overture Maps, which runs high for some kinds; read those as indications.</p>
+<h2>Programs and designations</h2><table>${programsTable(sel).replace(/<span class="pnote">/g, '<br><span class="m" style="font-size:12.5px">')}</table>
+<p class="s">From the agencies' tract lists: Treasury (Opportunity Zones), the CDFI Fund (New Markets Tax Credits, CDFI Investment Areas) and USDA (food access). Confirm a site's eligibility on the agency's own map.</p>
+<h2>Jobs located here</h2><p>${commuteText(r)}</p><table><thead><tr><th>Industry</th><th>Jobs</th><th>Share</th></tr></thead><tbody>${jobRows(r).map(x => `<tr><td>${esc(x.name)}${JOB_USED.has(x.i) ? ' <span class="m">(store sales)</span>' : ''}</td><td>${fmtN(x.n)}</td><td>${r.ja > 0 ? (x.n / r.ja * 100 < 0.5 && x.n > 0 ? '&lt;1%' : Math.round(x.n / r.ja * 100) + '%') : '—'}</td></tr>`).join('')}<tr class="t"><td>All jobs</td><td>${fmtN(r.ja)}</td><td>${r.ja > 0 ? '100%' : '—'}</td></tr></tbody></table>
 <p class="s">Jobs at workplaces in these tracts, wherever the workers live (LEHD LODES 2023; Alaska 2016, Michigan 2021; self-employed not counted). The jobs-based sales estimate uses only the store types within the rows marked (store sales).</p>
 <h2>Method in brief</h2>
-<p>A retail-gap estimate, not observed leakage: local sales include non-resident shoppers, and demand is modeled from national spending by income. Demand: ACS 2020–24 households by income bracket times BLS Consumer Expenditure Survey 2024 spending by income (gasoline from the 2022 survey at 2024 pump prices), with gas and auto scaled by vehicles per household. Restaurant demand is split into full-service and quick-service by income, from the BLS Consumer Expenditure Diary Survey 2024. Local sales: two estimates, from LEHD LODES 2023 jobs and from ZIP Business Patterns 2023, each times 2022 Economic Census sales per employee for the store type and the smallest geography with enough stores, split into categories by what each store type sells nationally (2022 Economic Census product lines) and restated in 2024 dollars (Alaska LODES 2016, Michigan 2021). Across the US, store sales run 0.9 to 3.5 times modeled resident demand depending on the category (above it in most, because households under-report spending and stores also sell to businesses and visitors); the retention rate divides local sales by resident demand times that national ratio. Small areas are noisy, self-employed businesses are not counted, and online spending sits inside every gap.</p>
+<p>A retail-gap estimate, not observed leakage: local sales include non-resident shoppers, and demand is modeled from national spending by income. Demand: ACS 2020–24 households by income bracket times BLS Consumer Expenditure Survey 2024 spending by income (gasoline from the 2022 survey at 2024 pump prices), with gas and auto scaled by vehicles per household. Restaurant demand is split into full-service and quick-service by income, from the BLS Consumer Expenditure Diary Survey 2024. Local sales: two estimates, from LEHD LODES 2023 jobs and from ZIP Business Patterns 2023, each times 2022 Economic Census sales per employee for the store type and the smallest geography with enough stores, split into categories by what each store type sells nationally (2022 Economic Census product lines) and restated in 2024 dollars (Alaska LODES 2016, Michigan 2021). Across the US, store sales run 0.9 to 3.5 times modeled resident demand depending on the category (above it in most, because households under-report spending and stores also sell to businesses and visitors); the retention rate divides local sales by resident demand times that national ratio. Self-employed restaurants, salons, auto repair and laundries are counted (Census Nonemployer Statistics 2024); self-employed retail sellers are not. Small areas are noisy, and online spending sits inside every gap.</p>
 <h2>Tracts</h2><p><code>${tracts.join(', ')}</code></p>
 <p class="s">Built only from public data. Estimates for planning; check locally before any decision.</p></body></html>`;
 }
@@ -1195,6 +1341,7 @@ function doDownload(kind) {
 // ---------- wire up ----------
 async function main() {
   initGuide();
+  initPrograms();
   Feedback.init();
   initMap();
   await loadIndex();

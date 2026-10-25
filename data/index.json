@@ -5,7 +5,7 @@
    "name": "Alabama",
    "usps": "AL",
    "tracts": 1437,
-   "bytes": 877240,
+   "bytes": 968976,
    "counties": 67
   },
   {
@@ -13,7 +13,7 @@
    "name": "Alaska",
    "usps": "AK",
    "tracts": 177,
-   "bytes": 276729,
+   "bytes": 287991,
    "counties": 30
   },
   {
@@ -21,7 +21,7 @@
    "name": "Arizona",
    "usps": "AZ",
    "tracts": 1765,
-   "bytes": 985291,
+   "bytes": 1095189,
    "counties": 15
   },
   {
@@ -29,7 +29,7 @@
    "name": "Arkansas",
    "usps": "AR",
    "tracts": 823,
-   "bytes": 519516,
+   "bytes": 573003,
    "counties": 75
   },
   {
@@ -37,7 +37,7 @@
    "name": "California",
    "usps": "CA",
    "tracts": 9129,
-   "bytes": 5178854,
+   "bytes": 5737207,
    "counties": 58
   },
   {
@@ -45,7 +45,7 @@
    "name": "Colorado",
    "usps": "CO",
    "tracts": 1447,
-   "bytes": 844087,
+   "bytes": 933323,
    "counties": 64
   },
   {
@@ -53,7 +53,7 @@
    "name": "Connecticut",
    "usps": "CT",
    "tracts": 884,
-   "bytes": 504909,
+   "bytes": 557558,
    "counties": 9
   },
   {
@@ -61,7 +61,7 @@
    "name": "Delaware",
    "usps": "DE",
    "tracts": 262,
-   "bytes": 147199,
+   "bytes": 163305,
    "counties": 3
   },
   {
@@ -69,7 +69,7 @@
    "name": "District of Columbia",
    "usps": "DC",
    "tracts": 206,
-   "bytes": 132437,
+   "bytes": 145114,
    "counties": 1
   },
   {
@@ -77,7 +77,7 @@
    "name": "Florida",
    "usps": "FL",
    "tracts": 5160,
-   "bytes": 2868717,
+   "bytes": 3189968,
    "counties": 67
   },
   {
@@ -85,7 +85,7 @@
    "name": "Georgia",
    "usps": "GA",
    "tracts": 2796,
-   "bytes": 1614104,
+   "bytes": 1791143,
    "counties": 159
   },
   {
@@ -93,7 +93,7 @@
    "name": "Hawaii",
    "usps": "HI",
    "tracts": 461,
-   "bytes": 244695,
+   "bytes": 268461,
    "counties": 5
   },
   {
@@ -101,7 +101,7 @@
    "name": "Idaho",
    "usps": "ID",
    "tracts": 456,
-   "bytes": 283510,
+   "bytes": 311874,
    "counties": 44
   },
   {
@@ -109,7 +109,7 @@
    "name": "Illinois",
    "usps": "IL",
    "tracts": 3265,
-   "bytes": 1842732,
+   "bytes": 2048020,
    "counties": 102
   },
   {
@@ -117,7 +117,7 @@
    "name": "Indiana",
    "usps": "IN",
    "tracts": 1696,
-   "bytes": 953079,
+   "bytes": 1059785,
    "counties": 92
   },
   {
@@ -125,7 +125,7 @@
    "name": "Iowa",
    "usps": "IA",
    "tracts": 896,
-   "bytes": 526117,
+   "bytes": 582550,
    "counties": 99
   },
   {
@@ -133,7 +133,7 @@
    "name": "Kansas",
    "usps": "KS",
    "tracts": 829,
-   "bytes": 468805,
+   "bytes": 521038,
    "counties": 105
   },
   {
@@ -141,7 +141,7 @@
    "name": "Kentucky",
    "usps": "KY",
    "tracts": 1306,
-   "bytes": 794604,
+   "bytes": 877156,
    "counties": 120
   },
   {
@@ -149,7 +149,7 @@
    "name": "Louisiana",
    "usps": "LA",
    "tracts": 1388,
-   "bytes": 813376,
+   "bytes": 901267,
    "counties": 64
   },
   {
@@ -157,7 +157,7 @@
    "name": "Maine",
    "usps": "ME",
    "tracts": 407,
-   "bytes": 256709,
+   "bytes": 282205,
    "counties": 16
   },
   {
@@ -165,7 +165,7 @@
    "name": "Maryland",
    "usps": "MD",
    "tracts": 1475,
-   "bytes": 860762,
+   "bytes": 950500,
    "counties": 24
   },
   {
@@ -173,7 +173,7 @@
    "name": "Massachusetts",
    "usps": "MA",
    "tracts": 1620,
-   "bytes": 940975,
+   "bytes": 1042466,
    "counties": 14
   },
   {
@@ -181,7 +181,7 @@
    "name": "Michigan",
    "usps": "MI",
    "tracts": 3017,
-   "bytes": 1605321,
+   "bytes": 1790671,
    "counties": 83
   },
   {
@@ -189,7 +189,7 @@
    "name": "Minnesota",
    "usps": "MN",
    "tracts": 1505,
-   "bytes": 869774,
+   "bytes": 963019,
    "counties": 87
   },
   {
@@ -197,7 +197,7 @@
    "name": "Mississippi",
    "usps": "MS",
    "tracts": 878,
-   "bytes": 521242,
+   "bytes": 578154,
    "counties": 82
   },
   {
@@ -205,7 +205,7 @@
    "name": "Missouri",
    "usps": "MO",
    "tracts": 1654,
-   "bytes": 973864,
+   "bytes": 1078661,
    "counties": 115
   },
   {
@@ -213,7 +213,7 @@
    "name": "Montana",
    "usps": "MT",
    "tracts": 319,
-   "bytes": 233647,
+   "bytes": 254067,
    "counties": 56
   },
   {
@@ -221,7 +221,7 @@
    "name": "Nebraska",
    "usps": "NE",
    "tracts": 553,
-   "bytes": 320570,
+   "bytes": 355060,
    "counties": 93
   },
   {
@@ -229,7 +229,7 @@
    "name": "Nevada",
    "usps": "NV",
    "tracts": 779,
-   "bytes": 425268,
+   "bytes": 471858,
    "counties": 17
   },
   {
@@ -237,7 +237,7 @@
    "name": "New Hampshire",
    "usps": "NH",
    "tracts": 350,
-   "bytes": 208037,
+   "bytes": 230247,
    "counties": 10
   },
   {
@@ -245,7 +245,7 @@
    "name": "New Jersey",
    "usps": "NJ",
    "tracts": 2181,
-   "bytes": 1237344,
+   "bytes": 1373813,
    "counties": 21
   },
   {
@@ -253,7 +253,7 @@
    "name": "New Mexico",
    "usps": "NM",
    "tracts": 612,
-   "bytes": 360387,
+   "bytes": 398939,
    "counties": 33
   },
   {
@@ -261,7 +261,7 @@
    "name": "New York",
    "usps": "NY",
    "tracts": 5411,
-   "bytes": 2980096,
+   "bytes": 3312285,
    "counties": 62
   },
   {
@@ -269,7 +269,7 @@
    "name": "North Carolina",
    "usps": "NC",
    "tracts": 2672,
-   "bytes": 1578810,
+   "bytes": 1748434,
    "counties": 100
   },
   {
@@ -277,7 +277,7 @@
    "name": "North Dakota",
    "usps": "ND",
    "tracts": 228,
-   "bytes": 147954,
+   "bytes": 162228,
    "counties": 53
   },
   {
@@ -285,7 +285,7 @@
    "name": "Ohio",
    "usps": "OH",
    "tracts": 3168,
-   "bytes": 1765735,
+   "bytes": 1964750,
    "counties": 88
   },
   {
@@ -293,7 +293,7 @@
    "name": "Oklahoma",
    "usps": "OK",
    "tracts": 1205,
-   "bytes": 679607,
+   "bytes": 756237,
    "counties": 77
   },
   {
@@ -301,7 +301,7 @@
    "name": "Oregon",
    "usps": "OR",
    "tracts": 1001,
-   "bytes": 623286,
+   "bytes": 685974,
    "counties": 36
   },
   {
@@ -309,7 +309,7 @@
    "name": "Pennsylvania",
    "usps": "PA",
    "tracts": 3446,
-   "bytes": 2007596,
+   "bytes": 2223208,
    "counties": 67
   },
   {
@@ -317,7 +317,7 @@
    "name": "Rhode Island",
    "usps": "RI",
    "tracts": 250,
-   "bytes": 143634,
+   "bytes": 159373,
    "counties": 5
   },
   {
@@ -325,7 +325,7 @@
    "name": "South Carolina",
    "usps": "SC",
    "tracts": 1323,
-   "bytes": 784413,
+   "bytes": 869031,
    "counties": 46
   },
   {
@@ -333,7 +333,7 @@
    "name": "South Dakota",
    "usps": "SD",
    "tracts": 242,
-   "bytes": 155537,
+   "bytes": 170931,
    "counties": 66
   },
   {
@@ -341,7 +341,7 @@
    "name": "Tennessee",
    "usps": "TN",
    "tracts": 1701,
-   "bytes": 1023840,
+   "bytes": 1131900,
    "counties": 95
   },
   {
@@ -349,7 +349,7 @@
    "name": "Texas",
    "usps": "TX",
    "tracts": 6896,
-   "bytes": 3868546,
+   "bytes": 4308811,
    "counties": 254
   },
   {
@@ -357,7 +357,7 @@
    "name": "Utah",
    "usps": "UT",
    "tracts": 716,
-   "bytes": 434547,
+   "bytes": 478303,
    "counties": 29
   },
   {
@@ -365,7 +365,7 @@
    "name": "Vermont",
    "usps": "VT",
    "tracts": 193,
-   "bytes": 117900,
+   "bytes": 130108,
    "counties": 14
   },
   {
@@ -373,7 +373,7 @@
    "name": "Virginia",
    "usps": "VA",
    "tracts": 2198,
-   "bytes": 1275283,
+   "bytes": 1409864,
    "counties": 133
   },
   {
@@ -381,7 +381,7 @@
    "name": "Washington",
    "usps": "WA",
    "tracts": 1784,
-   "bytes": 1061512,
+   "bytes": 1171512,
    "counties": 39
   },
   {
@@ -389,7 +389,7 @@
    "name": "West Virginia",
    "usps": "WV",
    "tracts": 546,
-   "bytes": 367038,
+   "bytes": 402450,
    "counties": 55
   },
   {
@@ -397,7 +397,7 @@
    "name": "Wisconsin",
    "usps": "WI",
    "tracts": 1542,
-   "bytes": 886822,
+   "bytes": 982923,
    "counties": 72
   },
   {
@@ -405,58 +405,145 @@
    "name": "Wyoming",
    "usps": "WY",
    "tracts": 160,
-   "bytes": 110109,
+   "bytes": 120144,
    "counties": 23
   }
  ],
  "calib": {
   "groceries": {
-   "lodes": 1.354948014617727,
-   "zbp": 1.2936947109318493
+   "lodes": 1.355006344022382,
+   "zbp": 1.2937530403364683
   },
   "fsr": {
-   "lodes": 1.4827318903142346,
-   "zbp": 1.6363919144329542
+   "lodes": 1.4978612513654854,
+   "zbp": 1.6515212754840318
   },
   "qsr": {
-   "lodes": 1.7952216452864362,
-   "zbp": 2.01287316447022
+   "lodes": 1.8116781664336177,
+   "zbp": 2.029329685616907
   },
   "alcohol": {
-   "lodes": 3.0926666726957044,
-   "zbp": 3.0641848034562185
+   "lodes": 3.11384251042247,
+   "zbp": 3.085360641179376
   },
   "tobacco": {
-   "lodes": 3.5402981863997454,
-   "zbp": 3.278970942910614
+   "lodes": 3.5404055597255053,
+   "zbp": 3.2790783162343224
   },
   "household": {
-   "lodes": 2.1282345155186433,
-   "zbp": 2.0211401309240036
+   "lodes": 2.12836695460284,
+   "zbp": 2.0212725700079677
   },
   "pets_toys": {
    "lodes": 0.9739431107573147,
    "zbp": 0.9223632634240092
   },
   "perscare": {
-   "lodes": 1.5029076938891437,
-   "zbp": 1.6520729103743317
+   "lodes": 1.8960387229061852,
+   "zbp": 2.0452039393900963
   },
   "apparel": {
-   "lodes": 1.8918704065616494,
-   "zbp": 1.8478579822903496
+   "lodes": 1.8979696146808864,
+   "zbp": 1.8539571904101853
   },
   "home": {
-   "lodes": 1.0632002731733607,
-   "zbp": 1.0279727820635445
+   "lodes": 1.0632003287382192,
+   "zbp": 1.0279728376288124
   },
   "gas": {
-   "lodes": 1.6657055766801387,
-   "zbp": 1.5421841352150798
+   "lodes": 1.6657060337362781,
+   "zbp": 1.5421845922708173
   },
   "auto": {
-   "lodes": 2.8752289455494506,
-   "zbp": 3.345102740665801
+   "lodes": 3.067700715783275,
+   "zbp": 3.537574510897729
+  }
+ },
+ "ovl": {
+  "keys": [
+   "oz1",
+   "oz2e",
+   "oz2e_rural",
+   "nmtc",
+   "nmtc_sd",
+   "cdfi_ia",
+   "lila",
+   "lila_snap"
+  ],
+  "flags": {
+   "oz1": "2018 Qualified Opportunity Zone (Notices 2018-48 and 2019-42; CDFI Fund list of 2010 tracts, carried to 2020 tracts)",
+   "oz2e": "Eligible for nomination as a 2027 Qualified Opportunity Zone (Treasury list, September 2026 update; 2020-2024 ACS, 2020 tracts). Designations by Treasury had not been published when this was built.",
+   "oz2e_rural": "Eligible 2027 QOZ tract made up entirely of a rural area (Treasury rural_status)",
+   "nmtc": "New Markets Tax Credit low-income community (CDFI Fund, 2016-2020 ACS, 2020 tracts; includes high-migration rural tracts)",
+   "nmtc_sd": "NMTC low-income community meeting a primary severe-distress test: poverty above 30%, median family income at or below 60% of the benchmark, or unemployment at least 1.5 times the national rate. Other routes to that status are not computed.",
+   "cdfi_ia": "CDFI Program Investment Area (CDFI Fund, 2016-2020 ACS, 2020 tracts)",
+   "lila": "Low income and low access to a supermarket or large grocery store, 1 mile urban / 10 miles rural (USDA ERS Food Access Research Atlas, Large Retailer Access Map, 2019 data on 2010 tracts, carried to 2020 tracts)",
+   "lila_snap": "Low income and low access to any SNAP-authorized store, including convenience and dollar stores, 1 mile urban / 10 miles rural, straight-line (USDA ERS SNAP-authorized Retailer Access Map, 2025, 2020 tracts)"
+  },
+  "vintages": {
+   "oz1": "2018 designations (2011-2015 ACS, 2010 tracts)",
+   "oz2e": "2020-2024 ACS, September 2026 list",
+   "nmtc": "2016-2020 ACS",
+   "cdfi_ia": "2016-2020 ACS",
+   "lila": "2019 (LRAM)",
+   "lila_snap": "2025 (SRAM, July 2026 release)"
+  }
+ },
+ "stores": {
+  "keys": [
+   "snap_supermarket",
+   "snap_grocery",
+   "snap_convenience",
+   "snap_specialty",
+   "snap_other",
+   "snap_farmers_market",
+   "ov_liquor",
+   "ov_tobacco",
+   "ov_general_merch",
+   "ov_pharmacy",
+   "ov_pets_toys_books",
+   "ov_beauty_supply",
+   "ov_salon_barber",
+   "ov_laundry",
+   "ov_apparel",
+   "ov_home_furnishings",
+   "ov_gas",
+   "ov_auto_parts",
+   "ov_auto_repair",
+   "ov_cafe_snack",
+   "ov_restaurant",
+   "ov_bar"
+  ],
+  "us_per10k": [
+   1.206,
+   0.628,
+   3.248,
+   0.161,
+   1.714,
+   0.212,
+   0.973,
+   0.976,
+   2.492,
+   1.417,
+   2.825,
+   0.766,
+   13.36,
+   1.082,
+   6.023,
+   2.953,
+   3.192,
+   1.64,
+   9.663,
+   6.573,
+   25.183,
+   3.043
+  ],
+  "snap": {
+   "downloaded": "2026-10-24"
+  },
+  "overture": {
+   "release": "2026-10-21.0",
+   "min_confidence": 0.9
   }
  },
  "store_avg": {
@@ -507,30 +594,30 @@
   "d_auto": 125788436251,
   "d_rx": 116955883137,
   "d_entertain": 133409792253,
-  "l_groceries": 1114452746502,
-  "z_groceries": 1064071542361,
-  "l_fsr": 367147625546,
-  "z_fsr": 405196252789,
-  "l_qsr": 515383227029,
-  "z_qsr": 577867958437,
-  "l_alcohol": 273564106728,
-  "z_alcohol": 271044722022,
-  "l_tobacco": 159798293338,
-  "z_tobacco": 148002776319,
-  "l_household": 247596927224,
-  "z_household": 235137660938,
+  "l_groceries": 1114500722782,
+  "z_groceries": 1064119518641,
+  "l_fsr": 370893892165,
+  "z_fsr": 408942519409,
+  "l_qsr": 520107665928,
+  "z_qsr": 582592397337,
+  "l_alcohol": 275437231039,
+  "z_alcohol": 272917846333,
+  "l_tobacco": 159803139844,
+  "z_tobacco": 148007622824,
+  "l_household": 247612335070,
+  "z_household": 235153068784,
   "l_pets_toys": 158897242812,
   "z_pets_toys": 150482074169,
-  "l_perscare": 198532841233,
-  "z_perscare": 218237440765,
-  "l_apparel": 512682006524,
-  "z_apparel": 500754985567,
-  "l_home": 347314625829,
-  "z_home": 335806894687,
-  "l_gas": 559204271763,
-  "z_gas": 517736128359,
-  "l_auto": 361670552923,
-  "z_auto": 420775242846
+  "l_perscare": 250465119233,
+  "z_perscare": 270169718765,
+  "l_apparel": 514334843973,
+  "z_apparel": 502407823016,
+  "l_home": 347314643980,
+  "z_home": 335806912838,
+  "l_gas": 559204425204,
+  "z_gas": 517736281800,
+  "l_auto": 385881275923,
+  "z_auto": 444985965846
  },
  "cats_dem": [
   "groceries",
@@ -563,7 +650,7 @@
   "auto"
  ],
  "fsr_share": 0.46309113405763513,
- "fsr_share_stores": 0.41409677574316084,
+ "fsr_share_stores": 0.41435003628047495,
  "src_names": {
   "can-databc": "DataBC - British Colombia Open Data Catalogue",
   "geoplanet": "Yahoo! GeoPlanet",
