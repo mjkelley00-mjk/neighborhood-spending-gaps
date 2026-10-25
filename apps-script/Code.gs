@@ -1,5 +1,5 @@
 /**
- * Neighborhood Spending Gaps: suggested areas.
+ * Neighborhood Spending Gaps: suggested areas, and suggestions and corrections.
  *
  * This script is bound to the "Neighborhood Spending Gaps: suggested areas" Google Sheet and is deployed
  * as a web app (Execute as: Me; Who has access: Anyone). The public site talks to it:
@@ -10,6 +10,9 @@
  *   GET ?a=status&ids=ID,ID      statuses of the suggestions a visitor made in their own browser
  *   POST {review:1, id, act, t}  approve or decline, from the site's review link in the email (act is
  *                                approve or decline; t is that action's signed token)
+ *   POST {feedback:1, kind, msg, email, link}   a message from the "Suggestions and corrections" box; it goes to
+ *                                the Feedback tab (created on first use) and is emailed, with Reply-To set to
+ *                                the sender's address when they gave one
  *
  * Each suggestion is a row on the Suggestions tab. Its Status (pending, approved, declined, removed) is
  * the only thing that decides whether it shows on the site, so changing it in the sheet by hand works too:
@@ -39,6 +42,10 @@ var MAX_TRACTS = 2500;   // a whole large county; the Tract list cell holds abou
 var DAILY_MAX = 200;     // suggestions accepted per day, all visitors together
 var EMAIL_MAX = 40;      // notification emails per day; after that, one "more are waiting" email
 var TZ = 'America/Chicago';
+var FB_TAB = 'Feedback';
+var FB_HEAD = ['Received', 'About', 'Message', 'Reply to', 'Area they were looking at', 'Status'];
+var FB_KINDS = {idea: 'An idea for the site', data: 'A number looks wrong', bug: "Something isn't working", other: 'Something else'};
+var FB_DAILY_MAX = 100;  // messages accepted per day, all visitors together
 
 // ---------------------------------------------------------------- setup, run once from the editor
 function setup() {
@@ -160,6 +167,7 @@ function doPost(e) {
   var b;
   try { b = JSON.parse((e && e.postData && e.postData.contents) || '{}'); } catch (err) { return json_({error: 'bad_request'}); }
   if (b.review) { return review_(b); }
+  if (b.feedback) { return feedback_(b); }
   if (b.website) { return json_({ok: true, id: 'g000000000000'}); }       // the form's hidden trap field
   var name = clean_(b.name, 80), city = clean_(b.city, 60), note = clean_(b.note, 300);
   var st = String(b.st || '');
@@ -249,6 +257,72 @@ function review_(b) {
   } finally {
     lock.releaseLock();
   }
+}
+
+// ---------------------------------------------------------------- POST: suggestions and corrections
+function fbSheet_() {
+  var id = PropertiesService.getScriptProperties().getProperty('SHEET_ID');
+  var ss = id ? SpreadsheetApp.openById(id) : SpreadsheetApp.getActiveSpreadsheet();
+  var sh = ss.getSheetByName(FB_TAB);
+  if (!sh) {
+    sh = ss.insertSheet(FB_TAB);
+    sh.getRange(1, 1, 1, FB_HEAD.length).setValues([FB_HEAD]).setFontWeight('bold');
+    sh.setFrozenRows(1);
+    sh.setColumnWidth(1, 130); sh.setColumnWidth(2, 170); sh.setColumnWidth(3, 420); sh.setColumnWidth(4, 200); sh.setColumnWidth(5, 260);
+    sh.getRange(2, 3, sh.getMaxRows() - 1, 1).setWrap(true);
+  }
+  return sh;
+}
+function feedback_(b) {
+  if (b.website) { return json_({ok: true}); }                              // the form's hidden trap field
+  var kind = FB_KINDS[b.kind] ? String(b.kind) : 'other';
+  var raw = String(b.msg == null ? '' : b.msg).replace(/\r\n?/g, '\n').trim();
+  if (raw.length < 5 || raw.length > 2000) { return json_({error: 'bad_request'}); }
+  // keep line breaks in the message; strip other control characters; never let the cell start a formula
+  var msg = raw.replace(/[\u0000-\u0009\u000b-\u001f\u007f]/g, ' ');
+  if (/^[=+\-@]/.test(msg)) { msg = "'" + msg; }
+  var email = String(b.email || '').trim().slice(0, 120);
+  if (email && !/^[^\s@<>,;"']+@[^\s@<>,;"']+\.[a-z]{2,}$/i.test(email)) { email = ''; }
+  var link = String(b.link || '');
+  link = link.indexOf(SITE) === 0 && link.length <= 1500 ? link : '';
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(20000)) { return json_({error: 'busy'}); }
+  try {
+    if (bump_('feedback') > FB_DAILY_MAX) { return json_({error: 'daily_limit'}); }
+    var sh = fbSheet_(), row = sh.getLastRow() + 1;
+    if (row > sh.getMaxRows()) { sh.insertRowsAfter(sh.getMaxRows(), 200); }
+    sh.getRange(row, 1, 1, FB_HEAD.length).setNumberFormat('@').setValues([[
+      Utilities.formatDate(new Date(), TZ, 'yyyy-MM-dd HH:mm'), FB_KINDS[kind], msg, email, link, 'new']]);
+    SpreadsheetApp.flush();
+    notifyFeedback_({kind: kind, msg: bare_(msg), email: email, link: link, url: sh.getParent().getUrl() + '#gid=' + sh.getSheetId()});
+    return json_({ok: true});
+  } finally {
+    lock.releaseLock();
+  }
+}
+function notifyFeedback_(f) {
+  var to = PropertiesService.getScriptProperties().getProperty('NOTIFY');
+  if (!to) { return; }
+  var n = bump_('emails');
+  if (n > EMAIL_MAX + 1) { return; }
+  if (n === EMAIL_MAX + 1) {
+    MailApp.sendEmail({to: to, name: 'Neighborhood Spending Gaps', subject: 'More messages are waiting',
+      body: 'More messages and suggested areas came in today than the ' + EMAIL_MAX + ' emails a day this sends. The rest are in the sheet: ' + f.url});
+    return;
+  }
+  var first = f.msg.replace(/\s+/g, ' ');
+  var subject = FB_KINDS[f.kind] + ': ' + (first.length > 60 ? first.slice(0, 57) + '…' : first);
+  var html = '<div style="font:15px/1.5 Arial,sans-serif;color:#14212b">' +
+    '<p style="color:#5a6b78;margin:0 0 6px">' + esc_(FB_KINDS[f.kind]) + ', from the Suggestions and corrections box</p>' +
+    '<p style="white-space:pre-wrap;font-size:16px;margin:0 0 14px">' + esc_(f.msg) + '</p>' +
+    (f.link ? '<p><a href="' + esc_(f.link) + '">The area they were looking at</a></p>' : '') +
+    '<p style="color:#5a6b78;font-size:13px">' + (f.email ? 'Reply to this email to answer them at ' + esc_(f.email) + '.' : 'They left no address, so there is no one to reply to.') +
+    ' Every message is also in <a href="' + f.url + '">the sheet</a>.</p></div>';
+  var mail = {to: to, name: 'Neighborhood Spending Gaps', subject: subject, htmlBody: html,
+    body: FB_KINDS[f.kind] + '\n\n' + f.msg + (f.link ? '\n\nThe area they were looking at: ' + f.link : '') +
+          (f.email ? '\n\nReply to: ' + f.email : '') + '\n\nThe sheet: ' + f.url};
+  if (f.email) { mail.replyTo = f.email; }
+  MailApp.sendEmail(mail);
 }
 
 // Clears the cached approved list when the Status column is edited by hand (a simple trigger: it runs on
