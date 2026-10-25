@@ -5,7 +5,7 @@
    "name": "Alabama",
    "usps": "AL",
    "tracts": 1437,
-   "bytes": 968976,
+   "bytes": 999922,
    "counties": 67
   },
   {
@@ -13,7 +13,7 @@
    "name": "Alaska",
    "usps": "AK",
    "tracts": 177,
-   "bytes": 287991,
+   "bytes": 291820,
    "counties": 30
   },
   {
@@ -21,7 +21,7 @@
    "name": "Arizona",
    "usps": "AZ",
    "tracts": 1765,
-   "bytes": 1095189,
+   "bytes": 1112121,
    "counties": 15
   },
   {
@@ -29,7 +29,7 @@
    "name": "Arkansas",
    "usps": "AR",
    "tracts": 823,
-   "bytes": 573003,
+   "bytes": 590162,
    "counties": 75
   },
   {
@@ -37,7 +37,7 @@
    "name": "California",
    "usps": "CA",
    "tracts": 9129,
-   "bytes": 5737207,
+   "bytes": 5820590,
    "counties": 58
   },
   {
@@ -45,7 +45,7 @@
    "name": "Colorado",
    "usps": "CO",
    "tracts": 1447,
-   "bytes": 933323,
+   "bytes": 935527,
    "counties": 64
   },
   {
@@ -53,7 +53,7 @@
    "name": "Connecticut",
    "usps": "CT",
    "tracts": 884,
-   "bytes": 557558,
+   "bytes": 565853,
    "counties": 9
   },
   {
@@ -61,7 +61,7 @@
    "name": "Delaware",
    "usps": "DE",
    "tracts": 262,
-   "bytes": 163305,
+   "bytes": 166456,
    "counties": 3
   },
   {
@@ -69,7 +69,7 @@
    "name": "District of Columbia",
    "usps": "DC",
    "tracts": 206,
-   "bytes": 145114,
+   "bytes": 148154,
    "counties": 1
   },
   {
@@ -77,7 +77,7 @@
    "name": "Florida",
    "usps": "FL",
    "tracts": 5160,
-   "bytes": 3189968,
+   "bytes": 3232839,
    "counties": 67
   },
   {
@@ -85,7 +85,7 @@
    "name": "Georgia",
    "usps": "GA",
    "tracts": 2796,
-   "bytes": 1791143,
+   "bytes": 1840739,
    "counties": 159
   },
   {
@@ -93,7 +93,7 @@
    "name": "Hawaii",
    "usps": "HI",
    "tracts": 461,
-   "bytes": 268461,
+   "bytes": 273719,
    "counties": 5
   },
   {
@@ -101,7 +101,7 @@
    "name": "Idaho",
    "usps": "ID",
    "tracts": 456,
-   "bytes": 311874,
+   "bytes": 317146,
    "counties": 44
   },
   {
@@ -109,7 +109,7 @@
    "name": "Illinois",
    "usps": "IL",
    "tracts": 3265,
-   "bytes": 2048020,
+   "bytes": 2120164,
    "counties": 102
   },
   {
@@ -117,7 +117,7 @@
    "name": "Indiana",
    "usps": "IN",
    "tracts": 1696,
-   "bytes": 1059785,
+   "bytes": 1074861,
    "counties": 92
   },
   {
@@ -125,7 +125,7 @@
    "name": "Iowa",
    "usps": "IA",
    "tracts": 896,
-   "bytes": 582550,
+   "bytes": 604886,
    "counties": 99
   },
   {
@@ -133,7 +133,7 @@
    "name": "Kansas",
    "usps": "KS",
    "tracts": 829,
-   "bytes": 521038,
+   "bytes": 538498,
    "counties": 105
   },
   {
@@ -141,7 +141,7 @@
    "name": "Kentucky",
    "usps": "KY",
    "tracts": 1306,
-   "bytes": 877156,
+   "bytes": 888993,
    "counties": 120
   },
   {
@@ -149,7 +149,7 @@
    "name": "Louisiana",
    "usps": "LA",
    "tracts": 1388,
-   "bytes": 901267,
+   "bytes": 915080,
    "counties": 64
   },
   {
@@ -157,7 +157,7 @@
    "name": "Maine",
    "usps": "ME",
    "tracts": 407,
-   "bytes": 282205,
+   "bytes": 286886,
    "counties": 16
   },
   {
@@ -165,7 +165,7 @@
    "name": "Maryland",
    "usps": "MD",
    "tracts": 1475,
-   "bytes": 950500,
+   "bytes": 963993,
    "counties": 24
   },
   {
@@ -173,7 +173,7 @@
    "name": "Massachusetts",
    "usps": "MA",
    "tracts": 1620,
-   "bytes": 1042466,
+   "bytes": 1073248,
    "counties": 14
   },
   {
@@ -181,7 +181,7 @@
    "name": "Michigan",
    "usps": "MI",
    "tracts": 3017,
-   "bytes": 1790671,
+   "bytes": 1816036,
    "counties": 83
   },
   {
@@ -189,7 +189,7 @@
    "name": "Minnesota",
    "usps": "MN",
    "tracts": 1505,
-   "bytes": 963019,
+   "bytes": 977370,
    "counties": 87
   },
   {
@@ -197,7 +197,7 @@
    "name": "Mississippi",
    "usps": "MS",
    "tracts": 878,
-   "bytes": 578154,
+   "bytes": 589531,
    "counties": 82
   },
   {
@@ -205,7 +205,7 @@
    "name": "Missouri",
    "usps": "MO",
    "tracts": 1654,
-   "bytes": 1078661,
+   "bytes": 1095902,
    "counties": 115
   },
   {
@@ -213,7 +213,7 @@
    "name": "Montana",
    "usps": "MT",
    "tracts": 319,
-   "bytes": 254067,
+   "bytes": 258293,
    "counties": 56
   },
   {
@@ -221,7 +221,7 @@
    "name": "Nebraska",
    "usps": "NE",
    "tracts": 553,
-   "bytes": 355060,
+   "bytes": 361090,
    "counties": 93
   },
   {
@@ -229,7 +229,7 @@
    "name": "Nevada",
    "usps": "NV",
    "tracts": 779,
-   "bytes": 471858,
+   "bytes": 481154,
    "counties": 17
   },
   {
@@ -237,7 +237,7 @@
    "name": "New Hampshire",
    "usps": "NH",
    "tracts": 350,
-   "bytes": 230247,
+   "bytes": 234452,
    "counties": 10
   },
   {
@@ -245,7 +245,7 @@
    "name": "New Jersey",
    "usps": "NJ",
    "tracts": 2181,
-   "bytes": 1373813,
+   "bytes": 1392714,
    "counties": 21
   },
   {
@@ -253,7 +253,7 @@
    "name": "New Mexico",
    "usps": "NM",
    "tracts": 612,
-   "bytes": 398939,
+   "bytes": 406642,
    "counties": 33
   },
   {
@@ -261,7 +261,7 @@
    "name": "New York",
    "usps": "NY",
    "tracts": 5411,
-   "bytes": 3312285,
+   "bytes": 3364337,
    "counties": 62
   },
   {
@@ -269,7 +269,7 @@
    "name": "North Carolina",
    "usps": "NC",
    "tracts": 2672,
-   "bytes": 1748434,
+   "bytes": 1772781,
    "counties": 100
   },
   {
@@ -277,7 +277,7 @@
    "name": "North Dakota",
    "usps": "ND",
    "tracts": 228,
-   "bytes": 162228,
+   "bytes": 165668,
    "counties": 53
   },
   {
@@ -285,7 +285,7 @@
    "name": "Ohio",
    "usps": "OH",
    "tracts": 3168,
-   "bytes": 1964750,
+   "bytes": 1993230,
    "counties": 88
   },
   {
@@ -293,7 +293,7 @@
    "name": "Oklahoma",
    "usps": "OK",
    "tracts": 1205,
-   "bytes": 756237,
+   "bytes": 768850,
    "counties": 77
   },
   {
@@ -301,7 +301,7 @@
    "name": "Oregon",
    "usps": "OR",
    "tracts": 1001,
-   "bytes": 685974,
+   "bytes": 695024,
    "counties": 36
   },
   {
@@ -309,7 +309,7 @@
    "name": "Pennsylvania",
    "usps": "PA",
    "tracts": 3446,
-   "bytes": 2223208,
+   "bytes": 2252329,
    "counties": 67
   },
   {
@@ -317,7 +317,7 @@
    "name": "Rhode Island",
    "usps": "RI",
    "tracts": 250,
-   "bytes": 159373,
+   "bytes": 162751,
    "counties": 5
   },
   {
@@ -325,7 +325,7 @@
    "name": "South Carolina",
    "usps": "SC",
    "tracts": 1323,
-   "bytes": 869031,
+   "bytes": 881523,
    "counties": 46
   },
   {
@@ -333,7 +333,7 @@
    "name": "South Dakota",
    "usps": "SD",
    "tracts": 242,
-   "bytes": 170931,
+   "bytes": 174380,
    "counties": 66
   },
   {
@@ -341,7 +341,7 @@
    "name": "Tennessee",
    "usps": "TN",
    "tracts": 1701,
-   "bytes": 1131900,
+   "bytes": 1149040,
    "counties": 95
   },
   {
@@ -349,7 +349,7 @@
    "name": "Texas",
    "usps": "TX",
    "tracts": 6896,
-   "bytes": 4308811,
+   "bytes": 4395476,
    "counties": 254
   },
   {
@@ -357,7 +357,7 @@
    "name": "Utah",
    "usps": "UT",
    "tracts": 716,
-   "bytes": 478303,
+   "bytes": 485928,
    "counties": 29
   },
   {
@@ -365,7 +365,7 @@
    "name": "Vermont",
    "usps": "VT",
    "tracts": 193,
-   "bytes": 130108,
+   "bytes": 133491,
    "counties": 14
   },
   {
@@ -373,7 +373,7 @@
    "name": "Virginia",
    "usps": "VA",
    "tracts": 2198,
-   "bytes": 1409864,
+   "bytes": 1429641,
    "counties": 133
   },
   {
@@ -381,7 +381,7 @@
    "name": "Washington",
    "usps": "WA",
    "tracts": 1784,
-   "bytes": 1171512,
+   "bytes": 1187365,
    "counties": 39
   },
   {
@@ -389,7 +389,7 @@
    "name": "West Virginia",
    "usps": "WV",
    "tracts": 546,
-   "bytes": 402450,
+   "bytes": 408205,
    "counties": 55
   },
   {
@@ -397,7 +397,7 @@
    "name": "Wisconsin",
    "usps": "WI",
    "tracts": 1542,
-   "bytes": 982923,
+   "bytes": 996643,
    "counties": 72
   },
   {
@@ -405,7 +405,7 @@
    "name": "Wyoming",
    "usps": "WY",
    "tracts": 160,
-   "bytes": 120144,
+   "bytes": 122857,
    "counties": 23
   }
  ],
@@ -544,6 +544,836 @@
   "overture": {
    "release": "2026-10-21.0",
    "min_confidence": 0.9
+  }
+ },
+ "tax_svc_share": {
+  "perscare": 0.425,
+  "apparel": 0.03,
+  "auto": 0.466
+ },
+ "coverage": {
+  "AK": {
+   "rates": "current",
+   "rate_gaps": 5,
+   "check": {
+    "status": "no sales tax",
+    "source": null,
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "No state sales tax; borough and city taxes are collected locally with no statewide data by business."
+   }
+  },
+  "AL": {
+   "rates": "current",
+   "rate_gaps": 55,
+   "check": {
+    "status": "no local data published",
+    "source": "https://www.revenue.alabama.gov/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "Revenue publishes collections and local distributions, not local sales by kind of business."
+   }
+  },
+  "AR": {
+   "rates": "current",
+   "rate_gaps": 12,
+   "check": {
+    "status": "no local data published",
+    "source": "https://www.dfa.arkansas.gov/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "Local sales tax turnbacks are published by city and county as totals only."
+   }
+  },
+  "AZ": {
+   "rates": "current",
+   "rate_gaps": 11,
+   "check": {
+    "status": "not usable",
+    "source": "https://tourism.az.gov/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "Restaurant and bar sales by county are published (Office of Tourism, from Department of Revenue data), but the site refuses scripted downloads; skipped."
+   }
+  },
+  "CA": {
+   "rates": "current",
+   "rate_gaps": 3,
+   "check": {
+    "status": "checked",
+    "source": "https://cdtfa.ca.gov/dataportal/api/odata/Taxable_Sales_Cities",
+    "year": 2024,
+    "geography": "city",
+    "restaurants": {
+     "areas": 431,
+     "corr": 0.95,
+     "median": 1.14
+    },
+    "store_goods": {
+     "areas": 260,
+     "corr": 0.89,
+     "median": 0.85
+    },
+    "note": "Taxable sales by city and type of business (CDTFA), 2024; restaurants close, store goods lower because taxable sales cover more goods."
+   }
+  },
+  "CO": {
+   "rates": "state rate only",
+   "rate_gaps": 4,
+   "check": {
+    "status": "checked",
+    "source": "https://cdor.colorado.gov/retail-sales-reports",
+    "year": 2024,
+    "geography": "city and county",
+    "restaurants": {
+     "areas": 24,
+     "corr": 0.99,
+     "median": 1.06
+    },
+    "store_goods": {
+     "areas": 23,
+     "corr": 0.98,
+     "median": 0.61
+    },
+    "note": "Retail sales (not taxable sales) by industry for major cities and counties (Department of Revenue), 2024."
+   }
+  },
+  "CT": {
+   "rates": "current",
+   "rate_gaps": 1,
+   "check": {
+    "status": "checked",
+    "source": "https://data.ct.gov/resource/m4cj-9rss.json",
+    "year": 2024,
+    "geography": "town",
+    "restaurants": {
+     "areas": 169,
+     "corr": 0.92,
+     "median": 1.03
+    },
+    "store_goods": null,
+    "note": "Meals by town from the 7.35% meals tax, 2024; store sales are filed by taxpayer, not by store, so they are not compared."
+   }
+  },
+  "DC": {
+   "rates": "current",
+   "rate_gaps": 1,
+   "check": {
+    "status": "no local data published",
+    "source": "https://otr.cfo.dc.gov/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "One taxing jurisdiction; no sub-areas to compare."
+   }
+  },
+  "DE": {
+   "rates": "no sales tax",
+   "rate_gaps": 1,
+   "check": {
+    "status": "no sales tax",
+    "source": null,
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "No sales tax."
+   }
+  },
+  "FL": {
+   "rates": "current",
+   "rate_gaps": 2,
+   "check": {
+    "status": "checked",
+    "source": "https://floridarevenue.com/dataPortal/GTA/Form%2010/All%20Taxable%20Sales/Fiscal%20Year/",
+    "year": 2024,
+    "geography": "county",
+    "restaurants": {
+     "areas": 67,
+     "corr": 0.99,
+     "median": 1.04
+    },
+    "store_goods": {
+     "areas": 67,
+     "corr": 0.99,
+     "median": 0.96
+    },
+    "note": "Taxable sales by county and kind of business (Form 10), 2024."
+   }
+  },
+  "GA": {
+   "rates": "current",
+   "rate_gaps": 3,
+   "check": {
+    "status": "checked",
+    "source": "https://dor.georgia.gov/local-government-services/distributions-section/sales-tax-commodity-report",
+    "year": 2024,
+    "geography": "county",
+    "restaurants": {
+     "areas": 156,
+     "corr": 0.97,
+     "median": 0.58
+    },
+    "store_goods": {
+     "areas": 156,
+     "corr": 0.93,
+     "median": 0.71
+    },
+    "note": "Local sales tax distributions by county and commodity, 2024, divided by one cent per dollar; levels approximate, Food/bars includes groceries."
+   }
+  },
+  "HI": {
+   "rates": "current",
+   "rate_gaps": 1,
+   "check": {
+    "status": "no local data published",
+    "source": "https://tax.hawaii.gov/stats/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "General excise base by business activity is statewide only, and retailing includes restaurants."
+   }
+  },
+  "IA": {
+   "rates": "older source",
+   "rate_gaps": 70,
+   "check": {
+    "status": "checked",
+    "source": "https://data.iowa.gov/catalog/dataset/992",
+    "year": 2024,
+    "geography": "county",
+    "restaurants": {
+     "areas": 99,
+     "corr": 0.98,
+     "median": 1.18
+    },
+    "store_goods": {
+     "areas": 32,
+     "corr": 0.94,
+     "median": 0.86
+    },
+    "note": "Retail taxable sales by county and business group (data.iowa.gov), 2024."
+   }
+  },
+  "ID": {
+   "rates": "current",
+   "rate_gaps": 1,
+   "check": {
+    "status": "no local data published",
+    "source": "https://tax.idaho.gov/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "Sales tax statistics are statewide; local distributions are totals only."
+   }
+  },
+  "IL": {
+   "rates": "current",
+   "rate_gaps": 110,
+   "check": {
+    "status": "checked",
+    "source": "https://webapps.illinois.gov/rev/sic",
+    "year": 2024,
+    "geography": "city",
+    "restaurants": {
+     "areas": 398,
+     "corr": 0.85,
+     "median": 1.05
+    },
+    "store_goods": {
+     "areas": 396,
+     "corr": 0.83,
+     "median": 0.6
+    },
+    "note": "Sales tax by kind of business for every municipality (Department of Revenue SIC reports), 2024; taxable sales = municipal share x 100."
+   }
+  },
+  "IN": {
+   "rates": "current",
+   "rate_gaps": 1,
+   "check": {
+    "status": "no local data published",
+    "source": "https://www.in.gov/dor/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "No local sales tax and no county or city sales data by business."
+   }
+  },
+  "KS": {
+   "rates": "current",
+   "rate_gaps": 11,
+   "check": {
+    "status": "no local data published",
+    "source": "https://www.ksrevenue.gov/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "Taxable sales by NAICS are statewide; city and county distributions are totals only."
+   }
+  },
+  "KY": {
+   "rates": "current",
+   "rate_gaps": 1,
+   "check": {
+    "status": "no local data published",
+    "source": "https://revenue.ky.gov/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "No local sales tax; sales tax statistics are statewide."
+   }
+  },
+  "LA": {
+   "rates": "older source",
+   "rate_gaps": 4,
+   "check": {
+    "status": "no local data published",
+    "source": "https://revenue.louisiana.gov/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "Local sales taxes are collected by parish collectors; no statewide local data by business."
+   }
+  },
+  "MA": {
+   "rates": "current",
+   "rate_gaps": 5,
+   "check": {
+    "status": "checked",
+    "source": "https://dls-gw.dor.state.ma.us/reports/rdPage.aspx?rdReport=Local_Option_Meals_Rooms",
+    "year": "FY2024-FY2025 mean",
+    "geography": "town",
+    "restaurants": {
+     "areas": 243,
+     "corr": 0.97,
+     "median": 0.9
+    },
+    "store_goods": null,
+    "note": "Meals by city and town from the 0.75% local meals excise, mean of fiscal 2024 and 2025; no store data."
+   }
+  },
+  "MD": {
+   "rates": "current",
+   "rate_gaps": 2,
+   "check": {
+    "status": "not usable",
+    "source": "https://www.marylandtaxes.gov/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "Monthly collections by county and nine business categories are published, but the files refused scripted downloads; skipped."
+   }
+  },
+  "ME": {
+   "rates": "current",
+   "rate_gaps": 2,
+   "check": {
+    "status": "not usable",
+    "source": "https://www.maine.gov/revenue/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "Taxable sales by economic area and store type are published, but the site refuses scripted downloads (403); skipped."
+   }
+  },
+  "MI": {
+   "rates": "current",
+   "rate_gaps": 1,
+   "check": {
+    "status": "no local data published",
+    "source": "https://www.michigan.gov/treasury",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "No local sales tax; statistics are statewide."
+   }
+  },
+  "MN": {
+   "rates": "current",
+   "rate_gaps": 2,
+   "check": {
+    "status": "checked",
+    "source": "https://www.revenue.state.mn.us/2024-sales-and-use-tax-revenue-county",
+    "year": 2024,
+    "geography": "city and county",
+    "restaurants": {
+     "areas": 223,
+     "corr": 0.95,
+     "median": 1.09
+    },
+    "store_goods": {
+     "areas": 223,
+     "corr": 0.92,
+     "median": 1.26
+    },
+    "note": "Taxable sales by county and selected city and NAICS (Department of Revenue), 2024; clothing is exempt, so apparel is left out."
+   }
+  },
+  "MO": {
+   "rates": "current",
+   "rate_gaps": 3,
+   "check": {
+    "status": "not usable",
+    "source": "https://dor.mo.gov/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "Taxable sales are published by ZIP code as totals, without kind of business."
+   }
+  },
+  "MS": {
+   "rates": "current",
+   "rate_gaps": 5,
+   "check": {
+    "status": "checked",
+    "source": "https://www.dor.ms.gov/sites/default/files/statistics/stats_sales%20by%20co%20by%20ind0625.pdf",
+    "year": "FY2025",
+    "geography": "county",
+    "restaurants": {
+     "areas": 81,
+     "corr": 0.97,
+     "median": 0.59
+    },
+    "store_goods": {
+     "areas": 81,
+     "corr": 0.96,
+     "median": 0.6
+    },
+    "note": "Net sales by county and NAICS sector, fiscal 2025 (July 2024 - June 2025); restaurants include hotels and casinos' food and lodging."
+   }
+  },
+  "MT": {
+   "rates": "current",
+   "rate_gaps": 4,
+   "check": {
+    "status": "no sales tax",
+    "source": null,
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "No general sales tax."
+   }
+  },
+  "NC": {
+   "rates": "current",
+   "rate_gaps": 4,
+   "check": {
+    "status": "checked",
+    "source": "https://www.ncdor.gov/documents/reports/fy23-24salesusestats/open",
+    "year": "FY2024-FY2025 mean",
+    "geography": "county",
+    "restaurants": {
+     "areas": 100,
+     "corr": 0.99,
+     "median": 0.75
+    },
+    "store_goods": {
+     "areas": 100,
+     "corr": 0.97,
+     "median": 0.57
+    },
+    "note": "Taxable sales by county and major business group, mean of fiscal 2024 and 2025; the Food group also holds grocery stores' taxable items."
+   }
+  },
+  "ND": {
+   "rates": "current",
+   "rate_gaps": 2,
+   "check": {
+    "status": "no local data published",
+    "source": "https://www.tax.nd.gov/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "Taxable sales by city and county are published as totals, not by kind of business."
+   }
+  },
+  "NE": {
+   "rates": "current",
+   "rate_gaps": 3,
+   "check": {
+    "status": "checked",
+    "source": "https://revenue.nebraska.gov/sites/default/files/doc/research/annual_report/03%20Sales%20Tax%20by%20Business%20Classification%202025.xls",
+    "year": 2024,
+    "geography": "county",
+    "restaurants": {
+     "areas": 77,
+     "corr": 0.91,
+     "median": 0.93
+    },
+    "store_goods": {
+     "areas": 87,
+     "corr": 0.95,
+     "median": 0.5
+    },
+    "note": "Net taxable sales by county and NAICS sector, 2024; restaurants include hotels and stores are all of retail."
+   }
+  },
+  "NH": {
+   "rates": "meals tax only",
+   "rate_gaps": 1,
+   "check": {
+    "status": "no sales tax",
+    "source": null,
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "No general sales tax."
+   }
+  },
+  "NJ": {
+   "rates": "current",
+   "rate_gaps": 2,
+   "check": {
+    "status": "no local data published",
+    "source": "https://www.nj.gov/treasury/taxation/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "Sales tax statistics are statewide by industry, not by place."
+   }
+  },
+  "NM": {
+   "rates": "current",
+   "rate_gaps": 2,
+   "check": {
+    "status": "checked",
+    "source": "https://www.tax.newmexico.gov/all-nm-taxes/gross-receipts-taxes-overview/quarterly-rp-80-reports-gross-receipts-by-geographic-area-and-naics-code/",
+    "year": 2024,
+    "geography": "county",
+    "restaurants": {
+     "areas": 33,
+     "corr": 0.92,
+     "median": 1.27
+    },
+    "store_goods": {
+     "areas": 33,
+     "corr": 0.97,
+     "median": 0.67
+    },
+    "note": "Taxable gross receipts by county and NAICS (RP-80), 2024; the gross receipts tax also covers services."
+   }
+  },
+  "NV": {
+   "rates": "current",
+   "rate_gaps": 2,
+   "check": {
+    "status": "checked",
+    "source": "https://tax.nv.gov/wp-content/uploads/2025/09/June-2025-Taxable-Sales-and-Use-Tax-Statistics-1.pdf",
+    "year": "FY2024-FY2025 mean",
+    "geography": "county",
+    "restaurants": {
+     "areas": 17,
+     "corr": 0.99,
+     "median": 1.31
+    },
+    "store_goods": {
+     "areas": 17,
+     "corr": 0.97,
+     "median": 0.59
+    },
+    "note": "Taxable sales by county and NAICS (Department of Taxation), mean of fiscal 2024 and 2025; Clark County dining includes casino resorts."
+   }
+  },
+  "NY": {
+   "rates": "current",
+   "rate_gaps": 3,
+   "check": {
+    "status": "checked",
+    "source": "https://data.ny.gov/resource/ny73-2j3u.json",
+    "year": "2024-25",
+    "geography": "county",
+    "restaurants": {
+     "areas": 57,
+     "corr": 0.99,
+     "median": 1.13
+    },
+    "store_goods": {
+     "areas": 58,
+     "corr": 0.99,
+     "median": 0.63
+    },
+    "note": "Taxable sales by county and NAICS (Taxation and Finance), March 2024 - February 2025; New York City as one area."
+   }
+  },
+  "OH": {
+   "rates": "current",
+   "rate_gaps": 2,
+   "check": {
+    "status": "no local data published",
+    "source": "https://tax.ohio.gov/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "County permissive sales tax collections are totals only."
+   }
+  },
+  "OK": {
+   "rates": "current",
+   "rate_gaps": 2,
+   "check": {
+    "status": "no local data published",
+    "source": "https://oklahoma.gov/tax.html",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "City and county sales tax collections are published as totals only."
+   }
+  },
+  "OR": {
+   "rates": "no sales tax",
+   "rate_gaps": 1,
+   "check": {
+    "status": "no sales tax",
+    "source": null,
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "No sales tax."
+   }
+  },
+  "PA": {
+   "rates": "current",
+   "rate_gaps": 2,
+   "check": {
+    "status": "no local data published",
+    "source": "https://www.revenue.pa.gov/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "Sales tax statistics are statewide; local taxes (Philadelphia, Allegheny) are totals only."
+   }
+  },
+  "RI": {
+   "rates": "current",
+   "rate_gaps": 1,
+   "check": {
+    "status": "not usable",
+    "source": "https://dor.ri.gov/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "Local 1% meals and beverage tax by municipality is published monthly, but 2024 files refused scripted downloads; skipped."
+   }
+  },
+  "SC": {
+   "rates": "current",
+   "rate_gaps": 4,
+   "check": {
+    "status": "no local data published",
+    "source": "https://dor.sc.gov/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "The annual report gives gross and net taxable sales by county as totals; NAICS detail is statewide only."
+   }
+  },
+  "SD": {
+   "rates": "current",
+   "rate_gaps": 1,
+   "check": {
+    "status": "checked",
+    "source": "https://dor.sd.gov/media/0ctjsild/cy2024municipalmonthlytaxbysic.pdf",
+    "year": 2024,
+    "geography": "city",
+    "restaurants": {
+     "areas": 33,
+     "corr": 0.93,
+     "median": 0.98
+    },
+    "store_goods": {
+     "areas": 33,
+     "corr": 0.82,
+     "median": 0.56
+    },
+    "note": "City general sales tax base by SIC group (Municipal Tax Report), returns filed in 2024; only larger cities match model places."
+   }
+  },
+  "TN": {
+   "rates": "current",
+   "rate_gaps": 5,
+   "check": {
+    "status": "no local data published",
+    "source": "https://www.tn.gov/revenue.html",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "Local sales tax collections are published by city and county as totals only."
+   }
+  },
+  "TX": {
+   "rates": "current",
+   "rate_gaps": 5,
+   "check": {
+    "status": "checked",
+    "source": "https://data.texas.gov/resource/7z4d-yf2c.json",
+    "year": 2024,
+    "geography": "city",
+    "restaurants": {
+     "areas": 748,
+     "corr": 0.94,
+     "median": 0.98
+    },
+    "store_goods": {
+     "areas": 758,
+     "corr": 0.91,
+     "median": 0.51
+    },
+    "note": "Taxable sales by city and NAICS sector (Comptroller), 2024; restaurants include hotels and stores are all of retail."
+   }
+  },
+  "UT": {
+   "rates": "current",
+   "rate_gaps": 3,
+   "check": {
+    "status": "not usable",
+    "source": "https://tax.utah.gov/econstats/sales",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "Taxable sales by city, county and NAICS are published, but the site refuses scripted downloads; skipped."
+   }
+  },
+  "VA": {
+   "rates": "current",
+   "rate_gaps": 4,
+   "check": {
+    "status": "checked",
+    "source": "https://www.coopercenter.org/taxable-sales",
+    "year": 2024,
+    "geography": "county",
+    "restaurants": {
+     "areas": 132,
+     "corr": 0.98,
+     "median": 1.13
+    },
+    "store_goods": {
+     "areas": 132,
+     "corr": 0.94,
+     "median": 1.17
+    },
+    "note": "Taxable sales by county and independent city and NAICS (Department of Taxation data via Weldon Cooper Center), 2024."
+   }
+  },
+  "VT": {
+   "rates": "current",
+   "rate_gaps": 2,
+   "check": {
+    "status": "not usable",
+    "source": "https://tax.vermont.gov/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "Meals and rooms and sales tax statistics by town are published, but the site refuses scripted downloads (403); skipped."
+   }
+  },
+  "WA": {
+   "rates": "current",
+   "rate_gaps": 1,
+   "check": {
+    "status": "checked",
+    "source": "https://apps.dor.wa.gov/ResearchStats/Content/QuarterlyBusinessReview/Report.aspx",
+    "year": 2024,
+    "geography": "city and county",
+    "restaurants": {
+     "areas": 176,
+     "corr": 0.95,
+     "median": 1.06
+    },
+    "store_goods": {
+     "areas": 176,
+     "corr": 0.92,
+     "median": 0.82
+    },
+    "note": "Taxable retail sales by city and county and NAICS (Department of Revenue), 2024."
+   }
+  },
+  "WI": {
+   "rates": "current",
+   "rate_gaps": 1,
+   "check": {
+    "status": "checked",
+    "source": "https://www.revenue.wi.gov/DORReports/SalesUseTaxRptCalendarYr2019.pdf",
+    "year": 2019,
+    "geography": "county",
+    "restaurants": {
+     "areas": 66,
+     "corr": 0.99,
+     "median": 0.99
+    },
+    "store_goods": {
+     "areas": 66,
+     "corr": 0.95,
+     "median": 0.9
+    },
+    "note": "County 0.5% sales tax by county and NAICS, 2019 (latest with this detail), restated to 2024 dollars with CPI-U; flagged as 2019."
+   }
+  },
+  "WV": {
+   "rates": "current",
+   "rate_gaps": 2,
+   "check": {
+    "status": "no local data published",
+    "source": "https://tax.wv.gov/",
+    "year": null,
+    "geography": null,
+    "restaurants": null,
+    "store_goods": null,
+    "note": "Municipal sales tax collections are totals only."
+   }
+  },
+  "WY": {
+   "rates": "current",
+   "rate_gaps": 2,
+   "check": {
+    "status": "checked",
+    "source": "https://ai.wyo.gov/divisions/economic-analysis/revenue/sales-and-use",
+    "year": "FY2024-FY2025 mean",
+    "geography": "county",
+    "restaurants": {
+     "areas": 23,
+     "corr": 0.98,
+     "median": 1.0
+    },
+    "store_goods": {
+     "areas": 23,
+     "corr": 0.92,
+     "median": 0.79
+    },
+    "note": "Taxable sales by county and retail subsector from 4% state collections, mean of fiscal 2024 and 2025."
+   }
   }
  },
  "store_avg": {

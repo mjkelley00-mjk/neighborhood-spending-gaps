@@ -127,7 +127,9 @@ tr.tot td{font-weight:600;border-top:1px solid var(--line);border-bottom:0}
 .pill{display:inline-block;font:500 11px/1 var(--mono);padding:4px 6px;border-radius:5px}
 .pill.leak{background:var(--leak-soft)} .pill.inflow{background:var(--inflow-soft)}
 .commute{margin:4px 0 12px;max-width:72ch}
-#programs,#stores2{min-width:0;max-width:760px}#stores2 td:first-child{min-width:0}@media (max-width:640px){#stores2 th,#stores2 td{padding:8px 5px}#stores2 th{white-space:normal}}#stores2 tr.grp td{font:500 11px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:16px;text-align:left}
+#programs,#stores2{min-width:0;max-width:760px}#taxTbl{min-width:0;max-width:760px}#taxTbl td:first-child{min-width:0}@media (max-width:640px){#taxTbl th,#taxTbl td{padding:8px 4px;font-size:12.5px}#taxTbl td.num{font-size:12px}#taxTbl th{white-space:normal}}#taxTbl .tag{display:inline-block;margin-left:6px;font:500 10.5px/1.6 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--warn-ink)}
+.headline.small{font-size:16px}#coverage{min-width:0}#coverage td{white-space:normal;text-align:left;vertical-align:top}#coverage .pnote{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}.cov summary{cursor:pointer;font-weight:600;margin-top:8px}
+.taxnotes{margin-top:10px;font-size:13px;color:var(--muted)}.taxnotes summary{cursor:pointer;color:var(--ink)}.taxnotes ul{margin:8px 0 0;padding-left:18px;display:grid;gap:4px;max-width:80ch}#stores2 td:first-child{min-width:0}@media (max-width:640px){#stores2 th,#stores2 td{padding:8px 5px}#stores2 th{white-space:normal}}#stores2 tr.grp td{font:500 11px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:16px;text-align:left}
 #programs{min-width:0;max-width:760px}#programs td:first-child{min-width:0}
 #programs .pnote{display:block;font-size:12.5px;color:var(--muted);margin-top:2px;white-space:normal;max-width:58ch}
 #programs tr.subrow td:first-child{padding-left:22px}
@@ -246,6 +248,14 @@ label.chk{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--ink
         <p class="note">Public data cannot match these to local sales: most medicine spending is paid through insurance at the pharmacy, and admissions are dominated by visitors. Vehicle purchases are left out entirely as a category no neighborhood captures.</p>
       </section>
 
+      <section class="card sect" id="taxSect">
+        <h2>Sales tax on leaked spending</h2>
+        <p class="headline small" id="taxLead"></p>
+        <div class="tablewrap"><table id="taxTbl"></table></div>
+        <p class="note">Each category's rate is the combined state and local sales-tax rate for the kinds of things it covers, averaged over the selected tracts by residents' spending: groceries are exempt or taxed at a lower rate in many states, gas is usually taxed by excise instead, and salon services and repair labor are taxed in some states and not others. Projected leakage is in survey dollars, which run below actual spending, so the tax figures lean low. Local restaurant and meals taxes, excise taxes and caps on single purchases are not included.</p>
+        <details class="taxnotes" id="taxNotesBox"><summary id="taxNotesSum">Notes on this state's rates</summary><ul id="taxNotes"></ul></details>
+      </section>
+
       <section class="card sect" id="storesSect">
         <h2>Stores here</h2>
         <p class="sub">Stores counted inside the selected tracts, set against how common each kind is across the US per resident. Food stores come from USDA's list of every store that takes SNAP. The rest come from Overture Maps, an open listing of places that runs high for some kinds (salons, bars and home furnishings especially), so read those as indications, not a census.</p>
@@ -309,12 +319,15 @@ label.chk{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--ink
           <p>Across the US, store sales run 0.9 to 3.5 times modeled resident spending, depending on the category. Most run above it, because households under-report spending in the survey and stores also sell to businesses, commuters and visitors. Pets, toys and books and home furnishings run near or below it, because much of that spending goes online or to store types left out here. The retention rate divides local sales by resident demand times that national ratio, separately for each estimate, so 1.0 means an area sells what the national pattern predicts for its residents. Projected leakage is resident demand times (1 − retention rate): residents' spending, in survey dollars, that local stores would keep at the national norm but do not. Because the survey under-reports some spending, it leans conservative. Store counts instead use the gap in store-sales terms (the predicted sales minus local sales), divided by a benchmark store's sales in that category.</p>
           <h4>Check against the South Shore baseline</h4>
           <p>For Chicago's South Shore (the City's 15 tracts), this page finds 25,043 households (CMAP's figure is 26,470) and $330M of resident demand in the five categories the hand-built South Shore baseline measured (the baseline has $352M from the same survey items; the difference comes from the household count, the baseline's assumption for top-bracket income, and its single car-ownership adjustment for the whole area where this page adjusts tract by tract). The baseline compared local sales with demand directly, found local sales at 63%–75% of demand and a gap of $88M–$129M. This page measures 12 categories against the national norm and splits store sales by what each kind of store sells, so its figures are larger and not directly comparable: a net projected leakage of $232M–$263M, with retention rates of 0.50–0.57 for groceries, 0.05–0.12 for full-service dining, 0.22–0.45 for quick-service food and 0.12–0.14 for home furnishings. The two agree on where the biggest gaps are: restaurants and everyday goods (here groceries, household supplies, and pets, toys and books). Home furnishings, which the baseline could not measure, shows almost no local sales.</p>
-          <h4>Check against Illinois sales-tax records</h4>
-          <p>Illinois publishes taxable sales by kind of business for every municipality. For restaurants and bars in 398 Illinois cities and towns (calendar 2024), the estimates here track the reported taxable sales closely: a correlation of 0.85 on a log scale and a median ratio of 1.05, and Chicago's $8.8B–$10.0B against $9.5B reported. For store goods the estimates come to a median of 0.60 of taxable sales, as expected, because the taxable figures also include goods outside the twelve categories here (electronics, sporting goods, jewelry, prescriptions and more). The largest misses are small towns where tract lines cut through the commercial district, and places like Rosemont whose sales come mostly from hotels and convention business.</p>
+          <h4>Check against states' sales-tax records</h4>
+          <p id="checkSummary">Many states publish taxable sales by city or county and by kind of business. Where they do, the estimates here are compared with them.</p>
+          <p>Restaurants and bars are the cleanest comparison, since every state taxes restaurant meals. Store goods compare less directly: taxable sales leave out groceries in most states and include goods outside the twelve categories here (electronics, sporting goods, jewelry and more), so the estimates usually come to less than taxable sales there, and the correlation is the test. The largest misses are small towns where tract lines cut through the commercial district, warehouse towns, and places whose sales come mostly from hotels and conventions, like Rosemont, Illinois.</p>
+          <details class="cov"><summary>State by state: sales-tax rates and checks</summary><div class="tablewrap"><table id="coverage"></table></div></details>
           <h4>Jobs, stores and programs</h4>
           <ul>
             <li><strong>Jobs located here</strong> come from the same LEHD LODES files, by workplace and all 20 industry sectors. <strong>Jobs held by residents</strong> come from LODES residence files, wherever those jobs are. Both count jobs, not people, so their difference is net commuting. Self-employed people are not in either.</li>
             <li><strong>Stores here:</strong> food stores are USDA's list of every store authorized to take SNAP (downloaded October 2026). Other kinds are places listed in Overture Maps (October 2026 release, places with a confidence score of at least 0.9 and not marked closed), an open dataset compiled from several map sources; it lists more salons, bars and home furnishings stores than Census business counts, so treat those rows as indications. National rates per 10,000 residents use the same sources.</li>
+            <li><strong>Sales tax on leaked spending</strong> applies each state's combined state and local sales-tax rates to projected leakage, category by category: the rate where the selected tracts are (the city's when at least half a tract is in it, otherwise the town's or the county's), and only on what each state taxes. Groceries, gas, salon services and repair labor are exempt or taxed differently in many states; personal care, apparel and auto are split between goods and services by the services' national share of sales. Rates come from each state's revenue department (or the Streamlined Sales Tax files its members publish), as of October 2026. Local restaurant taxes are included where a state publishes them (Massachusetts, Mississippi, Montana, and meals taxes in DC, Connecticut, Maine, New Hampshire, Rhode Island and Vermont); other local meals taxes, excise taxes and caps on single purchases are not. Gaps for each state are listed with the figures and in the table below.</li>
             <li><strong>Programs and designations</strong> come from the agencies' tract lists: Treasury's 2018 Opportunity Zones and its September 2026 list of tracts eligible for 2027 zones; the CDFI Fund's New Markets Tax Credit and CDFI Investment Area eligibility (2016–2020 ACS); and USDA's food access maps (2019 supermarket access; 2025 access to any SNAP store). Lists drawn on 2010 tracts are carried to a 2020 tract when at least half its land lies in listed 2010 tracts. "Severely distressed" here applies the three main NMTC tests only; a tract can also qualify in other ways.</li>
           </ul>
           <h4>Neighborhoods and other areas</h4>
@@ -953,6 +966,93 @@ function storesNote(ids) {
     `Rates use the ${fmtN(pop)} residents; places where many people work or shop (a downtown, a mall) will show high rates because their stores serve visitors too.`;
 }
 
+// ---------- sales tax on leaked spending ----------
+// ST.tax (build_site_data.py): per category [state rate %, share of the local rate that applies, fixed local rate %],
+// plus notes and gaps. Each tract may carry its local rates (percent) from the state's rate tables: x general,
+// xf groceries (where the state's file gives a separate local food rate), xm local restaurant-meals tax, xh the upper
+// end of the local rate where it is uncertain (Texas transit and special districts).
+// A category's rate for a selection is averaged over its tracts, weighted by residents' spending there.
+const GROC = 0;                       // SUP index of groceries
+function tractCatLocal(T, t, i, hi) {
+  const [, fl, fx] = T.cats[SUP[i]];
+  const x = hi && t.xh != null ? t.xh : t.x;
+  let v = (i === GROC && t.xf != null) ? t.xf : fl * x + fx;
+  if ((SUP[i] === 'fsr' || SUP[i] === 'qsr') && t.xm) v += t.xm;
+  return v;
+}
+function taxRates(ids) {
+  const T = ST.tax; if (!T) return null;
+  const w = new Array(NS).fill(0), wl = new Array(NS).fill(0), wh = new Array(NS).fill(0);
+  let withRate = 0, n = 0;
+  for (const g of ids) {
+    const t = ST.tracts[g]; if (!t) continue; n++;
+    if (t.x == null) continue;
+    withRate++;
+    for (let i = 0; i < NS; i++) { w[i] += t.d[i]; wl[i] += t.d[i] * tractCatLocal(T, t, i, false); wh[i] += t.d[i] * tractCatLocal(T, t, i, true); }
+  }
+  const rate = SUP.map((c, i) => ({c, state: T.cats[c][0], local: w[i] > 0 ? wl[i] / w[i] : 0, localHi: w[i] > 0 ? wh[i] / w[i] : 0}));
+  return {rate, withRate, n};
+}
+function taxOf(r) {
+  const R = taxRates(sel); if (!R) return null;
+  const rows = r.cats.map((x, i) => {
+    const q = R.rate[i], lo = Math.min(x.gL, x.gZ), hi = Math.max(x.gL, x.gZ);
+    return {c: x.c, q, lo, hi, tLo: Math.max(0, lo) * (q.state + q.local) / 100, tHi: Math.max(0, hi) * (q.state + q.localHi) / 100,
+            sLo: Math.max(0, lo) * q.state / 100, sHi: Math.max(0, hi) * q.state / 100};
+  });
+  const sum = k => rows.reduce((a, x) => a + x[k], 0);
+  return {R, rows, tLo: sum('tLo'), tHi: sum('tHi'), sLo: sum('sLo'), sHi: sum('sHi')};
+}
+const pctOne = v => v <= 0.0005 ? '' : parseFloat(v.toFixed(2)) + '%';
+const pctTxt = (a, b) => { const A = pctOne(a), B = pctOne(b); return !B ? 'not taxed' : A === B || !A ? B : `${A}–${B}`; };
+// "about $1.2M – $1.5M", or "up to $754K" when the low estimate finds no leakage
+const amt = (lo, hi, strong) => { const v = lo <= 0.5 ? `up to ${fmtUSD(hi)}` : `about ${rangeUSD(lo, hi)}`; return strong ? `<strong>${v}</strong>` : v; };
+function split(X) {
+  const lLo = X.tLo - X.sLo, lHi = X.tHi - X.sHi;
+  if (lHi < 0.5) return ', all of it to the state';
+  if (X.sHi < 0.5) return ', all of it to local governments';
+  return `: ${amt(X.sLo, X.sHi).replace(/^about /, '')} to the state and ${amt(lLo, lHi).replace(/^about /, '')} to counties, cities and local districts`;
+}
+function taxSection(r) {
+  const T = ST.tax, X = taxOf(r);
+  if (!T || !X) return {lead: `Sales-tax rates for ${esc(ST.name)} are not available yet.`, table: '', notes: []};
+  const part = new Set(T.partial || []);
+  const anyLeak = X.tHi > 0;
+  const loc = X.R.withRate === 0 ? ' Local rates for these tracts are not available, so only the state\'s share is counted.'
+    : X.R.withRate < X.R.n ? ` ${X.R.n - X.R.withRate} of the ${X.R.n} tracts have no local rate on file, so they count the state's share only.` : '';
+  const none = X.rows.every(x => x.q.state + x.q.localHi <= 0.0005);
+  const lead = none ? `There is no sales tax here, so leakage costs no sales-tax revenue.${loc}` : !anyLeak
+    ? `Local stores sell at least what the national pattern predicts in every taxed category here, so no sales tax is lost to leakage.${loc}`
+    : `At ${esc(ST.name)}'s tax rates, the projected leakage would have paid ${amt(X.tLo, X.tHi, true)} a year in ${T.general ? 'sales tax' : X.sHi > 0.5 ? 'meals tax' : 'local sales tax'}${split(X)}.${loc}`;
+  const table = `<thead><tr><th>Category</th><th>Tax rate here</th><th>Projected leakage</th><th>Sales tax on it</th></tr></thead><tbody>` +
+    X.rows.map(x => `<tr><td>${LABEL[x.c]}${part.has(x.c) ? ' <span class="tag">partly</span>' : ''}</td><td class="num">${pctTxt(x.q.state + x.q.local, x.q.state + x.q.localHi)}</td><td class="num">${rangeUSD(x.lo, x.hi)}</td><td class="num">${x.hi > 0 && x.q.state + x.q.localHi > 0.0005 ? rangeUSD(x.tLo, x.tHi) : '—'}</td></tr>`).join('') +
+    `<tr class="tot"><td>Categories where spending leaks</td><td></td><td></td><td class="num">${X.tHi > 0 ? rangeUSD(X.tLo, X.tHi) : '—'}</td></tr></tbody>`;
+  const notes = [...(T.gaps || []), ...(T.notes || [])].filter((v, i, a) => v && a.indexOf(v) === i);
+  return {lead, table, notes};
+}
+
+// State-by-state coverage table and the summary of the checks against state sales records (IDX.coverage)
+const RATE_STATUS = {'current': 'Current', 'state rate only': 'State rate only; local rates missing', 'older source': 'Newest official list is older (2025)',
+  'no sales tax': 'No sales tax', 'meals tax only': 'No sales tax; meals tax only', 'missing': 'Not available'};
+function renderCoverage() {
+  const C = IDX.coverage; if (!C) return;
+  const name = Object.fromEntries(IDX.states.map(s => [s.usps, s.name]));
+  const chk = c => !c ? '—' : c.status === 'checked'
+    ? `Checked (${c.year}${c.year < 2024 ? ', restated to 2024 dollars' : ''}, by ${c.geography}): restaurants ${c.restaurants.areas} areas, correlation ${c.restaurants.corr.toFixed(2)}, median ratio ${c.restaurants.median.toFixed(2)}`
+    : c.status === 'no sales tax' ? 'No sales tax' : c.status === 'not usable' ? 'Published, but not in a form that can be read automatically' : 'No local sales by kind of business published';
+  $('coverage').innerHTML = '<thead><tr><th>State</th><th>Sales-tax rates</th><th>Check against state sales records</th></tr></thead><tbody>' +
+    Object.keys(C).sort((a, b) => (name[a] || a).localeCompare(name[b] || b)).map(st => {
+      const c = C[st];
+      return `<tr><td>${esc(name[st] || st)}</td><td>${esc(RATE_STATUS[c.rates] || c.rates)}${c.rate_gaps ? `<span class="pnote">${c.rate_gaps} note${c.rate_gaps === 1 ? '' : 's'}, listed with the state's figures</span>` : ''}</td><td>${esc(chk(c.check))}${c.check && c.check.note ? `<span class="pnote">${esc(c.check.note)}</span>` : ''}</td></tr>`;
+    }).join('') + '</tbody>';
+  const ch = Object.values(C).filter(c => c.check && c.check.status === 'checked' && c.check.restaurants);
+  if (ch.length) {
+    const corr = ch.map(c => c.check.restaurants.corr), med = ch.map(c => c.check.restaurants.median).sort((a, b) => a - b);
+    const mid = med[Math.floor(med.length / 2)];
+    $('checkSummary').textContent = `${ch.length} states publish local sales by kind of business in a form that can be read, and the estimates here are compared with each. For restaurants and bars, the correlation with the state's figures runs from ${Math.min(...corr).toFixed(2)} to ${Math.max(...corr).toFixed(2)} on a log scale, and the typical state's median ratio of estimate to reported sales is ${mid.toFixed(2)}. Ratios run lower in states whose restaurant category also counts grocery stores or hotels (Georgia, North Carolina, Mississippi).`;
+  }
+}
+
 // ---------- render ----------
 function fitText(m) {
   if (!m || m.src === 'county') return '';
@@ -1008,7 +1108,7 @@ function render() {
   Suggest.renderReview(selMeta);
   if (!n) {
     $('headline').textContent = 'Search for a place or click tracts on the map to begin.';
-    $('warn').hidden = true; $('tbl').innerHTML = ''; $('stores').innerHTML=''; $('donly').innerHTML=''; $('jobs').innerHTML=''; $('programs').innerHTML=''; $('stores2').innerHTML=''; $('storesNote').textContent=''; d3.select('#chart').selectAll('*').remove();
+    $('warn').hidden = true; $('tbl').innerHTML = ''; $('stores').innerHTML=''; $('donly').innerHTML=''; $('jobs').innerHTML=''; $('programs').innerHTML=''; $('stores2').innerHTML=''; $('storesNote').textContent=''; $('taxLead').textContent=''; $('taxTbl').innerHTML=''; $('taxNotes').innerHTML=''; d3.select('#chart').selectAll('*').remove();
     if (hashReady) syncHash();
     return;
   }
@@ -1030,6 +1130,8 @@ function render() {
   $('jobs').innerHTML = jobsTable(r);
   $('programs').innerHTML = programsTable(sel);
   $('stores2').innerHTML = storesTable(sel);
+  { const tx = taxSection(r); $('taxLead').innerHTML = tx.lead; $('taxTbl').innerHTML = tx.table; $('taxNotes').innerHTML = tx.notes.map(n => `<li>${esc(n)}</li>`).join('');
+    $('taxNotesBox').hidden = !tx.notes.length; $('taxNotesSum').textContent = `Notes on ${ST.name}'s rates and what it taxes`; }
   $('storesNote').textContent = storesNote(sel);
   $('commute').innerHTML = commuteText(r);
   if (hashReady) syncHash();
@@ -1304,6 +1406,7 @@ function reportHTML(r) {
 <h2>Spending and sales</h2><table><thead><tr><th>Category</th><th>Resident demand</th><th>Local sales</th><th>Retention rate</th><th>Projected leakage</th></tr></thead><tbody>${r.cats.map(tr).join('')}<tr class="t"><td>All ${NS} measured categories (net)</td><td>${fmtUSD(T.D)}</td><td>${rangeUSD(T.sL,T.sZ)}</td><td>${range(T.pfL,T.pfZ,fmtPF)}</td><td>${rangeUSD(T.gL,T.gZ)}</td></tr></tbody></table>
 <h2>What the sales gap could support</h2><table>${storeTable(r)}</table>
 <h2>Demand-only categories</h2><table><thead><tr><th>Category</th><th>Resident demand</th></tr></thead><tbody>${DEM.slice(NS).map((c,i)=>`<tr><td>${LABEL[c]}</td><td>${fmtUSD(r.d[NS+i])}</td></tr>`).join('')}</tbody></table>
+<h2>Sales tax on leaked spending</h2>${(tx => `<p>${tx.lead.replace(/<(\/?)strong>/g, '<$1b>')}</p><table>${tx.table.replace(/ class="num"/g, '').replace(/<span class="tag">partly<\/span>/g, '(partly taxed)')}</table><p class="s">Combined state and local rates for what each category covers, averaged over the tracts by residents' spending. Survey dollars run below actual spending, so these lean low. Local meals taxes, excise taxes and caps on single purchases are not included.${tx.notes.length ? ' Notes: ' + esc(tx.notes.join(' ')) : ''}</p>`)(taxSection(r))}
 <h2>Stores here</h2><table>${storesTable(sel).replace(/ class="num"/g, '')}</table>
 <p class="s">${esc(storesNote(sel))} Food stores: USDA list of stores that take SNAP. Other places: Overture Maps, which runs high for some kinds; read those as indications.</p>
 <h2>Programs and designations</h2><table>${programsTable(sel).replace(/<span class="pnote">/g, '<br><span class="m" style="font-size:12.5px">')}</table>
@@ -1345,6 +1448,7 @@ async function main() {
   Feedback.init();
   initMap();
   await loadIndex();
+  renderCoverage();
   let opened = false;
   if (location.hash) {
     try { opened = await openFromHash(); } catch (e) { opened = false; }
