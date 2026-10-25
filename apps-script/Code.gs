@@ -22,7 +22,7 @@
  *   SHEET_ID    the sheet this script writes to
  *   NOTIFY      who gets the emails (comma-separated; defaults to the script owner)
  *   SECRET      signs the review links (changing it invalidates links already sent)
- *   accepted:<date>, emails:<date>   per-day counters behind the daily limits (kept two days)
+ *   accepted:<date>, feedback:<date>, emails:<date>   per-day counters behind the daily limits (kept two days)
  */
 
 var SITE = 'https://mjkelley00-mjk.github.io/neighborhood-spending-gaps/';
@@ -284,7 +284,7 @@ function feedback_(b) {
   var email = String(b.email || '').trim().slice(0, 120);
   if (email && !/^[^\s@<>,;"']+@[^\s@<>,;"']+\.[a-z]{2,}$/i.test(email)) { email = ''; }
   var link = String(b.link || '');
-  link = link.indexOf(SITE) === 0 && link.length <= 1500 ? link : '';
+  link = link.indexOf(SITE) === 0 && link.length <= 40000 ? link : '';     // 2,500 tracts is about 30,000 characters
   var lock = LockService.getScriptLock();
   if (!lock.tryLock(20000)) { return json_({error: 'busy'}); }
   try {
