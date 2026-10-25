@@ -10,7 +10,7 @@ Live page: https://mjkelley00-mjk.github.io/neighborhood-spending-gaps/
 index.html            the page (one file: styles, map, figures, downloads, suggestions)
 data/index.json       states, national calibration, store benchmarks, source names
 data/st/<fips>.json   one file per state: tracts, places, ZIP codes, named areas, counties, map shapes
-apps-script/Code.gs   the Google Apps Script behind suggested areas (a copy; the live one is in the sheet)
+apps-script/Code.gs   the Google Apps Script behind suggested areas and messages (a copy; the live one is in the sheet)
 ```
 
 The page's "Method and limits" section explains how the figures are made and lists every source.
@@ -30,6 +30,10 @@ Anyone can select tracts and suggest them as a named area. The page sends the su
 3. serves approved areas to the page, which adds them to everyone's search labeled "Approved suggestion".
 
 The status in the sheet decides everything: change a row to `approved`, `declined` or `removed` by hand at any time. The page keeps a visitor's own suggestions on their device (browser storage) so they can see them before review. It asks nothing about who is suggesting and saves nothing about them.
+
+## Suggestions and corrections
+
+The box near the bottom of the page sends a message (an idea, a figure that looks wrong, something broken) to the same script. It adds a row to the sheet's **Feedback** tab, which the script creates the first time a message arrives, and emails the `NOTIFY` addresses. If the sender typed an email address, the email's Reply-To is set to it, so replying answers them directly; that address is the only thing kept about them. If they ticked the box, the message links to the area they were looking at. The tab's Status column starts at `new`; use it however you like. Messages count toward the same 40-emails-a-day limit as suggested areas, and at most 100 messages are accepted a day.
 
 The script's address is the `SUGGEST_API` constant in `index.html`. If you redeploy the script as a **new** deployment, update that constant; if you edit the existing deployment (Deploy → Manage deployments → edit → New version), the address stays the same.
 

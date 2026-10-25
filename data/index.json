@@ -5,7 +5,7 @@
    "name": "Alabama",
    "usps": "AL",
    "tracts": 1437,
-   "bytes": 804785,
+   "bytes": 877240,
    "counties": 67
   },
   {
@@ -13,7 +13,7 @@
    "name": "Alaska",
    "usps": "AK",
    "tracts": 177,
-   "bytes": 267605,
+   "bytes": 276729,
    "counties": 30
   },
   {
@@ -21,7 +21,7 @@
    "name": "Arizona",
    "usps": "AZ",
    "tracts": 1765,
-   "bytes": 897548,
+   "bytes": 985291,
    "counties": 15
   },
   {
@@ -29,7 +29,7 @@
    "name": "Arkansas",
    "usps": "AR",
    "tracts": 823,
-   "bytes": 477204,
+   "bytes": 519516,
    "counties": 75
   },
   {
@@ -37,7 +37,7 @@
    "name": "California",
    "usps": "CA",
    "tracts": 9129,
-   "bytes": 4711332,
+   "bytes": 5178854,
    "counties": 58
   },
   {
@@ -45,7 +45,7 @@
    "name": "Colorado",
    "usps": "CO",
    "tracts": 1447,
-   "bytes": 768090,
+   "bytes": 844087,
    "counties": 64
   },
   {
@@ -53,7 +53,7 @@
    "name": "Connecticut",
    "usps": "CT",
    "tracts": 884,
-   "bytes": 458017,
+   "bytes": 504909,
    "counties": 9
   },
   {
@@ -61,7 +61,7 @@
    "name": "Delaware",
    "usps": "DE",
    "tracts": 262,
-   "bytes": 133699,
+   "bytes": 147199,
    "counties": 3
   },
   {
@@ -69,7 +69,7 @@
    "name": "District of Columbia",
    "usps": "DC",
    "tracts": 206,
-   "bytes": 121898,
+   "bytes": 132437,
    "counties": 1
   },
   {
@@ -77,7 +77,7 @@
    "name": "Florida",
    "usps": "FL",
    "tracts": 5160,
-   "bytes": 2605322,
+   "bytes": 2868717,
    "counties": 67
   },
   {
@@ -85,7 +85,7 @@
    "name": "Georgia",
    "usps": "GA",
    "tracts": 2796,
-   "bytes": 1472377,
+   "bytes": 1614104,
    "counties": 159
   },
   {
@@ -93,7 +93,7 @@
    "name": "Hawaii",
    "usps": "HI",
    "tracts": 461,
-   "bytes": 222710,
+   "bytes": 244695,
    "counties": 5
   },
   {
@@ -101,7 +101,7 @@
    "name": "Idaho",
    "usps": "ID",
    "tracts": 456,
-   "bytes": 258891,
+   "bytes": 283510,
    "counties": 44
   },
   {
@@ -109,7 +109,7 @@
    "name": "Illinois",
    "usps": "IL",
    "tracts": 3265,
-   "bytes": 1677060,
+   "bytes": 1842732,
    "counties": 102
   },
   {
@@ -117,7 +117,7 @@
    "name": "Indiana",
    "usps": "IN",
    "tracts": 1696,
-   "bytes": 864772,
+   "bytes": 953079,
    "counties": 92
   },
   {
@@ -125,7 +125,7 @@
    "name": "Iowa",
    "usps": "IA",
    "tracts": 896,
-   "bytes": 478222,
+   "bytes": 526117,
    "counties": 99
   },
   {
@@ -133,7 +133,7 @@
    "name": "Kansas",
    "usps": "KS",
    "tracts": 829,
-   "bytes": 425343,
+   "bytes": 468805,
    "counties": 105
   },
   {
@@ -141,7 +141,7 @@
    "name": "Kentucky",
    "usps": "KY",
    "tracts": 1306,
-   "bytes": 729086,
+   "bytes": 794604,
    "counties": 120
   },
   {
@@ -149,7 +149,7 @@
    "name": "Louisiana",
    "usps": "LA",
    "tracts": 1388,
-   "bytes": 743912,
+   "bytes": 813376,
    "counties": 64
   },
   {
@@ -157,7 +157,7 @@
    "name": "Maine",
    "usps": "ME",
    "tracts": 407,
-   "bytes": 235280,
+   "bytes": 256709,
    "counties": 16
   },
   {
@@ -165,7 +165,7 @@
    "name": "Maryland",
    "usps": "MD",
    "tracts": 1475,
-   "bytes": 785932,
+   "bytes": 860762,
    "counties": 24
   },
   {
@@ -173,7 +173,7 @@
    "name": "Massachusetts",
    "usps": "MA",
    "tracts": 1620,
-   "bytes": 854708,
+   "bytes": 940975,
    "counties": 14
   },
   {
@@ -181,7 +181,7 @@
    "name": "Michigan",
    "usps": "MI",
    "tracts": 3017,
-   "bytes": 1457044,
+   "bytes": 1605321,
    "counties": 83
   },
   {
@@ -189,7 +189,7 @@
    "name": "Minnesota",
    "usps": "MN",
    "tracts": 1505,
-   "bytes": 790907,
+   "bytes": 869774,
    "counties": 87
   },
   {
@@ -197,7 +197,7 @@
    "name": "Mississippi",
    "usps": "MS",
    "tracts": 878,
-   "bytes": 477538,
+   "bytes": 521242,
    "counties": 82
   },
   {
@@ -205,7 +205,7 @@
    "name": "Missouri",
    "usps": "MO",
    "tracts": 1654,
-   "bytes": 887779,
+   "bytes": 973864,
    "counties": 115
   },
   {
@@ -213,7 +213,7 @@
    "name": "Montana",
    "usps": "MT",
    "tracts": 319,
-   "bytes": 216424,
+   "bytes": 233647,
    "counties": 56
   },
   {
@@ -221,7 +221,7 @@
    "name": "Nebraska",
    "usps": "NE",
    "tracts": 553,
-   "bytes": 291125,
+   "bytes": 320570,
    "counties": 93
   },
   {
@@ -229,7 +229,7 @@
    "name": "Nevada",
    "usps": "NV",
    "tracts": 779,
-   "bytes": 386504,
+   "bytes": 425268,
    "counties": 17
   },
   {
@@ -237,7 +237,7 @@
    "name": "New Hampshire",
    "usps": "NH",
    "tracts": 350,
-   "bytes": 189056,
+   "bytes": 208037,
    "counties": 10
   },
   {
@@ -245,7 +245,7 @@
    "name": "New Jersey",
    "usps": "NJ",
    "tracts": 2181,
-   "bytes": 1122989,
+   "bytes": 1237344,
    "counties": 21
   },
   {
@@ -253,7 +253,7 @@
    "name": "New Mexico",
    "usps": "NM",
    "tracts": 612,
-   "bytes": 329804,
+   "bytes": 360387,
    "counties": 33
   },
   {
@@ -261,7 +261,7 @@
    "name": "New York",
    "usps": "NY",
    "tracts": 5411,
-   "bytes": 2708508,
+   "bytes": 2980096,
    "counties": 62
   },
   {
@@ -269,7 +269,7 @@
    "name": "North Carolina",
    "usps": "NC",
    "tracts": 2672,
-   "bytes": 1440583,
+   "bytes": 1578810,
    "counties": 100
   },
   {
@@ -277,7 +277,7 @@
    "name": "North Dakota",
    "usps": "ND",
    "tracts": 228,
-   "bytes": 135494,
+   "bytes": 147954,
    "counties": 53
   },
   {
@@ -285,7 +285,7 @@
    "name": "Ohio",
    "usps": "OH",
    "tracts": 3168,
-   "bytes": 1603026,
+   "bytes": 1765735,
    "counties": 88
   },
   {
@@ -293,7 +293,7 @@
    "name": "Oklahoma",
    "usps": "OK",
    "tracts": 1205,
-   "bytes": 618291,
+   "bytes": 679607,
    "counties": 77
   },
   {
@@ -301,7 +301,7 @@
    "name": "Oregon",
    "usps": "OR",
    "tracts": 1001,
-   "bytes": 569075,
+   "bytes": 623286,
    "counties": 36
   },
   {
@@ -309,7 +309,7 @@
    "name": "Pennsylvania",
    "usps": "PA",
    "tracts": 3446,
-   "bytes": 1827783,
+   "bytes": 2007596,
    "counties": 67
   },
   {
@@ -317,7 +317,7 @@
    "name": "Rhode Island",
    "usps": "RI",
    "tracts": 250,
-   "bytes": 130268,
+   "bytes": 143634,
    "counties": 5
   },
   {
@@ -325,7 +325,7 @@
    "name": "South Carolina",
    "usps": "SC",
    "tracts": 1323,
-   "bytes": 716573,
+   "bytes": 784413,
    "counties": 46
   },
   {
@@ -333,7 +333,7 @@
    "name": "South Dakota",
    "usps": "SD",
    "tracts": 242,
-   "bytes": 142370,
+   "bytes": 155537,
    "counties": 66
   },
   {
@@ -341,7 +341,7 @@
    "name": "Tennessee",
    "usps": "TN",
    "tracts": 1701,
-   "bytes": 937572,
+   "bytes": 1023840,
    "counties": 95
   },
   {
@@ -349,7 +349,7 @@
    "name": "Texas",
    "usps": "TX",
    "tracts": 6896,
-   "bytes": 3515751,
+   "bytes": 3868546,
    "counties": 254
   },
   {
@@ -357,7 +357,7 @@
    "name": "Utah",
    "usps": "UT",
    "tracts": 716,
-   "bytes": 395576,
+   "bytes": 434547,
    "counties": 29
   },
   {
@@ -365,7 +365,7 @@
    "name": "Vermont",
    "usps": "VT",
    "tracts": 193,
-   "bytes": 107565,
+   "bytes": 117900,
    "counties": 14
   },
   {
@@ -373,7 +373,7 @@
    "name": "Virginia",
    "usps": "VA",
    "tracts": 2198,
-   "bytes": 1162851,
+   "bytes": 1275283,
    "counties": 133
   },
   {
@@ -381,7 +381,7 @@
    "name": "Washington",
    "usps": "WA",
    "tracts": 1784,
-   "bytes": 968956,
+   "bytes": 1061512,
    "counties": 39
   },
   {
@@ -389,7 +389,7 @@
    "name": "West Virginia",
    "usps": "WV",
    "tracts": 546,
-   "bytes": 338985,
+   "bytes": 367038,
    "counties": 55
   },
   {
@@ -397,7 +397,7 @@
    "name": "Wisconsin",
    "usps": "WI",
    "tracts": 1542,
-   "bytes": 804918,
+   "bytes": 886822,
    "counties": 72
   },
   {
@@ -405,7 +405,7 @@
    "name": "Wyoming",
    "usps": "WY",
    "tracts": 160,
-   "bytes": 101267,
+   "bytes": 110109,
    "counties": 23
   }
  ],
