@@ -13,6 +13,9 @@
  *   POST {feedback:1, kind, msg, email, link}   a message from the "Suggestions and corrections" box; it goes to
  *                                the Feedback tab (created on first use) and is emailed, with Reply-To set to
  *                                the sender's address when they gave one
+ *   POST {lead:1, email, role, org, updates, first, kind, area, st, link}   a download: the Leads tab (created on first
+ *                                use) gets a row for every download; the first from a browser is emailed
+ *   POST {usage:1, kind, st, area, tracts}   an anonymous count (kind view or download): one row on the Usage tab
  *
  * Each suggestion is a row on the Suggestions tab. Its Status (pending, approved, declined, removed) is
  * the only thing that decides whether it shows on the site, so changing it in the sheet by hand works too:
@@ -22,7 +25,8 @@
  *   SHEET_ID    the sheet this script writes to
  *   NOTIFY      who gets the emails (comma-separated; defaults to the script owner)
  *   SECRET      signs the review links (changing it invalidates links already sent)
- *   accepted:<date>, feedback:<date>, emails:<date>   per-day counters behind the daily limits (kept two days)
+ *   accepted:<date>, feedback:<date>, emails:<date>, leads:<date>, usage:<date>   per-day counters behind the daily
+ *                                limits (kept two days)
  */
 
 var SITE = 'https://mjkelley00-mjk.github.io/neighborhood-spending-gaps/';
@@ -46,6 +50,13 @@ var FB_TAB = 'Feedback';
 var FB_HEAD = ['Received', 'About', 'Message', 'Reply to', 'Area they were looking at', 'Status'];
 var FB_KINDS = {idea: 'An idea for the site', data: 'A number looks wrong', bug: "Something isn't working", other: 'Something else'};
 var FB_DAILY_MAX = 100;  // messages accepted per day, all visitors together
+var LEAD_TAB = 'Leads';
+var LEAD_HEAD = ['Received', 'Email', 'Role', 'Organization', 'Wants updates', 'Downloaded', 'Area', 'State', 'Link', 'First from this browser'];
+var LEAD_DAILY_MAX = 1000;
+var USE_TAB = 'Usage';
+var USE_HEAD = ['Date', 'Kind', 'State', 'Area', 'Tracts'];
+var USE_DAILY_MAX = 5000;      // counted rows per day; each one also uses two of the daily property reads and writes
+var DL_KINDS = {report: 'Report (HTML)', summary: 'Category summary (CSV)', tracts: 'Selected tracts (CSV)', state: 'All tracts in state (CSV)'};
 
 // ---------------------------------------------------------------- setup, run once from the editor
 function setup() {
@@ -168,6 +179,8 @@ function doPost(e) {
   try { b = JSON.parse((e && e.postData && e.postData.contents) || '{}'); } catch (err) { return json_({error: 'bad_request'}); }
   if (b.review) { return review_(b); }
   if (b.feedback) { return feedback_(b); }
+  if (b.lead) { return lead_(b); }
+  if (b.usage) { return usage_(b); }
   if (b.website) { return json_({ok: true, id: 'g000000000000'}); }       // the form's hidden trap field
   var name = clean_(b.name, 80), city = clean_(b.city, 60), note = clean_(b.note, 300);
   var st = String(b.st || '');
@@ -323,6 +336,69 @@ function notifyFeedback_(f) {
           (f.email ? '\n\nReply to: ' + f.email : '') + '\n\nThe sheet: ' + f.url};
   if (f.email) { mail.replyTo = f.email; }
   MailApp.sendEmail(mail);
+}
+
+// ---------- POST: downloads (Leads) and anonymous counts (Usage)
+function tab_(name, head, widths) {
+  var id = PropertiesService.getScriptProperties().getProperty('SHEET_ID');
+  var ss = id ? SpreadsheetApp.openById(id) : SpreadsheetApp.getActiveSpreadsheet();
+  var sh = ss.getSheetByName(name);
+  if (!sh) {
+    sh = ss.insertSheet(name);
+    sh.getRange(1, 1, 1, head.length).setValues([head]).setFontWeight('bold');
+    sh.setFrozenRows(1);
+    sh.getRange(2, 1, sh.getMaxRows() - 1, head.length).setNumberFormat('@');   // plain text: no dates or formulas
+    (widths || []).forEach(function (w, i) { sh.setColumnWidth(i + 1, w); });
+  }
+  return sh;
+}
+function addRow_(sh, values) {
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(20000)) { return false; }
+  try {
+    var row = sh.getLastRow() + 1;
+    if (row > sh.getMaxRows()) { sh.insertRowsAfter(sh.getMaxRows(), 500); sh.getRange(row, 1, 501, values.length).setNumberFormat('@'); }
+    sh.getRange(row, 1, 1, values.length).setNumberFormat('@').setValues([values]);
+    SpreadsheetApp.flush();
+    return true;
+  } finally {
+    lock.releaseLock();
+  }
+}
+function lead_(b) {
+  var email = String(b.email || '').trim().slice(0, 120);
+  if (!/^[^\s@<>,;"']+@[^\s@<>,;"']+\.[a-z]{2,}$/i.test(email)) { return json_({error: 'bad_request'}); }
+  if (bump_('leads') > LEAD_DAILY_MAX) { return json_({error: 'daily_limit'}); }
+  var kind = DL_KINDS[b.kind] ? DL_KINDS[b.kind] : 'Other';
+  var link = String(b.link || '');
+  link = link.indexOf(SITE) === 0 && link.length <= 40000 ? link : '';
+  var st = /^[A-Z]{2}$/.test(String(b.st || '')) ? String(b.st) : '';
+  var f = {at: Utilities.formatDate(new Date(), TZ, 'yyyy-MM-dd HH:mm'), email: clean_(email, 120), role: clean_(b.role, 60),
+           org: clean_(b.org, 120), updates: b.updates ? 'yes' : 'no', kind: kind, area: clean_(b.area, 80), st: st, link: link,
+           first: b.first ? 'yes' : ''};
+  var sh = tab_(LEAD_TAB, LEAD_HEAD, [130, 220, 200, 200, 100, 170, 200, 60, 260, 100]);
+  if (!addRow_(sh, [f.at, f.email, f.role, f.org, f.updates, f.kind, f.area, f.st, f.link, f.first])) { return json_({error: 'busy'}); }
+  if (b.first) { notifyLead_(f, sh.getParent().getUrl() + '#gid=' + sh.getSheetId()); }
+  return json_({ok: true});
+}
+function notifyLead_(f, url) {
+  var to = PropertiesService.getScriptProperties().getProperty('NOTIFY');
+  if (!to) { return; }
+  var n = bump_('emails');
+  if (n > EMAIL_MAX) { return; }                    // the Leads tab has every one; no "more are waiting" email for these
+  var who = bare_(f.email) + (bare_(f.role) ? ' (' + bare_(f.role) + (bare_(f.org) ? ', ' + bare_(f.org) : '') + ')' : bare_(f.org) ? ' (' + bare_(f.org) + ')' : '');
+  MailApp.sendEmail({to: to, name: 'Neighborhood Spending Gaps', subject: 'New download: ' + who, replyTo: bare_(f.email),
+    body: who + ' downloaded ' + f.kind + (bare_(f.area) ? ' for ' + bare_(f.area) + (f.st ? ', ' + f.st : '') : '') + '.\n' +
+          'Wants updates: ' + f.updates + (f.link ? '\nThe area: ' + f.link : '') + '\n\nEvery download is on the Leads tab: ' + url});
+}
+function usage_(b) {
+  if (bump_('usage') > USE_DAILY_MAX) { return json_({error: 'daily_limit'}); }
+  var kind = b.kind === 'download' ? 'download' : 'view';
+  var st = /^[A-Z]{2}$/.test(String(b.st || '')) ? String(b.st) : '';
+  var n = Math.max(0, Math.min(100000, parseInt(b.tracts, 10) || 0));
+  var sh = tab_(USE_TAB, USE_HEAD, [100, 90, 60, 260, 70]);
+  if (!addRow_(sh, [today_(), kind, st, clean_(b.area, 80), String(n)])) { return json_({error: 'busy'}); }
+  return json_({ok: true});
 }
 
 // Clears the cached approved list when the Status column is edited by hand (a simple trigger: it runs on
