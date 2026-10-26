@@ -61,6 +61,7 @@ select:focus,input:focus,button:focus-visible{outline:2px solid var(--accent);ou
 .results button{display:flex;width:100%;justify-content:space-between;gap:12px;text-align:left;border:0;background:none;color:var(--ink);font:14px/1.3 var(--sans);padding:8px 10px;border-radius:7px;cursor:pointer}
 .results button:hover,.results button.on{background:var(--accent-soft)}
 .results .t{font:500 10px/1.6 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+@media (max-width:640px){.results button{flex-direction:column;gap:2px}.results .t{white-space:normal}}
 .results .none{padding:10px;color:var(--muted);font-size:14px}
 .grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:20px;margin-top:20px}
 @media (max-width:980px){.grid{grid-template-columns:1fr}}
@@ -99,11 +100,19 @@ select:focus,input:focus,button:focus-visible{outline:2px solid var(--accent);ou
 .selname{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline}
 .selname input{font:700 22px/1.2 var(--display);border:0;border-bottom:1px dashed var(--line);border-radius:0;padding:2px 0;background:transparent;flex:1 1 240px}
 .sub{color:var(--muted);font-size:14px;margin:4px 0 0}
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:14px;container-type:inline-size}
-@media (max-width:640px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:last-child:nth-child(odd){grid-column:1/-1}}
+.figs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px;container-type:inline-size}
+.fig{border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0;display:flex;flex-direction:column;gap:4px}
+.fig b{display:block;font:600 22px/1.2 var(--mono);letter-spacing:-.02em;text-wrap:balance}
+@supports (font-size:1cqi){.fig b{font-size:min(22px,max(16px,calc(3.7cqi - 4px)))}.fig b.long{font-size:min(22px,max(14px,calc(3.2cqi - 4px)))}}.fig b.leak{color:var(--leak)}.fig b.inflow{color:var(--inflow)}
+.fig span{font-size:12.5px;line-height:1.4;color:var(--muted)}
+.fignote{grid-column:1/-1;margin:0;font-size:12.5px;color:var(--muted)}
+@media (max-width:640px){.figs{grid-template-columns:minmax(0,1fr)}@supports (font-size:1cqi){.fig b.long{font-size:min(22px,max(16px,calc(9.5cqi - 3px)))}}}
+.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin-top:14px;container-type:inline-size}
+.stat{grid-column:span 2}.stat:nth-child(n+4){grid-column:span 3}
+@media (max-width:640px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat,.stat:nth-child(n+4){grid-column:auto}.stat:last-child:nth-child(odd){grid-column:1/-1}}
 .stat{background:var(--bg);border-radius:10px;padding:10px 12px;min-width:0}
 .stat b{display:block;font:600 20px/1.2 var(--mono);letter-spacing:-.02em;white-space:nowrap}
-@supports (font-size:1cqi){.stat b{font-size:min(20px,calc(4.25cqi - 5.3px))}@media (max-width:640px){.stat b{font-size:min(20px,calc(8.5cqi - 4.9px))}}}
+@supports (font-size:1cqi){.stat b{font-size:min(20px,calc(6cqi - 5.7px))}@media (max-width:640px){.stat b{font-size:min(20px,calc(8.5cqi - 4.9px))}}}
 .stat span{font-size:12px;color:var(--muted)}
 .headline{font-size:16px;line-height:1.6;margin:16px 0 0;max-width:70ch}
 .headline strong{font-weight:600}
@@ -134,6 +143,20 @@ tr.tot td{font-weight:600;border-top:1px solid var(--line);border-bottom:0}
 #programs .pnote{display:block;font-size:12.5px;color:var(--muted);margin-top:2px;white-space:normal;max-width:58ch}
 #programs tr.subrow td:first-child{padding-left:22px}
 #jobs{min-width:0;max-width:640px}#jobs td:first-child{min-width:0}#jobs .tag{display:inline-block;margin-left:6px;font:500 10.5px/1.6 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
+#peerTbl,#regionTbl{min-width:0;max-width:860px}#peerTbl td.pw{white-space:nowrap}#peerTbl td.pw.low{color:var(--warn-ink)}#peerTbl td.pw.high{color:var(--accent-ink)}#peerTbl td.pw.low,#peerTbl td.pw.high{font-weight:600}
+#regionTbl th .pnote{display:block;font-weight:400;text-transform:none;letter-spacing:0;font-size:11.5px;color:var(--muted)}#regionTbl .inflow{color:var(--accent-ink)}#regionTbl .sl{display:block;font:500 10.5px/1.3 var(--mono);letter-spacing:.04em;text-transform:uppercase}@media (max-width:640px){#peerTbl th,#peerTbl td,#regionTbl th,#regionTbl td{padding:8px 4px;font-size:12.5px}#peerTbl th,#regionTbl th{white-space:normal}}
+.gate{position:fixed;inset:0;z-index:50;background:color-mix(in srgb,var(--ink) 45%,transparent);display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.gbox{width:min(480px,100%);max-height:100%;overflow:auto;padding:22px}.gbox h2{margin:0 0 6px}.gbox form{display:grid;gap:12px;margin-top:12px}
+.gbox label{display:grid;gap:4px;font-size:14px;font-weight:600}.gbox label.chk{display:flex;gap:8px;align-items:flex-start;font-weight:400}.gbox .opt{font-weight:400;color:var(--muted);font-size:12.5px}
+.gbox input[type=email],.gbox input[type=text],.gbox select{font:inherit;font-weight:400;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);min-width:0}.gbtns{display:flex;gap:10px;flex-wrap:wrap}
+#spendTbl{min-width:0;max-width:760px}@media (min-width:641px){#spendTbl td.vd{white-space:nowrap}}#spendTbl td.vd.crowded{color:var(--warn-ink);font-weight:600}#spendTbl td.vd.room{color:var(--accent-ink);font-weight:600}@media (max-width:640px){#spendTbl th,#spendTbl td{padding:8px 4px;font-size:12.5px}#spendTbl th{white-space:normal}}
+.ctxhead{padding:14px 4px 0}.ctxhead h2{margin:0 0 4px}.ctxhead .sub{margin:0}
+details.ctx > summary{cursor:pointer;padding:16px 48px 16px 20px;list-style:none;display:grid;gap:3px}details.ctx > summary::-webkit-details-marker{display:none}
+details.ctx .ctxt{margin:0;font:700 18px/1.2 var(--display)}details.ctx .ctxb{font-size:13.5px;color:var(--muted)}
+details.ctx > summary::after{content:"+";content:"+" / "";position:absolute;right:20px;top:16px;font:500 20px/1 var(--mono);color:var(--muted)}details.ctx{position:relative}
+details.ctx[open] > summary::after{content:"–";content:"–" / ""}details.ctx > .sect{padding-top:0}
+.linkbtn{background:none;border:0;padding:0;font:inherit;color:var(--accent-ink);text-decoration:underline;cursor:pointer}
+#tbl tr.minor td{color:var(--muted)}
 .note{font-size:13px;color:var(--muted);margin:8px 0 0;max-width:72ch}
 .dl{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .dlmsg{font-size:13px;color:var(--muted);margin-top:8px;min-height:1em}
@@ -177,7 +200,7 @@ label.chk{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--ink
     <div>
       <div class="kicker">Public data · 84,415 US census tracts</div>
       <h1>Neighborhood Spending Gaps</h1>
-      <p class="lede">Pick any neighborhood or group of census tracts in the US. See what residents spend in fourteen categories, what local stores sell in twelve of them, and how that compares with the national pattern.</p>
+      <p class="lede">Pick any neighborhood or group of census tracts in the US. See what residents spend in sixteen categories, what local stores sell in fourteen of them, and how that compares with the national pattern.</p>
     </div>
   </header>
 
@@ -223,6 +246,7 @@ label.chk{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--ink
         <div class="selname"><input id="selname" type="text" aria-label="Name for this selection" value=""><span class="sub" id="selwhere"></span></div>
         <div class="warn" id="notice" hidden></div>
         <div class="fitbox" id="fitbox" hidden></div>
+        <div class="figs" id="figs" hidden></div>
         <div class="stats" id="stats"></div>
         <p class="headline" id="headline"></p>
         <div class="warn" id="warn" hidden></div>
@@ -233,13 +257,14 @@ label.chk{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--ink
         <h2>Retention rate by category</h2>
         <p class="sub">Local store sales ÷ the sales the national pattern would predict from residents' spending. 1.0 is the national norm; below 1.0 means residents' spending likely leaves the area.</p>
         <div class="chartwrap"><svg class="chart" id="chart" width="100%" height="230" role="img" aria-label="Retention rate range by category"></svg></div>
-        <div class="legend"><span><i style="background:var(--leak)"></i>below norm: likely leakage</span><span><i style="background:var(--inflow)"></i>above norm: draws shoppers in</span><span>Bar = range from the two supply estimates</span></div>
+        <div class="legend"><span><i style="background:var(--leak)"></i>below norm: likely leakage</span><span><i style="background:var(--inflow)"></i>above norm: draws shoppers in</span><span id="lgGrey"><i style="background:var(--muted)"></i>at the norm, or the two estimates fall either side</span><span>Bar = range from the two supply estimates</span></div>
       </section>
 
       <section class="card sect">
         <h2>Spending and sales</h2>
         <p class="sub">Annual, 2024 dollars. Projected leakage is resident demand × (1 − retention rate): residents' spending the area would keep at the national norm but does not. Negative means the area draws in more than the norm.</p>
         <div class="tablewrap"><table id="tbl"></table></div>
+        <p class="note"><button type="button" class="linkbtn" id="minorTog">Show tobacco and vaping</button> The total includes it; it is left out of the summary, chart and comparisons below, and it is in the downloads. Child care is shown but kept out of the total: its sales include public payments (child care subsidies, Head Start) that concentrate in lower-income areas, while the survey counts only what households pay themselves, so its retention runs high there.</p>
         <h3>What the sales gap could support</h3>
         <div class="tablewrap"><table id="stores"></table></div>
         <p class="note">Store counts use the sales gap, not the projected leakage above: sales at the national norm minus local sales, because an average store's sales include all its customers, not only residents. Each divides that gap by what an average US benchmark store sells in that category alone (2022 Economic Census, restated in 2024 dollars); a supermarket's grocery sales, for example, leave out its pharmacy and household goods. A gap is a ceiling, not a forecast: some spending will always go online, near work or to destination stores.</p>
@@ -248,35 +273,74 @@ label.chk{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--ink
         <p class="note">Public data cannot match these to local sales: most medicine spending is paid through insurance at the pharmacy, and admissions are dominated by visitors. Vehicle purchases are left out entirely as a category no neighborhood captures.</p>
       </section>
 
-      <section class="card sect" id="taxSect">
-        <h2>Sales tax on leaked spending</h2>
+      <section class="card sect" id="peerSect">
+        <h2>Compared with similar places</h2>
+        <p class="headline small" id="peerLead"></p>
+        <div class="tablewrap"><table id="peerTbl"></table></div>
+        <p class="note">Similar places are areas of the same kind (city or town, county, or neighborhood), the same setting (metropolitan, small-city or rural county; for neighborhoods, a city of 250,000 or more or a smaller one) and a similar population, measured the same way across the US. Typical is their median retention rate, on the average of the two estimates; the middle half runs from the 25th to the 75th percentile. Retention varies widely even among similar places, so read this as a reference, not a standard.</p>
+      </section>
+
+      <section class="card sect" id="regionSect">
+        <h2>The surrounding region</h2>
+        <p class="headline small" id="regionLead"></p>
+        <div class="tablewrap"><table id="regionTbl"></table></div>
+        <p class="note">Projected leakage of the area within 10, 25 and 50 miles of the selection (straight line from the nearest selected tract, the selection itself left out), on the midpoint of the two estimates; a surplus means its stores sell more than its residents' spending supports. "Balanced by" is the nearest ring whose leakage (or surplus) is at least as large as this area's surplus (or leakage). It shows where offsetting spending could come from or go, not where any one shopper goes, and it leaves out online spending and travel.</p>
+      </section>
+
+      <section class="card sect" id="spendSect">
+        <h2>Room for new stores</h2>
+        <p class="sub">How many stores of each kind are here, against how many residents' spending would carry at the US ratio of stores to spending, and how much each sells.</p>
+        <p class="headline small" id="spendLead"></p>
+        <div class="tablewrap"><table id="spendTbl"></table></div>
+        <p class="note">"Residents' spending would carry" is how many stores of the kind residents' spending in that category would carry at the US ratio of stores to spending. Sales per store compares local sales per store with the US average (the retention rate divided by stores per resident dollar). Each ratio uses the same listing on both sides, so a listing that runs high everywhere cancels out. The readings are checked in this order. Room for more: two-thirds or less of the stores the spending carries (where it carries at least one), with a retention rate under 0.8, however much each store sells. Listed, little measured sales: at least 3 stores and 1.5 times what the spending carries, each selling under 15% of the US average, which usually means the listings and the job counts disagree. Crowded: the same, each selling under two-thirds of the US average. More stores, each busy: the same, each selling over 1.5 times the US average, so the area draws customers in from elsewhere. Few stores, each busy: fewer stores than the spending carries, each selling over 1.5 times the US average. Busy, with public payments: child care with a busy reading, since its sales include public payments (subsidies, Head Start) rather than customers from elsewhere. Child care is listed but left out of the summary above for the same reason. Fitness has no row: gyms and studios are about a third of its sales, beside golf, skiing, bowling and lessons, which the listings don't count.</p>
+      </section>
+
+      <div class="ctxhead" id="ctxHead">
+        <h2>More about this area</h2>
+        <p class="sub">Context for the figures above. Open any section to see it; all of it is also in the report and downloads.</p>
+      </div>
+
+
+
+
+
+
+      <details class="card ctx" id="taxSect">
+        <summary><h3 class="ctxt">Sales tax on leaked spending</h3><span class="ctxb">What the leaked spending would have paid in state and local sales tax</span></summary>
+        <div class="sect">
         <p class="headline small" id="taxLead"></p>
         <div class="tablewrap"><table id="taxTbl"></table></div>
         <p class="note">Each category's rate is the combined state and local sales-tax rate for the kinds of things it covers, averaged over the selected tracts by residents' spending: groceries are exempt or taxed at a lower rate in many states, gas is usually taxed by excise instead, and salon services and repair labor are taxed in some states and not others. Projected leakage is in survey dollars, which run below actual spending, so the tax figures lean low. Local restaurant and meals taxes, excise taxes and caps on single purchases are not included.</p>
         <details class="taxnotes" id="taxNotesBox"><summary id="taxNotesSum">Notes on this state's rates</summary><ul id="taxNotes"></ul></details>
-      </section>
+        </div>
+      </details>
 
-      <section class="card sect" id="storesSect">
-        <h2>Stores here</h2>
+      <details class="card ctx" id="storesSect">
+        <summary><h3 class="ctxt">Stores here</h3><span class="ctxb">Stores, restaurants, gyms, child care, clinics and hospitals counted in the selection</span></summary>
+        <div class="sect">
         <p class="sub">Stores counted inside the selected tracts, set against how common each kind is across the US per resident. Food stores come from USDA's list of every store that takes SNAP. The rest come from Overture Maps, an open listing of places that runs high for some kinds (salons, bars and home furnishings especially), so read those as indications, not a census.</p>
         <div class="tablewrap"><table id="stores2"></table></div>
         <p class="note" id="storesNote"></p>
-      </section>
+        </div>
+      </details>
 
-      <section class="card sect" id="progSect">
-        <h2>Programs and designations</h2>
+      <details class="card ctx" id="progSect">
+        <summary><h3 class="ctxt">Programs and designations</h3><span class="ctxb">Opportunity Zones, New Markets Tax Credits, CDFI areas and food access</span></summary>
+        <div class="sect">
         <p class="sub">How many of the selected tracts qualify for programs that bring investment, credit or food access, from the agencies' own tract lists. Eligibility is decided tract by tract, so a project's own address is what counts; confirm on the agency's map before relying on it. Shade any of these on the map from the menu above it.</p>
         <div class="tablewrap"><table id="programs"></table></div>
-      </section>
+        </div>
+      </details>
 
-      <section class="card sect" id="jobsSect">
-        <h2>Jobs located here</h2>
+      <details class="card ctx" id="jobsSect">
+        <summary><h3 class="ctxt">Jobs located here</h3><span class="ctxb">Jobs at workplaces here by industry, and net commuting</span></summary>
+        <div class="sect">
         <p class="sub">Jobs at workplaces in the selected tracts, by industry, wherever the workers live (LEHD LODES 2023; Alaska 2016, Michigan 2021). Self-employed people are not counted.</p>
         <p class="commute" id="commute"></p>
         <div class="tablewrap"><table id="jobs"></table></div>
         <p class="note">Rows marked <b>store sales</b> are the industries the jobs-based sales estimate starts from. It uses only the store types within them, using each ZIP's industry mix: restaurants but not hotels, and repair shops, salons and dry cleaners but not other services.</p>
-      </section>
-
+        </div>
+      </details>
 
       <section class="card sect">
         <h2>Download</h2>
@@ -289,7 +353,27 @@ label.chk{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--ink
           <button class="btn" data-dl="link">Copy link to this selection</button>
         </div>
         <div class="dlmsg" id="dlmsg"></div>
+        <p class="note" id="gWho" hidden></p>
       </section>
+      <!-- Cloudflare Web Analytics: page views and referrers, no cookies, no personal data -->
+      <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "18b93fb8344b4228baf7f3993bb90c24"}'></script>
+      <div class="gate" id="gate" hidden>
+        <div class="gbox card" role="dialog" aria-modal="true" aria-labelledby="gTitle">
+          <h2 id="gTitle">Before your download</h2>
+          <p class="sub">The site is free. An email address, asked once in each browser, helps us see who uses it, and lets us tell you when the data is updated if you want that.</p>
+          <form id="gForm" novalidate>
+            <label><span>Email</span> <input type="email" id="gEmail" autocomplete="email" required maxlength="120"></label>
+            <label><span>What brings you here <span class="opt">optional</span></span>
+              <select id="gRole"><option value=""></option><option>Resident or neighbor</option><option>Business owner or entrepreneur</option><option>Developer, broker or investor</option><option>Lender or CDFI</option><option>City, county or state government</option><option>Nonprofit or community organization</option><option>Researcher or student</option><option>Journalist</option><option>Something else</option></select></label>
+            <label><span>Organization <span class="opt">optional</span></span> <input type="text" id="gOrg" autocomplete="organization" maxlength="120"></label>
+            <label class="chk"><input type="checkbox" id="gUpdates"> Email me when new data comes out (a few times a year)</label>
+            <p class="note">We keep the address, these answers and what you downloaded in the site's spreadsheet, and don't sell or share them. If you tick the box, we'll ask you to confirm before sending any updates. This browser remembers the address so you aren't asked again.</p>
+            <div class="gbtns"><button class="btn primary" type="submit" id="gGo">Download</button><button class="btn" type="button" id="gCancel">Cancel</button></div>
+            <div class="dlmsg" id="gMsg" role="status"></div>
+          </form>
+        </div>
+      </div>
+
 
       <section class="card sect" id="feedback">
         <h2>Suggestions and corrections</h2>
@@ -303,31 +387,42 @@ label.chk{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--ink
           <h4>What this measures</h4>
           <p>This is a <strong>retail-gap estimate, not observed leakage</strong>. Local sales include shoppers who live elsewhere, and resident demand is modeled from national spending patterns by income. Neither side records where residents actually shop. That takes card data split by cardholder home and store location, which is the next layer (see the bottom of this page).</p>
           <h4>Resident demand</h4>
-          <p>Residents are each tract's total population and households its occupied housing units (ACS 2020–2024 five-year, tables B01003 and B19001). Residents include people living in group quarters, such as dorms, prisons and nursing homes, who are not households and are not counted in demand; a tract that is mostly group quarters can show many residents and little or no demand. Demand is households by income bracket in each tract (B19001) times what US households at each income spend by category (BLS Consumer Expenditure Survey 2024), interpolated at each bracket's midpoint. The top bracket's mean is solved from aggregate household income (B19025), held between $200K and $1M. Gasoline uses 2022 survey spending at 2022 incomes, restated at 2024 pump prices. Gas, auto repair and vehicle purchases are scaled by the tract's vehicles per household (B25046) against what the survey shows at the same incomes, between 0.2 and 2.5 times.</p>
+          <p>Residents are each tract's total population and households its occupied housing units (ACS 2020–2024 five-year, tables B01003 and B19001). Residents include people living in group quarters, such as dorms, prisons and nursing homes, who are not households and are not counted in demand; a tract that is mostly group quarters can show many residents and little or no demand. Demand is households by income bracket in each tract (B19001) times what US households at each income spend by category (BLS Consumer Expenditure Survey 2024), interpolated at each bracket's midpoint. The top bracket's mean is solved from aggregate household income (B19025), held between $200K and $1M. The household income shown beside the figures is that same aggregate (2024 dollars, before taxes; for the few tracts where the Census does not publish it, it is estimated from the income brackets): what residents earn, not what they spend, given only for scale, along with the share of it the measured categories take. Spending here is the model's estimate from the survey, which runs below actual spending, so the share leans low; where many households report little income (students, people living on savings, aid or benefits not counted as income) it can approach or pass all of reported income, as the survey itself shows at low incomes. Gasoline uses 2022 survey spending at 2022 incomes, restated at 2024 pump prices. Gas, auto repair and vehicle purchases are scaled by the tract's vehicles per household (B25046) against what the survey shows at the same incomes, between 0.2 and 2.5 times.</p>
+          <p>Rural households spend differently from what their incomes alone predict. The survey's urban and rural tables (2015–2019, the latest by area on FRED) show them spending less on restaurants, alcohol, personal care and apparel, and more on tobacco, after income is accounted for two ways (the tracts' own incomes, and the survey's rural and urban mean incomes). Each tract's demand in those categories is multiplied by 1 − r + r × f, where r is its rural share (the part of its 2020 population outside Census urban areas) and f is the category's factor: restaurants 0.83, alcohol 0.61, personal care 0.73, apparel 0.75 and tobacco 1.73. A fully rural tract takes the whole factor; a fully urban one is unchanged. Groceries are not adjusted: rural households spend on food at home about what their incomes predict, and the survey leaves out food people grow themselves. A factor is used only where both ways put it at least 0.1 away from 1 on the same side and rural households spend less (or more) than urban ones in every one of the five years; the other categories are left unadjusted.</p>
           <h4>Categories</h4>
-          <p>Twelve categories are measured on both sides: groceries; full-service restaurants; quick-service restaurants, coffee and food trucks; alcohol, from stores and bars; tobacco and vaping; household supplies, garden and stationery; pets, toys, hobbies and books; personal care products and services; apparel, shoes and clothing care; furniture, home furnishings, appliances and computers; gasoline; and auto parts and repair. Medicines and entertainment admissions are demand only.</p>
+          <p>Twelve categories are measured on both sides: groceries; full-service restaurants; quick-service restaurants, coffee and food trucks; alcohol, from stores and bars; tobacco and vaping; household supplies, garden and stationery; pets, toys, hobbies and books; personal care products and services; apparel, shoes and clothing care; furniture, home furnishings, appliances and computers; gasoline; auto parts and repair; fitness, sports and recreation (gyms and studios, golf, bowling, skiing, and sports, dance and music lessons); and child care (day care centers, preschools and babysitting). Medicines and other fees and admissions (movies, shows, events) are demand only.</p>
           <p>Stores sell across categories, so local sales are counted by what is sold, not by store type. Each store type's sales are split by what that kind of store sells nationally, from the 2022 Economic Census product lines: a supermarket's sales go mostly to groceries, partly to household supplies, personal care and alcohol, and its pharmacy counter to no category; a gas station's go to gasoline, groceries, tobacco and alcohol. Medicines and vitamins, prescription or over the counter, fall in no category, matching the demand-only medicines line; so do lines no category covers, such as sporting goods and used goods.</p>
           <p>Full-service and quick-service restaurants split cleanly on the sales side. On the spending side, each tract's restaurant spending is split by the share that households at each income spend at full-service restaurants, from the BLS Consumer Expenditure Diary Survey 2024 public-use files: about 40%–45% for households under $100,000, 46%–48% from $100,000 to $200,000 and 52% above $200,000 (46% for all households; each income range's share has a standard error of 2–5 points). Food from vending machines and mobile vendors counts as quick-service. Employer and school cafeterias and catered events are left out when the share is measured, but their spending stays in restaurant demand and is split in the same proportion.</p>
           <h4>Local sales: two estimates</h4>
           <ul>
             <li><strong>Jobs-based (LEHD LODES 2023):</strong> retail, food-service and personal-service jobs on each block, split into store types by the ZIP's industry mix and aligned with Economic Census employment for the state.</li>
             <li><strong>ZIP-based (ZIP Business Patterns 2023):</strong> each ZIP's employment by store type, with each Census-suppressed size class given the fewest stores the suppression rule allows, each store counted at its size class's midpoint, and the remainder scaled to the ZIP's published sector total, then allocated to tracts by their share of the ZIP's jobs in that sector.</li>
+            <li><strong>Fitness and child care:</strong> gyms and studios, golf courses, bowling centers, ski areas and other recreation, sports, dance and music instruction, and day care centers. Workplace job counts for these industries are mostly public schools, hospitals, casinos and museums, so both estimates use each ZIP's own ZIP Business Patterns rows for them (scaled so their US employment matches the 2022 Economic Census), placed in the ZIP's tracts by their share of its gyms and studios or child care centers listed on Overture Maps (or of its residents where it lists none); each ZIP's marinas are taken out of recreation. Their demand comes from the survey's detailed items by income: club memberships, fees for participant sports and recreational lessons; and babysitting, child care, day care and preschool. Self-employed child care (mostly home day care) and recreation are added by county, placed the same way.</li>
             <li><strong>Both estimates</strong> add self-employed businesses (Census Nonemployer Statistics 2024) for restaurants, bars, salons, barbers and other personal care, auto repair, coin laundries and dry cleaners: each county's receipts, placed in tracts by their share of the county's jobs in that industry. Self-employed retail sellers are left out, because most of their sales are online or direct, and so are food trucks, which the Census reports together with caterers.</li>
           </ul>
-          <p>Each store type's jobs are multiplied by its 2022 Economic Census sales per employee, taken from the place, county, metro area, state or US, whichever is the smallest with enough stores (pharmacies always at the US rate), split into categories as above, and restated in 2024 dollars (gasoline at 2024 pump prices). Thirty store types are used, from supermarkets and convenience stores to salons, dry cleaners and food trucks; building-material stores, car dealers and online sellers are left out. The two estimates set every range on this page. Alaska uses LODES 2016 and Michigan 2021, the latest each state has published.</p>
+          <p>Each store type's jobs are multiplied by its 2022 Economic Census sales per employee, taken from the place, county, metro area, state or US, whichever is the smallest with enough stores (pharmacies always at the US rate), split into categories as above, and restated in 2024 dollars (gasoline at 2024 pump prices). Thirty-four store types are used, from supermarkets and convenience stores to salons, dry cleaners, food trucks, gyms and day care centers; building-material stores, car dealers and online sellers are left out. The two estimates set every range on this page, except fitness and child care, where both use the same ZIP employment and give one figure. Alaska uses LODES 2016 and Michigan 2021, the latest each state has published.</p>
           <h4>Retention rate</h4>
           <p>Across the US, store sales run 0.9 to 3.5 times modeled resident spending, depending on the category. Most run above it, because households under-report spending in the survey and stores also sell to businesses, commuters and visitors. Pets, toys and books and home furnishings run near or below it, because much of that spending goes online or to store types left out here. The retention rate divides local sales by resident demand times that national ratio, separately for each estimate, so 1.0 means an area sells what the national pattern predicts for its residents. Projected leakage is resident demand times (1 − retention rate): residents' spending, in survey dollars, that local stores would keep at the national norm but do not. Because the survey under-reports some spending, it leans conservative. Store counts instead use the gap in store-sales terms (the predicted sales minus local sales), divided by a benchmark store's sales in that category.</p>
           <h4>Check against the South Shore baseline</h4>
-          <p>For Chicago's South Shore (the City's 15 tracts), this page finds 25,043 households (CMAP's figure is 26,470) and $330M of resident demand in the five categories the hand-built South Shore baseline measured (the baseline has $352M from the same survey items; the difference comes from the household count, the baseline's assumption for top-bracket income, and its single car-ownership adjustment for the whole area where this page adjusts tract by tract). The baseline compared local sales with demand directly, found local sales at 63%–75% of demand and a gap of $88M–$129M. This page measures 12 categories against the national norm and splits store sales by what each kind of store sells, so its figures are larger and not directly comparable: a net projected leakage of $232M–$263M, with retention rates of 0.50–0.57 for groceries, 0.05–0.12 for full-service dining, 0.22–0.45 for quick-service food and 0.12–0.14 for home furnishings. The two agree on where the biggest gaps are: restaurants and everyday goods (here groceries, household supplies, and pets, toys and books). Home furnishings, which the baseline could not measure, shows almost no local sales.</p>
+          <p>For Chicago's South Shore (the City's 15 tracts), this page finds 25,043 households (CMAP's figure is 26,470) and $330M of resident demand in the five categories the hand-built South Shore baseline measured (the baseline has $352M from the same survey items; the difference comes from the household count, the baseline's assumption for top-bracket income, and its single car-ownership adjustment for the whole area where this page adjusts tract by tract). The baseline compared local sales with demand directly, found local sales at 63%–75% of demand and a gap of $88M–$129M. This page measures 13 categories in its total against the national norm and splits store sales by what each kind of store sells, so its figures are larger and not directly comparable: a net projected leakage of $242M–$272M, with retention rates of 0.50–0.57 for groceries, 0.05–0.12 for full-service dining, 0.21–0.44 for quick-service food and 0.12–0.14 for home furnishings. The two agree on where the biggest gaps are: restaurants and everyday goods (here groceries, household supplies, and pets, toys and books). Home furnishings, which the baseline could not measure, shows almost no local sales.</p>
           <h4>Check against states' sales-tax records</h4>
           <p id="checkSummary">Many states publish taxable sales by city or county and by kind of business. Where they do, the estimates here are compared with them.</p>
-          <p>Restaurants and bars are the cleanest comparison, since every state taxes restaurant meals. Store goods compare less directly: taxable sales leave out groceries in most states and include goods outside the twelve categories here (electronics, sporting goods, jewelry and more), so the estimates usually come to less than taxable sales there, and the correlation is the test. The largest misses are small towns where tract lines cut through the commercial district, warehouse towns, and places whose sales come mostly from hotels and conventions, like Rosemont, Illinois.</p>
+          <p>Restaurants and bars are the cleanest comparison, since every state taxes restaurant meals. Store goods compare less directly: taxable sales leave out groceries in most states and include goods outside the categories here (electronics, sporting goods, jewelry and more), so the estimates usually come to less than taxable sales there, and the correlation is the test. The largest misses are small towns where tract lines cut through the commercial district, warehouse towns, and places whose sales come mostly from hotels and conventions, like Rosemont, Illinois.</p>
           <details class="cov"><summary>State by state: sales-tax rates and checks</summary><div class="tablewrap"><table id="coverage"></table></div></details>
+          <h4>Similar places, the surrounding region and visitors</h4>
+          <ul>
+            <li><strong>Similar places:</strong> every Census place (tracts at least half in it), county and named neighborhood in the US with at least 300 households is grouped by kind, setting and population; neighborhoods are filtered as the search filters them, and neighborhoods that cover the same tracts count once. Setting is the county's: in a metropolitan or micropolitan area, or neither (OMB delineation, July 2023); a neighborhood's setting is whether the city holding most of its households has 250,000 people or more. Groups with fewer than 30 areas are merged with a neighboring population band. Small towns count only when a tract lies at least half inside them, so the groups for towns under 2,500 people are small (about 100–550 places) and lean toward towns that fill a whole tract. A ZIP code or hand-picked selection is compared as a neighborhood when most of its households live in such a city, otherwise as a city or town; a suggested area is compared as a neighborhood.</li>
+            <li><strong>The surrounding region</strong> sums the projected leakage of every tract whose interior point lies within 10, 25 or 50 miles of a selected tract's, including neighboring states.</li>
+            <li><strong>Visitor economy:</strong> an area is flagged when at least 50 of its homes are seasonal or vacation homes and they are at least 3 times the national share of housing (ACS 2020–2024, B25004 and B25001), or when it has at least 5 hotels, motels and other lodging places and as many per resident as the top 5% of US places with 1,000 or more residents (Overture Maps, October 2026).</li>
+          </ul>
+          <h4>What this site keeps</h4>
+          <p>The first download in a browser asks for an email address; role, organization and an updates opt-in are optional. They go to the site's spreadsheet, with what was downloaded and the area; only the site's owner and the people they ask to review suggested areas can open it, and the first download from an address is also emailed to the owner. This browser remembers the address. Messages and suggested areas go to the same spreadsheet. The site also counts which areas are looked at and downloaded (the date, state, area name and number of tracts), with no address or identifier, though a counted download can be matched to its download record by date and area. Updates go only to addresses that have confirmed they want them. Page visits are counted by Cloudflare Web Analytics, which sets no cookies and keeps no personal data. Nothing is sold or shared.</p>
           <h4>Jobs, stores and programs</h4>
           <ul>
             <li><strong>Jobs located here</strong> come from the same LEHD LODES files, by workplace and all 20 industry sectors. <strong>Jobs held by residents</strong> come from LODES residence files, wherever those jobs are. Both count jobs, not people, so their difference is net commuting. Self-employed people are not in either.</li>
+            <li><strong>Hospitals</strong> are every hospital on Medicare's list (CMS Hospital General Information, October 2026), placed by the Census Geocoder or, where it can't place the address, by matching the name to a hospital listing on Overture Maps in the same ZIP code (or the same county, where the ZIP is a post-office box or single-site ZIP with no area of its own); about 5% can't be placed either way and are left out. Map listings alone count a hospital's departments and offices as separate hospitals. <strong>Community health centers</strong> are HRSA's active, permanent health center sites, including school-based ones (not mobile vans or seasonal sites). Doctors' offices and clinics, dentists, urgent care and mental health clinics are Overture Maps listings, private and public alike.</li>
             <li><strong>Stores here:</strong> food stores are USDA's list of every store authorized to take SNAP (downloaded October 2026). Other kinds are places listed in Overture Maps (October 2026 release, places with a confidence score of at least 0.9 and not marked closed), an open dataset compiled from several map sources; it lists more salons, bars and home furnishings stores than Census business counts, so treat those rows as indications. National rates per 10,000 residents use the same sources.</li>
-            <li><strong>Sales tax on leaked spending</strong> applies each state's combined state and local sales-tax rates to projected leakage, category by category: the rate where the selected tracts are (the city's when at least half a tract is in it, otherwise the town's or the county's), and only on what each state taxes. Groceries, gas, salon services and repair labor are exempt or taxed differently in many states; personal care, apparel and auto are split between goods and services by the services' national share of sales. Rates come from each state's revenue department (or the Streamlined Sales Tax files its members publish), as of October 2026. Local restaurant taxes are included where a state publishes them (Massachusetts, Mississippi, Montana, and meals taxes in DC, Connecticut, Maine, New Hampshire, Rhode Island and Vermont); other local meals taxes, excise taxes and caps on single purchases are not. Gaps for each state are listed with the figures and in the table below.</li>
+            <li><strong>Sales tax on leaked spending</strong> leaves out fitness and child care, which states tax very differently (gym memberships in some, lessons in fewer, child care almost nowhere) and which the rate tables here do not cover yet. It applies each state's combined state and local sales-tax rates to projected leakage, category by category: the rate where the selected tracts are (the city's when at least half a tract is in it, otherwise the town's or the county's), and only on what each state taxes. Groceries, gas, salon services and repair labor are exempt or taxed differently in many states; personal care, apparel and auto are split between goods and services by the services' national share of sales. Rates come from each state's revenue department (or the Streamlined Sales Tax files its members publish), as of October 2026. Local restaurant taxes are included where a state publishes them (Massachusetts, Mississippi, Montana, and meals taxes in DC, Connecticut, Maine, New Hampshire, Rhode Island and Vermont); other local meals taxes, excise taxes and caps on single purchases are not. Gaps for each state are listed with the figures and in the table below.</li>
             <li><strong>Programs and designations</strong> come from the agencies' tract lists: Treasury's 2018 Opportunity Zones and its September 2026 list of tracts eligible for 2027 zones; the CDFI Fund's New Markets Tax Credit and CDFI Investment Area eligibility (2016–2020 ACS); and USDA's food access maps (2019 supermarket access; 2025 access to any SNAP store). Lists drawn on 2010 tracts are carried to a 2020 tract when at least half its land lies in listed 2010 tracts. "Severely distressed" here applies the three main NMTC tests only; a tract can also qualify in other ways.</li>
           </ul>
           <h4>Neighborhoods and other areas</h4>
@@ -387,23 +482,30 @@ label.chk{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--ink
 <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
 <script>
 (() => {
-const SUP = ['groceries','fsr','qsr','alcohol','tobacco','household','pets_toys','perscare','apparel','home','gas','auto'];
+const SUP = ['groceries','fsr','qsr','alcohol','tobacco','household','pets_toys','perscare','apparel','home','gas','auto','fitness','childcare'];
 const DEM = SUP.concat(['rx','entertain']);
 const NS = SUP.length, ND = DEM.length;
+// Child care sales include public payments (subsidies, Head Start) that concentrate in lower-income areas, while the
+// survey counts only what households pay themselves: it is shown, but kept out of the totals and the headline lists.
+const OUT_OF_TOTAL = new Set(['childcare']), NT = NS - OUT_OF_TOTAL.size;
 const LABEL = {groceries:'Groceries (food and drinks for home)', fsr:'Full-service restaurants', qsr:'Quick-service restaurants, coffee and food trucks',
   alcohol:'Alcohol (stores and bars)', tobacco:'Tobacco and vaping', household:'Household supplies, garden and stationery',
   pets_toys:'Pets, toys, hobbies and books', perscare:'Personal care products and services', apparel:'Apparel, shoes and clothing care',
   home:'Furniture, home furnishings, appliances and computers', gas:'Gasoline', auto:'Auto parts and repair',
-  rx:'Medicines and medical supplies (out of pocket)', entertain:'Entertainment and recreation admissions'};
+  fitness:'Fitness, sports and recreation (gyms, studios, golf, bowling, lessons)', childcare:'Child care (day care, preschool, babysitting)',
+  rx:'Medicines and medical supplies (out of pocket)', entertain:'Other fees and admissions (movies, shows, events)'};
 const SHORT = {groceries:'Groceries', fsr:'Full-service dining', qsr:'Quick-service food', alcohol:'Alcohol', tobacco:'Tobacco',
   household:'Household supplies', pets_toys:'Pets, toys, books', perscare:'Personal care', apparel:'Apparel', home:'Home furnishings',
-  gas:'Gasoline', auto:'Auto parts & repair'};
+  gas:'Gasoline', auto:'Auto parts & repair', fitness:'Fitness & recreation', childcare:'Child care'};
 // Chicago community areas that contain well-known neighborhoods with no official boundary of their own
 const CHI_INCLUDES = {'Lower West Side':['Pilsen','Heart of Chicago'], 'South Lawndale':['Little Village'], 'New City':['Back of the Yards','Canaryville'],
   'Douglas':['Bronzeville'], 'Grand Boulevard':['Bronzeville'], 'West Town':['Wicker Park','Ukrainian Village','East Village'],
   'Near West Side':['West Loop','Greektown','Little Italy'], 'Near North Side':['Gold Coast','Streeterville','River North'],
   'Lake View':['Wrigleyville','Boystown'], 'Edgewater':['Andersonville'], 'Logan Square':['Bucktown'], 'Near South Side':['South Loop'],
   'Armour Square':['Chinatown'], 'Chicago Lawn':['Marquette Park']};
+// categories counted in totals and downloads but left out of the summary, chart and lists; the table shows them on request
+const MINOR = new Set(['tobacco']);
+let showMinor = false;
 const KIND_ORDER = {'Community area':0, 'Neighborhood':0, 'District':0, 'Approved suggestion':1, 'Your suggestion':2, 'City / town':3, 'County':4, 'ZIP code':5};
 const SRC_LABEL = s => s === 'chicago' ? 'City of Chicago' : s === 'zcta' ? 'Census ZCTA' : s === 'suggested' ? 'suggested by a visitor'
   : s && s.startsWith('wof:') ? "Who's On First" + (s.length > 4 && s !== 'wof:?' ? ' (source: ' + ((IDX.src_names || {})[s.slice(4)] || s.slice(4)) + ')' : '') : '';
@@ -415,7 +517,7 @@ const cache = new Map();
 
 // ---------- formatting ----------
 const fmtUSD = k => { // k in $ thousands
-  const v = k * 1000, a = Math.abs(v), s = v < 0 ? '−' : '';
+  const v = k * 1000, a = Math.abs(v), s = v < 0 ? '−⁠' : '';
   if (a >= 1e9) return s + '$' + (a/1e9).toFixed(a >= 1e10 ? 0 : 1) + 'B';
   if (a >= 1e6) return s + '$' + (a/1e6).toFixed(a >= 1e8 ? 0 : 1) + 'M';
   if (a >= 1e3) return s + '$' + Math.round(a/1e3) + 'K';
@@ -426,15 +528,19 @@ const fmtPF = x => isFinite(x) ? x.toFixed(2) : '—';
 const pct = x => Math.round(x * 100) + '%';
 const range = (a, b, f) => { const lo = Math.min(a,b), hi = Math.max(a,b); const A = f(lo), B = f(hi); return A === B ? A : A + ' to ' + B; };
 const rangeUSD = (a,b) => { const lo=Math.min(a,b), hi=Math.max(a,b); const A=fmtUSD(lo), B=fmtUSD(hi); return A===B?A:A+' – '+B; };
+// lower case without accents, ʻokina or apostrophes, for matching what people type
+// one apostrophe, whichever the keyboard typed (a phone types ’)
+const apos = s => String(s).replace(/[’‘ʼ]/g, "'");
+const fold = s => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[ʻ‘’'`]/g, '').toLowerCase();
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fitWord = f => f >= 0.8 ? 'close' : f >= 0.6 ? 'fair' : 'loose';
 
 // ---------- compute ----------
 function compute(ids) {
-  const r = {n:0, h:0, p:0, ja:0, js:new Array(20).fill(0), wr:0, v:0, d:new Array(ND).fill(0), l:new Array(NS).fill(0), z:new Array(NS).fill(0)};
+  const r = {n:0, h:0, p:0, i:0, ie:0, ien:0, ja:0, js:new Array(20).fill(0), wr:0, v:0, d:new Array(ND).fill(0), l:new Array(NS).fill(0), z:new Array(NS).fill(0)};
   for (const g of ids) {
     const t = ST.tracts[g]; if (!t) continue;
-    r.n++; r.h += t.h; r.p += t.p || 0; r.ja += t.j[0]; for (let i=0;i<20;i++) r.js[i] += t.j[i+1] || 0; r.wr += t.w || 0; r.v += t.v;
+    r.n++; r.h += t.h; r.p += t.p || 0; r.i += t.i || 0; if (t.ie) { r.ie += t.h; r.ien++; } r.ja += t.j[0]; for (let i=0;i<20;i++) r.js[i] += t.j[i+1] || 0; r.wr += t.w || 0; r.v += t.v;
     for (let i=0;i<ND;i++) r.d[i] += t.d[i];
     for (let i=0;i<NS;i++) { r.l[i] += t.l[i]; r.z[i] += t.z[i]; }
   }
@@ -444,7 +550,7 @@ function compute(ids) {
   });
   // Projected leakage in resident dollars: demand x (1 - retention rate). Positive = resident spending the area would keep at the national norm but does not.
   for (const x of r.cats) { x.gL = x.D * (1 - (isFinite(x.pfL) ? x.pfL : 1)); x.gZ = x.D * (1 - (isFinite(x.pfZ) ? x.pfZ : 1)); }
-  const sum = k => r.cats.reduce((a,x)=>a+x[k],0);
+  const sum = k => r.cats.reduce((a,x) => OUT_OF_TOTAL.has(x.c) ? a : a + x[k], 0);
   r.tot = {D:sum('D'), sL:sum('sL'), sZ:sum('sZ'), eL:sum('eL'), eZ:sum('eZ'), gL:sum('gL'), gZ:sum('gZ')};
   r.tot.pfL = r.tot.eL>0 ? r.tot.sL/r.tot.eL : NaN; r.tot.pfZ = r.tot.eZ>0 ? r.tot.sZ/r.tot.eZ : NaN;
   return r;
@@ -471,6 +577,15 @@ async function loadState(fips) {
 
 // ---------- search ----------
 let SEARCH = [];
+// Census place names end in their legal type ("La Crosse city", "Big Sky CDP"); show the name alone and the type as a tag
+const PLACE_TYPES = [[' city and borough', 'City and borough'], [' consolidated government (balance)', 'City'], [' metropolitan government (balance)', 'City'],
+  [' unified government (balance)', 'City'], [' metro government (balance)', 'City'], [' urban county', 'Urban county'], [' municipality', 'Municipality'],
+  [' borough', 'Borough'], [' village', 'Village'], [' town', 'Town'], [' city', 'City'], [' CDP', 'Community (unincorporated)']];
+function placeName(n) {
+  const full = n.replace(/, [A-Z]{2}$/, '');
+  for (const [suf, kind] of PLACE_TYPES) if (full.endsWith(suf) && full.length > suf.length) return {base: full.slice(0, -suf.length), kind, full};
+  return {base: full, kind: 'City / town', full};
+}
 function buildSearch() {
   SEARCH = [];
   for (const [n, city, kind, src, ts, fit, cover, inside, alias] of ST.areas || []) {
@@ -479,7 +594,7 @@ function buildSearch() {
     if (alias) SEARCH.push(Object.assign({}, it, {key:alias.toLowerCase(), via:'also called ' + alias}));
     if (ST.fips === '17' && kind === 'Community area') for (const nb of CHI_INCLUDES[n] || []) SEARCH.push(Object.assign({}, it, {key:nb.toLowerCase(), via:'includes ' + nb}));
   }
-  for (const p of Object.values(ST.places)) SEARCH.push({kind:'City / town', label:p.name.replace(/, [A-Z]{2}$/, ''), tracts:p.tracts, key:p.name.toLowerCase(), src:'place'});
+  for (const p of Object.values(ST.places)) { const pn = placeName(p.name); SEARCH.push({kind:pn.kind, label:pn.base, tracts:p.tracts, key:pn.base.toLowerCase(), full:pn.full.toLowerCase(), src:'place'}); }
   const byC = {}; for (const g of Object.keys(ST.tracts)) (byC[g.slice(0,5)] ||= []).push(g);
   for (const [k, n] of Object.entries(ST.counties)) if (byC[k]) SEARCH.push({kind:'County', label:n, tracts:byC[k], key:n.toLowerCase(), src:'county', fit:1, cover:1, inside:1});
   for (const [z, v] of Object.entries(ST.zips)) { const [ts, fit, cover, inside] = v; SEARCH.push({kind:'ZIP code', label:z, tracts:ts, key:z, src:'zcta', fit, cover, inside}); }
@@ -487,24 +602,28 @@ function buildSearch() {
 }
 let qOn = -1, qHits = [];
 function runSearch() {
-  const q = $('q').value.trim().toLowerCase(), box = $('qres');
+  const ql = apos($('q').value.trim().toLowerCase()), q = fold(ql), box = $('qres');
   if (!q) { box.hidden = true; return; }
   const exact = [], starts = [], inc = [];
   for (const it of SEARCH) {
-    const k = it.key, c = (it.city || '').toLowerCase();
-    if (k === q) exact.push(it);
-    else if (k.startsWith(q) || (c && (k + ' ' + c).startsWith(q))) starts.push(it);
+    const k = it.fk ??= fold(it.key), full = it.ff ??= (it.full ? fold(it.full) : ''), c = it.fc ??= fold(it.city || '');
+    // as typed, accents and apostrophes included, ranks ahead of a match that needed folding
+    const ak = it.ak ??= apos(it.key), af = it.af ??= (it.full ? apos(it.full) : ''), akc = it.akc ??= (it.city ? ak + ' ' + apos(it.city.toLowerCase()) : '');
+    it.lit = ak === ql || af === ql || akc === ql ? 0 : ak.startsWith(ql) || (af && af.startsWith(ql)) || (akc && akc.startsWith(ql)) ? 1 : ak.includes(ql) || (af && af.includes(ql)) ? 2 : 3;
+    if (k === q || full === q) exact.push(it);
+    else if (k.startsWith(q) || (full && full.startsWith(q)) || (c && (k + ' ' + c).startsWith(q))) starts.push(it);
     else if (k.includes(q) || (c && q.includes(k) && q.includes(c))) inc.push(it);
   }
   // direct name matches before matches through another name; then neighborhoods before cities, counties and ZIPs; then best fit
-  const rank = (a,b) => (a.via ? 1 : 0) - (b.via ? 1 : 0) || (KIND_ORDER[a.kind] ?? 9) - (KIND_ORDER[b.kind] ?? 9) || (b.fit ?? 0) - (a.fit ?? 0) || a.key.length - b.key.length;
+  const ko = h => KIND_ORDER[h.kind] ?? (h.src === 'place' ? 3 : 9);
+  const rank = (a,b) => a.lit - b.lit || (a.via ? 1 : 0) - (b.via ? 1 : 0) || ko(a) - ko(b) || (b.fit ?? 0) - (a.fit ?? 0) || a.key.length - b.key.length;
   exact.sort(rank); starts.sort(rank); inc.sort(rank);
   qHits = exact.concat(starts, inc).slice(0, 14); qOn = qHits.length ? 0 : -1;
   box.innerHTML = qHits.length ? qHits.map((h,i) => {
     const where = h.city ? ' · ' + esc(h.city) : '';
     const fit = (h.fit != null && h.src !== 'county') ? ` · fit ${pct(h.fit)}` : '';
     const via = h.via ? ` <span class="t">${esc(h.via)}</span>` : '';
-    return `<button type="button" role="option" data-i="${i}" class="${i===0?'on':''}"><span>${esc(h.label)}${via}</span><span class="t">${esc(h.kind)}${where} · ${h.tracts.length} tract${h.tracts.length===1?'':'s'}${fit}</span></button>`;
+    return `<button type="button" role="option" data-i="${i}" class="${i===0?'on':''}"><span>${esc(h.label)}${via}</span><span class="t">${esc(h.kind)}${where} · ${fmtN(h.tracts.length)} tract${h.tracts.length===1?'':'s'}${fit}</span></button>`;
   }).join('') : `<div class="none">No match in ${esc(ST.name)}. Try another state, click tracts on the map, or suggest the area below once you have selected it.</div>`;
   box.hidden = false;
 }
@@ -788,21 +907,37 @@ function guideSays(r) {
   if (!isFinite(lo) || !isFinite(hi)) return `No households live in ${where}, so there is no resident spending to compare with its stores' sales.`;
   const Where = where.charAt(0) === 't' ? 'This selection' : where;
   const per = `<b>${perDollar(lo, hi)}</b>`;
+  // judged on the amounts as shown (whole cents), so equal figures always get equal words
+  const C = x => Math.round(x * 100), L = C(lo), H = C(hi);
+  // which way the headline's net leakage points: 1 leaks, -1 draws, 0 the two estimates disagree. A sentence states a
+  // direction only where the retention rate and the leakage figure agree; otherwise it says what each shows.
+  const gl = Math.min(T.gL, T.gZ), gh = Math.max(T.gL, T.gZ), dir = gl > 0 ? 1 : gh < 0 ? -1 : 0;
+  const unsure = 'though the two estimates disagree on whether, counted in residents\' own dollars, more spending leaves than comes in';
+  const leaks = `so ${H < 80 ? 'much' : 'some'} of that spending likely happens elsewhere`;
+  const draws = d => d === 1 ? leaks : d === 0 ? unsure : 'though, counted in residents\' own dollars, the categories that draw shoppers in outweigh the rest, for a net draw';
+  const pulls = d => d === -1 ? null : d === 0 ? unsure : 'though, counted in residents\' own dollars, the categories that fall short outweigh the rest, leaving a net projected leakage';
+  const times = lo.toFixed(1) === hi.toFixed(1) ? lo.toFixed(1) : lo.toFixed(1) + ' to ' + hi.toFixed(1);
   let s;
-  if (lo >= 2) s = `Stores in ${where} sell about <b>${lo.toFixed(1) === hi.toFixed(1) ? lo.toFixed(1) : lo.toFixed(1) + ' to ' + hi.toFixed(1)} times</b> what its residents' spending would support at the national norm: a shopping destination that draws most of its customers from elsewhere.`;
-  else if (lo > 1.1) s = `Stores in ${where} sell about ${per} for every dollar its residents' spending would support at the national norm, so the area draws shoppers from elsewhere.`;
-  else if (lo >= 0.9 && hi <= 1.1) s = `Stores in ${where} sell close to what its residents' spending would support at the national norm (${per} per dollar).`;
-  else if (hi < 1) s = `Stores in ${where} sell about ${per} for every dollar of sales its residents' spending would support at the national norm, so ${hi < 0.8 ? 'much' : 'some'} of that spending likely happens elsewhere.`;
-  else if (lo >= 1) s = `Stores in ${where} sell somewhat more than its residents' spending would support at the national norm (${per} per dollar), so the area draws some shoppers from elsewhere.`;
+  if (L >= 200) s = `Stores in ${where} sell about <b>${times} times</b> what its residents' spending would support at the national norm` +
+    (dir === -1 ? ': a shopping destination that draws most of its customers from elsewhere.' : `, ${pulls(dir)}.`);
+  else if (L >= 90 && H <= 110) s = `Stores in ${where} sell close to what its residents' spending would support at the national norm (${per} per dollar)` +
+    (dir === 1 ? '; counted in residents\' own dollars, some spending still leaves on balance.' : dir === -1 ? '; counted in residents\' own dollars, the area draws in more spending than it loses.' : '.');
+  else if (L >= 100 && H > 100) { const sum = L > 110 || (L > 100 && H - L >= 25);     // a range from $1.00 exactly: "at least"
+    s = `Stores in ${where} sell ${sum ? 'about ' + per + ' for every dollar' : L === 100 ? 'at least as much as' : 'somewhat more than'} its residents' spending would support at the national norm${sum ? '' : ` (${per} per dollar)`}, ` +
+    (dir === -1 ? `so the area draws ${sum ? '' : 'some '}shoppers from elsewhere.` : `${pulls(dir)}.`); }
+  else if (H <= 100) s = `Stores in ${where} sell about ${per} for every dollar of sales its residents' spending would support at the national norm, ${draws(dir)}.`;
+  // a narrow range across the norm leans by its middle when the leakage figure points the same way
+  else if (H - L < 25 && L + H < 196 && dir === 1) s = `Stores in ${where} sell somewhat less than its residents' spending would support at the national norm (${per} per dollar), so some of that spending likely happens elsewhere.`;
+  else if (H - L < 25 && L + H > 204 && dir === -1) s = `Stores in ${where} sell somewhat more than its residents' spending would support at the national norm (${per} per dollar), so the area draws some shoppers from elsewhere.`;
   else s = `${Where} is hard to call overall: stores there sell ${per} for every dollar its residents' spending would support at the national norm, below or above it depending on which of the two sales estimates is used.`;
-  const short = r.cats.filter(x => Math.max(x.pfL, x.pfZ) < 0.9 && Math.min(x.gL, x.gZ) > 0)
+  const short = r.cats.filter(x => !MINOR.has(x.c) && !OUT_OF_TOTAL.has(x.c) && C(Math.max(x.pfL, x.pfZ)) < 90 && Math.min(x.gL, x.gZ) > 0)
     .sort((a, b) => Math.max(b.gL, b.gZ) - Math.max(a.gL, a.gZ)).slice(0, 3);
   if (short.length) s += ` The biggest shortfalls are ${short.map(x => `${SHORT[x.c].toLowerCase()} (${perDollar(Math.min(x.pfL, x.pfZ), Math.max(x.pfL, x.pfZ))})`).join(', ')}.`;
   // strongest draws first: sales above what the national norm predicts for residents, in dollars
-  const draw = r.cats.filter(x => Math.min(x.pfL, x.pfZ) > 1.1)
+  const draw = r.cats.filter(x => !MINOR.has(x.c) && !OUT_OF_TOTAL.has(x.c) && C(Math.min(x.pfL, x.pfZ)) > 110)
     .sort((a, b) => Math.min(b.sL - b.eL, b.sZ - b.eZ) - Math.min(a.sL - a.eL, a.sZ - a.eZ)).slice(0, 3).map(x => SHORT[x.c].toLowerCase());
   if (draw.length) s += ` It draws shoppers in most for ${draw.join(', ')}.`;
-  const wide = short.find(x => Math.max(x.pfL, x.pfZ) > 1.6 * Math.min(x.pfL, x.pfZ) && Math.min(x.pfL, x.pfZ) > 0.05);
+  const wide = short.find(x => C(Math.max(x.pfL, x.pfZ)) > 1.6 * C(Math.min(x.pfL, x.pfZ)) && C(Math.min(x.pfL, x.pfZ)) > 5);
   if (r.h < 2000 || r.n < 3) s += ' It is a small area, so read these as rough indications.';
   else if (wide) s += ` The two sales estimates differ a lot for ${SHORT[wide.c].toLowerCase()}, so treat that one with care.`;
   return s;
@@ -944,7 +1079,75 @@ const STORE_ROWS = [
     ['ov_salon_barber', 'Salons, barbers and nail shops'], ['ov_laundry', 'Laundries and dry cleaners'], ['ov_apparel', 'Clothing and shoe stores'],
     ['ov_home_furnishings', 'Furniture and home furnishings'], ['ov_gas', 'Gas stations'], ['ov_auto_parts', 'Auto parts stores'],
     ['ov_auto_repair', 'Auto repair shops']]],
+  ['Fitness, child care and health care (Overture Maps)', [
+    ['ov_fitness', 'Gyms, fitness and dance studios, martial arts'], ['ov_childcare', 'Child care centers and preschools'],
+    ['ov_doctor', "Doctors' offices and clinics"], ['ov_urgent_care', 'Urgent care and emergency rooms'], ['ov_dentist', 'Dentists'],
+    ['ov_mental_health', 'Mental health clinics']]],
+  ['Hospitals and community health centers (Medicare and HRSA lists)', [
+    ['cms_hospital', 'Hospitals'], ['hrsa_health_center', 'Community health center sites']]],
 ];
+// Stores against residents' spending: which spending category each kind of store mostly sells in. "Supported" is how
+// many stores of the kind residents' spending in that category would carry at the US ratio of stores to resident
+// spending; sales per store compares local sales per store with the US (retention ÷ stores per resident dollar). Both
+// sides of each ratio come from the same listing, so a listing that runs high everywhere cancels out.
+const STORE_SPEND = [
+  ['Supermarkets and grocery stores (SNAP)', ['snap_supermarket', 'snap_grocery'], ['groceries']],
+  ['Restaurants', ['ov_restaurant'], ['fsr', 'qsr']],
+  ['Cafés, bakeries and snack shops', ['ov_cafe_snack'], ['qsr']],
+  ['Bars and liquor stores', ['ov_bar', 'ov_liquor'], ['alcohol']],
+  ['Salons, barbers and beauty supply', ['ov_salon_barber', 'ov_beauty_supply'], ['perscare']],
+  ['Clothing and shoe stores', ['ov_apparel'], ['apparel']],
+  ['Furniture and home furnishings', ['ov_home_furnishings'], ['home']],
+  ['Gas stations', ['ov_gas'], ['gas']],
+  ['Auto parts and repair', ['ov_auto_parts', 'ov_auto_repair'], ['auto']],
+  // (no row for fitness: gyms and studios are about a third of its sales, beside golf, skiing, bowling and lessons,
+  // which the listings don't count, so stores per dollar would mislead)
+  ['Child care centers and preschools', ['ov_childcare'], ['childcare']],
+];
+function storeSpendRows(r) {
+  const {keys, n} = storeCounts(sel), S = IDX.stores, T = IDX.us_totals;
+  return STORE_SPEND.map(([label, ks, cats]) => {
+    const ix = ks.map(k => keys.indexOf(k)).filter(i => i >= 0); if (!ix.length || !S.us_counts) return null;
+    const here = ix.reduce((a, i) => a + n[i], 0), us = ix.reduce((a, i) => a + S.us_counts[i], 0);
+    const ci = cats.map(c => SUP.indexOf(c)), D = ci.reduce((a, i) => a + r.cats[i].D, 0), Dus = cats.reduce((a, c) => a + (T['d_' + c] || 0), 0) / 1000;
+    const sales = ci.reduce((a, i) => a + (r.cats[i].sL + r.cats[i].sZ) / 2, 0), expd = ci.reduce((a, i) => a + (r.cats[i].eL + r.cats[i].eZ) / 2, 0);
+    if (!(D > 0) || !(Dus > 0) || !us) return null;
+    const supported = us * D / Dus, ret = expd > 0 ? sales / expd : NaN, perStore = here > 0 ? ret * supported / here : NaN;
+    // crowded: well over the stores the spending carries, each selling well under the US average; room: few stores and leakage
+    // listed: many stores on the map but almost no sales in the job counts (self-employed, closed or misplaced listings)
+    const verdict = here <= 0.67 * supported && ret < 0.8 && supported >= 1 ? 'room'
+      : here >= 3 && here >= 1.5 * supported && perStore < 0.15 ? 'listed'
+      : here >= 3 && here >= 1.5 * supported && perStore < 0.67 ? 'crowded'
+      : here >= 3 && here >= 1.5 * supported && perStore > 1.5 ? 'draw'
+      : here >= 1 && perStore > 1.5 && here < supported ? 'busy' : 'inline';
+    // child care: high sales per place come from public payments (subsidies, Head Start), not customers from elsewhere
+    const paid = cats.some(c => OUT_OF_TOTAL.has(c)) && (verdict === 'draw' || verdict === 'busy');
+    return {label, here, supported, ret, perStore, verdict: paid ? 'public' : verdict, cats};
+  }).filter(Boolean);
+}
+const VERDICT = {crowded: 'Crowded', room: 'Room for more', busy: 'Few stores, each busy', draw: 'More stores, each busy',
+  listed: 'Listed, little measured sales', inline: 'In line', public: 'Busy, with public payments'};
+function storeSpendTable(r) {
+  const rows = storeSpendRows(r);
+  const sup = v => v < 10 ? v.toFixed(1) : fmtN(v);
+  // the reading comes second so it stays in view on a phone
+  return `<thead><tr><th>Kind of store</th><th>Reading</th><th>Here</th><th>Residents' spending would carry</th><th>Sales per store (US = 1.00)</th></tr></thead><tbody>` +
+    rows.map(x => `<tr><td>${esc(x.label)}</td><td class="vd ${x.verdict}">${VERDICT[x.verdict]}</td><td class="num">${fmtN(x.here)}</td><td class="num">${sup(x.supported)}</td><td class="num">${isFinite(x.perStore) ? x.perStore.toFixed(2) : '—'}</td></tr>`).join('') + '</tbody>';
+}
+function storeSpendLead(r) {
+  // child care is in the table but not the summary: its sales include public payments (see OUT_OF_TOTAL)
+  const rows = storeSpendRows(r).filter(x => !x.cats.some(c => OUT_OF_TOTAL.has(c))), name = v => rows.filter(x => x.verdict === v).map(x => x.label.toLowerCase());
+  const cr = name('crowded'), rm = name('room'), parts = [];
+  if (cr.length) parts.push(`More stores than residents' spending carries, each selling well under the US average (crowded): ${listJoin(cr)}.`);
+  if (rm.length) parts.push(`Fewer stores than residents' spending carries, while spending leaks (room for more): ${listJoin(rm)}.`);
+  const ls = name('listed');
+  if (ls.length) parts.push(`Map listings and job counts disagree for ${listJoin(ls)}: more places are listed than the spending carries, but the job data show almost no sales, so some listings may be self-employed, closed or misplaced.`);
+  const bz = name('busy');
+  if (bz.length) parts.push(`Fewer stores than residents' spending carries, each selling well over the US average (few stores, each busy): ${listJoin(bz)}.`);
+  if (parts.length) return parts.join(' ');
+  return rows.every(x => x.verdict === 'inline') ? 'Store counts are roughly in line with residents\' spending in every kind listed.'
+    : 'No kind of store listed here is crowded or short of stores; the table shows where stores sell more than usual.';
+}
 function storeCounts(ids) {
   const keys = IDX.stores.keys, n = new Array(keys.length).fill(0);
   let pop = 0;
@@ -971,9 +1174,11 @@ function storesNote(ids) {
 // plus notes and gaps. Each tract may carry its local rates (percent) from the state's rate tables: x general,
 // xf groceries (where the state's file gives a separate local food rate), xm local restaurant-meals tax, xh the upper
 // end of the local rate where it is uncertain (Texas transit and special districts).
-// A category's rate for a selection is averaged over its tracts, weighted by residents' spending there.
+// A category's rate for a selection is averaged over its tracts, weighted by residents' spending there. Categories
+// the tables do not cover (fitness and child care) carry null and are listed as not included.
 const GROC = 0;                       // SUP index of groceries
 function tractCatLocal(T, t, i, hi) {
+  if (!T.cats[SUP[i]]) return 0;
   const [, fl, fx] = T.cats[SUP[i]];
   const x = hi && t.xh != null ? t.xh : t.x;
   let v = (i === GROC && t.xf != null) ? t.xf : fl * x + fx;
@@ -990,14 +1195,14 @@ function taxRates(ids) {
     withRate++;
     for (let i = 0; i < NS; i++) { w[i] += t.d[i]; wl[i] += t.d[i] * tractCatLocal(T, t, i, false); wh[i] += t.d[i] * tractCatLocal(T, t, i, true); }
   }
-  const rate = SUP.map((c, i) => ({c, state: T.cats[c][0], local: w[i] > 0 ? wl[i] / w[i] : 0, localHi: w[i] > 0 ? wh[i] / w[i] : 0}));
+  const rate = SUP.map((c, i) => ({c, covered: !!T.cats[c], state: T.cats[c] ? T.cats[c][0] : 0, local: w[i] > 0 ? wl[i] / w[i] : 0, localHi: w[i] > 0 ? wh[i] / w[i] : 0}));
   return {rate, withRate, n};
 }
 function taxOf(r) {
   const R = taxRates(sel); if (!R) return null;
   const rows = r.cats.map((x, i) => {
     const q = R.rate[i], lo = Math.min(x.gL, x.gZ), hi = Math.max(x.gL, x.gZ);
-    return {c: x.c, q, lo, hi, tLo: Math.max(0, lo) * (q.state + q.local) / 100, tHi: Math.max(0, hi) * (q.state + q.localHi) / 100,
+    return {c: x.c, q, lo, hi, covered: q.covered, tLo: Math.max(0, lo) * (q.state + q.local) / 100, tHi: Math.max(0, hi) * (q.state + q.localHi) / 100,
             sLo: Math.max(0, lo) * q.state / 100, sHi: Math.max(0, hi) * q.state / 100};
   });
   const sum = k => rows.reduce((a, x) => a + x[k], 0);
@@ -1020,12 +1225,12 @@ function taxSection(r) {
   const anyLeak = X.tHi > 0;
   const loc = X.R.withRate === 0 ? ' Local rates for these tracts are not available, so only the state\'s share is counted.'
     : X.R.withRate < X.R.n ? ` ${X.R.n - X.R.withRate} of the ${X.R.n} tracts have no local rate on file, so they count the state's share only.` : '';
-  const none = X.rows.every(x => x.q.state + x.q.localHi <= 0.0005);
+  const none = X.rows.every(x => !x.covered || x.q.state + x.q.localHi <= 0.0005);
   const lead = none ? `There is no sales tax here, so leakage costs no sales-tax revenue.${loc}` : !anyLeak
     ? `Local stores sell at least what the national pattern predicts in every taxed category here, so no sales tax is lost to leakage.${loc}`
     : `At ${esc(ST.name)}'s tax rates, the projected leakage would have paid ${amt(X.tLo, X.tHi, true)} a year in ${T.general ? 'sales tax' : X.sHi > 0.5 ? 'meals tax' : 'local sales tax'}${split(X)}.${loc}`;
   const table = `<thead><tr><th>Category</th><th>Tax rate here</th><th>Projected leakage</th><th>Sales tax on it</th></tr></thead><tbody>` +
-    X.rows.map(x => `<tr><td>${LABEL[x.c]}${part.has(x.c) ? ' <span class="tag">partly</span>' : ''}</td><td class="num">${pctTxt(x.q.state + x.q.local, x.q.state + x.q.localHi)}</td><td class="num">${rangeUSD(x.lo, x.hi)}</td><td class="num">${x.hi > 0 && x.q.state + x.q.localHi > 0.0005 ? rangeUSD(x.tLo, x.tHi) : '—'}</td></tr>`).join('') +
+    X.rows.map(x => `<tr><td>${LABEL[x.c]}${part.has(x.c) ? ' <span class="tag">partly</span>' : ''}</td><td class="num">${x.covered ? pctTxt(x.q.state + x.q.local, x.q.state + x.q.localHi) : 'not included'}</td><td class="num">${rangeUSD(x.lo, x.hi)}</td><td class="num">${x.covered && x.hi > 0 && x.q.state + x.q.localHi > 0.0005 ? rangeUSD(x.tLo, x.tHi) : '—'}</td></tr>`).join('') +
     `<tr class="tot"><td>Categories where spending leaks</td><td></td><td></td><td class="num">${X.tHi > 0 ? rangeUSD(X.tLo, X.tHi) : '—'}</td></tr></tbody>`;
   const notes = [...(T.gaps || []), ...(T.notes || [])].filter((v, i, a) => v && a.indexOf(v) === i);
   return {lead, table, notes};
@@ -1053,6 +1258,272 @@ function renderCoverage() {
   }
 }
 
+// ---------- similar places and the visitor economy ----------
+// IDX.peers (build_peers.py): typical retention by category for areas of the same kind, setting and size. Each class
+// lists, per category, [median, 25th percentile, 75th percentile] of retention, where an area's retention is the
+// average of the jobs-based and ZIP-based estimates. IDX.visitor (extract_visitor.py): the flag rule; tracts carry
+// s = [seasonal homes, housing units, lodging places].
+const SETTING_OF = {m: 'metro', c: 'micro', r: 'rural'};
+const SETTING_TXT = {metro: 'metropolitan areas', micro: 'small-city (micropolitan) areas', rural: 'rural counties'};
+function majorityOf(ids, keyOf) {
+  const w = new Map();
+  for (const g of ids) { const t = ST.tracts[g]; if (!t) continue; const k = keyOf(g); if (k) w.set(k, (w.get(k) || 0) + t.h); }
+  let best = null, bw = -1, tot = 0;
+  for (const [k, v] of w) { tot += v; if (v > bw) { best = k; bw = v; } }
+  return {key: best, share: tot > 0 ? bw / tot : 0};
+}
+let placeOfTract = null, placeOfFips = null;
+function placeOf(g) {
+  if (placeOfFips !== ST.fips) { placeOfTract = new Map(); for (const [p, pl] of Object.entries(ST.places)) for (const t of pl.tracts) placeOfTract.set(t, p); placeOfFips = ST.fips; }
+  return placeOfTract.get(g);
+}
+const NEIGHBORHOOD_KINDS = new Set(['Community area', 'Neighborhood', 'District', 'Approved suggestion', 'Your suggestion']);
+function peerClass(ids, r) {
+  const P = IDX.peers; if (!P || !r.h) return null;
+  const cty = majorityOf(ids, g => g.slice(0, 5)).key;
+  const setting = SETTING_OF[P.county_setting[cty]] || 'rural';
+  // the place holding most of its households is a city of 250,000 or more (the peers' "big city" group)
+  const city = majorityOf(ids, placeOf).key, inBig = !!city && IDX.peers.big_cities.includes(city);
+  const src = selMeta && selMeta.src, kind = selMeta && selMeta.kind;
+  let family, group;
+  if (src === 'place') { family = 'place'; group = setting; }
+  else if (src === 'county') { family = 'county'; group = setting; }
+  else if ((selMeta && NEIGHBORHOOD_KINDS.has(kind)) || src === 'suggested' || src === 'suggested-pending') { family = 'neighborhood'; group = inBig ? 'big' : 'small'; }
+  else if (inBig) { family = 'neighborhood'; group = 'big'; }
+  else { family = 'place'; group = setting; }
+  const c = P.classes.find(c => c.family === family && c.group === group && r.p >= c.pop_min && (c.pop_max == null || r.p < c.pop_max));
+  return c || null;
+}
+function bandTxt(c) {
+  const n = v => v.toLocaleString('en-US');
+  return c.pop_max == null ? `${n(c.pop_min)} or more residents` : c.pop_min === 0 ? `under ${n(c.pop_max)} residents` : `${n(c.pop_min)}–${n(c.pop_max)} residents`;
+}
+function classTxt(c) {
+  const n = c.n.toLocaleString('en-US');
+  if (c.family === 'place') return `${n} cities and towns of ${bandTxt(c)} in ${SETTING_TXT[c.group]}`;
+  if (c.family === 'county') return `${n} ${{metro: 'metropolitan', micro: 'micropolitan (small-city)', rural: 'rural'}[c.group]} counties of ${bandTxt(c)}`;
+  return `${n} neighborhoods of ${bandTxt(c)} in ${c.group === 'big' ? `cities of ${IDX.peers.big_city.toLocaleString('en-US')} people or more` : 'smaller cities and towns'}`;
+}
+// a list in a sentence; items that contain commas ("pets, toys, books") are separated by semicolons
+const listJoin = a => { const sep = a.some(x => x.includes(',')) ? '; ' : ', '; return a.length < 2 ? a.join('') : a.length === 2 && sep === ', ' ? a.join(' and ') : a.slice(0, -1).join(sep) + sep.trim() + ' and ' + a[a.length - 1]; };
+const midPF = x => (isFinite(x.pfL) && isFinite(x.pfZ)) ? (x.pfL + x.pfZ) / 2 : isFinite(x.pfL) ? x.pfL : x.pfZ;
+// position of this area's retention among its peers
+function peerRows(r, c) {
+  return r.cats.map(x => {
+    const q = c.cats[x.c]; if (!q) return null;
+    const v = midPF(x), [med, p25, p75] = q;
+    const where = !isFinite(v) ? '' : v < p25 ? 'low' : v > p75 ? 'high' : 'mid';
+    return {c: x.c, v, med, p25, p75, where};
+  }).filter(Boolean);
+}
+function peerSection(r) {
+  if (!IDX.peers) return {lead: '', table: '', rows: [], cls: null};
+  if (r.h < IDX.peers.min_households) return {lead: `With fewer than ${IDX.peers.min_households} households, this selection is too small to compare with similar places.`, table: '', rows: [], cls: null};
+  const c = peerClass(sel, r);
+  if (!c) return {lead: 'There are too few areas of this kind and size to give a typical retention rate for comparison.', table: '', rows: [], cls: null};
+  const rows = peerRows(r, c), show = rows.filter(x => !MINOR.has(x.c));
+  // child care is in the table but not the sentences: its sales include public payments (see OUT_OF_TOTAL)
+  const told = show.filter(x => !OUT_OF_TOTAL.has(x.c));
+  const list = w => told.filter(x => x.where === w).map(x => SHORT[x.c].toLowerCase());
+  const lo = list('low'), hi = list('high');
+  const name = esc(selLabel && selLabel !== 'Custom selection' ? selLabel : 'this selection');
+  const S = [];
+  if (!told.length) S.push(`Compared with ${classTxt(c)}: no category can be compared.`);
+  else if (!lo.length && !hi.length) S.push(`Compared with ${classTxt(c)}, ${name} is in the middle half for every category.`);
+  else {
+    S.push(`Compared with ${classTxt(c)}, ${name} is ` + (lo.length ? `in the bottom quarter for ${listJoin(lo)}.` : `in the top quarter for ${listJoin(hi)}.`));
+    if (lo.length && hi.length) S.push(`It is in the top quarter for ${listJoin(hi)}.`);
+    if (lo.length + hi.length < told.length) S.push('It is in the middle half for the rest.');
+  }
+  const lead = S.join(' ');
+  const WH = {low: 'Bottom quarter', mid: 'Middle half', high: 'Top quarter'};
+  const tr = x => `<tr${MINOR.has(x.c) ? ` class="minor"${showMinor ? '' : ' hidden'}` : ''}><td>${LABEL[x.c]}</td><td class="num">${fmtPF(x.v)}</td><td class="num">${fmtPF(x.med)}</td><td class="num">${fmtPF(x.p25)} to ${fmtPF(x.p75)}</td><td class="pw ${x.where}">${WH[x.where] || '—'}</td></tr>`;
+  const table = `<thead><tr><th>Category</th><th>Retention here</th><th>Typical for similar places</th><th>Middle half of them</th><th>Where this falls</th></tr></thead><tbody>` +
+    show.map(tr).join('') + rows.filter(x => MINOR.has(x.c)).map(tr).join('') + '</tbody>';
+  return {lead, table, rows, cls: c};
+}
+
+function visitorInfo(ids, r) {
+  const V = IDX.visitor; if (!V) return null;
+  let seas = 0, units = 0, lodge = 0;
+  for (const g of ids) { const t = ST.tracts[g]; if (t && t.s) { seas += t.s[0]; units += t.s[1]; lodge += t.s[2]; } }
+  const share = units > 0 ? seas / units : 0, per1k = r.p > 0 ? lodge / r.p * 1000 : 0;
+  const bySeason = seas >= V.flag.min_seasonal_units && share >= V.flag.seasonal_multiple * V.national_seasonal_share;
+  const byLodging = lodge >= V.flag.min_lodging_places && per1k >= V.lodging_per_1000_p95;
+  return {seas, units, lodge, share, per1k, bySeason, byLodging, flag: bySeason || byLodging};
+}
+function visitorText(v) {
+  if (!v || !v.flag) return '';
+  const bits = [];
+  if (v.bySeason) bits.push(`${Math.round(v.share * 100)}% of homes here are seasonal or vacation homes (${(IDX.visitor.national_seasonal_share * 100).toFixed(1)}% nationally)`);
+  if (v.byLodging) bits.push(`there ${v.lodge === 1 ? 'is' : 'are'} ${fmtN(v.lodge)} hotels, motels and other lodging places, ${v.per1k.toFixed(1)} per 1,000 residents (${IDX.visitor.national_lodging_per_1000.toFixed(1)} nationally)`);
+  return `This looks like a visitor economy: ${bits.join(', and ')}. Visitors' spending is part of local sales here, so the retention rates overstate how much of residents' own spending stays local.`;
+}
+
+// ---------- the surrounding region ----------
+// Rings of 10, 25 and 50 miles (straight line) around the selection: tracts whose interior point lies within that
+// distance of a selected tract's, the selection itself left out. Each tract carries c = [longitude, latitude].
+// Projected leakage adds up across tracts (demand minus sales over the national ratio), so a ring's figure is the sum
+// over its tracts, here the midpoint of the two estimates; the selection's own figure is computed the same way, so an
+// area with no households shows its sales as a surplus. A surplus here (stores sell more than residents' spending supports) is matched against leakage from the
+// rings; leakage here against the rings' surplus. Neighboring states' tracts are fetched when a ring crosses into them.
+const RINGS = [10, 25, 50];
+const miles = (a, b) => {
+  const R = 3958.8, rad = Math.PI / 180, dLat = (b[1] - a[1]) * rad, dLon = (b[0] - a[0]) * rad;
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(a[1] * rad) * Math.cos(b[1] * rad) * Math.sin(dLon / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+};
+async function stateData(fips) {
+  let d = cache.get(fips);
+  if (!d) {
+    const res = await fetch('data/st/' + fips + '.json');
+    if (!res.ok) throw new Error('state data ' + fips + ': ' + res.status);
+    d = await res.json(); cache.set(fips, d);
+  }
+  return d;
+}
+function selPoints(ids) { const pts = []; for (const g of ids) { const t = ST.tracts[g]; if (t && t.c) pts.push(t.c); } return pts; }
+const tractGap = (t, i, c) => t.d[i] - (t.l[i] / IDX.calib[c].lodes + t.z[i] / IDX.calib[c].zbp) / 2;   // $ thousands
+let regionKey = '', regionResult = null, regionError = false, regionToken = 0;
+async function computeRegion(ids) {
+  const pts = selPoints(ids); if (!pts.length) return null;
+  const R = RINGS[RINGS.length - 1], lat0 = pts.reduce((a, c) => a + c[1], 0) / pts.length;
+  const dLat = R / 69, dLon = R / (69 * Math.cos(lat0 * Math.PI / 180));
+  const box = [Math.min(...pts.map(c => c[0])) - dLon, Math.min(...pts.map(c => c[1])) - dLat, Math.max(...pts.map(c => c[0])) + dLon, Math.max(...pts.map(c => c[1])) + dLat];
+  const near = IDX.states.filter(s => s.bbox && s.bbox[0] <= box[2] && s.bbox[2] >= box[0] && s.bbox[1] <= box[3] && s.bbox[3] >= box[1]).map(s => s.fips);
+  if (!near.includes(ST.fips)) near.push(ST.fips);
+  const states = await Promise.all(near.map(f => f === ST.fips ? ST : stateData(f)));
+  // nearest selected point, by a flat-earth distance first (cheap), then the exact one for the nearest
+  const kx = 69 * Math.cos(lat0 * Math.PI / 180);
+  const gap = RINGS.map(() => new Array(NS).fill(0)), pop = RINGS.map(() => 0);
+  for (const S of states) for (const [g, t] of Object.entries(S.tracts)) {
+    if (!t.c || ids.has(g) || t.c[0] < box[0] || t.c[0] > box[2] || t.c[1] < box[1] || t.c[1] > box[3]) continue;
+    let best = Infinity, bp = null;
+    for (const c of pts) { const dx = (t.c[0] - c[0]) * kx, dy = (t.c[1] - c[1]) * 69, d = dx * dx + dy * dy; if (d < best) { best = d; bp = c; } }
+    const m = miles(bp, t.c); if (m > R) continue;
+    for (let k = 0; k < RINGS.length; k++) if (m <= RINGS[k]) { pop[k] += t.p || 0; for (let i = 0; i < NS; i++) gap[k][i] += tractGap(t, i, SUP[i]); }
+  }
+  return {gap, pop, states: near};
+}
+// how far out the balancing spending reaches, per category
+function regionRows(r, R) {
+  return r.cats.map((x, i) => {
+    const here = x.D - (x.sL / IDX.calib[x.c].lodes + x.sZ / IDX.calib[x.c].zbp) / 2, ring = R.gap.map(a => a[i]);
+    const small = Math.max(50, 0.05 * x.D);                 // $ thousands: too small a gap to place
+    let reach = null, kind = 'even';
+    if (here < -small) { kind = 'surplus'; const k = ring.findIndex(v => v >= -here); reach = k < 0 ? 'beyond' : RINGS[k]; }
+    else if (here > small) { kind = 'leak'; const k = ring.findIndex(v => v <= -here); reach = k < 0 ? 'beyond' : RINGS[k]; }
+    return {c: x.c, here, ring, kind, reach};
+  });
+}
+const gapCell = v => v >= 0 ? fmtUSD(v) : `<span class="inflow">${fmtUSD(-v)}<span class="sl">surplus</span></span>`;
+function regionSection(r, R) {
+  if (!R) return {lead: regionError ? 'The surrounding area could not be loaded. Try picking the area again.' : 'The surrounding region cannot be placed for this selection.', table: '', rows: []};
+  const rows = regionRows(r, R), show = rows.filter(x => !MINOR.has(x.c));
+  const told = show.filter(x => !OUT_OF_TOTAL.has(x.c));   // child care's sales include public payments; shown, not traced
+  const by = (kind, reach) => told.filter(x => x.kind === kind && x.reach === reach).map(x => SHORT[x.c].toLowerCase());
+  const reachList = kind => RINGS.map(m => [m, by(kind, m)]).filter(([, a]) => a.length).map(([m, a]) => `within ${m} miles for ${listJoin(a)}`).join('; ');
+  const s = [];
+  const sur = reachList('surplus'), surB = by('surplus', 'beyond'), lk = reachList('leak'), lkB = by('leak', 'beyond');
+  if (sur) s.push(`Where stores here sell more than residents' spending supports, leakage from the area around it is enough to account for the extra ${sur}.`);
+  if (surB.length) s.push(`For ${listJoin(surB)}, even the area within 50 miles does not leak that much, so those sales draw on visitors, travelers or a wider region.`);
+  if (lk) s.push(`Where residents' spending leaks, nearby stores sell enough extra to absorb it ${lk}.`);
+  if (lkB.length) s.push(`For ${listJoin(lkB)}, stores within 50 miles do not sell enough extra to absorb what leaks, so that spending likely goes farther away or online.`);
+  if (!(r.tot.D > 0)) s.unshift('No households live here, so every sale here comes from people who live elsewhere.');
+  else if (!s.length) s.push('Local sales and residents\' spending roughly balance in every category, so there is little to trace to the surrounding area.');
+  const REACH = {10: 'Within 10 miles', 25: 'Within 25 miles', 50: 'Within 50 miles', beyond: 'Beyond 50 miles'};
+  const tr = x => `<tr${MINOR.has(x.c) ? ` class="minor"${showMinor ? '' : ' hidden'}` : ''}><td>${LABEL[x.c]}</td><td class="num">${gapCell(x.here)}</td>${x.ring.map(v => `<td class="num">${gapCell(v)}</td>`).join('')}<td>${x.kind === 'even' ? '—' : REACH[x.reach]}</td></tr>`;
+  const table = `<thead><tr><th>Category</th><th>Here</th>${RINGS.map((m, k) => `<th>Within ${m} miles<span class="pnote">${fmtN(R.pop[k])} residents</span></th>`).join('')}<th>Balanced by</th></tr></thead><tbody>` +
+    show.map(tr).join('') + rows.filter(x => MINOR.has(x.c)).map(tr).join('') + '</tbody>';
+  return {lead: s.join(' '), table, rows};
+}
+async function renderRegion(r) {
+  const key = ST.fips + ':' + [...sel].sort().join(',');
+  const token = ++regionToken;                     // any earlier request still loading is now stale
+  if (key === regionKey && regionResult) { paintRegion(r); return; }
+  regionError = false;
+  $('regionLead').textContent = 'Loading the surrounding area…'; $('regionTbl').innerHTML = '';
+  let R = null, err = false;
+  try { R = await computeRegion(new Set(sel)); } catch (e) { console.error(e); err = true; }
+  if (token !== regionToken) return;
+  regionKey = err ? '' : key; regionResult = R; regionError = err;
+  paintRegion(r);
+}
+function paintRegion(r) { const x = regionSection(r, regionResult); $('regionLead').innerHTML = x.lead; $('regionTbl').innerHTML = x.table; }
+
+// ---------- downloads ask for an email once; anonymous usage counts ----------
+// The first download in a browser asks for an email address (role, organization and an updates opt-in are optional),
+// saves the file, then sends the details to the Apps Script (Leads tab) and remembers them in this browser, so later
+// downloads go straight through and are recorded against the same address. If the Apps Script is off or
+// unreachable, the download still happens.
+// Usage counts: each selection someone stays on for a few seconds, and each download, is counted (date, kind, state,
+// area name for named areas, tract count): no address, no identifier, nothing about the browser.
+const Gate = (() => {
+  const KEY = 'nsg_dl';
+  const on = () => /^https:\/\/script\.google\.com\/macros\/s\/[\w-]+\/exec$/.test(SUGGEST_API);
+  const load = () => { try { return JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { return null; } };
+  const save = p => { try { localStorage.setItem(KEY, JSON.stringify(p)); } catch (e) {} };
+  const post = body => fetch(SUGGEST_API, {method: 'POST', headers: {'Content-Type': 'text/plain;charset=utf-8'}, body: JSON.stringify(body)}).catch(() => null);
+  const areaName = () => selMeta && selMeta.label ? (selMeta.kind === 'ZIP code' ? 'ZIP ' + selMeta.label : selMeta.label) : (sel.size ? 'Custom selection' : '');
+  let pending = null;
+  function record(kind, p) {
+    return post({lead: 1, email: p.email, role: p.role || '', org: p.org || '', updates: !!p.updates,
+      kind, area: areaName(), st: ST ? ST.usps : '', link: kind === 'state' || /^#review=/.test(location.hash) ? '' : location.href});
+  }
+  function open(kind, go) {
+    const prof = load() || {};
+    pending = {kind, go};
+    $('gEmail').value = prof.email || ''; $('gRole').value = prof.role || ''; $('gOrg').value = prof.org || ''; $('gUpdates').checked = !!prof.updates;
+    $('gMsg').textContent = ''; $('gate').hidden = false; $('gEmail').focus();
+  }
+  function close() { $('gate').hidden = true; pending = null; }
+  // called by the Download buttons; go() saves the file
+  function before(kind, go) {
+    if (!on()) return go();
+    const p = load();
+    if (p && p.email) { record(kind, p); usage('download'); return go(); }
+    open(kind, go);
+  }
+  function submit(e) {
+    e.preventDefault();
+    const email = $('gEmail').value.trim();
+    if (!/^[^\s@<>,;"'=+\-][^\s@<>,;"']*@[^\s@<>,;"']+\.[a-z]{2,}$/i.test(email)) { $('gMsg').textContent = 'Please enter a working email address.'; $('gEmail').focus(); return; }
+    const p = {email, role: $('gRole').value, org: $('gOrg').value.trim().slice(0, 120), updates: $('gUpdates').checked};
+    save(p);
+    const {kind, go} = pending || {};
+    close();
+    if (!kind) { who(); return; }      // only changing the saved details
+    if (go) go();                      // save the file while the click still counts as the visitor's
+    record(kind, p); usage('download'); who();
+  }
+  function who() {
+    const p = load(), el = $('gWho'); if (!el) return;
+    el.hidden = !(on() && p && p.email);
+    if (!el.hidden) el.innerHTML = `Downloads are recorded for ${esc(p.email)}. <button type="button" class="linkbtn" id="gChange">Change</button>`;
+  }
+  // usage: a selection counts once someone has stayed on it for 4 seconds; each distinct selection once per page load
+  let tmr = null; const seen = new Set();
+  function usage(kind) {
+    if (!on() || !ST) return;
+    post({usage: 1, kind, st: ST.usps, area: areaName(), tracts: sel.size});
+  }
+  function viewed() {
+    clearTimeout(tmr);
+    if (!sel.size) return;
+    const key = ST.fips + ':' + [...sel].sort().join(',');
+    tmr = setTimeout(() => { if (seen.has(key)) return; seen.add(key); usage('view'); }, 4000);
+  }
+  function init() {
+    $('gForm').addEventListener('submit', submit);
+    $('gCancel').addEventListener('click', close);
+    $('gate').addEventListener('click', e => { if (e.target === $('gate')) close(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('gate').hidden) close(); });
+    $('gWho').addEventListener('click', e => { if (e.target.id === 'gChange') open(null, null); });
+    who();
+  }
+  return {before, viewed, init, forget: () => { try { localStorage.removeItem(KEY); } catch (e) {} }};
+})();
+
 // ---------- render ----------
 function fitText(m) {
   if (!m || m.src === 'county') return '';
@@ -1069,9 +1540,52 @@ function fitText(m) {
 // spending would support at the national norm"); at or below it, or straddling it, as the rate against 1.0.
 function retTxt(a, b) {
   const lo = Math.min(a, b), hi = Math.max(a, b);
-  if (!(lo > 1)) return `a retention rate of <strong>${range(a, b, fmtPF)}</strong> against the national norm of 1.0`;
-  const f = x => x.toFixed(lo >= 2 ? 1 : 2), A = f(lo), B = f(hi);
+  if (!(Math.round(lo * 100) > 100)) return `a retention rate of <strong>${range(a, b, fmtPF)}</strong> against the national norm of 1.0`;
+  const f = x => x.toFixed(Math.round(lo * 100) >= 200 ? 1 : 2), A = f(lo), B = f(hi);
   return `<strong>${A === B ? A : A + ' to ' + B} times</strong> what residents' spending would support at the national norm`;
+}
+// Residents' spending in the measured categories as a share of their household income (ACS aggregate), for scale
+// household income and the spending's share of it; where the Census does not publish a tract's income total, it is
+// estimated from the brackets, and the share is left out once those tracts hold more than a tenth of the households
+const incomeLabel = r => 'household income a year, before taxes' + (r.ie > 0 ? (r.ie >= r.h ? ' (estimated)' : ' (partly estimated)') : '');
+function shareInfo(r) {
+  const x = r.i > 0 && r.tot.D > 0 ? r.tot.D / r.i : null;
+  if (x == null) return {txt: '', note: ''};
+  if (r.ie > 0.1 * r.h) return {txt: '', note: r.ien === r.n
+      ? `The Census does not publish a household income total for ${r.n === 1 ? 'this tract' : 'these tracts'}, so income is estimated from the households in each income bracket, and no share of income is given.`
+      : r.ie >= r.h ? `The Census does not publish a household income total for the tract${r.ien === 1 ? '' : 's'} where these households live, so income is estimated from the households in each income bracket, and no share of income is given.`
+      : `The Census does not publish a household income total for ${fmtN(r.ien)} of these ${fmtN(r.n)} tracts, so ${r.ien === 1 ? 'its' : 'their'} income is estimated from the households in each income bracket; with ${pct(r.ie / r.h)} of households in ${r.ien === 1 ? 'that tract' : 'those tracts'}, no share of income is given.`};
+  const p = Math.round(x * 100);         // judged on the percentage as shown
+  return {txt: p > 100 ? 'more than their reported household income' : `about ${p}% of their ${p > 50 ? 'reported ' : ''}household income`,
+    note: p > 50 ? "Estimated spending is a large share of reported income here. That is common where many households are students or live partly on savings, financial aid, family support or benefits the Census does not count as income; the spending survey shows the same pattern at low incomes." : ''};
+}
+// the retention range as shown in headlines: one decimal from 2 up, as the summary sentence words it
+const retFig = (a, b) => { const lo = Math.min(a, b), hi = Math.max(a, b); if (!(Math.round(lo * 100) > 100)) return range(a, b, fmtPF); const f = x => x.toFixed(Math.round(lo * 100) >= 200 ? 1 : 2), A = f(lo), B = f(hi); return A === B ? A : A + ' to ' + B; };
+// The retention rate weighs categories by the sales they would have at the national norm, net leakage by residents'
+// spending in them, so the two can point different ways. Judged on the values as shown: a range from 1.00 reaching above
+// it counts as above, one to 1.00 reaching below it as below (as the chart colours them); the leakage by its sign.
+function headlineSplit(r) {
+  const T = r.tot, R2 = x => Math.round(x * 100) / 100;
+  const gl = Math.min(T.gL, T.gZ), gh = Math.max(T.gL, T.gZ), pl = R2(Math.min(T.pfL, T.pfZ)), ph = R2(Math.max(T.pfL, T.pfZ));
+  // as the chart colours a range: from 1.00 reaching above it is above, to 1.00 reaching below it is below
+  const a = pl >= 1 && ph > 1 ? 1 : ph <= 1 && pl < 1 ? -1 : 0, b = gl > 0 ? -1 : gh < 0 ? 1 : 0;
+  return T.D > 0 && a !== 0 && b !== 0 && a !== b;
+}
+function splitNote(r) {
+  const leak = Math.min(r.tot.gL, r.tot.gZ) > 0;
+  return "The two figures weigh the categories differently: the retention rate by the sales each would have at the national norm, the leakage by residents' own spending in it. " +
+    (leak ? "Here the categories that draw shoppers in weigh more in expected sales, and the ones that fall short weigh more in residents' spending"
+          : "Here the categories that fall short weigh more in expected sales, and the ones that draw shoppers in weigh more in residents' spending") +
+    ", so the two point different ways; the table shows which is which.";
+}
+function figsHTML(r) {
+  const T = r.tot, gl = Math.min(T.gL, T.gZ), gh = Math.max(T.gL, T.gZ), si = shareInfo(r);
+  const gap = gl >= 0 ? `<b class="leak">${rangeUSD(T.gL, T.gZ)}</b><span>Projected leakage a year</span>`
+    : gh <= 0 ? `<b class="inflow">${rangeUSD(-T.gL, -T.gZ)}</b><span>Net draw a year: stores sell more than residents' spending supports</span>`
+    : `<b class="long">${fmtUSD(gl)} to ${fmtUSD(gh)}</b><span>Net projected leakage; the two estimates disagree on whether spending leaves or comes in</span>`;
+  return `<div class="fig"><b>${fmtUSD(T.D)}</b><span>Estimated residents' spending a year in the ${NT} measured categories${si.txt ? ', ' + si.txt : ''}</span></div>` +
+    `<div class="fig">${gap}</div><div class="fig"><b>${retFig(T.pfL, T.pfZ)}</b><span>${Math.round(Math.min(T.pfL, T.pfZ) * 100) > 100 ? "Retention: times what residents' spending would support at the national norm" : 'Retention rate (1.0 is the national norm)'}</span></div>` +
+    (headlineSplit(r) ? `<p class="fignote">${splitNote(r)}</p>` : '') + (si.note ? `<p class="fignote">${si.note}</p>` : '');
 }
 function summaryText(r) {
   const T = r.tot, gapLo = Math.min(T.gL, T.gZ), gapHi = Math.max(T.gL, T.gZ);
@@ -1080,26 +1594,27 @@ function summaryText(r) {
   const gapTxt = gapHi <= 0 ? `Overall, local stores sell more than the national pattern predicts for residents, so the area draws shoppers in.`
     : gapLo >= 0 ? `Projected leakage is a net <strong>${rangeUSD(T.gL,T.gZ)} a year</strong>: residents' spending the area would keep at the national norm but doesn't.`
     : `The two supply estimates disagree on whether the area holds more or less than the norm overall (${fmtUSD(gapLo)} to ${fmtUSD(gapHi)} of residents' spending).`;
-  const pos = r.cats.filter(x => Math.min(x.gL, x.gZ) > 0).sort((a,b) => Math.max(b.gL,b.gZ) - Math.max(a.gL,a.gZ)).slice(0,3);
+  const pos = r.cats.filter(x => !MINOR.has(x.c) && !OUT_OF_TOTAL.has(x.c) && Math.min(x.gL, x.gZ) > 0).sort((a,b) => Math.max(b.gL,b.gZ) - Math.max(a.gL,a.gZ)).slice(0,3);
   const catTxt = pos.length ? ` Largest projected leakage: ${pos.map(x => `${SHORT[x.c].toLowerCase()} ${rangeUSD(x.gL,x.gZ)}`).join('; ')}.` : '';
-  const lead = `In the ${NS} categories public data can measure on both sides, residents spend about <strong>${fmtUSD(T.D)} a year</strong>. Local stores sell ${rangeUSD(T.sL,T.sZ)}: ${retTxt(T.pfL,T.pfZ)}. ${gapTxt}${catTxt}`;
+  const lead = `In the ${NT} categories public data can measure on both sides (child care, also measured, is shown apart), residents spend about <strong>${fmtUSD(T.D)} a year</strong>. Local stores sell ${rangeUSD(T.sL,T.sZ)}: ${retTxt(T.pfL,T.pfZ)}. ${gapTxt}${catTxt}`;
   const w = [];
   if (r.h < 2000 || r.n < 3) w.push('This is a small area. Store sales are allocated to tracts from ZIP and job counts, so one store more or less can swing a category; treat the figures as indicative.');
-  const big = r.cats.filter(x => Math.max(x.pfL,x.pfZ) > 3).map(x => SHORT[x.c].toLowerCase());
+  const big = r.cats.filter(x => !MINOR.has(x.c) && !OUT_OF_TOTAL.has(x.c) && Math.round(Math.max(x.pfL,x.pfZ) * 100) > 300).map(x => SHORT[x.c].toLowerCase());
   if (big.length) w.push(`Sales more than 3 times the national norm on either estimate (${big.join('; ')}) usually mean a regional destination, a highway corner or a business district, where most buyers live elsewhere.`);
   if (gapHi <= 0 && pos.length) w.push('The overall figure nets categories against each other: the area draws shoppers in overall but still falls short in the categories listed above.');
+  const vt = visitorText(visitorInfo(sel, r)); if (vt) w.push(vt);
   return {lead, w};
 }
 function render() {
   const r = compute(sel);
   const n = r.n;
-  $('selcount').textContent = n ? `${n} tract${n===1?'':'s'} selected · ${fmtN(r.p)} residents · ${fmtN(r.h)} households` : 'No tracts selected';
+  $('selcount').textContent = n ? `${fmtN(n)} tract${n===1?'':'s'} selected · ${fmtN(r.p)} residents · ${fmtN(r.h)} households` : 'No tracts selected';
   const counties = [...new Set([...sel].map(g => ST.counties[g.slice(0,5)]).filter(Boolean))];
   $('selwhere').textContent = n ? (counties.slice(0,3).join(', ') + (counties.length>3 ? ` and ${counties.length-3} more` : '') + ', ' + ST.name) : ST.name;
   const ft = fitText(selMeta);
   $('fitbox').hidden = !ft || !n; $('fitbox').textContent = ft;
   $('stats').innerHTML = [
-    [fmtN(r.p), 'residents'], [fmtN(r.h), 'households'], [fmtN(n), n === 1 ? 'census tract' : 'census tracts'], [fmtN(r.ja), 'jobs located here']
+    [fmtN(r.p), 'residents'], [fmtN(r.h), 'households'], [fmtN(n), n === 1 ? 'census tract' : 'census tracts'], [fmtN(r.ja), 'jobs located here'], [r.i > 0 ? fmtUSD(r.i) : '—', incomeLabel(r)]
   ].map(([b,s]) => `<div class="stat"><b>${b}</b><span>${s}</span></div>`).join('');
   document.querySelectorAll('#dl button').forEach(b => { if (b.dataset.dl !== 'state') b.disabled = !n; });
   Suggest.renderForm(n);
@@ -1107,23 +1622,26 @@ function render() {
   renderGuide(r);
   Suggest.renderReview(selMeta);
   if (!n) {
+    $('figs').hidden = true; $('figs').innerHTML = '';
     $('headline').textContent = 'Search for a place or click tracts on the map to begin.';
-    $('warn').hidden = true; $('tbl').innerHTML = ''; $('stores').innerHTML=''; $('donly').innerHTML=''; $('jobs').innerHTML=''; $('programs').innerHTML=''; $('stores2').innerHTML=''; $('storesNote').textContent=''; $('taxLead').textContent=''; $('taxTbl').innerHTML=''; $('taxNotes').innerHTML=''; d3.select('#chart').selectAll('*').remove();
+    $('warn').hidden = true; $('tbl').innerHTML = ''; $('stores').innerHTML=''; $('donly').innerHTML=''; $('jobs').innerHTML=''; $('programs').innerHTML=''; $('stores2').innerHTML=''; $('storesNote').textContent=''; $('spendLead').textContent=''; $('spendTbl').innerHTML=''; $('taxLead').textContent=''; $('taxTbl').innerHTML=''; $('taxNotes').innerHTML=''; $('peerLead').textContent=''; $('peerTbl').innerHTML=''; $('regionLead').textContent=''; $('regionTbl').innerHTML=''; regionToken++; d3.select('#chart').selectAll('*').remove();
     if (hashReady) syncHash();
     return;
   }
   const T = r.tot, st = summaryText(r);
+  $('figs').hidden = !(T.D > 0); $('figs').innerHTML = T.D > 0 ? figsHTML(r) : '';
   $('headline').innerHTML = st.lead;
   $('warn').hidden = !st.w.length; $('warn').textContent = st.w.join(' ');
   drawChart(r);
   const row = x => {
     const gl = Math.min(x.gL,x.gZ), gh = Math.max(x.gL,x.gZ);
     const cls = gl > 0 ? 'leak' : gh < 0 ? 'inflow' : '';
-    return `<tr><td>${LABEL[x.c]}</td><td class="num">${fmtUSD(x.D)}</td><td class="num">${rangeUSD(x.sL,x.sZ)}</td><td class="num">${range(x.pfL,x.pfZ,fmtPF)}</td><td class="num ${cls}">${rangeUSD(x.gL,x.gZ)}</td></tr>`;
+    const minor = MINOR.has(x.c);
+    return `<tr${minor ? ` class="minor"${showMinor ? '' : ' hidden'}` : ''}><td>${LABEL[x.c]}</td><td class="num">${fmtUSD(x.D)}</td><td class="num">${rangeUSD(x.sL,x.sZ)}</td><td class="num">${range(x.pfL,x.pfZ,fmtPF)}</td><td class="num ${cls}">${rangeUSD(x.gL,x.gZ)}</td></tr>`;
   };
   $('tbl').innerHTML = `<thead><tr><th>Category</th><th>Resident demand</th><th>Local sales</th><th>Retention rate</th><th>Projected leakage</th></tr></thead><tbody>` +
-    r.cats.map(row).join('') +
-    `<tr class="tot"><td>All ${NS} measured categories (net)</td><td class="num">${fmtUSD(T.D)}</td><td class="num">${rangeUSD(T.sL,T.sZ)}</td><td class="num">${range(T.pfL,T.pfZ,fmtPF)}</td><td class="num ${Math.min(T.gL,T.gZ)>0?'leak':Math.max(T.gL,T.gZ)<0?'inflow':''}">${rangeUSD(T.gL,T.gZ)}</td></tr></tbody>`;
+    r.cats.filter(x => !MINOR.has(x.c)).map(row).join('') + r.cats.filter(x => MINOR.has(x.c)).map(row).join('') +
+    `<tr class="tot"><td>All ${NT} categories in the total (net)</td><td class="num">${fmtUSD(T.D)}</td><td class="num">${rangeUSD(T.sL,T.sZ)}</td><td class="num">${range(T.pfL,T.pfZ,fmtPF)}</td><td class="num ${Math.min(T.gL,T.gZ)>0?'leak':Math.max(T.gL,T.gZ)<0?'inflow':''}">${rangeUSD(T.gL,T.gZ)}</td></tr></tbody>`;
   $('stores').innerHTML = storeTable(r);
   $('donly').innerHTML = `<thead><tr><th>Category</th><th>Resident demand</th><th>Per household</th></tr></thead><tbody>` +
     DEM.slice(NS).map((c,i) => `<tr><td>${LABEL[c]}</td><td class="num">${fmtUSD(r.d[NS+i])}</td><td class="num">${r.h ? '$' + fmtN(r.d[NS+i]*1000/r.h) : '—'}</td></tr>`).join('') + '</tbody>';
@@ -1133,8 +1651,12 @@ function render() {
   { const tx = taxSection(r); $('taxLead').innerHTML = tx.lead; $('taxTbl').innerHTML = tx.table; $('taxNotes').innerHTML = tx.notes.map(n => `<li>${esc(n)}</li>`).join('');
     $('taxNotesBox').hidden = !tx.notes.length; $('taxNotesSum').textContent = `Notes on ${ST.name}'s rates and what it taxes`; }
   $('storesNote').textContent = storesNote(sel);
+  $('spendLead').textContent = storeSpendLead(r); $('spendTbl').innerHTML = storeSpendTable(r);
   $('commute').innerHTML = commuteText(r);
+  { const pe = peerSection(r); $('peerLead').innerHTML = pe.lead; $('peerTbl').innerHTML = pe.table; }
+  renderRegion(r);
   if (hashReady) syncHash();
+  Gate.viewed();
 }
 // LODES workplace sectors CNS01-CNS20, in Census order; the three the store-sales estimate draws on are flagged
 const JOB_SECTORS = ['Agriculture, forestry and fishing', 'Mining, oil and gas', 'Utilities', 'Construction', 'Manufacturing',
@@ -1171,36 +1693,50 @@ function storeTable(r) {
   const SA = IDX.store_avg;
   const eq = (g, avg) => { const lo = Math.min(g[0],g[1])*1000/avg, hi = Math.max(g[0],g[1])*1000/avg; if (hi <= 0) return 'none (no gap)'; const f = v => v < 10 ? v.toFixed(1) : Math.round(v).toString(); return lo <= 0 ? 'up to ' + f(hi) : (f(lo) === f(hi) ? f(lo) : f(lo) + ' – ' + f(hi)); };
   return `<thead><tr><th>Category and benchmark store</th><th>Sales gap at the national norm</th><th>Benchmark store's sales in the category</th><th>Stores the full gap equals</th><th>At 25% recapture</th></tr></thead><tbody>` +
-    ['groceries','fsr','qsr','apparel','home'].filter(c => SA[c]).map(c => {
+    ['groceries','fsr','qsr','apparel','home','fitness','childcare'].filter(c => SA[c]).map(c => {
       const x = r.cats[SUP.indexOf(c)], avg = SA[c].sales, g = [x.eL - x.sL, x.eZ - x.sZ];
       return `<tr><td>${SHORT[c]} vs. a ${esc(SA[c].label)}</td><td class="num">${rangeUSD(g[0], g[1])}</td><td class="num">${fmtUSD(avg/1000)}</td><td class="num">${eq(g, avg)}</td><td class="num">${eq(g.map(v=>v*0.25), avg)}</td></tr>`;
     }).join('') + '</tbody>';
 }
 
-function chartSVG(r, W, forReport) {
-  const H = 30 * r.cats.length + 40, narrow = !forReport && W < 420, ml = narrow ? 128 : Math.min(170, W*0.36), mr = 54, mt = 8;
+function chartSVG(r0, W, forReport) {
+  const r = Object.assign({}, r0, {cats: r0.cats.filter(x => !MINOR.has(x.c))});
+  const narrow = !forReport && W < 420, ml = narrow ? 128 : Math.min(170, W*0.36), mt = 8, mr = 54;
   const max = Math.max(2, Math.min(4, d3.max(r.cats, x => Math.max(x.pfL||0, x.pfZ||0)) * 1.08));
+  const lab = d => { const lo = Math.min(d.pfL, d.pfZ), hi = Math.max(d.pfL, d.pfZ); return !isFinite(lo) ? '' : hi > max ? (fmtPF(lo) === max.toFixed(2) || lo > max ? '≥' + max.toFixed(2) : fmtPF(lo) + ' to >' + max.toFixed(2)) : range(lo, hi, fmtPF); };
+  const lw = t => 7.3 * t.length;      // 12px monospace: about 7.2px a character
   const x = v => ml + (Math.min(v, max) / max) * (W - ml - mr);
+  // each row: its value label right of the bar when it fits, otherwise on a second line under the category name, in a
+  // taller row so the value stays with its own category
+  const rows = r.cats.map(d => { const lo = Math.min(d.pfL, d.pfZ), hi = Math.max(d.pfL, d.pfZ), t = lab(d), xr = x(Math.min(hi, max)) + 6;
+    return {d, lo, hi, t, xr, fitR: !isFinite(lo) || xr + lw(t) <= W - 2}; });
+  let acc = mt + 6;
+  for (const w of rows) { w.y = acc; acc += w.fitR ? 30 : 44; }
+  const H = acc + 26;
+  let grey = false;
   const C = forReport ? {leak:'#d9573f', inflow:'#2f6fb0', ink:'#14212b', muted:'#5a6b78', grid:'#e9eef1'} : null;
   let s = '';
-  const ticks = d3.range(0, max + 1e-9, max > 3 ? 1 : 0.5);
+  const ticks = d3.range(0, max + 1e-9, max > 3 || (narrow && max > 2) ? 1 : 0.5);
   for (const t of ticks) s += `<line class="gl" x1="${x(t)}" x2="${x(t)}" y1="${mt}" y2="${H-24}" ${C?`stroke="${C.grid}"`:''}/><g class="ax"><text x="${x(t)}" y="${H-8}" text-anchor="middle" ${C?`fill="${C.muted}" font-size="11" font-family="monospace"`:''}>${t.toFixed(1)}</text></g>`;
   s += `<line class="one" x1="${x(1)}" x2="${x(1)}" y1="${mt-4}" y2="${H-24}" ${C?`stroke="${C.ink}" stroke-dasharray="3 3"`:''}/>`;
-  r.cats.forEach((d, i) => {
-    const y = mt + i*30 + 6, lo = Math.min(d.pfL, d.pfZ), hi = Math.max(d.pfL, d.pfZ);
-    const col = hi < 1 ? 'var(--leak)' : lo > 1 ? 'var(--inflow)' : 'var(--muted)';
-    const colR = C ? (hi < 1 ? C.leak : lo > 1 ? C.inflow : C.muted) : col;
+  for (const {d, lo, hi, t, xr, fitR, y} of rows) {
+    const H2 = Math.round(hi * 100), L2 = Math.round(lo * 100);
+    const below = H2 <= 100 && L2 < 100, above = L2 >= 100 && H2 > 100;
+    const col = below ? 'var(--leak)' : above ? 'var(--inflow)' : 'var(--muted)';
+    const colR = C ? (below ? C.leak : above ? C.inflow : C.muted) : col;
+    if (isFinite(lo) && !below && !above) grey = true;
     s += `<text x="${ml-8}" y="${y+12}" text-anchor="end" ${C?`fill="${C.ink}" font-size="12" font-family="sans-serif"`:narrow?'style="font-size:11px"':''}>${SHORT[d.c]}</text>`;
     if (isFinite(lo)) {
       s += `<rect x="${x(lo)}" y="${y+2}" width="${Math.max(3, x(hi)-x(lo))}" height="14" rx="3" fill="${colR}"/>`;
-      s += `<text x="${x(Math.min(hi, max))+6}" y="${y+13}" ${C?`fill="${C.ink}" font-size="12" font-family="monospace" stroke="#ffffff" stroke-width="4" paint-order="stroke"`:'style="font:12px var(--mono);stroke:var(--panel);stroke-width:4px;paint-order:stroke"'}>${hi > max ? '>' + max.toFixed(1) : range(lo, hi, fmtPF)}</text>`;
+      s += `<text class="v" x="${fitR ? xr : ml - 8}" y="${fitR ? y + 13 : y + 27}" text-anchor="${fitR ? 'start' : 'end'}" ${C?`fill="${C.ink}" font-size="${fitR ? 12 : 11}" font-family="monospace" stroke="#ffffff" stroke-width="4" paint-order="stroke"`:`style="font:${fitR ? 12 : 11}px var(--mono);stroke:var(--panel);stroke-width:4px;paint-order:stroke"`}>${t}</text>`;
     } else s += `<text x="${ml}" y="${y+13}" ${C?`fill="${C.muted}" font-size="12"`:''}>no resident demand</text>`;
-  });
-  return {H, s};
+  }
+  return {H, s, grey};
 }
 function drawChart(r) {
   const el = $('chart'), W = Math.max(320, el.parentElement.clientWidth);
-  const {H, s} = chartSVG(r, W, false);
+  const {H, s, grey} = chartSVG(r, W, false);
+  $('lgGrey').hidden = !grey;
   el.setAttribute('viewBox', `0 0 ${W} ${H}`); el.setAttribute('height', H); el.innerHTML = s;
 }
 
@@ -1371,55 +1907,76 @@ async function openFromHash() {
 }
 
 // ---------- downloads ----------
-const slug = s => (s || 'selection').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) || 'selection';
+const slug = s => fold(s || 'selection').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) || 'selection';
 const csvCell = v => { const s = String(v); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
 const csv = rows => rows.map(r => r.map(csvCell).join(',')).join('\n') + '\n';
 const usd = k => Math.round(k * 1000);
 const pf3 = v => isFinite(v) ? v.toFixed(3) : '';
+// the surrounding region for the current selection, if it has been worked out (downloads are made from what is on screen)
+function regionNow(r) {
+  const key = ST.fips + ':' + [...sel].sort().join(',');
+  return key === regionKey ? regionSection(r, regionResult) : regionError ? regionSection(r, null)
+    : {lead: 'The surrounding region was still loading when this was saved.', table: '', rows: []};
+}
 function summaryCSV(r) {
   const rows = [['category','measured_both_sides','resident_demand_usd','local_sales_jobs_based_usd','local_sales_zip_based_usd','expected_sales_jobs_based_usd','expected_sales_zip_based_usd','retention_rate_jobs_based','retention_rate_zip_based','projected_leakage_jobs_based_usd','projected_leakage_zip_based_usd']];
-  for (const x of r.cats) rows.push([LABEL[x.c],'yes',usd(x.D),usd(x.sL),usd(x.sZ),usd(x.eL),usd(x.eZ),pf3(x.pfL),pf3(x.pfZ),usd(x.gL),usd(x.gZ)]);
-  const T = r.tot; rows.push([`All ${NS} measured categories (net)`,'yes',usd(T.D),usd(T.sL),usd(T.sZ),usd(T.eL),usd(T.eZ),pf3(T.pfL),pf3(T.pfZ),usd(T.gL),usd(T.gZ)]);
-  DEM.slice(NS).forEach((c,i) => rows.push([LABEL[c],'no (demand only)',usd(r.d[NS+i]),'','','','','','','','']));
-  rows.push(['Vehicle purchases (excluded)','no (demand only)',usd(r.v),'','','','','','','','']);
+  rows[0].push('similar_places', 'similar_places_typical_retention', 'similar_places_p25', 'similar_places_p75', 'position_among_similar_places',
+    'projected_leakage_midpoint_usd', 'leakage_within_10mi_usd', 'leakage_within_25mi_usd', 'leakage_within_50mi_usd', 'balanced_within', 'area_household_income_usd', 'area_households_in_tracts_with_estimated_income', 'spending_share_of_household_income');
+  const pe = peerSection(r), byC = Object.fromEntries(pe.rows.map(x => [x.c, x])), clsName = pe.cls ? classTxt(pe.cls) : '';
+  const rg = regionNow(r), rgC = Object.fromEntries((rg.rows || []).map(x => [x.c, x]));
+  const POS = {low: 'bottom quarter', mid: 'middle half', high: 'top quarter'};
+  const notYet = rg.rows && rg.rows.length ? '' : 'not loaded';      // saved before the surrounding area had loaded
+  const extra = x => { const q = byC[x.c], g = rgC[x.c], c = x.c;
+    const mid = x.D - (x.sL / IDX.calib[c].lodes + x.sZ / IDX.calib[c].zbp) / 2;
+    return [q ? clsName : '', q ? pf3(q.med) : '', q ? pf3(q.p25) : '', q ? pf3(q.p75) : '', q ? POS[q.where] || '' : '',
+      usd(mid), ...(g ? g.ring.map(usd) : [notYet, notYet, notYet]), g ? (g.kind === 'even' ? '' : g.reach === 'beyond' ? 'beyond 50 mi' : g.reach + ' mi') : notYet]; };
+  const blank = new Array(10).fill(''), none3 = ['', '', ''];
+  for (const x of r.cats) rows.push([LABEL[x.c],'yes',usd(x.D),usd(x.sL),usd(x.sZ),usd(x.eL),usd(x.eZ),pf3(x.pfL),pf3(x.pfZ),usd(x.gL),usd(x.gZ), ...extra(x), ...none3]);
+  const T = r.tot; rows.push([`All ${NT} categories in the total (net; child care is not in it)`,'yes',usd(T.D),usd(T.sL),usd(T.sZ),usd(T.eL),usd(T.eZ),pf3(T.pfL),pf3(T.pfZ),usd(T.gL),usd(T.gZ), ...blank, r.i > 0 ? usd(r.i) : '', r.h > 0 ? r.ie : '', r.i > 0 && T.D > 0 && r.ie <= 0.1 * r.h ? (T.D / r.i).toFixed(3) : '']);
+  DEM.slice(NS).forEach((c,i) => rows.push([LABEL[c],'no (demand only)',usd(r.d[NS+i]),'','','','','','','','', ...blank, ...none3]));
+  rows.push(['Vehicle purchases (excluded)','no (demand only)',usd(r.v),'','','','','','','','', ...blank, ...none3]);
   return csv(rows);
 }
 function tractRows(ids) {
-  const head = ['geoid','county','population','households','jobs_all'].concat(JOB_SLUG.map(k => 'jobs_' + k), ['jobs_held_by_residents'], OVL_CSV, IDX.stores.keys.map(k => 'stores_' + k)).concat(DEM.map(c => 'demand_' + c + '_usd'), SUP.map(c => 'sales_jobs_based_' + c + '_usd'), SUP.map(c => 'sales_zip_based_' + c + '_usd'), ['demand_vehicle_purchases_usd']);
+  const head = ['geoid','county','population','households','household_income_usd','household_income_estimated','jobs_all'].concat(JOB_SLUG.map(k => 'jobs_' + k), ['jobs_held_by_residents'], OVL_CSV, IDX.stores.keys.map(k => 'stores_' + k)).concat(DEM.map(c => 'demand_' + c + '_usd'), SUP.map(c => 'sales_jobs_based_' + c + '_usd'), SUP.map(c => 'sales_zip_based_' + c + '_usd'), ['demand_vehicle_purchases_usd']);
   const rows = [head];
   for (const g of ids) { const t = ST.tracts[g]; if (!t) continue;
-    rows.push([g, ST.counties[g.slice(0,5)] || '', t.p || 0, t.h].concat(t.j.slice(0, 21).map(v => v || 0), [t.w || 0], OVL_ROWS.map(([k]) => (t.o || 0) & ovlBit(k) ? 1 : 0), IDX.stores.keys.map((k, i) => t.k ? t.k[i] : 0), t.d.map(usd), t.l.map(usd), t.z.map(usd), [usd(t.v)])); }
+    rows.push([g, ST.counties[g.slice(0,5)] || '', t.p || 0, t.h, t.h ? usd(t.i || 0) : '', t.h ? (t.ie ? 1 : 0) : ''].concat(t.j.slice(0, 21).map(v => v || 0), [t.w || 0], OVL_ROWS.map(([k]) => (t.o || 0) & ovlBit(k) ? 1 : 0), IDX.stores.keys.map((k, i) => t.k ? t.k[i] : 0), t.d.map(usd), t.l.map(usd), t.z.map(usd), [usd(t.v)])); }
   return csv(rows);
 }
 function reportHTML(r) {
   const name = $('selname').value || 'Selection', today = new Date().toISOString().slice(0,10);
-  const {H, s} = chartSVG(r, 640, true); const T = r.tot; const st = summaryText(r); const ft = fitText(selMeta);
+  const {H, s, grey} = chartSVG(r, 640, true); const T = r.tot; const st = summaryText(r); const ft = fitText(selMeta);
   const tr = x => `<tr><td>${LABEL[x.c]}</td><td>${fmtUSD(x.D)}</td><td>${rangeUSD(x.sL,x.sZ)}</td><td>${range(x.pfL,x.pfZ,fmtPF)}</td><td>${rangeUSD(x.gL,x.gZ)}</td></tr>`;
   const tracts = [...sel].sort();
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(name)}: spending gaps</title>
-<style>body{font:15px/1.55 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#14212b;background:#fff;max-width:820px;margin:0 auto;padding:32px 20px}h1{font-size:28px;margin:0 0 4px}h2{font-size:18px;margin:28px 0 8px}.m{color:#5a6b78}table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:7px 8px;border-bottom:1px solid #e3e9ed;text-align:right}th:first-child,td:first-child{text-align:left}th{font-size:12px;color:#5a6b78;text-transform:uppercase;letter-spacing:.04em}tr.t td{font-weight:600}.k{display:flex;gap:24px;flex-wrap:wrap;margin:16px 0}.k b{display:block;font-size:20px}.k span{font-size:12px;color:#5a6b78}code{font-size:12px}p.s{font-size:13px;color:#5a6b78}</style></head><body>
+<style>body{font:15px/1.55 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#14212b;background:#fff;max-width:820px;margin:0 auto;padding:32px 20px}h1{font-size:28px;margin:0 0 4px}h2{font-size:18px;margin:28px 0 8px}.m{color:#5a6b78}table{border-collapse:collapse;width:100%;font-size:14px}.tw{overflow-x:auto}@media (max-width:600px){td{white-space:nowrap}td:first-child{white-space:normal;min-width:10em}}@media print{.tw{overflow:visible}td{white-space:normal}}th,td{padding:7px 8px;border-bottom:1px solid #e3e9ed;text-align:right}th:first-child,td:first-child{text-align:left}th{font-size:12px;color:#5a6b78;text-transform:uppercase;letter-spacing:.04em}tr.t td{font-weight:600}.k{display:flex;gap:24px;flex-wrap:wrap;margin:16px 0}.k b{display:block;font-size:20px}.k span{font-size:12px;color:#5a6b78}code{font-size:12px}p.s{font-size:13px;color:#5a6b78}</style></head><body>
 <p class="m">Neighborhood spending gaps · public-data estimate · ${today}</p><h1>${esc(name)}</h1><p class="m">${esc($('selwhere').textContent)}</p>${ft ? `<p class="s">${esc(ft)}</p>` : ''}
-<div class="k"><div><b>${fmtN(r.p)}</b><span>residents</span></div><div><b>${fmtN(r.h)}</b><span>households</span></div><div><b>${r.n}</b><span>census tract${r.n === 1 ? '' : 's'}</span></div><div><b>${fmtN(r.ja)}</b><span>jobs located here</span></div></div>
-<p>${st.lead.replace(/<(\/?)strong>/g,'<$1b>')} Figures are annual, in 2024 dollars; projected leakage is resident demand × (1 − retention rate).</p>${st.w.length ? `<p style="background:#fff4dc;color:#7a5300;padding:10px 12px;border-radius:8px;font-size:14px">${esc(st.w.join(' '))}</p>` : ''}
+<div class="k"><div><b>${fmtUSD(r.tot.D)}</b><span>estimated residents' spending a year, ${NT} measured categories${shareInfo(r).txt ? ` (${shareInfo(r).txt})` : ''}</span></div><div><b>${r.i > 0 ? fmtUSD(r.i) : '—'}</b><span>${incomeLabel(r)}</span></div><div><b>${fmtN(r.p)}</b><span>residents</span></div><div><b>${fmtN(r.h)}</b><span>households</span></div><div><b>${fmtN(r.n)}</b><span>census tract${r.n === 1 ? '' : 's'}</span></div><div><b>${fmtN(r.ja)}</b><span>jobs located here</span></div></div>
+<p>${st.lead.replace(/<(\/?)strong>/g,'<$1b>')} Figures are annual, in 2024 dollars; projected leakage is resident demand × (1 − retention rate).</p>${headlineSplit(r) ? `<p class="s">${splitNote(r)}</p>` : ''}${shareInfo(r).note ? `<p class="s">${shareInfo(r).note}</p>` : ''}${st.w.length ? `<p style="background:#fff4dc;color:#7a5300;padding:10px 12px;border-radius:8px;font-size:14px">${esc(st.w.join(' '))}</p>` : ''}
 <h2>Retention rate by category</h2><svg width="640" height="${H}" viewBox="0 0 640 ${H}" style="max-width:100%">${s}</svg>
-<p class="s">Local store sales ÷ the sales the national pattern predicts from residents' spending. Bars span the two supply estimates; below 1.0 suggests leakage.</p>
-<h2>Spending and sales</h2><table><thead><tr><th>Category</th><th>Resident demand</th><th>Local sales</th><th>Retention rate</th><th>Projected leakage</th></tr></thead><tbody>${r.cats.map(tr).join('')}<tr class="t"><td>All ${NS} measured categories (net)</td><td>${fmtUSD(T.D)}</td><td>${rangeUSD(T.sL,T.sZ)}</td><td>${range(T.pfL,T.pfZ,fmtPF)}</td><td>${rangeUSD(T.gL,T.gZ)}</td></tr></tbody></table>
+<p class="s">Local store sales ÷ the sales the national pattern predicts from residents' spending. Bars span the two supply estimates; below 1.0 suggests leakage, above it a draw${grey ? '; grey bars sit at 1.0 or cross it' : ''}.</p>
+<h2>Spending and sales</h2><table><thead><tr><th>Category</th><th>Resident demand</th><th>Local sales</th><th>Retention rate</th><th>Projected leakage</th></tr></thead><tbody>${r.cats.map(tr).join('')}<tr class="t"><td>All ${NT} categories in the total (net)</td><td>${fmtUSD(T.D)}</td><td>${rangeUSD(T.sL,T.sZ)}</td><td>${range(T.pfL,T.pfZ,fmtPF)}</td><td>${rangeUSD(T.gL,T.gZ)}</td></tr></tbody></table>
 <h2>What the sales gap could support</h2><table>${storeTable(r)}</table>
 <h2>Demand-only categories</h2><table><thead><tr><th>Category</th><th>Resident demand</th></tr></thead><tbody>${DEM.slice(NS).map((c,i)=>`<tr><td>${LABEL[c]}</td><td>${fmtUSD(r.d[NS+i])}</td></tr>`).join('')}</tbody></table>
+${(pe => pe.table ? `<h2>Compared with similar places</h2><p>${pe.lead}</p><table>${pe.table.replace(/ class="num"/g, '').replace(/ class="pw [a-z]*"/g, '').replace(/ class="minor"( hidden)?/g, '')}</table><p class="s">Typical is the median retention rate of similar places (same kind, setting and population band, across the US); the middle half runs from the 25th to the 75th percentile.</p>` : `<h2>Compared with similar places</h2><p>${pe.lead}</p>`)(peerSection(r))}
+${(rg => `<h2>The surrounding region</h2><p>${rg.lead}</p>${rg.table ? `<table>${rg.table.replace(/ class="num"/g, '').replace(/ class="minor"( hidden)?/g, '').replace(/<span class="pnote">/g, '<br><span class="m" style="font-size:12px">').replace(/<span class="inflow">([^<]*)<span class="sl">surplus<\/span><\/span>/g, '$1 surplus')}</table><p class="s">Projected leakage of the area within 10, 25 and 50 miles of the selection, the selection left out, on the midpoint of the two estimates; a surplus means its stores sell more than its residents' spending supports. It shows where offsetting spending could come from or go, not where any one shopper goes.</p>` : ''}`)(regionNow(r))}
+<h2>Room for new stores</h2><p>${esc(storeSpendLead(r))}</p><table>${storeSpendTable(r).replace(/ class="num"/g, '').replace(/ class="vd [a-z]*"/g, '')}</table>
+<p class="s">"Residents' spending would carry" is how many stores residents' spending in the category would carry at the US ratio of stores to spending; sales per store compares local sales per store with the US average. Readings: room for more, two-thirds or less of the stores the spending carries, with a retention rate under 0.8; listed, little measured sales, at least 3 stores and 1.5 times what the spending carries, each selling under 15% of the US average (listings and job counts disagree); crowded, the same, each selling under two-thirds of the US average; more stores, each busy, the same, each selling over 1.5 times the US average, so the area draws customers in; few stores, each busy, fewer stores than the spending carries, each selling over 1.5 times the US average; busy, with public payments, child care with a busy reading, since its sales include subsidies and Head Start. Fitness has no row: the listings count gyms and studios but not golf, skiing, bowling or lessons.</p>
 <h2>Sales tax on leaked spending</h2>${(tx => `<p>${tx.lead.replace(/<(\/?)strong>/g, '<$1b>')}</p><table>${tx.table.replace(/ class="num"/g, '').replace(/<span class="tag">partly<\/span>/g, '(partly taxed)')}</table><p class="s">Combined state and local rates for what each category covers, averaged over the tracts by residents' spending. Survey dollars run below actual spending, so these lean low. Local meals taxes, excise taxes and caps on single purchases are not included.${tx.notes.length ? ' Notes: ' + esc(tx.notes.join(' ')) : ''}</p>`)(taxSection(r))}
 <h2>Stores here</h2><table>${storesTable(sel).replace(/ class="num"/g, '')}</table>
-<p class="s">${esc(storesNote(sel))} Food stores: USDA list of stores that take SNAP. Other places: Overture Maps, which runs high for some kinds; read those as indications.</p>
+<p class="s">${esc(storesNote(sel))} Food stores: USDA list of stores that take SNAP. Other places: Overture Maps, which runs high for some kinds; read those as indications. Hospitals: Medicare's list of hospitals; community health centers: HRSA's list of health center sites.</p>
 <h2>Programs and designations</h2><table>${programsTable(sel).replace(/<span class="pnote">/g, '<br><span class="m" style="font-size:12.5px">')}</table>
 <p class="s">From the agencies' tract lists: Treasury (Opportunity Zones), the CDFI Fund (New Markets Tax Credits, CDFI Investment Areas) and USDA (food access). Confirm a site's eligibility on the agency's own map.</p>
 <h2>Jobs located here</h2><p>${commuteText(r)}</p><table><thead><tr><th>Industry</th><th>Jobs</th><th>Share</th></tr></thead><tbody>${jobRows(r).map(x => `<tr><td>${esc(x.name)}${JOB_USED.has(x.i) ? ' <span class="m">(store sales)</span>' : ''}</td><td>${fmtN(x.n)}</td><td>${r.ja > 0 ? (x.n / r.ja * 100 < 0.5 && x.n > 0 ? '&lt;1%' : Math.round(x.n / r.ja * 100) + '%') : '—'}</td></tr>`).join('')}<tr class="t"><td>All jobs</td><td>${fmtN(r.ja)}</td><td>${r.ja > 0 ? '100%' : '—'}</td></tr></tbody></table>
 <p class="s">Jobs at workplaces in these tracts, wherever the workers live (LEHD LODES 2023; Alaska 2016, Michigan 2021; self-employed not counted). The jobs-based sales estimate uses only the store types within the rows marked (store sales).</p>
 <h2>Method in brief</h2>
-<p>A retail-gap estimate, not observed leakage: local sales include non-resident shoppers, and demand is modeled from national spending by income. Demand: ACS 2020–24 households by income bracket times BLS Consumer Expenditure Survey 2024 spending by income (gasoline from the 2022 survey at 2024 pump prices), with gas and auto scaled by vehicles per household. Restaurant demand is split into full-service and quick-service by income, from the BLS Consumer Expenditure Diary Survey 2024. Local sales: two estimates, from LEHD LODES 2023 jobs and from ZIP Business Patterns 2023, each times 2022 Economic Census sales per employee for the store type and the smallest geography with enough stores, split into categories by what each store type sells nationally (2022 Economic Census product lines) and restated in 2024 dollars (Alaska LODES 2016, Michigan 2021). Across the US, store sales run 0.9 to 3.5 times modeled resident demand depending on the category (above it in most, because households under-report spending and stores also sell to businesses and visitors); the retention rate divides local sales by resident demand times that national ratio. Self-employed restaurants, salons, auto repair and laundries are counted (Census Nonemployer Statistics 2024); self-employed retail sellers are not. Small areas are noisy, and online spending sits inside every gap.</p>
+<p>A retail-gap estimate, not observed leakage: local sales include non-resident shoppers, and demand is modeled from national spending by income. Household income: ACS 2020–24 aggregate household income (B19025), before taxes, in 2024 dollars; where the Census does not publish a tract's total it is estimated from the income brackets. Demand: ACS 2020–24 households by income bracket times BLS Consumer Expenditure Survey 2024 spending by income (gasoline from the 2022 survey at 2024 pump prices), with gas and auto scaled by vehicles per household. Restaurant demand is split into full-service and quick-service by income, from the BLS Consumer Expenditure Diary Survey 2024. Local sales: two estimates, from LEHD LODES 2023 jobs and from ZIP Business Patterns 2023, each times 2022 Economic Census sales per employee for the store type and the smallest geography with enough stores, split into categories by what each store type sells nationally (2022 Economic Census product lines) and restated in 2024 dollars (Alaska LODES 2016, Michigan 2021). Across the US, store sales run 0.9 to 3.5 times modeled resident demand depending on the category (above it in most, because households under-report spending and stores also sell to businesses and visitors); the retention rate divides local sales by resident demand times that national ratio. Self-employed restaurants, salons, auto repair and laundries are counted (Census Nonemployer Statistics 2024); self-employed retail sellers are not. Rural tracts' demand is adjusted where rural households spend differently from what their incomes predict (survey urban/rural tables, 2015–2019): less on restaurants, alcohol, personal care and apparel, more on tobacco. Small areas are noisy, and online spending sits inside every gap.</p>
 <h2>Tracts</h2><p><code>${tracts.join(', ')}</code></p>
-<p class="s">Built only from public data. Estimates for planning; check locally before any decision.</p></body></html>`;
+<p class="s">Built only from public data. Estimates for planning; check locally before any decision.</p></body></html>`.replace(/<table>/g, '<div class="tw"><table>').replace(/<\/table>/g, '</table></div>');
 }
 function saveFile(filename, data, type) {
-  const url = URL.createObjectURL(new Blob([data], {type}));
+  const url = URL.createObjectURL(new Blob([/^text\/csv/.test(type) ? '\ufeff' + data : data], {type}));
   const a = document.createElement('a'); a.href = url; a.download = filename; a.hidden = true;
   document.body.appendChild(a); a.click();
   setTimeout(() => { URL.revokeObjectURL(url); a.remove(); }, 2000);
@@ -1436,16 +1993,18 @@ function doDownload(kind) {
   const job = {report: () => ({filename: base + '-spending-gaps.html', data: reportHTML(r), type: 'text/html'}),
     summary: () => ({filename: base + '-summary.csv', data: summaryCSV(r), type: 'text/csv'}),
     tracts: () => ({filename: base + '-tracts.csv', data: tractRows([...sel].sort()), type: 'text/csv'}),
-    state: () => ({filename: (ST.name || 'state').toLowerCase().replace(/[^a-z]+/g,'-') + '-all-tracts.csv', data: tractRows(Object.keys(ST.tracts).sort()), type: 'text/csv'})}[kind]();
-  saveFile(job.filename, job.data, job.type + ';charset=utf-8');
-  msg.textContent = 'Downloaded ' + job.filename + '.';
+    state: () => ({filename: fold(ST.name || 'state').replace(/[^a-z]+/g,'-') + '-all-tracts.csv', data: tractRows(Object.keys(ST.tracts).sort()), type: 'text/csv'})}[kind]();
+  Gate.before(kind, () => { saveFile(job.filename, job.data, job.type + ';charset=utf-8'); msg.textContent = 'Downloaded ' + job.filename + '.'; });
 }
 
 // ---------- wire up ----------
 async function main() {
   initGuide();
   initPrograms();
+  $('minorTog').onclick = () => { showMinor = !showMinor; $('minorTog').textContent = showMinor ? 'Hide tobacco and vaping' : 'Show tobacco and vaping';
+    document.querySelectorAll('tr.minor').forEach(tr => { tr.hidden = !showMinor; }); };
   Feedback.init();
+  Gate.init();
   initMap();
   await loadIndex();
   renderCoverage();
