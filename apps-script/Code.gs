@@ -13,8 +13,10 @@
  *   POST {feedback:1, kind, msg, email, link}   a message from the "Suggestions and corrections" box; it goes to
  *                                the Feedback tab (created on first use) and is emailed, with Reply-To set to
  *                                the sender's address when they gave one
- *   POST {lead:1, email, role, org, updates, first, kind, area, st, link}   a download: the Leads tab (created on first
- *                                use) gets a row for every download; the first from a browser is emailed
+ *   POST {lead:1, email, role, org, updates, kind, area, st, link}   a download: the Leads tab (created on first use)
+ *                                gets a row for every download; the first from an address is emailed to the first
+ *                                NOTIFY address (at most LEAD_EMAIL_MAX every six hours, apart from the suggestion and
+ *                                message emails, and never when the day's email quota is nearly used)
  *   POST {usage:1, kind, st, area, tracts}   an anonymous count (kind view or download): one row on the Usage tab
  *
  * Each suggestion is a row on the Suggestions tab. Its Status (pending, approved, declined, removed) is
@@ -24,9 +26,9 @@
  * Script properties (Project Settings > Script properties); setup() creates the first three:
  *   SHEET_ID    the sheet this script writes to
  *   NOTIFY      who gets the emails (comma-separated; defaults to the script owner)
- *   SECRET      signs the review links (changing it invalidates links already sent)
- *   accepted:<date>, feedback:<date>, emails:<date>, leads:<date>, usage:<date>   per-day counters behind the daily
- *                                limits (kept two days)
+ *   SECRET      signs the review links (changing it invalidates links already sent; then run clearSecretCache())
+ *   accepted:<date>, feedback:<date>, emails:<date>   per-day counters behind the daily limits (kept two days);
+ *                                downloads and usage counts are limited per six hours in the script cache instead
  */
 
 var SITE = 'https://mjkelley00-mjk.github.io/neighborhood-spending-gaps/';
@@ -51,11 +53,16 @@ var FB_HEAD = ['Received', 'About', 'Message', 'Reply to', 'Area they were looki
 var FB_KINDS = {idea: 'An idea for the site', data: 'A number looks wrong', bug: "Something isn't working", other: 'Something else'};
 var FB_DAILY_MAX = 100;  // messages accepted per day, all visitors together
 var LEAD_TAB = 'Leads';
-var LEAD_HEAD = ['Received', 'Email', 'Role', 'Organization', 'Wants updates', 'Downloaded', 'Area', 'State', 'Link', 'First from this browser'];
-var LEAD_DAILY_MAX = 1000;
+var LEAD_HEAD = ['Received', 'Email', 'Role', 'Organization', 'Wants updates (unconfirmed)', 'Downloaded', 'Area', 'State', 'Link',
+                 'First from this address'];
+var LEAD_MAX = 250;        // download rows per six hours, all visitors together
+var LEAD_EMAIL_MAX = 5;    // first-download notices per six hours, to the first NOTIFY address; then one "more are on the Leads tab" email
 var USE_TAB = 'Usage';
 var USE_HEAD = ['Date', 'Kind', 'State', 'Area', 'Tracts'];
-var USE_DAILY_MAX = 5000;      // counted rows per day; each one also uses two of the daily property reads and writes
+var USE_MAX = 500;         // usage rows per six hours: 5 cells each, at most about 10,000 cells a day
+var ROLES = ['Resident or neighbor', 'Business owner or entrepreneur', 'Developer, broker or investor', 'Lender or CDFI',
+             'City, county or state government', 'Nonprofit or community organization', 'Researcher or student', 'Journalist',
+             'Something else'];
 var DL_KINDS = {report: 'Report (HTML)', summary: 'Category summary (CSV)', tracts: 'Selected tracts (CSV)', state: 'All tracts in state (CSV)'};
 
 // ---------------------------------------------------------------- setup, run once from the editor
@@ -105,23 +112,43 @@ function esc_(s) {
     return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c];
   });
 }
+// Run from the editor after changing SECRET, so new review links use it at once (otherwise the cached copy lasts up
+// to six hours).
+function clearSecretCache() { CacheService.getScriptCache().remove('secret'); }
 function token_(id, act) {
-  var secret = PropertiesService.getScriptProperties().getProperty('SECRET');
+  var cache = CacheService.getScriptCache(), secret = cache.get('secret');
+  if (!secret) {
+    secret = PropertiesService.getScriptProperties().getProperty('SECRET');
+    if (secret) { cache.put('secret', secret, 21600); }
+  }
   if (!secret) { return null; }                         // no secret, no valid links
   var sig = Utilities.computeHmacSha256Signature(id + '|' + act, secret);
   return Utilities.base64EncodeWebSafe(sig).replace(/=+$/, '').slice(0, 32);
 }
 function today_() { return Utilities.formatDate(new Date(), TZ, 'yyyy-MM-dd'); }
-function bump_(kind) {                                  // per-day counters, kept for two days
+// Per-day counters, kept two days in script properties. Once a counter reaches its limit, a flag in the script cache
+// answers later calls without touching properties, so requests past the limit don't use up the daily property quota.
+function full_(kind) { return !!CacheService.getScriptCache().get('full:' + kind + ':' + today_()); }
+function bump_(kind, max) {
+  if (full_(kind)) { return max + 1; }
   var props = PropertiesService.getScriptProperties();
   var key = kind + ':' + today_();
   var n = Number(props.getProperty(key) || 0) + 1;
+  if (n > max) {
+    CacheService.getScriptCache().put('full:' + kind + ':' + today_(), '1', 21600);
+    return n;
+  }
   props.setProperty(key, String(n));
-  var keep = [key, kind + ':' + Utilities.formatDate(new Date(Date.now() - 864e5), TZ, 'yyyy-MM-dd')];
-  props.getKeys().forEach(function (k) {
-    if (k.indexOf(kind + ':') === 0 && keep.indexOf(k) < 0) { props.deleteProperty(k); }
-  });
+  if (n === 1) {                                        // first of the day: drop counters older than yesterday
+    var keep = [key, kind + ':' + Utilities.formatDate(new Date(Date.now() - 864e5), TZ, 'yyyy-MM-dd')];
+    props.getKeys().forEach(function (k) {
+      if (k.indexOf(kind + ':') === 0 && keep.indexOf(k) < 0) { props.deleteProperty(k); }
+    });
+  }
   return n;
+}
+function mail_(m) {                                     // a failed email (quota, bad address) never fails the request
+  try { MailApp.sendEmail(m); } catch (err) { console.warn('email not sent: ' + err); }
 }
 function rows_() {
   var sh = sheet_(), last = sh.getLastRow();
@@ -190,6 +217,7 @@ function doPost(e) {
     return json_({error: 'bad_request'});
   }
   tracts = tracts.filter(function (t, i, a) { return a.indexOf(t) === i; }).sort();
+  if (full_('accepted')) { return json_({error: 'daily_limit'}); }   // before the lock, so a flood can't hold it
   var lock = LockService.getScriptLock();
   if (!lock.tryLock(20000)) { return json_({error: 'busy'}); }
   try {
@@ -199,7 +227,7 @@ function doPost(e) {
              stCode_(r.st) + '|' + r.name.toLowerCase() + '|' + r.tracts.join(',') === key;
     })[0];
     if (dup) { return json_({ok: true, id: dup.id, status: dup.status}); }
-    if (bump_('accepted') > DAILY_MAX) { return json_({error: 'daily_limit'}); }
+    if (bump_('accepted', DAILY_MAX) > DAILY_MAX) { return json_({error: 'daily_limit'}); }
     var id = 'g' + Utilities.getUuid().replace(/-/g, '').slice(0, 12);
     var sh = sheet_(), row = sh.getLastRow() + 1;
     if (row > sh.getMaxRows()) { sh.insertRowsAfter(sh.getMaxRows(), 200); }
@@ -216,16 +244,20 @@ function doPost(e) {
   }
 }
 
+// Suggested areas and messages share one 40-a-day count, so the one "more are waiting" email covers both kinds.
+function moreWaiting_(to, sheetUrl) {
+  mail_({to: to, name: 'Neighborhood Spending Gaps', subject: 'More suggested areas and messages are waiting',
+    body: 'More suggested areas and messages came in today than the ' + EMAIL_MAX + ' emails a day this sends. The rest ' +
+          'are in the sheet, on the Suggestions and Feedback tabs: ' + sheetUrl});
+}
 function notify_(s) {
   var to = PropertiesService.getScriptProperties().getProperty('NOTIFY');
   if (!to) { return; }
-  var n = bump_('emails');
+  var n = bump_('emails', EMAIL_MAX + 1);
   if (n > EMAIL_MAX + 1) { return; }
   var sheetUrl = SpreadsheetApp.openById(PropertiesService.getScriptProperties().getProperty('SHEET_ID')).getUrl();
   if (n === EMAIL_MAX + 1) {
-    MailApp.sendEmail({to: to, name: 'Neighborhood Spending Gaps',
-      subject: 'More suggested areas are waiting',
-      body: 'More areas were suggested today than the ' + EMAIL_MAX + ' emails a day this sends. The rest are in the sheet: ' + sheetUrl});
+    moreWaiting_(to, sheetUrl);
     return;
   }
   var place = s.name + (s.city ? ', ' + s.city : '') + ' (' + STATES[s.st] + ')';
@@ -244,7 +276,7 @@ function notify_(s) {
     'To ask someone who knows the area, forward this link instead; it only shows the area: <a href="' + view + '">' + view + '</a></p>' +
     '<p style="color:#5a6b78;font-size:13px">Approving adds it to everyone\'s search on the site, labeled as a suggested area. ' +
     'Every suggestion is also in <a href="' + sheetUrl + '">the sheet</a>, where you can change its status later.</p></div>';
-  MailApp.sendEmail({to: to, name: 'Neighborhood Spending Gaps', subject: 'Suggested area: ' + place, htmlBody: html,
+  mail_({to: to, name: 'Neighborhood Spending Gaps', subject: 'Suggested area: ' + place, htmlBody: html,
     body: 'Suggested area: ' + place + ', ' + tracts + '.\nReview it on the map (keep this link to yourself): ' + review +
           '\nMap only, safe to forward: ' + view + '\nThe sheet: ' + sheetUrl});
 }
@@ -298,10 +330,11 @@ function feedback_(b) {
   if (email && !/^[^\s@<>,;"']+@[^\s@<>,;"']+\.[a-z]{2,}$/i.test(email)) { email = ''; }
   var link = String(b.link || '');
   link = link.indexOf(SITE) === 0 && link.length <= 40000 ? link : '';     // 2,500 tracts is about 30,000 characters
+  if (full_('feedback')) { return json_({error: 'daily_limit'}); }
   var lock = LockService.getScriptLock();
   if (!lock.tryLock(20000)) { return json_({error: 'busy'}); }
   try {
-    if (bump_('feedback') > FB_DAILY_MAX) { return json_({error: 'daily_limit'}); }
+    if (bump_('feedback', FB_DAILY_MAX) > FB_DAILY_MAX) { return json_({error: 'daily_limit'}); }
     var sh = fbSheet_(), row = sh.getLastRow() + 1;
     if (row > sh.getMaxRows()) { sh.insertRowsAfter(sh.getMaxRows(), 200); }
     sh.getRange(row, 1, 1, FB_HEAD.length).setNumberFormat('@').setValues([[
@@ -316,11 +349,10 @@ function feedback_(b) {
 function notifyFeedback_(f) {
   var to = PropertiesService.getScriptProperties().getProperty('NOTIFY');
   if (!to) { return; }
-  var n = bump_('emails');
+  var n = bump_('emails', EMAIL_MAX + 1);
   if (n > EMAIL_MAX + 1) { return; }
   if (n === EMAIL_MAX + 1) {
-    MailApp.sendEmail({to: to, name: 'Neighborhood Spending Gaps', subject: 'More messages are waiting',
-      body: 'More messages and suggested areas came in today than the ' + EMAIL_MAX + ' emails a day this sends. The rest are in the sheet: ' + f.url});
+    moreWaiting_(to, f.url.replace(/#gid=.*$/, ''));
     return;
   }
   var first = f.msg.replace(/\s+/g, ' ');
@@ -335,10 +367,22 @@ function notifyFeedback_(f) {
     body: FB_KINDS[f.kind] + '\n\n' + f.msg + (f.link ? '\n\nThe area they were looking at: ' + f.link : '') +
           (f.email ? '\n\nReply to: ' + f.email : '') + '\n\nThe sheet: ' + f.url};
   if (f.email) { mail.replyTo = f.email; }
-  MailApp.sendEmail(mail);
+  mail_(mail);
 }
 
 // ---------- POST: downloads (Leads) and anonymous counts (Usage)
+// Their limits are counted in the script cache, not in script properties, so a flood of requests can't use up the
+// daily property quota that suggestions, messages and review links depend on. The cache keeps a count for six hours,
+// so the limits are per six-hour window; a request past the limit is turned away before it waits for the lock.
+function window_() { return today_() + ':' + Math.floor(Number(Utilities.formatDate(new Date(), TZ, 'H')) / 6); }
+function left_(kind, max) { return Number(CacheService.getScriptCache().get(kind + ':' + window_()) || 0) < max; }
+function take_(kind, max) {                             // true if one more is allowed in this window (call under the lock)
+  var cache = CacheService.getScriptCache(), key = kind + ':' + window_();
+  var n = Number(cache.get(key) || 0);
+  if (n >= max) { return false; }
+  cache.put(key, String(n + 1), 21600);
+  return true;
+}
 function tab_(name, head, widths) {
   var id = PropertiesService.getScriptProperties().getProperty('SHEET_ID');
   var ss = id ? SpreadsheetApp.openById(id) : SpreadsheetApp.getActiveSpreadsheet();
@@ -347,57 +391,86 @@ function tab_(name, head, widths) {
     sh = ss.insertSheet(name);
     sh.getRange(1, 1, 1, head.length).setValues([head]).setFontWeight('bold');
     sh.setFrozenRows(1);
-    sh.getRange(2, 1, sh.getMaxRows() - 1, head.length).setNumberFormat('@');   // plain text: no dates or formulas
     (widths || []).forEach(function (w, i) { sh.setColumnWidth(i + 1, w); });
+    // only the columns it uses, to keep the spreadsheet's cell count down (columns added later by hand are left alone)
+    if (sh.getMaxColumns() > head.length) { sh.deleteColumns(head.length + 1, sh.getMaxColumns() - head.length); }
+  } else {
+    var cur = sh.getRange(1, 1, 1, head.length).getValues()[0];
+    if (cur.join('|') !== head.join('|')) { sh.getRange(1, 1, 1, head.length).setValues([head]).setFontWeight('bold'); }
   }
   return sh;
 }
-function addRow_(sh, values) {
-  var lock = LockService.getScriptLock();
-  if (!lock.tryLock(20000)) { return false; }
-  try {
-    var row = sh.getLastRow() + 1;
-    if (row > sh.getMaxRows()) { sh.insertRowsAfter(sh.getMaxRows(), 500); sh.getRange(row, 1, 501, values.length).setNumberFormat('@'); }
-    sh.getRange(row, 1, 1, values.length).setNumberFormat('@').setValues([values]);
-    SpreadsheetApp.flush();
-    return true;
-  } finally {
-    lock.releaseLock();
-  }
+function addRow_(sh, values) {                          // call under the lock
+  var row = sh.getLastRow() + 1;
+  if (row > sh.getMaxRows()) { sh.insertRowsAfter(sh.getMaxRows(), 500); }
+  sh.getRange(row, 1, 1, values.length).setNumberFormat('@').setValues([values]);   // plain text: no dates or formulas
+  SpreadsheetApp.flush();
 }
 function lead_(b) {
   var email = String(b.email || '').trim().slice(0, 120);
-  if (!/^[^\s@<>,;"']+@[^\s@<>,;"']+\.[a-z]{2,}$/i.test(email)) { return json_({error: 'bad_request'}); }
-  if (bump_('leads') > LEAD_DAILY_MAX) { return json_({error: 'daily_limit'}); }
+  // (not starting with = + - or @, so the cell is the address exactly as typed and can be found again)
+  if (!/^[^\s@<>,;"'=+\-][^\s@<>,;"']*@[^\s@<>,;"']+\.[a-z]{2,}$/i.test(email)) { return json_({error: 'bad_request'}); }
+  if (!left_('leads', LEAD_MAX)) { return json_({error: 'limit'}); }
   var kind = DL_KINDS[b.kind] ? DL_KINDS[b.kind] : 'Other';
+  var role = ROLES.indexOf(String(b.role || '')) >= 0 ? String(b.role) : '';
   var link = String(b.link || '');
   link = link.indexOf(SITE) === 0 && link.length <= 40000 ? link : '';
+  if (link.indexOf('#review=') >= 0) { link = ''; }     // never keep a review link's signed tokens
   var st = /^[A-Z]{2}$/.test(String(b.st || '')) ? String(b.st) : '';
-  var f = {at: Utilities.formatDate(new Date(), TZ, 'yyyy-MM-dd HH:mm'), email: clean_(email, 120), role: clean_(b.role, 60),
-           org: clean_(b.org, 120), updates: b.updates ? 'yes' : 'no', kind: kind, area: clean_(b.area, 80), st: st, link: link,
-           first: b.first ? 'yes' : ''};
-  var sh = tab_(LEAD_TAB, LEAD_HEAD, [130, 220, 200, 200, 100, 170, 200, 60, 260, 100]);
-  if (!addRow_(sh, [f.at, f.email, f.role, f.org, f.updates, f.kind, f.area, f.st, f.link, f.first])) { return json_({error: 'busy'}); }
-  if (b.first) { notifyLead_(f, sh.getParent().getUrl() + '#gid=' + sh.getSheetId()); }
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(20000)) { return json_({error: 'busy'}); }
+  var f, url;
+  try {
+    if (!take_('leads', LEAD_MAX)) { return json_({error: 'limit'}); }
+    var sh = tab_(LEAD_TAB, LEAD_HEAD, [130, 220, 220, 200, 120, 170, 200, 60, 260, 120]);
+    // first time this address appears: decided here, not by the browser
+    var first = sh.getLastRow() < 2 || !sh.getRange(2, 2, sh.getLastRow() - 1, 1).createTextFinder(email).matchCase(false).matchEntireCell(true).findNext();
+    f = {at: Utilities.formatDate(new Date(), TZ, 'yyyy-MM-dd HH:mm'), email: email, role: role, org: clean_(b.org, 120),
+         updates: b.updates ? 'yes' : 'no', kind: kind, area: clean_(b.area, 80), st: st, link: link, first: first ? 'yes' : ''};
+    addRow_(sh, [f.at, f.email, f.role, f.org, f.updates, f.kind, f.area, f.st, f.link, f.first]);
+    url = sh.getParent().getUrl() + '#gid=' + sh.getSheetId();
+    if (first) { f.mail = take_('leadmail', LEAD_EMAIL_MAX) ? 'send' : take_('leadmail_over', 1) ? 'over' : ''; }
+  } finally {
+    lock.releaseLock();
+  }
+  if (f.mail) { notifyLead_(f, url); }
   return json_({ok: true});
 }
+// Download notices go to the first NOTIFY address only, have their own limit apart from the suggestion and message
+// emails, and are skipped unless the account's daily email quota (which counts recipients) still has room for the rest
+// of the day's suggestion and message emails to every NOTIFY address, so a burst of downloads can't hold those back. They carry nothing a visitor typed beyond the address itself, and no
+// Reply-To, so they can't be used to send the owner someone else's words.
 function notifyLead_(f, url) {
-  var to = PropertiesService.getScriptProperties().getProperty('NOTIFY');
-  if (!to) { return; }
-  var n = bump_('emails');
-  if (n > EMAIL_MAX) { return; }                    // the Leads tab has every one; no "more are waiting" email for these
-  var who = bare_(f.email) + (bare_(f.role) ? ' (' + bare_(f.role) + (bare_(f.org) ? ', ' + bare_(f.org) : '') + ')' : bare_(f.org) ? ' (' + bare_(f.org) + ')' : '');
-  MailApp.sendEmail({to: to, name: 'Neighborhood Spending Gaps', subject: 'New download: ' + who, replyTo: bare_(f.email),
-    body: who + ' downloaded ' + f.kind + (bare_(f.area) ? ' for ' + bare_(f.area) + (f.st ? ', ' + f.st : '') : '') + '.\n' +
-          'Wants updates: ' + f.updates + (f.link ? '\nThe area: ' + f.link : '') + '\n\nEvery download is on the Leads tab: ' + url});
+  var all = String(PropertiesService.getScriptProperties().getProperty('NOTIFY') || '').split(',').filter(function (x) { return x.trim(); });
+  var to = all.length ? all[0].trim() : '';
+  // the daily quota counts recipients: keep enough for the rest of the day's suggestion and message emails (at most
+  // EMAIL_MAX + 1, less those already sent) to every NOTIFY address, plus a margin of 5
+  var sent = full_('emails') ? EMAIL_MAX + 1 : Math.min(EMAIL_MAX + 1, Number(PropertiesService.getScriptProperties().getProperty('emails:' + today_()) || 0));
+  if (!to || MailApp.getRemainingDailyQuota() < (EMAIL_MAX + 1 - sent) * all.length + 5) { return; }
+  if (f.mail === 'over') {
+    mail_({to: to, name: 'Neighborhood Spending Gaps', subject: 'More new downloads are on the Leads tab',
+      body: 'More people downloaded for the first time in the last few hours than the ' + LEAD_EMAIL_MAX + ' notices this sends ' +
+            'in six hours. Every one is on the Leads tab: ' + url});
+    return;
+  }
+  mail_({to: to, name: 'Neighborhood Spending Gaps', subject: 'New download recorded',
+    body: 'A first download from ' + f.email + ': ' + f.kind + (f.st ? ' (' + f.st + ')' : '') + '.\n' +
+          'Role, organization, area and whether they want updates are on the Leads tab: ' + url +
+          '\nThe address is as typed; nobody has confirmed it.'});
 }
 function usage_(b) {
-  if (bump_('usage') > USE_DAILY_MAX) { return json_({error: 'daily_limit'}); }
+  if (!left_('usage', USE_MAX)) { return json_({error: 'limit'}); }
   var kind = b.kind === 'download' ? 'download' : 'view';
   var st = /^[A-Z]{2}$/.test(String(b.st || '')) ? String(b.st) : '';
   var n = Math.max(0, Math.min(100000, parseInt(b.tracts, 10) || 0));
-  var sh = tab_(USE_TAB, USE_HEAD, [100, 90, 60, 260, 70]);
-  if (!addRow_(sh, [today_(), kind, st, clean_(b.area, 80), String(n)])) { return json_({error: 'busy'}); }
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(20000)) { return json_({error: 'busy'}); }
+  try {
+    if (!take_('usage', USE_MAX)) { return json_({error: 'limit'}); }
+    addRow_(tab_(USE_TAB, USE_HEAD, [100, 90, 60, 260, 70]), [today_(), kind, st, clean_(b.area, 80), String(n)]);
+  } finally {
+    lock.releaseLock();
+  }
   return json_({ok: true});
 }
 
