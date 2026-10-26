@@ -11,7 +11,7 @@
     -84.955,
     34.977
    ],
-   "bytes": 1212339,
+   "bytes": 1212350,
    "counties": 67
   },
   {
@@ -25,7 +25,7 @@
     -130.137,
     71.214
    ],
-   "bytes": 318783,
+   "bytes": 318794,
    "counties": 30
   },
   {
@@ -39,7 +39,7 @@
     -109.133,
     36.989
    ],
-   "bytes": 1382972,
+   "bytes": 1382983,
    "counties": 15
   },
   {
@@ -53,7 +53,7 @@
     -89.855,
     36.484
    ],
-   "bytes": 713725,
+   "bytes": 713736,
    "counties": 75
   },
   {
@@ -67,7 +67,7 @@
     -114.273,
     41.852
    ],
-   "bytes": 7227000,
+   "bytes": 7227011,
    "counties": 58
   },
   {
@@ -81,7 +81,7 @@
     -102.151,
     40.894
    ],
-   "bytes": 1156694,
+   "bytes": 1213827,
    "counties": 64
   },
   {
@@ -95,7 +95,7 @@
     -71.814,
     42.023
    ],
-   "bytes": 701871,
+   "bytes": 701882,
    "counties": 9
   },
   {
@@ -109,7 +109,7 @@
     -75.056,
     39.832
    ],
-   "bytes": 206144,
+   "bytes": 206155,
    "counties": 3
   },
   {
@@ -123,7 +123,7 @@
     -76.919,
     38.983
    ],
-   "bytes": 179588,
+   "bytes": 184114,
    "counties": 1
   },
   {
@@ -137,7 +137,7 @@
     -80.038,
     30.976
    ],
-   "bytes": 4027688,
+   "bytes": 4095878,
    "counties": 67
   },
   {
@@ -151,7 +151,7 @@
     -80.85,
     34.979
    ],
-   "bytes": 2262192,
+   "bytes": 2305635,
    "counties": 159
   },
   {
@@ -165,7 +165,7 @@
     -154.903,
     28.388
    ],
-   "bytes": 338154,
+   "bytes": 338165,
    "counties": 5
   },
   {
@@ -179,7 +179,7 @@
     -111.076,
     48.852
    ],
-   "bytes": 387630,
+   "bytes": 387641,
    "counties": 44
   },
   {
@@ -193,7 +193,7 @@
     -87.53,
     42.488
    ],
-   "bytes": 2617078,
+   "bytes": 2817343,
    "counties": 102
   },
   {
@@ -207,7 +207,7 @@
     -84.824,
     41.753
    ],
-   "bytes": 1330592,
+   "bytes": 1358806,
    "counties": 92
   },
   {
@@ -221,7 +221,7 @@
     -90.189,
     43.457
    ],
-   "bytes": 740193,
+   "bytes": 740204,
    "counties": 99
   },
   {
@@ -235,7 +235,7 @@
     -94.604,
     39.921
    ],
-   "bytes": 662154,
+   "bytes": 662165,
    "counties": 105
   },
   {
@@ -249,7 +249,7 @@
     -82.121,
     39.117
    ],
-   "bytes": 1082836,
+   "bytes": 1099733,
    "counties": 120
   },
   {
@@ -263,7 +263,7 @@
     -89.397,
     33.003
    ],
-   "bytes": 1119085,
+   "bytes": 1182000,
    "counties": 64
   },
   {
@@ -277,7 +277,7 @@
     -67.018,
     47.295
    ],
-   "bytes": 349193,
+   "bytes": 349204,
    "counties": 16
   },
   {
@@ -291,7 +291,7 @@
     -75.066,
     39.708
    ],
-   "bytes": 1185899,
+   "bytes": 1220678,
    "counties": 24
   },
   {
@@ -305,7 +305,7 @@
     -69.956,
     42.867
    ],
-   "bytes": 1323987,
+   "bytes": 1323998,
    "counties": 14
   },
   {
@@ -319,7 +319,7 @@
     -82.425,
     48.045
    ],
-   "bytes": 2255366,
+   "bytes": 2255377,
    "counties": 83
   },
   {
@@ -333,7 +333,7 @@
     -90.12,
     49.067
    ],
-   "bytes": 1205382,
+   "bytes": 1228835,
    "counties": 87
   },
   {
@@ -347,7 +347,7 @@
     -88.149,
     34.991
    ],
-   "bytes": 719888,
+   "bytes": 719899,
    "counties": 82
   },
   {
@@ -361,7 +361,7 @@
     -89.227,
     40.526
    ],
-   "bytes": 1345362,
+   "bytes": 1378311,
    "counties": 115
   },
   {
@@ -375,7 +375,7 @@
     -104.094,
     48.934
    ],
-   "bytes": 307800,
+   "bytes": 320001,
    "counties": 56
   },
   {
@@ -389,7 +389,7 @@
     -95.59,
     42.913
    ],
-   "bytes": 444577,
+   "bytes": 444588,
    "counties": 93
   },
   {
@@ -403,7 +403,7 @@
     -114.056,
     41.652
    ],
-   "bytes": 599913,
+   "bytes": 611133,
    "counties": 17
   },
   {
@@ -417,7 +417,7 @@
     -70.732,
     45.106
    ],
-   "bytes": 288567,
+   "bytes": 288578,
    "counties": 10
   },
   {
@@ -431,7 +431,7 @@
     -73.922,
     41.293
    ],
-   "bytes": 1727604,
+   "bytes": 1778692,
    "counties": 21
   },
   {
@@ -445,7 +445,7 @@
     -103.1,
     36.931
    ],
-   "bytes": 497529,
+   "bytes": 497540,
    "counties": 33
   },
   {
@@ -459,7 +459,7 @@
     -71.915,
     44.979
    ],
-   "bytes": 4175606,
+   "bytes": 4256883,
    "counties": 62
   },
   {
@@ -473,7 +473,7 @@
     -75.543,
     36.544
    ],
-   "bytes": 2177160,
+   "bytes": 2177171,
    "counties": 100
   },
   {
@@ -487,7 +487,7 @@
     -96.606,
     48.91
    ],
-   "bytes": 200392,
+   "bytes": 200403,
    "counties": 53
   },
   {
@@ -501,7 +501,7 @@
     -80.541,
     41.957
    ],
-   "bytes": 2469073,
+   "bytes": 2536080,
    "counties": 88
   },
   {
@@ -515,7 +515,7 @@
     -94.456,
     36.965
    ],
-   "bytes": 947439,
+   "bytes": 964041,
    "counties": 77
   },
   {
@@ -529,7 +529,7 @@
     -116.899,
     46.185
    ],
-   "bytes": 850250,
+   "bytes": 890602,
    "counties": 36
   },
   {
@@ -543,7 +543,7 @@
     -74.7,
     42.216
    ],
-   "bytes": 2774385,
+   "bytes": 2847428,
    "counties": 67
   },
   {
@@ -557,7 +557,7 @@
     -71.163,
     42.014
    ],
-   "bytes": 201280,
+   "bytes": 201291,
    "counties": 5
   },
   {
@@ -571,7 +571,7 @@
     -78.604,
     35.176
    ],
-   "bytes": 1080535,
+   "bytes": 1080546,
    "counties": 46
   },
   {
@@ -585,7 +585,7 @@
     -96.494,
     45.805
    ],
-   "bytes": 211379,
+   "bytes": 211390,
    "counties": 66
   },
   {
@@ -599,7 +599,7 @@
     -81.752,
     36.637
    ],
-   "bytes": 1406276,
+   "bytes": 1428912,
    "counties": 95
   },
   {
@@ -613,7 +613,7 @@
     -93.699,
     36.41
    ],
-   "bytes": 5441708,
+   "bytes": 5720164,
    "counties": 254
   },
   {
@@ -627,7 +627,7 @@
     -109.273,
     41.944
    ],
-   "bytes": 594818,
+   "bytes": 594829,
    "counties": 29
   },
   {
@@ -641,7 +641,7 @@
     -71.675,
     44.978
    ],
-   "bytes": 163292,
+   "bytes": 163303,
    "counties": 14
   },
   {
@@ -655,7 +655,7 @@
     -75.293,
     39.341
    ],
-   "bytes": 1759227,
+   "bytes": 1808862,
    "counties": 133
   },
   {
@@ -669,7 +669,7 @@
     -117.05,
     48.989
    ],
-   "bytes": 1462404,
+   "bytes": 1486002,
    "counties": 39
   },
   {
@@ -683,7 +683,7 @@
     -77.769,
     40.598
    ],
-   "bytes": 489178,
+   "bytes": 489189,
    "counties": 55
   },
   {
@@ -697,7 +697,7 @@
     -87.07,
     46.853
    ],
-   "bytes": 1230155,
+   "bytes": 1258021,
    "counties": 72
   },
   {
@@ -711,7 +711,7 @@
     -104.106,
     44.832
    ],
-   "bytes": 147437,
+   "bytes": 147448,
    "counties": 23
   }
  ],
@@ -772,6 +772,563 @@
    "lodes": 1.1402138497723304,
    "zbp": 1.1402138497723304
   }
+ },
+ "local": {
+  "programs": {
+   "il_ez": {
+    "label": "Illinois Enterprise Zone",
+    "one": "an Illinois Enterprise Zone",
+    "many": "Illinois Enterprise Zones",
+    "kind": "zone",
+    "desc": "State-designated zones where businesses can get a sales-tax exemption on building materials, investment and jobs tax credits and local property-tax abatements (Illinois Enterprise Zone Act)."
+   },
+   "tif": {
+    "label": "Tax increment financing (TIF) district",
+    "one": "a TIF district",
+    "many": "TIF districts",
+    "kind": "tif",
+    "desc": "Districts where the growth in property-tax revenue pays for redevelopment: public works, land and grants to projects, decided by the city, village or county that created the district. Texas calls them tax increment reinvestment zones, Georgia tax allocation districts, Florida community redevelopment areas; urban renewal and redevelopment areas in Oregon, Montana, Tennessee and Nevada are financed the same way."
+   },
+   "co_ez": {
+    "label": "Colorado Enterprise Zone",
+    "one": "a Colorado Enterprise Zone",
+    "many": "Colorado Enterprise Zones",
+    "kind": "zone",
+    "desc": "State-designated zones (Colorado Office of Economic Development) where businesses can claim state income-tax credits for investment, new jobs, job training and rehabilitating vacant buildings; the zones are large, often whole counties, and donors to approved zone projects get a credit too."
+   },
+   "md_ez": {
+    "label": "Maryland Enterprise Zone",
+    "one": "a Maryland Enterprise Zone",
+    "many": "Maryland Enterprise Zones",
+    "kind": "zone",
+    "desc": "Zones where businesses may be eligible for real-property and income-tax credits for job creation and investment (Maryland Department of Commerce)."
+   },
+   "nj_uez": {
+    "label": "New Jersey Urban Enterprise Zone",
+    "one": "a New Jersey Urban Enterprise Zone",
+    "many": "New Jersey Urban Enterprise Zones",
+    "kind": "zone",
+    "desc": "Designated urban areas where participating retailers can charge half the state sales tax and businesses can get other state incentives (New Jersey Department of Community Affairs)."
+   },
+   "or_ez": {
+    "label": "Oregon Enterprise Zone",
+    "one": "an Oregon Enterprise Zone",
+    "many": "Oregon Enterprise Zones",
+    "kind": "zone",
+    "desc": "Zones sponsored by cities, counties, ports and tribes where new business investment is exempt from local property tax for three to five years, longer in some rural zones (Business Oregon)."
+   },
+   "va_ez": {
+    "label": "Virginia Enterprise Zone",
+    "one": "a Virginia Enterprise Zone",
+    "many": "Virginia Enterprise Zones",
+    "kind": "zone",
+    "desc": "Zones where businesses can get state grants for new jobs and for investing in real property (Virginia Department of Housing and Community Development), often with local incentives too."
+   },
+   "tx_ez": {
+    "label": "Texas Enterprise Zone block groups",
+    "one": "Texas Enterprise Zone block groups",
+    "many": "Texas Enterprise Zone block groups",
+    "unit": [
+     "county",
+     "counties"
+    ],
+    "kind": "zone",
+    "desc": "Census block groups where at least 20% of residents live in poverty, on the state's current list (2020 block groups). A project there that its city or county nominates can get a state sales and use tax refund (Texas Enterprise Zone Program). Distressed counties, federal zones and defense base areas also qualify but are not drawn here."
+   },
+   "pa_koz": {
+    "label": "Pennsylvania Keystone Opportunity Zone site",
+    "one": "a Keystone Opportunity Zone site",
+    "many": "Keystone Opportunity Zone sites",
+    "kind": "site",
+    "desc": "Designated parcels where a business can be exempt from most state and local taxes, including corporate income, sales and use, and property taxes, until the designation expires (Pennsylvania Department of Community and Economic Development)."
+   },
+   "la_ez": {
+    "label": "Louisiana Enterprise Zone block groups",
+    "one": "Louisiana Enterprise Zone block groups",
+    "many": "Louisiana Enterprise Zone block groups",
+    "unit": [
+     "parish",
+     "parishes"
+    ],
+    "kind": "zone",
+    "desc": "Census block groups that qualify for the Louisiana Enterprise Zone program (Louisiana Economic Development), where a business that adds jobs can get a credit for each new job and a state sales-tax rebate or investment credit."
+   },
+   "ga_soz": {
+    "label": "Georgia State Opportunity Zone",
+    "one": "a Georgia State Opportunity Zone",
+    "many": "Georgia State Opportunity Zones",
+    "kind": "zone",
+    "desc": "Areas designated by the Georgia Department of Community Affairs (not federal Opportunity Zones) where a business that creates at least two jobs can claim the state's highest job tax credit."
+   },
+   "bid": {
+    "label": "Business improvement district",
+    "one": "a business improvement district",
+    "many": "business improvement districts",
+    "kind": "bid",
+    "desc": "Commercial districts that pay an added assessment (usually on property; on hotel stays in a tourism district) for services such as cleaning, security, marketing and events, run by a district management organization."
+   },
+   "chi_ssa": {
+    "label": "Chicago Special Service Area",
+    "one": "a Special Service Area",
+    "many": "Special Service Areas",
+    "kind": "ssa",
+    "desc": "Commercial districts that pay a small added property tax for services such as cleaning, security, marketing and small-business support, run by a local service provider."
+   }
+  },
+  "sources": [
+   {
+    "id": "il_ez",
+    "state": "17",
+    "program": "il_ez",
+    "where": "Illinois Department of Revenue (zones designated by DCEO)",
+    "vintage": "2026 layer; expired zones left out",
+    "url": "https://idor.maps.arcgis.com/apps/webappviewer/index.html?id=f82fc6b62fde435abb41f5f72db2db48",
+    "districts": 100
+   },
+   {
+    "id": "chi_tif",
+    "state": "17",
+    "program": "tif",
+    "where": "City of Chicago",
+    "vintage": "updated September 2026",
+    "url": "https://data.cityofchicago.org/d/eejr-xtfb",
+    "districts": 100
+   },
+   {
+    "id": "cook_tif",
+    "state": "17",
+    "program": "tif",
+    "where": "Cook County (suburban Cook; Chicago's from the City)",
+    "vintage": "tax year 2025",
+    "url": "https://gis12.cookcountyil.gov/arcgis/rest/services/Tax_Increment_Finance_District_Boundaries/MapServer",
+    "districts": 305
+   },
+   {
+    "id": "dupage_tif",
+    "state": "17",
+    "program": "tif",
+    "where": "DuPage County",
+    "vintage": "current assessment year",
+    "url": "https://services.arcgis.com/neJvtQ4PXvnQ86MJ/arcgis/rest/services/TIF_Districts_/FeatureServer/17",
+    "districts": 57
+   },
+   {
+    "id": "kane_tif",
+    "state": "17",
+    "program": "tif",
+    "where": "Kane County",
+    "vintage": "updated October 2026",
+    "url": "https://services1.arcgis.com/oRKmdBXD6EbdmVgJ/arcgis/rest/services/KaneCo_IL_Districts_TIF/FeatureServer/0",
+    "districts": 60
+   },
+   {
+    "id": "lake_tif",
+    "state": "17",
+    "program": "tif",
+    "where": "Lake County",
+    "vintage": "updated October 2026",
+    "url": "https://services3.arcgis.com/HESxeTbDliKKvec2/arcgis/rest/services/LakeCounty_TaxDistricts/FeatureServer/13",
+    "districts": 54
+   },
+   {
+    "id": "peoria_tif",
+    "state": "17",
+    "program": "tif",
+    "where": "Peoria County",
+    "vintage": "tax year 2024",
+    "url": "https://services.arcgis.com/iPiPjILCMYxPZWTc/arcgis/rest/services/TIF_Districts/FeatureServer/0",
+    "districts": 26
+   },
+   {
+    "id": "champaign_tif",
+    "state": "17",
+    "program": "tif",
+    "where": "City of Champaign",
+    "vintage": "city open data, 2025",
+    "url": "https://gisportal.champaignil.gov/ms/rest/services/Open_Data/Open_Data/MapServer/5",
+    "districts": 6
+   },
+   {
+    "id": "chi_ssa",
+    "state": "17",
+    "program": "chi_ssa",
+    "where": "City of Chicago",
+    "vintage": "updated December 2025",
+    "url": "https://data.cityofchicago.org/d/cmr6-dn8c",
+    "districts": 58
+   },
+   {
+    "id": "co_ez",
+    "state": "08",
+    "program": "co_ez",
+    "where": "Colorado Office of Economic Development and International Trade",
+    "vintage": "zones designated 2026",
+    "url": "https://oedit.colorado.gov/enterprise-zone-program",
+    "districts": 19
+   },
+   {
+    "id": "md_ez",
+    "state": "24",
+    "program": "md_ez",
+    "where": "Maryland Department of Commerce (via MD iMAP)",
+    "vintage": "current zones",
+    "url": "https://commerce.maryland.gov/fund/programs-for-businesses/enterprise-zone-tax-credit",
+    "districts": 31
+   },
+   {
+    "id": "nj_uez",
+    "state": "34",
+    "program": "nj_uez",
+    "where": "New Jersey Department of Community Affairs",
+    "vintage": "updated September 2026",
+    "url": "https://www.nj.gov/dca/uez/",
+    "districts": 34
+   },
+   {
+    "id": "or_ez",
+    "state": "41",
+    "program": "or_ez",
+    "where": "Business Oregon",
+    "vintage": "updated August 2026",
+    "url": "https://www.oregon.gov/biz/programs/enterprise_zones/",
+    "districts": 71
+   },
+   {
+    "id": "va_ez",
+    "state": "51",
+    "program": "va_ez",
+    "where": "Virginia Economic Development Partnership (zones designated by DHCD)",
+    "vintage": "updated 2026",
+    "url": "https://www.dhcd.virginia.gov/vez",
+    "districts": 76
+   },
+   {
+    "id": "tx_ez",
+    "state": "48",
+    "program": "tx_ez",
+    "where": "Office of the Texas Governor, Economic Development and Tourism",
+    "vintage": "2020 census block groups",
+    "url": "https://gov.texas.gov/business/page/texas-enterprise-zone-program",
+    "districts": 226
+   },
+   {
+    "id": "pa_koz",
+    "state": "42",
+    "program": "pa_koz",
+    "where": "Pennsylvania Department of Community and Economic Development",
+    "vintage": "updated September 2026",
+    "url": "https://dced.pa.gov/programs/keystone-opportunity-zone-koz/",
+    "districts": 218
+   },
+   {
+    "id": "la_ez",
+    "state": "22",
+    "program": "la_ez",
+    "where": "Louisiana Economic Development",
+    "vintage": "block groups qualified in 2023 (2021 ACS)",
+    "url": "https://www.opportunitylouisiana.gov/incentives/enterprise-zone",
+    "districts": 64
+   },
+   {
+    "id": "ga_soz",
+    "state": "13",
+    "program": "ga_soz",
+    "where": "Georgia Department of Community Affairs",
+    "vintage": "updated January 2026",
+    "url": "https://www.dca.ga.gov/community-economic-development/incentive-programs/opportunity-zones",
+    "districts": 34
+   },
+   {
+    "id": "mt_tif",
+    "state": "30",
+    "program": "tif",
+    "where": "Montana Department of Revenue (statewide)",
+    "vintage": "updated November 2025",
+    "url": "https://gisservice.mt.gov/arcgis/rest/services/msdi_administrative_boundaries_map_v1/MapServer/2",
+    "districts": 67
+   },
+   {
+    "id": "hou_tirz",
+    "state": "48",
+    "program": "tif",
+    "where": "City of Houston",
+    "vintage": "updated October 2026",
+    "url": "https://mycity2.houstontx.gov/gisweb02/rest/services/HoustonMap/Administrative_Boundary/MapServer/5",
+    "districts": 27
+   },
+   {
+    "id": "stpaul_tif",
+    "state": "27",
+    "program": "tif",
+    "where": "City of Saint Paul",
+    "vintage": "updated July 2026",
+    "url": "https://services1.arcgis.com/9meaaHE3uiba0zr8/arcgis/rest/services/TIF_For_Open_Info_DM/FeatureServer/1",
+    "districts": 60
+   },
+   {
+    "id": "kc_tif",
+    "state": "29",
+    "program": "tif",
+    "where": "City of Kansas City, Missouri",
+    "vintage": "updated March 2026",
+    "url": "https://services.arcgis.com/4o5uMWTHuOhUVJPd/arcgis/rest/services/KCIncentiveTaxIncrementFinancing/FeatureServer/0",
+    "districts": 60
+   },
+   {
+    "id": "stl_tif",
+    "state": "29",
+    "program": "tif",
+    "where": "City of St. Louis (St. Louis Development Corporation)",
+    "vintage": "current",
+    "url": "https://www.stlouis-mo.gov/data/datasets/dataset.cfm?id=56",
+    "districts": 101
+   },
+   {
+    "id": "mke_tid",
+    "state": "55",
+    "program": "tif",
+    "where": "City of Milwaukee",
+    "vintage": "active districts, October 2025",
+    "url": "https://services1.arcgis.com/5ly0cVV70qsN8Soc/arcgis/rest/services/activeTIDs/FeatureServer/13",
+    "districts": 73
+   },
+   {
+    "id": "msn_tid",
+    "state": "55",
+    "program": "tif",
+    "where": "City of Madison",
+    "vintage": "current",
+    "url": "https://maps.cityofmadison.com/arcgis/rest/services/Public/OPEN_DATA_PLANNING/MapServer/8",
+    "districts": 16
+   },
+   {
+    "id": "dal_tif",
+    "state": "48",
+    "program": "tif",
+    "where": "City of Dallas",
+    "vintage": "updated October 2026",
+    "url": "https://services2.arcgis.com/rwnOSbfKSwyTBcwN/arcgis/rest/services/EconomicDevelopment/FeatureServer/1",
+    "districts": 18
+   },
+   {
+    "id": "ftw_tif",
+    "state": "48",
+    "program": "tif",
+    "where": "City of Fort Worth",
+    "vintage": "current",
+    "url": "https://www.fortworthtexas.gov/departments/econdev/tif",
+    "districts": 10
+   },
+   {
+    "id": "sa_tirz",
+    "state": "48",
+    "program": "tif",
+    "where": "City of San Antonio",
+    "vintage": "updated October 2026",
+    "url": "https://services.arcgis.com/g1fRTDLeMgspWrYp/arcgis/rest/services/TIRZ/FeatureServer/11",
+    "districts": 21
+   },
+   {
+    "id": "atl_tad",
+    "state": "13",
+    "program": "tif",
+    "where": "City of Atlanta (published by Atlanta BeltLine, Inc.)",
+    "vintage": "2026 copy of the City layer",
+    "url": "https://gis.beltline.org/server/rest/services/COA_Tax_Allocation_Districts_public/FeatureServer/0",
+    "districts": 10
+   },
+   {
+    "id": "indy_tif",
+    "state": "18",
+    "program": "tif",
+    "where": "City of Indianapolis and Marion County",
+    "vintage": "current",
+    "url": "https://gis.indy.gov/server/rest/services/OpenData/OpenData_PlanningZoning/MapServer/15",
+    "districts": 50
+   },
+   {
+    "id": "cin_tif",
+    "state": "39",
+    "program": "tif",
+    "where": "City of Cincinnati (CAGIS)",
+    "vintage": "updated July 2026",
+    "url": "https://services.arcgis.com/JyZag7oO4NteHGiq/arcgis/rest/services/Open_Data_Feature_Collection/FeatureServer/15",
+    "districts": 35
+   },
+   {
+    "id": "frank_tif",
+    "state": "39",
+    "program": "tif",
+    "where": "Franklin County Auditor (Columbus and its county)",
+    "vintage": "updated January 2026",
+    "url": "https://services1.arcgis.com/7r2Wl09a1Apy459r/arcgis/rest/services/TIFs_AGO/FeatureServer/0",
+    "districts": 299
+   },
+   {
+    "id": "lou_tif",
+    "state": "21",
+    "program": "tif",
+    "where": "Louisville Metro (local-only TIFs)",
+    "vintage": "updated April 2026",
+    "url": "https://services1.arcgis.com/79kfd2K6fskCAkyg/arcgis/rest/services/Local_Only_TIFs/FeatureServer/0",
+    "districts": 14
+   },
+   {
+    "id": "nash_rd",
+    "state": "47",
+    "program": "tif",
+    "where": "Metro Nashville (MDHA redevelopment districts)",
+    "vintage": "updated August 2026",
+    "url": "https://www.nashville-mdha.org/redevelopment-districts/",
+    "districts": 11
+   },
+   {
+    "id": "mem_tif",
+    "state": "47",
+    "program": "tif",
+    "where": "Memphis and Shelby County Community Redevelopment Agency",
+    "vintage": "2026\u201327 parcels",
+    "url": "https://services6.arcgis.com/N7vv3uzCWdGcvvFv/arcgis/rest/services/TIF_Parcels_2026-27/FeatureServer/0",
+    "districts": 3
+   },
+   {
+    "id": "pgh_tif",
+    "state": "42",
+    "program": "tif",
+    "where": "Urban Redevelopment Authority of Pittsburgh",
+    "vintage": "updated December 2023",
+    "url": "https://services1.arcgis.com/0DMNBNaacQNEfN4H/arcgis/rest/services/TIFS/FeatureServer/1",
+    "districts": 9
+   },
+   {
+    "id": "lv_rda1",
+    "state": "32",
+    "program": "tif",
+    "where": "City of Las Vegas",
+    "vintage": "updated October 2026",
+    "url": "https://services1.arcgis.com/F1v0ufATbBQScMtY/arcgis/rest/services/Redevelopment_Area/FeatureServer/0",
+    "districts": 1
+   },
+   {
+    "id": "lv_rda2",
+    "state": "32",
+    "program": "tif",
+    "where": "City of Las Vegas",
+    "vintage": "updated October 2026",
+    "url": "https://services1.arcgis.com/F1v0ufATbBQScMtY/arcgis/rest/services/Redevelopment_Area2/FeatureServer/0",
+    "districts": 1
+   },
+   {
+    "id": "lv_rda3",
+    "state": "32",
+    "program": "tif",
+    "where": "City of Las Vegas",
+    "vintage": "updated October 2026",
+    "url": "https://services1.arcgis.com/F1v0ufATbBQScMtY/arcgis/rest/services/RedevelopmentArea3/FeatureServer/0",
+    "districts": 1
+   },
+   {
+    "id": "pdx_tif",
+    "state": "41",
+    "program": "tif",
+    "where": "City of Portland",
+    "vintage": "2025 districts",
+    "url": "https://www.portlandmaps.com/od/rest/services/COP_OpenData_Boundary/MapServer/1423",
+    "districts": 13
+   },
+   {
+    "id": "dc_tif",
+    "state": "11",
+    "program": "tif",
+    "where": "District of Columbia (DC GIS)",
+    "vintage": "updated February 2026",
+    "url": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Business_Incentives_WebMercator/MapServer/26",
+    "districts": 9
+   },
+   {
+    "id": "dc_tif_dt",
+    "state": "11",
+    "program": "tif",
+    "where": "District of Columbia (DC GIS)",
+    "vintage": "current",
+    "url": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Business_Incentives_WebMercator/MapServer/0",
+    "districts": 1
+   },
+   {
+    "id": "tpa_cra",
+    "state": "12",
+    "program": "tif",
+    "where": "City of Tampa",
+    "vintage": "city layer (boundaries last changed 2014)",
+    "url": "https://arcgis.tampagov.net/arcgis/rest/services/OpenData/Planning/MapServer/0",
+    "districts": 10
+   },
+   {
+    "id": "mdc_cra",
+    "state": "12",
+    "program": "tif",
+    "where": "Miami-Dade County (CRAs countywide)",
+    "vintage": "updated March 2026",
+    "url": "https://services.arcgis.com/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/CommunityRedevelopmentArea_gdb/FeatureServer/0",
+    "districts": 16
+   },
+   {
+    "id": "pin_cra",
+    "state": "12",
+    "program": "tif",
+    "where": "Pinellas County (CRAs countywide)",
+    "vintage": "updated January 2026",
+    "url": "https://services.arcgis.com/f5HgUpxURgEzTccH/arcgis/rest/services/Pinellas_CommunityRedevelopmentAreas_view/FeatureServer/0",
+    "districts": 14
+   },
+   {
+    "id": "nola_tif",
+    "state": "22",
+    "program": "tif",
+    "where": "City of New Orleans",
+    "vintage": "updated August 2025",
+    "url": "https://data.nola.gov/d/bwdf-rxmm",
+    "districts": 5
+   },
+   {
+    "id": "okc_tif",
+    "state": "40",
+    "program": "tif",
+    "where": "City of Oklahoma City",
+    "vintage": "updated October 2026",
+    "url": "https://utility.arcgis.com/usrsvcs/servers/08ededb10dcf458ba9ac5588d6d6296a/rest/services/OpenData/Finance/FeatureServer/0",
+    "districts": 11
+   },
+   {
+    "id": "nyc_bid",
+    "state": "36",
+    "program": "bid",
+    "where": "City of New York",
+    "vintage": "updated April 2026",
+    "url": "https://services6.arcgis.com/yG5s3afENB5iO9fj/arcgis/rest/services/BusinessImprovementDistrict_view/FeatureServer/0",
+    "districts": 78
+   },
+   {
+    "id": "sea_bia",
+    "state": "53",
+    "program": "bid",
+    "where": "City of Seattle",
+    "vintage": "updated June 2026",
+    "url": "https://services.arcgis.com/ZOyb2t4B0UYuYNYH/arcgis/rest/services/OED_Business_Improvement_Areas/FeatureServer/0",
+    "districts": 11
+   },
+   {
+    "id": "phl_bid",
+    "state": "42",
+    "program": "bid",
+    "where": "City of Philadelphia",
+    "vintage": "updated October 2025",
+    "url": "https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/business_improvement_districts/FeatureServer/0",
+    "districts": 14
+   }
+  ],
+  "rule": "percent of each tract's area inside each district and inside each program's districts taken together (equal-area projection, generalized 2024 tract shapes); shares that round to 1% or more kept",
+  "built_year": 2026
  },
  "ovl": {
   "keys": [
