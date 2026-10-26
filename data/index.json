@@ -11,7 +11,7 @@
     -84.955,
     34.977
    ],
-   "bytes": 1118122,
+   "bytes": 1212339,
    "counties": 67
   },
   {
@@ -25,7 +25,7 @@
     -130.137,
     71.214
    ],
-   "bytes": 307165,
+   "bytes": 318783,
    "counties": 30
   },
   {
@@ -39,7 +39,7 @@
     -109.133,
     36.989
    ],
-   "bytes": 1262265,
+   "bytes": 1382972,
    "counties": 15
   },
   {
@@ -53,7 +53,7 @@
     -89.855,
     36.484
    ],
-   "bytes": 658422,
+   "bytes": 713725,
    "counties": 75
   },
   {
@@ -67,7 +67,7 @@
     -114.273,
     41.852
    ],
-   "bytes": 6609510,
+   "bytes": 7227000,
    "counties": 58
   },
   {
@@ -81,7 +81,7 @@
     -102.151,
     40.894
    ],
-   "bytes": 1060771,
+   "bytes": 1156694,
    "counties": 64
   },
   {
@@ -95,7 +95,7 @@
     -71.814,
     42.023
    ],
-   "bytes": 641926,
+   "bytes": 701871,
    "counties": 9
   },
   {
@@ -109,7 +109,7 @@
     -75.056,
     39.832
    ],
-   "bytes": 188570,
+   "bytes": 206144,
    "counties": 3
   },
   {
@@ -123,7 +123,7 @@
     -76.919,
     38.983
    ],
-   "bytes": 166045,
+   "bytes": 179588,
    "counties": 1
   },
   {
@@ -137,7 +137,7 @@
     -80.038,
     30.976
    ],
-   "bytes": 3671124,
+   "bytes": 4027688,
    "counties": 67
   },
   {
@@ -151,7 +151,7 @@
     -80.85,
     34.979
    ],
-   "bytes": 2075219,
+   "bytes": 2262192,
    "counties": 159
   },
   {
@@ -165,7 +165,7 @@
     -154.903,
     28.388
    ],
-   "bytes": 310839,
+   "bytes": 338154,
    "counties": 5
   },
   {
@@ -179,7 +179,7 @@
     -111.076,
     48.852
    ],
-   "bytes": 356604,
+   "bytes": 387630,
    "counties": 44
   },
   {
@@ -193,7 +193,7 @@
     -87.53,
     42.488
    ],
-   "bytes": 2395469,
+   "bytes": 2617078,
    "counties": 102
   },
   {
@@ -207,7 +207,7 @@
     -84.824,
     41.753
    ],
-   "bytes": 1216307,
+   "bytes": 1330592,
    "counties": 92
   },
   {
@@ -221,7 +221,7 @@
     -90.189,
     43.457
    ],
-   "bytes": 679700,
+   "bytes": 740193,
    "counties": 99
   },
   {
@@ -235,7 +235,7 @@
     -94.604,
     39.921
    ],
-   "bytes": 607544,
+   "bytes": 662154,
    "counties": 105
   },
   {
@@ -249,7 +249,7 @@
     -82.121,
     39.117
    ],
-   "bytes": 996376,
+   "bytes": 1082836,
    "counties": 120
   },
   {
@@ -263,7 +263,7 @@
     -89.397,
     33.003
    ],
-   "bytes": 1028760,
+   "bytes": 1119085,
    "counties": 64
   },
   {
@@ -277,7 +277,7 @@
     -67.018,
     47.295
    ],
-   "bytes": 321159,
+   "bytes": 349193,
    "counties": 16
   },
   {
@@ -291,7 +291,7 @@
     -75.066,
     39.708
    ],
-   "bytes": 1089602,
+   "bytes": 1185899,
    "counties": 24
   },
   {
@@ -305,7 +305,7 @@
     -69.956,
     42.867
    ],
-   "bytes": 1213309,
+   "bytes": 1323987,
    "counties": 14
   },
   {
@@ -319,7 +319,7 @@
     -82.425,
     48.045
    ],
-   "bytes": 2061955,
+   "bytes": 2255366,
    "counties": 83
   },
   {
@@ -333,7 +333,7 @@
     -90.12,
     49.067
    ],
-   "bytes": 1105132,
+   "bytes": 1205382,
    "counties": 87
   },
   {
@@ -347,7 +347,7 @@
     -88.149,
     34.991
    ],
-   "bytes": 661490,
+   "bytes": 719888,
    "counties": 82
   },
   {
@@ -361,7 +361,7 @@
     -89.227,
     40.526
    ],
-   "bytes": 1234009,
+   "bytes": 1345362,
    "counties": 115
   },
   {
@@ -375,7 +375,7 @@
     -104.094,
     48.934
    ],
-   "bytes": 285705,
+   "bytes": 307800,
    "counties": 56
   },
   {
@@ -389,7 +389,7 @@
     -95.59,
     42.913
    ],
-   "bytes": 407644,
+   "bytes": 444577,
    "counties": 93
   },
   {
@@ -403,7 +403,7 @@
     -114.056,
     41.652
    ],
-   "bytes": 546817,
+   "bytes": 599913,
    "counties": 17
   },
   {
@@ -417,7 +417,7 @@
     -70.732,
     45.106
    ],
-   "bytes": 264419,
+   "bytes": 288567,
    "counties": 10
   },
   {
@@ -431,7 +431,7 @@
     -73.922,
     41.293
    ],
-   "bytes": 1579332,
+   "bytes": 1727604,
    "counties": 21
   },
   {
@@ -445,7 +445,7 @@
     -103.1,
     36.931
    ],
-   "bytes": 457476,
+   "bytes": 497529,
    "counties": 33
   },
   {
@@ -459,7 +459,7 @@
     -71.915,
     44.979
    ],
-   "bytes": 3817936,
+   "bytes": 4175606,
    "counties": 62
   },
   {
@@ -473,7 +473,7 @@
     -75.543,
     36.544
    ],
-   "bytes": 1997621,
+   "bytes": 2177160,
    "counties": 100
   },
   {
@@ -487,7 +487,7 @@
     -96.606,
     48.91
    ],
-   "bytes": 185062,
+   "bytes": 200392,
    "counties": 53
   },
   {
@@ -501,7 +501,7 @@
     -80.541,
     41.957
    ],
-   "bytes": 2257440,
+   "bytes": 2469073,
    "counties": 88
   },
   {
@@ -515,7 +515,7 @@
     -94.456,
     36.965
    ],
-   "bytes": 868169,
+   "bytes": 947439,
    "counties": 77
   },
   {
@@ -529,7 +529,7 @@
     -116.899,
     46.185
    ],
-   "bytes": 781487,
+   "bytes": 850250,
    "counties": 36
   },
   {
@@ -543,7 +543,7 @@
     -74.7,
     42.216
    ],
-   "bytes": 2542148,
+   "bytes": 2774385,
    "counties": 67
   },
   {
@@ -557,7 +557,7 @@
     -71.163,
     42.014
    ],
-   "bytes": 184186,
+   "bytes": 201280,
    "counties": 5
   },
   {
@@ -571,7 +571,7 @@
     -78.604,
     35.176
    ],
-   "bytes": 991447,
+   "bytes": 1080535,
    "counties": 46
   },
   {
@@ -585,7 +585,7 @@
     -96.494,
     45.805
    ],
-   "bytes": 195011,
+   "bytes": 211379,
    "counties": 66
   },
   {
@@ -599,7 +599,7 @@
     -81.752,
     36.637
    ],
-   "bytes": 1290805,
+   "bytes": 1406276,
    "counties": 95
   },
   {
@@ -613,7 +613,7 @@
     -93.699,
     36.41
    ],
-   "bytes": 4976223,
+   "bytes": 5441708,
    "counties": 254
   },
   {
@@ -627,7 +627,7 @@
     -109.273,
     41.944
    ],
-   "bytes": 547943,
+   "bytes": 594818,
    "counties": 29
   },
   {
@@ -641,7 +641,7 @@
     -71.675,
     44.978
    ],
-   "bytes": 149840,
+   "bytes": 163292,
    "counties": 14
   },
   {
@@ -655,7 +655,7 @@
     -75.293,
     39.341
    ],
-   "bytes": 1615531,
+   "bytes": 1759227,
    "counties": 133
   },
   {
@@ -669,7 +669,7 @@
     -117.05,
     48.989
    ],
-   "bytes": 1342401,
+   "bytes": 1462404,
    "counties": 39
   },
   {
@@ -683,7 +683,7 @@
     -77.769,
     40.598
    ],
-   "bytes": 452817,
+   "bytes": 489178,
    "counties": 55
   },
   {
@@ -697,7 +697,7 @@
     -87.07,
     46.853
    ],
-   "bytes": 1125791,
+   "bytes": 1230155,
    "counties": 72
   },
   {
@@ -711,7 +711,7 @@
     -104.106,
     44.832
    ],
-   "bytes": 136706,
+   "bytes": 147437,
    "counties": 23
   }
  ],
@@ -782,7 +782,11 @@
    "nmtc_sd",
    "cdfi_ia",
    "lila",
-   "lila_snap"
+   "lila_snap",
+   "qct26",
+   "qct27",
+   "dda26",
+   "dda27"
   ],
   "flags": {
    "oz1": "2018 Qualified Opportunity Zone (Notices 2018-48 and 2019-42; CDFI Fund list of 2010 tracts, carried to 2020 tracts)",
@@ -792,7 +796,11 @@
    "nmtc_sd": "NMTC low-income community meeting a primary severe-distress test: poverty above 30%, median family income at or below 60% of the benchmark, or unemployment at least 1.5 times the national rate. Other routes to that status are not computed.",
    "cdfi_ia": "CDFI Program Investment Area (CDFI Fund, 2016-2020 ACS, 2020 tracts)",
    "lila": "Low income and low access to a supermarket or large grocery store, 1 mile urban / 10 miles rural (USDA ERS Food Access Research Atlas, Large Retailer Access Map, 2019 data on 2010 tracts, carried to 2020 tracts)",
-   "lila_snap": "Low income and low access to any SNAP-authorized store, including convenience and dollar stores, 1 mile urban / 10 miles rural, straight-line (USDA ERS SNAP-authorized Retailer Access Map, 2025, 2020 tracts)"
+   "lila_snap": "Low income and low access to any SNAP-authorized store, including convenience and dollar stores, 1 mile urban / 10 miles rural, straight-line (USDA ERS SNAP-authorized Retailer Access Map, 2025, 2020 tracts)",
+   "qct26": "HUD 2026 Qualified Census Tract (Low-Income Housing Tax Credit), 2020 tracts",
+   "qct27": "HUD 2027 Qualified Census Tract (Low-Income Housing Tax Credit; credit allocations after December 31, 2026), 2020 tracts",
+   "dda26": "Mostly inside a HUD 2026 Difficult Development Area: at least half of the land in designated ZIP Code Tabulation Areas (metropolitan Small Area DDAs), or in a designated non-metropolitan county",
+   "dda27": "Mostly inside a HUD 2027 Difficult Development Area: at least half of the land in designated ZIP Code Tabulation Areas (metropolitan Small Area DDAs), or in a designated non-metropolitan county"
   },
   "vintages": {
    "oz1": "2018 designations (2011-2015 ACS, 2010 tracts)",
@@ -800,7 +808,11 @@
    "nmtc": "2016-2020 ACS",
    "cdfi_ia": "2016-2020 ACS",
    "lila": "2019 (LRAM)",
-   "lila_snap": "2025 (SRAM, July 2026 release)"
+   "lila_snap": "2025 (SRAM, July 2026 release)",
+   "qct26": "HUD 2026 list (2020 tracts)",
+   "qct27": "HUD 2027 list (September 2026)",
+   "dda26": "HUD 2026 list (FY2025 rents and income limits)",
+   "dda27": "HUD 2027 list (FY2026 rents and income limits)"
   }
  },
  "stores": {
@@ -911,6 +923,12 @@
   "health": {
    "cms_downloaded": "2026-10-25",
    "hrsa_downloaded": "2026-10-25"
+  },
+  "restaurant_split": {
+   "fsr": 408873.2,
+   "qsr": 434368.8,
+   "national_fsr_share": 0.485,
+   "source": "ZIP Business Patterns 2023 (722511; 722513 and 722514)"
   }
  },
  "tax_svc_share": {
@@ -1870,6 +1888,24 @@
  ],
  "fsr_share": 0.4632991281548692,
  "fsr_share_stores": 0.4143507449791358,
+ "us_income_brackets": [
+  6397599,
+  4406926,
+  3858602,
+  4245461,
+  4192539,
+  4358743,
+  4343918,
+  4433159,
+  4296543,
+  8280714,
+  11750969,
+  16319799,
+  13068961,
+  9601960,
+  12405370,
+  17266233
+ ],
  "src_names": {
   "can-databc": "DataBC - British Colombia Open Data Catalogue",
   "geoplanet": "Yahoo! GeoPlanet",

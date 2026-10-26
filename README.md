@@ -7,18 +7,19 @@ Live page: https://mjkelley00-mjk.github.io/neighborhood-spending-gaps/
 ## What's here
 
 ```
-index.html            the page (one file: styles, map, figures, downloads, suggestions)
+index.html            the page (one file: styles, map, figures, charts, report builder, downloads, suggestions)
 data/index.json       states, national calibration, store benchmarks, source names
 data/st/<fips>.json   one file per state: tracts, places, ZIP codes, named areas, counties, map shapes
 apps-script/Code.gs   the Google Apps Script behind suggested areas and messages (a copy; the live one is in the sheet)
-preview/              two design previews (Almanac, Field Guide) on the same data, while the redesign is chosen; not indexed
+preview/              redirects: links to the two former design previews open the same area on the page
 ```
 
 The page's "Method and limits" section explains how the figures are made and lists every source.
 
 ## Links
 
-- `#t=<tract ids>&n=<name>` reopens a selection. The address bar always holds the current one, and "Copy link to this selection" copies it.
+- `#t=<tract ids>&n=<name>` reopens a selection. The address bar always holds the current one, and "Copy a link to this area" copies it.
+- `&rp=<preset>` (dev, lender, city, biz, research) or `&rs=<sections>&rc=<categories>` after a selection keeps the report's choices; nothing is added for the full report.
 - `#sg-<id>` opens a suggested area. It's safe to forward.
 - `#review=<id>.<token>.<token>` opens a suggested area with Approve and Decline buttons. Only the review email has it. The tokens are signed by the script and don't expire, so anyone holding the link can approve or decline that suggestion: keep it to yourself. A review link can't change a row set to `removed` in the sheet.
 
