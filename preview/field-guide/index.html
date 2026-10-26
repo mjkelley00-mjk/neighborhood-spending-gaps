@@ -318,6 +318,10 @@ const retFig = (a, b) => { const lo = Math.min(a, b), hi = Math.max(a, b); if (!
 // The retention rate weighs categories by the sales they would have at the national norm, net leakage by residents'
 // spending in them, so the two can point different ways. Judged on the values as shown: a range from 1.00 reaching above
 // it counts as above, one to 1.00 reaching below it as below (as the chart colours them); the leakage by its sign.
+function drawInResidents(r) {
+  const T = r.tot;
+  return Math.max(T.gL, T.gZ) <= 0 && !(Math.round(Math.min(T.pfL, T.pfZ) * 100) > 100);
+}
 function headlineSplit(r) {
   const T = r.tot, R2 = x => Math.round(x * 100) / 100;
   const gl = Math.min(T.gL, T.gZ), gh = Math.max(T.gL, T.gZ), pl = R2(Math.min(T.pfL, T.pfZ)), ph = R2(Math.max(T.pfL, T.pfZ));
@@ -335,7 +339,7 @@ function splitNote(r) {
 function figsHTML(r) {
   const T = r.tot, gl = Math.min(T.gL, T.gZ), gh = Math.max(T.gL, T.gZ), si = shareInfo(r);
   const gap = gl >= 0 ? `<b class="leak">${rangeUSD(T.gL, T.gZ)}</b><span>Projected leakage a year</span>`
-    : gh <= 0 ? `<b class="inflow">${rangeUSD(-T.gL, -T.gZ)}</b><span>Net draw a year: stores sell more than residents' spending supports</span>`
+    : gh <= 0 ? `<b class="inflow">${rangeUSD(-T.gL, -T.gZ)}</b><span>${drawInResidents(r) ? "Net draw a year, counted in residents' own spending in each category" : "Net draw a year: stores sell more than residents' spending supports"}</span>`
     : `<b class="long">${fmtUSD(gl)} to ${fmtUSD(gh)}</b><span>Net projected leakage; the two estimates disagree on whether spending leaves or comes in</span>`;
   return `<div class="fig"><b>${fmtUSD(T.D)}</b><span>Estimated residents' spending a year in the ${NT} measured categories${si.txt ? ', ' + si.txt : ''}</span></div>` +
     `<div class="fig">${gap}</div><div class="fig"><b>${retFig(T.pfL, T.pfZ)}</b><span>${Math.round(Math.min(T.pfL, T.pfZ) * 100) > 100 ? "Retention: times what residents' spending would support at the national norm" : 'Retention rate (1.0 is the national norm)'}</span></div>` +
@@ -345,7 +349,8 @@ function summaryText(r) {
   const T = r.tot, gapLo = Math.min(T.gL, T.gZ), gapHi = Math.max(T.gL, T.gZ);
   // no households (a park, an airport, a business district): nothing to compare local sales with
   if (!(T.D > 0)) return {lead: `No households live in this selection, so there is no resident spending to compare with its stores' sales (${rangeUSD(T.sL, T.sZ)} a year). Add neighboring tracts to see the area around it.`, w: []};
-  const gapTxt = gapHi <= 0 ? `Overall, local stores sell more than the national pattern predicts for residents, so the area draws shoppers in.`
+  const gapTxt = gapHi <= 0 ? (drawInResidents(r) ? `Counted in residents' own spending, category by category, the area draws in more than it loses: a net <strong>${rangeUSD(-T.gL, -T.gZ)} a year</strong>.`
+      : `Overall, local stores sell more than the national pattern predicts for residents, so the area draws shoppers in.`)
     : gapLo >= 0 ? `Projected leakage is a net <strong>${rangeUSD(T.gL,T.gZ)} a year</strong>: residents' spending the area would keep at the national norm but doesn't.`
     : `The two supply estimates disagree on whether the area holds more or less than the norm overall (${fmtUSD(gapLo)} to ${fmtUSD(gapHi)} of residents' spending).`;
   const pos = r.cats.filter(x => !MINOR.has(x.c) && !OUT_OF_TOTAL.has(x.c) && Math.min(x.gL, x.gZ) > 0).sort((a,b) => Math.max(b.gL,b.gZ) - Math.max(a.gL,a.gZ)).slice(0,3);
@@ -355,7 +360,7 @@ function summaryText(r) {
   if (r.h < 2000 || r.n < 3) w.push('This is a small area. Store sales are allocated to tracts from ZIP and job counts, so one store more or less can swing a category; treat the figures as indicative.');
   const big = r.cats.filter(x => !MINOR.has(x.c) && !OUT_OF_TOTAL.has(x.c) && Math.round(Math.max(x.pfL,x.pfZ) * 100) > 300).map(x => SHORT[x.c].toLowerCase());
   if (big.length) w.push(`Sales more than 3 times the national norm on either estimate (${big.join('; ')}) usually mean a regional destination, a highway corner or a business district, where most buyers live elsewhere.`);
-  if (gapHi <= 0 && pos.length) w.push('The overall figure nets categories against each other: the area draws shoppers in overall but still falls short in the categories listed above.');
+  if (gapHi <= 0 && pos.length) w.push(`The overall figure nets categories against each other: ${drawInResidents(r) ? "counted in residents' spending, " : ''}the area draws shoppers in overall but still falls short in the categories listed above.`);
   const vt = visitorText(visitorInfo(sel, r)); if (vt) w.push(vt);
   return {lead, w};
 }
