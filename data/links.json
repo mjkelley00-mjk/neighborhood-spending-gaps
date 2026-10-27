@@ -1,0 +1,2170 @@
+{
+ "built": "2026-10-26",
+ "federal": [
+  {
+   "name": "SBA loan programs",
+   "agency": "U.S. Small Business Administration",
+   "url": "https://www.sba.gov/loans/",
+   "what": "SBA-guaranteed 7(a), 504 and microloans for small businesses; lender match",
+   "checked": "200"
+  },
+  {
+   "name": "HUBZone program",
+   "agency": "U.S. Small Business Administration",
+   "url": "https://www.sba.gov/certifications/#hubzone",
+   "what": "Federal contracting preference for small firms located in and hiring from HUBZone areas",
+   "checked": "200"
+  },
+  {
+   "name": "Small Business Investment Companies (SBIC) and investment capital",
+   "agency": "U.S. Small Business Administration",
+   "url": "https://www.sba.gov/loans/additional-funding-opportunities/investment-capital/",
+   "what": "SBA-licensed SBIC venture and debt funds and how to find one",
+   "checked": "200"
+  },
+  {
+   "name": "State Small Business Credit Initiative (SSBCI)",
+   "agency": "U.S. Department of the Treasury",
+   "url": "https://home.treasury.gov/policy-issues/small-business-programs/state-small-business-credit-initiative-ssbci",
+   "what": "Federal funds run through state loan, guarantee and equity programs for small businesses; list of state programs",
+   "checked": "200"
+  },
+  {
+   "name": "New Markets Tax Credit Program",
+   "agency": "CDFI Fund, U.S. Treasury",
+   "url": "https://www.cdfifund.gov/programs-training/programs/new-markets-tax-credit",
+   "what": "Federal tax credit for investment in businesses and real estate in low-income census tracts; allocatee lists",
+   "checked": "200"
+  },
+  {
+   "name": "CDFI Fund programs",
+   "agency": "CDFI Fund, U.S. Treasury",
+   "url": "https://www.cdfifund.gov/programs-training/programs",
+   "what": "All CDFI Fund programs: CDFI awards, NMTC, Bond Guarantee, Capital Magnet Fund, Native American CDFI",
+   "checked": "200"
+  },
+  {
+   "name": "Opportunity Zones",
+   "agency": "Internal Revenue Service",
+   "url": "https://www.irs.gov/credits-deductions/businesses/opportunity-zones",
+   "what": "Capital gains tax deferral and exclusion for investment through Qualified Opportunity Funds; rules and forms",
+   "checked": "200"
+  },
+  {
+   "name": "Community Development Block Grant (CDBG)",
+   "agency": "U.S. Department of Housing and Urban Development",
+   "url": "https://www.hud.gov/hud-partners/community-cdbg",
+   "what": "Annual block grants to cities, counties and states for housing, economic development and public facilities",
+   "checked": "200"
+  },
+  {
+   "name": "Section 108 Loan Guarantee Program",
+   "agency": "U.S. Department of Housing and Urban Development",
+   "url": "https://www.hud.gov/hud-partners/community-section108",
+   "what": "HUD-guaranteed loans to CDBG communities for economic development, housing and large public projects",
+   "checked": "200"
+  },
+  {
+   "name": "Qualified Census Tracts and Difficult Development Areas",
+   "agency": "HUD USER (HUD)",
+   "url": "https://www.huduser.gov/portal/datasets/qct.html",
+   "what": "Maps and lists of QCTs and DDAs that qualify LIHTC projects for a 30% basis boost",
+   "checked": "200"
+  },
+  {
+   "name": "Rural Development business programs",
+   "agency": "U.S. Department of Agriculture",
+   "url": "https://www.rd.usda.gov/programs-services/business-programs",
+   "what": "Business & Industry loan guarantees, rural business grants and other loans for rural businesses and co-ops",
+   "checked": "200"
+  },
+  {
+   "name": "Brownfields: types of funding",
+   "agency": "U.S. Environmental Protection Agency",
+   "url": "https://www.epa.gov/brownfields/types-funding",
+   "what": "EPA brownfields assessment, cleanup and revolving loan fund grants and other federal brownfields funding",
+   "checked": "200"
+  },
+  {
+   "name": "Historic Preservation Tax Incentives",
+   "agency": "National Park Service",
+   "url": "https://www.nps.gov/subjects/taxincentives/index.htm",
+   "what": "20% federal historic rehabilitation tax credit for income-producing historic buildings; application process",
+   "checked": "200"
+  },
+  {
+   "name": "Grants.gov search",
+   "agency": "Grants.gov (HHS)",
+   "url": "https://www.grants.gov/search-grants",
+   "what": "Search tool for all open federal grant opportunities across agencies",
+   "checked": "200"
+  }
+ ],
+ "states": {
+  "01": [
+   {
+    "name": "Tax incentives and grants",
+    "agency": "Alabama Department of Commerce",
+    "url": "https://www.madeinalabama.com/why-alabama/taxes-incentives/",
+    "what": "State tax credits, abatements and grants for business location and expansion",
+    "checked": "200"
+   },
+   {
+    "name": "Multifamily programs",
+    "agency": "Alabama Housing Finance Authority",
+    "url": "https://www.ahfa.com/programs/rental-housing/multifamily-programs",
+    "what": "Housing tax credits, HOME and multifamily bond financing for rental developers",
+    "checked": "200"
+   }
+  ],
+  "02": [
+   {
+    "name": "Programs",
+    "agency": "Alaska Industrial Development and Export Authority (AIDEA)",
+    "url": "https://www.aidea.org/Programs",
+    "what": "State loan participation, direct finance and infrastructure development programs for Alaska businesses",
+    "checked": "200"
+   },
+   {
+    "name": "Developer loans",
+    "agency": "Alaska Housing Finance Corporation",
+    "url": "https://www.ahfc.us/pros/loans",
+    "what": "Multifamily and development loan programs for housing developers",
+    "checked": "200"
+   }
+  ],
+  "04": [
+   {
+    "name": "Incentives",
+    "agency": "Arizona Commerce Authority",
+    "url": "https://www.azcommerce.com/incentives/",
+    "what": "State tax credits, exemptions and incentive programs for business investment and jobs",
+    "checked": "200"
+   }
+  ],
+  "05": [
+   {
+    "name": "Business incentives",
+    "agency": "Arkansas Economic Development Commission",
+    "url": "https://www.arkansasedc.com/why-arkansas/business-climate/incentives",
+    "what": "State job creation, investment and tax credit incentives",
+    "checked": "200"
+   },
+   {
+    "name": "Housing development",
+    "agency": "Arkansas Development Finance Authority",
+    "url": "https://adfa.arkansas.gov/housing-development/",
+    "what": "Housing tax credit, HOME and Housing Trust Fund financing for developers",
+    "checked": "200"
+   }
+  ],
+  "06": [
+   {
+    "name": "Incentives, grants and financing",
+    "agency": "California Governor's Office of Business and Economic Development (GO-Biz)",
+    "url": "https://business.ca.gov/resources/incentives-grants-and-financing/",
+    "what": "State tax credits (including California Competes), grants and financing programs",
+    "checked": "200"
+   },
+   {
+    "name": "California Infrastructure and Economic Development Bank (IBank)",
+    "agency": "IBank",
+    "url": "https://ibank.ca.gov/",
+    "what": "State small business loan guarantees, infrastructure loans and tax-exempt bonds",
+    "checked": "200"
+   },
+   {
+    "name": "Multifamily programs",
+    "agency": "California Housing Finance Agency",
+    "url": "https://www.calhfa.ca.gov/multifamily/",
+    "what": "Permanent and bond financing for affordable rental housing developers",
+    "checked": "200"
+   }
+  ],
+  "08": [
+   {
+    "name": "Programs and funding",
+    "agency": "Colorado Office of Economic Development and International Trade",
+    "url": "https://oedit.colorado.gov/programs-and-funding",
+    "what": "Searchable list of state grants, loans and tax credits for businesses and communities",
+    "checked": "200"
+   },
+   {
+    "name": "Enterprise Zone Program",
+    "agency": "Colorado Office of Economic Development and International Trade",
+    "url": "https://oedit.colorado.gov/enterprise-zone-program",
+    "what": "State income tax credits for business investment in designated enterprise zones",
+    "checked": "200"
+   },
+   {
+    "name": "Rental housing",
+    "agency": "Colorado Housing and Finance Authority",
+    "url": "https://www.chfainfo.com/rental-housing",
+    "what": "Housing tax credits and multifamily loans for rental developers",
+    "checked": "200"
+   }
+  ],
+  "09": [
+   {
+    "name": "Tax incentives",
+    "agency": "Connecticut Department of Economic and Community Development",
+    "url": "https://portal.ct.gov/decd/content/business-development/06_tax_incentives",
+    "what": "State corporate and small business tax credits, enterprise zone and other tax incentives",
+    "checked": "200"
+   },
+   {
+    "name": "Brownfields redevelopment",
+    "agency": "Connecticut Department of Economic and Community Development",
+    "url": "https://portal.ct.gov/decd/content/community-development/01_project_type/connecticut-office-of-brownfield-remediation-and-development",
+    "what": "State brownfield assessment and remediation grants and loans",
+    "checked": "200"
+   },
+   {
+    "name": "Developers",
+    "agency": "Connecticut Housing Finance Authority",
+    "url": "https://www.chfa.org/developers/",
+    "what": "Housing tax credits and multifamily financing for rental developers",
+    "checked": "200"
+   }
+  ],
+  "10": [
+   {
+    "name": "Tax incentives",
+    "agency": "Delaware Prosperity Partnership",
+    "url": "https://www.choosedelaware.com/why-delaware/tax-incentives/",
+    "what": "State tax credits and incentives for business location and expansion",
+    "checked": "200"
+   },
+   {
+    "name": "Division of Small Business",
+    "agency": "State of Delaware",
+    "url": "https://business.delaware.gov/",
+    "what": "State small business grants, loans and technical assistance",
+    "checked": "200"
+   },
+   {
+    "name": "Build and develop",
+    "agency": "Delaware State Housing Authority",
+    "url": "https://www.destatehousing.com/build/",
+    "what": "Housing tax credits and development financing for affordable housing",
+    "checked": "200"
+   }
+  ],
+  "11": [
+   {
+    "name": "Programs and initiatives",
+    "agency": "DC Office of the Deputy Mayor for Planning and Economic Development",
+    "url": "https://dmped.dc.gov/page/dmped-programs-and-initiatives",
+    "what": "DC grants, revenue bonds, tax abatements and development programs",
+    "checked": "200"
+   },
+   {
+    "name": "Department of Small and Local Business Development",
+    "agency": "District of Columbia",
+    "url": "https://dslbd.dc.gov/",
+    "what": "Small business grants, Main Streets and certified business enterprise programs",
+    "checked": "200"
+   },
+   {
+    "name": "DC Housing Finance Agency",
+    "agency": "DCHFA",
+    "url": "https://dchfa.org/",
+    "what": "Multifamily bond and loan financing for affordable housing development",
+    "checked": "200"
+   }
+  ],
+  "12": [
+   {
+    "name": "Incentives and grants",
+    "agency": "FloridaCommerce",
+    "url": "https://floridajobs.org/business-growth/incentives---grants",
+    "what": "State business incentives, Job Growth Grant Fund and rural programs",
+    "checked": "200"
+   },
+   {
+    "name": "Multifamily programs",
+    "agency": "Florida Housing Finance Corporation",
+    "url": "https://www.floridahousing.org/programs/developers-multifamily-programs",
+    "what": "Housing tax credits, SAIL loans and bonds for rental developers",
+    "checked": "200"
+   }
+  ],
+  "13": [
+   {
+    "name": "Incentives",
+    "agency": "Georgia Department of Economic Development",
+    "url": "https://www.georgia.org/competitive-advantages/incentives",
+    "what": "State job tax credits, sales tax exemptions and other business incentives",
+    "checked": "200"
+   }
+  ],
+  "15": [
+   {
+    "name": "Business incentives and programs",
+    "agency": "Hawaii Department of Business, Economic Development and Tourism",
+    "url": "https://invest.hawaii.gov/business-programs/business-incentives-and-programs/",
+    "what": "State tax credits, loans and incentive programs for businesses",
+    "checked": "200"
+   },
+   {
+    "name": "Enterprise Zones",
+    "agency": "Hawaii Department of Business, Economic Development and Tourism",
+    "url": "https://invest.hawaii.gov/business-programs/enterprise-zones/",
+    "what": "State and county tax benefits for businesses in designated enterprise zones",
+    "checked": "200"
+   },
+   {
+    "name": "Info for developers",
+    "agency": "Hawaii Housing Finance and Development Corporation",
+    "url": "https://dbedt.hawaii.gov/hhfdc/developers/",
+    "what": "Housing tax credits, rental housing revolving fund and other developer financing",
+    "checked": "200"
+   }
+  ],
+  "16": [
+   {
+    "name": "Incentives and grants",
+    "agency": "Idaho Department of Commerce",
+    "url": "https://commerce.idaho.gov/incentives/",
+    "what": "State tax incentives, grants and external financing resources",
+    "checked": "200"
+   },
+   {
+    "name": "Developers",
+    "agency": "Idaho Housing and Finance Association",
+    "url": "https://www.idahohousing.com/partners/project-financing/developers/",
+    "what": "Housing tax credits and federal housing funds for rental developers",
+    "checked": "200"
+   }
+  ],
+  "17": [
+   {
+    "name": "Incentives and tax assistance",
+    "agency": "Illinois Department of Commerce and Economic Opportunity",
+    "url": "https://dceo.illinois.gov/expandrelocate/incentives.html",
+    "what": "State EDGE tax credits, High Impact Business, enterprise zones and other incentives",
+    "checked": "200"
+   },
+   {
+    "name": "Illinois Enterprise Zones",
+    "agency": "Illinois Department of Commerce and Economic Opportunity",
+    "url": "https://dceo.illinois.gov/expandrelocate/incentives/taxassistance/enterprisezone.html",
+    "what": "Sales tax, investment tax credit and local property tax incentives inside designated enterprise zones",
+    "checked": "200"
+   },
+   {
+    "name": "Developers",
+    "agency": "Illinois Housing Development Authority",
+    "url": "https://www.ihda.org/developers/",
+    "what": "Housing tax credits, multifamily loans and other financing for rental developers",
+    "checked": "200"
+   }
+  ],
+  "18": [
+   {
+    "name": "Programs",
+    "agency": "Indiana Economic Development Corporation",
+    "url": "https://www.iedc.in.gov/programs",
+    "what": "State tax credits, grants and loan programs for business investment and jobs",
+    "checked": "200"
+   },
+   {
+    "name": "Developers",
+    "agency": "Indiana Housing and Community Development Authority",
+    "url": "https://www.in.gov/ihcda/developers/",
+    "what": "Housing tax credits and HOME/Trust Fund financing for rental developers",
+    "checked": "200"
+   }
+  ],
+  "19": [
+   {
+    "name": "Business financial assistance",
+    "agency": "Iowa Economic Development Authority",
+    "url": "https://opportunityiowa.gov/business/financial-assistance",
+    "what": "State tax credits, forgivable loans and other assistance for business expansion",
+    "checked": "200"
+   },
+   {
+    "name": "Rental programs",
+    "agency": "Iowa Finance Authority",
+    "url": "https://opportunityiowa.gov/housing/rental-programs",
+    "what": "Housing tax credits and rental housing financing for developers",
+    "checked": "200"
+   }
+  ],
+  "20": [
+   {
+    "name": "Business incentives and financing",
+    "agency": "Kansas Department of Commerce",
+    "url": "https://www.kansascommerce.gov/businesses/incentives/",
+    "what": "State tax credits, HPIP, PEAK and financing programs for businesses",
+    "checked": "200"
+   },
+   {
+    "name": "Housing development",
+    "agency": "Kansas Housing Resources Corporation",
+    "url": "https://kshousingcorp.org/housing-development/",
+    "what": "Housing tax credits and other financing for housing developers",
+    "checked": "200"
+   }
+  ],
+  "21": [
+   {
+    "name": "Financial incentives",
+    "agency": "Kentucky Cabinet for Economic Development",
+    "url": "https://newkentuckyhome.ky.gov/Locating_Expanding/Financial_Incentives",
+    "what": "State tax credit, bond and loan incentives for business location and expansion",
+    "checked": "200"
+   },
+   {
+    "name": "Multifamily development",
+    "agency": "Kentucky Housing Corporation",
+    "url": "https://www.kyhousing.org/page/multifamily-development",
+    "what": "Housing tax credits and multifamily financing for developers",
+    "checked": "200"
+   }
+  ],
+  "22": [
+   {
+    "name": "Business incentives",
+    "agency": "Louisiana Economic Development",
+    "url": "https://www.opportunitylouisiana.gov/incentives",
+    "what": "State incentives including Quality Jobs, Enterprise Zone, Industrial Tax Exemption and Restoration Tax Abatement",
+    "checked": "200"
+   },
+   {
+    "name": "Housing development",
+    "agency": "Louisiana Housing Corporation",
+    "url": "https://www.lhc.la.gov/housing-development",
+    "what": "Housing tax credits, bonds and gap financing for rental developers",
+    "checked": "200"
+   }
+  ],
+  "23": [
+   {
+    "name": "Office of Business Development",
+    "agency": "Maine Department of Economic and Community Development",
+    "url": "https://www.maine.gov/decd/business-development/",
+    "what": "State business assistance, tax incentive and financing programs",
+    "checked": "200"
+   },
+   {
+    "name": "Finance Authority of Maine (FAME)",
+    "agency": "FAME",
+    "url": "https://www.famemaine.com/",
+    "what": "State business loans, loan insurance and tax credit programs",
+    "checked": "200"
+   },
+   {
+    "name": "Development programs",
+    "agency": "MaineHousing",
+    "url": "https://www.mainehousing.org/programs-services/housing-development",
+    "what": "Housing tax credits and loan programs for rental developers",
+    "checked": "200"
+   }
+  ],
+  "24": [
+   {
+    "name": "Financial incentives",
+    "agency": "Maryland Department of Commerce",
+    "url": "https://commerce.maryland.gov/financial-incentives",
+    "what": "State tax credits, grants and loans for business expansion; enterprise zones",
+    "checked": "200"
+   },
+   {
+    "name": "Multifamily financing programs",
+    "agency": "Maryland Department of Housing and Community Development",
+    "url": "https://dhcd.maryland.gov/housing/multifamily-financing-programs",
+    "what": "Housing tax credits and multifamily loans for rental developers",
+    "checked": "200"
+   }
+  ],
+  "25": [
+   {
+    "name": "Financing",
+    "agency": "MassDevelopment",
+    "url": "https://www.massdevelopment.com/products-and-services/financing/",
+    "what": "State bonds, loans, guarantees and tax credit programs for businesses and real estate",
+    "checked": "200"
+   },
+   {
+    "name": "Programs and grants (EOED)",
+    "agency": "Massachusetts Executive Office of Economic Development",
+    "url": "https://www.mass.gov/service-details/business-development",
+    "what": "State business development programs and grants, including EDIP tax credits",
+    "checked": "200"
+   },
+   {
+    "name": "Developing new multifamily housing",
+    "agency": "MassHousing",
+    "url": "https://www.masshousing.com/create-and-preserve-housing/financing-new-rental-housing/",
+    "what": "Construction and permanent financing for new rental housing",
+    "checked": "200"
+   }
+  ],
+  "26": [
+   {
+    "name": "Incentives and taxes",
+    "agency": "Michigan Economic Development Corporation",
+    "url": "https://www.michiganbusiness.org/incentives-and-taxes/",
+    "what": "State business incentives, grants, loans and tax programs",
+    "checked": "200"
+   },
+   {
+    "name": "Developers",
+    "agency": "Michigan State Housing Development Authority",
+    "url": "https://www.michigan.gov/mshda/developers",
+    "what": "Housing tax credits and multifamily loan programs for developers",
+    "checked": "200"
+   }
+  ],
+  "27": [
+   {
+    "name": "Business financing programs",
+    "agency": "Minnesota Department of Employment and Economic Development",
+    "url": "https://mn.gov/deed/business/financing-business/deed-programs/",
+    "what": "State loans, grants and SSBCI programs for business expansion and jobs",
+    "checked": "200"
+   },
+   {
+    "name": "Rental housing",
+    "agency": "Minnesota Housing",
+    "url": "https://www.mnhousing.gov/home/rental-housing",
+    "what": "Housing tax credits and rental housing financing for developers",
+    "checked": "200"
+   }
+  ],
+  "28": [
+   {
+    "name": "Incentives directory",
+    "agency": "Mississippi Development Authority",
+    "url": "https://mississippi.org/doing-business/incentives/",
+    "what": "State tax credits, exemptions, rebates and MFLEX incentive program",
+    "checked": "200"
+   }
+  ],
+  "29": [
+   {
+    "name": "Program lookup",
+    "agency": "Missouri Department of Economic Development",
+    "url": "https://ded.mo.gov/program-lookup",
+    "what": "Searchable list of state tax credits, grants and incentive programs",
+    "checked": "200"
+   },
+   {
+    "name": "Multifamily programs",
+    "agency": "Missouri Housing Development Commission",
+    "url": "https://mhdc.com/programs/multifamily/",
+    "what": "Housing tax credits and multifamily financing for developers",
+    "checked": "200"
+   }
+  ],
+  "30": [
+   {
+    "name": "Business programs and services",
+    "agency": "Montana Department of Commerce",
+    "url": "https://commerce.mt.gov/Business/Programs-and-Services/",
+    "what": "State business loans, tax credits, C-PACE and other business programs",
+    "checked": "200"
+   }
+  ],
+  "31": [
+   {
+    "name": "Incentives",
+    "agency": "Nebraska Department of Economic Development",
+    "url": "https://opportunity.nebraska.gov/programs/incentives/",
+    "what": "State tax incentives including ImagiNE Nebraska and other business incentives",
+    "checked": "200"
+   },
+   {
+    "name": "Developers",
+    "agency": "Nebraska Investment Finance Authority",
+    "url": "https://www.nifa.org/developers-property-managers",
+    "what": "Housing tax credits and development financing for rental developers",
+    "checked": "200"
+   }
+  ],
+  "32": [
+   {
+    "name": "Incentives",
+    "agency": "Nevada Governor's Office of Economic Development",
+    "url": "https://goed.nv.gov/incentives/",
+    "what": "State tax abatements and other incentives for business location and expansion",
+    "checked": "200"
+   }
+  ],
+  "33": [
+   {
+    "name": "Business loans and tax credits",
+    "agency": "New Hampshire Department of Business and Economic Affairs",
+    "url": "https://www.nheconomy.com/grow/business-loans",
+    "what": "State business loans, tax credits and financing programs",
+    "checked": "200"
+   },
+   {
+    "name": "Developer financing",
+    "agency": "New Hampshire Housing",
+    "url": "https://www.nhhousing.org/developer-financing/",
+    "what": "Housing tax credits and multifamily financing for developers",
+    "checked": "200"
+   }
+  ],
+  "34": [
+   {
+    "name": "Financing and incentives",
+    "agency": "New Jersey Economic Development Authority",
+    "url": "https://www.njeda.gov/financing-and-incentives/",
+    "what": "State loans, grants, tax credits and incentive programs for businesses and developers",
+    "checked": "200"
+   },
+   {
+    "name": "Multifamily programs",
+    "agency": "New Jersey Housing and Mortgage Finance Agency",
+    "url": "https://www.nj.gov/dca/hmfa/developers/multifamily/",
+    "what": "Multifamily and supportive housing financing for developers",
+    "checked": "200"
+   }
+  ],
+  "35": [
+   {
+    "name": "Programs and services",
+    "agency": "New Mexico Economic Development Department",
+    "url": "https://edd.newmexico.gov/programs-and-services/",
+    "what": "State LEDA grants, JTIP, loans, C-PACE and other programs",
+    "checked": "200"
+   },
+   {
+    "name": "Developers",
+    "agency": "Housing New Mexico (MFA)",
+    "url": "https://housingnm.org/developers",
+    "what": "Housing tax credits and development financing for rental developers",
+    "checked": "200"
+   }
+  ],
+  "36": [
+   {
+    "name": "Tax-based incentives",
+    "agency": "Empire State Development",
+    "url": "https://esd.ny.gov/tax-based-incentives",
+    "what": "State Excelsior Jobs, START-UP NY, brownfield cleanup, New Markets and other tax credit programs",
+    "checked": "200"
+   },
+   {
+    "name": "Growth support",
+    "agency": "Empire State Development",
+    "url": "https://esd.ny.gov/growth-support",
+    "what": "State grants, loans and funds for business expansion and capital investment",
+    "checked": "200"
+   }
+  ],
+  "37": [
+   {
+    "name": "Grants and incentives",
+    "agency": "North Carolina Department of Commerce",
+    "url": "https://www.commerce.nc.gov/grants-incentives",
+    "what": "State JDIG, One NC Fund, building reuse and other grants and incentives",
+    "checked": "200"
+   },
+   {
+    "name": "Rental housing partners",
+    "agency": "North Carolina Housing Finance Agency",
+    "url": "https://www.nchfa.com/rental-housing-partners",
+    "what": "Housing tax credits and rental production financing for developers",
+    "checked": "200"
+   }
+  ],
+  "38": [
+   {
+    "name": "Finance and incentives",
+    "agency": "North Dakota Department of Commerce",
+    "url": "https://www.commerce.nd.gov/economic-development-finance/finance-and-incentives",
+    "what": "State finance programs, tax incentives and development fund",
+    "checked": "200"
+   },
+   {
+    "name": "Renaissance Zone Program",
+    "agency": "North Dakota Department of Commerce",
+    "url": "https://www.commerce.nd.gov/community-services/renaissance-zone-program",
+    "what": "State tax exemptions for property investment in designated city renaissance zones",
+    "checked": "200"
+   },
+   {
+    "name": "Project financing",
+    "agency": "North Dakota Housing Finance Agency",
+    "url": "https://www.ndhousing.nd.gov/development",
+    "what": "Housing tax credits and multifamily financing for developers",
+    "checked": "200"
+   }
+  ],
+  "39": [
+   {
+    "name": "Incentives and programs",
+    "agency": "JobsOhio",
+    "url": "https://www.jobsohio.com/incentives-programs",
+    "what": "State-designated EDO grants, loans and tax incentives for business expansion",
+    "checked": "200"
+   },
+   {
+    "name": "Business programs",
+    "agency": "Ohio Department of Development",
+    "url": "https://development.ohio.gov/business",
+    "what": "State tax credits, loans, brownfield and other business programs",
+    "checked": "browser"
+   },
+   {
+    "name": "Development division",
+    "agency": "Ohio Housing Finance Agency",
+    "url": "https://ohiohome.org/ppd/",
+    "what": "Housing tax credits and multifamily financing for developers",
+    "checked": "200"
+   }
+  ],
+  "40": [
+   {
+    "name": "Taxes and incentives",
+    "agency": "Oklahoma Department of Commerce",
+    "url": "https://www.okcommerce.gov/doing-business/business-relocation-expansion/incentives/",
+    "what": "State Quality Jobs, investment tax credit and other business incentives",
+    "checked": "200"
+   },
+   {
+    "name": "Developers",
+    "agency": "Oklahoma Housing Finance Agency",
+    "url": "https://www.ohfa.org/developers/",
+    "what": "Housing tax credits and multifamily financing for developers",
+    "checked": "200"
+   }
+  ],
+  "41": [
+   {
+    "name": "Programs",
+    "agency": "Business Oregon",
+    "url": "https://www.oregon.gov/biz/programs/pages/default.aspx",
+    "what": "All state business loans, grants, tax incentives and infrastructure programs",
+    "checked": "200"
+   },
+   {
+    "name": "Enterprise Zones",
+    "agency": "Business Oregon",
+    "url": "https://www.oregon.gov/biz/programs/enterprisezones/Pages/default.aspx",
+    "what": "Property tax exemptions for business investment in designated enterprise zones",
+    "checked": "200"
+   },
+   {
+    "name": "Brownfields",
+    "agency": "Business Oregon",
+    "url": "https://www.oregon.gov/biz/programs/Brownfields/Pages/default.aspx",
+    "what": "State brownfield assessment and cleanup loans and grants",
+    "checked": "200"
+   },
+   {
+    "name": "Housing development",
+    "agency": "Oregon Housing and Community Services",
+    "url": "https://www.oregon.gov/ohcs/development/pages/index.aspx",
+    "what": "Housing tax credits and state financing for affordable housing developers",
+    "checked": "200"
+   }
+  ],
+  "42": [
+   {
+    "name": "Programs and funding",
+    "agency": "Pennsylvania Department of Community and Economic Development",
+    "url": "https://dced.pa.gov/program/",
+    "what": "Searchable list of state grants, loans and tax credits",
+    "checked": "200"
+   },
+   {
+    "name": "Keystone Opportunity Zones",
+    "agency": "Pennsylvania Department of Community and Economic Development",
+    "url": "https://dced.pa.gov/programs/keystone-opportunity-zones-kozs/",
+    "what": "State and local tax abatements for businesses in designated KOZ parcels",
+    "checked": "200"
+   }
+  ],
+  "44": [
+   {
+    "name": "Financing",
+    "agency": "Rhode Island Commerce",
+    "url": "https://commerceri.com/financing/",
+    "what": "State loans, grants and tax credit programs for businesses",
+    "checked": "200"
+   },
+   {
+    "name": "Developers",
+    "agency": "Rhode Island Housing",
+    "url": "https://www.rihousing.com/partners/builders-developers/developers-handbook/",
+    "what": "Development handbook and financing programs for rental developers",
+    "checked": "200"
+   }
+  ],
+  "45": [
+   {
+    "name": "Incentives and grants",
+    "agency": "South Carolina Department of Commerce",
+    "url": "https://www.sccommerce.com/incentives-grants",
+    "what": "State job tax credits, investment incentives, site grants and CDBG",
+    "checked": "200"
+   },
+   {
+    "name": "Development",
+    "agency": "SC Housing",
+    "url": "https://schousing.sc.gov/development",
+    "what": "Housing tax credits, bond financing and HOME funds for developers",
+    "checked": "200"
+   }
+  ],
+  "46": [
+   {
+    "name": "Financing and incentives",
+    "agency": "South Dakota Governor's Office of Economic Development",
+    "url": "https://sdgoed.com/financing-incentives/",
+    "what": "State REDI Fund loans, bonds and other incentives",
+    "checked": "200"
+   },
+   {
+    "name": "Develop housing",
+    "agency": "South Dakota Housing",
+    "url": "https://www.sdhousing.org/develop-housing",
+    "what": "Housing tax credits, Housing Opportunity Fund and other development financing",
+    "checked": "200"
+   }
+  ],
+  "47": [
+   {
+    "name": "Incentives and grants",
+    "agency": "Tennessee Department of Economic and Community Development",
+    "url": "https://tnecd.com/why-tennessee/incentives-grants/",
+    "what": "State FastTrack grants, tax credits and community development grants",
+    "checked": "200"
+   },
+   {
+    "name": "Rental housing developers",
+    "agency": "Tennessee Housing Development Agency",
+    "url": "https://thda.org/rental-housing-partn/rental-housing-developers/",
+    "what": "Housing tax credits, bonds and gap financing for rental developers",
+    "checked": "200"
+   }
+  ],
+  "48": [
+   {
+    "name": "Incentive programs",
+    "agency": "Office of the Texas Governor, Economic Development and Tourism",
+    "url": "https://gov.texas.gov/business/page/incentives",
+    "what": "Texas Enterprise Fund, Enterprise Zone, JETI and other state incentives",
+    "checked": "200"
+   },
+   {
+    "name": "Multifamily finance",
+    "agency": "Texas Department of Housing and Community Affairs",
+    "url": "https://www.tdhca.texas.gov/programs/multifamily-housing-programs",
+    "what": "Housing tax credits, bonds and direct loans for rental developers",
+    "checked": "200"
+   }
+  ],
+  "49": [
+   {
+    "name": "Grants and funding",
+    "agency": "Utah Governor's Office of Economic Opportunity",
+    "url": "https://business.utah.gov/grants-funding/",
+    "what": "State grants, tax credit incentives and funding programs for businesses",
+    "checked": "200"
+   },
+   {
+    "name": "Multifamily finance and development",
+    "agency": "Utah Housing Corporation",
+    "url": "https://utahhousingcorp.org/multifamily/",
+    "what": "Housing tax credits and multifamily financing for developers",
+    "checked": "200"
+   }
+  ],
+  "50": [
+   {
+    "name": "Economic development programs",
+    "agency": "Vermont Agency of Commerce and Community Development",
+    "url": "https://accd.vermont.gov/economic-development/programs",
+    "what": "State VEGI incentive, TIF, training and other business programs",
+    "checked": "200"
+   },
+   {
+    "name": "Brownfields Revitalization Fund",
+    "agency": "Vermont Agency of Commerce and Community Development",
+    "url": "https://accd.vermont.gov/economic-development/programs/brownfields/state",
+    "what": "State brownfield assessment and cleanup grants and loans",
+    "checked": "200"
+   },
+   {
+    "name": "Developers",
+    "agency": "Vermont Housing Finance Agency",
+    "url": "https://vhfa.org/developers",
+    "what": "Housing tax credits and multifamily financing for developers",
+    "checked": "200"
+   }
+  ],
+  "51": [
+   {
+    "name": "Incentives and support",
+    "agency": "Virginia Economic Development Partnership",
+    "url": "https://www.vedp.org/incentives-support",
+    "what": "State grants, tax incentives, enterprise zone grants and small business financing",
+    "checked": "200"
+   },
+   {
+    "name": "Rental housing partners",
+    "agency": "Virginia Housing",
+    "url": "https://www.virginiahousing.com/partners/rental-housing",
+    "what": "Housing tax credits and multifamily financing for developers",
+    "checked": "200"
+   }
+  ],
+  "53": [
+   {
+    "name": "Business tax incentives",
+    "agency": "Choose Washington (Washington State Department of Commerce)",
+    "url": "https://choosewashingtonstate.com/i-need-help-with/site-selection/incentives/",
+    "what": "State business tax credits, exemptions and deferrals",
+    "checked": "200"
+   },
+   {
+    "name": "Programs",
+    "agency": "Washington State Department of Commerce",
+    "url": "https://www.commerce.wa.gov/programs/",
+    "what": "All Commerce grants and loans, including CERB, brownfields and housing trust fund",
+    "checked": "200"
+   },
+   {
+    "name": "Multifamily development",
+    "agency": "Washington State Housing Finance Commission",
+    "url": "https://wshfc.org/multifamily-development",
+    "what": "Housing tax credits and bond financing for multifamily developers",
+    "checked": "200"
+   }
+  ],
+  "54": [
+   {
+    "name": "Incentives and programs",
+    "agency": "West Virginia Department of Economic Development",
+    "url": "https://westvirginia.gov/incentives-and-programs/",
+    "what": "State tax credits, loans and other incentives for business investment",
+    "checked": "200"
+   },
+   {
+    "name": "Multifamily programs",
+    "agency": "West Virginia Housing Development Fund",
+    "url": "https://www.wvhdf.com/programs/multi-family-programs-and-resources/",
+    "what": "Housing tax credits and multifamily financing for developers",
+    "checked": "200"
+   }
+  ],
+  "55": [
+   {
+    "name": "Programs",
+    "agency": "Wisconsin Economic Development Corporation",
+    "url": "https://wedc.org/programs/",
+    "what": "State tax credits, grants and loans for businesses and communities",
+    "checked": "200"
+   },
+   {
+    "name": "Developers",
+    "agency": "Wisconsin Housing and Economic Development Authority",
+    "url": "https://www.wheda.com/developers",
+    "what": "Housing tax credits and multifamily financing for developers",
+    "checked": "200"
+   }
+  ],
+  "56": [
+   {
+    "name": "Business financing",
+    "agency": "Wyoming Business Council",
+    "url": "https://wyomingbusiness.org/business/financing/",
+    "what": "State business loans, grants, equity and financial incentives",
+    "checked": "200"
+   }
+  ]
+ },
+ "cities": {
+  "New York, NY": {
+   "state": "36",
+   "place_names": [
+    "New York city"
+   ],
+   "links": [
+    {
+     "name": "Business incentives",
+     "agency": "NYC Business (City of New York)",
+     "url": "https://nyc-business.nyc.gov/nycbusiness/business-services/incentives",
+     "what": "City tax incentives, abatements and financing programs for businesses",
+     "checked": "200"
+    },
+    {
+     "name": "NYC Industrial Development Agency",
+     "agency": "NYC Economic Development Corporation",
+     "url": "https://edc.nyc/nycida",
+     "what": "City tax-exempt bonds and tax benefits for industrial, commercial and nonprofit projects",
+     "checked": "200"
+    }
+   ]
+  },
+  "Los Angeles, CA": {
+   "state": "06",
+   "place_names": [
+    "Los Angeles city"
+   ],
+   "links": [
+    {
+     "name": "Business financial programs",
+     "agency": "City of Los Angeles Community Investment Department",
+     "url": "https://cid.lacity.gov/business-services/business-financial-programs",
+     "what": "City small business loans, microloans and JEDI Zone programs",
+     "checked": "200"
+    },
+    {
+     "name": "Economic and Workforce Development Department",
+     "agency": "City of Los Angeles",
+     "url": "https://ewdd.lacity.gov/",
+     "what": "City economic development, business services and workforce programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Chicago, IL": {
+   "state": "17",
+   "place_names": [
+    "Chicago city"
+   ],
+   "links": [
+    {
+     "name": "Tax Increment Financing",
+     "agency": "City of Chicago Department of Planning and Development",
+     "url": "https://www.chicago.gov/city/en/depts/dcd/provdrs/tif.html",
+     "what": "City TIF districts and TIF-funded development assistance",
+     "checked": "200"
+    },
+    {
+     "name": "Small business development",
+     "agency": "City of Chicago Department of Planning and Development",
+     "url": "https://www.chicago.gov/city/en/depts/dcd/provdrs/BusinessAssistance.html",
+     "what": "City small business grants and assistance programs",
+     "checked": "200"
+    },
+    {
+     "name": "Bureau of Economic Development",
+     "agency": "Cook County",
+     "url": "https://www.cookcountyil.gov/agency/bureau-economic-development",
+     "what": "County business assistance, property tax incentive classes and economic development programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Houston, TX": {
+   "state": "48",
+   "place_names": [
+    "Houston city"
+   ],
+   "links": [
+    {
+     "name": "Economic development programs",
+     "agency": "City of Houston Mayor's Office of Economic Development",
+     "url": "https://www.houstontx.gov/ecodev/programs.html",
+     "what": "City Chapter 380 agreements, tax abatements, TIRZ, enterprise zones and small business programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Phoenix, AZ": {
+   "state": "04",
+   "place_names": [
+    "Phoenix city"
+   ],
+   "links": [
+    {
+     "name": "Grants, incentives and funding",
+     "agency": "City of Phoenix",
+     "url": "https://www.phoenix.gov/residents/grants-incentives-funding.html",
+     "what": "City grant, incentive and funding programs",
+     "checked": "200"
+    },
+    {
+     "name": "Business assistance and support",
+     "agency": "City of Phoenix",
+     "url": "https://www.phoenix.gov/business/business-assistance.html",
+     "what": "City business assistance, financing and support programs",
+     "checked": "200"
+    },
+    {
+     "name": "Community and Economic Development",
+     "agency": "City of Phoenix",
+     "url": "https://www.investinphoenix.com/",
+     "what": "City economic development department site: site selection and business programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Philadelphia, PA": {
+   "state": "42",
+   "place_names": [
+    "Philadelphia city"
+   ],
+   "links": [
+    {
+     "name": "Location-based incentives",
+     "agency": "City of Philadelphia Department of Commerce",
+     "url": "https://www.phila.gov/departments/department-of-commerce/for-businesses/location-based-incentives/",
+     "what": "Keystone Opportunity Zones, Opportunity Zones and other place-based tax incentives",
+     "checked": "200"
+    },
+    {
+     "name": "All programs",
+     "agency": "City of Philadelphia Department of Commerce",
+     "url": "https://www.phila.gov/departments/department-of-commerce/all-programs/",
+     "what": "City business grants, storefront improvement, Quality Jobs and other programs",
+     "checked": "200"
+    },
+    {
+     "name": "PIDC",
+     "agency": "Philadelphia Industrial Development Corporation",
+     "url": "https://pidcphila.com/",
+     "what": "City-chartered EDO: business loans, real estate and development financing",
+     "checked": "200"
+    }
+   ]
+  },
+  "San Antonio, TX": {
+   "state": "48",
+   "place_names": [
+    "San Antonio city"
+   ],
+   "links": [
+    {
+     "name": "Industry incentives and grants",
+     "agency": "City of San Antonio Economic Development Department",
+     "url": "https://www.sa.gov/Directory/Departments/EDD/Programs-Grants/Industry-Incentives-Grants",
+     "what": "City tax abatements, Chapter 380 grants, SBIR and second-stage company grants",
+     "checked": "200"
+    }
+   ]
+  },
+  "San Diego, CA": {
+   "state": "06",
+   "place_names": [
+    "San Diego city"
+   ],
+   "links": [
+    {
+     "name": "Tax incentives",
+     "agency": "City of San Diego Economic Development Department",
+     "url": "https://www.sandiego.gov/economic-development/tax-incentives",
+     "what": "City and state tax incentive programs available in San Diego",
+     "checked": "200"
+    },
+    {
+     "name": "Funding opportunities",
+     "agency": "City of San Diego Economic Development Department",
+     "url": "https://www.sandiego.gov/economic-development/fundopps",
+     "what": "City funding opportunities, revolving loan fund and CDBG",
+     "checked": "200"
+    }
+   ]
+  },
+  "Dallas, TX": {
+   "state": "48",
+   "place_names": [
+    "Dallas city"
+   ],
+   "links": [
+    {
+     "name": "Incentives",
+     "agency": "City of Dallas Office of Economic Development",
+     "url": "https://www.dallasecodev.org/599/Incentives",
+     "what": "City tax abatements, Chapter 380 grants and loans, TIF and real estate incentives",
+     "checked": "200"
+    }
+   ]
+  },
+  "Jacksonville, FL": {
+   "state": "12",
+   "place_names": [
+    "Jacksonville city"
+   ],
+   "links": [
+    {
+     "name": "Business financing programs",
+     "agency": "City of Jacksonville Office of Economic Development",
+     "url": "https://www.jacksonville.gov/departments/office-of-economic-development/business-development/business-resources/business-financing-programs",
+     "what": "City business financing, grants and incentive programs",
+     "checked": "200"
+    },
+    {
+     "name": "Office of Economic Development",
+     "agency": "City of Jacksonville",
+     "url": "https://www.jacksonville.gov/departments/office-of-economic-development",
+     "what": "City economic development office: CRAs, facade grants and Northwest Jacksonville fund",
+     "checked": "200"
+    }
+   ]
+  },
+  "Austin, TX": {
+   "state": "48",
+   "place_names": [
+    "Austin city"
+   ],
+   "links": [
+    {
+     "name": "Business incentives",
+     "agency": "City of Austin Economic Development Department",
+     "url": "https://www.austintexas.gov/economic-development/programs/business-incentives",
+     "what": "City Chapter 380 business incentives and related programs",
+     "checked": "200"
+    },
+    {
+     "name": "Programs",
+     "agency": "City of Austin Economic Development Department",
+     "url": "https://www.austintexas.gov/economic-development/programs",
+     "what": "All city economic development programs, small business and creative grants",
+     "checked": "200"
+    }
+   ]
+  },
+  "Fort Worth, TX": {
+   "state": "48",
+   "place_names": [
+    "Fort Worth city"
+   ],
+   "links": [
+    {
+     "name": "Developer portal",
+     "agency": "City of Fort Worth Economic Development",
+     "url": "https://www.fortworthtexas.gov/departments/econdev/revitalization/developer-portal",
+     "what": "City catalytic development incentives, historic site tax exemption, facade grants and parking-lot redevelopment incentives",
+     "checked": "200"
+    }
+   ]
+  },
+  "San Jose, CA": {
+   "state": "06",
+   "place_names": [
+    "San Jose city"
+   ],
+   "links": [
+    {
+     "name": "Programs and services",
+     "agency": "City of San Jose Office of Economic Development and Cultural Affairs",
+     "url": "https://www.sjeconomy.com/how-we-help/programs-and-services",
+     "what": "City business assistance, storefront grants, foreign trade zone and state incentive referrals",
+     "checked": "200"
+    }
+   ]
+  },
+  "Columbus, OH": {
+   "state": "39",
+   "place_names": [
+    "Columbus city"
+   ],
+   "links": [
+    {
+     "name": "Economic development",
+     "agency": "City of Columbus",
+     "url": "https://www.columbus.gov/Business-Development/Economic-Development",
+     "what": "City tax abatements, business attraction and small business programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Charlotte, NC": {
+   "state": "37",
+   "place_names": [
+    "Charlotte city"
+   ],
+   "links": [
+    {
+     "name": "Business recruitment and expansion",
+     "agency": "City of Charlotte",
+     "url": "https://www.charlottenc.gov/Growth-and-Development/Economic-Development/Business-Recruitment-and-Expansion",
+     "what": "City Business Investment Grants (property tax reimbursement) for new investment",
+     "checked": "200"
+    }
+   ]
+  },
+  "Indianapolis, IN": {
+   "state": "18",
+   "place_names": [
+    "Indianapolis city (balance)"
+   ],
+   "links": [
+    {
+     "name": "Department of Metropolitan Development",
+     "agency": "City of Indianapolis",
+     "url": "https://www.indy.gov/agency/department-of-metropolitan-development",
+     "what": "City economic development, tax abatement and community development programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "San Francisco, CA": {
+   "state": "06",
+   "place_names": [
+    "San Francisco city"
+   ],
+   "links": [
+    {
+     "name": "Find a grant for your small business",
+     "agency": "City of San Francisco Office of Economic and Workforce Development",
+     "url": "https://www.sf.gov/information--find-grant-your-small-business",
+     "what": "City-run small business grants and loans",
+     "checked": "200"
+    },
+    {
+     "name": "Office of Economic and Workforce Development",
+     "agency": "City of San Francisco",
+     "url": "https://www.sf.gov/departments--office-economic-and-workforce-development",
+     "what": "City business, neighborhood and workforce programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Seattle, WA": {
+   "state": "53",
+   "place_names": [
+    "Seattle city"
+   ],
+   "links": [
+    {
+     "name": "Grants and funding",
+     "agency": "City of Seattle Office of Economic Development",
+     "url": "https://www.seattle.gov/economic-development/grants-and-funding",
+     "what": "City small business capital access, tenant improvement and storefront funds",
+     "checked": "200"
+    }
+   ]
+  },
+  "Denver, CO": {
+   "state": "08",
+   "place_names": [
+    "Denver city"
+   ],
+   "links": [
+    {
+     "name": "Economic Development and Opportunity",
+     "agency": "City and County of Denver",
+     "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Economic-Development-Opportunity",
+     "what": "City business support, incentives and neighborhood development programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Oklahoma City, OK": {
+   "state": "40",
+   "place_names": [
+    "Oklahoma City city"
+   ],
+   "links": [
+    {
+     "name": "Job Creation Program",
+     "agency": "City of Oklahoma City Economic Development",
+     "url": "https://www.okc.gov/departments/economic-development/job-creation-program",
+     "what": "City Strategic Investment Program pay-for-performance incentives for employers creating quality jobs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Nashville, TN": {
+   "state": "47",
+   "place_names": [
+    "Nashville-Davidson metropolitan government (balance)"
+   ],
+   "links": [
+    {
+     "name": "Growth incentives",
+     "agency": "Metro Nashville Office of Economic and Community Development",
+     "url": "https://www.nashville.gov/departments/mayor/economic-opportunity/growth-incentives",
+     "what": "Metro incentive grants and small business incentives",
+     "checked": "200"
+    }
+   ]
+  },
+  "Washington, DC": {
+   "state": "11",
+   "place_names": [
+    "Washington city"
+   ],
+   "links": [
+    {
+     "name": "Grant opportunities",
+     "agency": "DC Office of the Deputy Mayor for Planning and Economic Development",
+     "url": "https://dmped.dc.gov/service/grant-opportunities",
+     "what": "Current DC economic development grant opportunities",
+     "checked": "200"
+    },
+    {
+     "name": "Department of Small and Local Business Development",
+     "agency": "District of Columbia",
+     "url": "https://dslbd.dc.gov/",
+     "what": "Small business grants, Main Streets and CBE certification",
+     "checked": "200"
+    }
+   ]
+  },
+  "El Paso, TX": {
+   "state": "48",
+   "place_names": [
+    "El Paso city"
+   ],
+   "links": [
+    {
+     "name": "Incentives",
+     "agency": "City of El Paso Economic and International Development",
+     "url": "https://elpasoeid.com/services-provided/incentives",
+     "what": "City Chapter 380 incentives, tax rebates and eligibility area map",
+     "checked": "200"
+    }
+   ]
+  },
+  "Las Vegas, NV": {
+   "state": "32",
+   "place_names": [
+    "Las Vegas city"
+   ],
+   "links": [
+    {
+     "name": "Business incentives",
+     "agency": "City of Las Vegas Economic Development",
+     "url": "https://www.lasvegasnevada.gov/Business/Economic-Development/Business-Incentives",
+     "what": "City redevelopment, visual improvement and other business incentives",
+     "checked": "200"
+    }
+   ]
+  },
+  "Boston, MA": {
+   "state": "25",
+   "place_names": [
+    "Boston city"
+   ],
+   "links": [
+    {
+     "name": "Small business financing",
+     "agency": "City of Boston Economic Opportunity and Inclusion",
+     "url": "https://www.boston.gov/departments/economic-opportunity-and-inclusion/boston-small-business-financing",
+     "what": "City small business loans and financing programs",
+     "checked": "200"
+    },
+    {
+     "name": "Small Business",
+     "agency": "City of Boston",
+     "url": "https://www.boston.gov/departments/small-business",
+     "what": "City small business grants, ReStore storefront program and technical assistance",
+     "checked": "200"
+    }
+   ]
+  },
+  "Detroit, MI": {
+   "state": "26",
+   "place_names": [
+    "Detroit city"
+   ],
+   "links": [
+    {
+     "name": "Tax incentives",
+     "agency": "Detroit Economic Growth Corporation",
+     "url": "https://www.degc.org/tax-incentives",
+     "what": "City tax abatements (PA 198, OPRA, NEZ and others) administered for the City of Detroit",
+     "checked": "200"
+    }
+   ]
+  },
+  "Portland, OR": {
+   "state": "41",
+   "place_names": [
+    "Portland city"
+   ],
+   "links": [
+    {
+     "name": "Grants",
+     "agency": "Prosper Portland",
+     "url": "https://prosperportland.us/grants/",
+     "what": "City economic development agency grants for businesses and property improvements; TIF districts",
+     "checked": "200"
+    }
+   ]
+  },
+  "Louisville, KY": {
+   "state": "21",
+   "place_names": [
+    "Louisville/Jefferson County metro government (balance)"
+   ],
+   "links": [
+    {
+     "name": "Incentives",
+     "agency": "Louisville Metro Economic Development",
+     "url": "https://louisvilleky.gov/government/economic-development/services/incentives",
+     "what": "Metro TIF, METCO small business loans and state incentive referrals",
+     "checked": "200"
+    }
+   ]
+  },
+  "Memphis, TN": {
+   "state": "47",
+   "place_names": [
+    "Memphis city"
+   ],
+   "links": [
+    {
+     "name": "Tax incentives",
+     "agency": "EDGE (Economic Development Growth Engine for Memphis and Shelby County)",
+     "url": "https://edgemem.com/tax-incentives/",
+     "what": "City-county PILOT tax abatements and other tax incentives",
+     "checked": "browser"
+    },
+    {
+     "name": "Financial assistance",
+     "agency": "EDGE (Economic Development Growth Engine for Memphis and Shelby County)",
+     "url": "https://edgemem.com/financial-assistance/",
+     "what": "City-county small business and inner-city economic development loans",
+     "checked": "browser"
+    }
+   ]
+  },
+  "Baltimore, MD": {
+   "state": "24",
+   "place_names": [
+    "Baltimore city"
+   ],
+   "links": [
+    {
+     "name": "Investment incentives",
+     "agency": "Baltimore Development Corporation",
+     "url": "https://baltimoredevelopment.com/invest-develop/investment-incentives/",
+     "what": "City enterprise zone, brownfields, grocery store and other tax incentives",
+     "checked": "200"
+    },
+    {
+     "name": "Business support",
+     "agency": "Baltimore Development Corporation",
+     "url": "https://baltimoredevelopment.com/business-support/",
+     "what": "City business loans, facade and tenant improvement grants",
+     "checked": "200"
+    }
+   ]
+  },
+  "Milwaukee, WI": {
+   "state": "55",
+   "place_names": [
+    "Milwaukee city"
+   ],
+   "links": [
+    {
+     "name": "Business Toolbox",
+     "agency": "City of Milwaukee Department of City Development",
+     "url": "https://city.milwaukee.gov/DCD/BusinessToolbox",
+     "what": "City commercial revitalization grants, TIF, brownfield and loan resources",
+     "checked": "200"
+    }
+   ]
+  },
+  "Albuquerque, NM": {
+   "state": "35",
+   "place_names": [
+    "Albuquerque city"
+   ],
+   "links": [
+    {
+     "name": "Incentives",
+     "agency": "City of Albuquerque Economic Development Department",
+     "url": "https://abqedd.com/incentives/",
+     "what": "City and state incentives including IRBs, LEDA and tax credits",
+     "checked": "200"
+    },
+    {
+     "name": "Business support",
+     "agency": "Bernalillo County Economic Development",
+     "url": "https://www.bernco.gov/economic-development/business-support/",
+     "what": "County IRBs, LEDA, C-PACE, impact fee exemption and brownfields programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Tucson, AZ": {
+   "state": "04",
+   "place_names": [
+    "Tucson city"
+   ],
+   "links": [
+    {
+     "name": "Grow your business",
+     "agency": "City of Tucson Office of Economic Initiatives",
+     "url": "https://www.connecttucson.com/pages/grow-your-business",
+     "what": "City business support and incentive programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Fresno, CA": {
+   "state": "06",
+   "place_names": [
+    "Fresno city"
+   ],
+   "links": [
+    {
+     "name": "Local, state and federal incentives",
+     "agency": "City of Fresno Economic Development",
+     "url": "https://www.fresno.gov/economicdevelopment/local-state-federal-incentives/",
+     "what": "City, state and federal incentive programs available in Fresno",
+     "checked": "200"
+    },
+    {
+     "name": "Small business loans",
+     "agency": "City of Fresno Economic Development",
+     "url": "https://www.fresno.gov/economicdevelopment/small-business-loans/",
+     "what": "City small business loan programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Sacramento, CA": {
+   "state": "06",
+   "place_names": [
+    "Sacramento city"
+   ],
+   "links": [
+    {
+     "name": "Incentives",
+     "agency": "City of Sacramento Office of Innovation and Economic Development",
+     "url": "https://www.cityofsacramento.gov/edd/business/grow-here/incentives",
+     "what": "City business incentives, fee reductions and financing programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Mesa, AZ": {
+   "state": "04",
+   "place_names": [
+    "Mesa city"
+   ],
+   "links": [
+    {
+     "name": "Incentives and programs",
+     "agency": "City of Mesa Office of Economic Development (Select Mesa)",
+     "url": "https://selectmesa.com/business-environment/incentives-programs/",
+     "what": "City, redevelopment and state incentive programs in Mesa",
+     "checked": "200"
+    }
+   ]
+  },
+  "Atlanta, GA": {
+   "state": "13",
+   "place_names": [
+    "Atlanta city"
+   ],
+   "links": [
+    {
+     "name": "Bonds, loans, grants and incentives",
+     "agency": "Invest Atlanta",
+     "url": "https://www.investatlanta.com/site-selectors/resources/bonds-loans-grants-incentives",
+     "what": "City development authority bonds, loans, grants and tax incentives",
+     "checked": "200"
+    },
+    {
+     "name": "Tax allocation district financing",
+     "agency": "Invest Atlanta",
+     "url": "https://www.investatlanta.com/developers/opportunities-incentives/tax-allocation-district-financing",
+     "what": "City TAD (tax increment) financing for development projects",
+     "checked": "200"
+    }
+   ]
+  },
+  "Kansas City, MO": {
+   "state": "29",
+   "place_names": [
+    "Kansas City city"
+   ],
+   "links": [
+    {
+     "name": "Initiatives and programs",
+     "agency": "City of Kansas City Office of Economic Development",
+     "url": "https://www.kcmo.gov/city-hall/departments/city-manager-s-office/office-of-economic-development/initiatives-and-programs",
+     "what": "City-administered MDFB tax credit and Chapter 353 abatement projects",
+     "checked": "200"
+    }
+   ]
+  },
+  "Colorado Springs, CO": {
+   "state": "08",
+   "place_names": [
+    "Colorado Springs city"
+   ],
+   "links": [
+    {
+     "name": "Services and incentives",
+     "agency": "City of Colorado Springs Economic Development",
+     "url": "https://coloradosprings.gov/economic-development/page/services-and-incentives",
+     "what": "City economic development incentives, fee rebates and business services",
+     "checked": "200"
+    }
+   ]
+  },
+  "Raleigh, NC": {
+   "state": "37",
+   "place_names": [
+    "Raleigh city"
+   ],
+   "links": [
+    {
+     "name": "Small business grants",
+     "agency": "City of Raleigh",
+     "url": "https://raleighnc.gov/doing-business/services/grants",
+     "what": "City building up-fit and facade grants; state and county grant referrals",
+     "checked": "200"
+    }
+   ]
+  },
+  "Miami, FL": {
+   "state": "12",
+   "place_names": [
+    "Miami city"
+   ],
+   "links": [
+    {
+     "name": "Economic Innovation and Development",
+     "agency": "City of Miami",
+     "url": "https://www.miami.gov/My-Government/Departments/Economic-Innovation-and-Development",
+     "what": "City economic development department and business programs",
+     "checked": "200"
+    },
+    {
+     "name": "Economic development",
+     "agency": "Miami-Dade County Office of Innovation and Economic Development",
+     "url": "https://www.miamidade.gov/global/economy/innovation-and-economic-development/economic-development.page",
+     "what": "County incentives and economic development programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Virginia Beach, VA": {
+   "state": "51",
+   "place_names": [
+    "Virginia Beach city"
+   ],
+   "links": [
+    {
+     "name": "Incentives",
+     "agency": "City of Virginia Beach Department of Economic Development",
+     "url": "https://yesvirginiabeach.com/why-virginia-beach/business-environment/incentives",
+     "what": "City small business grants, Atlantic Avenue grant and other incentives",
+     "checked": "200"
+    }
+   ]
+  },
+  "Long Beach, CA": {
+   "state": "06",
+   "place_names": [
+    "Long Beach city"
+   ],
+   "links": [
+    {
+     "name": "Programs and resources",
+     "agency": "City of Long Beach Economic Development and Opportunity",
+     "url": "https://www.longbeach.gov/edo/business-support/",
+     "what": "City loans, storefront and small business grant programs",
+     "checked": "200"
+    },
+    {
+     "name": "Financial assistance",
+     "agency": "City of Long Beach Economic Development and Opportunity",
+     "url": "https://www.longbeach.gov/edo/business-support/city-loan-programs/",
+     "what": "City business loan programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Oakland, CA": {
+   "state": "06",
+   "place_names": [
+    "Oakland city"
+   ],
+   "links": [
+    {
+     "name": "Neighborhood Business Assistance",
+     "agency": "City of Oakland Economic and Workforce Development",
+     "url": "https://www.oaklandca.gov/Business/For-Business-Owners/Neighborhood-Business-Assistance",
+     "what": "City business assistance, grants and loan referrals",
+     "checked": "200"
+    }
+   ]
+  },
+  "Minneapolis, MN": {
+   "state": "27",
+   "place_names": [
+    "Minneapolis city"
+   ],
+   "links": [
+    {
+     "name": "Small business financing",
+     "agency": "City of Minneapolis Community Planning and Economic Development",
+     "url": "https://www.minneapolismn.gov/business-services/business-assistance/small-business-financing/",
+     "what": "City small business loans, including the 2% loan program",
+     "checked": "200"
+    },
+    {
+     "name": "Financing for developers",
+     "agency": "City of Minneapolis Community Planning and Economic Development",
+     "url": "https://www.minneapolismn.gov/business-services/business-assistance/financing-developers/",
+     "what": "City Great Streets facade grants, 4d affordable housing incentive and developer financing",
+     "checked": "200"
+    }
+   ]
+  },
+  "Bakersfield, CA": {
+   "state": "06",
+   "place_names": [
+    "Bakersfield city"
+   ],
+   "links": [
+    {
+     "name": "Business incentives and resources",
+     "agency": "City of Bakersfield Economic Development",
+     "url": "https://www.bakersfieldcity.us/business-resources-tools",
+     "what": "City business incentives and resources",
+     "checked": "200"
+    },
+    {
+     "name": "Economic development",
+     "agency": "City of Bakersfield",
+     "url": "https://www.bakersfieldcity.us/economic-development",
+     "what": "City economic development office: incentives, entrepreneurship grant and site selection",
+     "checked": "200"
+    }
+   ]
+  },
+  "Tulsa, OK": {
+   "state": "40",
+   "place_names": [
+    "Tulsa city"
+   ],
+   "links": [
+    {
+     "name": "PartnerTulsa",
+     "agency": "Tulsa Authority for Economic Opportunity",
+     "url": "https://partnertulsa.org/",
+     "what": "City economic development authority: small business, development and housing programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Tampa, FL": {
+   "state": "12",
+   "place_names": [
+    "Tampa city"
+   ],
+   "links": [
+    {
+     "name": "Taxes and financial incentives",
+     "agency": "City of Tampa Development and Economic Opportunity",
+     "url": "https://www.tampa.gov/DEO/programs/incentives",
+     "what": "City and state financial incentives and tax programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Arlington, TX": {
+   "state": "48",
+   "place_names": [
+    "Arlington city"
+   ],
+   "links": [
+    {
+     "name": "Incentives",
+     "agency": "City of Arlington Economic Development",
+     "url": "https://www.arlingtontx.gov/city_hall/departments/economic_development/site_selection_resources/incentives",
+     "what": "City tax abatements, Chapter 380 grants, TIRZ and fee waivers",
+     "checked": "200"
+    }
+   ]
+  },
+  "Wichita, KS": {
+   "state": "20",
+   "place_names": [
+    "Wichita city"
+   ],
+   "links": [
+    {
+     "name": "Economic development incentive policy",
+     "agency": "Sedgwick County and City of Wichita",
+     "url": "https://www.sedgwickcounty.org/finance/economic-development/economic-development-incentive-policy/",
+     "what": "Joint city-county incentive policy: tax abatements, IRBs and forgivable loans",
+     "checked": "200"
+    }
+   ]
+  },
+  "Aurora, CO": {
+   "state": "08",
+   "place_names": [
+    "Aurora city"
+   ],
+   "links": [
+    {
+     "name": "Economic and business development",
+     "agency": "City of Aurora",
+     "url": "https://www.auroragov.org/business_services/economic___business_development",
+     "what": "City economic and business development office: development opportunities and incentives",
+     "checked": "200"
+    },
+    {
+     "name": "Urban renewal and redevelopment",
+     "agency": "City of Aurora",
+     "url": "https://www.auroragov.org/business_services/economic___business_development/urban_renewal_and_redevelopment",
+     "what": "City urban renewal areas and tax increment financing",
+     "checked": "200"
+    }
+   ]
+  },
+  "New Orleans, LA": {
+   "state": "22",
+   "place_names": [
+    "New Orleans city"
+   ],
+   "links": [
+    {
+     "name": "Programs",
+     "agency": "City of New Orleans Office of Economic Development",
+     "url": "https://nola.gov/next/economic-development/programs/",
+     "what": "City-administered Restoration Tax Abatement, Enterprise Zone, ITEP and Quality Jobs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Cleveland, OH": {
+   "state": "39",
+   "place_names": [
+    "Cleveland city"
+   ],
+   "links": [
+    {
+     "name": "Incentives and financing",
+     "agency": "City of Cleveland Department of Economic Development",
+     "url": "https://makeitincleveland.org/grow-and-expand/incentives-and-financing",
+     "what": "City loans, grants and tax incentives for businesses and developers",
+     "checked": "200"
+    },
+    {
+     "name": "Department of Development",
+     "agency": "Cuyahoga County",
+     "url": "https://www.cuyahogacounty.gov/development",
+     "what": "County business loans, brownfields and development programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Anaheim, CA": {
+   "state": "06",
+   "place_names": [
+    "Anaheim city"
+   ],
+   "links": [
+    {
+     "name": "Commercial incentives",
+     "agency": "City of Anaheim",
+     "url": "https://www.anaheim.gov/5239/Commercial-Incentives",
+     "what": "City utility rebates, hiring incentives and development fee programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Henderson, NV": {
+   "state": "32",
+   "place_names": [
+    "Henderson city"
+   ],
+   "links": [
+    {
+     "name": "Economic development",
+     "agency": "City of Henderson",
+     "url": "https://www.cityofhenderson.com/government/departments/economic-development",
+     "what": "City economic development office and state incentive referrals",
+     "checked": "200"
+    }
+   ]
+  },
+  "Orlando, FL": {
+   "state": "12",
+   "place_names": [
+    "Orlando city"
+   ],
+   "links": [
+    {
+     "name": "Business incentive programs",
+     "agency": "City of Orlando Economic Development",
+     "url": "https://www.orlando.gov/Building-Development/Business-Incentives/Business-Incentive-Programs",
+     "what": "City business incentive and assistance programs",
+     "checked": "200"
+    },
+    {
+     "name": "Housing and development grants and incentives",
+     "agency": "City of Orlando",
+     "url": "https://www.orlando.gov/Building-Development/Housing-and-Development-Grants-Incentives-and-Assistance",
+     "what": "City affordable housing development incentives and CDBG",
+     "checked": "200"
+    }
+   ]
+  },
+  "Lexington, KY": {
+   "state": "21",
+   "place_names": [
+    "Lexington-Fayette urban county"
+   ],
+   "links": [
+    {
+     "name": "Economic development",
+     "agency": "Lexington-Fayette Urban County Government",
+     "url": "https://www.lexingtonky.gov/economic-development",
+     "what": "City Jobs Fund, TIF, public infrastructure program and Opportunity Zones",
+     "checked": "200"
+    }
+   ]
+  },
+  "Stockton, CA": {
+   "state": "06",
+   "place_names": [
+    "Stockton city"
+   ],
+   "links": [
+    {
+     "name": "Financial assistance",
+     "agency": "City of Stockton Economic Development",
+     "url": "https://www.stocktonca.gov/business/economic_development/financial___assistance.php",
+     "what": "City business financial assistance and incentive programs",
+     "checked": "200"
+    },
+    {
+     "name": "Brownfields program",
+     "agency": "City of Stockton Economic Development",
+     "url": "https://www.stocktonca.gov/business/economic_development/brownfields_program.php",
+     "what": "City brownfield assessment and cleanup funding",
+     "checked": "200"
+    }
+   ]
+  },
+  "Evanston, IL": {
+   "state": "17",
+   "place_names": [
+    "Evanston city"
+   ],
+   "links": [
+    {
+     "name": "Economic development",
+     "agency": "City of Evanston",
+     "url": "https://www.cityofevanston.org/departments/city_managers_office/economic_development/index.php",
+     "what": "City economic development programs and city-owned property",
+     "checked": "200"
+    },
+    {
+     "name": "Grants",
+     "agency": "City of Evanston",
+     "url": "https://www.cityofevanston.org/business/grants/index.php",
+     "what": "City business grants",
+     "checked": "200"
+    },
+    {
+     "name": "Bureau of Economic Development",
+     "agency": "Cook County",
+     "url": "https://www.cookcountyil.gov/agency/bureau-economic-development",
+     "what": "County business assistance, property tax incentive classes and economic development programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Oak Park, IL": {
+   "state": "17",
+   "place_names": [
+    "Oak Park village"
+   ],
+   "links": [
+    {
+     "name": "Business support",
+     "agency": "Village of Oak Park Office of Economic Vitality",
+     "url": "https://www.oak-park.us/Building-Business/Office-of-Economic-Vitality/Business-Support",
+     "what": "Village facade and small business grants; Cook County tax incentive classes",
+     "checked": "200"
+    },
+    {
+     "name": "Bureau of Economic Development",
+     "agency": "Cook County",
+     "url": "https://www.cookcountyil.gov/agency/bureau-economic-development",
+     "what": "County business assistance, property tax incentive classes and economic development programs",
+     "checked": "200"
+    }
+   ]
+  },
+  "Aurora, IL": {
+   "state": "17",
+   "place_names": [
+    "Aurora city"
+   ],
+   "links": [
+    {
+     "name": "Mayor's Office of Economic Development",
+     "agency": "City of Aurora",
+     "url": "https://yourvoice.aurora.il.us/moed",
+     "what": "City economic development office overview and contacts",
+     "checked": "200"
+    }
+   ]
+  },
+  "Joliet, IL": {
+   "state": "17",
+   "place_names": [
+    "Joliet city"
+   ],
+   "links": [
+    {
+     "name": "Incentives",
+     "agency": "City of Joliet",
+     "url": "https://www.joliet.gov/business/economic-development/incentives",
+     "what": "City TIF, enterprise zones, River Edge and Opportunity Zones",
+     "checked": "200"
+    }
+   ]
+  },
+  "Naperville, IL": {
+   "state": "17",
+   "place_names": [
+    "Naperville city"
+   ],
+   "links": [
+    {
+     "name": "Development resources",
+     "agency": "City of Naperville",
+     "url": "https://www.naperville.il.us/180/Development-Resources",
+     "what": "City development review and permitting resources for developers",
+     "checked": "200"
+    },
+    {
+     "name": "Grant opportunities",
+     "agency": "City of Naperville",
+     "url": "https://www.naperville.il.us/323/Grants",
+     "what": "City CDBG, energy efficiency, renewable energy and special event grants",
+     "checked": "200"
+    }
+   ]
+  },
+  "Omaha, NE": {
+   "state": "31",
+   "place_names": [
+    "Omaha city"
+   ],
+   "links": [
+    {
+     "name": "Economic development",
+     "agency": "City of Omaha Planning Department",
+     "url": "https://planning.omaha.gov/economic-development/",
+     "what": "City incentives: TIF, business improvement districts, PACE financing, city-owned property and the development incentives map",
+     "checked": "browser"
+    },
+    {
+     "name": "Tax increment financing",
+     "agency": "City of Omaha Planning Department",
+     "url": "https://planning.omaha.gov/tax-increment-financing-process/",
+     "what": "How TIF works in Omaha, the eligible areas, the application and annual reports",
+     "checked": "browser"
+    }
+   ]
+  }
+ }
+}
