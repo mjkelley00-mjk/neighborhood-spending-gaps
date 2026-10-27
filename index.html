@@ -1408,6 +1408,16 @@ function split(X) {
   if (X.sHi < 0.5) return ', all of it to local governments';
   return `: ${amt(X.sLo, X.sHi).replace(/^about /, '')} to the state and ${amt(lLo, lHi).replace(/^about /, '')} to counties, cities and local districts`;
 }
+// local taxes known but not counted (ST.tax.area: place or county GEOID -> notes), for the cities and counties the
+// selection reaches, so a place's own gap is named where someone looks at it
+function areaTaxNotes(ids) {
+  const A = (ST.tax && ST.tax.area) || {}, out = [];
+  for (const [g, notes] of Object.entries(A)) {
+    const hit = g.length === 5 ? [...ids].some(t => t.startsWith(g)) : ST.places[g] && ST.places[g].tracts.some(t => ids.has(t));
+    if (hit) out.push(...notes);
+  }
+  return out;
+}
 function taxSection(r) {
   const T = ST.tax, X = taxOf(r);
   if (!T || !X) return {lead: `Sales-tax rates for ${esc(ST.name)} are not available yet.`, table: '', notes: []};
@@ -1428,7 +1438,7 @@ function taxSection(r) {
     X.rows.map(x => { const taxed = x.covered && x.q.state + x.q.localHi > 0.0005;
       return `<tr><td>${LABEL[x.c]}${part.has(x.c) ? ' <span class="tag">partly</span>' : ''}${OUT_OF_TOTAL.has(x.c) ? ' <small>(not in the total)</small>' : ''}</td><td class="num">${x.covered ? pctTxt(x.q.state + x.q.local, x.q.state + x.q.localHi) : 'not included'}</td><td class="num">${rangeUSD(x.lo, x.hi)}</td><td class="num">${taxed && x.hi > 0 ? rangeUSD(x.tLo, x.tHi) : '—'}</td>${X.B ? `<td class="num">${taxed && x.nHi > 0 ? rangeUSD(x.nLoT, x.nHiT) : '—'}</td>` : ''}</tr>`; }).join('') +
     `<tr class="tot"><td>Categories where spending leaks</td><td></td><td></td><td class="num">${X.tHi > 0 ? rangeUSD(X.tLo, X.tHi) : '—'}</td>${X.B ? `<td class="num">${X.nHiT > 0 ? rangeUSD(X.nLoT, X.nHiT) : '—'}</td>` : ''}</tr></tbody>`;
-  const notes = [...(T.gaps || []), ...(T.notes || [])].filter((v, i, a) => v && a.indexOf(v) === i)
+  const notes = [...areaTaxNotes(sel), ...(T.gaps || []), ...(T.notes || [])].filter((v, i, a) => v && a.indexOf(v) === i)
     .map(v => /[.!?)]$/.test(v) ? v : v + '.');
   return {lead, table, notes};
 }
