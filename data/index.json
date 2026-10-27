@@ -11,7 +11,7 @@
     -84.955,
     34.977
    ],
-   "bytes": 1216326,
+   "bytes": 1233297,
    "counties": 67
   },
   {
@@ -25,7 +25,7 @@
     -130.137,
     71.214
    ],
-   "bytes": 319008,
+   "bytes": 321219,
    "counties": 30
   },
   {
@@ -39,7 +39,7 @@
     -109.133,
     36.989
    ],
-   "bytes": 1383323,
+   "bytes": 1404463,
    "counties": 15
   },
   {
@@ -53,7 +53,7 @@
     -89.855,
     36.484
    ],
-   "bytes": 715974,
+   "bytes": 725946,
    "counties": 75
   },
   {
@@ -67,7 +67,7 @@
     -114.273,
     41.852
    ],
-   "bytes": 7330654,
+   "bytes": 7818215,
    "counties": 58
   },
   {
@@ -81,7 +81,7 @@
     -102.151,
     40.894
    ],
-   "bytes": 1214361,
+   "bytes": 1244082,
    "counties": 64
   },
   {
@@ -95,7 +95,7 @@
     -71.814,
     42.023
    ],
-   "bytes": 702107,
+   "bytes": 713696,
    "counties": 9
   },
   {
@@ -109,7 +109,7 @@
     -75.056,
     39.832
    ],
-   "bytes": 210584,
+   "bytes": 210738,
    "counties": 3
   },
   {
@@ -123,7 +123,7 @@
     -76.919,
     38.983
    ],
-   "bytes": 184194,
+   "bytes": 216445,
    "counties": 1
   },
   {
@@ -137,7 +137,7 @@
     -80.038,
     30.976
    ],
-   "bytes": 4097046,
+   "bytes": 4206935,
    "counties": 67
   },
   {
@@ -151,7 +151,7 @@
     -80.85,
     34.979
    ],
-   "bytes": 2306849,
+   "bytes": 2360295,
    "counties": 159
   },
   {
@@ -165,7 +165,7 @@
     -154.903,
     28.388
    ],
-   "bytes": 353892,
+   "bytes": 354340,
    "counties": 5
   },
   {
@@ -179,7 +179,7 @@
     -111.076,
     48.852
    ],
-   "bytes": 387989,
+   "bytes": 405395,
    "counties": 44
   },
   {
@@ -193,7 +193,7 @@
     -87.53,
     42.488
    ],
-   "bytes": 2839051,
+   "bytes": 2893061,
    "counties": 102
   },
   {
@@ -207,7 +207,7 @@
     -84.824,
     41.753
    ],
-   "bytes": 1359467,
+   "bytes": 1360793,
    "counties": 92
   },
   {
@@ -235,7 +235,7 @@
     -94.604,
     39.921
    ],
-   "bytes": 662833,
+   "bytes": 714498,
    "counties": 105
   },
   {
@@ -249,7 +249,7 @@
     -82.121,
     39.117
    ],
-   "bytes": 1105257,
+   "bytes": 1105292,
    "counties": 120
   },
   {
@@ -263,7 +263,7 @@
     -89.397,
     33.003
    ],
-   "bytes": 1182709,
+   "bytes": 1208411,
    "counties": 64
   },
   {
@@ -277,7 +277,7 @@
     -67.018,
     47.295
    ],
-   "bytes": 349358,
+   "bytes": 354400,
    "counties": 16
   },
   {
@@ -291,7 +291,7 @@
     -75.066,
     39.708
    ],
-   "bytes": 1221139,
+   "bytes": 1285112,
    "counties": 24
   },
   {
@@ -305,7 +305,7 @@
     -69.956,
     42.867
    ],
-   "bytes": 1324376,
+   "bytes": 1400839,
    "counties": 14
   },
   {
@@ -319,7 +319,7 @@
     -82.425,
     48.045
    ],
-   "bytes": 2291733,
+   "bytes": 2292006,
    "counties": 83
   },
   {
@@ -333,7 +333,7 @@
     -90.12,
     49.067
    ],
-   "bytes": 1275741,
+   "bytes": 1294310,
    "counties": 87
   },
   {
@@ -347,7 +347,7 @@
     -88.149,
     34.991
    ],
-   "bytes": 722467,
+   "bytes": 732954,
    "counties": 82
   },
   {
@@ -361,7 +361,7 @@
     -89.227,
     40.526
    ],
-   "bytes": 1381159,
+   "bytes": 1382346,
    "counties": 115
   },
   {
@@ -389,7 +389,7 @@
     -95.59,
     42.913
    ],
-   "bytes": 473250,
+   "bytes": 477952,
    "counties": 93
   },
   {
@@ -417,7 +417,7 @@
     -70.732,
     45.106
    ],
-   "bytes": 288633,
+   "bytes": 323209,
    "counties": 10
   },
   {
@@ -431,7 +431,7 @@
     -73.922,
     41.293
    ],
-   "bytes": 1779048,
+   "bytes": 1842369,
    "counties": 21
   },
   {
@@ -445,7 +445,7 @@
     -103.1,
     36.931
    ],
-   "bytes": 497781,
+   "bytes": 505705,
    "counties": 33
   },
   {
@@ -459,7 +459,7 @@
     -71.915,
     44.979
    ],
-   "bytes": 4340375,
+   "bytes": 4480415,
    "counties": 62
   },
   {
@@ -473,7 +473,7 @@
     -75.543,
     36.544
    ],
-   "bytes": 2212492,
+   "bytes": 2284041,
    "counties": 100
   },
   {
@@ -487,7 +487,7 @@
     -96.606,
     48.91
    ],
-   "bytes": 200548,
+   "bytes": 203351,
    "counties": 53
   },
   {
@@ -501,7 +501,7 @@
     -80.541,
     41.957
    ],
-   "bytes": 2538504,
+   "bytes": 2540077,
    "counties": 88
   },
   {
@@ -515,7 +515,7 @@
     -94.456,
     36.965
    ],
-   "bytes": 1020954,
+   "bytes": 1056279,
    "counties": 77
   },
   {
@@ -529,7 +529,7 @@
     -116.899,
     46.185
    ],
-   "bytes": 890749,
+   "bytes": 892926,
    "counties": 36
   },
   {
@@ -543,7 +543,7 @@
     -74.7,
     42.216
    ],
-   "bytes": 2848781,
+   "bytes": 2860784,
    "counties": 67
   },
   {
@@ -557,7 +557,7 @@
     -71.163,
     42.014
    ],
-   "bytes": 201365,
+   "bytes": 204360,
    "counties": 5
   },
   {
@@ -571,7 +571,7 @@
     -78.604,
     35.176
    ],
-   "bytes": 1082328,
+   "bytes": 1097774,
    "counties": 46
   },
   {
@@ -585,7 +585,7 @@
     -96.494,
     45.805
    ],
-   "bytes": 211600,
+   "bytes": 214593,
    "counties": 66
   },
   {
@@ -599,7 +599,7 @@
     -81.752,
     36.637
    ],
-   "bytes": 1432311,
+   "bytes": 1432537,
    "counties": 95
   },
   {
@@ -613,7 +613,7 @@
     -93.699,
     36.41
    ],
-   "bytes": 5727395,
+   "bytes": 5745595,
    "counties": 254
   },
   {
@@ -627,7 +627,7 @@
     -109.273,
     41.944
    ],
-   "bytes": 595094,
+   "bytes": 604893,
    "counties": 29
   },
   {
@@ -641,7 +641,7 @@
     -71.675,
     44.978
    ],
-   "bytes": 163357,
+   "bytes": 179950,
    "counties": 14
   },
   {
@@ -655,7 +655,7 @@
     -75.293,
     39.341
    ],
-   "bytes": 1809727,
+   "bytes": 1829522,
    "counties": 133
   },
   {
@@ -669,7 +669,7 @@
     -117.05,
     48.989
    ],
-   "bytes": 1487031,
+   "bytes": 1489362,
    "counties": 39
   },
   {
@@ -683,7 +683,7 @@
     -77.769,
     40.598
    ],
-   "bytes": 489563,
+   "bytes": 496342,
    "counties": 55
   },
   {
@@ -697,7 +697,7 @@
     -87.07,
     46.853
    ],
-   "bytes": 1258870,
+   "bytes": 1259744,
    "counties": 72
   },
   {
@@ -711,7 +711,7 @@
     -104.106,
     44.832
    ],
-   "bytes": 147700,
+   "bytes": 149675,
    "counties": 23
   }
  ],
@@ -922,6 +922,384 @@
     "many": "Special Service Areas",
     "kind": "ssa",
     "desc": "Commercial districts that pay a small added property tax for services such as cleaning, security, marketing and small-business support, run by a local service provider."
+   },
+   "ca_dac": {
+    "label": "California SB 535 disadvantaged community",
+    "one": "an SB 535 disadvantaged community",
+    "many": "SB 535 disadvantaged communities",
+    "kind": "desig",
+    "desc": "Census tracts the California EPA designates as disadvantaged (CalEnviroScreen): they get minimum shares of California Climate Investments funding and priority in many state grant and incentive programs (Health and Safety Code 39711-39713)."
+   },
+   "co_rjs": {
+    "label": "Colorado Rural Jump-Start county",
+    "one": "a Rural Jump-Start county",
+    "many": "Rural Jump-Start counties",
+    "kind": "zone",
+    "desc": "Distressed rural counties taking part in Rural Jump-Start: new businesses and their new hires can get state income tax credits and sales and use tax exemptions (C.R.S. 39-30.5)."
+   },
+   "co_coal": {
+    "label": "Colorado coal transition community",
+    "one": "a coal transition community",
+    "many": "coal transition communities",
+    "kind": "desig",
+    "desc": "Counties and towns the Office of Just Transition names as coal transition communities (Tier 1 or 2): priority for Just Transition grants and enhanced enterprise zone and Rural Jump-Start incentives."
+   },
+   "dc_dez": {
+    "label": "DC Development Enterprise Zone",
+    "one": "a Development Enterprise Zone",
+    "many": "Development Enterprise Zones",
+    "kind": "desig",
+    "desc": "Census tracts with 10% or more poverty where businesses get Certified Business Enterprise preference points in District contracting (Department of Small and Local Business Development)."
+   },
+   "dc_npta": {
+    "label": "DC nonprofit tax abatement zone",
+    "one": "a nonprofit tax abatement zone",
+    "many": "nonprofit tax abatement zones",
+    "kind": "zone",
+    "desc": "Neighborhoods where a nonprofit that buys and occupies a building can get a real property tax abatement (D.C. Code 47-857.11 and after)."
+   },
+   "dc_super": {
+    "label": "DC supermarket tax incentive area",
+    "one": "a supermarket priority area",
+    "many": "supermarket priority areas",
+    "kind": "zone",
+    "desc": "Areas where a qualified supermarket can get a real property tax exemption, a sales tax exemption on building materials and a business license fee exemption (D.C. Code 47-3801 and after)."
+   },
+   "fl_rao": {
+    "label": "Florida Rural Area of Opportunity",
+    "one": "a Rural Area of Opportunity",
+    "many": "Rural Areas of Opportunity",
+    "kind": "desig",
+    "desc": "Rural counties and cities designated by the Governor: waivers of match and eligibility rules and priority for state economic development incentives and rural grants (s. 288.0656, F.S.)."
+   },
+   "ga_ldct": {
+    "label": "Georgia less developed census tract (eligible)",
+    "one": "an eligible less developed tract",
+    "many": "eligible less developed tracts",
+    "kind": "zone",
+    "desc": "Tracts that meet the poverty test for Georgia's less developed census tract job tax credit ($3,500 a job, as in Tier 1 counties) once a city or county nominates them (Department of Community Affairs; O.C.G.A. 48-7-40.1)."
+   },
+   "ga_mz": {
+    "label": "Georgia military zone (eligible tract)",
+    "one": "an eligible military zone tract",
+    "many": "eligible military zone tracts",
+    "kind": "zone",
+    "desc": "Tracts near military installations that meet the test for a military zone: Tier 1-level job tax credits ($3,500 a job) once designated (Department of Community Affairs; O.C.G.A. 48-7-40.1)."
+   },
+   "ga_rz": {
+    "label": "Georgia Rural Zone",
+    "one": "a Rural Zone",
+    "many": "Rural Zones",
+    "kind": "zone",
+    "desc": "Rural downtowns designated for five years where businesses can claim job, investment (25% of a purchase) and rehabilitation tax credits (O.C.G.A. 48-7-40.30)."
+   },
+   "ks_roz": {
+    "label": "Kansas Rural Opportunity Zone",
+    "one": "a Rural Opportunity Zone",
+    "many": "Rural Opportunity Zones",
+    "kind": "zone",
+    "desc": "Counties where new residents could get up to five years of Kansas income tax waived and student loan repayment of up to $15,000; residents had to arrive before 2026 and the tax credit ends with tax year 2026."
+   },
+   "md_ezfa": {
+    "label": "Maryland Enterprise Zone focus area",
+    "one": "an Enterprise Zone focus area",
+    "many": "Enterprise Zone focus areas",
+    "kind": "zone",
+    "desc": "Parts of enterprise zones in Baltimore City and Prince George's County where the income tax and real property tax credits are larger (Maryland Department of Commerce)."
+   },
+   "md_rise": {
+    "label": "Maryland RISE Zone",
+    "one": "a RISE Zone",
+    "many": "RISE Zones",
+    "kind": "zone",
+    "desc": "Regional Institution Strategic Enterprise zones around universities and other anchors: real property tax credits and income tax credits for businesses that locate or expand there (Maryland Department of Commerce)."
+   },
+   "ne_ez": {
+    "label": "Nebraska Enterprise Zone",
+    "one": "a Nebraska Enterprise Zone",
+    "many": "Nebraska Enterprise Zones",
+    "kind": "desig",
+    "desc": "Zones designated by the Department of Economic Development where projects get preference in its job training, innovation, housing and site development programs (Enterprise Zone Act, Neb. Rev. Stat. 13-2101 and after)."
+   },
+   "ne_ihub": {
+    "label": "Nebraska Innovation Hub eligible tract",
+    "one": "an Innovation Hub eligible tract",
+    "many": "Innovation Hub eligible tracts",
+    "kind": "desig",
+    "desc": "Tracts with poverty over 19.9% and unemployment over 5%, eligible for the Department of Economic Development's Innovation Hub grants."
+   },
+   "nh_erz": {
+    "label": "New Hampshire Economic Revitalization Zone",
+    "one": "an Economic Revitalization Zone",
+    "many": "Economic Revitalization Zones",
+    "kind": "zone",
+    "desc": "Zones where projects that create jobs can get business profits and business enterprise tax credits (RSA 162-N)."
+   },
+   "nh_79e": {
+    "label": "New Hampshire 79-E district",
+    "one": "a 79-E district",
+    "many": "79-E districts",
+    "kind": "zone",
+    "desc": "Districts a town has adopted under RSA 79-E, where a building's property tax assessment can be held at its pre-rehabilitation value for a period after a substantial rehabilitation."
+   },
+   "nj_qit": {
+    "label": "New Jersey Qualified Incentive Tract",
+    "one": "a Qualified Incentive Tract",
+    "many": "Qualified Incentive Tracts",
+    "kind": "zone",
+    "desc": "Tracts where projects get larger Emerge job tax credits and larger Aspire redevelopment tax credits (New Jersey Economic Development Authority; Economic Recovery Act of 2020)."
+   },
+   "nj_innov": {
+    "label": "New Jersey Innovation Zone",
+    "one": "an Innovation Zone",
+    "many": "Innovation Zones",
+    "kind": "zone",
+    "desc": "Newark, New Brunswick and Camden, where investors get bonus Angel Investor tax credits and innovation programs give priority (New Jersey Economic Development Authority)."
+   },
+   "nj_fdc": {
+    "label": "New Jersey Food Desert Community",
+    "one": "a Food Desert Community",
+    "many": "Food Desert Communities",
+    "kind": "zone",
+    "desc": "Communities designated under the Food Desert Relief Act, where supermarkets and food access projects can get tax credits, grants and loans (New Jersey Economic Development Authority)."
+   },
+   "ok_qj5": {
+    "label": "Oklahoma Quality Jobs 5% county",
+    "one": "a Quality Jobs 5% county",
+    "many": "Quality Jobs 5% counties",
+    "kind": "zone",
+    "desc": "Counties where Quality Jobs projects can get the higher 5% payroll rebate (Oklahoma Department of Commerce, 2026 list)."
+   },
+   "ok_seqj": {
+    "label": "Oklahoma Small Employer Quality Jobs county",
+    "one": "a Small Employer Quality Jobs county",
+    "many": "Small Employer Quality Jobs counties",
+    "kind": "zone",
+    "desc": "High-unemployment, high-poverty counties with lower job and wage thresholds for Small Employer Quality Jobs (Oklahoma Department of Commerce, 2026 list)."
+   },
+   "va_tob": {
+    "label": "Virginia Tobacco Region locality",
+    "one": "a Tobacco Region locality",
+    "many": "Tobacco Region localities",
+    "kind": "desig",
+    "desc": "The 40 counties and cities where projects can get Tobacco Region Revitalization Commission grants, including its performance-based Tobacco Region Opportunity Fund."
+   },
+   "id_ura": {
+    "label": "Idaho urban renewal area",
+    "one": "an Idaho urban renewal area",
+    "many": "Idaho urban renewal areas",
+    "kind": "tif",
+    "desc": "Urban renewal revenue allocation areas, where the growth in property tax pays for improvements (Idaho Code 50-2901 and after); mapped by the Idaho State Tax Commission statewide."
+   },
+   "nh_tif": {
+    "label": "New Hampshire TIF district",
+    "one": "a New Hampshire TIF district",
+    "many": "New Hampshire TIF districts",
+    "kind": "tif",
+    "desc": "Tax increment financing districts adopted by New Hampshire towns and cities under RSA 162-K; mapped statewide by the Office of Planning and Development."
+   },
+   "dc_gs": {
+    "label": "DC Great Streets corridor",
+    "one": "a Great Streets corridor",
+    "many": "Great Streets corridors",
+    "kind": "desig",
+    "desc": "Commercial corridors where retailers and service businesses can apply for Great Streets small business capital grants (Deputy Mayor for Planning and Economic Development)."
+   },
+   "dc_npf": {
+    "label": "DC Neighborhood Prosperity Fund tract",
+    "one": "a Neighborhood Prosperity Fund tract",
+    "many": "Neighborhood Prosperity Fund tracts",
+    "kind": "desig",
+    "desc": "Distressed tracts where commercial and mixed-use projects can apply for Neighborhood Prosperity Fund gap financing (Deputy Mayor for Planning and Economic Development)."
+   },
+   "la_cd": {
+    "label": "Louisiana Cultural District",
+    "one": "a Louisiana Cultural District",
+    "many": "Louisiana Cultural Districts",
+    "kind": "desig",
+    "desc": "Districts where original art sells free of sales tax and buildings can qualify for state historic rehabilitation tax credits (La. R.S. 47:305.57 and 47:6019)."
+   },
+   "la_ms": {
+    "label": "Louisiana Main Street district",
+    "one": "a Louisiana Main Street district",
+    "many": "Louisiana Main Street districts",
+    "kind": "desig",
+    "desc": "Designated Main Street downtowns that get state technical help and can apply for Main Street restoration grants (Louisiana Office of Cultural Development)."
+   },
+   "md_ae": {
+    "label": "Maryland Arts and Entertainment District",
+    "one": "an Arts and Entertainment District",
+    "many": "Arts and Entertainment Districts",
+    "kind": "desig",
+    "desc": "Districts with a property tax credit for renovating artists' space, an income tax subtraction for artists' work made there and an admissions and amusement tax exemption (Maryland State Arts Council)."
+   },
+   "md_ms": {
+    "label": "Main Street Maryland community",
+    "one": "a Main Street Maryland community",
+    "many": "Main Street Maryland communities",
+    "kind": "desig",
+    "desc": "Downtowns in the state's Main Street program (Designated, Connected or Aspiring), with technical help and priority for revitalization funding (Department of Housing and Community Development)."
+   },
+   "md_sc": {
+    "label": "Maryland Sustainable Community",
+    "one": "a Sustainable Community",
+    "many": "Sustainable Communities",
+    "kind": "desig",
+    "desc": "Areas whose designation opens the state's revitalization programs (Community Legacy, Strategic Demolition, Neighborhood BusinessWorks and others) and gives priority for state historic tax credits (Department of Housing and Community Development)."
+   },
+   "md_brni": {
+    "label": "Baltimore Regional Neighborhood Initiative area",
+    "one": "a BRNI area",
+    "many": "BRNI areas",
+    "kind": "desig",
+    "desc": "Neighborhoods in Baltimore City and nearby counties where community groups can apply for state grants for housing and business investment (Department of Housing and Community Development)."
+   },
+   "ma_tdi": {
+    "label": "MassDevelopment Transformative Development Initiative district",
+    "one": "a TDI district",
+    "many": "TDI districts",
+    "kind": "desig",
+    "desc": "Gateway City downtown districts that get MassDevelopment fellows, technical help, equity investments and place-based grants while the cohort is active."
+   },
+   "ny_dri": {
+    "label": "New York Downtown Revitalization Initiative area",
+    "one": "a Downtown Revitalization Initiative area",
+    "many": "Downtown Revitalization Initiative areas",
+    "kind": "desig",
+    "desc": "Downtowns awarded $10 million or more in state grants for projects inside the boundary (Department of State)."
+   },
+   "ny_nyf": {
+    "label": "NY Forward area",
+    "one": "a NY Forward area",
+    "many": "NY Forward areas",
+    "kind": "desig",
+    "desc": "Smaller downtowns awarded about $4.5 million in state grants for projects inside the boundary (Department of State)."
+   },
+   "ok_ms": {
+    "label": "Oklahoma Main Street district",
+    "one": "an Oklahoma Main Street district",
+    "many": "Oklahoma Main Street districts",
+    "kind": "desig",
+    "desc": "Active Main Street program districts, with state technical help, design and training services (Oklahoma Main Street Center)."
+   },
+   "vt_desig": {
+    "label": "Vermont designated downtown or village center",
+    "one": "a Vermont designated area",
+    "many": "Vermont designated areas",
+    "kind": "desig",
+    "desc": "Designated downtowns, village centers, new town centers, growth centers and neighborhood development areas: tax credits for historic, code and facade work, priority for state grants, and permit relief for housing (24 V.S.A. ch. 76A). Act 181 of 2024 is replacing these designations; their benefits continue during the change."
+   },
+   "fl_bfa": {
+    "label": "Florida designated brownfield area",
+    "one": "a designated brownfield area",
+    "many": "designated brownfield areas",
+    "kind": "brown",
+    "desc": "Areas designated by local resolution where cleanup can earn voluntary cleanup tax credits, and projects a $2,500-a-job bonus refund, a sales tax refund on building materials and loan guarantees (s. 376.80, F.S.)."
+   },
+   "nj_bda": {
+    "label": "New Jersey Brownfield Development Area",
+    "one": "a Brownfield Development Area",
+    "many": "Brownfield Development Areas",
+    "kind": "brown",
+    "desc": "Areas where the Department of Environmental Protection manages cleanup planning with the community and gives priority for Hazardous Discharge Site Remediation Fund grants."
+   },
+   "nc_bf": {
+    "label": "North Carolina brownfields site",
+    "one": "a brownfields site",
+    "many": "brownfields sites",
+    "kind": "site",
+    "desc": "Properties in the state's Brownfields Program; under a brownfields agreement, improvements get a five-year partial property tax exclusion (G.S. 105-277.13) and the developer gets liability protection."
+   },
+   "chi_tsl": {
+    "label": "Chicago Transit Served Location",
+    "one": "a Transit Served Location",
+    "many": "Transit Served Locations",
+    "kind": "tod",
+    "desc": "Land within a half mile of a CTA or Metra rail station or a quarter mile of a listed CTA bus corridor, where the Connected Communities Ordinance removes parking minimums and allows more homes (Department of Planning and Development)."
+   },
+   "nyc_tz": {
+    "label": "New York City Transit Zone",
+    "one": "a Transit Zone",
+    "many": "Transit Zones",
+    "kind": "tod",
+    "desc": "Areas where City of Yes for Housing Opportunity removes or reduces required residential parking: the Manhattan Core and Long Island City, the Inner Transit Zone (none required) and the Outer Transit Zone (reduced) (Department of City Planning)."
+   },
+   "la_toc": {
+    "label": "Los Angeles Transit Oriented Communities tier",
+    "one": "a TOC tier area",
+    "many": "TOC tier areas",
+    "kind": "tod",
+    "desc": "Land within a half mile of a major transit stop, in tiers 1 to 4, where housing with affordable units gets density, floor area and parking incentives (Measure JJJ; Department of City Planning). City Planning's housing policy summary says the program is set to expire in 2026; confirm its status with City Planning."
+   },
+   "ca_hqta": {
+    "label": "California high-quality transit area",
+    "one": "a high-quality transit area",
+    "many": "high-quality transit areas",
+    "kind": "tod",
+    "desc": "Land within a half mile of a major transit stop or along a high-quality bus corridor, where CEQA review is streamlined for many housing and mixed-use projects (Public Resources Code 21155, 21099). Only within a half mile of a major transit stop are cities barred from requiring parking for most projects (AB 2097, Gov. Code 65863.2); the corridor parts of these areas are not covered by that rule (Caltrans statewide map)."
+   },
+   "ma_mbta": {
+    "label": "MBTA Communities multifamily district",
+    "one": "an MBTA Communities district",
+    "many": "MBTA Communities districts",
+    "kind": "tod",
+    "desc": "Districts zoned for multifamily housing by right at 15 or more homes an acre, most near transit stations, in towns found compliant with the MBTA Communities law (M.G.L. c. 40A s. 3A; MassGIS)."
+   },
+   "md_tod": {
+    "label": "Maryland designated TOD site",
+    "one": "a designated TOD site",
+    "many": "designated TOD sites",
+    "kind": "tod",
+    "desc": "Station areas the state designates for transit-oriented development: priority for state funding and incentives and eligibility for tax increment financing (Maryland Department of Transportation)."
+   },
+   "phl_toc": {
+    "label": "Philadelphia transit-oriented overlay",
+    "one": "a /TOC overlay",
+    "many": "/TOC overlays",
+    "kind": "tod",
+    "desc": "Zoning overlays around Market-Frankford Line stations with density and height bonuses and reduced parking (Philadelphia Zoning Code 14-513)."
+   },
+   "mia_rtz": {
+    "label": "Miami-Dade Rapid Transit Zone",
+    "one": "a Rapid Transit Zone",
+    "many": "Rapid Transit Zone subzones",
+    "kind": "tod",
+    "desc": "Land around Metrorail, Metromover and busway stations under county zoning, with its own development standards and incentives (Miami-Dade County Code ch. 33C)."
+   },
+   "metc_tod": {
+    "label": "Twin Cities TOD grant area",
+    "one": "a TOD grant area",
+    "many": "TOD grant areas",
+    "kind": "tod",
+    "desc": "Areas eligible for the Metropolitan Council's Livable Communities transit-oriented development grants: light rail, commuter rail and bus rapid transit station areas and high-frequency bus corridors."
+   },
+   "dal_tod": {
+    "label": "Dallas transit-oriented parking area",
+    "one": "a transit-oriented parking area",
+    "many": "transit-oriented parking areas",
+    "kind": "tod",
+    "desc": "Half-mile areas around DART light rail, commuter rail and streetcar stations where the 2025 parking code amendment removes or reduces required parking (City of Dallas)."
+   },
+   "aus_etod": {
+    "label": "Austin Equitable TOD overlay",
+    "one": "an Equitable TOD overlay",
+    "many": "Equitable TOD overlay subdistricts",
+    "kind": "tod",
+    "desc": "Overlay around planned light rail and MetroRapid stations where projects with affordable housing can build higher, up to 90 or 120 feet (Ordinance 20240516-005)."
+   },
+   "dc_tpa": {
+    "label": "DC transit parking reduction area",
+    "one": "a transit parking reduction area",
+    "many": "transit parking reduction areas",
+    "kind": "tod",
+    "desc": "Land within a half mile of a Metrorail station or a quarter mile of a priority bus corridor, where the zoning regulations reduce required parking (11-C DCMR 702)."
+   },
+   "bay_pda": {
+    "label": "Bay Area Priority Development Area",
+    "one": "a Priority Development Area",
+    "many": "Priority Development Areas",
+    "kind": "tod",
+    "desc": "Locally nominated growth areas near transit, adopted by ABAG and MTC, that get priority for regional planning and transportation grants (Plan Bay Area 2050+)."
    }
   },
   "sources": [
@@ -1815,6 +2193,510 @@
     "vintage": "updated October 2025",
     "url": "https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/business_improvement_districts/FeatureServer/0",
     "districts": 14
+   },
+   {
+    "id": "ca_dac",
+    "state": "06",
+    "program": "ca_dac",
+    "where": "California EPA (SB 535, 2026 designation)",
+    "vintage": "2026 designation",
+    "url": "https://services1.arcgis.com/PCHfdHz4GlDNAhBb/arcgis/rest/services/SB_535_Disadvantaged_Communities_2026/FeatureServer/0",
+    "districts": 36
+   },
+   {
+    "id": "co_rjs",
+    "state": "08",
+    "program": "co_rjs",
+    "where": "Colorado OEDIT",
+    "vintage": "updated May 2025",
+    "url": "https://services3.arcgis.com/DgjqnJA1rgO92Soi/arcgis/rest/services/OEDIT_Additional_Reference_Layers_for_EZ_Redesignation/FeatureServer/16",
+    "districts": 30
+   },
+   {
+    "id": "co_coal",
+    "state": "08",
+    "program": "co_coal",
+    "where": "Colorado OEDIT (Office of Just Transition)",
+    "vintage": "updated May 2025",
+    "url": "https://services3.arcgis.com/DgjqnJA1rgO92Soi/arcgis/rest/services/OEDIT_Additional_Reference_Layers_for_EZ_Redesignation/FeatureServer/17",
+    "districts": 12
+   },
+   {
+    "id": "dc_dez",
+    "state": "11",
+    "program": "dc_dez",
+    "where": "DC Department of Small and Local Business Development",
+    "vintage": "DC GIS, current",
+    "url": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Business_Incentives_WebMercator/MapServer/19",
+    "districts": 2
+   },
+   {
+    "id": "dc_npta",
+    "state": "11",
+    "program": "dc_npta",
+    "where": "DC Office of Tax and Revenue",
+    "vintage": "DC GIS, current",
+    "url": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Business_Incentives_WebMercator/MapServer/27",
+    "districts": 5
+   },
+   {
+    "id": "dc_super",
+    "state": "11",
+    "program": "dc_super",
+    "where": "DC Office of Tax and Revenue",
+    "vintage": "updated April 2026",
+    "url": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Business_Incentives_WebMercator/MapServer/24",
+    "districts": 1
+   },
+   {
+    "id": "dc_gs",
+    "state": "11",
+    "program": "dc_gs",
+    "where": "DC Deputy Mayor for Planning and Economic Development",
+    "vintage": "updated December 2024",
+    "url": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Business_Incentives_WebMercator/MapServer/13",
+    "districts": 19
+   },
+   {
+    "id": "dc_npf",
+    "state": "11",
+    "program": "dc_npf",
+    "where": "DC Deputy Mayor for Planning and Economic Development",
+    "vintage": "updated January 2026",
+    "url": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Business_Incentives_WebMercator/MapServer/39",
+    "districts": 1
+   },
+   {
+    "id": "dc_tpa",
+    "state": "11",
+    "program": "dc_tpa",
+    "where": "DC Office of Zoning",
+    "vintage": "DC Office of Zoning, current",
+    "url": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCOZ/Zone_Mapservice/MapServer/33",
+    "districts": 1
+   },
+   {
+    "id": "fl_rao",
+    "state": "12",
+    "program": "fl_rao",
+    "where": "FloridaCommerce (map by Florida DEP)",
+    "vintage": "updated March 2022",
+    "url": "https://services1.arcgis.com/nRHtyn3uE1kyzoYc/arcgis/rest/services/Rural_Areas_of_Opportunity/FeatureServer/0",
+    "districts": 34
+   },
+   {
+    "id": "fl_bfa",
+    "state": "12",
+    "program": "fl_bfa",
+    "where": "Florida Department of Environmental Protection",
+    "vintage": "current",
+    "url": "https://ca.dep.state.fl.us/arcgis/rest/services/OpenData/BROWNFIELD_AREAS/MapServer/0",
+    "districts": 628
+   },
+   {
+    "id": "ga_ldct",
+    "state": "13",
+    "program": "ga_ldct",
+    "where": "Georgia Department of Community Affairs",
+    "vintage": "2026 list",
+    "url": "https://services2.arcgis.com/Gqyymy5JISeLzyNM/arcgis/rest/services/JTC_LDCT_2026/FeatureServer/0",
+    "districts": 68
+   },
+   {
+    "id": "ga_mz",
+    "state": "13",
+    "program": "ga_mz",
+    "where": "Georgia Department of Community Affairs",
+    "vintage": "2026 list",
+    "url": "https://services2.arcgis.com/Gqyymy5JISeLzyNM/arcgis/rest/services/JTC_MZ_Tracts_2026/FeatureServer/0",
+    "districts": 23
+   },
+   {
+    "id": "ga_rz",
+    "state": "13",
+    "program": "ga_rz",
+    "where": "Georgia Department of Community Affairs",
+    "vintage": "updated January 2026",
+    "url": "https://services2.arcgis.com/Gqyymy5JISeLzyNM/arcgis/rest/services/RuralZonestoagol/FeatureServer/0",
+    "districts": 37
+   },
+   {
+    "id": "id_ura",
+    "state": "16",
+    "program": "id_ura",
+    "where": "Idaho State Tax Commission (statewide)",
+    "vintage": "updated March 2026",
+    "url": "https://services.arcgis.com/91hXl6NfvLGEi8x5/arcgis/rest/services/Idaho_City_Taxing_Districts/FeatureServer/27",
+    "districts": 110
+   },
+   {
+    "id": "ks_roz",
+    "state": "20",
+    "program": "ks_roz",
+    "where": "Kansas Department of Commerce (map by the Kansas GIS)",
+    "vintage": "updated June 2026",
+    "url": "https://services1.arcgis.com/q2CglofYX6ACNEeu/arcgis/rest/services/Rural_Opportunity_Zones/FeatureServer/0",
+    "districts": 105
+   },
+   {
+    "id": "la_cd",
+    "state": "22",
+    "program": "la_cd",
+    "where": "Louisiana Office of Cultural Development",
+    "vintage": "updated March 2026",
+    "url": "https://services6.arcgis.com/Pa9GX8gVoVoT9Dpj/arcgis/rest/services/CulturalDistrictBoundaries/FeatureServer/1",
+    "districts": 127
+   },
+   {
+    "id": "la_ms",
+    "state": "22",
+    "program": "la_ms",
+    "where": "Louisiana Office of Cultural Development",
+    "vintage": "updated February 2026",
+    "url": "https://services6.arcgis.com/Pa9GX8gVoVoT9Dpj/arcgis/rest/services/Main_Street/FeatureServer/0",
+    "districts": 36
+   },
+   {
+    "id": "md_ae",
+    "state": "24",
+    "program": "md_ae",
+    "where": "Maryland State Arts Council (MD iMAP)",
+    "vintage": "MD iMAP, current",
+    "url": "https://mdgeodata.md.gov/imap/rest/services/BusinessEconomy/MD_IncentiveZones/FeatureServer/2",
+    "districts": 29
+   },
+   {
+    "id": "md_ms",
+    "state": "24",
+    "program": "md_ms",
+    "where": "Maryland Department of Housing and Community Development (MD iMAP)",
+    "vintage": "MD iMAP, current",
+    "url": "https://mdgeodata.md.gov/imap/rest/services/BusinessEconomy/MD_IncentiveZones/FeatureServer/1",
+    "districts": 44
+   },
+   {
+    "id": "md_sc",
+    "state": "24",
+    "program": "md_sc",
+    "where": "Maryland Department of Housing and Community Development (MD iMAP)",
+    "vintage": "MD iMAP, current",
+    "url": "https://mdgeodata.md.gov/imap/rest/services/BusinessEconomy/MD_IncentiveZones/FeatureServer/6",
+    "districts": 102
+   },
+   {
+    "id": "md_brni",
+    "state": "24",
+    "program": "md_brni",
+    "where": "Maryland Department of Housing and Community Development (MD iMAP)",
+    "vintage": "MD iMAP, current",
+    "url": "https://mdgeodata.md.gov/imap/rest/services/BusinessEconomy/MD_IncentiveZones/FeatureServer/16",
+    "districts": 23
+   },
+   {
+    "id": "md_ezfa",
+    "state": "24",
+    "program": "md_ezfa",
+    "where": "Maryland Department of Commerce (MD iMAP)",
+    "vintage": "MD iMAP, current",
+    "url": "https://mdgeodata.md.gov/imap/rest/services/BusinessEconomy/MD_IncentiveZones/FeatureServer/5",
+    "districts": 2
+   },
+   {
+    "id": "md_rise",
+    "state": "24",
+    "program": "md_rise",
+    "where": "Maryland Department of Commerce (MD iMAP)",
+    "vintage": "MD iMAP, current",
+    "url": "https://mdgeodata.md.gov/imap/rest/services/BusinessEconomy/MD_IncentiveZones/FeatureServer/11",
+    "districts": 3
+   },
+   {
+    "id": "md_tod",
+    "state": "24",
+    "program": "md_tod",
+    "where": "Maryland Department of Transportation",
+    "vintage": "updated July 2026",
+    "url": "https://services.arcgis.com/njFNhDsUCentVYJW/arcgis/rest/services/Maryland_Designated_Transit_Oriented_Development_Sites/FeatureServer/0",
+    "districts": 20
+   },
+   {
+    "id": "ma_tdi",
+    "state": "25",
+    "program": "ma_tdi",
+    "where": "MassDevelopment (MassGIS)",
+    "vintage": "updated September 2026",
+    "url": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/MassDevelopment_TDI_Districts/FeatureServer/0",
+    "districts": 7
+   },
+   {
+    "id": "ma_mbta",
+    "state": "25",
+    "program": "ma_mbta",
+    "where": "Executive Office of Housing and Livable Communities (MassGIS)",
+    "vintage": "updated August 2026",
+    "url": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/MBTA_Communities_3A_District_Atlas/FeatureServer/0",
+    "districts": 485
+   },
+   {
+    "id": "ne_ez",
+    "state": "31",
+    "program": "ne_ez",
+    "where": "Nebraska Department of Economic Development (gis.ne.gov)",
+    "vintage": "Nebraska state GIS, current",
+    "url": "https://gis.ne.gov/Agency/rest/services/EntprznsDED/FeatureServer/0",
+    "districts": 3
+   },
+   {
+    "id": "ne_ihub",
+    "state": "31",
+    "program": "ne_ihub",
+    "where": "Nebraska Department of Economic Development (gis.ne.gov)",
+    "vintage": "Nebraska state GIS, current",
+    "url": "https://gis.ne.gov/Agency/rest/services/IHubEligibleDED/FeatureServer/0",
+    "districts": 8
+   },
+   {
+    "id": "nh_erz",
+    "state": "33",
+    "program": "nh_erz",
+    "where": "NH Office of Planning and Development",
+    "vintage": "updated August 2026",
+    "url": "https://services5.arcgis.com/8QEgIgadpceTLwC5/arcgis/rest/services/ERZs_share_view/FeatureServer/0",
+    "districts": 239
+   },
+   {
+    "id": "nh_tif",
+    "state": "33",
+    "program": "nh_tif",
+    "where": "NH Office of Planning and Development (statewide)",
+    "vintage": "updated August 2026",
+    "url": "https://services5.arcgis.com/8QEgIgadpceTLwC5/arcgis/rest/services/TIF_Districts_view/FeatureServer/0",
+    "districts": 33
+   },
+   {
+    "id": "nh_79e",
+    "state": "33",
+    "program": "nh_79e",
+    "where": "NH Office of Planning and Development",
+    "vintage": "updated August 2026",
+    "url": "https://services5.arcgis.com/8QEgIgadpceTLwC5/arcgis/rest/services/79_E_Districts_view/FeatureServer/0",
+    "districts": 51
+   },
+   {
+    "id": "nj_qit",
+    "state": "34",
+    "program": "nj_qit",
+    "where": "New Jersey Economic Development Authority",
+    "vintage": "updated March 2026",
+    "url": "https://services3.arcgis.com/SEYlksmdoU3040Qd/arcgis/rest/services/Qualified_Incentive_Tracts/FeatureServer/0",
+    "districts": 20
+   },
+   {
+    "id": "nj_innov",
+    "state": "34",
+    "program": "nj_innov",
+    "where": "New Jersey Economic Development Authority",
+    "vintage": "updated March 2022",
+    "url": "https://services3.arcgis.com/SEYlksmdoU3040Qd/arcgis/rest/services/Innovation_Zones/FeatureServer/0",
+    "districts": 3
+   },
+   {
+    "id": "nj_fdc",
+    "state": "34",
+    "program": "nj_fdc",
+    "where": "New Jersey Economic Development Authority",
+    "vintage": "updated October 2024",
+    "url": "https://services3.arcgis.com/SEYlksmdoU3040Qd/arcgis/rest/services/FoodSecurityGrant_FDCs/FeatureServer/0",
+    "districts": 15
+   },
+   {
+    "id": "nj_bda",
+    "state": "34",
+    "program": "nj_bda",
+    "where": "New Jersey Department of Environmental Protection",
+    "vintage": "NJDEP, current",
+    "url": "https://mapsdep.nj.gov/arcgis/rest/services/Features/Environmental/MapServer/36",
+    "districts": 27
+   },
+   {
+    "id": "ny_dri",
+    "state": "36",
+    "program": "ny_dri",
+    "where": "New York Department of State",
+    "vintage": "updated June 2026",
+    "url": "https://services2.arcgis.com/okXm0pb6aWH6XOGI/arcgis/rest/services/Downtown_Revitalization_Initiative_Areas/FeatureServer/2",
+    "districts": 89
+   },
+   {
+    "id": "ny_nyf",
+    "state": "36",
+    "program": "ny_nyf",
+    "where": "New York Department of State",
+    "vintage": "updated June 2026",
+    "url": "https://services2.arcgis.com/okXm0pb6aWH6XOGI/arcgis/rest/services/NY_Forward_Boundaries/FeatureServer/2",
+    "districts": 60
+   },
+   {
+    "id": "nyc_tz",
+    "state": "36",
+    "program": "nyc_tz",
+    "where": "NYC Department of City Planning",
+    "vintage": "updated December 2025",
+    "url": "https://data.cityofnewyork.us/d/6ztr-wgff",
+    "districts": 3
+   },
+   {
+    "id": "nc_bf",
+    "state": "37",
+    "program": "nc_bf",
+    "where": "North Carolina Department of Environmental Quality",
+    "vintage": "updated October 2026",
+    "url": "https://services2.arcgis.com/kCu40SDxsCGcuUWO/arcgis/rest/services/Brownfields_WPDT_view/FeatureServer/0",
+    "districts": 1130
+   },
+   {
+    "id": "ok_qj5",
+    "state": "40",
+    "program": "ok_qj5",
+    "where": "Oklahoma Department of Commerce",
+    "vintage": "2026 list",
+    "url": "https://services5.arcgis.com/ZTbCl7IqVy1LQh5d/arcgis/rest/services/QJFivePrctCounties2026/FeatureServer/0",
+    "districts": 68
+   },
+   {
+    "id": "ok_seqj",
+    "state": "40",
+    "program": "ok_seqj",
+    "where": "Oklahoma Department of Commerce",
+    "vintage": "2026 list",
+    "url": "https://services5.arcgis.com/ZTbCl7IqVy1LQh5d/arcgis/rest/services/SEQJ_Counties_2026/FeatureServer/0",
+    "districts": 14
+   },
+   {
+    "id": "ok_ms",
+    "state": "40",
+    "program": "ok_ms",
+    "where": "Oklahoma Main Street Center (Department of Commerce)",
+    "vintage": "September 2026",
+    "url": "https://services5.arcgis.com/ZTbCl7IqVy1LQh5d/arcgis/rest/services/MS_Boundaries_2026_09_30/FeatureServer/0",
+    "districts": 31
+   },
+   {
+    "id": "phl_toc",
+    "state": "42",
+    "program": "phl_toc",
+    "where": "City of Philadelphia",
+    "vintage": "updated October 2026",
+    "url": "https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/Zoning_Overlays/FeatureServer/0",
+    "districts": 13
+   },
+   {
+    "id": "va_tob",
+    "state": "51",
+    "program": "va_tob",
+    "where": "Virginia Tobacco Region Revitalization Commission (map by VEDP)",
+    "vintage": "VEDP, current",
+    "url": "https://maps.vedp.org/arcgis/rest/services/OpenData/OpenDataLayers/MapServer/8",
+    "districts": 40
+   },
+   {
+    "id": "vt_desig",
+    "state": "50",
+    "program": "vt_desig",
+    "where": "Vermont Agency of Commerce and Community Development",
+    "vintage": "updated October 2026",
+    "url": "https://services1.arcgis.com/rnCtPMpypTkqwvYT/arcgis/rest/services/ACCD_LegacyDesignatedAreas_Poly_SP_Public/FeatureServer/0",
+    "districts": 228
+   },
+   {
+    "id": "chi_tsl_cta",
+    "state": "17",
+    "program": "chi_tsl",
+    "where": "City of Chicago (Department of Planning and Development)",
+    "vintage": "City zoning map, current",
+    "url": "https://gisapps.chicago.gov/arcgis/rest/services/ExternalApps/Zoning/MapServer/13",
+    "districts": 1
+   },
+   {
+    "id": "chi_tsl_metra",
+    "state": "17",
+    "program": "chi_tsl",
+    "where": "City of Chicago (Department of Planning and Development)",
+    "vintage": "City zoning map, current",
+    "url": "https://gisapps.chicago.gov/arcgis/rest/services/ExternalApps/Zoning/MapServer/24",
+    "districts": 1
+   },
+   {
+    "id": "chi_tsl_bus",
+    "state": "17",
+    "program": "chi_tsl",
+    "where": "City of Chicago (Department of Planning and Development)",
+    "vintage": "City zoning map, current",
+    "url": "https://gisapps.chicago.gov/arcgis/rest/services/ExternalApps/Zoning/MapServer/14",
+    "districts": 1
+   },
+   {
+    "id": "la_toc",
+    "state": "06",
+    "program": "la_toc",
+    "where": "Los Angeles Department of City Planning",
+    "vintage": "updated August 2026",
+    "url": "https://services1.arcgis.com/tzwalEyxl2rpamKs/arcgis/rest/services/Transit_Oriented_Communities/FeatureServer/0",
+    "districts": 4
+   },
+   {
+    "id": "ca_hqta",
+    "state": "06",
+    "program": "ca_hqta",
+    "where": "Caltrans (statewide)",
+    "vintage": "Caltrans, current",
+    "url": "https://caltrans-gis.dot.ca.gov/arcgis/rest/services/CHrailroad/CA_HQ_Transit_Areas/FeatureServer/0",
+    "districts": 1
+   },
+   {
+    "id": "bay_pda",
+    "state": "06",
+    "program": "bay_pda",
+    "where": "MTC and ABAG (Bay Area)",
+    "vintage": "updated June 2025",
+    "url": "https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/Priority_Development_Areas_Plan_Bay_Area_2050_Plus/FeatureServer/0",
+    "districts": 220
+   },
+   {
+    "id": "mia_rtz",
+    "state": "12",
+    "program": "mia_rtz",
+    "where": "Miami-Dade County",
+    "vintage": "updated October 2026",
+    "url": "https://services.arcgis.com/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/RapidTransitZone_gdb/FeatureServer/0",
+    "districts": 17
+   },
+   {
+    "id": "metc_tod",
+    "state": "27",
+    "program": "metc_tod",
+    "where": "Metropolitan Council (Twin Cities)",
+    "vintage": "Metropolitan Council, current",
+    "url": "https://arcgis.metc.state.mn.us/data1/rest/services/planning/Other_Plan_Areas_Public/FeatureServer/4",
+    "districts": 1
+   },
+   {
+    "id": "dal_tod",
+    "state": "48",
+    "program": "dal_tod",
+    "where": "City of Dallas",
+    "vintage": "updated October 2025",
+    "url": "https://services2.arcgis.com/rwnOSbfKSwyTBcwN/arcgis/rest/services/TransitOrientedDevelopment/FeatureServer/0",
+    "districts": 68
+   },
+   {
+    "id": "aus_etod",
+    "state": "48",
+    "program": "aus_etod",
+    "where": "City of Austin",
+    "vintage": "adopted May 2024",
+    "url": "https://data.austintexas.gov/d/7tbm-t4ye",
+    "districts": 2
    }
   ],
   "rule": "percent of each tract's area inside each district and inside each program's districts taken together (equal-area projection, generalized 2024 tract shapes); shares that round to 1% or more kept",
@@ -1834,7 +2716,8 @@
    "qct27",
    "dda26",
    "dda27",
-   "hubzone"
+   "hubzone",
+   "transit"
   ],
   "flags": {
    "oz1": "2018 Qualified Opportunity Zone (Notices 2018-48 and 2019-42; CDFI Fund list of 2010 tracts, carried to 2020 tracts)",
@@ -1849,7 +2732,8 @@
    "qct27": "HUD 2027 Qualified Census Tract (Low-Income Housing Tax Credit; credit allocations after December 31, 2026), 2020 tracts",
    "dda26": "Mostly inside a HUD 2026 Difficult Development Area: at least half of the land in designated ZIP Code Tabulation Areas (metropolitan Small Area DDAs), or in a designated non-metropolitan county",
    "dda27": "Mostly inside a HUD 2027 Difficult Development Area: at least half of the land in designated ZIP Code Tabulation Areas (metropolitan Small Area DDAs), or in a designated non-metropolitan county",
-   "hubzone": "SBA HUBZone: a Qualified Census Tract or Non-Metropolitan County, a governor-designated or disaster-area tract or county, or at least half of the tract's area in Indian lands"
+   "hubzone": "SBA HUBZone: a Qualified Census Tract or Non-Metropolitan County, a governor-designated or disaster-area tract or county, or at least half of the tract's area in Indian lands",
+   "transit": "Half or more of the tract within a half mile of a rail or bus rapid transit station (USDOT National Transit Map and FTA National Transit Database)"
   },
   "vintages": {
    "oz1": "2018 designations (2011-2015 ACS, 2010 tracts)",
@@ -1862,9 +2746,20 @@
    "qct27": "HUD 2027 list (September 2026)",
    "dda26": "HUD 2026 list (FY2025 rents and income limits)",
    "dda27": "HUD 2027 list (FY2026 rents and income limits)",
-   "hubzone": "SBA HUBZone map, current designations (fetched by fetch_hubzone.py)"
+   "hubzone": "SBA HUBZone map, current designations (fetched by fetch_hubzone.py)",
+   "transit": "stations as of 2026-10-26"
   },
-  "hubzone_fetched": "2026-10-26"
+  "hubzone_fetched": "2026-10-26",
+  "transit": {
+   "built": "2026-10-26",
+   "ntm_fetched": "2026-10-26",
+   "ntd_fetched": "2026-10-26",
+   "stations": 4527,
+   "rail": 4288,
+   "brt": 239,
+   "ntd_rail_added": 48,
+   "rule": "percent of the tract's area within a half mile (804.67 m) of a rail or bus rapid transit station; a tract is flagged when that is half or more"
+  }
  },
  "stores": {
   "keys": [
@@ -8395,10 +9290,5672 @@
   "states": [
    "01",
    "05",
+   "13",
    "28",
    "37",
    "45",
    "47"
   ]
+ },
+ "metros": {
+  "county": {
+   "46013": "10100",
+   "46045": "10100",
+   "53027": "10140",
+   "48059": "10180",
+   "48253": "10180",
+   "48441": "10180",
+   "40123": "10220",
+   "26091": "10300",
+   "72003": "10380",
+   "72005": "10380",
+   "72011": "10380",
+   "72071": "10380",
+   "72099": "10380",
+   "72117": "10380",
+   "72131": "10380",
+   "39133": "10420",
+   "39153": "10420",
+   "35035": "10460",
+   "08003": "10480",
+   "08021": "10480",
+   "08023": "10480",
+   "13095": "10500",
+   "13177": "10500",
+   "13273": "10500",
+   "13321": "10500",
+   "41043": "10540",
+   "36001": "10580",
+   "36083": "10580",
+   "36091": "10580",
+   "36093": "10580",
+   "36095": "10580",
+   "37167": "10620",
+   "27047": "10660",
+   "01095": "10700",
+   "35001": "10740",
+   "35043": "10740",
+   "35057": "10740",
+   "35061": "10740",
+   "01123": "10760",
+   "22043": "10780",
+   "22079": "10780",
+   "27041": "10820",
+   "48047": "10860",
+   "48249": "10860",
+   "34041": "10900",
+   "42025": "10900",
+   "42077": "10900",
+   "42095": "10900",
+   "26057": "10940",
+   "26007": "10980",
+   "42013": "11020",
+   "40065": "11060",
+   "48011": "11100",
+   "48065": "11100",
+   "48359": "11100",
+   "48375": "11100",
+   "48381": "11100",
+   "13249": "11140",
+   "13261": "11140",
+   "19015": "11180",
+   "19169": "11180",
+   "25015": "11200",
+   "36057": "11220",
+   "02020": "11260",
+   "02170": "11260",
+   "37085": "11360",
+   "48003": "11380",
+   "18151": "11420",
+   "26161": "11460",
+   "01015": "11500",
+   "55015": "11540",
+   "55087": "11540",
+   "12027": "11580",
+   "40019": "11620",
+   "72013": "11640",
+   "72027": "11640",
+   "72065": "11640",
+   "72115": "11640",
+   "05019": "11660",
+   "20035": "11680",
+   "37021": "11700",
+   "37089": "11700",
+   "37115": "11700",
+   "39005": "11740",
+   "41007": "11820",
+   "20005": "11860",
+   "39009": "11900",
+   "47107": "11940",
+   "47121": "11940",
+   "48213": "11980",
+   "13059": "12020",
+   "13195": "12020",
+   "13219": "12020",
+   "13221": "12020",
+   "13013": "12060",
+   "13035": "12060",
+   "13045": "12060",
+   "13063": "12060",
+   "13077": "12060",
+   "13085": "12060",
+   "13089": "12060",
+   "13097": "12060",
+   "13113": "12060",
+   "13117": "12060",
+   "13121": "12060",
+   "13135": "12060",
+   "13149": "12060",
+   "13151": "12060",
+   "13159": "12060",
+   "13187": "12060",
+   "13199": "12060",
+   "13211": "12060",
+   "13217": "12060",
+   "13227": "12060",
+   "13231": "12060",
+   "13247": "12060",
+   "13255": "12060",
+   "13297": "12060",
+   "13015": "12060",
+   "13057": "12060",
+   "13067": "12060",
+   "13143": "12060",
+   "13223": "12060",
+   "34001": "12100",
+   "34009": "12100",
+   "18033": "12140",
+   "36011": "12180",
+   "01081": "12220",
+   "01087": "12220",
+   "13033": "12260",
+   "13073": "12260",
+   "13181": "12260",
+   "13189": "12260",
+   "13245": "12260",
+   "45003": "12260",
+   "45037": "12260",
+   "23011": "12300",
+   "27099": "12380",
+   "48021": "12420",
+   "48055": "12420",
+   "48209": "12420",
+   "48453": "12420",
+   "48491": "12420",
+   "13087": "12460",
+   "41001": "12520",
+   "06029": "12540",
+   "24003": "12580",
+   "24005": "12580",
+   "24013": "12580",
+   "24025": "12580",
+   "24027": "12580",
+   "24035": "12580",
+   "24510": "12580",
+   "23019": "12620",
+   "55111": "12660",
+   "25001": "12700",
+   "50023": "12740",
+   "40147": "12780",
+   "36037": "12860",
+   "05063": "12900",
+   "22005": "12940",
+   "22007": "12940",
+   "22033": "12940",
+   "22037": "12940",
+   "22047": "12940",
+   "22063": "12940",
+   "22077": "12940",
+   "22091": "12940",
+   "22121": "12940",
+   "22125": "12940",
+   "26025": "12980",
+   "26017": "13020",
+   "48321": "13060",
+   "31067": "13100",
+   "48199": "13140",
+   "48245": "13140",
+   "48361": "13140",
+   "55027": "13180",
+   "54019": "13220",
+   "54081": "13220",
+   "18093": "13260",
+   "48025": "13300",
+   "39091": "13340",
+   "53073": "13380",
+   "27007": "13420",
+   "41013": "13460",
+   "41017": "13460",
+   "41031": "13460",
+   "50003": "13540",
+   "26107": "13660",
+   "48227": "13700",
+   "30009": "13740",
+   "30095": "13740",
+   "30111": "13740",
+   "36007": "13780",
+   "36107": "13780",
+   "01007": "13820",
+   "01009": "13820",
+   "01021": "13820",
+   "01073": "13820",
+   "01115": "13820",
+   "01117": "13820",
+   "01127": "13820",
+   "06027": "13860",
+   "38015": "13900",
+   "38059": "13900",
+   "38065": "13900",
+   "16011": "13940",
+   "51063": "13980",
+   "51071": "13980",
+   "51121": "13980",
+   "51155": "13980",
+   "51750": "13980",
+   "17113": "14010",
+   "18105": "14020",
+   "18119": "14020",
+   "42037": "14100",
+   "51185": "14140",
+   "54055": "14140",
+   "05093": "14180",
+   "22117": "14220",
+   "16001": "14260",
+   "16015": "14260",
+   "16027": "14260",
+   "16045": "14260",
+   "16073": "14260",
+   "48147": "14300",
+   "37189": "14380",
+   "48233": "14420",
+   "25021": "14460",
+   "25023": "14460",
+   "25025": "14460",
+   "25009": "14460",
+   "25017": "14460",
+   "33015": "14460",
+   "33017": "14460",
+   "08013": "14500",
+   "21003": "14540",
+   "21031": "14540",
+   "21061": "14540",
+   "21227": "14540",
+   "30031": "14580",
+   "42083": "14620",
+   "27021": "14660",
+   "27035": "14660",
+   "29213": "14700",
+   "50025": "14710",
+   "08065": "14720",
+   "08117": "14720",
+   "53035": "14740",
+   "48477": "14780",
+   "37175": "14820",
+   "09120": "14860",
+   "09190": "14860",
+   "16071": "14940",
+   "49003": "14940",
+   "28085": "15020",
+   "41015": "15060",
+   "46011": "15100",
+   "48061": "15180",
+   "48049": "15220",
+   "13025": "15260",
+   "13127": "15260",
+   "13191": "15260",
+   "39033": "15340",
+   "36029": "15380",
+   "36063": "15380",
+   "16031": "15420",
+   "16067": "15420",
+   "17071": "15460",
+   "19057": "15460",
+   "37001": "15500",
+   "50007": "15540",
+   "50011": "15540",
+   "50013": "15540",
+   "30093": "15580",
+   "26113": "15620",
+   "26165": "15620",
+   "13129": "15660",
+   "24019": "15700",
+   "39059": "15740",
+   "05013": "15780",
+   "05103": "15780",
+   "21087": "15820",
+   "21217": "15820",
+   "08043": "15860",
+   "17057": "15900",
+   "39019": "15940",
+   "39151": "15940",
+   "12071": "15980",
+   "17003": "16020",
+   "29017": "16020",
+   "29031": "16020",
+   "17077": "16060",
+   "35015": "16100",
+   "19027": "16140",
+   "32510": "16180",
+   "56025": "16220",
+   "49021": "16260",
+   "19011": "16300",
+   "19105": "16300",
+   "19113": "16300",
+   "13233": "16340",
+   "39107": "16380",
+   "17121": "16460",
+   "53041": "16500",
+   "42055": "16540",
+   "17019": "16580",
+   "17053": "16580",
+   "17147": "16580",
+   "54005": "16620",
+   "54015": "16620",
+   "54039": "16620",
+   "17029": "16660",
+   "45015": "16700",
+   "45019": "16700",
+   "45035": "16700",
+   "37007": "16740",
+   "37025": "16740",
+   "37071": "16740",
+   "37097": "16740",
+   "37109": "16740",
+   "37119": "16740",
+   "37159": "16740",
+   "37179": "16740",
+   "45023": "16740",
+   "45057": "16740",
+   "45091": "16740",
+   "51003": "16820",
+   "51065": "16820",
+   "51079": "16820",
+   "51125": "16820",
+   "51540": "16820",
+   "13047": "16860",
+   "13083": "16860",
+   "13295": "16860",
+   "47065": "16860",
+   "47115": "16860",
+   "47153": "16860",
+   "56021": "16940",
+   "17031": "16980",
+   "17043": "16980",
+   "17063": "16980",
+   "17111": "16980",
+   "17197": "16980",
+   "17037": "16980",
+   "17089": "16980",
+   "17093": "16980",
+   "17097": "16980",
+   "18073": "16980",
+   "18089": "16980",
+   "18111": "16980",
+   "18127": "16980",
+   "06007": "17020",
+   "39141": "17060",
+   "18029": "17140",
+   "18047": "17140",
+   "18115": "17140",
+   "21015": "17140",
+   "21023": "17140",
+   "21037": "17140",
+   "21077": "17140",
+   "21081": "17140",
+   "21117": "17140",
+   "21191": "17140",
+   "39015": "17140",
+   "39017": "17140",
+   "39025": "17140",
+   "39061": "17140",
+   "39165": "17140",
+   "54017": "17220",
+   "54033": "17220",
+   "54091": "17220",
+   "28027": "17260",
+   "21047": "17300",
+   "21221": "17300",
+   "47125": "17300",
+   "47161": "17300",
+   "06033": "17340",
+   "28011": "17380",
+   "39007": "17410",
+   "39035": "17410",
+   "39055": "17410",
+   "39085": "17410",
+   "39093": "17410",
+   "39103": "17410",
+   "47011": "17420",
+   "47139": "17420",
+   "12043": "17500",
+   "12051": "17500",
+   "19045": "17540",
+   "35009": "17580",
+   "35041": "17580",
+   "72043": "17620",
+   "72133": "17620",
+   "72123": "17640",
+   "56029": "17650",
+   "16055": "17660",
+   "26023": "17740",
+   "48041": "17780",
+   "48051": "17780",
+   "48395": "17780",
+   "08041": "17820",
+   "08119": "17820",
+   "29019": "17860",
+   "29053": "17860",
+   "29089": "17860",
+   "45017": "17900",
+   "45039": "17900",
+   "45055": "17900",
+   "45063": "17900",
+   "45079": "17900",
+   "45081": "17900",
+   "01113": "17980",
+   "13053": "17980",
+   "13145": "17980",
+   "13197": "17980",
+   "13215": "17980",
+   "13259": "17980",
+   "13263": "17980",
+   "18005": "18020",
+   "28087": "18060",
+   "28103": "18060",
+   "31037": "18100",
+   "31141": "18100",
+   "39041": "18140",
+   "39045": "18140",
+   "39049": "18140",
+   "39073": "18140",
+   "39089": "18140",
+   "39097": "18140",
+   "39117": "18140",
+   "39127": "18140",
+   "39129": "18140",
+   "39159": "18140",
+   "33013": "18180",
+   "18041": "18220",
+   "47087": "18260",
+   "47133": "18260",
+   "47141": "18260",
+   "47185": "18260",
+   "41011": "18300",
+   "21051": "18340",
+   "21121": "18340",
+   "21125": "18340",
+   "21235": "18340",
+   "13081": "18380",
+   "28003": "18420",
+   "13137": "18460",
+   "36101": "18500",
+   "48007": "18580",
+   "48355": "18580",
+   "48409": "18580",
+   "48349": "18620",
+   "36023": "18660",
+   "41003": "18700",
+   "39031": "18740",
+   "18107": "18820",
+   "06015": "18860",
+   "12091": "18880",
+   "12131": "18880",
+   "47035": "18900",
+   "01043": "18980",
+   "24001": "19060",
+   "54057": "19060",
+   "48085": "19100",
+   "48113": "19100",
+   "48121": "19100",
+   "48139": "19100",
+   "48231": "19100",
+   "48257": "19100",
+   "48397": "19100",
+   "48251": "19100",
+   "48367": "19100",
+   "48439": "19100",
+   "48497": "19100",
+   "13213": "19140",
+   "13313": "19140",
+   "17183": "19180",
+   "21021": "19220",
+   "21137": "19220",
+   "51143": "19260",
+   "51590": "19260",
+   "01003": "19300",
+   "17073": "19340",
+   "17131": "19340",
+   "17161": "19340",
+   "19163": "19340",
+   "39057": "19430",
+   "39109": "19430",
+   "39113": "19430",
+   "01079": "19460",
+   "01103": "19460",
+   "17115": "19500",
+   "18001": "19540",
+   "39039": "19580",
+   "48465": "19620",
+   "12035": "19660",
+   "12127": "19660",
+   "35029": "19700",
+   "08001": "19740",
+   "08005": "19740",
+   "08014": "19740",
+   "08019": "19740",
+   "08031": "19740",
+   "08035": "19740",
+   "08039": "19740",
+   "08047": "19740",
+   "08059": "19740",
+   "08093": "19740",
+   "22011": "19760",
+   "19049": "19780",
+   "19077": "19780",
+   "19099": "19780",
+   "19121": "19780",
+   "19153": "19780",
+   "19181": "19780",
+   "27005": "19810",
+   "26163": "19820",
+   "26087": "19820",
+   "26093": "19820",
+   "26099": "19820",
+   "26125": "19820",
+   "26147": "19820",
+   "38007": "19860",
+   "38025": "19860",
+   "38089": "19860",
+   "17103": "19940",
+   "20057": "19980",
+   "01061": "20020",
+   "01067": "20020",
+   "01069": "20020",
+   "13003": "20060",
+   "13069": "20060",
+   "10001": "20100",
+   "13167": "20140",
+   "13175": "20140",
+   "42033": "20180",
+   "19061": "20220",
+   "27017": "20260",
+   "27137": "20260",
+   "55031": "20260",
+   "48341": "20300",
+   "40137": "20340",
+   "08067": "20420",
+   "40013": "20460",
+   "37037": "20500",
+   "37063": "20500",
+   "37135": "20500",
+   "37145": "20500",
+   "47045": "20540",
+   "48323": "20580",
+   "24041": "20660",
+   "42089": "20700",
+   "55017": "20740",
+   "55035": "20740",
+   "08037": "20780",
+   "17035": "20820",
+   "17049": "20820",
+   "48481": "20900",
+   "06025": "20940",
+   "05139": "20980",
+   "37139": "21020",
+   "21093": "21060",
+   "21123": "21060",
+   "40009": "21120",
+   "18039": "21140",
+   "54083": "21180",
+   "32007": "21220",
+   "32011": "21220",
+   "53037": "21260",
+   "36015": "21300",
+   "48141": "21340",
+   "48229": "21340",
+   "20017": "21380",
+   "20111": "21380",
+   "40047": "21420",
+   "01031": "21460",
+   "42049": "21500",
+   "26041": "21540",
+   "35039": "21580",
+   "01005": "21640",
+   "13239": "21640",
+   "41039": "21660",
+   "06023": "21700",
+   "49033": "21740",
+   "56041": "21740",
+   "18129": "21780",
+   "18163": "21780",
+   "18173": "21780",
+   "02090": "21820",
+   "27091": "21860",
+   "54049": "21900",
+   "32001": "21980",
+   "27027": "22020",
+   "38017": "22020",
+   "27131": "22060",
+   "29187": "22100",
+   "35045": "22140",
+   "37051": "22180",
+   "37093": "22180",
+   "47103": "22190",
+   "05007": "22220",
+   "05087": "22220",
+   "05143": "22220",
+   "27111": "22260",
+   "39063": "22300",
+   "13017": "22340",
+   "04005": "22380",
+   "26049": "22420",
+   "45031": "22500",
+   "45041": "22500",
+   "01033": "22520",
+   "01077": "22520",
+   "55039": "22540",
+   "37161": "22580",
+   "05123": "22620",
+   "08069": "22660",
+   "19187": "22700",
+   "29169": "22780",
+   "19111": "22800",
+   "08087": "22820",
+   "01049": "22840",
+   "05033": "22900",
+   "05131": "22900",
+   "40135": "22900",
+   "18003": "23060",
+   "18179": "23060",
+   "18183": "23060",
+   "18023": "23140",
+   "21005": "23180",
+   "21073": "23180",
+   "21213": "23190",
+   "48171": "23240",
+   "17177": "23300",
+   "31053": "23340",
+   "39143": "23380",
+   "06019": "23420",
+   "06039": "23420",
+   "01055": "23460",
+   "45021": "23500",
+   "12001": "23540",
+   "12041": "23540",
+   "12075": "23540",
+   "13139": "23580",
+   "48097": "23620",
+   "17095": "23660",
+   "39053": "23680",
+   "35031": "23700",
+   "20055": "23780",
+   "06003": "23820",
+   "32005": "23820",
+   "42001": "23900",
+   "56005": "23940",
+   "21009": "23980",
+   "21169": "23980",
+   "36113": "24020",
+   "36115": "24020",
+   "36035": "24100",
+   "37191": "24140",
+   "48221": "24180",
+   "27119": "24220",
+   "38035": "24220",
+   "31079": "24260",
+   "31093": "24260",
+   "31121": "24260",
+   "08077": "24300",
+   "27061": "24330",
+   "26015": "24340",
+   "26067": "24340",
+   "26081": "24340",
+   "26117": "24340",
+   "26139": "24340",
+   "41033": "24420",
+   "20009": "24460",
+   "30013": "24500",
+   "08123": "24540",
+   "55009": "24580",
+   "55061": "24580",
+   "55083": "24580",
+   "18133": "24600",
+   "47059": "24620",
+   "25011": "24640",
+   "37081": "24660",
+   "37151": "24660",
+   "37157": "24660",
+   "18031": "24700",
+   "28151": "24740",
+   "37147": "24780",
+   "39037": "24820",
+   "45007": "24860",
+   "45045": "24860",
+   "45059": "24860",
+   "45077": "24860",
+   "28015": "24900",
+   "28083": "24900",
+   "45001": "24940",
+   "45047": "24940",
+   "28043": "24980",
+   "28097": "24980",
+   "72015": "25020",
+   "72057": "25020",
+   "72109": "25020",
+   "28045": "25060",
+   "28047": "25060",
+   "28059": "25060",
+   "28131": "25060",
+   "40139": "25100",
+   "24043": "25180",
+   "54003": "25180",
+   "54065": "25180",
+   "16013": "25200",
+   "16025": "25200",
+   "16063": "25200",
+   "22105": "25220",
+   "06031": "25260",
+   "29127": "25300",
+   "29173": "25300",
+   "42041": "25420",
+   "42043": "25420",
+   "42099": "25420",
+   "05009": "25460",
+   "05101": "25460",
+   "51165": "25500",
+   "51660": "25500",
+   "09110": "25540",
+   "09130": "25540",
+   "31001": "25580",
+   "31035": "25580",
+   "31181": "25580",
+   "28035": "25620",
+   "28073": "25620",
+   "28111": "25620",
+   "20051": "25700",
+   "49043": "25720",
+   "49051": "25720",
+   "30007": "25740",
+   "30043": "25740",
+   "30049": "25740",
+   "42103": "25770",
+   "21101": "25775",
+   "21233": "25775",
+   "37181": "25780",
+   "48117": "25820",
+   "41049": "25840",
+   "41059": "25840",
+   "42085": "25850",
+   "37003": "25860",
+   "37023": "25860",
+   "37027": "25860",
+   "37035": "25860",
+   "26059": "25880",
+   "15001": "25900",
+   "45013": "25940",
+   "45053": "25940",
+   "13179": "25980",
+   "13183": "25980",
+   "35025": "26020",
+   "26005": "26090",
+   "12017": "26140",
+   "41027": "26220",
+   "05051": "26300",
+   "26061": "26340",
+   "26083": "26340",
+   "22057": "26380",
+   "22109": "26380",
+   "48015": "26420",
+   "48039": "26420",
+   "48071": "26420",
+   "48157": "26420",
+   "48167": "26420",
+   "48201": "26420",
+   "48291": "26420",
+   "48339": "26420",
+   "48407": "26420",
+   "48473": "26420",
+   "36021": "26460",
+   "42061": "26500",
+   "18069": "26540",
+   "21019": "26580",
+   "21043": "26580",
+   "21089": "26580",
+   "21127": "26580",
+   "39087": "26580",
+   "54011": "26580",
+   "54079": "26580",
+   "54099": "26580",
+   "01083": "26620",
+   "01089": "26620",
+   "48471": "26660",
+   "46005": "26700",
+   "20155": "26740",
+   "27085": "26780",
+   "16019": "26820",
+   "16023": "26820",
+   "16051": "26820",
+   "42063": "26860",
+   "18011": "26900",
+   "18013": "26900",
+   "18057": "26900",
+   "18059": "26900",
+   "18063": "26900",
+   "18081": "26900",
+   "18095": "26900",
+   "18097": "26900",
+   "18109": "26900",
+   "18145": "26900",
+   "18159": "26900",
+   "19103": "26980",
+   "19183": "26980",
+   "26043": "27020",
+   "55037": "27020",
+   "36109": "27060",
+   "26075": "27100",
+   "28029": "27140",
+   "28049": "27140",
+   "28051": "27140",
+   "28089": "27140",
+   "28121": "27140",
+   "28123": "27140",
+   "28127": "27140",
+   "28163": "27140",
+   "47023": "27180",
+   "47033": "27180",
+   "47053": "27180",
+   "47113": "27180",
+   "16081": "27220",
+   "56039": "27220",
+   "12003": "27260",
+   "12019": "27260",
+   "12031": "27260",
+   "12089": "27260",
+   "12109": "27260",
+   "17137": "27300",
+   "17171": "27300",
+   "37133": "27340",
+   "48073": "27380",
+   "38093": "27420",
+   "36013": "27460",
+   "55105": "27500",
+   "18037": "27540",
+   "13157": "27600",
+   "29027": "27620",
+   "29051": "27620",
+   "29135": "27620",
+   "29151": "27620",
+   "13305": "27700",
+   "47019": "27740",
+   "47171": "27740",
+   "47179": "27740",
+   "42021": "27780",
+   "05031": "27860",
+   "05111": "27860",
+   "20021": "27900",
+   "29097": "27900",
+   "29145": "27900",
+   "02110": "27940",
+   "15005": "27980",
+   "15009": "27980",
+   "26077": "28020",
+   "30029": "28060",
+   "17091": "28100",
+   "20091": "28140",
+   "20103": "28140",
+   "20107": "28140",
+   "20121": "28140",
+   "20209": "28140",
+   "29013": "28140",
+   "29025": "28140",
+   "29037": "28140",
+   "29047": "28140",
+   "29049": "28140",
+   "29095": "28140",
+   "29107": "28140",
+   "29165": "28140",
+   "29177": "28140",
+   "15007": "28180",
+   "31019": "28260",
+   "31099": "28260",
+   "33005": "28300",
+   "18113": "28340",
+   "29069": "28380",
+   "53005": "28420",
+   "53021": "28420",
+   "55059": "28450",
+   "48265": "28500",
+   "02130": "28540",
+   "12087": "28580",
+   "37055": "28620",
+   "48027": "28660",
+   "48099": "28660",
+   "48281": "28660",
+   "13039": "28680",
+   "47073": "28700",
+   "47163": "28700",
+   "51169": "28700",
+   "51191": "28700",
+   "51520": "28700",
+   "36111": "28740",
+   "48273": "28780",
+   "37107": "28820",
+   "29001": "28860",
+   "29197": "28860",
+   "36027": "28880",
+   "36071": "28880",
+   "41035": "28900",
+   "47001": "28940",
+   "47009": "28940",
+   "47013": "28940",
+   "47057": "28940",
+   "47093": "28940",
+   "47105": "28940",
+   "47129": "28940",
+   "47145": "28940",
+   "47173": "28940",
+   "18067": "29020",
+   "33001": "29060",
+   "27055": "29100",
+   "55063": "29100",
+   "55123": "29100",
+   "22001": "29180",
+   "22055": "29180",
+   "22099": "29180",
+   "22113": "29180",
+   "18007": "29200",
+   "18015": "29200",
+   "18157": "29200",
+   "18171": "29200",
+   "41061": "29260",
+   "01017": "29300",
+   "13285": "29300",
+   "22019": "29340",
+   "22023": "29340",
+   "22053": "29340",
+   "12023": "29380",
+   "04015": "29420",
+   "12105": "29460",
+   "51137": "29470",
+   "42071": "29540",
+   "26037": "29620",
+   "26045": "29620",
+   "26065": "29620",
+   "56001": "29660",
+   "48479": "29700",
+   "72081": "29720",
+   "35013": "29740",
+   "35033": "29780",
+   "35047": "29780",
+   "32003": "29820",
+   "28061": "29860",
+   "28067": "29860",
+   "37165": "29900",
+   "20045": "29940",
+   "47099": "29980",
+   "40031": "30020",
+   "40033": "30020",
+   "29105": "30060",
+   "42075": "30140",
+   "33009": "30150",
+   "33019": "30150",
+   "50017": "30150",
+   "50027": "30150",
+   "19149": "30180",
+   "42119": "30260",
+   "47117": "30280",
+   "16069": "30300",
+   "53003": "30300",
+   "23001": "30340",
+   "42087": "30380",
+   "31047": "30420",
+   "31073": "30420",
+   "21017": "30460",
+   "21049": "30460",
+   "21067": "30460",
+   "21113": "30460",
+   "21209": "30460",
+   "21239": "30460",
+   "24009": "30500",
+   "24037": "30500",
+   "20175": "30580",
+   "39003": "30620",
+   "17107": "30660",
+   "31109": "30700",
+   "31159": "30700",
+   "05045": "30780",
+   "05053": "30780",
+   "05085": "30780",
+   "05105": "30780",
+   "05119": "30780",
+   "05125": "30780",
+   "42035": "30820",
+   "16041": "30860",
+   "49005": "30860",
+   "18017": "30900",
+   "48183": "30980",
+   "48203": "30980",
+   "48401": "30980",
+   "48459": "30980",
+   "53015": "31020",
+   "35028": "31060",
+   "06059": "31080",
+   "06037": "31080",
+   "18019": "31140",
+   "18043": "31140",
+   "18061": "31140",
+   "18175": "31140",
+   "21029": "31140",
+   "21103": "31140",
+   "21111": "31140",
+   "21163": "31140",
+   "21179": "31140",
+   "21185": "31140",
+   "21211": "31140",
+   "21215": "31140",
+   "48079": "31180",
+   "48107": "31180",
+   "48169": "31180",
+   "48219": "31180",
+   "48303": "31180",
+   "48305": "31180",
+   "26105": "31220",
+   "48005": "31260",
+   "37155": "31300",
+   "51009": "31340",
+   "51011": "31340",
+   "51019": "31340",
+   "51031": "31340",
+   "51680": "31340",
+   "17109": "31380",
+   "13021": "31420",
+   "13079": "31420",
+   "13169": "31420",
+   "13207": "31420",
+   "13289": "31420",
+   "18077": "31500",
+   "55021": "31540",
+   "55025": "31540",
+   "55045": "31540",
+   "55049": "31540",
+   "21107": "31580",
+   "05027": "31620",
+   "05059": "31680",
+   "33011": "31700",
+   "20061": "31740",
+   "20149": "31740",
+   "20161": "31740",
+   "55071": "31820",
+   "27013": "31860",
+   "27103": "31860",
+   "39139": "31900",
+   "39167": "31930",
+   "26109": "31940",
+   "55075": "31940",
+   "18053": "31980",
+   "37111": "32000",
+   "39101": "32020",
+   "17199": "32060",
+   "26103": "32100",
+   "27083": "32140",
+   "29195": "32180",
+   "19127": "32260",
+   "47183": "32280",
+   "51089": "32300",
+   "51690": "32300",
+   "29147": "32340",
+   "19033": "32380",
+   "19195": "32380",
+   "36089": "32390",
+   "72023": "32420",
+   "72067": "32420",
+   "72079": "32420",
+   "72097": "32420",
+   "72121": "32420",
+   "72125": "32420",
+   "21083": "32460",
+   "40121": "32540",
+   "48215": "32580",
+   "28113": "32620",
+   "28147": "32620",
+   "47177": "32660",
+   "20113": "32700",
+   "42039": "32740",
+   "41029": "32780",
+   "05035": "32820",
+   "28009": "32820",
+   "28033": "32820",
+   "28093": "32820",
+   "28137": "32820",
+   "28143": "32820",
+   "47047": "32820",
+   "47157": "32820",
+   "47167": "32820",
+   "55033": "32860",
+   "06047": "32900",
+   "28023": "32940",
+   "28075": "32940",
+   "29007": "33020",
+   "40115": "33060",
+   "12011": "33100",
+   "12086": "33100",
+   "12099": "33100",
+   "18091": "33140",
+   "21013": "33180",
+   "26111": "33220",
+   "48317": "33260",
+   "48329": "33260",
+   "13009": "33300",
+   "55079": "33340",
+   "55089": "33340",
+   "55131": "33340",
+   "55133": "33340",
+   "22119": "33380",
+   "48363": "33420",
+   "27003": "33460",
+   "27019": "33460",
+   "27025": "33460",
+   "27037": "33460",
+   "27053": "33460",
+   "27059": "33460",
+   "27079": "33460",
+   "27095": "33460",
+   "27123": "33460",
+   "27139": "33460",
+   "27141": "33460",
+   "27163": "33460",
+   "27171": "33460",
+   "55093": "33460",
+   "55109": "33460",
+   "38049": "33500",
+   "38075": "33500",
+   "38101": "33500",
+   "30061": "33540",
+   "30063": "33540",
+   "46035": "33580",
+   "46061": "33580",
+   "46111": "33580",
+   "29175": "33620",
+   "01097": "33660",
+   "06099": "33700",
+   "22067": "33740",
+   "22073": "33740",
+   "22083": "33740",
+   "22111": "33740",
+   "26115": "33780",
+   "01001": "33860",
+   "01051": "33860",
+   "01085": "33860",
+   "01101": "33860",
+   "18181": "33900",
+   "36105": "33910",
+   "08085": "33940",
+   "37031": "33980",
+   "22101": "34020",
+   "54061": "34060",
+   "54077": "34060",
+   "47063": "34100",
+   "47089": "34100",
+   "16057": "34140",
+   "53025": "34180",
+   "13071": "34220",
+   "05005": "34260",
+   "16039": "34300",
+   "37171": "34340",
+   "26073": "34380",
+   "48063": "34420",
+   "48343": "34420",
+   "48449": "34420",
+   "21011": "34460",
+   "21165": "34460",
+   "21173": "34460",
+   "17081": "34500",
+   "39083": "34540",
+   "53057": "34580",
+   "18035": "34620",
+   "21035": "34660",
+   "45043": "34680",
+   "19139": "34700",
+   "26121": "34740",
+   "40101": "34780",
+   "45051": "34820",
+   "48347": "34860",
+   "25019": "34880",
+   "06055": "34900",
+   "12021": "34940",
+   "47015": "34980",
+   "47021": "34980",
+   "47037": "34980",
+   "47043": "34980",
+   "47081": "34980",
+   "47111": "34980",
+   "47119": "34980",
+   "47147": "34980",
+   "47149": "34980",
+   "47159": "34980",
+   "47165": "34980",
+   "47169": "34980",
+   "47187": "34980",
+   "47189": "34980",
+   "22029": "35020",
+   "28001": "35020",
+   "28063": "35020",
+   "22069": "35060",
+   "37049": "35100",
+   "37103": "35100",
+   "37137": "35100",
+   "45071": "35140",
+   "18065": "35220",
+   "09170": "35300",
+   "22045": "35340",
+   "22051": "35380",
+   "22071": "35380",
+   "22075": "35380",
+   "22087": "35380",
+   "22089": "35380",
+   "22093": "35380",
+   "22095": "35380",
+   "39157": "35420",
+   "41041": "35440",
+   "47029": "35460",
+   "27015": "35580",
+   "34023": "35620",
+   "34025": "35620",
+   "34029": "35620",
+   "34035": "35620",
+   "36059": "35620",
+   "36103": "35620",
+   "34013": "35620",
+   "34019": "35620",
+   "34027": "35620",
+   "34037": "35620",
+   "34039": "35620",
+   "34003": "35620",
+   "34017": "35620",
+   "34031": "35620",
+   "36005": "35620",
+   "36047": "35620",
+   "36061": "35620",
+   "36079": "35620",
+   "36081": "35620",
+   "36085": "35620",
+   "36087": "35620",
+   "36119": "35620",
+   "26021": "35660",
+   "04023": "35700",
+   "31119": "35740",
+   "31139": "35740",
+   "31167": "35740",
+   "31111": "35820",
+   "31113": "35820",
+   "12081": "35840",
+   "12115": "35840",
+   "37193": "35900",
+   "39077": "35940",
+   "09180": "35980",
+   "53029": "36020",
+   "12083": "36100",
+   "24047": "36180",
+   "48135": "36220",
+   "49011": "36260",
+   "49029": "36260",
+   "49057": "36260",
+   "42121": "36340",
+   "12093": "36380",
+   "40017": "36420",
+   "40027": "36420",
+   "40051": "36420",
+   "40081": "36420",
+   "40083": "36420",
+   "40087": "36420",
+   "40109": "36420",
+   "36009": "36460",
+   "53067": "36500",
+   "19085": "36540",
+   "19129": "36540",
+   "19155": "36540",
+   "31025": "36540",
+   "31055": "36540",
+   "31153": "36540",
+   "31155": "36540",
+   "31177": "36540",
+   "36077": "36580",
+   "16075": "36620",
+   "41045": "36620",
+   "22097": "36660",
+   "45075": "36700",
+   "12069": "36740",
+   "12095": "36740",
+   "12097": "36740",
+   "12117": "36740",
+   "55139": "36780",
+   "19123": "36820",
+   "53001": "36830",
+   "17011": "36837",
+   "17099": "36837",
+   "17155": "36837",
+   "20059": "36840",
+   "19179": "36900",
+   "27147": "36940",
+   "21059": "36980",
+   "21149": "36980",
+   "26155": "37020",
+   "28071": "37060",
+   "28161": "37060",
+   "06111": "37100",
+   "01045": "37120",
+   "17127": "37140",
+   "21007": "37140",
+   "21039": "37140",
+   "21139": "37140",
+   "21145": "37140",
+   "32023": "37220",
+   "12107": "37260",
+   "48001": "37300",
+   "12009": "37340",
+   "48179": "37420",
+   "48393": "37420",
+   "12005": "37460",
+   "12133": "37460",
+   "05055": "37500",
+   "47079": "37540",
+   "48277": "37580",
+   "48387": "37580",
+   "54105": "37620",
+   "54107": "37620",
+   "04007": "37740",
+   "19125": "37800",
+   "12033": "37860",
+   "12113": "37860",
+   "17123": "37900",
+   "17143": "37900",
+   "17175": "37900",
+   "17179": "37900",
+   "17203": "37900",
+   "18103": "37940",
+   "26047": "37950",
+   "34005": "37980",
+   "34007": "37980",
+   "34015": "37980",
+   "42017": "37980",
+   "42029": "37980",
+   "42091": "37980",
+   "42045": "37980",
+   "42101": "37980",
+   "10003": "37980",
+   "24015": "37980",
+   "34033": "37980",
+   "04013": "38060",
+   "04021": "38060",
+   "28109": "38100",
+   "46065": "38180",
+   "46117": "38180",
+   "21071": "38210",
+   "21195": "38210",
+   "05025": "38220",
+   "05069": "38220",
+   "37125": "38240",
+   "20037": "38260",
+   "42003": "38300",
+   "42005": "38300",
+   "42007": "38300",
+   "42019": "38300",
+   "42051": "38300",
+   "42073": "38300",
+   "42125": "38300",
+   "42129": "38300",
+   "25003": "38340",
+   "48153": "38380",
+   "48189": "38380",
+   "55043": "38420",
+   "36019": "38460",
+   "18099": "38500",
+   "16005": "38540",
+   "40071": "38620",
+   "72059": "38660",
+   "72075": "38660",
+   "72111": "38660",
+   "72113": "38660",
+   "72149": "38660",
+   "72153": "38660",
+   "17105": "38700",
+   "29023": "38740",
+   "53009": "38820",
+   "23005": "38860",
+   "23023": "38860",
+   "23031": "38860",
+   "41005": "38900",
+   "41009": "38900",
+   "41051": "38900",
+   "41067": "38900",
+   "41071": "38900",
+   "53011": "38900",
+   "53059": "38900",
+   "48057": "38920",
+   "12085": "38940",
+   "12111": "38940",
+   "39145": "39020",
+   "53031": "39040",
+   "42107": "39060",
+   "04025": "39150",
+   "49007": "39220",
+   "25005": "39300",
+   "44001": "39300",
+   "44003": "39300",
+   "44005": "39300",
+   "44007": "39300",
+   "44009": "39300",
+   "49023": "39340",
+   "49049": "39340",
+   "08101": "39380",
+   "53075": "39420",
+   "12015": "39460",
+   "09150": "39480",
+   "17001": "39500",
+   "29111": "39500",
+   "55101": "39540",
+   "37069": "39580",
+   "37101": "39580",
+   "37183": "39580",
+   "46033": "39660",
+   "46093": "39660",
+   "46103": "39660",
+   "48489": "39700",
+   "42011": "39740",
+   "06103": "39780",
+   "06089": "39820",
+   "27049": "39860",
+   "32019": "39900",
+   "32029": "39900",
+   "32031": "39900",
+   "16043": "39940",
+   "16065": "39940",
+   "55005": "39960",
+   "18177": "39980",
+   "51007": "40060",
+   "51036": "40060",
+   "51041": "40060",
+   "51053": "40060",
+   "51075": "40060",
+   "51085": "40060",
+   "51087": "40060",
+   "51097": "40060",
+   "51101": "40060",
+   "51127": "40060",
+   "51145": "40060",
+   "51149": "40060",
+   "51183": "40060",
+   "51570": "40060",
+   "51670": "40060",
+   "51730": "40060",
+   "51760": "40060",
+   "21065": "40080",
+   "21151": "40080",
+   "21203": "40080",
+   "08045": "40090",
+   "08097": "40090",
+   "48427": "40100",
+   "06065": "40140",
+   "06071": "40140",
+   "56013": "40180",
+   "51023": "40220",
+   "51045": "40220",
+   "51067": "40220",
+   "51161": "40220",
+   "51770": "40220",
+   "51775": "40220",
+   "37083": "40260",
+   "37131": "40260",
+   "17141": "40300",
+   "27039": "40340",
+   "27045": "40340",
+   "27109": "40340",
+   "27157": "40340",
+   "36051": "40380",
+   "36055": "40380",
+   "36069": "40380",
+   "36073": "40380",
+   "36117": "40380",
+   "17007": "40420",
+   "17201": "40420",
+   "37153": "40460",
+   "56037": "40540",
+   "37065": "40580",
+   "37127": "40580",
+   "29161": "40620",
+   "13115": "40660",
+   "41019": "40700",
+   "35005": "40740",
+   "35027": "40760",
+   "01059": "40770",
+   "05115": "40780",
+   "05149": "40780",
+   "22061": "40820",
+   "50021": "40860",
+   "06017": "40900",
+   "06061": "40900",
+   "06067": "40900",
+   "06113": "40900",
+   "04009": "40940",
+   "26145": "40980",
+   "27009": "41060",
+   "27145": "41060",
+   "49053": "41100",
+   "20043": "41140",
+   "29003": "41140",
+   "29021": "41140",
+   "29063": "41140",
+   "17005": "41180",
+   "17013": "41180",
+   "17027": "41180",
+   "17083": "41180",
+   "17117": "41180",
+   "17119": "41180",
+   "17133": "41180",
+   "17163": "41180",
+   "29071": "41180",
+   "29099": "41180",
+   "29113": "41180",
+   "29183": "41180",
+   "29189": "41180",
+   "29219": "41180",
+   "29510": "41180",
+   "42047": "41260",
+   "39029": "41400",
+   "41047": "41420",
+   "41053": "41420",
+   "20143": "41460",
+   "20169": "41460",
+   "06053": "41500",
+   "24039": "41540",
+   "24045": "41540",
+   "49035": "41620",
+   "49045": "41620",
+   "48235": "41660",
+   "48451": "41660",
+   "48013": "41700",
+   "48019": "41700",
+   "48029": "41700",
+   "48091": "41700",
+   "48187": "41700",
+   "48259": "41700",
+   "48325": "41700",
+   "48493": "41700",
+   "06073": "41740",
+   "16017": "41760",
+   "39043": "41780",
+   "39123": "41780",
+   "37105": "41820",
+   "06001": "41860",
+   "06013": "41860",
+   "06075": "41860",
+   "06081": "41860",
+   "06041": "41860",
+   "06069": "41940",
+   "06085": "41940",
+   "72007": "41980",
+   "72009": "41980",
+   "72017": "41980",
+   "72019": "41980",
+   "72021": "41980",
+   "72025": "41980",
+   "72029": "41980",
+   "72031": "41980",
+   "72033": "41980",
+   "72035": "41980",
+   "72037": "41980",
+   "72039": "41980",
+   "72041": "41980",
+   "72045": "41980",
+   "72047": "41980",
+   "72051": "41980",
+   "72053": "41980",
+   "72054": "41980",
+   "72061": "41980",
+   "72063": "41980",
+   "72069": "41980",
+   "72077": "41980",
+   "72085": "41980",
+   "72087": "41980",
+   "72089": "41980",
+   "72091": "41980",
+   "72095": "41980",
+   "72101": "41980",
+   "72103": "41980",
+   "72105": "41980",
+   "72107": "41980",
+   "72119": "41980",
+   "72127": "41980",
+   "72129": "41980",
+   "72135": "41980",
+   "72137": "41980",
+   "72139": "41980",
+   "72143": "41980",
+   "72145": "41980",
+   "72151": "41980",
+   "06079": "42020",
+   "06087": "42100",
+   "35049": "42140",
+   "06083": "42200",
+   "06097": "42220",
+   "26033": "42300",
+   "13029": "42340",
+   "13051": "42340",
+   "13103": "42340",
+   "42015": "42380",
+   "31007": "42420",
+   "31157": "42420",
+   "01071": "42460",
+   "42069": "42540",
+   "42079": "42540",
+   "42131": "42540",
+   "10005": "42580",
+   "05145": "42620",
+   "53061": "42660",
+   "53033": "42660",
+   "53053": "42660",
+   "12061": "42680",
+   "12055": "42700",
+   "29159": "42740",
+   "42109": "42780",
+   "01047": "42820",
+   "45073": "42860",
+   "36099": "42900",
+   "47155": "42940",
+   "18071": "42980",
+   "55078": "43020",
+   "55115": "43020",
+   "40125": "43060",
+   "55117": "43100",
+   "37045": "43140",
+   "47003": "43180",
+   "53045": "43220",
+   "56033": "43260",
+   "48181": "43300",
+   "04017": "43320",
+   "22015": "43340",
+   "22017": "43340",
+   "22031": "43340",
+   "39149": "43380",
+   "04003": "43420",
+   "29133": "43460",
+   "29201": "43460",
+   "35017": "43500",
+   "19193": "43580",
+   "31043": "43580",
+   "46127": "43580",
+   "27133": "43620",
+   "46083": "43620",
+   "46087": "43620",
+   "46099": "43620",
+   "46125": "43620",
+   "22103": "43640",
+   "48415": "43660",
+   "21199": "43700",
+   "42111": "43740",
+   "06109": "43760",
+   "18141": "43780",
+   "26027": "43780",
+   "55081": "43890",
+   "45083": "43900",
+   "45087": "43900",
+   "46081": "43940",
+   "19041": "43980",
+   "19059": "44020",
+   "53063": "44060",
+   "53065": "44060",
+   "17129": "44100",
+   "17167": "44100",
+   "25013": "44140",
+   "29043": "44180",
+   "29059": "44180",
+   "29077": "44180",
+   "29167": "44180",
+   "29225": "44180",
+   "39023": "44220",
+   "28105": "44260",
+   "28155": "44260",
+   "42027": "44300",
+   "13031": "44340",
+   "13109": "44340",
+   "51015": "44420",
+   "51790": "44420",
+   "51820": "44420",
+   "08081": "44460",
+   "08107": "44460",
+   "48143": "44500",
+   "08075": "44540",
+   "17195": "44580",
+   "55097": "44620",
+   "40119": "44660",
+   "06077": "44700",
+   "19021": "44740",
+   "26149": "44780",
+   "48223": "44860",
+   "13055": "44900",
+   "45085": "44940",
+   "42093": "44980",
+   "42097": "44980",
+   "06035": "45000",
+   "48353": "45020",
+   "36053": "45060",
+   "36067": "45060",
+   "36075": "45060",
+   "40021": "45140",
+   "01037": "45180",
+   "01121": "45180",
+   "12039": "45220",
+   "12065": "45220",
+   "12073": "45220",
+   "12129": "45220",
+   "12103": "45300",
+   "12053": "45300",
+   "12057": "45300",
+   "12101": "45300",
+   "35055": "45340",
+   "17021": "45380",
+   "18021": "45460",
+   "18153": "45460",
+   "18165": "45460",
+   "18167": "45460",
+   "05081": "45500",
+   "05091": "45500",
+   "48037": "45500",
+   "41065": "45520",
+   "13293": "45580",
+   "13131": "45620",
+   "13275": "45620",
+   "39147": "45660",
+   "13277": "45700",
+   "13287": "45700",
+   "13257": "45740",
+   "39051": "45780",
+   "39095": "45780",
+   "39173": "45780",
+   "20085": "45820",
+   "20087": "45820",
+   "20139": "45820",
+   "20177": "45820",
+   "20197": "45820",
+   "09160": "45860",
+   "48389": "45880",
+   "26019": "45900",
+   "26055": "45900",
+   "26079": "45900",
+   "26089": "45900",
+   "34021": "45940",
+   "01109": "45980",
+   "06057": "46020",
+   "04019": "46060",
+   "47031": "46100",
+   "47127": "46100",
+   "40037": "46140",
+   "40111": "46140",
+   "40113": "46140",
+   "40117": "46140",
+   "40131": "46140",
+   "40143": "46140",
+   "40145": "46140",
+   "28057": "46180",
+   "28081": "46180",
+   "28117": "46180",
+   "01063": "46220",
+   "01065": "46220",
+   "01107": "46220",
+   "01125": "46220",
+   "16053": "46300",
+   "16083": "46300",
+   "48423": "46340",
+   "06045": "46380",
+   "47131": "46460",
+   "39021": "46500",
+   "15003": "46520",
+   "36043": "46540",
+   "36065": "46540",
+   "72141": "46580",
+   "48463": "46620",
+   "13027": "46660",
+   "13101": "46660",
+   "13173": "46660",
+   "13185": "46660",
+   "06095": "46700",
+   "39161": "46780",
+   "46027": "46820",
+   "49047": "46860",
+   "48487": "46900",
+   "28149": "46980",
+   "48175": "47020",
+   "48469": "47020",
+   "13209": "47080",
+   "13279": "47080",
+   "18083": "47180",
+   "34011": "47220",
+   "25007": "47240",
+   "37029": "47260",
+   "37053": "47260",
+   "37073": "47260",
+   "51073": "47260",
+   "51093": "47260",
+   "51095": "47260",
+   "51115": "47260",
+   "51181": "47260",
+   "51199": "47260",
+   "51550": "47260",
+   "51650": "47260",
+   "51700": "47260",
+   "51710": "47260",
+   "51735": "47260",
+   "51740": "47260",
+   "51800": "47260",
+   "51810": "47260",
+   "51830": "47260",
+   "06107": "47300",
+   "18169": "47340",
+   "48035": "47380",
+   "48145": "47380",
+   "48309": "47380",
+   "27167": "47420",
+   "38077": "47420",
+   "53071": "47460",
+   "39011": "47540",
+   "13153": "47580",
+   "13225": "47580",
+   "42123": "47620",
+   "29101": "47660",
+   "18085": "47700",
+   "18027": "47780",
+   "37013": "47820",
+   "51013": "47900",
+   "51043": "47900",
+   "51047": "47900",
+   "51059": "47900",
+   "51061": "47900",
+   "51107": "47900",
+   "51153": "47900",
+   "51157": "47900",
+   "51177": "47900",
+   "51179": "47900",
+   "51187": "47900",
+   "51510": "47900",
+   "51600": "47900",
+   "51610": "47900",
+   "51630": "47900",
+   "51683": "47900",
+   "51685": "47900",
+   "54037": "47900",
+   "24021": "47900",
+   "24031": "47900",
+   "11001": "47900",
+   "24017": "47900",
+   "24033": "47900",
+   "39047": "47920",
+   "09140": "47930",
+   "19013": "47940",
+   "19017": "47940",
+   "19075": "47940",
+   "46029": "47980",
+   "55055": "48020",
+   "36045": "48060",
+   "55073": "48140",
+   "13229": "48180",
+   "13299": "48180",
+   "37087": "48200",
+   "40039": "48220",
+   "40149": "48220",
+   "39081": "48260",
+   "54009": "48260",
+   "54029": "48260",
+   "53007": "48300",
+   "53017": "48300",
+   "29091": "48460",
+   "39013": "48540",
+   "54051": "48540",
+   "54069": "48540",
+   "55127": "48580",
+   "20015": "48620",
+   "20079": "48620",
+   "20173": "48620",
+   "20191": "48620",
+   "48009": "48660",
+   "48077": "48660",
+   "48485": "48660",
+   "12119": "48680",
+   "42081": "48700",
+   "38105": "48780",
+   "27067": "48820",
+   "37019": "48900",
+   "37129": "48900",
+   "37141": "48900",
+   "39027": "48940",
+   "37195": "48980",
+   "47051": "49010",
+   "51069": "49020",
+   "51840": "49020",
+   "54027": "49020",
+   "32013": "49080",
+   "27169": "49100",
+   "37057": "49180",
+   "37059": "49180",
+   "37067": "49180",
+   "37169": "49180",
+   "37197": "49180",
+   "55141": "49220",
+   "40153": "49260",
+   "39169": "49300",
+   "25027": "49340",
+   "27105": "49380",
+   "53077": "49420",
+   "46135": "49460",
+   "42133": "49620",
+   "39099": "49660",
+   "39155": "49660",
+   "06101": "49700",
+   "06115": "49700",
+   "04027": "49740",
+   "39119": "49780",
+   "48505": "49820"
+  },
+  "names": {
+   "10100": [
+    "Aberdeen, SD",
+    "micro"
+   ],
+   "10140": [
+    "Aberdeen, WA",
+    "micro"
+   ],
+   "10180": [
+    "Abilene, TX",
+    "metro"
+   ],
+   "10220": [
+    "Ada, OK",
+    "micro"
+   ],
+   "10300": [
+    "Adrian, MI",
+    "micro"
+   ],
+   "10380": [
+    "Aguadilla, PR",
+    "metro"
+   ],
+   "10420": [
+    "Akron, OH",
+    "metro"
+   ],
+   "10460": [
+    "Alamogordo, NM",
+    "micro"
+   ],
+   "10480": [
+    "Alamosa, CO",
+    "micro"
+   ],
+   "10500": [
+    "Albany, GA",
+    "metro"
+   ],
+   "10540": [
+    "Albany, OR",
+    "metro"
+   ],
+   "10580": [
+    "Albany-Schenectady-Troy, NY",
+    "metro"
+   ],
+   "10620": [
+    "Albemarle, NC",
+    "micro"
+   ],
+   "10660": [
+    "Albert Lea, MN",
+    "micro"
+   ],
+   "10700": [
+    "Albertville, AL",
+    "micro"
+   ],
+   "10740": [
+    "Albuquerque, NM",
+    "metro"
+   ],
+   "10760": [
+    "Alexander City, AL",
+    "micro"
+   ],
+   "10780": [
+    "Alexandria, LA",
+    "metro"
+   ],
+   "10820": [
+    "Alexandria, MN",
+    "micro"
+   ],
+   "10860": [
+    "Alice, TX",
+    "micro"
+   ],
+   "10900": [
+    "Allentown-Bethlehem-Easton, PA-NJ",
+    "metro"
+   ],
+   "10940": [
+    "Alma, MI",
+    "micro"
+   ],
+   "10980": [
+    "Alpena, MI",
+    "micro"
+   ],
+   "11020": [
+    "Altoona, PA",
+    "metro"
+   ],
+   "11060": [
+    "Altus, OK",
+    "micro"
+   ],
+   "11100": [
+    "Amarillo, TX",
+    "metro"
+   ],
+   "11140": [
+    "Americus, GA",
+    "micro"
+   ],
+   "11180": [
+    "Ames, IA",
+    "metro"
+   ],
+   "11200": [
+    "Amherst Town-Northampton, MA",
+    "metro"
+   ],
+   "11220": [
+    "Amsterdam, NY",
+    "micro"
+   ],
+   "11260": [
+    "Anchorage, AK",
+    "metro"
+   ],
+   "11360": [
+    "Anderson Creek, NC",
+    "micro"
+   ],
+   "11380": [
+    "Andrews, TX",
+    "micro"
+   ],
+   "11420": [
+    "Angola, IN",
+    "micro"
+   ],
+   "11460": [
+    "Ann Arbor, MI",
+    "metro"
+   ],
+   "11500": [
+    "Anniston-Oxford, AL",
+    "metro"
+   ],
+   "11540": [
+    "Appleton, WI",
+    "metro"
+   ],
+   "11580": [
+    "Arcadia, FL",
+    "micro"
+   ],
+   "11620": [
+    "Ardmore, OK",
+    "micro"
+   ],
+   "11640": [
+    "Arecibo, PR",
+    "metro"
+   ],
+   "11660": [
+    "Arkadelphia, AR",
+    "micro"
+   ],
+   "11680": [
+    "Arkansas City-Winfield, KS",
+    "micro"
+   ],
+   "11700": [
+    "Asheville, NC",
+    "metro"
+   ],
+   "11740": [
+    "Ashland, OH",
+    "micro"
+   ],
+   "11820": [
+    "Astoria, OR",
+    "micro"
+   ],
+   "11860": [
+    "Atchison, KS",
+    "micro"
+   ],
+   "11900": [
+    "Athens, OH",
+    "micro"
+   ],
+   "11940": [
+    "Athens, TN",
+    "micro"
+   ],
+   "11980": [
+    "Athens, TX",
+    "micro"
+   ],
+   "12020": [
+    "Athens-Clarke County, GA",
+    "metro"
+   ],
+   "12060": [
+    "Atlanta-Sandy Springs-Roswell, GA",
+    "metro"
+   ],
+   "12100": [
+    "Atlantic City-Hammonton, NJ",
+    "metro"
+   ],
+   "12140": [
+    "Auburn, IN",
+    "micro"
+   ],
+   "12180": [
+    "Auburn, NY",
+    "micro"
+   ],
+   "12220": [
+    "Auburn-Opelika, AL",
+    "metro"
+   ],
+   "12260": [
+    "Augusta-Richmond County, GA-SC",
+    "metro"
+   ],
+   "12300": [
+    "Augusta-Waterville, ME",
+    "micro"
+   ],
+   "12380": [
+    "Austin, MN",
+    "micro"
+   ],
+   "12420": [
+    "Austin-Round Rock-San Marcos, TX",
+    "metro"
+   ],
+   "12460": [
+    "Bainbridge, GA",
+    "micro"
+   ],
+   "12520": [
+    "Baker City, OR",
+    "micro"
+   ],
+   "12540": [
+    "Bakersfield-Delano, CA",
+    "metro"
+   ],
+   "12580": [
+    "Baltimore-Columbia-Towson, MD",
+    "metro"
+   ],
+   "12620": [
+    "Bangor, ME",
+    "metro"
+   ],
+   "12660": [
+    "Baraboo, WI",
+    "micro"
+   ],
+   "12700": [
+    "Barnstable Town, MA",
+    "metro"
+   ],
+   "12740": [
+    "Barre, VT",
+    "micro"
+   ],
+   "12780": [
+    "Bartlesville, OK",
+    "micro"
+   ],
+   "12860": [
+    "Batavia, NY",
+    "micro"
+   ],
+   "12900": [
+    "Batesville, AR",
+    "micro"
+   ],
+   "12940": [
+    "Baton Rouge, LA",
+    "metro"
+   ],
+   "12980": [
+    "Battle Creek, MI",
+    "metro"
+   ],
+   "13020": [
+    "Bay City, MI",
+    "metro"
+   ],
+   "13060": [
+    "Bay City, TX",
+    "micro"
+   ],
+   "13100": [
+    "Beatrice, NE",
+    "micro"
+   ],
+   "13140": [
+    "Beaumont-Port Arthur, TX",
+    "metro"
+   ],
+   "13180": [
+    "Beaver Dam, WI",
+    "micro"
+   ],
+   "13220": [
+    "Beckley, WV",
+    "metro"
+   ],
+   "13260": [
+    "Bedford, IN",
+    "micro"
+   ],
+   "13300": [
+    "Beeville, TX",
+    "micro"
+   ],
+   "13340": [
+    "Bellefontaine, OH",
+    "micro"
+   ],
+   "13380": [
+    "Bellingham, WA",
+    "metro"
+   ],
+   "13420": [
+    "Bemidji, MN",
+    "micro"
+   ],
+   "13460": [
+    "Bend, OR",
+    "metro"
+   ],
+   "13540": [
+    "Bennington, VT",
+    "micro"
+   ],
+   "13660": [
+    "Big Rapids, MI",
+    "micro"
+   ],
+   "13700": [
+    "Big Spring, TX",
+    "micro"
+   ],
+   "13740": [
+    "Billings, MT",
+    "metro"
+   ],
+   "13780": [
+    "Binghamton, NY",
+    "metro"
+   ],
+   "13820": [
+    "Birmingham, AL",
+    "metro"
+   ],
+   "13860": [
+    "Bishop, CA",
+    "micro"
+   ],
+   "13900": [
+    "Bismarck, ND",
+    "metro"
+   ],
+   "13940": [
+    "Blackfoot, ID",
+    "micro"
+   ],
+   "13980": [
+    "Blacksburg-Christiansburg-Radford, VA",
+    "metro"
+   ],
+   "14010": [
+    "Bloomington, IL",
+    "metro"
+   ],
+   "14020": [
+    "Bloomington, IN",
+    "metro"
+   ],
+   "14100": [
+    "Bloomsburg-Berwick, PA",
+    "micro"
+   ],
+   "14140": [
+    "Bluefield, WV-VA",
+    "micro"
+   ],
+   "14180": [
+    "Blytheville, AR",
+    "micro"
+   ],
+   "14220": [
+    "Bogalusa, LA",
+    "micro"
+   ],
+   "14260": [
+    "Boise City, ID",
+    "metro"
+   ],
+   "14300": [
+    "Bonham, TX",
+    "micro"
+   ],
+   "14380": [
+    "Boone, NC",
+    "micro"
+   ],
+   "14420": [
+    "Borger, TX",
+    "micro"
+   ],
+   "14460": [
+    "Boston-Cambridge-Newton, MA-NH",
+    "metro"
+   ],
+   "14500": [
+    "Boulder, CO",
+    "metro"
+   ],
+   "14540": [
+    "Bowling Green, KY",
+    "metro"
+   ],
+   "14580": [
+    "Bozeman, MT",
+    "metro"
+   ],
+   "14620": [
+    "Bradford, PA",
+    "micro"
+   ],
+   "14660": [
+    "Brainerd, MN",
+    "micro"
+   ],
+   "14700": [
+    "Branson, MO",
+    "micro"
+   ],
+   "14710": [
+    "Brattleboro, VT",
+    "micro"
+   ],
+   "14720": [
+    "Breckenridge, CO",
+    "micro"
+   ],
+   "14740": [
+    "Bremerton-Silverdale-Port Orchard, WA",
+    "metro"
+   ],
+   "14780": [
+    "Brenham, TX",
+    "micro"
+   ],
+   "14820": [
+    "Brevard, NC",
+    "micro"
+   ],
+   "14860": [
+    "Bridgeport-Stamford-Danbury, CT",
+    "metro"
+   ],
+   "14940": [
+    "Brigham City, UT-ID",
+    "micro"
+   ],
+   "15020": [
+    "Brookhaven, MS",
+    "micro"
+   ],
+   "15060": [
+    "Brookings, OR",
+    "micro"
+   ],
+   "15100": [
+    "Brookings, SD",
+    "micro"
+   ],
+   "15180": [
+    "Brownsville-Harlingen, TX",
+    "metro"
+   ],
+   "15220": [
+    "Brownwood, TX",
+    "micro"
+   ],
+   "15260": [
+    "Brunswick-St. Simons, GA",
+    "metro"
+   ],
+   "15340": [
+    "Bucyrus, OH",
+    "micro"
+   ],
+   "15380": [
+    "Buffalo-Cheektowaga, NY",
+    "metro"
+   ],
+   "15420": [
+    "Burley, ID",
+    "micro"
+   ],
+   "15460": [
+    "Burlington, IA-IL",
+    "micro"
+   ],
+   "15500": [
+    "Burlington, NC",
+    "metro"
+   ],
+   "15540": [
+    "Burlington-South Burlington, VT",
+    "metro"
+   ],
+   "15580": [
+    "Butte-Silver Bow, MT",
+    "micro"
+   ],
+   "15620": [
+    "Cadillac, MI",
+    "micro"
+   ],
+   "15660": [
+    "Calhoun, GA",
+    "micro"
+   ],
+   "15700": [
+    "Cambridge, MD",
+    "micro"
+   ],
+   "15740": [
+    "Cambridge, OH",
+    "micro"
+   ],
+   "15780": [
+    "Camden, AR",
+    "micro"
+   ],
+   "15820": [
+    "Campbellsville, KY",
+    "micro"
+   ],
+   "15860": [
+    "Ca\u00f1on City, CO",
+    "micro"
+   ],
+   "15900": [
+    "Canton, IL",
+    "micro"
+   ],
+   "15940": [
+    "Canton-Massillon, OH",
+    "metro"
+   ],
+   "15980": [
+    "Cape Coral-Fort Myers, FL",
+    "metro"
+   ],
+   "16020": [
+    "Cape Girardeau, MO-IL",
+    "metro"
+   ],
+   "16060": [
+    "Carbondale, IL",
+    "micro"
+   ],
+   "16100": [
+    "Carlsbad-Artesia, NM",
+    "micro"
+   ],
+   "16140": [
+    "Carroll, IA",
+    "micro"
+   ],
+   "16180": [
+    "Carson City, NV",
+    "metro"
+   ],
+   "16220": [
+    "Casper, WY",
+    "metro"
+   ],
+   "16260": [
+    "Cedar City, UT",
+    "micro"
+   ],
+   "16300": [
+    "Cedar Rapids, IA",
+    "metro"
+   ],
+   "16340": [
+    "Cedartown, GA",
+    "micro"
+   ],
+   "16380": [
+    "Celina, OH",
+    "micro"
+   ],
+   "16460": [
+    "Centralia, IL",
+    "micro"
+   ],
+   "16500": [
+    "Centralia, WA",
+    "micro"
+   ],
+   "16540": [
+    "Chambersburg, PA",
+    "metro"
+   ],
+   "16580": [
+    "Champaign-Urbana, IL",
+    "metro"
+   ],
+   "16620": [
+    "Charleston, WV",
+    "metro"
+   ],
+   "16660": [
+    "Charleston-Mattoon, IL",
+    "micro"
+   ],
+   "16700": [
+    "Charleston-North Charleston, SC",
+    "metro"
+   ],
+   "16740": [
+    "Charlotte-Concord-Gastonia, NC-SC",
+    "metro"
+   ],
+   "16820": [
+    "Charlottesville, VA",
+    "metro"
+   ],
+   "16860": [
+    "Chattanooga, TN-GA",
+    "metro"
+   ],
+   "16940": [
+    "Cheyenne, WY",
+    "metro"
+   ],
+   "16980": [
+    "Chicago-Naperville-Elgin, IL-IN",
+    "metro"
+   ],
+   "17020": [
+    "Chico, CA",
+    "metro"
+   ],
+   "17060": [
+    "Chillicothe, OH",
+    "micro"
+   ],
+   "17140": [
+    "Cincinnati, OH-KY-IN",
+    "metro"
+   ],
+   "17220": [
+    "Clarksburg, WV",
+    "micro"
+   ],
+   "17260": [
+    "Clarksdale, MS",
+    "micro"
+   ],
+   "17300": [
+    "Clarksville, TN-KY",
+    "metro"
+   ],
+   "17340": [
+    "Clearlake, CA",
+    "micro"
+   ],
+   "17380": [
+    "Cleveland, MS",
+    "micro"
+   ],
+   "17410": [
+    "Cleveland, OH",
+    "metro"
+   ],
+   "17420": [
+    "Cleveland, TN",
+    "metro"
+   ],
+   "17500": [
+    "Clewiston, FL",
+    "micro"
+   ],
+   "17540": [
+    "Clinton, IA",
+    "micro"
+   ],
+   "17580": [
+    "Clovis, NM",
+    "micro"
+   ],
+   "17620": [
+    "Coamo, PR",
+    "micro"
+   ],
+   "17640": [
+    "Coco, PR",
+    "micro"
+   ],
+   "17650": [
+    "Cody, WY",
+    "micro"
+   ],
+   "17660": [
+    "Coeur d'Alene, ID",
+    "metro"
+   ],
+   "17740": [
+    "Coldwater, MI",
+    "micro"
+   ],
+   "17780": [
+    "College Station-Bryan, TX",
+    "metro"
+   ],
+   "17820": [
+    "Colorado Springs, CO",
+    "metro"
+   ],
+   "17860": [
+    "Columbia, MO",
+    "metro"
+   ],
+   "17900": [
+    "Columbia, SC",
+    "metro"
+   ],
+   "17980": [
+    "Columbus, GA-AL",
+    "metro"
+   ],
+   "18020": [
+    "Columbus, IN",
+    "metro"
+   ],
+   "18060": [
+    "Columbus, MS",
+    "micro"
+   ],
+   "18100": [
+    "Columbus, NE",
+    "micro"
+   ],
+   "18140": [
+    "Columbus, OH",
+    "metro"
+   ],
+   "18180": [
+    "Concord, NH",
+    "micro"
+   ],
+   "18220": [
+    "Connersville, IN",
+    "micro"
+   ],
+   "18260": [
+    "Cookeville, TN",
+    "micro"
+   ],
+   "18300": [
+    "Coos Bay-North Bend, OR",
+    "micro"
+   ],
+   "18340": [
+    "Corbin, KY",
+    "micro"
+   ],
+   "18380": [
+    "Cordele, GA",
+    "micro"
+   ],
+   "18420": [
+    "Corinth, MS",
+    "micro"
+   ],
+   "18460": [
+    "Cornelia, GA",
+    "micro"
+   ],
+   "18500": [
+    "Corning, NY",
+    "micro"
+   ],
+   "18580": [
+    "Corpus Christi, TX",
+    "metro"
+   ],
+   "18620": [
+    "Corsicana, TX",
+    "micro"
+   ],
+   "18660": [
+    "Cortland, NY",
+    "micro"
+   ],
+   "18700": [
+    "Corvallis, OR",
+    "metro"
+   ],
+   "18740": [
+    "Coshocton, OH",
+    "micro"
+   ],
+   "18820": [
+    "Crawfordsville, IN",
+    "micro"
+   ],
+   "18860": [
+    "Crescent City, CA",
+    "micro"
+   ],
+   "18880": [
+    "Crestview-Fort Walton Beach-Destin, FL",
+    "metro"
+   ],
+   "18900": [
+    "Crossville, TN",
+    "micro"
+   ],
+   "18980": [
+    "Cullman, AL",
+    "micro"
+   ],
+   "19060": [
+    "Cumberland, MD-WV",
+    "micro"
+   ],
+   "19100": [
+    "Dallas-Fort Worth-Arlington, TX",
+    "metro"
+   ],
+   "19140": [
+    "Dalton, GA",
+    "metro"
+   ],
+   "19180": [
+    "Danville, IL",
+    "micro"
+   ],
+   "19220": [
+    "Danville, KY",
+    "micro"
+   ],
+   "19260": [
+    "Danville, VA",
+    "micro"
+   ],
+   "19300": [
+    "Daphne-Fairhope-Foley, AL",
+    "metro"
+   ],
+   "19340": [
+    "Davenport-Moline-Rock Island, IA-IL",
+    "metro"
+   ],
+   "19430": [
+    "Dayton-Kettering-Beavercreek, OH",
+    "metro"
+   ],
+   "19460": [
+    "Decatur, AL",
+    "metro"
+   ],
+   "19500": [
+    "Decatur, IL",
+    "metro"
+   ],
+   "19540": [
+    "Decatur, IN",
+    "micro"
+   ],
+   "19580": [
+    "Defiance, OH",
+    "micro"
+   ],
+   "19620": [
+    "Del Rio, TX",
+    "micro"
+   ],
+   "19660": [
+    "Deltona-Daytona Beach-Ormond Beach, FL",
+    "metro"
+   ],
+   "19700": [
+    "Deming, NM",
+    "micro"
+   ],
+   "19740": [
+    "Denver-Aurora-Centennial, CO",
+    "metro"
+   ],
+   "19760": [
+    "DeRidder, LA",
+    "micro"
+   ],
+   "19780": [
+    "Des Moines-West Des Moines, IA",
+    "metro"
+   ],
+   "19810": [
+    "Detroit Lakes, MN",
+    "micro"
+   ],
+   "19820": [
+    "Detroit-Warren-Dearborn, MI",
+    "metro"
+   ],
+   "19860": [
+    "Dickinson, ND",
+    "micro"
+   ],
+   "19940": [
+    "Dixon, IL",
+    "micro"
+   ],
+   "19980": [
+    "Dodge City, KS",
+    "micro"
+   ],
+   "20020": [
+    "Dothan, AL",
+    "metro"
+   ],
+   "20060": [
+    "Douglas, GA",
+    "micro"
+   ],
+   "20100": [
+    "Dover, DE",
+    "metro"
+   ],
+   "20140": [
+    "Dublin, GA",
+    "micro"
+   ],
+   "20180": [
+    "DuBois, PA",
+    "micro"
+   ],
+   "20220": [
+    "Dubuque, IA",
+    "metro"
+   ],
+   "20260": [
+    "Duluth, MN-WI",
+    "metro"
+   ],
+   "20300": [
+    "Dumas, TX",
+    "micro"
+   ],
+   "20340": [
+    "Duncan, OK",
+    "micro"
+   ],
+   "20420": [
+    "Durango, CO",
+    "micro"
+   ],
+   "20460": [
+    "Durant, OK",
+    "micro"
+   ],
+   "20500": [
+    "Durham-Chapel Hill, NC",
+    "metro"
+   ],
+   "20540": [
+    "Dyersburg, TN",
+    "micro"
+   ],
+   "20580": [
+    "Eagle Pass, TX",
+    "metro"
+   ],
+   "20660": [
+    "Easton, MD",
+    "micro"
+   ],
+   "20700": [
+    "East Stroudsburg, PA",
+    "micro"
+   ],
+   "20740": [
+    "Eau Claire, WI",
+    "metro"
+   ],
+   "20780": [
+    "Edwards, CO",
+    "micro"
+   ],
+   "20820": [
+    "Effingham, IL",
+    "micro"
+   ],
+   "20900": [
+    "El Campo, TX",
+    "micro"
+   ],
+   "20940": [
+    "El Centro, CA",
+    "metro"
+   ],
+   "20980": [
+    "El Dorado, AR",
+    "micro"
+   ],
+   "21020": [
+    "Elizabeth City, NC",
+    "micro"
+   ],
+   "21060": [
+    "Elizabethtown, KY",
+    "metro"
+   ],
+   "21120": [
+    "Elk City, OK",
+    "micro"
+   ],
+   "21140": [
+    "Elkhart-Goshen, IN",
+    "metro"
+   ],
+   "21180": [
+    "Elkins, WV",
+    "micro"
+   ],
+   "21220": [
+    "Elko, NV",
+    "micro"
+   ],
+   "21260": [
+    "Ellensburg, WA",
+    "micro"
+   ],
+   "21300": [
+    "Elmira, NY",
+    "metro"
+   ],
+   "21340": [
+    "El Paso, TX",
+    "metro"
+   ],
+   "21380": [
+    "Emporia, KS",
+    "micro"
+   ],
+   "21420": [
+    "Enid, OK",
+    "metro"
+   ],
+   "21460": [
+    "Enterprise, AL",
+    "micro"
+   ],
+   "21500": [
+    "Erie, PA",
+    "metro"
+   ],
+   "21540": [
+    "Escanaba, MI",
+    "micro"
+   ],
+   "21580": [
+    "Espa\u00f1ola, NM",
+    "micro"
+   ],
+   "21640": [
+    "Eufaula, AL-GA",
+    "micro"
+   ],
+   "21660": [
+    "Eugene-Springfield, OR",
+    "metro"
+   ],
+   "21700": [
+    "Eureka-Arcata, CA",
+    "micro"
+   ],
+   "21740": [
+    "Evanston, WY-UT",
+    "micro"
+   ],
+   "21780": [
+    "Evansville, IN",
+    "metro"
+   ],
+   "21820": [
+    "Fairbanks-College, AK",
+    "metro"
+   ],
+   "21860": [
+    "Fairmont, MN",
+    "micro"
+   ],
+   "21900": [
+    "Fairmont, WV",
+    "micro"
+   ],
+   "21980": [
+    "Fallon, NV",
+    "micro"
+   ],
+   "22020": [
+    "Fargo, ND-MN",
+    "metro"
+   ],
+   "22060": [
+    "Faribault-Northfield, MN",
+    "micro"
+   ],
+   "22100": [
+    "Farmington, MO",
+    "micro"
+   ],
+   "22140": [
+    "Farmington, NM",
+    "metro"
+   ],
+   "22180": [
+    "Fayetteville, NC",
+    "metro"
+   ],
+   "22190": [
+    "Fayetteville, TN",
+    "micro"
+   ],
+   "22220": [
+    "Fayetteville-Springdale-Rogers, AR",
+    "metro"
+   ],
+   "22260": [
+    "Fergus Falls, MN",
+    "micro"
+   ],
+   "22300": [
+    "Findlay, OH",
+    "micro"
+   ],
+   "22340": [
+    "Fitzgerald, GA",
+    "micro"
+   ],
+   "22380": [
+    "Flagstaff, AZ",
+    "metro"
+   ],
+   "22420": [
+    "Flint, MI",
+    "metro"
+   ],
+   "22500": [
+    "Florence, SC",
+    "metro"
+   ],
+   "22520": [
+    "Florence-Muscle Shoals, AL",
+    "metro"
+   ],
+   "22540": [
+    "Fond du Lac, WI",
+    "metro"
+   ],
+   "22580": [
+    "Forest City, NC",
+    "micro"
+   ],
+   "22620": [
+    "Forrest City, AR",
+    "micro"
+   ],
+   "22660": [
+    "Fort Collins-Loveland, CO",
+    "metro"
+   ],
+   "22700": [
+    "Fort Dodge, IA",
+    "micro"
+   ],
+   "22780": [
+    "Fort Leonard Wood, MO",
+    "micro"
+   ],
+   "22800": [
+    "Fort Madison, IA",
+    "micro"
+   ],
+   "22820": [
+    "Fort Morgan, CO",
+    "micro"
+   ],
+   "22840": [
+    "Fort Payne, AL",
+    "micro"
+   ],
+   "22900": [
+    "Fort Smith, AR-OK",
+    "metro"
+   ],
+   "23060": [
+    "Fort Wayne, IN",
+    "metro"
+   ],
+   "23140": [
+    "Frankfort, IN",
+    "micro"
+   ],
+   "23180": [
+    "Frankfort, KY",
+    "micro"
+   ],
+   "23190": [
+    "Franklin, KY",
+    "micro"
+   ],
+   "23240": [
+    "Fredericksburg, TX",
+    "micro"
+   ],
+   "23300": [
+    "Freeport, IL",
+    "micro"
+   ],
+   "23340": [
+    "Fremont, NE",
+    "micro"
+   ],
+   "23380": [
+    "Fremont, OH",
+    "micro"
+   ],
+   "23420": [
+    "Fresno, CA",
+    "metro"
+   ],
+   "23460": [
+    "Gadsden, AL",
+    "metro"
+   ],
+   "23500": [
+    "Gaffney, SC",
+    "micro"
+   ],
+   "23540": [
+    "Gainesville, FL",
+    "metro"
+   ],
+   "23580": [
+    "Gainesville, GA",
+    "metro"
+   ],
+   "23620": [
+    "Gainesville, TX",
+    "micro"
+   ],
+   "23660": [
+    "Galesburg, IL",
+    "micro"
+   ],
+   "23680": [
+    "Gallipolis, OH",
+    "micro"
+   ],
+   "23700": [
+    "Gallup, NM",
+    "micro"
+   ],
+   "23780": [
+    "Garden City, KS",
+    "micro"
+   ],
+   "23820": [
+    "Gardnerville Ranchos, NV-CA",
+    "micro"
+   ],
+   "23900": [
+    "Gettysburg, PA",
+    "metro"
+   ],
+   "23940": [
+    "Gillette, WY",
+    "micro"
+   ],
+   "23980": [
+    "Glasgow, KY",
+    "micro"
+   ],
+   "24020": [
+    "Glens Falls, NY",
+    "metro"
+   ],
+   "24100": [
+    "Gloversville, NY",
+    "micro"
+   ],
+   "24140": [
+    "Goldsboro, NC",
+    "metro"
+   ],
+   "24180": [
+    "Granbury, TX",
+    "micro"
+   ],
+   "24220": [
+    "Grand Forks, ND-MN",
+    "metro"
+   ],
+   "24260": [
+    "Grand Island, NE",
+    "metro"
+   ],
+   "24300": [
+    "Grand Junction, CO",
+    "metro"
+   ],
+   "24330": [
+    "Grand Rapids, MN",
+    "micro"
+   ],
+   "24340": [
+    "Grand Rapids-Wyoming-Kentwood, MI",
+    "metro"
+   ],
+   "24420": [
+    "Grants Pass, OR",
+    "metro"
+   ],
+   "24460": [
+    "Great Bend, KS",
+    "micro"
+   ],
+   "24500": [
+    "Great Falls, MT",
+    "metro"
+   ],
+   "24540": [
+    "Greeley, CO",
+    "metro"
+   ],
+   "24580": [
+    "Green Bay, WI",
+    "metro"
+   ],
+   "24600": [
+    "Greencastle, IN",
+    "micro"
+   ],
+   "24620": [
+    "Greeneville, TN",
+    "micro"
+   ],
+   "24640": [
+    "Greenfield, MA",
+    "micro"
+   ],
+   "24660": [
+    "Greensboro-High Point, NC",
+    "metro"
+   ],
+   "24700": [
+    "Greensburg, IN",
+    "micro"
+   ],
+   "24740": [
+    "Greenville, MS",
+    "micro"
+   ],
+   "24780": [
+    "Greenville, NC",
+    "metro"
+   ],
+   "24820": [
+    "Greenville, OH",
+    "micro"
+   ],
+   "24860": [
+    "Greenville-Anderson-Greer, SC",
+    "metro"
+   ],
+   "24900": [
+    "Greenwood, MS",
+    "micro"
+   ],
+   "24940": [
+    "Greenwood, SC",
+    "micro"
+   ],
+   "24980": [
+    "Grenada, MS",
+    "micro"
+   ],
+   "25020": [
+    "Guayama, PR",
+    "metro"
+   ],
+   "25060": [
+    "Gulfport-Biloxi, MS",
+    "metro"
+   ],
+   "25100": [
+    "Guymon, OK",
+    "micro"
+   ],
+   "25180": [
+    "Hagerstown-Martinsburg, MD-WV",
+    "metro"
+   ],
+   "25200": [
+    "Hailey, ID",
+    "micro"
+   ],
+   "25220": [
+    "Hammond, LA",
+    "metro"
+   ],
+   "25260": [
+    "Hanford-Corcoran, CA",
+    "metro"
+   ],
+   "25300": [
+    "Hannibal, MO",
+    "micro"
+   ],
+   "25420": [
+    "Harrisburg-Carlisle, PA",
+    "metro"
+   ],
+   "25460": [
+    "Harrison, AR",
+    "micro"
+   ],
+   "25500": [
+    "Harrisonburg, VA",
+    "metro"
+   ],
+   "25540": [
+    "Hartford-West Hartford-East Hartford, CT",
+    "metro"
+   ],
+   "25580": [
+    "Hastings, NE",
+    "micro"
+   ],
+   "25620": [
+    "Hattiesburg, MS",
+    "metro"
+   ],
+   "25700": [
+    "Hays, KS",
+    "micro"
+   ],
+   "25720": [
+    "Heber, UT",
+    "micro"
+   ],
+   "25740": [
+    "Helena, MT",
+    "metro"
+   ],
+   "25770": [
+    "Hemlock Farms, PA",
+    "micro"
+   ],
+   "25775": [
+    "Henderson, KY",
+    "micro"
+   ],
+   "25780": [
+    "Henderson, NC",
+    "micro"
+   ],
+   "25820": [
+    "Hereford, TX",
+    "micro"
+   ],
+   "25840": [
+    "Hermiston-Pendleton, OR",
+    "micro"
+   ],
+   "25850": [
+    "Hermitage, PA",
+    "micro"
+   ],
+   "25860": [
+    "Hickory-Lenoir-Morganton, NC",
+    "metro"
+   ],
+   "25880": [
+    "Hillsdale, MI",
+    "micro"
+   ],
+   "25900": [
+    "Hilo-Kailua, HI",
+    "micro"
+   ],
+   "25940": [
+    "Hilton Head Island-Bluffton-Port Royal, SC",
+    "metro"
+   ],
+   "25980": [
+    "Hinesville, GA",
+    "metro"
+   ],
+   "26020": [
+    "Hobbs, NM",
+    "micro"
+   ],
+   "26090": [
+    "Holland, MI",
+    "micro"
+   ],
+   "26140": [
+    "Homosassa Springs, FL",
+    "metro"
+   ],
+   "26220": [
+    "Hood River, OR",
+    "micro"
+   ],
+   "26300": [
+    "Hot Springs, AR",
+    "metro"
+   ],
+   "26340": [
+    "Houghton, MI",
+    "micro"
+   ],
+   "26380": [
+    "Houma-Bayou Cane-Thibodaux, LA",
+    "metro"
+   ],
+   "26420": [
+    "Houston-Pasadena-The Woodlands, TX",
+    "metro"
+   ],
+   "26460": [
+    "Hudson, NY",
+    "micro"
+   ],
+   "26500": [
+    "Huntingdon, PA",
+    "micro"
+   ],
+   "26540": [
+    "Huntington, IN",
+    "micro"
+   ],
+   "26580": [
+    "Huntington-Ashland, WV-KY-OH",
+    "metro"
+   ],
+   "26620": [
+    "Huntsville, AL",
+    "metro"
+   ],
+   "26660": [
+    "Huntsville, TX",
+    "micro"
+   ],
+   "26700": [
+    "Huron, SD",
+    "micro"
+   ],
+   "26740": [
+    "Hutchinson, KS",
+    "micro"
+   ],
+   "26780": [
+    "Hutchinson, MN",
+    "micro"
+   ],
+   "26820": [
+    "Idaho Falls, ID",
+    "metro"
+   ],
+   "26860": [
+    "Indiana, PA",
+    "micro"
+   ],
+   "26900": [
+    "Indianapolis-Carmel-Greenwood, IN",
+    "metro"
+   ],
+   "26980": [
+    "Iowa City, IA",
+    "metro"
+   ],
+   "27020": [
+    "Iron Mountain, MI-WI",
+    "micro"
+   ],
+   "27060": [
+    "Ithaca, NY",
+    "metro"
+   ],
+   "27100": [
+    "Jackson, MI",
+    "metro"
+   ],
+   "27140": [
+    "Jackson, MS",
+    "metro"
+   ],
+   "27180": [
+    "Jackson, TN",
+    "metro"
+   ],
+   "27220": [
+    "Jackson, WY-ID",
+    "micro"
+   ],
+   "27260": [
+    "Jacksonville, FL",
+    "metro"
+   ],
+   "27300": [
+    "Jacksonville, IL",
+    "micro"
+   ],
+   "27340": [
+    "Jacksonville, NC",
+    "metro"
+   ],
+   "27380": [
+    "Jacksonville, TX",
+    "micro"
+   ],
+   "27420": [
+    "Jamestown, ND",
+    "micro"
+   ],
+   "27460": [
+    "Jamestown-Dunkirk, NY",
+    "micro"
+   ],
+   "27500": [
+    "Janesville-Beloit, WI",
+    "metro"
+   ],
+   "27540": [
+    "Jasper, IN",
+    "micro"
+   ],
+   "27600": [
+    "Jefferson, GA",
+    "micro"
+   ],
+   "27620": [
+    "Jefferson City, MO",
+    "metro"
+   ],
+   "27700": [
+    "Jesup, GA",
+    "micro"
+   ],
+   "27740": [
+    "Johnson City, TN",
+    "metro"
+   ],
+   "27780": [
+    "Johnstown, PA",
+    "metro"
+   ],
+   "27860": [
+    "Jonesboro, AR",
+    "metro"
+   ],
+   "27900": [
+    "Joplin, MO-KS",
+    "metro"
+   ],
+   "27940": [
+    "Juneau, AK",
+    "micro"
+   ],
+   "27980": [
+    "Kahului-Wailuku, HI",
+    "metro"
+   ],
+   "28020": [
+    "Kalamazoo-Portage, MI",
+    "metro"
+   ],
+   "28060": [
+    "Kalispell, MT",
+    "micro"
+   ],
+   "28100": [
+    "Kankakee, IL",
+    "metro"
+   ],
+   "28140": [
+    "Kansas City, MO-KS",
+    "metro"
+   ],
+   "28180": [
+    "Kapaa, HI",
+    "micro"
+   ],
+   "28260": [
+    "Kearney, NE",
+    "micro"
+   ],
+   "28300": [
+    "Keene, NH",
+    "micro"
+   ],
+   "28340": [
+    "Kendallville, IN",
+    "micro"
+   ],
+   "28380": [
+    "Kennett, MO",
+    "micro"
+   ],
+   "28420": [
+    "Kennewick-Richland, WA",
+    "metro"
+   ],
+   "28450": [
+    "Kenosha, WI",
+    "metro"
+   ],
+   "28500": [
+    "Kerrville, TX",
+    "micro"
+   ],
+   "28540": [
+    "Ketchikan, AK",
+    "micro"
+   ],
+   "28580": [
+    "Key West-Key Largo, FL",
+    "micro"
+   ],
+   "28620": [
+    "Kill Devil Hills, NC",
+    "micro"
+   ],
+   "28660": [
+    "Killeen-Temple, TX",
+    "metro"
+   ],
+   "28680": [
+    "Kingsland, GA",
+    "micro"
+   ],
+   "28700": [
+    "Kingsport-Bristol, TN-VA",
+    "metro"
+   ],
+   "28740": [
+    "Kingston, NY",
+    "metro"
+   ],
+   "28780": [
+    "Kingsville, TX",
+    "micro"
+   ],
+   "28820": [
+    "Kinston, NC",
+    "micro"
+   ],
+   "28860": [
+    "Kirksville, MO",
+    "micro"
+   ],
+   "28880": [
+    "Kiryas Joel-Poughkeepsie-Newburgh, NY",
+    "metro"
+   ],
+   "28900": [
+    "Klamath Falls, OR",
+    "micro"
+   ],
+   "28940": [
+    "Knoxville, TN",
+    "metro"
+   ],
+   "29020": [
+    "Kokomo, IN",
+    "metro"
+   ],
+   "29060": [
+    "Laconia, NH",
+    "micro"
+   ],
+   "29100": [
+    "La Crosse-Onalaska, WI-MN",
+    "metro"
+   ],
+   "29180": [
+    "Lafayette, LA",
+    "metro"
+   ],
+   "29200": [
+    "Lafayette-West Lafayette, IN",
+    "metro"
+   ],
+   "29260": [
+    "La Grande, OR",
+    "micro"
+   ],
+   "29300": [
+    "LaGrange, GA-AL",
+    "micro"
+   ],
+   "29340": [
+    "Lake Charles, LA",
+    "metro"
+   ],
+   "29380": [
+    "Lake City, FL",
+    "micro"
+   ],
+   "29420": [
+    "Lake Havasu City-Kingman, AZ",
+    "metro"
+   ],
+   "29460": [
+    "Lakeland-Winter Haven, FL",
+    "metro"
+   ],
+   "29470": [
+    "Lake of the Woods, VA",
+    "micro"
+   ],
+   "29540": [
+    "Lancaster, PA",
+    "metro"
+   ],
+   "29620": [
+    "Lansing-East Lansing, MI",
+    "metro"
+   ],
+   "29660": [
+    "Laramie, WY",
+    "micro"
+   ],
+   "29700": [
+    "Laredo, TX",
+    "metro"
+   ],
+   "29720": [
+    "Lares, PR",
+    "micro"
+   ],
+   "29740": [
+    "Las Cruces, NM",
+    "metro"
+   ],
+   "29780": [
+    "Las Vegas, NM",
+    "micro"
+   ],
+   "29820": [
+    "Las Vegas-Henderson-North Las Vegas, NV",
+    "metro"
+   ],
+   "29860": [
+    "Laurel, MS",
+    "micro"
+   ],
+   "29900": [
+    "Laurinburg, NC",
+    "micro"
+   ],
+   "29940": [
+    "Lawrence, KS",
+    "metro"
+   ],
+   "29980": [
+    "Lawrenceburg, TN",
+    "micro"
+   ],
+   "30020": [
+    "Lawton, OK",
+    "metro"
+   ],
+   "30060": [
+    "Lebanon, MO",
+    "micro"
+   ],
+   "30140": [
+    "Lebanon, PA",
+    "metro"
+   ],
+   "30150": [
+    "Lebanon-Claremont, NH-VT",
+    "micro"
+   ],
+   "30180": [
+    "Le Mars, IA",
+    "micro"
+   ],
+   "30260": [
+    "Lewisburg, PA",
+    "micro"
+   ],
+   "30280": [
+    "Lewisburg, TN",
+    "micro"
+   ],
+   "30300": [
+    "Lewiston, ID-WA",
+    "metro"
+   ],
+   "30340": [
+    "Lewiston-Auburn, ME",
+    "metro"
+   ],
+   "30380": [
+    "Lewistown, PA",
+    "micro"
+   ],
+   "30420": [
+    "Lexington, NE",
+    "micro"
+   ],
+   "30460": [
+    "Lexington-Fayette, KY",
+    "metro"
+   ],
+   "30500": [
+    "Lexington Park, MD",
+    "metro"
+   ],
+   "30580": [
+    "Liberal, KS",
+    "micro"
+   ],
+   "30620": [
+    "Lima, OH",
+    "metro"
+   ],
+   "30660": [
+    "Lincoln, IL",
+    "micro"
+   ],
+   "30700": [
+    "Lincoln, NE",
+    "metro"
+   ],
+   "30780": [
+    "Little Rock-North Little Rock-Conway, AR",
+    "metro"
+   ],
+   "30820": [
+    "Lock Haven, PA",
+    "micro"
+   ],
+   "30860": [
+    "Logan, UT-ID",
+    "metro"
+   ],
+   "30900": [
+    "Logansport, IN",
+    "micro"
+   ],
+   "30980": [
+    "Longview, TX",
+    "metro"
+   ],
+   "31020": [
+    "Longview-Kelso, WA",
+    "metro"
+   ],
+   "31060": [
+    "Los Alamos, NM",
+    "micro"
+   ],
+   "31080": [
+    "Los Angeles-Long Beach-Anaheim, CA",
+    "metro"
+   ],
+   "31140": [
+    "Louisville/Jefferson County, KY-IN",
+    "metro"
+   ],
+   "31180": [
+    "Lubbock, TX",
+    "metro"
+   ],
+   "31220": [
+    "Ludington, MI",
+    "micro"
+   ],
+   "31260": [
+    "Lufkin, TX",
+    "micro"
+   ],
+   "31300": [
+    "Lumberton, NC",
+    "micro"
+   ],
+   "31340": [
+    "Lynchburg, VA",
+    "metro"
+   ],
+   "31380": [
+    "Macomb, IL",
+    "micro"
+   ],
+   "31420": [
+    "Macon-Bibb County, GA",
+    "metro"
+   ],
+   "31500": [
+    "Madison, IN",
+    "micro"
+   ],
+   "31540": [
+    "Madison, WI",
+    "metro"
+   ],
+   "31580": [
+    "Madisonville, KY",
+    "micro"
+   ],
+   "31620": [
+    "Magnolia, AR",
+    "micro"
+   ],
+   "31680": [
+    "Malvern, AR",
+    "micro"
+   ],
+   "31700": [
+    "Manchester-Nashua, NH",
+    "metro"
+   ],
+   "31740": [
+    "Manhattan, KS",
+    "metro"
+   ],
+   "31820": [
+    "Manitowoc, WI",
+    "micro"
+   ],
+   "31860": [
+    "Mankato, MN",
+    "metro"
+   ],
+   "31900": [
+    "Mansfield, OH",
+    "metro"
+   ],
+   "31930": [
+    "Marietta, OH",
+    "micro"
+   ],
+   "31940": [
+    "Marinette, WI-MI",
+    "micro"
+   ],
+   "31980": [
+    "Marion, IN",
+    "micro"
+   ],
+   "32000": [
+    "Marion, NC",
+    "micro"
+   ],
+   "32020": [
+    "Marion, OH",
+    "micro"
+   ],
+   "32060": [
+    "Marion-Herrin, IL",
+    "micro"
+   ],
+   "32100": [
+    "Marquette, MI",
+    "micro"
+   ],
+   "32140": [
+    "Marshall, MN",
+    "micro"
+   ],
+   "32180": [
+    "Marshall, MO",
+    "micro"
+   ],
+   "32260": [
+    "Marshalltown, IA",
+    "micro"
+   ],
+   "32280": [
+    "Martin, TN",
+    "micro"
+   ],
+   "32300": [
+    "Martinsville, VA",
+    "micro"
+   ],
+   "32340": [
+    "Maryville, MO",
+    "micro"
+   ],
+   "32380": [
+    "Mason City, IA",
+    "micro"
+   ],
+   "32390": [
+    "Massena-Ogdensburg, NY",
+    "micro"
+   ],
+   "32420": [
+    "Mayag\u00fcez, PR",
+    "metro"
+   ],
+   "32460": [
+    "Mayfield, KY",
+    "micro"
+   ],
+   "32540": [
+    "McAlester, OK",
+    "micro"
+   ],
+   "32580": [
+    "McAllen-Edinburg-Mission, TX",
+    "metro"
+   ],
+   "32620": [
+    "McComb, MS",
+    "micro"
+   ],
+   "32660": [
+    "McMinnville, TN",
+    "micro"
+   ],
+   "32700": [
+    "McPherson, KS",
+    "micro"
+   ],
+   "32740": [
+    "Meadville, PA",
+    "micro"
+   ],
+   "32780": [
+    "Medford, OR",
+    "metro"
+   ],
+   "32820": [
+    "Memphis, TN-MS-AR",
+    "metro"
+   ],
+   "32860": [
+    "Menomonie, WI",
+    "micro"
+   ],
+   "32900": [
+    "Merced, CA",
+    "metro"
+   ],
+   "32940": [
+    "Meridian, MS",
+    "micro"
+   ],
+   "33020": [
+    "Mexico, MO",
+    "micro"
+   ],
+   "33060": [
+    "Miami, OK",
+    "micro"
+   ],
+   "33100": [
+    "Miami-Fort Lauderdale-West Palm Beach, FL",
+    "metro"
+   ],
+   "33140": [
+    "Michigan City-La Porte, IN",
+    "metro"
+   ],
+   "33180": [
+    "Middlesborough, KY",
+    "micro"
+   ],
+   "33220": [
+    "Midland, MI",
+    "metro"
+   ],
+   "33260": [
+    "Midland, TX",
+    "metro"
+   ],
+   "33300": [
+    "Milledgeville, GA",
+    "micro"
+   ],
+   "33340": [
+    "Milwaukee-Waukesha, WI",
+    "metro"
+   ],
+   "33380": [
+    "Minden, LA",
+    "micro"
+   ],
+   "33420": [
+    "Mineral Wells, TX",
+    "micro"
+   ],
+   "33460": [
+    "Minneapolis-St. Paul-Bloomington, MN-WI",
+    "metro"
+   ],
+   "33500": [
+    "Minot, ND",
+    "metro"
+   ],
+   "33540": [
+    "Missoula, MT",
+    "metro"
+   ],
+   "33580": [
+    "Mitchell, SD",
+    "micro"
+   ],
+   "33620": [
+    "Moberly, MO",
+    "micro"
+   ],
+   "33660": [
+    "Mobile, AL",
+    "metro"
+   ],
+   "33700": [
+    "Modesto, CA",
+    "metro"
+   ],
+   "33740": [
+    "Monroe, LA",
+    "metro"
+   ],
+   "33780": [
+    "Monroe, MI",
+    "metro"
+   ],
+   "33860": [
+    "Montgomery, AL",
+    "metro"
+   ],
+   "33900": [
+    "Monticello, IN",
+    "micro"
+   ],
+   "33910": [
+    "Monticello, NY",
+    "micro"
+   ],
+   "33940": [
+    "Montrose, CO",
+    "micro"
+   ],
+   "33980": [
+    "Morehead City, NC",
+    "micro"
+   ],
+   "34020": [
+    "Morgan City, LA",
+    "micro"
+   ],
+   "34060": [
+    "Morgantown, WV",
+    "metro"
+   ],
+   "34100": [
+    "Morristown, TN",
+    "metro"
+   ],
+   "34140": [
+    "Moscow, ID",
+    "micro"
+   ],
+   "34180": [
+    "Moses Lake, WA",
+    "micro"
+   ],
+   "34220": [
+    "Moultrie, GA",
+    "micro"
+   ],
+   "34260": [
+    "Mountain Home, AR",
+    "micro"
+   ],
+   "34300": [
+    "Mountain Home, ID",
+    "micro"
+   ],
+   "34340": [
+    "Mount Airy, NC",
+    "micro"
+   ],
+   "34380": [
+    "Mount Pleasant, MI",
+    "micro"
+   ],
+   "34420": [
+    "Mount Pleasant, TX",
+    "micro"
+   ],
+   "34460": [
+    "Mount Sterling, KY",
+    "micro"
+   ],
+   "34500": [
+    "Mount Vernon, IL",
+    "micro"
+   ],
+   "34540": [
+    "Mount Vernon, OH",
+    "micro"
+   ],
+   "34580": [
+    "Mount Vernon-Anacortes, WA",
+    "metro"
+   ],
+   "34620": [
+    "Muncie, IN",
+    "metro"
+   ],
+   "34660": [
+    "Murray, KY",
+    "micro"
+   ],
+   "34680": [
+    "Murrells Inlet, SC",
+    "micro"
+   ],
+   "34700": [
+    "Muscatine, IA",
+    "micro"
+   ],
+   "34740": [
+    "Muskegon-Norton Shores, MI",
+    "metro"
+   ],
+   "34780": [
+    "Muskogee, OK",
+    "micro"
+   ],
+   "34820": [
+    "Myrtle Beach-Conway-North Myrtle Beach, SC",
+    "metro"
+   ],
+   "34860": [
+    "Nacogdoches, TX",
+    "micro"
+   ],
+   "34880": [
+    "Nantucket, MA",
+    "micro"
+   ],
+   "34900": [
+    "Napa, CA",
+    "metro"
+   ],
+   "34940": [
+    "Naples-Marco Island, FL",
+    "metro"
+   ],
+   "34980": [
+    "Nashville-Davidson--Murfreesboro--Franklin, TN",
+    "metro"
+   ],
+   "35020": [
+    "Natchez, MS-LA",
+    "micro"
+   ],
+   "35060": [
+    "Natchitoches, LA",
+    "micro"
+   ],
+   "35100": [
+    "New Bern, NC",
+    "micro"
+   ],
+   "35140": [
+    "Newberry, SC",
+    "micro"
+   ],
+   "35220": [
+    "New Castle, IN",
+    "micro"
+   ],
+   "35300": [
+    "New Haven, CT",
+    "metro"
+   ],
+   "35340": [
+    "New Iberia, LA",
+    "micro"
+   ],
+   "35380": [
+    "New Orleans-Metairie, LA",
+    "metro"
+   ],
+   "35420": [
+    "New Philadelphia-Dover, OH",
+    "micro"
+   ],
+   "35440": [
+    "Newport, OR",
+    "micro"
+   ],
+   "35460": [
+    "Newport, TN",
+    "micro"
+   ],
+   "35580": [
+    "New Ulm, MN",
+    "micro"
+   ],
+   "35620": [
+    "New York-Newark-Jersey City, NY-NJ",
+    "metro"
+   ],
+   "35660": [
+    "Niles, MI",
+    "metro"
+   ],
+   "35700": [
+    "Nogales, AZ",
+    "micro"
+   ],
+   "35740": [
+    "Norfolk, NE",
+    "micro"
+   ],
+   "35820": [
+    "North Platte, NE",
+    "micro"
+   ],
+   "35840": [
+    "North Port-Bradenton-Sarasota, FL",
+    "metro"
+   ],
+   "35900": [
+    "North Wilkesboro, NC",
+    "micro"
+   ],
+   "35940": [
+    "Norwalk, OH",
+    "micro"
+   ],
+   "35980": [
+    "Norwich-New London-Willimantic, CT",
+    "metro"
+   ],
+   "36020": [
+    "Oak Harbor, WA",
+    "micro"
+   ],
+   "36100": [
+    "Ocala, FL",
+    "metro"
+   ],
+   "36180": [
+    "Ocean Pines, MD",
+    "micro"
+   ],
+   "36220": [
+    "Odessa, TX",
+    "metro"
+   ],
+   "36260": [
+    "Ogden, UT",
+    "metro"
+   ],
+   "36340": [
+    "Oil City, PA",
+    "micro"
+   ],
+   "36380": [
+    "Okeechobee, FL",
+    "micro"
+   ],
+   "36420": [
+    "Oklahoma City, OK",
+    "metro"
+   ],
+   "36460": [
+    "Olean, NY",
+    "micro"
+   ],
+   "36500": [
+    "Olympia-Lacey-Tumwater, WA",
+    "metro"
+   ],
+   "36540": [
+    "Omaha, NE-IA",
+    "metro"
+   ],
+   "36580": [
+    "Oneonta, NY",
+    "micro"
+   ],
+   "36620": [
+    "Ontario, OR-ID",
+    "micro"
+   ],
+   "36660": [
+    "Opelousas, LA",
+    "micro"
+   ],
+   "36700": [
+    "Orangeburg, SC",
+    "micro"
+   ],
+   "36740": [
+    "Orlando-Kissimmee-Sanford, FL",
+    "metro"
+   ],
+   "36780": [
+    "Oshkosh-Neenah, WI",
+    "metro"
+   ],
+   "36820": [
+    "Oskaloosa, IA",
+    "micro"
+   ],
+   "36830": [
+    "Othello, WA",
+    "micro"
+   ],
+   "36837": [
+    "Ottawa, IL",
+    "micro"
+   ],
+   "36840": [
+    "Ottawa, KS",
+    "micro"
+   ],
+   "36900": [
+    "Ottumwa, IA",
+    "micro"
+   ],
+   "36940": [
+    "Owatonna, MN",
+    "micro"
+   ],
+   "36980": [
+    "Owensboro, KY",
+    "metro"
+   ],
+   "37020": [
+    "Owosso, MI",
+    "micro"
+   ],
+   "37060": [
+    "Oxford, MS",
+    "micro"
+   ],
+   "37100": [
+    "Oxnard-Thousand Oaks-Ventura, CA",
+    "metro"
+   ],
+   "37120": [
+    "Ozark, AL",
+    "micro"
+   ],
+   "37140": [
+    "Paducah, KY-IL",
+    "metro"
+   ],
+   "37220": [
+    "Pahrump, NV",
+    "micro"
+   ],
+   "37260": [
+    "Palatka, FL",
+    "micro"
+   ],
+   "37300": [
+    "Palestine, TX",
+    "micro"
+   ],
+   "37340": [
+    "Palm Bay-Melbourne-Titusville, FL",
+    "metro"
+   ],
+   "37420": [
+    "Pampa, TX",
+    "micro"
+   ],
+   "37460": [
+    "Panama City-Panama City Beach, FL",
+    "metro"
+   ],
+   "37500": [
+    "Paragould, AR",
+    "micro"
+   ],
+   "37540": [
+    "Paris, TN",
+    "micro"
+   ],
+   "37580": [
+    "Paris, TX",
+    "micro"
+   ],
+   "37620": [
+    "Parkersburg-Vienna, WV",
+    "metro"
+   ],
+   "37740": [
+    "Payson, AZ",
+    "micro"
+   ],
+   "37800": [
+    "Pella, IA",
+    "micro"
+   ],
+   "37860": [
+    "Pensacola-Ferry Pass-Brent, FL",
+    "metro"
+   ],
+   "37900": [
+    "Peoria, IL",
+    "metro"
+   ],
+   "37940": [
+    "Peru, IN",
+    "micro"
+   ],
+   "37950": [
+    "Petoskey, MI",
+    "micro"
+   ],
+   "37980": [
+    "Philadelphia-Camden-Wilmington, PA-NJ-DE-MD",
+    "metro"
+   ],
+   "38060": [
+    "Phoenix-Mesa-Chandler, AZ",
+    "metro"
+   ],
+   "38100": [
+    "Picayune, MS",
+    "micro"
+   ],
+   "38180": [
+    "Pierre, SD",
+    "micro"
+   ],
+   "38210": [
+    "Pikeville, KY",
+    "micro"
+   ],
+   "38220": [
+    "Pine Bluff, AR",
+    "micro"
+   ],
+   "38240": [
+    "Pinehurst-Southern Pines, NC",
+    "metro"
+   ],
+   "38260": [
+    "Pittsburg, KS",
+    "micro"
+   ],
+   "38300": [
+    "Pittsburgh, PA",
+    "metro"
+   ],
+   "38340": [
+    "Pittsfield, MA",
+    "metro"
+   ],
+   "38380": [
+    "Plainview, TX",
+    "micro"
+   ],
+   "38420": [
+    "Platteville, WI",
+    "micro"
+   ],
+   "38460": [
+    "Plattsburgh, NY",
+    "micro"
+   ],
+   "38500": [
+    "Plymouth, IN",
+    "micro"
+   ],
+   "38540": [
+    "Pocatello, ID",
+    "metro"
+   ],
+   "38620": [
+    "Ponca City, OK",
+    "micro"
+   ],
+   "38660": [
+    "Ponce, PR",
+    "metro"
+   ],
+   "38700": [
+    "Pontiac, IL",
+    "micro"
+   ],
+   "38740": [
+    "Poplar Bluff, MO",
+    "micro"
+   ],
+   "38820": [
+    "Port Angeles, WA",
+    "micro"
+   ],
+   "38860": [
+    "Portland-South Portland, ME",
+    "metro"
+   ],
+   "38900": [
+    "Portland-Vancouver-Hillsboro, OR-WA",
+    "metro"
+   ],
+   "38920": [
+    "Port Lavaca, TX",
+    "micro"
+   ],
+   "38940": [
+    "Port St. Lucie, FL",
+    "metro"
+   ],
+   "39020": [
+    "Portsmouth, OH",
+    "micro"
+   ],
+   "39040": [
+    "Port Townsend, WA",
+    "micro"
+   ],
+   "39060": [
+    "Pottsville, PA",
+    "micro"
+   ],
+   "39150": [
+    "Prescott Valley-Prescott, AZ",
+    "metro"
+   ],
+   "39220": [
+    "Price, UT",
+    "micro"
+   ],
+   "39300": [
+    "Providence-Warwick, RI-MA",
+    "metro"
+   ],
+   "39340": [
+    "Provo-Orem-Lehi, UT",
+    "metro"
+   ],
+   "39380": [
+    "Pueblo, CO",
+    "metro"
+   ],
+   "39420": [
+    "Pullman, WA",
+    "micro"
+   ],
+   "39460": [
+    "Punta Gorda, FL",
+    "metro"
+   ],
+   "39480": [
+    "Putnam, CT",
+    "micro"
+   ],
+   "39500": [
+    "Quincy, IL-MO",
+    "micro"
+   ],
+   "39540": [
+    "Racine-Mount Pleasant, WI",
+    "metro"
+   ],
+   "39580": [
+    "Raleigh-Cary, NC",
+    "metro"
+   ],
+   "39660": [
+    "Rapid City, SD",
+    "metro"
+   ],
+   "39700": [
+    "Raymondville, TX",
+    "micro"
+   ],
+   "39740": [
+    "Reading, PA",
+    "metro"
+   ],
+   "39780": [
+    "Red Bluff, CA",
+    "micro"
+   ],
+   "39820": [
+    "Redding, CA",
+    "metro"
+   ],
+   "39860": [
+    "Red Wing, MN",
+    "micro"
+   ],
+   "39900": [
+    "Reno, NV",
+    "metro"
+   ],
+   "39940": [
+    "Rexburg, ID",
+    "micro"
+   ],
+   "39960": [
+    "Rice Lake, WI",
+    "micro"
+   ],
+   "39980": [
+    "Richmond, IN",
+    "micro"
+   ],
+   "40060": [
+    "Richmond, VA",
+    "metro"
+   ],
+   "40080": [
+    "Richmond-Berea, KY",
+    "micro"
+   ],
+   "40090": [
+    "Rifle, CO",
+    "micro"
+   ],
+   "40100": [
+    "Rio Grande City-Roma, TX",
+    "micro"
+   ],
+   "40140": [
+    "Riverside-San Bernardino-Ontario, CA",
+    "metro"
+   ],
+   "40180": [
+    "Riverton, WY",
+    "micro"
+   ],
+   "40220": [
+    "Roanoke, VA",
+    "metro"
+   ],
+   "40260": [
+    "Roanoke Rapids, NC",
+    "micro"
+   ],
+   "40300": [
+    "Rochelle, IL",
+    "micro"
+   ],
+   "40340": [
+    "Rochester, MN",
+    "metro"
+   ],
+   "40380": [
+    "Rochester, NY",
+    "metro"
+   ],
+   "40420": [
+    "Rockford, IL",
+    "metro"
+   ],
+   "40460": [
+    "Rockingham, NC",
+    "micro"
+   ],
+   "40540": [
+    "Rock Springs, WY",
+    "micro"
+   ],
+   "40580": [
+    "Rocky Mount, NC",
+    "metro"
+   ],
+   "40620": [
+    "Rolla, MO",
+    "micro"
+   ],
+   "40660": [
+    "Rome, GA",
+    "metro"
+   ],
+   "40700": [
+    "Roseburg, OR",
+    "micro"
+   ],
+   "40740": [
+    "Roswell, NM",
+    "micro"
+   ],
+   "40760": [
+    "Ruidoso, NM",
+    "micro"
+   ],
+   "40770": [
+    "Russellville, AL",
+    "micro"
+   ],
+   "40780": [
+    "Russellville, AR",
+    "micro"
+   ],
+   "40820": [
+    "Ruston, LA",
+    "micro"
+   ],
+   "40860": [
+    "Rutland, VT",
+    "micro"
+   ],
+   "40900": [
+    "Sacramento-Roseville-Folsom, CA",
+    "metro"
+   ],
+   "40940": [
+    "Safford, AZ",
+    "micro"
+   ],
+   "40980": [
+    "Saginaw, MI",
+    "metro"
+   ],
+   "41060": [
+    "St. Cloud, MN",
+    "metro"
+   ],
+   "41100": [
+    "St. George, UT",
+    "metro"
+   ],
+   "41140": [
+    "St. Joseph, MO-KS",
+    "metro"
+   ],
+   "41180": [
+    "St. Louis, MO-IL",
+    "metro"
+   ],
+   "41260": [
+    "St. Marys, PA",
+    "micro"
+   ],
+   "41400": [
+    "Salem, OH",
+    "micro"
+   ],
+   "41420": [
+    "Salem, OR",
+    "metro"
+   ],
+   "41460": [
+    "Salina, KS",
+    "micro"
+   ],
+   "41500": [
+    "Salinas, CA",
+    "metro"
+   ],
+   "41540": [
+    "Salisbury, MD",
+    "metro"
+   ],
+   "41620": [
+    "Salt Lake City-Murray, UT",
+    "metro"
+   ],
+   "41660": [
+    "San Angelo, TX",
+    "metro"
+   ],
+   "41700": [
+    "San Antonio-New Braunfels, TX",
+    "metro"
+   ],
+   "41740": [
+    "San Diego-Chula Vista-Carlsbad, CA",
+    "metro"
+   ],
+   "41760": [
+    "Sandpoint, ID",
+    "micro"
+   ],
+   "41780": [
+    "Sandusky, OH",
+    "metro"
+   ],
+   "41820": [
+    "Sanford, NC",
+    "micro"
+   ],
+   "41860": [
+    "San Francisco-Oakland-Fremont, CA",
+    "metro"
+   ],
+   "41940": [
+    "San Jose-Sunnyvale-Santa Clara, CA",
+    "metro"
+   ],
+   "41980": [
+    "San Juan-Bayam\u00f3n-Caguas, PR",
+    "metro"
+   ],
+   "42020": [
+    "San Luis Obispo-Paso Robles, CA",
+    "metro"
+   ],
+   "42100": [
+    "Santa Cruz-Watsonville, CA",
+    "metro"
+   ],
+   "42140": [
+    "Santa Fe, NM",
+    "metro"
+   ],
+   "42200": [
+    "Santa Maria-Santa Barbara, CA",
+    "metro"
+   ],
+   "42220": [
+    "Santa Rosa-Petaluma, CA",
+    "metro"
+   ],
+   "42300": [
+    "Sault Ste. Marie, MI",
+    "micro"
+   ],
+   "42340": [
+    "Savannah, GA",
+    "metro"
+   ],
+   "42380": [
+    "Sayre, PA",
+    "micro"
+   ],
+   "42420": [
+    "Scottsbluff, NE",
+    "micro"
+   ],
+   "42460": [
+    "Scottsboro, AL",
+    "micro"
+   ],
+   "42540": [
+    "Scranton--Wilkes-Barre, PA",
+    "metro"
+   ],
+   "42580": [
+    "Seaford, DE",
+    "micro"
+   ],
+   "42620": [
+    "Searcy, AR",
+    "micro"
+   ],
+   "42660": [
+    "Seattle-Tacoma-Bellevue, WA",
+    "metro"
+   ],
+   "42680": [
+    "Sebastian-Vero Beach-West Vero Corridor, FL",
+    "metro"
+   ],
+   "42700": [
+    "Sebring, FL",
+    "metro"
+   ],
+   "42740": [
+    "Sedalia, MO",
+    "micro"
+   ],
+   "42780": [
+    "Selinsgrove, PA",
+    "micro"
+   ],
+   "42820": [
+    "Selma, AL",
+    "micro"
+   ],
+   "42860": [
+    "Seneca, SC",
+    "micro"
+   ],
+   "42900": [
+    "Seneca Falls, NY",
+    "micro"
+   ],
+   "42940": [
+    "Sevierville, TN",
+    "micro"
+   ],
+   "42980": [
+    "Seymour, IN",
+    "micro"
+   ],
+   "43020": [
+    "Shawano, WI",
+    "micro"
+   ],
+   "43060": [
+    "Shawnee, OK",
+    "micro"
+   ],
+   "43100": [
+    "Sheboygan, WI",
+    "metro"
+   ],
+   "43140": [
+    "Shelby-Kings Mountain, NC",
+    "micro"
+   ],
+   "43180": [
+    "Shelbyville, TN",
+    "micro"
+   ],
+   "43220": [
+    "Shelton, WA",
+    "micro"
+   ],
+   "43260": [
+    "Sheridan, WY",
+    "micro"
+   ],
+   "43300": [
+    "Sherman-Denison, TX",
+    "metro"
+   ],
+   "43320": [
+    "Show Low, AZ",
+    "micro"
+   ],
+   "43340": [
+    "Shreveport-Bossier City, LA",
+    "metro"
+   ],
+   "43380": [
+    "Sidney, OH",
+    "micro"
+   ],
+   "43420": [
+    "Sierra Vista-Douglas, AZ",
+    "metro"
+   ],
+   "43460": [
+    "Sikeston, MO",
+    "micro"
+   ],
+   "43500": [
+    "Silver City, NM",
+    "micro"
+   ],
+   "43580": [
+    "Sioux City, IA-NE-SD",
+    "metro"
+   ],
+   "43620": [
+    "Sioux Falls, SD-MN",
+    "metro"
+   ],
+   "43640": [
+    "Slidell-Mandeville-Covington, LA",
+    "metro"
+   ],
+   "43660": [
+    "Snyder, TX",
+    "micro"
+   ],
+   "43700": [
+    "Somerset, KY",
+    "micro"
+   ],
+   "43740": [
+    "Somerset, PA",
+    "micro"
+   ],
+   "43760": [
+    "Sonora, CA",
+    "micro"
+   ],
+   "43780": [
+    "South Bend-Mishawaka, IN-MI",
+    "metro"
+   ],
+   "43890": [
+    "Sparta, WI",
+    "micro"
+   ],
+   "43900": [
+    "Spartanburg, SC",
+    "metro"
+   ],
+   "43940": [
+    "Spearfish, SD",
+    "micro"
+   ],
+   "43980": [
+    "Spencer, IA",
+    "micro"
+   ],
+   "44020": [
+    "Spirit Lake, IA",
+    "micro"
+   ],
+   "44060": [
+    "Spokane-Spokane Valley, WA",
+    "metro"
+   ],
+   "44100": [
+    "Springfield, IL",
+    "metro"
+   ],
+   "44140": [
+    "Springfield, MA",
+    "metro"
+   ],
+   "44180": [
+    "Springfield, MO",
+    "metro"
+   ],
+   "44220": [
+    "Springfield, OH",
+    "metro"
+   ],
+   "44260": [
+    "Starkville, MS",
+    "micro"
+   ],
+   "44300": [
+    "State College, PA",
+    "metro"
+   ],
+   "44340": [
+    "Statesboro, GA",
+    "micro"
+   ],
+   "44420": [
+    "Staunton-Stuarts Draft, VA",
+    "metro"
+   ],
+   "44460": [
+    "Steamboat Springs, CO",
+    "micro"
+   ],
+   "44500": [
+    "Stephenville, TX",
+    "micro"
+   ],
+   "44540": [
+    "Sterling, CO",
+    "micro"
+   ],
+   "44580": [
+    "Sterling, IL",
+    "micro"
+   ],
+   "44620": [
+    "Stevens Point-Plover, WI",
+    "micro"
+   ],
+   "44660": [
+    "Stillwater, OK",
+    "micro"
+   ],
+   "44700": [
+    "Stockton-Lodi, CA",
+    "metro"
+   ],
+   "44740": [
+    "Storm Lake, IA",
+    "micro"
+   ],
+   "44780": [
+    "Sturgis, MI",
+    "micro"
+   ],
+   "44860": [
+    "Sulphur Springs, TX",
+    "micro"
+   ],
+   "44900": [
+    "Summerville, GA",
+    "micro"
+   ],
+   "44940": [
+    "Sumter, SC",
+    "metro"
+   ],
+   "44980": [
+    "Sunbury, PA",
+    "micro"
+   ],
+   "45000": [
+    "Susanville, CA",
+    "micro"
+   ],
+   "45020": [
+    "Sweetwater, TX",
+    "micro"
+   ],
+   "45060": [
+    "Syracuse, NY",
+    "metro"
+   ],
+   "45140": [
+    "Tahlequah, OK",
+    "micro"
+   ],
+   "45180": [
+    "Talladega-Sylacauga, AL",
+    "micro"
+   ],
+   "45220": [
+    "Tallahassee, FL",
+    "metro"
+   ],
+   "45300": [
+    "Tampa-St. Petersburg-Clearwater, FL",
+    "metro"
+   ],
+   "45340": [
+    "Taos, NM",
+    "micro"
+   ],
+   "45380": [
+    "Taylorville, IL",
+    "micro"
+   ],
+   "45460": [
+    "Terre Haute, IN",
+    "metro"
+   ],
+   "45500": [
+    "Texarkana, TX-AR",
+    "metro"
+   ],
+   "45520": [
+    "The Dalles, OR",
+    "micro"
+   ],
+   "45580": [
+    "Thomaston, GA",
+    "micro"
+   ],
+   "45620": [
+    "Thomasville, GA",
+    "micro"
+   ],
+   "45660": [
+    "Tiffin, OH",
+    "micro"
+   ],
+   "45700": [
+    "Tifton, GA",
+    "micro"
+   ],
+   "45740": [
+    "Toccoa, GA",
+    "micro"
+   ],
+   "45780": [
+    "Toledo, OH",
+    "metro"
+   ],
+   "45820": [
+    "Topeka, KS",
+    "metro"
+   ],
+   "45860": [
+    "Torrington, CT",
+    "micro"
+   ],
+   "45880": [
+    "Town of Pecos, TX",
+    "micro"
+   ],
+   "45900": [
+    "Traverse City, MI",
+    "metro"
+   ],
+   "45940": [
+    "Trenton-Princeton, NJ",
+    "metro"
+   ],
+   "45980": [
+    "Troy, AL",
+    "micro"
+   ],
+   "46020": [
+    "Truckee-Grass Valley, CA",
+    "micro"
+   ],
+   "46060": [
+    "Tucson, AZ",
+    "metro"
+   ],
+   "46100": [
+    "Tullahoma-Manchester, TN",
+    "micro"
+   ],
+   "46140": [
+    "Tulsa, OK",
+    "metro"
+   ],
+   "46180": [
+    "Tupelo, MS",
+    "micro"
+   ],
+   "46220": [
+    "Tuscaloosa, AL",
+    "metro"
+   ],
+   "46300": [
+    "Twin Falls, ID",
+    "metro"
+   ],
+   "46340": [
+    "Tyler, TX",
+    "metro"
+   ],
+   "46380": [
+    "Ukiah, CA",
+    "micro"
+   ],
+   "46460": [
+    "Union City, TN",
+    "micro"
+   ],
+   "46500": [
+    "Urbana, OH",
+    "micro"
+   ],
+   "46520": [
+    "Urban Honolulu, HI",
+    "metro"
+   ],
+   "46540": [
+    "Utica-Rome, NY",
+    "metro"
+   ],
+   "46580": [
+    "Utuado, PR",
+    "micro"
+   ],
+   "46620": [
+    "Uvalde, TX",
+    "micro"
+   ],
+   "46660": [
+    "Valdosta, GA",
+    "metro"
+   ],
+   "46700": [
+    "Vallejo, CA",
+    "metro"
+   ],
+   "46780": [
+    "Van Wert, OH",
+    "micro"
+   ],
+   "46820": [
+    "Vermillion, SD",
+    "micro"
+   ],
+   "46860": [
+    "Vernal, UT",
+    "micro"
+   ],
+   "46900": [
+    "Vernon, TX",
+    "micro"
+   ],
+   "46980": [
+    "Vicksburg, MS",
+    "micro"
+   ],
+   "47020": [
+    "Victoria, TX",
+    "metro"
+   ],
+   "47080": [
+    "Vidalia, GA",
+    "micro"
+   ],
+   "47180": [
+    "Vincennes, IN",
+    "micro"
+   ],
+   "47220": [
+    "Vineland, NJ",
+    "metro"
+   ],
+   "47240": [
+    "Vineyard Haven, MA",
+    "micro"
+   ],
+   "47260": [
+    "Virginia Beach-Chesapeake-Norfolk, VA-NC",
+    "metro"
+   ],
+   "47300": [
+    "Visalia, CA",
+    "metro"
+   ],
+   "47340": [
+    "Wabash, IN",
+    "micro"
+   ],
+   "47380": [
+    "Waco, TX",
+    "metro"
+   ],
+   "47420": [
+    "Wahpeton, ND-MN",
+    "micro"
+   ],
+   "47460": [
+    "Walla Walla, WA",
+    "metro"
+   ],
+   "47540": [
+    "Wapakoneta, OH",
+    "micro"
+   ],
+   "47580": [
+    "Warner Robins, GA",
+    "metro"
+   ],
+   "47620": [
+    "Warren, PA",
+    "micro"
+   ],
+   "47660": [
+    "Warrensburg, MO",
+    "micro"
+   ],
+   "47700": [
+    "Warsaw, IN",
+    "micro"
+   ],
+   "47780": [
+    "Washington, IN",
+    "micro"
+   ],
+   "47820": [
+    "Washington, NC",
+    "micro"
+   ],
+   "47900": [
+    "Washington-Arlington-Alexandria, DC-VA-MD-WV",
+    "metro"
+   ],
+   "47920": [
+    "Washington Court House, OH",
+    "micro"
+   ],
+   "47930": [
+    "Waterbury-Shelton, CT",
+    "metro"
+   ],
+   "47940": [
+    "Waterloo-Cedar Falls, IA",
+    "metro"
+   ],
+   "47980": [
+    "Watertown, SD",
+    "micro"
+   ],
+   "48020": [
+    "Watertown-Fort Atkinson, WI",
+    "micro"
+   ],
+   "48060": [
+    "Watertown-Fort Drum, NY",
+    "metro"
+   ],
+   "48140": [
+    "Wausau, WI",
+    "metro"
+   ],
+   "48180": [
+    "Waycross, GA",
+    "micro"
+   ],
+   "48200": [
+    "Waynesville, NC",
+    "micro"
+   ],
+   "48220": [
+    "Weatherford, OK",
+    "micro"
+   ],
+   "48260": [
+    "Weirton-Steubenville, WV-OH",
+    "metro"
+   ],
+   "48300": [
+    "Wenatchee-East Wenatchee, WA",
+    "metro"
+   ],
+   "48460": [
+    "West Plains, MO",
+    "micro"
+   ],
+   "48540": [
+    "Wheeling, WV-OH",
+    "metro"
+   ],
+   "48580": [
+    "Whitewater-Elkhorn, WI",
+    "micro"
+   ],
+   "48620": [
+    "Wichita, KS",
+    "metro"
+   ],
+   "48660": [
+    "Wichita Falls, TX",
+    "metro"
+   ],
+   "48680": [
+    "Wildwood-The Villages, FL",
+    "metro"
+   ],
+   "48700": [
+    "Williamsport, PA",
+    "metro"
+   ],
+   "48780": [
+    "Williston, ND",
+    "micro"
+   ],
+   "48820": [
+    "Willmar, MN",
+    "micro"
+   ],
+   "48900": [
+    "Wilmington, NC",
+    "metro"
+   ],
+   "48940": [
+    "Wilmington, OH",
+    "micro"
+   ],
+   "48980": [
+    "Wilson, NC",
+    "micro"
+   ],
+   "49010": [
+    "Winchester, TN",
+    "micro"
+   ],
+   "49020": [
+    "Winchester, VA-WV",
+    "metro"
+   ],
+   "49080": [
+    "Winnemucca, NV",
+    "micro"
+   ],
+   "49100": [
+    "Winona, MN",
+    "micro"
+   ],
+   "49180": [
+    "Winston-Salem, NC",
+    "metro"
+   ],
+   "49220": [
+    "Wisconsin Rapids-Marshfield, WI",
+    "micro"
+   ],
+   "49260": [
+    "Woodward, OK",
+    "micro"
+   ],
+   "49300": [
+    "Wooster, OH",
+    "micro"
+   ],
+   "49340": [
+    "Worcester, MA",
+    "metro"
+   ],
+   "49380": [
+    "Worthington, MN",
+    "micro"
+   ],
+   "49420": [
+    "Yakima, WA",
+    "metro"
+   ],
+   "49460": [
+    "Yankton, SD",
+    "micro"
+   ],
+   "49620": [
+    "York-Hanover, PA",
+    "metro"
+   ],
+   "49660": [
+    "Youngstown-Warren, OH",
+    "metro"
+   ],
+   "49700": [
+    "Yuba City, CA",
+    "metro"
+   ],
+   "49740": [
+    "Yuma, AZ",
+    "metro"
+   ],
+   "49780": [
+    "Zanesville, OH",
+    "micro"
+   ],
+   "49820": [
+    "Zapata, TX",
+    "micro"
+   ]
+  }
  }
 }
