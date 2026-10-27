@@ -22,6 +22,37 @@
   --warn:#2e2a1c;--warn-line:#6b5a2a;--warn-ink:#f2cf7c;--shadow:0 12px 32px rgb(0 0 0 / .4);color-scheme:dark}
 [hidden]{display:none!important}
 *{box-sizing:border-box}
+body.oncover main>:not(#cover){display:none!important}
+.search .go{display:none}
+body.oncover footer,body.oncover .skip{display:none}
+.covtop,.covform{min-width:0}.cover .search input{min-width:0}
+.covmsg{margin:0;font-size:17px;line-height:1.5;min-height:1.5em;font-weight:700;color:var(--leak-ink)}
+.cover .search select{width:auto;max-width:none;flex:0 0 auto}
+.cover{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;gap:40px;padding-block:40px 24px}
+.covtop{display:flex;flex-direction:column;gap:28px;padding-top:16px}
+.cover h1{margin:0;font-weight:700;font-size:clamp(30px,calc(5.6vw + 12px),64px);overflow-wrap:break-word;hyphens:auto;line-height:1.08;letter-spacing:-.02em;max-width:18ch;text-wrap:balance}
+.coverlede{margin:0;font-size:22px;line-height:1.5;color:var(--muted);max-width:50ch}
+.covform{display:flex;flex-direction:column;gap:10px;max-width:760px}
+.covlabel{margin:0;font-weight:700}
+.cover .search{max-width:none;flex-wrap:wrap;gap:12px}
+.cover .search select,.cover .search input{min-height:60px;font-size:20px;border-radius:16px}
+.cover .search input{flex:1 1 260px;width:0;border-color:var(--ink)}
+.cover .search .go{display:inline-block;min-height:60px;padding:0 32px;font:inherit;font-weight:700;font-size:20px;color:var(--on-accent);background:var(--accent);border:0;border-radius:16px;cursor:pointer}
+.covtry{margin:0;font-size:17px;color:var(--muted)}
+.tlink{font:inherit;background:none;border:0;padding:0;color:var(--accent);font-weight:700;text-decoration:underline;cursor:pointer;min-height:auto}
+.covask{display:flex;flex-direction:column;gap:20px}
+.cover h2{margin:0;font-size:30px;font-weight:700;letter-spacing:-.01em}
+.asks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:16px}
+.ask{display:flex;flex-direction:column;gap:10px;padding:24px;background:var(--panel);border:2px solid var(--line);border-radius:16px;text-align:left;font:inherit;color:var(--ink);cursor:pointer;min-height:44px}
+.ask:hover{border-color:var(--accent)}
+.ask b{font-size:22px;line-height:1.25}.ask span{color:var(--muted);font-size:17px;line-height:1.45}.ask em{font-style:normal;font-weight:700;color:var(--accent);font-size:16px}
+.covnote{margin:0;color:var(--muted);font-size:16px}
+.covdots{background:var(--panel);border:2px solid var(--line);border-radius:24px;padding:clamp(24px,4vw,48px);display:flex;flex-wrap:wrap;gap:32px 56px;align-items:center}
+.covdtext,.covdfig{flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:14px}
+.covdtext p{margin:0;color:var(--muted);line-height:1.55}
+.dots10{display:flex;flex-wrap:nowrap;gap:6px;max-width:334px}.dots10 i{flex:1 1 0;min-width:0;max-width:28px;aspect-ratio:1;border-radius:50%;border:3px solid var(--muted);box-sizing:border-box}.dots10 i.f{background:var(--accent);border-color:var(--accent)}
+.covdsay{margin:0;font-size:20px;line-height:1.45}
+.covfoot{margin:0;max-width:78ch;color:var(--muted);font-size:16px;line-height:1.55}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.5}
 a{color:inherit}img{max-width:100%}
@@ -260,9 +291,41 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,su
 <label class="vh" for="state">State</label><select id="state"></select>
 <label class="vh" for="q">Search for a neighborhood, city or town, county or ZIP code</label><input id="q" type="search" placeholder="Neighborhood, city, county or ZIP" spellcheck="false">
 <div id="qres" class="results" role="listbox" aria-label="Matching places" hidden></div>
+<button type="submit" class="go">Look it up</button>
 </form>
 </div></header>
 <main class="wrap" id="main">
+<section class="cover" id="cover" aria-labelledby="coverTitle" hidden>
+  <div class="covtop">
+    <h1 id="coverTitle">How much of a neighborhood&rsquo;s spending stays in the neighborhood?</h1>
+    <p class="coverlede">Look up any US place and see what residents spend on everyday things, and how much of it local stores capture.</p>
+    <div class="covform">
+      <p class="covlabel" id="coverLabel">Where do you want to look?</p>
+      <div id="coverSearch"></div>
+      <p class="covmsg" id="coverMsg" role="status"></p>
+      <p class="covtry">Try <button type="button" class="tlink" data-ex="0">South Shore, Chicago</button>, <button type="button" class="tlink" data-ex="1">60649</button>, <button type="button" class="tlink" data-ex="2">Cook County, IL</button> or <button type="button" class="tlink" data-ex="3">Little Rock, AR</button>. Or <button type="button" class="tlink" id="coverMap">pick census tracts on a map</button>.</p>
+    </div>
+  </div>
+  <div class="covask">
+    <h2>What are you trying to find out?</h2>
+    <div class="asks">
+      <button type="button" class="ask" data-ex="0" data-go="spendSect"><b>Where could a new shop do well?</b><span>See which everyday categories residents buy elsewhere.</span><em>For aspiring store owners</em></button>
+      <button type="button" class="ask" data-ex="0" data-go="gapSect"><b>Is there demand behind this loan?</b><span>Back a request with public, citable numbers.</span><em>For small-business lenders</em></button>
+      <button type="button" class="ask" data-ex="0" data-go="gapSect"><b>Which corridors need investment?</b><span>Find the categories where a main street is missing the most.</span><em>For community developers</em></button>
+      <button type="button" class="ask" data-ex="0" data-go="cmpSect"><b>How do these areas compare?</b><span>Put tracts, ZIP codes and districts on one scale.</span><em>For city planners</em></button>
+    </div>
+    <p class="covnote">Each opens South Shore, Chicago, as an example; search above for your own place.</p>
+  </div>
+  <div class="covdots">
+    <div class="covdtext"><h2>The score, in dots</h2><p>Every category gets a retention rate. A rate of 1.0 means local stores sell what the national pattern predicts for the people who live there. Lower means more of that spending goes somewhere else.</p></div>
+    <div class="covdfig">
+      <div role="img" aria-label="Ten dots, four filled: a retention rate of about 0.4" class="dots10"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="covdsay">Local stores sell about 4 dollars for every 10 the national pattern predicts from residents&rsquo; spending. That is a retention rate of 0.4.</p>
+      <p class="covnote">Illustration only.</p>
+    </div>
+  </div>
+  <p class="covfoot">Everything here is built from public data: the American Community Survey, the BLS Consumer Expenditure Survey, the 2022 Economic Census, Nonemployer Statistics, LEHD LODES and ZIP Business Patterns, with store listings from USDA and Overture Maps and program and tax data from federal, state and local agencies. It is an estimate of retail gaps, not a record of where people actually shop. Free to use; 84,415 census tracts covered.</p>
+</section>
 <p class="lede">Pick any neighborhood or group of census tracts in the US. See what residents spend in sixteen categories, what local stores sell in fourteen of them, and how that compares with the national pattern. Built only from public data.</p>
 <section class="hero" aria-labelledby="selTitle">
   <div class="herotext">
@@ -3015,6 +3078,18 @@ function initRename() {
 }
 
 // ---------- wire up ----------
+// Why a link could not be opened (the page then starts at South Shore)
+function badLinkNotice() {
+  return !/^#(sg-|review=)/.test(location.hash) ? 'That link could not be opened, so the page starts at South Shore, Chicago.'
+    : Suggest.on ? 'That suggested area could not be found. It may have been deleted from the sheet.' : 'Suggested areas are not switched on for this copy of the page, so that link cannot be opened.';
+}
+async function openSouthShore(notice) {
+  if (!ST || ST.fips !== '17') { $('state').value = '17'; await loadState('17'); }
+  $('state').value = '17';
+  const ss = SEARCH.find(it => it.kind === 'Community area' && it.label === 'South Shore');
+  if (ss) pick(ss);
+  $('notice').textContent = notice || ''; $('notice').hidden = !notice;
+}
 async function main() {
   showMinor = true;                      // tobacco shows in every table, set apart (the page lists all 14 categories)
   GAP_SUB = $('gapSub').textContent; SPEND_NOTE = $('spendNote').textContent;
@@ -3036,15 +3111,9 @@ async function main() {
   let opened = false;
   if (location.hash) {
     try { opened = await openFromHash(); } catch (e) { opened = false; }
-    if (!opened) { $('notice').textContent = !/^#(sg-|review=)/.test(location.hash) ? 'That link could not be opened, so the page starts at South Shore, Chicago.'
-      : Suggest.on ? 'That suggested area could not be found. It may have been deleted from the sheet.' : 'Suggested areas are not switched on for this copy of the page, so that link cannot be opened.'; }
   }
-  if (!opened) {
-    if (!ST || ST.fips !== '17') { $('state').value = '17'; await loadState('17'); }
-    const ss = SEARCH.find(it => it.kind === 'Community area' && it.label === 'South Shore');
-    if (ss) pick(ss);
-    if ($('notice').textContent) $('notice').hidden = false;
-  }
+  if (!opened && !location.hash) { showCover(); }
+  else if (!opened) await openSouthShore(location.hash ? badLinkNotice() : '');
   hashReady = true; syncHash();
   window.addEventListener('hashchange', async () => {
     if (location.hash === selectionHash()) return;
@@ -3084,6 +3153,167 @@ async function main() {
   $('dl').addEventListener('click', e => { const b = e.target.closest('button[data-dl]'); if (b) doDownload(b.dataset.dl); });
   Suggest.init();
 }
+
+// ---------- the cover: shown at the bare address; a link to an area opens the area ----------
+// Examples: [state, label as the search lists it, kind]
+const COVER_EX = [['17', 'South Shore', 'Community area'], ['17', '60649', 'ZIP code'], ['17', 'Cook County', 'County'], ['05', 'Little Rock', '']];
+let onCover = false;
+// The cover's status line. again: a repeated message (a second press of a button) is cleared first so screen readers
+// announce it again; typing never re-announces. A newer message cancels a pending one.
+let sayTimer = 0;
+function coverSay(t, again = false) {
+  const m = $('coverMsg'); clearTimeout(sayTimer);
+  if (again && t && m.textContent === t) { m.textContent = ''; sayTimer = setTimeout(() => { m.textContent = t; }, 100); }
+  else if (m.textContent !== t) m.textContent = t;
+}
+const stName = f => (IDX.states.find(s => s.fips === f) || {}).name || '';
+// States chosen on the cover load one after another, so the last one asked for is the one loaded at the end; a queued
+// state that a newer choice has replaced (arrowing through the menu) is skipped, not fetched
+let coverLoad = null;                       // {fips, p} for the latest state asked for, while loads are under way
+function coverLoadState(f) {
+  if (coverLoad && coverLoad.fips === f) return coverLoad.p;
+  if (!coverLoad && ST && ST.fips === f) return Promise.resolve();
+  const prev = coverLoad ? coverLoad.p.catch(() => {}) : Promise.resolve();
+  const p = prev.then(() => (ST && ST.fips === f) || (coverLoad && coverLoad.p !== p) ? null : loadState(f));
+  coverLoad = {fips: f, p};
+  const done = () => { if (coverLoad && coverLoad.p === p) coverLoad = null; };
+  p.then(done, done);
+  return p;
+}
+const coverReady = f => !coverLoad && !!ST && ST.fips === f;
+const loadingMsg = f => `Loading ${stName(f)}…`;
+const failMsg = f => `Could not load ${stName(f)}. Check the connection and try again.`;
+function showCover() {
+  onCover = true; document.body.classList.add('oncover'); $('cover').hidden = false;
+  $('coverSearch').append($('srch'));
+  const st = $('state');
+  if (!st.querySelector('option[value=""]')) st.insertAdjacentHTML('afterbegin', '<option value="" disabled>Choose a state</option>');
+  st.value = ''; $('q').placeholder = 'First choose a state';
+  $('q').setAttribute('aria-labelledby', 'coverLabel');
+  qHits = []; qOn = -1; $('qres').hidden = true; coverSay('');
+  clearTimeout(stateTimer); statePending = null;
+  document.title = 'Neighborhood Spending Gaps';
+}
+function leaveCover(push = true) {
+  if (!onCover) return;
+  if (push) try { history.pushState(null, '', location.pathname + location.search); } catch (e) {}   // Back returns to the cover
+  coverSay('');
+  onCover = false; document.body.classList.remove('oncover'); $('cover').hidden = true;
+  document.querySelector('header.top .wrap').append($('srch'));
+  const ph = $('state').querySelector('option[value=""]'); if (ph) ph.remove();
+  if (ST) $('state').value = ST.fips;      // the menu shows the state that is loaded, not the first in the list
+  $('q').placeholder = 'Neighborhood, city, county or ZIP'; $('q').removeAttribute('aria-labelledby');
+  if (map) requestAnimationFrame(() => map.resize());
+}
+{ const basePick = pick; pick = h => { const was = onCover; leaveCover(); const r = basePick(h);
+    if (was) { const t = $('selTitle'); t.tabIndex = -1; t.focus({preventScroll: true}); }   // focus was on a control now hidden
+    return r; }; }
+// On the cover the search lists places only once the chosen state has loaded; until then it says why there is no list
+let searched = '';                          // state and text the current list was made for
+{ const baseSearch = runSearch; runSearch = () => {
+    if (onCover) {
+      const f = $('state').value, q = $('q').value.trim();
+      if (!coverReady(f)) {
+        qHits = []; qOn = -1; $('qres').hidden = true; $('q').setAttribute('aria-expanded', 'false'); searched = '';
+        if (!f) coverSay(q ? 'Choose a state first.' : '');
+        else if (statePending === f) coverSay('');
+        else if (!coverLoad) coverChoose(f);     // its last load failed: try again (and say so) rather than claim it is loading
+        else coverSay(loadingMsg(f));
+        return;
+      }
+      if ($('coverMsg').textContent === loadingMsg(f)) coverSay('');
+    }
+    const r = baseSearch(); searched = (ST ? ST.fips : '') + '|' + $('q').value; return r; }; }
+// "Look it up" with the list closed takes the best match; with none, it says why
+async function coverLookUp() {
+  const f = $('state').value;
+  if (!f) { coverSay('Choose a state first.', true); $('state').focus(); return; }
+  const q = $('q').value.trim();
+  if (!q) { coverSay('Type a neighborhood, city, county or ZIP code.', true); $('q').focus(); return; }
+  settleState();
+  if (!coverReady(f)) { coverSay(loadingMsg(f)); try { await coverLoadState(f); } catch (e) { if (onCover && $('state').value === f) coverSay(failMsg(f), true); return; } }
+  if (!onCover || $('state').value !== f || $('q').value.trim() !== q || !coverReady(f)) return;   // something changed meanwhile
+  if (searched !== f + '|' + $('q').value) runSearch();
+  if (qHits.length) { pick(qHits[Math.max(0, qOn)]); return; }
+  coverSay(`No place called “${q}” was found in ${stName(f)}. Try a neighborhood, city, county or ZIP code there.`, true);
+}
+$('srch').addEventListener('submit', e => {
+  if (!onCover) return;
+  e.preventDefault(); e.stopImmediatePropagation();   // the header's own handler must not pick as well
+  coverLookUp();
+});
+// Load a state chosen on the cover; once it has loaded, anything already typed is searched in it
+function coverChoose(f) {
+  if (!coverReady(f)) coverSay(loadingMsg(f));
+  coverLoadState(f).then(() => {
+    if (!onCover || $('state').value !== f) return;
+    runSearch(); $('q').setAttribute('aria-expanded', String(!$('qres').hidden));
+  }, () => { if (onCover && $('state').value === f) coverSay(failMsg(f)); });
+}
+// Choosing a state on the cover only loads it (the page's own handler, which also clears the selection and draws the
+// map, waits until the cover is left). Arrow keys and typed letters on a closed menu change it one state at a time, so
+// a keyboard choice loads only once the menu settles (a pause, or leaving the menu), focus stays on the menu, and
+// nothing is announced for the states passed on the way. A choice made with the pointer loads at once and moves
+// focus to the search box.
+let statePointer = false, statePending = null, stateTimer = 0;
+function settleState() {
+  clearTimeout(stateTimer);
+  const f = statePending; statePending = null;
+  if (f && onCover && $('state').value === f) coverChoose(f);
+}
+$('state').addEventListener('pointerdown', () => { statePointer = true; });
+$('state').addEventListener('keydown', () => { statePointer = false; });
+$('state').addEventListener('blur', () => { if (statePending) settleState(); });
+$('state').addEventListener('change', e => {
+  if (!onCover) return;
+  e.stopImmediatePropagation();
+  const f = e.target.value;
+  $('q').placeholder = 'A neighborhood, ZIP code, city or county';
+  clearTimeout(stateTimer);
+  if (statePointer) { statePending = null; $('q').focus(); coverChoose(f); }
+  else { statePending = f; stateTimer = setTimeout(settleState, 1200); }
+  statePointer = false;
+  runSearch();
+});
+window.addEventListener('popstate', () => { if (!location.hash && !onCover) { showCover(); sel = new Set(); } });
+// A link to an area pasted in while on the cover: open it, or, as on a fresh load, start at South Shore and say why
+window.addEventListener('hashchange', async e => {
+  if (!location.hash || !onCover) return;
+  e.stopImmediatePropagation();
+  if (coverLoad) await coverLoad.p.catch(() => {});
+  leaveCover(false);
+  let opened = false;
+  try { opened = await openFromHash(); } catch (er) { opened = false; }
+  if (opened) { $('notice').hidden = true; return; }
+  await openSouthShore(badLinkNotice());
+});
+let exClick = 0;
+async function coverExample(i, go) {
+  const [f, label, kind] = COVER_EX[i], mine = ++exClick;
+  clearTimeout(stateTimer); statePending = null;
+  $('state').value = f;
+  if (!coverReady(f)) coverSay(loadingMsg(f));
+  try { await coverLoadState(f); } catch (e) { if (mine === exClick && onCover) coverSay(failMsg(f), true); return; }
+  if (mine !== exClick || !onCover || !coverReady(f)) return;   // another example or a state was chosen meanwhile
+  const hit = SEARCH.find(it => it.label === label && (!kind || it.kind === kind)) || SEARCH.find(it => it.label.startsWith(label));
+  if (!hit) return;
+  pick(hit);
+  if (go) setTimeout(() => { const el = $(go); if (el) el.scrollIntoView({block: 'start'}); }, 400);
+}
+$('cover').addEventListener('click', async e => {
+  const b = e.target.closest('[data-ex]');
+  if (b) return coverExample(+b.dataset.ex, b.dataset.go);
+  if (e.target.closest('#coverMap')) {
+    const f = $('state').value;
+    if (!f) { coverSay('Choose a state first, then pick census tracts on its map.', true); $('state').focus(); return; }
+    settleState();
+    if (!coverReady(f)) { coverSay(loadingMsg(f)); try { await coverLoadState(f); } catch (er) { if (onCover && $('state').value === f) coverSay(failMsg(f), true); return; } }
+    if (!onCover || $('state').value !== f) return;
+    leaveCover();
+    $('state').value = f; $('state').dispatchEvent(new Event('change'));   // the state is loaded: draws its map, nothing picked
+    setTimeout(() => { const m = $('map'); if (m) m.scrollIntoView({block: 'center'}); }, 600);
+  }
+});
 
 // ---------- the report: choose who it is for, which sections and which categories; the choices ride in the link ----------
 // A preset picks sections for a kind of reader; any box ticked or cleared after that makes it a custom report. The
