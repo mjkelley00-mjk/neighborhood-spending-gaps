@@ -352,6 +352,9 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,su
       <p>How many of the selected tracts qualify for programs that bring investment, credit or food access, from the agencies' own lists. Eligibility is decided tract by tract (ZIP area or county for HUD's Difficult Development Areas), so a project's own address is what counts; confirm on the agency's map before relying on it. Shade any of these on the map from the menu above it.</p>
       <div id="programsViz"></div><div class="tw"><table id="programs"></table></div>
       <p class="fine" id="hzFine"></p>
+      <h3>Public and land-bank property</h3>
+      <p id="ppLine"></p>
+      <p class="fine">From the parcels large cities publish as held by a land bank, owned by the city or another public agency (surplus land included), or vacant. What each city publishes differs: some list only city-owned land, some a land-bank inventory, some vacant lots or buildings, so a zero can mean a city does not publish that kind. Owner names are not kept. Confirm a parcel's status with the city or land bank.</p>
       <h3>Near transit</h3>
       <p id="transitLine"></p>
       <p class="fine">Stations of subway, light rail, streetcar, commuter rail and monorail lines, and bus rapid transit stations where the agency reports the line as bus rapid transit (some rapid bus lines are reported as ordinary bus and are not counted), from the USDOT National Transit Map and the FTA National Transit Database. Measured here; not an agency designation.</p>
@@ -428,8 +431,9 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,su
             <li><strong>Hospitals</strong> are every hospital on Medicare's list (CMS Hospital General Information, October 2026), placed by the Census Geocoder or, where it can't place the address, by matching the name to a hospital listing on Overture Maps in the same ZIP code (or the same county, where the ZIP is a post-office box or single-site ZIP with no area of its own); about 5% can't be placed either way and are left out. Map listings alone count a hospital's departments and offices as separate hospitals. <strong>Community health centers</strong> are HRSA's active, permanent health center sites, including school-based ones (not mobile vans or seasonal sites). Doctors' offices and clinics, dentists, urgent care and mental health clinics are Overture Maps listings, private and public alike.</li>
             <li><strong>Stores here:</strong> food stores are USDA's list of every store authorized to take SNAP (downloaded October 2026). Other kinds are places listed in Overture Maps (October 2026 release, places with a confidence score of at least 0.9 and not marked closed), an open dataset compiled from several map sources; it lists more salons, bars and home furnishings stores than Census business counts, so treat those rows as indications. National rates per 10,000 residents use the same sources. The store section splits each tract's listed restaurants into full and quick service by the mix of employer restaurants in its ZIP codes (ZIP Business Patterns 2023), since the listings sort restaurants by cuisine, and the US counts the same way; it compares gyms and studios by count only, since golf, bowling, skiing and lessons are not listed.</li>
             <li><strong>Sales tax on spending that leaves</strong> leaves out fitness and child care, which states tax very differently (gym memberships in some, lessons in fewer, child care almost nowhere) and which the rate tables here do not cover yet. It applies each state's combined state and local sales-tax rates, category by category, to the spending that leaves beyond what the typical similar place loses (only in the categories that fall short of it) and, beside that, to projected leakage at the national norm: the rate where the selected tracts are (the city's when at least half a tract is in it, otherwise the town's or the county's), and only on what each state taxes. Groceries, gas, salon services and repair labor are exempt or taxed differently in many states; personal care, apparel and auto are split between goods and services by the services' national share of sales. Rates come from each state's revenue department (or the Streamlined Sales Tax files its members publish), as of October 2026. Local restaurant taxes are included where a state publishes them (Massachusetts, Mississippi, Montana, and meals taxes in DC, Connecticut, Maine, New Hampshire, Rhode Island and Vermont); other local meals taxes, excise taxes and caps on single purchases are not. Gaps for each state are listed with the figures and in the table below.</li>
-            <li><strong>Programs and designations</strong> come from the agencies' tract lists: Treasury's 2018 Opportunity Zones and its September 2026 list of tracts eligible for 2027 zones; the CDFI Fund's New Markets Tax Credit and CDFI Investment Area eligibility (2016–2020 ACS); USDA's food access maps (2019 supermarket access; 2025 access to any SNAP store); and HUD's Qualified Census Tracts and Difficult Development Areas for the Low-Income Housing Tax Credit (2026 and 2027 lists). Difficult Development Areas are drawn by ZIP area in metro areas and by county elsewhere, so a tract counts when at least half its land lies in one (a ZIP area split between HUD metro areas counts only when every part of it is designated). Lists drawn on 2010 tracts are carried to a 2020 tract when at least half its land lies in listed 2010 tracts. "Severely distressed" here applies the three main NMTC tests only; a tract can also qualify in other ways. <strong>HUBZones</strong> come from SBA's HUBZone map service (its current Qualified Census Tracts and Non-Metropolitan Counties, governor-designated and disaster areas, and Indian lands, a tract counting for Indian lands when at least half of its area is inside).</li>
+            <li><strong>Programs and designations</strong> come from the agencies' tract lists: Treasury's 2018 Opportunity Zones and its September 2026 list of tracts eligible for 2027 zones, with the tracts governors have nominated where a state has published its final list (Texas so far; elsewhere the page says the list is not published; Treasury designates the zones, so a nomination is not a designation); the CDFI Fund's New Markets Tax Credit and CDFI Investment Area eligibility (2016–2020 ACS); USDA's food access maps (2019 supermarket access; 2025 access to any SNAP store); and HUD's Qualified Census Tracts and Difficult Development Areas for the Low-Income Housing Tax Credit (2026 and 2027 lists). Difficult Development Areas are drawn by ZIP area in metro areas and by county elsewhere, so a tract counts when at least half its land lies in one (a ZIP area split between HUD metro areas counts only when every part of it is designated). Lists drawn on 2010 tracts are carried to a 2020 tract when at least half its land lies in listed 2010 tracts. "Severely distressed" here applies the three main NMTC tests only; a tract can also qualify in other ways. <strong>HUBZones</strong> come from SBA's HUBZone map service (its current Qualified Census Tracts and Non-Metropolitan Counties, governor-designated and disaster areas, and Indian lands, a tract counting for Indian lands when at least half of its area is inside).</li>
             <li><strong>State and local programs</strong> (enterprise zones and other state incentive areas, tax increment financing districts, special service areas and business improvement districts, brownfield areas, state designations such as Main Street, cultural and downtown programs, transit-oriented designations, and designated sites) come from the official boundary layers that states, counties, cities and regional agencies publish, read when the site is built. Each district's share of a selection is the part of the selected tracts' land inside it, measured on the generalized 2024 tract shapes in an equal-area projection (shares that round to 1% of a tract or more); a program's total counts land in two overlapping districts once, and districts past their last year in force are left out. Designated sites (points) are listed by the tract they sit in. Coverage is growing place by place, and the programs section names the sources covered in the selected state, so a missing district elsewhere does not mean there is none. South Carolina, Mississippi, Arkansas, Tennessee, North Carolina and Georgia rank every county into tiers for job tax credits and similar incentives, and Alabama's targeted and jumpstart counties are Enterprise Zones county-wide; in those states every county a selection touches is listed with its tier or designation from the state's current list, with its share of the selection's households.</li>
+            <li><strong>Public and land-bank property</strong> counts the parcels that 49 large cities publish in their official GIS layers as held by a land bank or land reutilization authority, owned by the city, county or another public agency (surplus land included), or vacant (citywide vacant-lot or vacant-building layers). Where an owner field mixes public agencies and private owners, only public and land-bank parcels are counted, and no owner names are kept. A parcel listed twice counts once, in the tract that holds it. Each city's layer is taken as it stands, so what is counted differs by city and a tract outside these cities has no count; a city list from before 2024 is counted with its year shown, and the page names the layers each area's counts come from. Charlotte's layer is linked rather than counted, because its terms limit reuse.</li>
             <li><strong>Near transit</strong> is measured here, not taken from an agency list: the share of the selection's land within a half mile (804.67 m) of a station, using the USDOT National Transit Map (agencies' GTFS schedules) for subway, light rail, streetcar, commuter rail and monorail stations, and the FTA National Transit Database for bus rapid transit stations and for rail stations of agencies whose schedules the map lacks. Platforms and entrances of one station count once. Cable cars, aerial trams, funiculars and the Alaska Railroad are left out. Bus rapid transit is counted only where the agency reports the line as bus rapid transit, so some rapid bus lines reported as ordinary bus are missing. A half mile is the common station-area distance (FTA, 76 FR 52046).</li>
           </ul>
           <h4>Neighborhoods and other areas</h4>
@@ -1042,6 +1046,7 @@ const OVL_ROWS = [
   ['oz1', 'Opportunity Zone (2018 zones)', 'Designated in 2018; these zones run through 2028.'],
   ['oz2e', 'Eligible for a 2027 Opportunity Zone', 'Treasury\'s eligibility list (September 2026). Governors chose their nominations in 2026; Treasury had not published the new zones when this was built.'],
   ['oz2e_rural', 'Eligible, and rural', 'An eligible tract made up entirely of a rural area, which gets larger tax benefits in the 2027 rules.'],
+  ['oz2n', 'Nominated for a 2027 Opportunity Zone', 'Nominated by the governor, pending Treasury. Shown only where a state has published its final list: Texas so far (608 tracts, submitted to Treasury September 4, 2026). Elsewhere it reads "not published". Treasury designates the zones, which take effect January 1, 2027.'],
   ['nmtc', 'New Markets Tax Credit low-income community', 'CDFI Fund eligibility, 2016–2020 ACS.'],
   ['nmtc_sd', 'Severely distressed (NMTC)', 'Meets one of the three main severe-distress tests: poverty above 30%, family income at or below 60% of the area benchmark, or unemployment at least 1.5 times the national rate.'],
   ['cdfi_ia', 'CDFI Investment Area', 'CDFI Fund eligibility, 2016–2020 ACS.'],
@@ -1055,7 +1060,7 @@ const OVL_ROWS = [
   ['transit', 'Near rail or bus rapid transit', 'Measured here, not an agency list: half or more of the tract within a half mile of a station of a subway, light rail, streetcar, commuter rail or monorail line, or of a bus rapid transit line its agency reports as one (USDOT National Transit Map and FTA National Transit Database).'],
 ];
 // column names in the tracts CSV, one 0/1 column per row above
-const OVL_CSV = ['opportunity_zone_2018', 'oz_2027_eligible', 'oz_2027_eligible_rural', 'nmtc_low_income_community',
+const OVL_CSV = ['opportunity_zone_2018', 'oz_2027_eligible', 'oz_2027_eligible_rural', 'oz_2027_nominated_pending_treasury', 'nmtc_low_income_community',
   'nmtc_severely_distressed', 'cdfi_investment_area', 'low_income_low_supermarket_access', 'low_income_low_snap_store_access',
   'hud_qct_2026', 'hud_qct_2027', 'hud_dda_2026_mostly_inside', 'hud_dda_2027_mostly_inside', 'sba_hubzone', 'near_rail_or_brt_station'];
 // transit: the share of the area's land within a half mile of a rail or bus rapid transit station (each tract's tq:
@@ -1068,11 +1073,49 @@ function transitText(ids) {
   if (!(near > 0)) return 'None of this area is within a half mile of a rail or bus rapid transit station.';
   return `${pc} of this area\'s land is within a half mile of a rail or bus rapid transit station` + (n ? `, and ${fmtN(n)} station${n === 1 ? '' : 's'} ${n === 1 ? 'is' : 'are'} inside it.` : '; no station is inside it.');
 }
+// public and vacant property: parcels that large cities publish as held by a land bank, owned by the city or another
+// public agency, or vacant (each tract's pp: [land bank, public, vacant]; IDX.public_property.sources lists the cities)
+const PP_KINDS = [['held by a land bank', 'land_bank_parcels'], ['owned by a city, county or other public agency', 'public_owned_parcels'], ['listed as vacant', 'vacant_parcels']];
+// "a, b and c" (counts carry commas, so no semicolons)
+const andJoin = a => a.length < 2 ? (a[0] || '') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1];
+function pubPropText(ids) {
+  const P = IDX.public_property; if (!P || !ST) return '';
+  // pp: [land bank, public, vacant, [sources counted]]; a tract with pp is in a covered city (zeros when it has none)
+  const n = [0, 0, 0], used = new Set(); let covered = false;
+  for (const g of ids) { const t = ST.tracts[g]; if (!t || !t.pp) continue; covered = true; for (let i = 0; i < 3; i++) n[i] += t.pp[i] || 0; for (const k of t.pp[3] || []) used.add(k); }
+  const S = [...used].map(k => P.sources[k]).filter(Boolean), who = s => esc(s.covers || s.city);
+  const names = andJoin([...new Set(S.map(who))].sort()), one = S.length === 1;
+  const k0 = majorityOf(ids, placeOf).key, cityHere = k0 && ST.places[k0] ? placeName(ST.places[k0].name).base : '';
+  // an older list is counted with its year, a known limit is said, and a city left out for its terms is linked
+  const notes = S.flatMap(s => [s.as_of ? `${esc(s.city)}'s list dates from ${esc(s.as_of)}, so check a parcel's current status` : '', s.caveat ? esc(s.caveat) : '']).filter(Boolean)
+    .concat((P.linked || []).filter(s => s.state === ST.fips && s.city === cityHere).map(s => `${esc(s.city)} publishes ${esc(s.what)} (<a href="${esc(s.page || s.url)}" target="_blank" rel="noopener">${esc(s.city)} open data</a>); ${esc(s.why)}`));
+  const tail = notes.map(x => ' ' + x.charAt(0).toUpperCase() + x.slice(1) + '.').join('');
+  const parts = PP_KINDS.map(([w], i) => n[i] ? `${fmtN(n[i])} ${w}` : '').filter(Boolean);
+  if (parts.length) return `Parcels in this area: ${andJoin(parts)}, as ${names} ${one ? 'publishes' : 'publish'} them.` + tail;
+  if (covered) return `None of the land-bank, publicly owned or vacant parcels that ${names} ${one ? 'publishes' : 'publish'} is in this area.` + tail;
+  const here = P.sources.filter(s => s.state === ST.fips);
+  if (!here.length) return `Public and vacant property is counted only in the ${P.sources.length} large cities that publish it, and none is in ${esc(ST.name)}.` + tail;
+  return `Public and vacant property is counted only in the cities that publish it, and this area is not in one of them (in ${esc(ST.name)}: ${andJoin([...new Set(here.map(who))].sort())}).` + tail;
+}
+// the tracts CSV: blank where no covered city's layer reaches the tract, 0 where it does and lists none
+const ppCells = t => [0, 1, 2].map(i => t.pp ? t.pp[i] || 0 : '');
+// 2027 nominations are shown only for states that have published their list; elsewhere "not published", never 0
+const ozNomStates = () => new Set(((IDX && IDX.ovl && IDX.ovl.oz_nominations) || []).map(s => s.state));
+const ovlKnown = k => k !== 'oz2n' || (ST && ozNomStates().has(ST.fips));
+const ovlCsv = (k, t) => !ovlKnown(k) ? '' : (t.o || 0) & ovlBit(k) ? 1 : 0;
+// the map's shading menu: no 2027 nominations choice in a state with no published list
+function syncOzOption() {
+  const s = $('ovl'); if (!s) return; const o = s.querySelector('option[value="oz2n"]'); if (!o) return;
+  const ok = ovlKnown('oz2n'); o.hidden = o.disabled = !ok;
+  if (!ok && ovlKey === 'oz2n') { ovlKey = ''; s.value = ''; ovlLayer(); }
+}
 const ovlBit = k => { const i = IDX && IDX.ovl ? IDX.ovl.keys.indexOf(k) : -1; return i < 0 ? 0 : 1 << i; };
 // how many of the tracts, and of their residents, each program covers
 // the agencies' programs (the table and chart); nearness to transit is a distance the site measures, not an agency's
 // list, so it is a map layer and a sentence of its own (transitText)
 const PROG_ROWS = OVL_ROWS.filter(r => r[0] !== 'transit');
+// rows shown indented under the row above (a subset of it)
+const SUB_ROWS = new Set(['oz2e_rural', 'oz2n', 'nmtc_sd']);
 function programsCounts(ids) {
   const has = PROG_ROWS.map(() => ({n: 0, p: 0}));
   let n = 0, pop = 0;
@@ -1087,7 +1130,7 @@ function programsTable(ids) {
   const {has, n, pop} = programsCounts(ids);
   const pct = v => pop > 0 ? (v / pop * 100 < 0.5 && v > 0 ? '<1%' : Math.round(v / pop * 100) + '%') : '—';
   return `<thead><tr><th>Program or designation</th><th>Tracts</th><th>Residents</th></tr></thead><tbody>` +
-    PROG_ROWS.map(([k, label, note], i) => `<tr${i === 2 || i === 4 ? ' class="subrow"' : ''}><td>${esc(label)}<span class="pnote">${esc(note)}</span></td><td class="num">${fmtN(has[i].n)} of ${fmtN(n)}</td><td class="num">${pct(has[i].p)}</td></tr>`).join('') + '</tbody>';
+    PROG_ROWS.map(([k, label, note], i) => `<tr${SUB_ROWS.has(k) ? ' class="subrow"' : ''}><td>${esc(label)}<span class="pnote">${esc(note)}</span></td>${ovlKnown(k) ? `<td class="num">${fmtN(has[i].n)} of ${fmtN(n)}</td><td class="num">${pct(has[i].p)}</td>` : '<td class="num">Not published</td><td class="num">—</td>'}</tr>`).join('') + '</tbody>';
 }
 // map shading: one program at a time, chosen in the map's header
 let ovlKey = '';
@@ -2004,10 +2047,10 @@ function summaryCSV(r) {
   return csv(rows);
 }
 function tractRows(ids) {
-  const head = ['geoid','county','population','households','household_income_usd','household_income_estimated','jobs_all'].concat(JOB_SLUG.map(k => 'jobs_' + k), ['jobs_held_by_residents'], OVL_CSV, ['state_and_local_programs', 'county_tier', 'pct_land_within_half_mile_of_station'], IDX.stores.keys.map(k => 'stores_' + k)).concat(DEM.map(c => 'demand_' + c + '_usd'), SUP.map(c => 'sales_jobs_based_' + c + '_usd'), SUP.map(c => 'sales_zip_based_' + c + '_usd'), ['demand_vehicle_purchases_usd']);
+  const head = ['geoid','county','population','households','household_income_usd','household_income_estimated','jobs_all'].concat(JOB_SLUG.map(k => 'jobs_' + k), ['jobs_held_by_residents'], OVL_CSV, ['state_and_local_programs', 'county_tier', 'pct_land_within_half_mile_of_station', 'land_bank_parcels', 'public_owned_parcels', 'vacant_parcels'], IDX.stores.keys.map(k => 'stores_' + k)).concat(DEM.map(c => 'demand_' + c + '_usd'), SUP.map(c => 'sales_jobs_based_' + c + '_usd'), SUP.map(c => 'sales_zip_based_' + c + '_usd'), ['demand_vehicle_purchases_usd']);
   const rows = [head];
   for (const g of ids) { const t = ST.tracts[g]; if (!t) continue;
-    rows.push([g, ST.counties[g.slice(0,5)] || '', t.p || 0, t.h, t.h ? usd(t.i || 0) : '', t.h ? (t.ie ? 1 : 0) : ''].concat(t.j.slice(0, 21).map(v => v || 0), [t.w || 0], OVL_ROWS.map(([k]) => (t.o || 0) & ovlBit(k) ? 1 : 0), [localCell(t), tierCell(g), t.tq ? t.tq[0] : 0], IDX.stores.keys.map((k, i) => t.k ? t.k[i] : 0), t.d.map(usd), t.l.map(usd), t.z.map(usd), [usd(t.v)])); }
+    rows.push([g, ST.counties[g.slice(0,5)] || '', t.p || 0, t.h, t.h ? usd(t.i || 0) : '', t.h ? (t.ie ? 1 : 0) : ''].concat(t.j.slice(0, 21).map(v => v || 0), [t.w || 0], OVL_ROWS.map(([k]) => ovlCsv(k, t)), [localCell(t), tierCell(g), t.tq ? t.tq[0] : 0, ...ppCells(t)], IDX.stores.keys.map((k, i) => t.k ? t.k[i] : 0), t.d.map(usd), t.l.map(usd), t.z.map(usd), [usd(t.v)])); }
   return csv(rows);
 }
 function saveFile(filename, data, type) {
@@ -2199,7 +2242,7 @@ function storesHereChart(ids) {
 // ---- programs: share of the selected tracts each covers
 function programsChart(ids) {
   const {has, n} = programsCounts(ids); if (!n) return '';
-  return barList(PROG_ROWS.map(([k, label], i) => ({label, v: has[i].n / n, cls: has[i].n ? 'acc' : 'mute', text: `${fmtN(has[i].n)} <small>of ${fmtN(n)}</small>`,
+  return barList(PROG_ROWS.filter(([k]) => ovlKnown(k)).map(([k, label]) => [k, label, PROG_ROWS.findIndex(r => r[0] === k)]).map(([k, label, i]) => ({label, v: has[i].n / n, cls: has[i].n ? 'acc' : 'mute', text: `${fmtN(has[i].n)} <small>of ${fmtN(n)}</small>`,
     tip: `${label}: ${fmtN(has[i].n)} of ${fmtN(n)} tracts`})), {max: 1, axis: [0, 0.5, 1], fmt: t => Math.round(t * 100) + '%', label: 'Share of the selected tracts in each program'});
 }
 // ---- jobs: by industry, and the commute
@@ -2914,9 +2957,9 @@ function render() {
     $('taxNotes').innerHTML = tx.notes.map(x => `<li>${esc(x)}</li>`).join(''); $('taxNotesBox').hidden = !tx.notes.length;
     $('taxNotesSum').textContent = `Notes on ${ST.name}'s rates and what it taxes`; }
   $('stores2Viz').innerHTML = storesHereChart(sel); $('stores2').innerHTML = storesTable(sel); $('storesNote').textContent = storesNote(sel);
-  $('programsViz').innerHTML = programsChart(sel); $('programs').innerHTML = programsTable(sel); $('transitLine').textContent = transitText(sel);
+  $('programsViz').innerHTML = programsChart(sel); $('programs').innerHTML = programsTable(sel); $('transitLine').textContent = transitText(sel); $('ppLine').innerHTML = pubPropText(sel);
   { const lx = localSection(sel); $('localLead').innerHTML = lx.lead; $('tierLine').innerHTML = lx.tier; $('tierLine').hidden = !lx.tier; $('localViz').innerHTML = localChart(sel); $('localTbl').innerHTML = lx.table; $('localCov').innerHTML = (ST.local || []).length ? localCoverage() : ''; }
-  syncLocalOptions();
+  syncLocalOptions(); syncOzOption();
   // official program pages for the selection's city, state and the federal government (loaded once)
   { const tok = ++linksTok; loadLinks().then(() => { if (tok !== linksTok) return; const h = sel.size ? linksHTML(sel) : ''; $('progLinks').innerHTML = h; $('progLinksBox').hidden = !h; }); }
   $('commute').innerHTML = commuteText(r); $('commuteViz').innerHTML = commuteChart(r); $('jobsViz').innerHTML = jobsChart(r); $('jobs').innerHTML = jobsTable(r);
@@ -3130,7 +3173,7 @@ function reportHTML(r) {
     sec('region', 'The surrounding region', `<p>${rg.lead}</p>${rg.table ? regionChart(rg, keepC) + tbl(filtRows(rg.table, catRow)) + '<p class="fine">Projected leakage within 10, 25 and 50 miles of the selection, the selection left out, at the middle of the two estimates; a surplus means stores there sell more than residents\' spending supports. It shows where offsetting spending could come from or go, not where any one shopper goes.</p>' : ''}`),
     sec('tax', 'Sales tax on spending that leaves', `<p>${tx.lead}</p>${taxChart(r, keepC)}${tbl(filtRows(tx.table, row => /class="tot"/.test(row) || catRow(row)).replace('<td>Categories where spending leaks</td>', allC ? '<td>Categories where spending leaks</td>' : '<td>All categories where spending leaks, including those not shown</td>'))}${tx.notes.length ? `<p class="fine">${esc(tx.notes.join(' '))}</p>` : ''}`),
     sec('stores', 'Stores here', `${storesHereChart(sel)}${tbl(storesTable(sel))}<p class="fine">${esc(storesNote(sel))} Food stores: USDA's list of stores that take SNAP. Other places: Overture Maps, which runs high for some kinds.</p>`),
-    sec('programs', 'Programs and designations', `${programsChart(sel)}${tbl(programsTable(sel))}${(t => t ? `<h3>Near transit</h3><p>${esc(t)}</p>` : '')(transitText(sel))}${(lx => `<h3>State and local programs</h3><p>${lx.lead}</p>${lx.tier ? `<p>${lx.tier}</p>` : ''}${localChart(sel)}${tbl(lx.table)}${(ST.local || []).length ? `<p class="fine">${localCoverage()}</p>` : ''}`)(localSection(sel))}${(h => h ? `<h3>Where to find programs</h3>${h}` : '')(linksHTML(sel))}<p class="fine">From the agencies' tract and ZIP-area lists; confirm a site's eligibility on the agency's own map. ${hzFine()}</p>`),
+    sec('programs', 'Programs and designations', `${programsChart(sel)}${tbl(programsTable(sel))}${(t => t ? `<h3>Public and land-bank property</h3><p>${t}</p>` : '')(pubPropText(sel))}${(t => t ? `<h3>Near transit</h3><p>${esc(t)}</p>` : '')(transitText(sel))}${(lx => `<h3>State and local programs</h3><p>${lx.lead}</p>${lx.tier ? `<p>${lx.tier}</p>` : ''}${localChart(sel)}${tbl(lx.table)}${(ST.local || []).length ? `<p class="fine">${localCoverage()}</p>` : ''}`)(localSection(sel))}${(h => h ? `<h3>Where to find programs</h3>${h}` : '')(linksHTML(sel))}<p class="fine">From the agencies' tract and ZIP-area lists; confirm a site's eligibility on the agency's own map. ${hzFine()}</p>`),
     sec('jobs', 'Jobs and commuting', `<p>${commuteText(r)}</p>${commuteChart(r)}${jobsChart(r)}${tbl(jobsTable(r))}<p class="fine">Jobs at workplaces here, wherever the workers live (LEHD LODES 2023; self-employed not counted).</p>`),
     sec('demand', 'Demand-only spending', `${demandOnlyChart(r)}<p class="fine">Public data cannot match these to local sales: most medicine spending is paid through insurance at the pharmacy, and admissions are dominated by visitors.</p>`),
     sec('method', 'Method and sources', `<p>${esc(METHOD_BRIEF)}</p>`),
