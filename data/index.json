@@ -473,7 +473,7 @@
     -75.543,
     36.544
    ],
-   "bytes": 2546924,
+   "bytes": 2561272,
    "counties": 100
   },
   {
@@ -852,6 +852,13 @@
     ],
     "kind": "zone",
     "desc": "Census block groups that qualify for the Louisiana Enterprise Zone program (Louisiana Economic Development), where a business that adds jobs can get a credit for each new job and a state sales-tax rebate or investment credit."
+   },
+   "nc_ura": {
+    "label": "North Carolina redevelopment area",
+    "one": "a redevelopment area",
+    "many": "redevelopment areas",
+    "kind": "zone",
+    "desc": "Areas a city designates under the Urban Redevelopment Law, where its redevelopment plan lets it buy and assemble property, clear blight and offer sites for new housing and businesses (G.S. 160A-500 and after)."
    },
    "ga_ez": {
     "label": "Georgia Enterprise Zone",
@@ -2344,6 +2351,51 @@
     "vintage": "updated March 2026",
     "url": "https://services5.arcgis.com/54falWtcpty3V47Z/arcgis/rest/services/EIFDs/FeatureServer/0",
     "districts": 2
+   },
+   {
+    "id": "durham_bid",
+    "state": "37",
+    "program": "bid",
+    "where": "City and County of Durham (tax districts)",
+    "vintage": "updated September 2026",
+    "url": "https://services2.arcgis.com/G5vR3cOjh6g2Ed8E/arcgis/rest/services/Tax_Districts/FeatureServer/2",
+    "districts": 1
+   },
+   {
+    "id": "ws_bid",
+    "state": "37",
+    "program": "bid",
+    "where": "Forsyth County (municipal service districts)",
+    "vintage": "county layer, current",
+    "url": "https://maps.co.forsyth.nc.us/arcgis/rest/services/Tax/TPV_Main/MapServer/18",
+    "districts": 1
+   },
+   {
+    "id": "fay_msd",
+    "state": "37",
+    "program": "bid",
+    "where": "Cumberland County (Fayetteville municipal service district)",
+    "vintage": "updated May 2023",
+    "url": "https://services1.arcgis.com/ssJTvu2LI9qRE1oE/arcgis/rest/services/MunicipalServiceDist/FeatureServer/0",
+    "districts": 1
+   },
+   {
+    "id": "salisbury_msd",
+    "state": "37",
+    "program": "bid",
+    "where": "City of Salisbury",
+    "vintage": "updated June 2023",
+    "url": "https://services.arcgis.com/FKrJWv8CWiYT6Rsn/arcgis/rest/services/Downtown_Municipal_Service_District/FeatureServer/0",
+    "districts": 1
+   },
+   {
+    "id": "gso_ura",
+    "state": "37",
+    "program": "nc_ura",
+    "where": "City of Greensboro",
+    "vintage": "City layer, current (active areas)",
+    "url": "https://gis.greensboro-nc.gov/arcgis/rest/services/GISDivision/GsoGeoService_MS_2/MapServer/27",
+    "districts": 7
    },
    {
     "id": "raleigh_msd",
@@ -5013,7 +5065,7 @@
    "02": "the state has sent its nominations to Treasury but has not published which tracts they are",
    "20": "the state has sent its nominations to Treasury but has not published which tracts they are",
    "40": "the state has sent its nominations to Treasury but has not published which tracts they are",
-   "37": "the state has sent its nominations to Treasury but has not published which tracts they are",
+   "37": "the Department of Commerce has chosen its tracts (up to 202 under its preliminary allocation) and says it will share them once the Treasury certifies them, so no tract is shown as nominated",
    "45": "the state's map of its nominations disagrees with itself (113 or 115 tracts) and its page still says the list is under review, so no tract is shown as nominated",
    "39": "the state has published a 130-tract list under review, not its final nominations, and says it will publish the final list once the Treasury confirms it, so no tract is shown as nominated",
    "55": "the state has published its finalists, not its final nominations, so no tract is shown as nominated",
