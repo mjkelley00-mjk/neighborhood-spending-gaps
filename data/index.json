@@ -193,7 +193,7 @@
     -87.53,
     42.488
    ],
-   "bytes": 3265211,
+   "bytes": 3279258,
    "counties": 102
   },
   {
@@ -1359,7 +1359,7 @@
     "where": "Illinois Department of Revenue (zones designated by DCEO)",
     "vintage": "2026 layer; expired zones left out",
     "url": "https://idor.maps.arcgis.com/apps/webappviewer/index.html?id=f82fc6b62fde435abb41f5f72db2db48",
-    "districts": 100
+    "districts": 102
    },
    {
     "id": "chi_tif",
@@ -2052,6 +2052,15 @@
     "where": "City of Rock Island (parcels)",
     "vintage": "updated April 2026",
     "url": "https://services.arcgis.com/MnSL3OxrZYrc6w4v/arcgis/rest/services/West_End_Neighborhood_Informational_Map/FeatureServer/9",
+    "districts": 1
+   },
+   {
+    "id": "peoria_rez",
+    "state": "17",
+    "program": "il_rez",
+    "where": "Peoria County",
+    "vintage": "County layer, current",
+    "url": "https://gis.peoriacounty.gov/arcgis/rest/services/DP/Administrative/MapServer/5",
     "districts": 1
    },
    {
@@ -5232,7 +5241,7 @@
   },
   "IL": {
    "rates": "current",
-   "rate_gaps": 6,
+   "rate_gaps": 7,
    "check": {
     "status": "checked",
     "source": "https://webapps.illinois.gov/rev/sic",
