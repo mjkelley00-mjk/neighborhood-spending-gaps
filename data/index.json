@@ -151,7 +151,7 @@
     -80.85,
     34.979
    ],
-   "bytes": 2618131,
+   "bytes": 2675966,
    "counties": 159
   },
   {
@@ -853,6 +853,13 @@
     "kind": "zone",
     "desc": "Census block groups that qualify for the Louisiana Enterprise Zone program (Louisiana Economic Development), where a business that adds jobs can get a credit for each new job and a state sales-tax rebate or investment credit."
    },
+   "ga_ez": {
+    "label": "Georgia Enterprise Zone",
+    "one": "a Georgia Enterprise Zone",
+    "many": "Georgia Enterprise Zones",
+    "kind": "zone",
+    "desc": "Areas a city or county designates under the Enterprise Zone Employment Act, where businesses that invest and create jobs can get local property tax exemptions and reduced local fees for a set number of years (O.C.G.A. 36-88; Department of Community Affairs)."
+   },
    "ga_soz": {
     "label": "Georgia State Opportunity Zone",
     "one": "a Georgia State Opportunity Zone",
@@ -1001,18 +1008,18 @@
     "desc": "Rural counties and cities designated by the Governor: waivers of match and eligibility rules and priority for state economic development incentives and rural grants (s. 288.0656, F.S.)."
    },
    "ga_ldct": {
-    "label": "Georgia less developed census tract (eligible)",
-    "one": "an eligible less developed tract",
-    "many": "eligible less developed tracts",
+    "label": "Georgia less developed census tract",
+    "one": "a less developed census tract",
+    "many": "less developed census tracts",
     "kind": "zone",
-    "desc": "Tracts that meet the poverty test for Georgia's less developed census tract job tax credit ($3,500 a job, as in Tier 1 counties) once a city or county nominates them (Department of Community Affairs; O.C.G.A. 48-7-40.1)."
+    "desc": "Tracts designated each year in the Department of Community Affairs' census tract rankings (2026 list), where a business that creates jobs can claim the job tax credit at the Tier 1 rate ($3,500 a job) (O.C.G.A. 48-7-40.1(b))."
    },
    "ga_mz": {
-    "label": "Georgia military zone (eligible tract)",
-    "one": "an eligible military zone tract",
-    "many": "eligible military zone tracts",
+    "label": "Georgia military zone",
+    "one": "a military zone tract",
+    "many": "military zone tracts",
     "kind": "zone",
-    "desc": "Tracts near military installations that meet the test for a military zone: Tier 1-level job tax credits ($3,500 a job) once designated (Department of Community Affairs; O.C.G.A. 48-7-40.1)."
+    "desc": "Tracts near military installations designated as military zones (2026 list, each with its own effective date), where a business that creates jobs can claim the job tax credit at the Tier 1 rate ($3,500 a job) (Department of Community Affairs; O.C.G.A. 48-7-40.1(c))."
    },
    "ga_rz": {
     "label": "Georgia Rural Zone",
@@ -1631,10 +1638,73 @@
     "id": "atl_tad",
     "state": "13",
     "program": "tif",
-    "where": "City of Atlanta (published by Atlanta BeltLine, Inc.)",
-    "vintage": "2026 copy of the City layer",
-    "url": "https://gis.beltline.org/server/rest/services/COA_Tax_Allocation_Districts_public/FeatureServer/0",
-    "districts": 10
+    "where": "City of Atlanta (Department of City Planning)",
+    "vintage": "City layer, current",
+    "url": "https://gis.atlantaga.gov/dpcd/rest/services/LandUsePlanning/IncentiveZone/MapServer/0",
+    "districts": 8
+   },
+   {
+    "id": "atl_ez_gulch",
+    "state": "13",
+    "program": "ga_ez",
+    "where": "City of Atlanta (Department of City Planning)",
+    "vintage": "City layer, current",
+    "url": "https://gis.atlantaga.gov/dpcd/rest/services/LandUsePlanning/IncentiveZone/MapServer/6",
+    "districts": 1
+   },
+   {
+    "id": "atl_ez_downtown",
+    "state": "13",
+    "program": "ga_ez",
+    "where": "City of Atlanta (Department of City Planning)",
+    "vintage": "City layer, current",
+    "url": "https://gis.atlantaga.gov/dpcd/rest/services/LandUsePlanning/IncentiveZone/MapServer/5",
+    "districts": 1
+   },
+   {
+    "id": "dekalb_tad",
+    "state": "13",
+    "program": "tif",
+    "where": "DeKalb County GIS",
+    "vintage": "updated April 2026",
+    "url": "https://services2.arcgis.com/IxVN2oUE9EYLSnPE/arcgis/rest/services/TAD/FeatureServer/0",
+    "districts": 6
+   },
+   {
+    "id": "athens_tad",
+    "state": "13",
+    "program": "tif",
+    "where": "Athens-Clarke County",
+    "vintage": "updated October 2023",
+    "url": "https://services2.arcgis.com/xSEULKvB31odt3XQ/arcgis/rest/services/TAD_Countywide_REVISED_20231019_WFL1/FeatureServer/1",
+    "districts": 6
+   },
+   {
+    "id": "colga_tad",
+    "state": "13",
+    "program": "tif",
+    "where": "Columbus Consolidated Government (parcels)",
+    "vintage": "parcel map from 2016",
+    "url": "https://services2.arcgis.com/hKwZvjnqryeqGRIt/arcgis/rest/services/TADs/FeatureServer/0",
+    "districts": 6
+   },
+   {
+    "id": "colga_ez",
+    "state": "13",
+    "program": "ga_ez",
+    "where": "Columbus Consolidated Government",
+    "vintage": "2024 boundary",
+    "url": "https://services2.arcgis.com/hKwZvjnqryeqGRIt/arcgis/rest/services/EnterpriseZone2024/FeatureServer/0",
+    "districts": 1
+   },
+   {
+    "id": "sav_ez",
+    "state": "13",
+    "program": "ga_ez",
+    "where": "City of Savannah (SAGIS)",
+    "vintage": "SAGIS layer, current",
+    "url": "https://pub.sagis.org/arcgis/rest/services/Savannah/UrbanRevelopmentAdaptiveReuseIncentives_MapService/MapServer/2",
+    "districts": 3
    },
    {
     "id": "indy_tif",
@@ -5232,7 +5302,7 @@
   },
   "GA": {
    "rates": "current",
-   "rate_gaps": 3,
+   "rate_gaps": 2,
    "check": {
     "status": "checked",
     "source": "https://dor.georgia.gov/local-government-services/distributions-section/sales-tax-commodity-report",
