@@ -11,7 +11,7 @@
     -84.955,
     34.977
    ],
-   "bytes": 1395446,
+   "bytes": 1438711,
    "counties": 67
   },
   {
@@ -25,7 +25,7 @@
     -130.137,
     71.214
    ],
-   "bytes": 368396,
+   "bytes": 373446,
    "counties": 30
   },
   {
@@ -39,7 +39,7 @@
     -109.133,
     36.989
    ],
-   "bytes": 1552958,
+   "bytes": 1555707,
    "counties": 15
   },
   {
@@ -53,7 +53,7 @@
     -89.855,
     36.484
    ],
-   "bytes": 856391,
+   "bytes": 892950,
    "counties": 75
   },
   {
@@ -67,7 +67,7 @@
     -114.273,
     41.852
    ],
-   "bytes": 8919150,
+   "bytes": 8921614,
    "counties": 58
   },
   {
@@ -193,7 +193,7 @@
     -87.53,
     42.488
    ],
-   "bytes": 3279984,
+   "bytes": 3309158,
    "counties": 102
   },
   {
@@ -221,7 +221,7 @@
     -90.189,
     43.457
    ],
-   "bytes": 964834,
+   "bytes": 968497,
    "counties": 99
   },
   {
@@ -235,7 +235,7 @@
     -94.604,
     39.921
    ],
-   "bytes": 866993,
+   "bytes": 901372,
    "counties": 105
   },
   {
@@ -263,7 +263,7 @@
     -89.397,
     33.003
    ],
-   "bytes": 1349433,
+   "bytes": 1366308,
    "counties": 64
   },
   {
@@ -333,7 +333,7 @@
     -90.12,
     49.067
    ],
-   "bytes": 1509532,
+   "bytes": 1510901,
    "counties": 87
   },
   {
@@ -347,7 +347,7 @@
     -88.149,
     34.991
    ],
-   "bytes": 836223,
+   "bytes": 837449,
    "counties": 82
   },
   {
@@ -361,7 +361,7 @@
     -89.227,
     40.526
    ],
-   "bytes": 1647854,
+   "bytes": 1730716,
    "counties": 115
   },
   {
@@ -375,7 +375,7 @@
     -104.094,
     48.934
    ],
-   "bytes": 400037,
+   "bytes": 401122,
    "counties": 56
   },
   {
@@ -389,7 +389,7 @@
     -95.59,
     42.913
    ],
-   "bytes": 599132,
+   "bytes": 632261,
    "counties": 93
   },
   {
@@ -445,7 +445,7 @@
     -103.1,
     36.931
    ],
-   "bytes": 595014,
+   "bytes": 604182,
    "counties": 33
   },
   {
@@ -459,7 +459,7 @@
     -71.915,
     44.979
    ],
-   "bytes": 5193144,
+   "bytes": 5193297,
    "counties": 62
   },
   {
@@ -487,7 +487,7 @@
     -96.606,
     48.91
    ],
-   "bytes": 271967,
+   "bytes": 290857,
    "counties": 53
   },
   {
@@ -515,7 +515,7 @@
     -94.456,
     36.965
    ],
-   "bytes": 1227101,
+   "bytes": 1286329,
    "counties": 77
   },
   {
@@ -585,7 +585,7 @@
     -96.494,
     45.805
    ],
-   "bytes": 291735,
+   "bytes": 324784,
    "counties": 66
   },
   {
@@ -599,7 +599,7 @@
     -81.752,
     36.637
    ],
-   "bytes": 1604310,
+   "bytes": 1605544,
    "counties": 95
   },
   {
@@ -613,7 +613,7 @@
     -93.699,
     36.41
    ],
-   "bytes": 6408820,
+   "bytes": 6515282,
    "counties": 254
   },
   {
@@ -627,7 +627,7 @@
     -109.273,
     41.944
    ],
-   "bytes": 718306,
+   "bytes": 727797,
    "counties": 29
   },
   {
@@ -655,7 +655,7 @@
     -75.293,
     39.341
    ],
-   "bytes": 2058524,
+   "bytes": 2129614,
    "counties": 133
   },
   {
@@ -669,7 +669,7 @@
     -117.05,
     48.989
    ],
-   "bytes": 1671377,
+   "bytes": 1677356,
    "counties": 39
   },
   {
@@ -683,7 +683,7 @@
     -77.769,
     40.598
    ],
-   "bytes": 601569,
+   "bytes": 610033,
    "counties": 55
   },
   {
@@ -816,6 +816,27 @@
     "many": "Oregon Enterprise Zones",
     "kind": "zone",
     "desc": "Zones sponsored by cities, counties, ports and tribes where new business investment is exempt from local property tax for three to five years, longer in some rural zones (Business Oregon)."
+   },
+   "va_tz": {
+    "label": "Virginia technology zone",
+    "one": "a technology zone",
+    "many": "technology zones",
+    "kind": "zone",
+    "desc": "Zones a county or city sets up under state law (Code 58.1-3850), where new and expanding technology businesses can get reduced local taxes and fees, such as the business license (BPOL) tax, for a set period."
+   },
+   "va_acd": {
+    "label": "Virginia arts and cultural district",
+    "one": "an arts and cultural district",
+    "many": "arts and cultural districts",
+    "kind": "desig",
+    "desc": "Districts a county or city designates under state law (Code 15.2-1129.1), where it may offer tax and fee incentives to arts and cultural businesses and venues."
+   },
+   "rva_care": {
+    "label": "Richmond CARE area",
+    "one": "a CARE area",
+    "many": "CARE areas",
+    "kind": "zone",
+    "desc": "Commercial corridors in the City of Richmond's Commercial Area Revitalization Effort, where businesses and commercial property owners can get rebates for security, exterior and interior rehabilitation (not new construction)."
    },
    "va_ez": {
     "label": "Virginia Enterprise Zone",
@@ -1544,6 +1565,78 @@
     "vintage": "updated August 2026",
     "url": "https://www.oregon.gov/biz/programs/enterprise_zones/",
     "districts": 71
+   },
+   {
+    "id": "arl_bid",
+    "state": "51",
+    "program": "bid",
+    "where": "Arlington County",
+    "vintage": "county layer, current (synced 2026)",
+    "url": "https://services1.arcgis.com/JrtUzVcH8S2wnzVH/arcgis/rest/services/Business_Improvement_Districts/FeatureServer/0",
+    "districts": 3
+   },
+   {
+    "id": "arl_tz",
+    "state": "51",
+    "program": "va_tz",
+    "where": "Arlington County",
+    "vintage": "county layer, current (synced 2026)",
+    "url": "https://services1.arcgis.com/JrtUzVcH8S2wnzVH/arcgis/rest/services/Technology_Zones/FeatureServer/0",
+    "districts": 5
+   },
+   {
+    "id": "rva_care",
+    "state": "51",
+    "program": "rva_care",
+    "where": "City of Richmond",
+    "vintage": "city layer (2019), filtered to the current list",
+    "url": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/CAREArea/FeatureServer/0",
+    "districts": 12
+   },
+   {
+    "id": "rva_acd",
+    "state": "51",
+    "program": "va_acd",
+    "where": "City of Richmond",
+    "vintage": "city layer, 2019",
+    "url": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/ArtsAndCulturalDistrict/FeatureServer/0",
+    "districts": 1
+   },
+   {
+    "id": "vb_vibe",
+    "state": "51",
+    "program": "va_acd",
+    "where": "City of Virginia Beach",
+    "vintage": "city layer, current",
+    "url": "https://geo.vbgov.com/mapservices/rest/services/Planning_and_Development/Planning_and_Development/MapServer/31",
+    "districts": 1
+   },
+   {
+    "id": "alx_otn",
+    "state": "51",
+    "program": "va_acd",
+    "where": "City of Alexandria",
+    "vintage": "city layer (ordinance section 6-900)",
+    "url": "https://services2.arcgis.com/ChYV69FhfjwkvRmy/arcgis/rest/services/Old_Town_North___Arts_and_Cultural_District/FeatureServer/58",
+    "districts": 1
+   },
+   {
+    "id": "roa_sd_down",
+    "state": "51",
+    "program": "bid",
+    "where": "City of Roanoke",
+    "vintage": "city layer, current",
+    "url": "https://gis03.roanokeva.gov/arcgis/rest/services/Public/Service_Districts/FeatureServer/0",
+    "districts": 1
+   },
+   {
+    "id": "roa_sd_wr",
+    "state": "51",
+    "program": "bid",
+    "where": "City of Roanoke",
+    "vintage": "city layer, current",
+    "url": "https://gis03.roanokeva.gov/arcgis/rest/services/Public/Service_Districts/FeatureServer/1",
+    "districts": 1
    },
    {
     "id": "va_ez",
@@ -5176,6 +5269,7 @@
    "02": "the state has sent its nominations to Treasury but has not published which tracts they are",
    "20": "the state has sent its nominations to Treasury but has not published which tracts they are",
    "40": "the state has sent its nominations to Treasury but has not published which tracts they are",
+   "51": "the Department of Housing and Community Development and the Virginia Economic Development Partnership ran the state's nomination process and have published no list (VEDP's 'Nominated Tracts' map layer is the 2018 list of 212), so no tract is shown as nominated",
    "34": "the Governor may nominate up to 129 tracts, and the Department of Community Affairs says the state will submit its nominations by the extended federal deadline of October 28, 2026; no list has been published, so no tract is shown as nominated",
    "26": "the Michigan Economic Development Corporation has not published its nominations (its page still describes the September process), so no tract is shown as nominated",
    "37": "the Department of Commerce has chosen its tracts (up to 202 under its preliminary allocation) and says it will share them once the Treasury certifies them, so no tract is shown as nominated",
@@ -11718,7 +11812,8 @@
    "28",
    "37",
    "45",
-   "47"
+   "47",
+   "51"
   ]
  },
  "public_property": {

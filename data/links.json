@@ -985,6 +985,34 @@
     "url": "https://www.virginiahousing.com/partners/rental-housing",
     "what": "Housing tax credits and multifamily financing for developers",
     "checked": "200"
+   },
+   {
+    "name": "Virginia Enterprise Zones",
+    "agency": "Virginia Department of Housing and Community Development",
+    "url": "https://www.dhcd.virginia.gov/vez",
+    "what": "State job creation and real property investment grants for businesses in the zones, alongside local incentives",
+    "checked": "200"
+   },
+   {
+    "name": "Virginia Main Street",
+    "agency": "Virginia Department of Housing and Community Development",
+    "url": "https://www.dhcd.virginia.gov/vms",
+    "what": "Training, technical help and grants for downtown revitalization organizations",
+    "checked": "200"
+   },
+   {
+    "name": "Tourism Zones",
+    "agency": "Virginia Tourism Corporation",
+    "url": "https://vatc.org/tourismzones/",
+    "what": "Virginia's local tourism zones and the incentives localities offer in them (incentives matrix)",
+    "checked": "200"
+   },
+   {
+    "name": "Fiscal stress",
+    "agency": "Commission on Local Government (Department of Housing and Community Development)",
+    "url": "https://www.dhcd.virginia.gov/fiscal-stress",
+    "what": "The state's ranking of counties and cities by fiscal stress",
+    "checked": "200"
    }
   ],
   "53": [
@@ -2294,6 +2322,81 @@
      "url": "https://www.njcrda.com/",
      "what": "The state authority that funds redevelopment projects in Atlantic City from casino reinvestment obligations",
      "checked": "200"
+    }
+   ]
+  },
+  "Richmond, VA": {
+   "state": "51",
+   "place_names": [
+    "Richmond city"
+   ],
+   "links": [
+    {
+     "name": "Economic development",
+     "agency": "City of Richmond Department of Economic Development",
+     "url": "https://www.rva.gov/economic-development",
+     "what": "City incentive programs (CARE rebates, technology zone, enterprise zones), business services and development projects",
+     "checked": "200"
+    }
+   ]
+  },
+  "Arlington, VA": {
+   "state": "51",
+   "place_names": [
+    "Arlington CDP"
+   ],
+   "links": [
+    {
+     "name": "Incentives and services",
+     "agency": "Arlington Economic Development (Arlington County)",
+     "url": "https://www.arlingtoneconomicdevelopment.com/Locate-in-Arlington/Incentives-Services",
+     "what": "Targeted local incentive programs and help with state and local incentives for businesses locating or growing in Arlington",
+     "checked": "200"
+    }
+   ]
+  },
+  "Alexandria, VA": {
+   "state": "51",
+   "place_names": [
+    "Alexandria city"
+   ],
+   "links": [
+    {
+     "name": "Taxes and incentives",
+     "agency": "Alexandria Economic Development Partnership",
+     "url": "https://alexandriaecon.org/business-climate/taxes-incentives/",
+     "what": "Local and state programs, grants and incentives, with financial support weighed project by project",
+     "checked": "200"
+    }
+   ]
+  },
+  "Norfolk, VA": {
+   "state": "51",
+   "place_names": [
+    "Norfolk city"
+   ],
+   "links": [
+    {
+     "name": "Incentives and capital overview",
+     "agency": "City of Norfolk Department of Economic Development",
+     "url": "https://norfolkdevelopment.com/resources/incentives-and-capital-overview/",
+     "what": "Local incentives and sources of capital for businesses in Norfolk",
+     "checked": "unverified"
+    }
+   ]
+  },
+  "Roanoke, VA": {
+   "state": "51",
+   "place_names": [
+    "Roanoke city"
+   ],
+   "links": [
+    {
+     "name": "Incentive programs",
+     "agency": "City of Roanoke",
+     "url": "https://www.roanokeva.gov/2941/Incentive-Programs",
+     "what": "City incentive programs for businesses in Roanoke",
+     "checked": "unverified"
     }
    ]
   }
