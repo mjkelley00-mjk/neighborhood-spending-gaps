@@ -459,7 +459,7 @@
     -71.915,
     44.979
    ],
-   "bytes": 5011381,
+   "bytes": 5192529,
    "counties": 62
   },
   {
@@ -5518,7 +5518,7 @@
   },
   "NY": {
    "rates": "current",
-   "rate_gaps": 3,
+   "rate_gaps": 6,
    "check": {
     "status": "checked",
     "source": "https://data.ny.gov/resource/ny73-2j3u.json",
