@@ -644,6 +644,48 @@
     "url": "https://www.nj.gov/dca/hmfa/developers/multifamily/",
     "what": "Multifamily and supportive housing financing for developers",
     "checked": "200"
+   },
+   {
+    "name": "Urban Enterprise Zones",
+    "agency": "New Jersey Department of Community Affairs",
+    "url": "https://www.nj.gov/dca/uez/",
+    "what": "The 32 zones, where certified retailers charge half the sales tax and businesses get other state incentives",
+    "checked": "200"
+   },
+   {
+    "name": "Aspire",
+    "agency": "New Jersey Economic Development Authority",
+    "url": "https://www.njeda.gov/aspire/",
+    "what": "Tax credits for commercial and residential redevelopment projects with a financing gap, larger in distressed areas",
+    "checked": "200"
+   },
+   {
+    "name": "Neighborhood Revitalization Tax Credit",
+    "agency": "New Jersey Department of Community Affairs",
+    "url": "https://www.nj.gov/dca/dhcr/offices/nrtc.shtml",
+    "what": "State business tax credits for companies that fund approved neighborhood revitalization plans",
+    "checked": "200"
+   },
+   {
+    "name": "Main Street New Jersey",
+    "agency": "New Jersey Department of Community Affairs",
+    "url": "https://www.nj.gov/dca/dlps/msnj.shtml",
+    "what": "Training, technical help and grants for downtown management organizations",
+    "checked": "200"
+   },
+   {
+    "name": "New Jersey Redevelopment Authority",
+    "agency": "New Jersey Redevelopment Authority",
+    "url": "https://www.njra.us/",
+    "what": "Financing and technical help for redevelopment projects in eligible urban municipalities",
+    "checked": "200"
+   },
+   {
+    "name": "Municipal Revitalization Index",
+    "agency": "New Jersey Department of Community Affairs",
+    "url": "https://www.nj.gov/dca/home/MuniRevitIndex.shtml",
+    "what": "The state's 2026 ranking of municipalities by distress, used to target aid and programs",
+    "checked": "200"
    }
   ],
   "35": [
@@ -2192,6 +2234,66 @@
      "url": "https://planning.omaha.gov/tax-increment-financing-process/",
      "what": "How TIF works in Omaha, the eligible areas, the application and annual reports",
      "checked": "browser"
+    }
+   ]
+  },
+  "Newark, NJ": {
+   "state": "34",
+   "place_names": [
+    "Newark city"
+   ],
+   "links": [
+    {
+     "name": "Invest Newark",
+     "agency": "Invest Newark (the city's economic development corporation)",
+     "url": "https://investnewark.org/",
+     "what": "Business services, capital, the city's Urban Enterprise Zone, the Newark Land Bank and Newark Fiber",
+     "checked": "200"
+    }
+   ]
+  },
+  "Jersey City, NJ": {
+   "state": "34",
+   "place_names": [
+    "Jersey City city"
+   ],
+   "links": [
+    {
+     "name": "Jersey City Economic Development Corporation",
+     "agency": "Jersey City Economic Development Corporation",
+     "url": "https://www.jcedc.org/",
+     "what": "Grants, low-interest loans and Urban Enterprise Zone incentives, including a UEZ lease subsidy grant",
+     "checked": "200"
+    }
+   ]
+  },
+  "Elizabeth, NJ": {
+   "state": "34",
+   "place_names": [
+    "Elizabeth city"
+   ],
+   "links": [
+    {
+     "name": "Elizabeth Development Company",
+     "agency": "Elizabeth Development Company",
+     "url": "https://www.edcnj.org/",
+     "what": "Urban Enterprise Zone certification, business loans, workforce programs and the Neighborhood Revitalization Tax Credit program",
+     "checked": "200"
+    }
+   ]
+  },
+  "Atlantic City, NJ": {
+   "state": "34",
+   "place_names": [
+    "Atlantic City city"
+   ],
+   "links": [
+    {
+     "name": "Casino Reinvestment Development Authority",
+     "agency": "Casino Reinvestment Development Authority (state)",
+     "url": "https://www.njcrda.com/",
+     "what": "The state authority that funds redevelopment projects in Atlantic City from casino reinvestment obligations",
+     "checked": "200"
     }
    ]
   }

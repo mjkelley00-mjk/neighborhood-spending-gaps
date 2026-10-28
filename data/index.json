@@ -431,7 +431,7 @@
     -73.922,
     41.293
    ],
-   "bytes": 2034871,
+   "bytes": 2309887,
    "counties": 21
   },
   {
@@ -808,7 +808,7 @@
     "one": "a New Jersey Urban Enterprise Zone",
     "many": "New Jersey Urban Enterprise Zones",
     "kind": "zone",
-    "desc": "Designated urban areas where participating retailers can charge half the state sales tax and businesses can get other state incentives (New Jersey Department of Community Affairs)."
+    "desc": "Designated urban areas where retailers the state certifies charge half the sales tax (3.3125%) on goods sold in person, not on meals, alcohol, cigarettes, vehicles or services, and businesses can get other state incentives; the 32 zones run through June 30, 2032 (New Jersey Department of Community Affairs)."
    },
    "or_ez": {
     "label": "Oregon Enterprise Zone",
@@ -1097,6 +1097,27 @@
     "many": "Innovation Zones",
     "kind": "zone",
     "desc": "Newark, New Brunswick and Camden, where investors get bonus Angel Investor tax credits and innovation programs give priority (New Jersey Economic Development Authority)."
+   },
+   "nj_anr": {
+    "label": "New Jersey area in need of redevelopment",
+    "one": "an area in need of redevelopment",
+    "many": "areas in need of redevelopment",
+    "kind": "zone",
+    "desc": "Areas a municipality has declared in need of redevelopment under the Local Redevelopment and Housing Law (N.J.S.A. 40A:12A), where it can adopt a redevelopment plan, grant long-term tax exemptions (payments in lieu of taxes) and, if the declaration allows, use eminent domain. The Department of Community Affairs' map is incomplete for declarations before July 2003."
+   },
+   "nj_nrtc": {
+    "label": "New Jersey Neighborhood Revitalization Tax Credit neighborhood",
+    "one": "a Neighborhood Revitalization Tax Credit neighborhood",
+    "many": "Neighborhood Revitalization Tax Credit neighborhoods",
+    "kind": "zone",
+    "desc": "Neighborhoods with a state-approved revitalization plan, where businesses that fund the plan's projects get a credit of 100% of the contribution against state business taxes (Department of Community Affairs)."
+   },
+   "nj_ms": {
+    "label": "Main Street New Jersey district",
+    "one": "a Main Street New Jersey district",
+    "many": "Main Street New Jersey districts",
+    "kind": "desig",
+    "desc": "Downtowns in the state's Main Street program, which gives their management organizations training, technical help and grants (Department of Community Affairs)."
    },
    "nj_fdc": {
     "label": "New Jersey Food Desert Community",
@@ -1496,6 +1517,24 @@
     "vintage": "updated September 2026",
     "url": "https://www.nj.gov/dca/uez/",
     "districts": 34
+   },
+   {
+    "id": "newark_sid",
+    "state": "34",
+    "program": "bid",
+    "where": "City of Newark",
+    "vintage": "city layer, April 2021 (from the 2018 state census)",
+    "url": "https://services1.arcgis.com/WAUuvHqqP3le2PMh/arcgis/rest/services/Newark_Improvement_Districts/FeatureServer/0",
+    "districts": 6
+   },
+   {
+    "id": "middlesex_sid",
+    "state": "34",
+    "program": "bid",
+    "where": "Middlesex County (site-specific incentives map)",
+    "vintage": "county layer, December 2021",
+    "url": "https://services.arcgis.com/BnY3izA2Kwu6jVHq/arcgis/rest/services/Site_Specific_Incentives_Map/FeatureServer/2",
+    "districts": 7
    },
    {
     "id": "or_ez",
@@ -2810,6 +2849,33 @@
     "vintage": "updated October 2024",
     "url": "https://services3.arcgis.com/SEYlksmdoU3040Qd/arcgis/rest/services/FoodSecurityGrant_FDCs/FeatureServer/0",
     "districts": 15
+   },
+   {
+    "id": "nj_anr",
+    "state": "34",
+    "program": "nj_anr",
+    "where": "New Jersey Department of Community Affairs",
+    "vintage": "updated September 2026",
+    "url": "https://services.arcgis.com/Aur8tCo478N3VovT/arcgis/rest/services/NJ_Areas_in_Need_of_Redevelopment/FeatureServer/0",
+    "districts": 1657
+   },
+   {
+    "id": "nj_nrtc",
+    "state": "34",
+    "program": "nj_nrtc",
+    "where": "New Jersey Department of Community Affairs",
+    "vintage": "updated October 2025",
+    "url": "https://www.nj.gov/dca/dhcr/offices/nrtc.shtml",
+    "districts": 37
+   },
+   {
+    "id": "nj_ms",
+    "state": "34",
+    "program": "nj_ms",
+    "where": "New Jersey Department of Community Affairs",
+    "vintage": "updated June 2025",
+    "url": "https://www.nj.gov/dca/dlps/msnj.shtml",
+    "districts": 29
    },
    {
     "id": "nj_bda",
@@ -5110,6 +5176,7 @@
    "02": "the state has sent its nominations to Treasury but has not published which tracts they are",
    "20": "the state has sent its nominations to Treasury but has not published which tracts they are",
    "40": "the state has sent its nominations to Treasury but has not published which tracts they are",
+   "34": "the Governor may nominate up to 129 tracts, and the Department of Community Affairs says the state will submit its nominations by the extended federal deadline of October 28, 2026; no list has been published, so no tract is shown as nominated",
    "26": "the Michigan Economic Development Corporation has not published its nominations (its page still describes the September process), so no tract is shown as nominated",
    "37": "the Department of Commerce has chosen its tracts (up to 202 under its preliminary allocation) and says it will share them once the Treasury certifies them, so no tract is shown as nominated",
    "45": "the state's map of its nominations disagrees with itself (113 or 115 tracts) and its page still says the list is under review, so no tract is shown as nominated",
