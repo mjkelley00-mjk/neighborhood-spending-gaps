@@ -501,7 +501,7 @@
     -80.541,
     41.957
    ],
-   "bytes": 2883925,
+   "bytes": 2920083,
    "counties": 88
   },
   {
@@ -515,7 +515,7 @@
     -94.456,
     36.965
    ],
-   "bytes": 1222919,
+   "bytes": 1227101,
    "counties": 77
   },
   {
@@ -599,7 +599,7 @@
     -81.752,
     36.637
    ],
-   "bytes": 1604438,
+   "bytes": 1604310,
    "counties": 95
   },
   {
@@ -669,7 +669,7 @@
     -117.05,
     48.989
    ],
-   "bytes": 1670419,
+   "bytes": 1671377,
    "counties": 39
   },
   {
@@ -697,7 +697,7 @@
     -87.07,
     46.853
    ],
-   "bytes": 1485200,
+   "bytes": 1485272,
    "counties": 72
   },
   {
@@ -866,6 +866,20 @@
     "many": "Illinois River Edge Redevelopment Zones",
     "kind": "zone",
     "desc": "Zones along rivers in a few Illinois cities where cleanup and redevelopment of environmentally challenged sites earn state tax credits, much like an enterprise zone (River Edge Redevelopment Zone Act)."
+   },
+   "oh_ez": {
+    "label": "Ohio Enterprise Zone",
+    "one": "an Ohio Enterprise Zone",
+    "many": "Ohio Enterprise Zones",
+    "kind": "zone",
+    "desc": "Areas where a city or county can exempt part of the property tax on a business's new or improved real property when it invests and adds jobs, by agreement for a set number of years (Ohio Enterprise Zone program, Ohio Revised Code 5709.61 to 5709.69)."
+   },
+   "oh_cra": {
+    "label": "Ohio Community Reinvestment Area",
+    "one": "an Ohio Community Reinvestment Area",
+    "many": "Ohio Community Reinvestment Areas",
+    "kind": "zone",
+    "desc": "Areas where a city, village or county exempts part or all of the property-tax increase from building or renovating homes or commercial buildings, for a set number of years (Community Reinvestment Area program, Ohio Revised Code 3735.65 to 3735.70)."
    },
    "ok_ez": {
     "label": "Oklahoma Enterprise Zone",
@@ -2062,6 +2076,51 @@
     "vintage": "County layer, current",
     "url": "https://gis.peoriacounty.gov/arcgis/rest/services/DP/Administrative/MapServer/5",
     "districts": 1
+   },
+   {
+    "id": "cbus_ez",
+    "state": "39",
+    "program": "oh_ez",
+    "where": "City of Columbus",
+    "vintage": "updated June 2024",
+    "url": "https://maps2.columbus.gov/arcgis/rest/services/Schemas/Development/MapServer/17",
+    "districts": 3
+   },
+   {
+    "id": "cbus_cra",
+    "state": "39",
+    "program": "oh_cra",
+    "where": "City of Columbus (commercial)",
+    "vintage": "updated August 2025",
+    "url": "https://maps2.columbus.gov/arcgis/rest/services/Schemas/Development/MapServer/4",
+    "districts": 12
+   },
+   {
+    "id": "stark_ez",
+    "state": "39",
+    "program": "oh_ez",
+    "where": "Stark County Regional Planning Commission",
+    "vintage": "updated December 2025",
+    "url": "https://scgisa.starkcountyohio.gov/arcgis/rest/services/RegionalPlanningCommission/EconomicDevelopmentZones/MapServer/1",
+    "districts": 6
+   },
+   {
+    "id": "stark_cra",
+    "state": "39",
+    "program": "oh_cra",
+    "where": "Stark County Regional Planning Commission",
+    "vintage": "updated December 2025",
+    "url": "https://scgisa.starkcountyohio.gov/arcgis/rest/services/RegionalPlanningCommission/EconomicDevelopmentZones/MapServer/0",
+    "districts": 12
+   },
+   {
+    "id": "lucas_cra",
+    "state": "39",
+    "program": "oh_cra",
+    "where": "Lucas County Auditor",
+    "vintage": "updated December 2025",
+    "url": "https://lcaudgis.co.lucas.oh.us/gisaudserver/rest/services/Hosted/Community_Reinvestment_Area_CRAs_/FeatureServer/10",
+    "districts": 39
    },
    {
     "id": "fortbend_tirz",
@@ -4797,7 +4856,7 @@
    "dda27": "HUD 2027 list (FY2026 rents and income limits)",
    "hubzone": "SBA HUBZone map, current designations",
    "transit": "stations as of 2026-10-26",
-   "oz2n": "state lists as of 2026-10-27"
+   "oz2n": "state lists as of 2026-10-28"
   },
   "hubzone_fetched": "2026-10-26",
   "transit": {
@@ -4886,7 +4945,7 @@
    "40": "the state has sent its nominations to Treasury but has not published which tracts they are",
    "37": "the state has sent its nominations to Treasury but has not published which tracts they are",
    "45": "the state's map of its nominations disagrees with itself (113 or 115 tracts) and its page still says the list is under review, so no tract is shown as nominated",
-   "39": "the state has published a 130-tract list under review, not its final nominations, so no tract is shown as nominated",
+   "39": "the state has published a 130-tract list under review, not its final nominations, and says it will publish the final list once the Treasury confirms it, so no tract is shown as nominated",
    "55": "the state has published its finalists, not its final nominations, so no tract is shown as nominated",
    "30": "the state's map still shows four tracts under discussion, so its list is not final and no tract is shown as nominated"
   }
@@ -5681,7 +5740,7 @@
   },
   "TN": {
    "rates": "current",
-   "rate_gaps": 5,
+   "rate_gaps": 4,
    "check": {
     "status": "no local data published",
     "source": "https://www.tn.gov/revenue.html",
@@ -5762,7 +5821,7 @@
   },
   "WA": {
    "rates": "current",
-   "rate_gaps": 1,
+   "rate_gaps": 2,
    "check": {
     "status": "checked",
     "source": "https://apps.dor.wa.gov/ResearchStats/Content/QuarterlyBusinessReview/Report.aspx",
