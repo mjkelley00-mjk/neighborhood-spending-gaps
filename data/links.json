@@ -76,7 +76,7 @@
    "agency": "U.S. Department of Agriculture",
    "url": "https://www.rd.usda.gov/programs-services/business-programs",
    "what": "Business & Industry loan guarantees, rural business grants and other loans for rural businesses and co-ops",
-   "checked": "200"
+   "checked": "browser"
   },
   {
    "name": "Brownfields: types of funding",
@@ -137,9 +137,9 @@
    {
     "name": "Incentives",
     "agency": "Arizona Commerce Authority",
-    "url": "https://www.azcommerce.com/incentives/",
+    "url": "https://www.azcommerce.com/programs/",
     "what": "State tax credits, exemptions and incentive programs for business investment and jobs",
-    "checked": "200"
+    "checked": "browser"
    }
   ],
   "05": [
@@ -187,14 +187,14 @@
     "agency": "Colorado Office of Economic Development and International Trade",
     "url": "https://oedit.colorado.gov/programs-and-funding",
     "what": "Searchable list of state grants, loans and tax credits for businesses and communities",
-    "checked": "200"
+    "checked": "browser"
    },
    {
     "name": "Enterprise Zone Program",
     "agency": "Colorado Office of Economic Development and International Trade",
     "url": "https://oedit.colorado.gov/enterprise-zone-program",
     "what": "State income tax credits for business investment in designated enterprise zones",
-    "checked": "200"
+    "checked": "browser"
    },
    {
     "name": "Rental housing",
@@ -279,7 +279,7 @@
     "agency": "FloridaCommerce",
     "url": "https://floridajobs.org/business-growth/incentives---grants",
     "what": "State business incentives, Job Growth Grant Fund and rural programs",
-    "checked": "200"
+    "checked": "browser"
    },
    {
     "name": "Multifamily programs",
@@ -295,7 +295,7 @@
     "agency": "Georgia Department of Economic Development",
     "url": "https://georgia.org/business-support/incentives",
     "what": "State job tax credits, sales tax exemptions and other business incentives",
-    "checked": "200"
+    "checked": "browser"
    }
   ],
   "15": [
@@ -327,7 +327,7 @@
     "agency": "Idaho Department of Commerce",
     "url": "https://commerce.idaho.gov/incentives/",
     "what": "State tax incentives, grants and external financing resources",
-    "checked": "200"
+    "checked": "browser"
    },
    {
     "name": "Developers",
@@ -446,7 +446,7 @@
     "agency": "Maine Department of Economic and Community Development",
     "url": "https://www.maine.gov/decd/business-development/",
     "what": "State business assistance, tax incentive and financing programs",
-    "checked": "200"
+    "checked": "browser"
    },
    {
     "name": "Finance Authority of Maine (FAME)",
@@ -490,9 +490,9 @@
    {
     "name": "Programs and grants (EOED)",
     "agency": "Massachusetts Executive Office of Economic Development",
-    "url": "https://www.mass.gov/service-details/business-development",
+    "url": "https://www.mass.gov/info-details/eoed-programs-and-grants-business-and-innovation",
     "what": "State business development programs and grants, including EDIP tax credits",
-    "checked": "200"
+    "checked": "browser"
    },
    {
     "name": "Developing new multifamily housing",
@@ -515,6 +515,27 @@
     "agency": "Michigan State Housing Development Authority",
     "url": "https://www.michigan.gov/mshda/developers",
     "what": "Housing tax credits and multifamily loan programs for developers",
+    "checked": "200"
+   },
+   {
+    "name": "Community development tax exemptions",
+    "agency": "Michigan Department of Treasury",
+    "url": "https://www.michigan.gov/taxes/property/exemptions/community-development",
+    "what": "Obsolete Property Rehabilitation, Commercial Rehabilitation and Neighborhood Enterprise Zone property tax abatements",
+    "checked": "browser"
+   },
+   {
+    "name": "Michigan Community Revitalization Program",
+    "agency": "Michigan Economic Development Corporation",
+    "url": "https://www.miplace.org/programs/michigan-community-revitalization-program/",
+    "what": "Grants and loans for redeveloping buildings in traditional downtowns and corridors",
+    "checked": "200"
+   },
+   {
+    "name": "Redevelopment Ready Communities",
+    "agency": "Michigan Economic Development Corporation",
+    "url": "https://www.miplace.org/programs/redevelopment-ready-communities/",
+    "what": "The state certification of communities ready for redevelopment, with a monthly map of participants",
     "checked": "200"
    }
   ],
@@ -709,7 +730,8 @@
     "agency": "Ohio Department of Development",
     "url": "https://development.ohio.gov/business",
     "what": "State tax credits, loans, brownfield and other business programs",
-    "checked": "browser"
+    "checked": "browser",
+    "script_answer": "404"
    },
    {
     "name": "Development division",
@@ -881,7 +903,7 @@
     "agency": "Utah Housing Corporation",
     "url": "https://utahhousingcorp.org/multifamily/",
     "what": "Housing tax credits and multifamily financing for developers",
-    "checked": "200"
+    "checked": "browser"
    }
   ],
   "50": [
@@ -1146,7 +1168,7 @@
      "agency": "City of San Antonio Economic Development Department",
      "url": "https://www.sa.gov/Directory/Departments/EDD/Programs-Grants/Industry-Incentives-Grants",
      "what": "City tax abatements, Chapter 380 grants, SBIR and second-stage company grants",
-     "checked": "200"
+     "checked": "browser"
     }
    ]
   },
@@ -1242,7 +1264,7 @@
      "agency": "City of Fort Worth Economic Development",
      "url": "https://www.fortworthtexas.gov/departments/econdev/revitalization/developer-portal",
      "what": "City catalytic development incentives, historic site tax exemption, facade grants and parking-lot redevelopment incentives",
-     "checked": "200"
+     "checked": "browser"
     }
    ]
   },
@@ -1257,7 +1279,7 @@
      "agency": "City of San Jose Office of Economic Development and Cultural Affairs",
      "url": "https://www.sjeconomy.com/how-we-help/programs-and-services",
      "what": "City business assistance, storefront grants, foreign trade zone and state incentive referrals",
-     "checked": "200"
+     "checked": "browser"
     }
    ]
   },
@@ -1272,7 +1294,7 @@
      "agency": "City of Columbus",
      "url": "https://www.columbus.gov/Business-Development/Economic-Development",
      "what": "City tax abatements, business attraction and small business programs",
-     "checked": "200"
+     "checked": "browser"
     }
    ]
   },
@@ -1287,7 +1309,7 @@
      "agency": "City of Charlotte",
      "url": "https://www.charlottenc.gov/Growth-and-Development/Economic-Development/Business-Recruitment-and-Expansion",
      "what": "City Business Investment Grants (property tax reimbursement) for new investment",
-     "checked": "200"
+     "checked": "browser"
     }
    ]
   },
@@ -1367,9 +1389,9 @@
     {
      "name": "Job Creation Program",
      "agency": "City of Oklahoma City Economic Development",
-     "url": "https://www.okc.gov/departments/economic-development/job-creation-program",
+     "url": "https://www.okc.gov/Infrastructure-Development/Economic-Development/Job-Creation-Program",
      "what": "City Strategic Investment Program pay-for-performance incentives for employers creating quality jobs",
-     "checked": "200"
+     "checked": "browser"
     }
    ]
   },
@@ -1503,7 +1525,7 @@
      "agency": "Louisville Metro Economic Development",
      "url": "https://louisvilleky.gov/government/economic-development/services/incentives",
      "what": "Metro TIF, METCO small business loans and state incentive referrals",
-     "checked": "200"
+     "checked": "browser"
     }
    ]
   },
@@ -1560,9 +1582,9 @@
     {
      "name": "Business Toolbox",
      "agency": "City of Milwaukee Department of City Development",
-     "url": "https://city.milwaukee.gov/DCD/BusinessToolbox",
+     "url": "https://city.milwaukee.gov/dcd/business-toolbox",
      "what": "City commercial revitalization grants, TIF, brownfield and loan resources",
-     "checked": "200"
+     "checked": "browser"
     }
    ]
   },
@@ -1584,7 +1606,7 @@
      "agency": "Bernalillo County Economic Development",
      "url": "https://www.bernco.gov/economic-development/business-support/",
      "what": "County IRBs, LEDA, C-PACE, impact fee exemption and brownfields programs",
-     "checked": "200"
+     "checked": "browser"
     }
    ]
   },
@@ -1684,11 +1706,11 @@
    ],
    "links": [
     {
-     "name": "Initiatives and programs",
-     "agency": "City of Kansas City Office of Economic Development",
-     "url": "https://www.kcmo.gov/city-hall/departments/city-manager-s-office/office-of-economic-development/initiatives-and-programs",
-     "what": "City-administered MDFB tax credit and Chapter 353 abatement projects",
-     "checked": "200"
+     "name": "KC BizCare",
+     "agency": "City of Kansas City, MO (KC BizCare)",
+     "url": "https://bizcare.kcmo.gov/",
+     "what": "City help for small businesses: starting a business, licenses and permits, and a directory of the area's small business resources and support organizations",
+     "checked": "browser"
     }
    ]
   },
@@ -1718,7 +1740,7 @@
      "agency": "City of Raleigh",
      "url": "https://raleighnc.gov/doing-business/services/small-business-grants",
      "what": "City building up-fit and facade grants; state and county grant referrals",
-     "checked": "200"
+     "checked": "browser"
     }
    ]
   },
@@ -1733,7 +1755,7 @@
      "agency": "City of Miami",
      "url": "https://www.miami.gov/My-Government/Departments/Economic-Innovation-and-Development",
      "what": "City economic development department and business programs",
-     "checked": "200"
+     "checked": "browser"
     },
     {
      "name": "Economic development",
@@ -1792,7 +1814,7 @@
      "agency": "City of Oakland Economic and Workforce Development",
      "url": "https://www.oaklandca.gov/Business/For-Business-Owners/Neighborhood-Business-Assistance",
      "what": "City business assistance, grants and loan referrals",
-     "checked": "200"
+     "checked": "browser"
     }
    ]
   },
@@ -1878,10 +1900,10 @@
    "links": [
     {
      "name": "Incentives",
-     "agency": "City of Arlington Economic Development",
-     "url": "https://www.arlingtontx.gov/city_hall/departments/economic_development/site_selection_resources/incentives",
-     "what": "City tax abatements, Chapter 380 grants, TIRZ and fee waivers",
-     "checked": "200"
+     "agency": "Arlington Economic Development Corporation",
+     "url": "https://arlingtontxedc.com/do-business-here/incentives-financing",
+     "what": "Tax increment reinvestment zones (TIRZ), EDC grants and incentives negotiated case by case",
+     "checked": "browser"
     }
    ]
   },
@@ -1970,7 +1992,7 @@
      "agency": "City of Anaheim",
      "url": "https://www.anaheim.gov/5239/Commercial-Incentives",
      "what": "City utility rebates, hiring incentives and development fee programs",
-     "checked": "200"
+     "checked": "browser"
     }
    ]
   },
@@ -1985,7 +2007,7 @@
      "agency": "City of Henderson",
      "url": "https://www.cityofhenderson.com/government/departments/economic-development",
      "what": "City economic development office and state incentive referrals",
-     "checked": "200"
+     "checked": "browser"
     }
    ]
   },
@@ -2086,9 +2108,9 @@
     {
      "name": "Business support",
      "agency": "Village of Oak Park Office of Economic Vitality",
-     "url": "https://www.oak-park.us/Building-Business/Office-of-Economic-Vitality/Business-Support",
+     "url": "https://www.oak-park.us/Building-Business/Economic-Vitality/Business-Support",
      "what": "Village facade and small business grants; Cook County tax incentive classes",
-     "checked": "200"
+     "checked": "browser"
     },
     {
      "name": "Bureau of Economic Development",
@@ -2123,9 +2145,9 @@
     {
      "name": "Incentives",
      "agency": "City of Joliet",
-     "url": "https://www.joliet.gov/business/economic-development/incentives",
+     "url": "https://www.joliet.gov/Business/Economic-Development/Incentives",
      "what": "City TIF, enterprise zones, River Edge and Opportunity Zones",
-     "checked": "200"
+     "checked": "browser"
     }
    ]
   },

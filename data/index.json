@@ -53,7 +53,7 @@
     -89.855,
     36.484
    ],
-   "bytes": 855413,
+   "bytes": 856391,
    "counties": 75
   },
   {
@@ -67,7 +67,7 @@
     -114.273,
     41.852
    ],
-   "bytes": 8918621,
+   "bytes": 8919150,
    "counties": 58
   },
   {
@@ -137,7 +137,7 @@
     -80.038,
     30.976
    ],
-   "bytes": 4623273,
+   "bytes": 4624827,
    "counties": 67
   },
   {
@@ -151,7 +151,7 @@
     -80.85,
     34.979
    ],
-   "bytes": 2675966,
+   "bytes": 2676013,
    "counties": 159
   },
   {
@@ -193,7 +193,7 @@
     -87.53,
     42.488
    ],
-   "bytes": 3279258,
+   "bytes": 3279984,
    "counties": 102
   },
   {
@@ -319,7 +319,7 @@
     -82.425,
     48.045
    ],
-   "bytes": 2573022,
+   "bytes": 2587860,
    "counties": 83
   },
   {
@@ -459,7 +459,7 @@
     -71.915,
     44.979
    ],
-   "bytes": 5192529,
+   "bytes": 5193144,
    "counties": 62
   },
   {
@@ -501,7 +501,7 @@
     -80.541,
     41.957
    ],
-   "bytes": 2920083,
+   "bytes": 2920347,
    "counties": 88
   },
   {
@@ -543,7 +543,7 @@
     -74.7,
     42.216
    ],
-   "bytes": 3325296,
+   "bytes": 3325911,
    "counties": 67
   },
   {
@@ -613,7 +613,7 @@
     -93.699,
     36.41
    ],
-   "bytes": 6408246,
+   "bytes": 6408820,
    "counties": 254
   },
   {
@@ -2225,6 +2225,51 @@
     "vintage": "updated August 2026",
     "url": "https://services.arcgis.com/SkuMuJtaYy87PKot/arcgis/rest/services/MUD_and_TIRZ_Districts/FeatureServer/6",
     "districts": 2
+   },
+   {
+    "id": "detroit_biz",
+    "state": "26",
+    "program": "bid",
+    "where": "City of Detroit",
+    "vintage": "updated June 2025",
+    "url": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Downtown_Detroit_Partnership_(DDP)_BIZ_Boundary/FeatureServer/0",
+    "districts": 1
+   },
+   {
+    "id": "oak_auth",
+    "state": "26",
+    "program": "tif",
+    "where": "Oakland County (development authorities)",
+    "vintage": "county layer, current",
+    "url": "https://gisservices.oakgov.com/arcgis/rest/services/Enterprise/EnterpriseOpenPlanningMapService/MapServer/2",
+    "districts": 39
+   },
+   {
+    "id": "gr_cia",
+    "state": "26",
+    "program": "tif",
+    "where": "City of Grand Rapids (corridor improvement authorities)",
+    "vintage": "updated September 2026",
+    "url": "https://services2.arcgis.com/L81TiOwAPO1ZvU9b/arcgis/rest/services/CGR_Corridor_Improvement_Authority/FeatureServer/0",
+    "districts": 6
+   },
+   {
+    "id": "gr_dda",
+    "state": "26",
+    "program": "tif",
+    "where": "City of Grand Rapids",
+    "vintage": "City layer, current",
+    "url": "https://maps.grcity.us/arcgis/rest/services/ArcGIS_Online/Econ_Dev/MapServer/11",
+    "districts": 1
+   },
+   {
+    "id": "gr_did",
+    "state": "26",
+    "program": "bid",
+    "where": "City of Grand Rapids",
+    "vintage": "City layer, current",
+    "url": "https://maps.grcity.us/arcgis/rest/services/ArcGIS_Online/Econ_Dev/MapServer/10",
+    "districts": 1
    },
    {
     "id": "detroit_auth",
@@ -5065,6 +5110,7 @@
    "02": "the state has sent its nominations to Treasury but has not published which tracts they are",
    "20": "the state has sent its nominations to Treasury but has not published which tracts they are",
    "40": "the state has sent its nominations to Treasury but has not published which tracts they are",
+   "26": "the Michigan Economic Development Corporation has not published its nominations (its page still describes the September process), so no tract is shown as nominated",
    "37": "the Department of Commerce has chosen its tracts (up to 202 under its preliminary allocation) and says it will share them once the Treasury certifies them, so no tract is shown as nominated",
    "45": "the state's map of its nominations disagrees with itself (113 or 115 tracts) and its page still says the list is under review, so no tract is shown as nominated",
    "39": "the state has published a 130-tract list under review, not its final nominations, and says it will publish the final list once the Treasury confirms it, so no tract is shown as nominated",
