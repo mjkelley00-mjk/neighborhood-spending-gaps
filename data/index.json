@@ -543,7 +543,7 @@
     -74.7,
     42.216
    ],
-   "bytes": 3320034,
+   "bytes": 3325296,
    "counties": 67
   },
   {
@@ -1265,6 +1265,13 @@
     "many": "designated TOD sites",
     "kind": "tod",
     "desc": "Station areas the state designates for transit-oriented development: priority for state funding and incentives and eligibility for tax increment financing (Maryland Department of Transportation)."
+   },
+   "pa_criz": {
+    "label": "Pennsylvania City Revitalization and Improvement Zone",
+    "one": "a City Revitalization and Improvement Zone",
+    "many": "City Revitalization and Improvement Zones",
+    "kind": "tif",
+    "desc": "Zones in Bethlehem, Lancaster, Tamaqua, Erie and Reading where the growth in state and local taxes paid by businesses in the zone (above each business's baseline, plus the taxes of new businesses), sales tax included, goes to repay bonds for development projects there instead of to the general fund (Pennsylvania Department of Revenue)."
    },
    "phl_toc": {
     "label": "Philadelphia transit-oriented overlay",
@@ -2234,7 +2241,7 @@
     "where": "City of Philadelphia",
     "vintage": "updated October 2025",
     "url": "https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/business_improvement_districts/FeatureServer/0",
-    "districts": 14
+    "districts": 17
    },
    {
     "id": "ca_dac",
@@ -2640,6 +2647,33 @@
     "vintage": "September 2026",
     "url": "https://services5.arcgis.com/ZTbCl7IqVy1LQh5d/arcgis/rest/services/MS_Boundaries_2026_09_30/FeatureServer/0",
     "districts": 31
+   },
+   {
+    "id": "lancaster_criz",
+    "state": "42",
+    "program": "pa_criz",
+    "where": "City of Lancaster, Pennsylvania (parcels)",
+    "vintage": "City layer (2015 boundary), edited February 2026",
+    "url": "https://services1.arcgis.com/jdavPUqnBVRDsKgB/arcgis/rest/services/CRIZ_06102015/FeatureServer/0",
+    "districts": 1
+   },
+   {
+    "id": "bethlehem_criz",
+    "state": "42",
+    "program": "pa_criz",
+    "where": "City of Bethlehem (parcels)",
+    "vintage": "City layer, edited September 2025",
+    "url": "https://services2.arcgis.com/NlbUAihbvA50xxJw/arcgis/rest/services/CED_Economic_Development_Districts_View/FeatureServer/0",
+    "districts": 1
+   },
+   {
+    "id": "erie_criz",
+    "state": "42",
+    "program": "pa_criz",
+    "where": "City of Erie (parcels)",
+    "vintage": "City layer, edited May 2025",
+    "url": "https://services9.arcgis.com/C1vLdjInR9f4S13a/arcgis/rest/services/CRIZ_Parcels_View_for_Public_View/FeatureServer/2",
+    "districts": 1
    },
    {
     "id": "phl_toc",
