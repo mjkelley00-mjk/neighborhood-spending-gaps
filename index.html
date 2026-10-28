@@ -505,7 +505,7 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,su
             <li><strong>Chicago</strong> has the City's 77 community areas (from the City's 2020 tract assignments; eight tracts missing from that file, three of them in South Shore, are placed in the community area that holds most of their area) and the City's 98 neighborhoods; a few, such as Magnificent Mile, are much smaller than a tract and carry the same warning. Names in common use that are not official, such as Pilsen, come from Who's On First, and searching one that sits inside a community area, such as Pilsen in Lower West Side, also offers the community area.</li>
             <li><strong>Fit</strong> measures how well the tracts trace a boundary, not whether the boundary itself is right: their overlap as a share of the area and the tracts combined (100% is exact). Each area takes the tracts with at least half their area inside it, or the one tract that covers most of it. The page also says what share of the area the tracts cover and what share of the tracts lies inside it.</li>
             <li><strong>ZIP codes</strong> are Census ZCTAs: the tracts with at least half their land in the ZCTA, or the one tract that covers most of it, with fit measured on land area. They will not match postal ZIPs exactly.</li>
-            <li><strong>Cities and towns</strong> are Census places: the tracts with at least half their blocks in the place.</li>
+            <li><strong>Cities and towns</strong> are Census places: the tracts with at least half their blocks in the place. A town that makes up less than half of every tract it touches (most towns under a few thousand people, and a few spread-out places) opens the tract that holds the most of it, and the page says the figures cover that whole tract and, when that tract holds under half the town, how much of it.</li>
             <li><strong>Suggested areas:</strong> anyone can suggest a selection of tracts as a named area. It shows in their own search on that device at once, and in everyone's once it is reviewed and approved, labeled as a suggestion. The page does not ask who is suggesting and saves nothing about them.</li>
             <li>Boundaries are 2024 Census cartographic files (2020 tracts), simplified for the map. Tracts that are only water have no households and are not drawn.</li>
             <li><strong>Streets</strong> on the map come from OpenStreetMap. Pointing at a tract (or tapping it on a phone), zoomed in to street level, lists the named streets that run along its edges, matched within about 45 meters of the simplified tract lines, so now and then a name is missed or a nearby parallel street is listed. Only streets in the part of the map on screen are checked.</li>
@@ -682,7 +682,7 @@ function buildSearch() {
     if (alias) SEARCH.push(Object.assign({}, it, {key:alias.toLowerCase(), via:'also called ' + alias}));
     if (ST.fips === '17' && kind === 'Community area') for (const nb of CHI_INCLUDES[n] || []) SEARCH.push(Object.assign({}, it, {key:nb.toLowerCase(), via:'includes ' + nb}));
   }
-  for (const p of Object.values(ST.places)) { const pn = placeName(p.name); SEARCH.push({kind:pn.kind, label:pn.base, tracts:p.tracts, key:pn.base.toLowerCase(), full:pn.full.toLowerCase(), src:'place'}); }
+  for (const p of Object.values(ST.places)) { const pn = placeName(p.name); SEARCH.push({kind:pn.kind, label:pn.base, tracts:p.tracts, key:pn.base.toLowerCase(), full:pn.full.toLowerCase(), src:'place', ...(p.part ? {part:p.part} : {})}); }
   const byC = {}; for (const g of Object.keys(ST.tracts)) (byC[g.slice(0,5)] ||= []).push(g);
   for (const [k, n] of Object.entries(ST.counties)) if (byC[k]) SEARCH.push({kind:'County', label:n, tracts:byC[k], key:n.toLowerCase(), src:'county', fit:1, cover:1, inside:1});
   for (const [z, v] of Object.entries(ST.zips)) { const [ts, fit, cover, inside] = v; SEARCH.push({kind:'ZIP code', label:z, tracts:ts, key:z, src:'zcta', fit, cover, inside}); }
@@ -1911,7 +1911,7 @@ const Gate = (() => {
 // ---------- render ----------
 function fitText(m) {
   if (!m || m.src === 'county') return '';
-  if (m.src === 'place') return 'Census place: the tracts with at least half their blocks in the city or town. Edges follow tract lines, not the city limit.';
+  if (m.src === 'place') return m.part ? (m.part >= 50 ? 'Census place smaller than its census tract: the tract that holds most of the town, which also takes in the area around it.' : `Census place spread over several census tracts without making up half of any: the tract that holds the most of it (${m.part}% of its census blocks), which also takes in the area around it.`) : 'Census place: the tracts with at least half their blocks in the city or town. Edges follow tract lines, not the city limit.';
   if (m.src === 'suggested') return `A suggested area, approved for the page; the tracts are exactly the ones suggested.`;
   if (m.src === 'suggested-pending') return `A suggested area that ${m.status === 'declined' ? 'was not approved' : m.status === 'removed' ? 'was taken out of the site\'s search' : 'has not been reviewed yet'}; the tracts are exactly the ones suggested.`;
   if (m.fit == null) return '';
@@ -1994,6 +1994,7 @@ function summaryText(r) {
   const vt = visitorText(visitorInfo(sel, r)); if (vt) w.push(vt);
   for (const zt of zbpUnnamedText(sel)) w.push(zt);
   for (const pn of placeNotes(sel, 'warn', {visitor: !!vt})) w.push(pn);
+  if (selMeta && selMeta.part) w.unshift(selMeta.part >= 50 ? `${esc(selMeta.label)} is smaller than a census tract, the smallest area these figures cover, so these are the figures for the census tract that holds most of it, which also takes in the area around it.` : `${esc(selMeta.label)} is spread over several census tracts, the smallest areas these figures cover, without making up half of any, so these are the figures for the tract that holds the most of it (${selMeta.part}% of its census blocks), which also takes in the area around it.`);
   return {lead, w};
 }
 // LODES workplace sectors CNS01-CNS20, in Census order; the three the store-sales estimate draws on are flagged
