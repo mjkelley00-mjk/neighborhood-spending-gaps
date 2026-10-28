@@ -467,7 +467,7 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,su
           <h4>Local sales: two estimates</h4>
           <ul>
             <li><strong>Jobs-based (LEHD LODES 2023):</strong> retail, food-service and personal-service jobs on each block, split into store types by the ZIP's industry mix and aligned with Economic Census employment for the state.</li>
-            <li><strong>ZIP-based (ZIP Business Patterns 2023):</strong> each ZIP's employment by store type, with each Census-suppressed size class given the fewest stores the suppression rule allows, each store counted at its size class's midpoint, and the remainder scaled to the ZIP's published sector total, then allocated to tracts by their share of the ZIP's jobs in that sector.</li>
+            <li><strong>ZIP-based (ZIP Business Patterns 2023):</strong> each ZIP's employment by store type, with each Census-suppressed size class given the fewest stores the suppression rule allows, each store counted at its size class's midpoint, and the remainder scaled to the ZIP's published sector total, then allocated to tracts by their share of the ZIP's jobs in that sector. ZIP Business Patterns leaves a kind of business unnamed where a ZIP has only one or two of them, and both estimates split a ZIP's jobs by the kinds it names, so unnamed stores are counted as the named kinds. Where some of a ZIP's businesses in a sector are unnamed (outside the named kinds, or inside a named kind beyond its named sub-kinds) and none of the named ones is a kind this site counts, the unnamed businesses are split, on both estimates, by the kinds of business Census leaves unnamed in the state's counties of the same kind, metropolitan, small-city or rural (County Business Patterns 2023 counts each county's businesses by kind wherever a county has three or more of a kind, and the state's count supplies the rest; what each county's ZIP codes name is taken away), each at its kind's typical size there (the middle of its size classes, or, for a kind too rare there to have one, such as department stores in rural counties, the middle over all counties), within the sector jobs the named kinds leave. A ZIP with only one or two businesses in a sector has no row for it at all, and some ZIP codes with jobs aren't listed at all (campuses, public or tribal employers, or businesses counted under a neighboring ZIP code); the ZIP-based estimate counts none there. Where any of this covers a quarter or more of an area's retail, service or restaurant jobs, the page says so. This estimate puts more jobs in gas stations with convenience stores than County Business Patterns' state employment does (up to 1.59 times, in Massachusetts) and fewer in other gas stations (below it in 47 states and DC); across all gas stations it runs from 0.88 to 1.57 times County Business Patterns (California 1.26, Illinois 1.20), so gas sales on the ZIP-based estimate may be over- or understated, and are most likely overstated in New England (Massachusetts, Connecticut, New Hampshire); that is under review.</li>
             <li><strong>Fitness and child care:</strong> gyms and studios, golf courses, bowling centers, ski areas and other recreation, sports, dance and music instruction, and day care centers. Workplace job counts for these industries are mostly public schools, hospitals, casinos and museums, so both estimates use each ZIP's own ZIP Business Patterns rows for them (scaled so their US employment matches the 2022 Economic Census), placed in the ZIP's tracts by their share of its gyms and studios or child care centers listed on Overture Maps (or of its residents where it lists none); each ZIP's marinas are taken out of recreation. Their demand comes from the survey's detailed items by income: club memberships, fees for participant sports and recreational lessons; and babysitting, child care, day care and preschool. Self-employed child care (mostly home day care) and recreation are added by county, placed the same way.</li>
             <li><strong>Both estimates</strong> add self-employed businesses (Census Nonemployer Statistics 2024) for restaurants, bars, salons, barbers and other personal care, auto repair, coin laundries and dry cleaners: each county's receipts, placed in tracts by their share of the county's jobs in that industry. Self-employed retail sellers are left out, because most of their sales are online or direct, and so are food trucks, which the Census reports together with caterers.</li>
           </ul>
@@ -482,7 +482,7 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,su
           <details class="cov"><summary>State by state: sales-tax rates and checks</summary><div class="tablewrap"><table id="coverage"></table></div></details>
           <h4>Similar places, the surrounding region and visitors</h4>
           <ul>
-            <li><strong>Similar places:</strong> every Census place (tracts at least half in it), county and named neighborhood in the US with at least 300 households is grouped by kind, setting and population; neighborhoods are filtered as the search filters them, and neighborhoods that cover the same tracts count once. Setting is the county's: in a metropolitan or micropolitan area, or neither (OMB delineation, July 2023); a neighborhood's setting is whether the city holding most of its households has 250,000 people or more. Groups with fewer than 30 areas are merged with a neighboring population band. Small towns count only when a tract lies at least half inside them, so the groups for towns under 2,500 people are small (about 100–550 places) and lean toward towns that fill a whole tract. A ZIP code or hand-picked selection is compared as a neighborhood when most of its households live in such a city, or in a smaller city with at least twice its residents (then with neighborhoods of smaller cities), otherwise as a city or town; a suggested area is compared as a neighborhood. The page leads with this comparison: a category's gap against similar places is resident spending × (their median retention − retention here), and its rank among them (bottom quarter, middle half, top quarter) decides whether spending reads as going elsewhere or drawing shoppers in. The national norm stays beside it as a second yardstick: higher than the typical one for most neighborhoods, lower for many regional towns and small cities. A total against similar places adds up each category's own gap; it is not the total of any one typical place.</li>
+            <li><strong>Similar places:</strong> every Census place (tracts at least half in it), county and named neighborhood in the US with at least 300 households is grouped by kind, setting and population; neighborhoods are filtered as the search filters them, and neighborhoods that cover the same tracts count once. Setting is the county's: in a metropolitan or micropolitan area, or neither (OMB delineation, July 2023); a neighborhood's setting is whether the city holding most of its households has 250,000 people or more. Groups with fewer than 30 areas are merged with a neighboring population band. Small towns count only when a tract lies at least half inside them, so the groups for towns under 2,500 people are small (about 100–550 places) and lean toward towns that fill a whole tract. A ZIP code or hand-picked selection is compared as a neighborhood when most of its households live in such a city, or in a smaller city with at least twice its residents (then with neighborhoods of smaller cities), otherwise as a city or town; a suggested area is compared as a neighborhood. The page leads with this comparison: a category's gap against similar places is resident spending × (their median retention − retention here), each counted as at most 1.0: a rate above 1.0 means a place also draws in shoppers from elsewhere, which is not its residents' spending, so the gap compares only how much of residents' own spending stays and never exceeds what they spend; and its rank among them (bottom quarter, middle half, top quarter) decides whether spending reads as going elsewhere or drawing shoppers in. The national norm stays beside it as a second yardstick: higher than the typical one for most neighborhoods, lower for many regional towns and small cities. A total against similar places adds up each category's own gap; it is not the total of any one typical place.</li>
             <li><strong>The surrounding region</strong> sums the projected leakage of every tract whose interior point lies within 10, 25 or 50 miles of a selected tract's, including neighboring states.</li>
             <li><strong>Visitor economy:</strong> an area is flagged when at least 50 of its homes are seasonal or vacation homes and they are at least 3 times the national share of housing (ACS 2020–2024, B25004 and B25001), or when it has at least 5 hotels, motels and other lodging places and as many per resident as the top 5% of US places with 1,000 or more residents (Overture Maps, October 2026).</li>
           </ul>
@@ -1414,6 +1414,95 @@ function storesNote(ids) {
     `Rates use the ${fmtN(pop)} residents; places where many people work or shop (a downtown, a mall) will show high rates because their stores serve visitors too.`;
 }
 
+// ---------- kinds of business Census leaves unnamed ----------
+// ZIP Business Patterns leaves out a ZIP's row for a kind of business with only one or two establishments there, though
+// its sector total counts them; both sales estimates split a ZIP's sector jobs by the kinds it names, so unnamed stores'
+// sales land on the named kinds. ST.zbpu: ZIP -> {ret|svc|food: [businesses, named, counted kinds their jobs went to,
+// other kinds their jobs went to, how]}, as build_national.py treated them: 'named' (credited to the named kinds),
+// 'filled' (none of the named kinds is counted here: the unnamed ones split by the kinds left unnamed in the state's
+// counties of the ZIP's setting, from County Business Patterns, on both estimates), 'norow' (one or two businesses in the sector: no row, so the ZIP-based estimate counts
+// none) or 'absent' (a ZIP code ZBP doesn't list at all). Tracts carry zu = [[ZIP, retail jobs, service jobs, food
+// jobs]] for their jobs in those ZIPs. Each ZIP weighs by the selection's jobs in it and by the share of its businesses
+// affected, so a city's empty fringe ZIP codes don't count for much. Where a quarter or more of those jobs are affected,
+// the page says so.
+// Kinds of business as ZIP Business Patterns names them (codes without NAICS padding), at every level a ZIP may name
+const ZBP_KIND = {'441': 'car dealers and auto parts stores', '4411': 'car dealers', '4412': 'boat, RV and motorcycle dealers',
+  '4413': 'auto parts stores', '442': 'furniture stores', '443': 'electronics and appliance stores',
+  '444': 'building material and garden stores', '445': 'food and drink stores', '4451': 'grocery and convenience stores',
+  '445110': 'grocery stores', '445120': 'convenience stores', '4452': 'specialty food stores', '4453': 'liquor stores',
+  '446': 'drugstores and personal care stores', '446110': 'pharmacies', '446120': 'beauty supply stores',
+  '446130': 'optical goods stores', '446191': 'vitamin and supplement stores', '446199': 'other health stores',
+  '447': 'gas stations', '447110': 'gas stations with convenience stores', '447190': 'other gas stations',
+  '448': 'clothing stores', '451': 'sporting goods, hobby and book stores', '4511': 'sporting goods, hobby and music stores',
+  '4512': 'book stores', '452': 'general merchandise stores', '4522': 'department stores',
+  '4523': 'discount, dollar and warehouse stores', '453': 'other stores (gifts, florists, pet supplies and more)',
+  '4531': 'florists', '4532': 'office supply and gift stores', '4533': 'used merchandise stores',
+  '4539': 'pet, tobacco and other stores', '454': 'online, mail-order and vending sellers', '811': 'repair shops',
+  '8111': 'auto repair shops', '8112': 'electronics repair shops', '8113': 'machinery repair shops',
+  '8114': 'household goods repair shops', '812': 'salons, laundries and other personal services',
+  '8121': 'salons and barbers', '8122': 'funeral homes and cemeteries', '8123': 'laundries and dry cleaners',
+  '812310': 'coin laundries', '812320': 'dry cleaners', '81233': 'linen and uniform supply',
+  '8129': 'parking lots, pet care and other personal services', '813': 'churches, civic and membership organizations',
+  '721': 'hotels and other lodging', '722': 'restaurants and bars', '7223': 'caterers, food trucks and food service contractors',
+  '722310': 'food service contractors', '722320': 'caterers', '722330': 'food trucks', '7224': 'bars',
+  '7225': 'restaurants', '722511': 'full-service restaurants', '722513': 'limited-service restaurants',
+  '722514': 'cafeterias and buffets', '722515': 'coffee shops and snack bars'};
+const ZBP_SECTOR = {ret: {noun: 'stores', kind: 'kind of store', job: 7, zi: 1},
+  svc: {noun: 'service businesses', kind: 'kind of service business', job: 19, zi: 2},
+  food: {noun: 'restaurants, bars and hotels', kind: 'kind of restaurant, bar or hotel', job: 18, zi: 3}};
+function zbpUnnamedText(ids) {
+  const U = ST.zbpu || {}, out = [];
+  for (const sec of ['ret', 'svc', 'food']) {
+    const S = ZBP_SECTOR[sec]; let A = 0; const wz = new Map();
+    for (const g of ids) {
+      const t = ST.tracts[g]; if (!t || !t.j) continue; const jb = t.j[S.job] || 0; A += jb;
+      for (const zz of t.zu || []) wz.set(zz[0], (wz.get(zz[0]) || 0) + zz[S.zi]);
+    }
+    if (!(A > 0)) continue;
+    // a ZIP's weight in the selection, and how much of it is affected: unnamed share where kinds are named, all of it
+    // where Census names none of the counted kinds or has no row
+    const hit = {named: [], filled: [], norow: [], absent: []}; let share = 0;
+    const part = v => v[4] === 'named' || v[4] === 'filled' ? (v[0] - v[1]) / v[0] : 1;   // the share of a ZIP's businesses unnamed
+    for (const [z, w] of wz) {
+      const v = U[z] && U[z][sec]; if (!v || !(w > 0)) continue;
+      const u = part(v);
+      share += w / A * u;
+      if (w / A >= 0.1 && u >= 0.25) hit[v[4]].push([z, w, v]);
+    }
+    if (share < 0.25) continue;
+    // no single ZIP holds a tenth of the jobs: name the three that weigh most
+    if (!hit.named.length && !hit.filled.length && !hit.norow.length && !hit.absent.length) {
+      const all = [...wz].map(([z, w]) => { const v = U[z] && U[z][sec]; return v ? [z, w, v, w * part(v)] : null; })
+        .filter(Boolean).sort((a, b) => b[3] - a[3]).slice(0, 3);
+      for (const x of all) hit[x[2][4]].push(x.slice(0, 3));
+    }
+    const where = zs => zs.length === 1 ? `ZIP code ${zs[0][0]}` : `ZIP codes ${andJoin(zs.map(x => x[0]))}`;
+    const top = k => hit[k].sort((a, b) => b[1] - a[1]).slice(0, 3);
+    const the = (m, sing, pl) => m === 1 ? `the other one ${sing}` : `the other ${fmtN(m)} ${pl}`;
+    const labels = cs => { const u = [...new Set(cs)]; return u.filter(c => !u.some(d => d !== c && c.startsWith(d))).map(c => ZBP_KIND[c]).filter(Boolean); };   // nested kinds once, as the wider one
+    const named = top('named').filter(x => x[2][2].length), filled = top('filled'), norow = top('norow'), absent = top('absent');
+    if (named.length) {
+      const n = named.reduce((s, x) => s + x[2][0], 0), k = named.reduce((s, x) => s + x[2][1], 0);
+      const counted = labels(named.flatMap(x => x[2][2])), other = labels(named.flatMap(x => x[2][3]));
+      out.push(`Census business counts name the kind of business for only ${fmtN(k)} of the ${fmtN(n)} ${S.noun} in ${where(named)}: a ${S.kind} with only one or two in a ZIP code goes unnamed, to protect confidentiality. Both sales estimates split a ZIP code's ${S.noun} by the kinds Census names, so ${the(n - k, 'is', 'are')} counted as ${andJoin(counted)}${other.length ? ` or as kinds this site doesn't count (${andJoin(other)})` : ''}: sales of ${counted.length === 1 ? 'that kind' : 'those kinds'}${other.length ? ' this site counts' : ''} are likely overstated here, and of other kinds understated. The store listings below show what is actually here.`);
+    }
+    if (filled.length) {
+      const n = filled.reduce((s, x) => s + x[2][0], 0), k = filled.reduce((s, x) => s + x[2][1], 0);
+      const why = `(a ${S.kind} with only one or two in a ZIP code goes unnamed, to protect confidentiality)`;
+      out.push((k ? `Census business counts name the kind of business for only ${fmtN(k)} of the ${fmtN(n)} ${S.noun} in ${where(filled)}, and none of the kinds they name is one this site counts ${why}. Both sales estimates split ${the(n - k, '', '').trim()} by the kinds of business Census leaves unnamed in the state's counties of the same kind (metropolitan, small-city or rural).`
+        : `Census business counts name none of the kinds of the ${fmtN(n)} ${S.noun} in ${where(filled)} ${why}, so both sales estimates split them by the kinds of business Census leaves unnamed in the state's counties of the same kind (metropolitan, small-city or rural).`)
+        + ' The store listings below show what is actually here.');
+    }
+    if (norow.length) {
+      out.push(`Census business counts list no ${S.noun} at all in ${where(norow)}: a ZIP code with only one or two (or none) gets no count, so the ZIP-based estimate counts no sales of them there, while the jobs-based estimate does.`);
+    }
+    if (absent.length) {
+      out.push(`Census business counts don't list ${where(absent)} at all (a campus, a public or tribal employer, or businesses counted under a neighboring ZIP code can leave a ZIP code out), so the ZIP-based estimate counts no sales of ${S.noun} there, while the jobs-based estimate counts them by their jobs.`);
+    }
+  }
+  return out;
+}
+
 // ---------- sales tax on leaked spending ----------
 // ST.tax (build_site_data.py): per category [state rate %, share of the local rate that applies, fixed local rate %],
 // plus notes and gaps. Each tract may carry its local rates (percent) from the state's rate tables: x general,
@@ -1449,7 +1538,7 @@ function taxOf(r) {
   const R = taxRates(sel); if (!R) return null;
   const B = baseOf(r);
   const rows = r.cats.map((x, i) => {
-    const q = R.rate[i], med = B && B.cats[x.c] ? B.cats[x.c][0] : null, f = pf => isFinite(pf) ? pf : med;
+    const q = R.rate[i], med = B && B.cats[x.c] ? peerBench(B.cats[x.c][0]) : null, f = pf => isFinite(pf) ? peerBench(pf) : med;
     const nLo = Math.min(x.gL, x.gZ), nHi = Math.max(x.gL, x.gZ);
     const [lo, hi] = med != null && x.D > 0 ? [x.D * (med - f(x.pfL)), x.D * (med - f(x.pfZ))].sort((a, b) => a - b) : B ? [0, 0] : [nLo, nHi];
     const rate = (q.state + q.local) / 100, rateHi = (q.state + q.localHi) / 100;
@@ -1617,6 +1706,9 @@ function peerSection(r, keep = () => true) {
   return {lead, table, rows, cls: c};
 }
 
+// Rates compared with similar places, for residents' spending that stays or leaves: capped at 1 on both sides, since a
+// rate above 1 means a place also draws in shoppers from elsewhere, which is not its residents' spending
+const peerBench = med => Math.min(med, 1);
 function visitorInfo(ids, r) {
   const V = IDX.visitor; if (!V) return null;
   let seas = 0, units = 0, lodge = 0;
@@ -1900,6 +1992,8 @@ function summaryText(r) {
   if (big.length) w.push(`Sales more than 3 times the national norm on either estimate (${big.join('; ')}) usually mean a regional destination, a highway corner or a business district, where most buyers live elsewhere.`);
   if (gapHi <= 0 && pos.length) w.push(`The overall figure nets categories against each other: ${drawInResidents(r) ? "counted in residents' spending, " : ''}the area draws shoppers in overall but still falls short in the categories listed above.`);
   const vt = visitorText(visitorInfo(sel, r)); if (vt) w.push(vt);
+  for (const zt of zbpUnnamedText(sel)) w.push(zt);
+  for (const pn of placeNotes(sel, 'warn', {visitor: !!vt})) w.push(pn);
   return {lead, w};
 }
 // LODES workplace sectors CNS01-CNS20, in Census order; the three the store-sales estimate draws on are flagged
@@ -2398,6 +2492,19 @@ function localRows(ids) {
 }
 // a share as shown: whole percents, and "under 1%" for a district that only touches the area
 const localPct = v => v < 0.005 ? 'under 1%' : Math.round(v * 100) + '%';
+// Known gaps that aren't about taxes (national/place_notes.py): the state's for a section, and a place's or county's
+// when the selection reaches it. A note may hold only when the visitor-economy flag is shown (ctx.visitor) or isn't.
+function placeNotes(ids, sec, ctx = {}) {
+  const P = (ST && ST.pnotes) || {};
+  const ok = n => typeof n === 'string' || n.when === (ctx.visitor ? 'flagged' : 'not_flagged');
+  const out = [...((P.state || {})[sec] || [])];
+  for (const [g, by] of Object.entries(P.area || {})) {
+    if (!by[sec]) continue;
+    const hit = g.length === 5 ? [...ids].some(t => t.startsWith(g)) : ST.places[g] && ST.places[g].tracts.some(t => ids.has(t));
+    if (hit) out.push(...by[sec]);
+  }
+  return out.filter(ok).map(n => typeof n === 'string' ? n : n.text);
+}
 // where this state's programs come from; an empty result is not proof there is no TIF where coverage is partial
 function localCoverage() {
   const S = ((IDX.local || {}).sources || []).filter(s => ST && s.state === ST.fips);
@@ -2559,8 +2666,8 @@ const Compare = (() => {
       let L = 0, Z = 0, wT = 0, wE = 0; const low = [], high = [];
       if (c) for (const x of r.cats) {
         const q = c.cats[x.c]; if (OUT_OF_TOTAL.has(x.c) || !q || !(x.D > 0)) continue;
-        const med = q[0], f = pf => isFinite(pf) ? pf : med, e = (x.eL + x.eZ) / 2;
-        L += x.D * (med - f(x.pfL)); Z += x.D * (med - f(x.pfZ)); wT += med * e; wE += e;
+        const med = q[0], cm = peerBench(med), f = pf => isFinite(pf) ? peerBench(pf) : cm, e = (x.eL + x.eZ) / 2;
+        L += x.D * (cm - f(x.pfL)); Z += x.D * (cm - f(x.pfZ)); wT += med * e; wE += e;
         if (!MINOR.has(x.c)) { const p = posOf(midPF(x), q); if (p === 'low') low.push(x.c); else if (p === 'high') high.push(x.c); }
       }
       const typ = c && wE > 0 ? wT / wE : NaN, ret = midPF(T);
@@ -2822,11 +2929,13 @@ function view(r) {
   const cats = r.cats.map(x => {
     const y = Object.assign({}, x, {mid: mid(x), g: (x.gL + x.gZ) / 2, gLo: Math.min(x.gL, x.gZ), gHi: Math.max(x.gL, x.gZ)});
     // against similar places: residents' spending that leaves beyond what the typical similar place loses,
-    // D × (typical retention − retention here); negative when this area keeps more than the typical one
+    // D × (typical retention − retention here); negative when this area keeps more than the typical one. Both rates
+    // are capped at 1 (peerBench): above 1, a place keeps all its residents' spending and draws in shoppers from
+    // elsewhere too, and only residents' spending is compared (how much of it stays, how much goes elsewhere)
     const q = B && B.cats[x.c];
     if (q && x.D > 0) {
-      const [med, p25, p75] = q, f = pf => isFinite(pf) ? pf : med;
-      Object.assign(y, {med, p25, p75, hL: x.D * (med - f(x.pfL)), hZ: x.D * (med - f(x.pfZ)), pos: posOf(y.mid, q)});
+      const [med, p25, p75] = q, cm = peerBench(med), f = pf => isFinite(pf) ? peerBench(pf) : cm;
+      Object.assign(y, {med, p25, p75, hL: x.D * (cm - f(x.pfL)), hZ: x.D * (cm - f(x.pfZ)), pos: posOf(y.mid, q)});
       Object.assign(y, {h: (y.hL + y.hZ) / 2, hLo: Math.min(y.hL, y.hZ), hHi: Math.max(y.hL, y.hZ)});
     }
     return y;
@@ -2908,7 +3017,7 @@ function heroSay(v) {
   // the total sums each category's gap against its own typical rate, so it reads "if each category kept…"
   const peer = small ? `${vs}, stores here keep about as much of it overall as those places typically do.`
     : lo > 0 ? `${vs}, stores here keep less of it: about <strong class="leak">${usdTo(H.L, H.Z)}</strong> a year more goes elsewhere than if each category kept as much as it typically does in ${esc(v.B.many)}.`
-    : hi < 0 ? `${vs}, stores here keep more of it: about <strong class="inflow">${usdTo(-H.L, -H.Z)}</strong> a year more stays or comes in from outside than if each category kept as much as it typically does in ${esc(v.B.many)}.`
+    : hi < 0 ? `${vs}, stores here keep more of it: about <strong class="inflow">${usdTo(-H.L, -H.Z)}</strong> a year more of residents' spending stays here than if each category kept as much as it typically does in ${esc(v.B.many)}.`
     : `${vs}, the two estimates of local sales disagree on whether stores here keep more or less of it overall; the categories below show where each stands.`;
   // the national norm, as context: it averages in the downtowns and malls that draw shoppers from elsewhere
   const against = 'Against the national norm, an average over every place in the country, including the downtowns, malls and corridors that draw shoppers from elsewhere,';
@@ -2948,7 +3057,7 @@ function gapCards(v) {
   return `<div class="gaps">${low.map(x => { const n = shownHalves(x), t = halves(x.med);
     return `<article class="card gap"><h3>${LABEL[x.c]}</h3>
     <div class="dots" role="img" aria-label="${halfTxt(n)} of 10 dots filled here; ${halfTxt(t)} in the typical ${esc(v.B.one)}">${dots(n, t)}</div>
-    <p>Stores here ${capture(n)} expected at the national norm; the typical ${esc(v.B.one)} captures about ${halfTxt(t)}. That is about <strong class="leak">${x.hLo > 0 ? usdTo(x.hL, x.hZ) : 'up to ' + fmtUSD(x.hHi)}</strong> a year more of residents' spending going elsewhere than in the typical one.</p></article>`; }).join('')}</div>${draw}`;
+    <p>Stores here ${capture(n)} expected at the national norm; the typical ${esc(v.B.one)} ${x.med >= 1 ? 'keeps all of it and draws in shoppers from elsewhere too' : `captures about ${halfTxt(t)}`}. That is about <strong class="leak">${x.hLo > 0 ? usdTo(x.hL, x.hZ) : 'up to ' + fmtUSD(x.hHi)}</strong> a year more of residents' spending going elsewhere than in the typical one.</p></article>`; }).join('')}</div>${draw}`;
 }
 // all 14 categories: the 12 in the summaries, the total, then tobacco and child care
 function figuresTable(v) {
@@ -3046,7 +3155,7 @@ function render() {
     $('taxNotesSum').textContent = `Notes on ${ST.name}'s rates and what it taxes`; }
   $('stores2Viz').innerHTML = storesHereChart(sel); $('stores2').innerHTML = storesTable(sel); $('storesNote').textContent = storesNote(sel);
   $('programsViz').innerHTML = programsChart(sel); $('programs').innerHTML = programsTable(sel); $('transitLine').textContent = transitText(sel); $('ppLine').innerHTML = pubPropText(sel);
-  { const lx = localSection(sel); $('localLead').innerHTML = lx.lead; $('tierLine').innerHTML = lx.tier; $('tierLine').hidden = !lx.tier; $('localViz').innerHTML = localChart(sel); $('localTbl').innerHTML = lx.table; $('localCov').innerHTML = (ST.local || []).length ? localCoverage() : ''; }
+  { const lx = localSection(sel); $('localLead').innerHTML = lx.lead; $('tierLine').innerHTML = lx.tier; $('tierLine').hidden = !lx.tier; $('localViz').innerHTML = localChart(sel); $('localTbl').innerHTML = lx.table; $('localCov').innerHTML = ((ST.local || []).length ? localCoverage() : '') + placeNotes(sel, 'programs').map(n => ' ' + esc(n)).join(''); }
   syncLocalOptions(); syncOzOption();
   // official program pages for the selection's city, state and the federal government (loaded once)
   { const tok = ++linksTok; loadLinks().then(() => { if (tok !== linksTok) return; const h = sel.size ? linksHTML(sel) : ''; $('progLinks').innerHTML = h; $('progLinksBox').hidden = !h; }); }
