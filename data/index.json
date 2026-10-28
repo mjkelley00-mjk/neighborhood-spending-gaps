@@ -599,7 +599,7 @@
     -81.752,
     36.637
    ],
-   "bytes": 1605544,
+   "bytes": 1605676,
    "counties": 95
   },
   {
@@ -669,7 +669,7 @@
     -117.05,
     48.989
    ],
-   "bytes": 1677356,
+   "bytes": 1700920,
    "counties": 39
   },
   {
@@ -2599,7 +2599,16 @@
     "where": "City of Seattle",
     "vintage": "updated June 2026",
     "url": "https://services.arcgis.com/ZOyb2t4B0UYuYNYH/arcgis/rest/services/OED_Business_Improvement_Areas/FeatureServer/0",
-    "districts": 11
+    "districts": 10
+   },
+   {
+    "id": "tac_bia",
+    "state": "53",
+    "program": "bid",
+    "where": "City of Tacoma",
+    "vintage": "city layer (boundary of April 1, 2014)",
+    "url": "https://services3.arcgis.com/SCwJH1pD8WSn5T5y/arcgis/rest/services/Business_Improvement_Area_BIA/FeatureServer/0",
+    "districts": 1
    },
    {
     "id": "phl_bid",
@@ -6069,7 +6078,7 @@
   },
   "TN": {
    "rates": "current",
-   "rate_gaps": 4,
+   "rate_gaps": 5,
    "check": {
     "status": "no local data published",
     "source": "https://www.tn.gov/revenue.html",
@@ -6150,7 +6159,7 @@
   },
   "WA": {
    "rates": "current",
-   "rate_gaps": 2,
+   "rate_gaps": 4,
    "check": {
     "status": "checked",
     "source": "https://apps.dor.wa.gov/ResearchStats/Content/QuarterlyBusinessReview/Report.aspx",
@@ -11804,7 +11813,7 @@
   ]
  },
  "tiers": {
-  "built": "2026-10-26",
+  "built": "2026-10-28",
   "states": [
    "01",
    "05",
@@ -11813,7 +11822,8 @@
    "37",
    "45",
    "47",
-   "51"
+   "51",
+   "53"
   ]
  },
  "public_property": {

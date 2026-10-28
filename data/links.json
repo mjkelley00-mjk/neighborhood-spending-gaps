@@ -1036,6 +1036,36 @@
     "url": "https://wshfc.org/multifamily-development",
     "what": "Housing tax credits and bond financing for multifamily developers",
     "checked": "200"
+   },
+   {
+    "name": "Tax incentive programs",
+    "agency": "Washington State Department of Revenue",
+    "url": "https://dor.wa.gov/taxes-rates/tax-incentives/tax-incentive-programs",
+    "what": "State tax credits, exemptions and deferrals, with their eligibility and application steps"
+   },
+   {
+    "name": "Distressed areas list",
+    "agency": "Washington State Employment Security Department",
+    "url": "https://esd.wa.gov/jobs-and-training/labor-market-information/labor-force-and-unemployment/distressed-areas-list",
+    "what": "Counties with three-year unemployment at least 20% above the state average, used for grant and incentive eligibility"
+   },
+   {
+    "name": "Rural county designation",
+    "agency": "Washington State Office of Financial Management",
+    "url": "https://ofm.wa.gov/data-research/population-demographics/estimates/population-density/rural-county-designation-assistance-other-programs/",
+    "what": "Which counties count as rural (and frontier) under state law, for assistance and other programs"
+   },
+   {
+    "name": "Main Street Program",
+    "agency": "Washington State Department of Archaeology and Historic Preservation",
+    "url": "https://dahp.wa.gov/local-preservation/main-street-program",
+    "what": "State designation and support for local downtown revitalization programs"
+   },
+   {
+    "name": "Creative Districts",
+    "agency": "ArtsWA (Washington State Arts Commission)",
+    "url": "https://www.arts.wa.gov/creative-districts/",
+    "what": "State-certified creative districts and their grants"
    }
   ],
   "54": [
@@ -1432,6 +1462,12 @@
      "url": "https://www.seattle.gov/economic-development/grants-and-funding",
      "what": "City small business capital access, tenant improvement and storefront funds",
      "checked": "200"
+    },
+    {
+     "name": "Business Improvement Areas",
+     "agency": "City of Seattle Office of Economic Development",
+     "url": "https://www.seattle.gov/economic-development/business-districts/business-improvement-areas-",
+     "what": "The city's business improvement areas, their services and how one is formed"
     }
    ]
   },
@@ -2397,6 +2433,20 @@
      "url": "https://www.roanokeva.gov/2941/Incentive-Programs",
      "what": "City incentive programs for businesses in Roanoke",
      "checked": "unverified"
+    }
+   ]
+  },
+  "Bellevue, WA": {
+   "state": "53",
+   "place_names": [
+    "Bellevue city"
+   ],
+   "links": [
+    {
+     "name": "Business districts",
+     "agency": "City of Bellevue Economic Development",
+     "url": "https://bellevuewa.gov/city-government/departments/community-development/economic-development/business-districts",
+     "what": "Downtown, BelRed, Wilburton and other districts, with the Grand Connection and other major projects"
     }
    ]
   }
