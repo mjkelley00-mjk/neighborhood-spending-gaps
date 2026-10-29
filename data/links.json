@@ -140,6 +140,26 @@
     "url": "https://www.azcommerce.com/programs/",
     "what": "State tax credits, exemptions and incentive programs for business investment and jobs",
     "checked": "browser"
+   },
+   {
+    "name": "Military Reuse Zones",
+    "agency": "Arizona Commerce Authority",
+    "url": "https://www.azcommerce.com/incentives/military-reuse-zone",
+    "what": "Tax incentives for aviation and aerospace companies in the zones at Phoenix-Mesa Gateway and Phoenix-Goodyear airports",
+    "checked": "unverified"
+   },
+   {
+    "name": "Arizona Opportunity Zones",
+    "agency": "Arizona Commerce Authority",
+    "url": "https://www.azcommerce.com/arizona-opportunity-zones/",
+    "what": "The state's Opportunity Zone nominations and program information",
+    "checked": "unverified"
+   },
+   {
+    "name": "Transaction privilege tax rate tables",
+    "agency": "Arizona Department of Revenue",
+    "url": "https://azdor.gov/business/transaction-privilege-tax/tax-rate-table",
+    "what": "State, county and city TPT rates by business class, including cities' food and restaurant rates"
    }
   ],
   "05": [

@@ -39,7 +39,7 @@
     -109.133,
     36.989
    ],
-   "bytes": 1555707,
+   "bytes": 1587696,
    "counties": 15
   },
   {
@@ -2608,6 +2608,15 @@
     "where": "City of Tacoma",
     "vintage": "city layer (boundary of April 1, 2014)",
     "url": "https://services3.arcgis.com/SCwJH1pD8WSn5T5y/arcgis/rest/services/Business_Improvement_Area_BIA/FeatureServer/0",
+    "districts": 1
+   },
+   {
+    "id": "tus_bid",
+    "state": "04",
+    "program": "bid",
+    "where": "City of Tucson",
+    "vintage": "city layer, edited July 2022",
+    "url": "https://services3.arcgis.com/9coHY2fvuFjG9HQX/ArcGIS/rest/services/BUSIMPROVE_DIST_AGOVW/FeatureServer/0",
     "districts": 1
    },
    {
@@ -5451,7 +5460,7 @@
   },
   "AZ": {
    "rates": "current",
-   "rate_gaps": 11,
+   "rate_gaps": 8,
    "check": {
     "status": "not usable",
     "source": "https://tourism.az.gov/",
