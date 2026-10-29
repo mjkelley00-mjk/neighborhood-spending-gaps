@@ -529,7 +529,7 @@
     -116.899,
     46.185
    ],
-   "bytes": 1019883,
+   "bytes": 1029875,
    "counties": 36
   },
   {
@@ -1583,7 +1583,7 @@
     "state": "41",
     "program": "or_ez",
     "where": "Business Oregon",
-    "vintage": "updated August 2026",
+    "vintage": "updated October 2026",
     "url": "https://www.oregon.gov/biz/programs/enterprise_zones/",
     "districts": 71
    },
@@ -1988,7 +1988,7 @@
     "state": "41",
     "program": "tif",
     "where": "City of Portland",
-    "vintage": "2025 districts",
+    "vintage": "2025 districts; status from Prosper Portland's report for fiscal 2024-25 and 2025-26",
     "url": "https://www.portlandmaps.com/od/rest/services/COP_OpenData_Boundary/MapServer/1423",
     "districts": 13
    },
@@ -5080,6 +5080,60 @@
     "districts": 1
    },
    {
+    "id": "hermiston_ura_dt",
+    "state": "41",
+    "program": "tif",
+    "where": "City of Hermiston",
+    "vintage": "as mapped in 2017",
+    "url": "https://services3.arcgis.com/J3BmIuRRInRLwKNR/arcgis/rest/services/Urban_Renewal_District_Boundary/FeatureServer/0",
+    "districts": 1
+   },
+   {
+    "id": "hermiston_ura_n",
+    "state": "41",
+    "program": "tif",
+    "where": "City of Hermiston",
+    "vintage": "city layer",
+    "url": "https://services3.arcgis.com/J3BmIuRRInRLwKNR/arcgis/rest/services/North_Hermiston_Urban_Renewal_Area_Boundary/FeatureServer/0",
+    "districts": 1
+   },
+   {
+    "id": "salem_ura",
+    "state": "41",
+    "program": "tif",
+    "where": "City of Salem",
+    "vintage": "edited August 2026",
+    "url": "https://services.arcgis.com/kIA6yS9KDGqZL7U3/arcgis/rest/services/Urban_Renewal_Areas/FeatureServer/0",
+    "districts": 8
+   },
+   {
+    "id": "eugene_urd",
+    "state": "41",
+    "program": "tif",
+    "where": "City of Eugene",
+    "vintage": "boundaries from 2016 and 2018; both districts active (City of Eugene)",
+    "url": "https://services3.arcgis.com/F7NiRLGNbA2hh7gE/arcgis/rest/services/Urban_Renewal_District_Eugene/FeatureServer/0",
+    "districts": 2
+   },
+   {
+    "id": "marion_urd",
+    "state": "41",
+    "program": "tif",
+    "where": "Marion County",
+    "vintage": "the Assessor's tax districts as of October 2025",
+    "url": "https://services1.arcgis.com/sYGZnQPdJ0azuLyn/arcgis/rest/services/Urban_Renewal_Districts1/FeatureServer/0",
+    "districts": 3
+   },
+   {
+    "id": "yamhill_urd",
+    "state": "41",
+    "program": "tif",
+    "where": "Yamhill County",
+    "vintage": "edited October 2026",
+    "url": "https://services6.arcgis.com/toubSXwoan3LMhOW/arcgis/rest/services/Urban_Renewal_Districts/FeatureServer/1",
+    "districts": 6
+   },
+   {
     "id": "phoenixor_urd",
     "state": "41",
     "program": "tif",
@@ -5450,6 +5504,7 @@
    "01": "the Alabama Department of Economic and Community Affairs has published no 2027 nominations (it took applications through July 31, 2026), so no tract is shown as nominated",
    "22": "Louisiana Economic Development has published no 2027 nominations (its Opportunity Zones page describes only the federal timeline and the current zones), so no tract is shown as nominated",
    "21": "the Cabinet for Economic Development has published no 2027 nominations (its January 2026 map shows the tracts that could be nominated, not the ones chosen), so no tract is shown as nominated",
+   "41": "Business Oregon has published no 2027 nominations (its Opportunity Zones 2.0 map shows the tracts that could be nominated, not the ones chosen; nominations closed May 22, 2026), so no tract is shown as nominated",
    "45": "the Governor submitted the state's nominations to Treasury on September 23, 2026, but the state has not published a final list (its Department of Commerce map shows 113 or 115 recommended tracts, depending on the field), so no tract is shown as nominated",
    "39": "the state has published a 130-tract list under review, not its final nominations, and says it will publish the final list once the Treasury confirms it, so no tract is shown as nominated",
    "55": "the state has published its finalists, not its final nominations, so no tract is shown as nominated",
@@ -6175,7 +6230,7 @@
    }
   },
   "OR": {
-   "rates": "no sales tax",
+   "rates": "current",
    "rate_gaps": 1,
    "check": {
     "status": "no sales tax",
