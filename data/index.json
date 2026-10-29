@@ -263,7 +263,7 @@
     -89.397,
     33.003
    ],
-   "bytes": 1366308,
+   "bytes": 1412393,
    "counties": 64
   },
   {
@@ -879,7 +879,7 @@
      "parishes"
     ],
     "kind": "zone",
-    "desc": "Census block groups that qualify for the Louisiana Enterprise Zone program (Louisiana Economic Development), where a business that adds jobs can get a credit for each new job and a state sales-tax rebate or investment credit."
+    "desc": "Census block groups that qualify for the Louisiana Enterprise Zone program (Louisiana Economic Development), where a business that adds jobs could get a credit for each new job and a state sales-tax rebate or investment credit. The program took no new projects after June 30, 2025 (Louisiana Economic Development); projects already enrolled keep their benefits."
    },
    "nc_ura": {
     "label": "North Carolina redevelopment area",
@@ -1209,6 +1209,13 @@
     "many": "Louisiana Cultural Districts",
     "kind": "desig",
     "desc": "Districts where original art sells free of sales tax and buildings can qualify for state historic rehabilitation tax credits (La. R.S. 47:305.57 and 47:6019)."
+   },
+   "la_edd": {
+    "label": "Louisiana economic development district",
+    "one": "a Louisiana economic development district",
+    "many": "Louisiana economic development districts",
+    "kind": "tif",
+    "desc": "Districts created by a parish or city under state law (La. R.S. 33:9038.31 and after, and special acts) that can levy their own sales or hotel occupancy tax, or pledge tax increments, to pay for development inside the district; where the state's rate listing includes a district's sales tax, it is noted with the rates."
    },
    "la_ms": {
     "label": "Louisiana Main Street district",
@@ -5244,6 +5251,24 @@
     "districts": 6
    },
    {
+    "id": "brla_edd",
+    "state": "22",
+    "program": "la_edd",
+    "where": "City of Baton Rouge and Parish of East Baton Rouge",
+    "vintage": "City-Parish layer, current",
+    "url": "https://maps.brla.gov/gis/rest/services/Economic/Economic_Development_District/MapServer/0",
+    "districts": 26
+   },
+   {
+    "id": "shreveport_edd",
+    "state": "22",
+    "program": "la_edd",
+    "where": "City of Shreveport",
+    "vintage": "mapping date not given",
+    "url": "https://services3.arcgis.com/cEsSI6IR59h5UGE4/arcgis/rest/services/ECONOMIC_DEVELOPMENT_DISTRICTS/FeatureServer/0",
+    "districts": 3
+   },
+   {
     "id": "mobile_bid",
     "state": "01",
     "program": "bid",
@@ -5414,6 +5439,7 @@
    "26": "the Michigan Economic Development Corporation has not published its nominations (its page still describes the September process), so no tract is shown as nominated",
    "37": "the Department of Commerce has chosen its tracts (up to 202 under its preliminary allocation) and says it will share them once the Treasury certifies them, so no tract is shown as nominated",
    "01": "the Alabama Department of Economic and Community Affairs has published no 2027 nominations (it took applications through July 31, 2026), so no tract is shown as nominated",
+   "22": "Louisiana Economic Development has published no 2027 nominations (its Opportunity Zones page describes only the federal timeline and the current zones), so no tract is shown as nominated",
    "45": "the Governor submitted the state's nominations to Treasury on September 23, 2026, but the state has not published a final list (its Department of Commerce map shows 113 or 115 recommended tracts, depending on the field), so no tract is shown as nominated",
    "39": "the state has published a 130-tract list under review, not its final nominations, and says it will publish the final list once the Treasury confirms it, so no tract is shown as nominated",
    "55": "the state has published its finalists, not its final nominations, so no tract is shown as nominated",
@@ -5833,7 +5859,7 @@
   },
   "LA": {
    "rates": "older source",
-   "rate_gaps": 4,
+   "rate_gaps": 5,
    "check": {
     "status": "no local data published",
     "source": "https://revenue.louisiana.gov/",
