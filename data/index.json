@@ -95,7 +95,7 @@
     -71.814,
     42.023
    ],
-   "bytes": 794848,
+   "bytes": 823275,
    "counties": 9
   },
   {
@@ -123,7 +123,7 @@
     -76.919,
     38.983
    ],
-   "bytes": 236685,
+   "bytes": 236697,
    "counties": 1
   },
   {
@@ -221,7 +221,7 @@
     -90.189,
     43.457
    ],
-   "bytes": 968497,
+   "bytes": 968504,
    "counties": 99
   },
   {
@@ -277,7 +277,7 @@
     -67.018,
     47.295
    ],
-   "bytes": 425713,
+   "bytes": 425697,
    "counties": 16
   },
   {
@@ -347,7 +347,7 @@
     -88.149,
     34.991
    ],
-   "bytes": 837449,
+   "bytes": 837450,
    "counties": 82
   },
   {
@@ -543,7 +543,7 @@
     -74.7,
     42.216
    ],
-   "bytes": 3325911,
+   "bytes": 3325918,
    "counties": 67
   },
   {
@@ -1280,6 +1280,13 @@
     "kind": "desig",
     "desc": "Active Main Street program districts, with state technical help, design and training services (Oklahoma Main Street Center)."
    },
+   "ct_distressed": {
+    "label": "Connecticut distressed municipality",
+    "one": "a distressed municipality",
+    "many": "distressed municipalities",
+    "kind": "desig",
+    "desc": "Towns the Department of Economic and Community Development lists each year as distressed by unemployment, income, poverty and housing measures: priority for some state grants, and property tax exemptions for manufacturing and other qualifying projects (CGS 32-9p). Towns that drop off keep the status for a grace period."
+   },
    "vt_desig": {
     "label": "Vermont designated downtown or village center",
     "one": "a Vermont designated area",
@@ -1559,6 +1566,15 @@
     "vintage": "updated September 2026",
     "url": "https://www.nj.gov/dca/uez/",
     "districts": 34
+   },
+   {
+    "id": "hartford_bid",
+    "state": "09",
+    "program": "bid",
+    "where": "City of Hartford",
+    "vintage": "updated September 2024",
+    "url": "https://utility.arcgis.com/usrsvcs/servers/6a56d47e99be48fe960dc65a6765bc71/rest/services/OpenData_Housing_Development/MapServer/1",
+    "districts": 1
    },
    {
     "id": "newark_sid",
@@ -3107,6 +3123,15 @@
     "vintage": "September 2026",
     "url": "https://services5.arcgis.com/ZTbCl7IqVy1LQh5d/arcgis/rest/services/MS_Boundaries_2026_09_30/FeatureServer/0",
     "districts": 31
+   },
+   {
+    "id": "ct_distressed",
+    "state": "09",
+    "program": "ct_distressed",
+    "where": "Department of Energy and Environmental Protection (the Department of Economic and Community Development list)",
+    "vintage": "2025 list (map edited February 2026)",
+    "url": "https://services1.arcgis.com/FjPcSmEFuDYlIdKC/ArcGIS/rest/services/Environmental_Justice_2025_Set/FeatureServer/1",
+    "districts": 37
    },
    {
     "id": "lancaster_criz",
@@ -5384,7 +5409,7 @@
    "oz1": "2018 Qualified Opportunity Zone (Notices 2018-48 and 2019-42; CDFI Fund list of 2010 tracts, carried to 2020 tracts)",
    "oz2e": "Eligible for nomination as a 2027 Qualified Opportunity Zone (Treasury list, September 2026 update; 2020-2024 ACS, 2020 tracts). Designations by Treasury had not been published when this was built.",
    "oz2e_rural": "Eligible 2027 QOZ tract made up entirely of a rural area (as Treasury flags it)",
-   "oz2n": "Nominated by its governor for a 2027 Qualified Opportunity Zone (Arizona, 127 tracts (125 nominated July 7, 2026, then replacements and additions sent October 26); Colorado, 91 tracts, submitted September 28, 2026; Delaware, 25 tracts, announced September 28, 2026; Georgia, 238 tracts on the state's map, edited October 2026; its September 28 list had 235; Idaho, 25 tracts, certified by Treasury as designated zones October 1, 2026; Indiana, 126 tracts, published September 25, 2026; Massachusetts, 104 tracts, nominated October 2, 2026; Nebraska, 28 tracts, submitted July 22, 2026; Oklahoma, 104 tracts selected for nomination and submitted by the Governor (the Department of Commerce map, October 2026); Texas, 608 tracts, submitted September 4, 2026; Utah, 37 tracts, announced September 24, 2026; Washington, 99 tracts, announced October 8, 2026)",
+   "oz2n": "Nominated by its governor for a 2027 Qualified Opportunity Zone (Arizona, 127 tracts (125 nominated July 7, 2026, then replacements and additions sent October 26); Colorado, 91 tracts, submitted September 28, 2026; Delaware, 25 tracts, announced September 28, 2026; Georgia, 238 tracts on the state's map, edited October 2026; its September 28 list had 235; Idaho, 25 tracts, certified by Treasury as designated zones October 1, 2026; Indiana, 126 tracts, published September 25, 2026; Iowa, 44 tracts, approved by the Treasury as of October 29, 2026 (the state's page); Massachusetts, 104 tracts, nominated October 2, 2026; Nebraska, 28 tracts, submitted July 22, 2026; Oklahoma, 104 tracts selected for nomination and submitted by the Governor (the Department of Commerce map, October 2026); Oregon, 58 tracts, the Governor's final list submitted to the Treasury for certification (October 29, 2026); Pennsylvania, 218 tracts, submitted to the Treasury (October 29, 2026); Texas, 608 tracts, submitted September 4, 2026; Utah, 37 tracts, announced September 24, 2026; Washington, 99 tracts, announced October 8, 2026)",
    "nmtc": "New Markets Tax Credit low-income community (CDFI Fund, 2016-2020 ACS, 2020 tracts; includes high-migration rural tracts)",
    "nmtc_sd": "NMTC low-income community meeting a primary severe-distress test: poverty above 30%, median family income at or below 60% of the benchmark, or unemployment at least 1.5 times the national rate. Other routes to that status are not computed.",
    "cdfi_ia": "CDFI Program Investment Area (CDFI Fund, 2016-2020 ACS, 2020 tracts)",
@@ -5461,6 +5486,12 @@
     "count": 126
    },
    {
+    "state": "19",
+    "name": "Iowa",
+    "status": "44 tracts, approved by the Treasury as of October 29, 2026 (the state's page)",
+    "count": 44
+   },
+   {
     "state": "25",
     "name": "Massachusetts",
     "status": "104 tracts, nominated October 2, 2026",
@@ -5477,6 +5508,18 @@
     "name": "Oklahoma",
     "status": "104 tracts selected for nomination and submitted by the Governor (the Department of Commerce map, October 2026)",
     "count": 104
+   },
+   {
+    "state": "41",
+    "name": "Oregon",
+    "status": "58 tracts, the Governor's final list submitted to the Treasury for certification (October 29, 2026)",
+    "count": 58
+   },
+   {
+    "state": "42",
+    "name": "Pennsylvania",
+    "status": "218 tracts, submitted to the Treasury (October 29, 2026)",
+    "count": 218
    },
    {
     "state": "48",
@@ -5501,7 +5544,7 @@
    "05": "the Governor selected 78 zones, which Treasury has certified, to take effect January 1, 2027, but the state has not published which tracts they are",
    "06": "the Department of Finance and GO-Biz published a draft list of 560 recommended tracts for public comment in August 2026, but the final nominations have not been published, so no tract is shown as nominated",
    "02": "the state has sent its nominations to Treasury but has not published which tracts they are",
-   "20": "the state has sent its nominations to Treasury but has not published which tracts they are",
+   "20": "the Department of Commerce says the nomination window has closed and expects about 53 tracts, but has published no list, so no tract is shown as nominated",
    "51": "the Department of Housing and Community Development and the Virginia Economic Development Partnership ran the state's nomination process and have published no list (VEDP's 'Nominated Tracts' map layer is the 2018 list of 212), so no tract is shown as nominated",
    "34": "the Governor may nominate up to 129 tracts, and the Department of Community Affairs says the state will submit its nominations by the extended federal deadline of October 28, 2026; no list has been published, so no tract is shown as nominated",
    "26": "the Michigan Economic Development Corporation has not published its nominations (its page still describes the September process), so no tract is shown as nominated",
@@ -5509,14 +5552,31 @@
    "01": "the Alabama Department of Economic and Community Affairs has published no 2027 nominations (it took applications through July 31, 2026), so no tract is shown as nominated",
    "22": "Louisiana Economic Development has published no 2027 nominations (its Opportunity Zones page describes only the federal timeline and the current zones), so no tract is shown as nominated",
    "21": "the Cabinet for Economic Development has published no 2027 nominations (its January 2026 map shows the tracts that could be nominated, not the ones chosen), so no tract is shown as nominated",
-   "41": "Business Oregon has published no 2027 nominations (its Opportunity Zones 2.0 map shows the tracts that could be nominated, not the ones chosen; nominations closed May 22, 2026), so no tract is shown as nominated",
    "45": "the Governor submitted the state's nominations to Treasury on September 23, 2026, but the state has not published a final list (its Department of Commerce map shows 113 or 115 recommended tracts, depending on the field), so no tract is shown as nominated",
    "39": "the state has published a 130-tract list under review, not its final nominations, and says it will publish the final list once the Treasury confirms it, so no tract is shown as nominated",
    "55": "the state has published its finalists, not its final nominations, so no tract is shown as nominated",
    "29": "the Department of Economic Development received 221 intake forms and took public comment from July 17 to 31, 2026, but has published no nominations, so no tract is shown as nominated",
    "24": "the state sent 114 nominations to Treasury on October 9, 2026, as reported, but has not published which tracts they are, so no tract is shown as nominated",
    "27": "the Department of Employment and Economic Development has published no 2027 nominations (its Opportunity Zones page, updated June 2026, describes only the 2018 zones), so no tract is shown as nominated",
-   "30": "the state's map still shows four tracts under discussion, so its list is not final and no tract is shown as nominated"
+   "30": "the state's map still shows four tracts under discussion, so its list is not final and no tract is shown as nominated",
+   "09": "the Department of Economic and Community Development has published no 2027 nominations (its Opportunity Zones page still describes the 72 zones of 2018), so no tract is shown as nominated",
+   "11": "the Deputy Mayor for Planning and Economic Development published 25 preliminary recommendations for public comment in July 2026 but has not published its final nominations, so no tract is shown as nominated",
+   "12": "FloridaCommerce has published no 2027 nominations, so no tract is shown as nominated",
+   "15": "the Department of Business, Economic Development and Tourism says the Governor will nominate 25 tracts but has published no list, so no tract is shown as nominated",
+   "17": "the Governor said in August 2026 that the state would submit 238 tracts by the end of September, but the Department of Commerce and Economic Opportunity has published no list, so no tract is shown as nominated",
+   "23": "the Department of Economic and Community Development has published no 2027 nominations, so no tract is shown as nominated",
+   "28": "the Mississippi Development Authority said it would recommend 101 tracts and has closed public comment, but has published no nominations, so no tract is shown as nominated",
+   "32": "the Governor's Office of Economic Development's page shows only a draft list put out for comment (up to 49 of 195 eligible tracts) and no final nominations, so no tract is shown as nominated",
+   "33": "the Governor announced on October 27, 2026, as reported, that the Treasury approved 25 nominated tracts; the state's list has not yet been read into this site, so no tract is shown as nominated",
+   "35": "the Economic Development Department has published no 2027 nominations (its page shows the nomination process and an eligibility map only), so no tract is shown as nominated",
+   "36": "Empire State Development has published no 2027 nominations (its Opportunity Zones page describes only the 2018 zones), so no tract is shown as nominated",
+   "38": "the Department of Commerce has posted a map of 25 'final candidate' tracts but has not published its nominations, so no tract is shown as nominated",
+   "44": "Rhode Island Commerce says the Governor will nominate 25 tracts but has published no list, so no tract is shown as nominated",
+   "46": "the Governor's Office of Economic Development has published no 2027 nominations, so no tract is shown as nominated",
+   "47": "the Department of Economic and Community Development has published no 2027 nominations (its page describes only the 2018 zones), so no tract is shown as nominated",
+   "50": "the Agency of Commerce and Community Development published draft recommendations for public input in July 2026 but has not published final nominations, so no tract is shown as nominated",
+   "54": "the Department of Economic Development closed local nominations on July 1, 2026 and said the Governor would submit by September 28, but has published no list, so no tract is shown as nominated",
+   "56": "the Wyoming Business Council shows only a preliminary eligibility map and no final nominations, so no tract is shown as nominated"
   }
  },
  "stores": {
