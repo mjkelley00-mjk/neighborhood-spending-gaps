@@ -671,6 +671,8 @@ const PLACE_TYPES = [[' city and borough', 'City and borough'], [' consolidated 
   [' borough', 'Borough'], [' village', 'Village'], [' town', 'Town'], [' city', 'City'], [' CDP', 'Community (unincorporated)']];
 function placeName(n) {
   const full = n.replace(/, [A-Z]{2}$/, '');
+  // Massachusetts towns with a city form of government ("Weymouth Town city"); elsewhere "Town" is part of the name
+  if (/ Town city, MA$/.test(n)) return {base: full.slice(0, -' Town city'.length), kind: 'Town', full};
   for (const [suf, kind] of PLACE_TYPES) if (full.endsWith(suf) && full.length > suf.length) return {base: full.slice(0, -suf.length), kind, full};
   return {base: full, kind: 'City / town', full};
 }
