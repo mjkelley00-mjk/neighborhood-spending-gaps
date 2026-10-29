@@ -249,7 +249,7 @@
     -82.121,
     39.117
    ],
-   "bytes": 1262224,
+   "bytes": 1280842,
    "counties": 120
   },
   {
@@ -1918,7 +1918,7 @@
     "where": "Louisville Metro (local-only TIFs)",
     "vintage": "updated April 2026",
     "url": "https://services1.arcgis.com/79kfd2K6fskCAkyg/arcgis/rest/services/Local_Only_TIFs/FeatureServer/0",
-    "districts": 14
+    "districts": 11
    },
    {
     "id": "tn_tdz",
@@ -2485,7 +2485,7 @@
     "where": "Kentucky Cabinet for Economic Development (state-participation TIFs)",
     "vintage": "updated September 2024",
     "url": "https://services9.arcgis.com/r4aajfZmrISDq9aM/arcgis/rest/services/KY_TIF_Zones/FeatureServer/0",
-    "districts": 32
+    "districts": 30
    },
    {
     "id": "omaha_tif",
@@ -5269,6 +5269,15 @@
     "districts": 3
    },
    {
+    "id": "lou_dmd",
+    "state": "21",
+    "program": "bid",
+    "where": "Louisville Metro (LOJIC)",
+    "vintage": "LOJIC layer, current",
+    "url": "https://gis.lojic.org/maps/rest/services/LojicSolutions/OpenDataSociety/MapServer/8",
+    "districts": 1
+   },
+   {
     "id": "mobile_bid",
     "state": "01",
     "program": "bid",
@@ -5440,6 +5449,7 @@
    "37": "the Department of Commerce has chosen its tracts (up to 202 under its preliminary allocation) and says it will share them once the Treasury certifies them, so no tract is shown as nominated",
    "01": "the Alabama Department of Economic and Community Affairs has published no 2027 nominations (it took applications through July 31, 2026), so no tract is shown as nominated",
    "22": "Louisiana Economic Development has published no 2027 nominations (its Opportunity Zones page describes only the federal timeline and the current zones), so no tract is shown as nominated",
+   "21": "the Cabinet for Economic Development has published no 2027 nominations (its January 2026 map shows the tracts that could be nominated, not the ones chosen), so no tract is shown as nominated",
    "45": "the Governor submitted the state's nominations to Treasury on September 23, 2026, but the state has not published a final list (its Department of Commerce map shows 113 or 115 recommended tracts, depending on the field), so no tract is shown as nominated",
    "39": "the state has published a 130-tract list under review, not its final nominations, and says it will publish the final list once the Treasury confirms it, so no tract is shown as nominated",
    "55": "the state has published its finalists, not its final nominations, so no tract is shown as nominated",
