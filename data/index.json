@@ -473,7 +473,7 @@
     -75.543,
     36.544
    ],
-   "bytes": 2561272,
+   "bytes": 2561266,
    "counties": 100
   },
   {
@@ -501,7 +501,7 @@
     -80.541,
     41.957
    ],
-   "bytes": 2920347,
+   "bytes": 2920268,
    "counties": 88
   },
   {
@@ -543,7 +543,7 @@
     -74.7,
     42.216
    ],
-   "bytes": 3325918,
+   "bytes": 3325920,
    "counties": 67
   },
   {
@@ -627,7 +627,7 @@
     -109.273,
     41.944
    ],
-   "bytes": 727797,
+   "bytes": 736490,
    "counties": 29
   },
   {
@@ -6403,7 +6403,7 @@
   },
   "UT": {
    "rates": "current",
-   "rate_gaps": 3,
+   "rate_gaps": 4,
    "check": {
     "status": "not usable",
     "source": "https://tax.utah.gov/econstats/sales",
