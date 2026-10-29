@@ -221,7 +221,7 @@
     -90.189,
     43.457
    ],
-   "bytes": 968504,
+   "bytes": 982744,
    "counties": 99
   },
   {
@@ -529,7 +529,7 @@
     -116.899,
     46.185
    ],
-   "bytes": 1029875,
+   "bytes": 1030056,
    "counties": 36
   },
   {
@@ -1601,7 +1601,7 @@
     "where": "Business Oregon",
     "vintage": "updated October 2026",
     "url": "https://www.oregon.gov/biz/programs/enterprise_zones/",
-    "districts": 71
+    "districts": 73
    },
    {
     "id": "arl_bid",
@@ -5082,9 +5082,9 @@
     "state": "19",
     "program": "ia_ms",
     "where": "Iowa Economic Development Authority (Main Street Iowa)",
-    "vintage": "status as of 2021 (layer updated September 2024)",
+    "vintage": "communities as of September 2026 (boundaries updated September 2024)",
     "url": "https://services.arcgis.com/vPD5PVLI6sfkZ5E4/arcgis/rest/services/Main_Street_Boundaries/FeatureServer/0",
-    "districts": 48
+    "districts": 51
    },
    {
     "id": "lebanon_urd",
@@ -5894,8 +5894,8 @@
    }
   },
   "IA": {
-   "rates": "older source",
-   "rate_gaps": 36,
+   "rates": "current",
+   "rate_gaps": 4,
    "check": {
     "status": "checked",
     "source": "https://data.iowa.gov/catalog/dataset/992",
