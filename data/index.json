@@ -361,7 +361,7 @@
     -89.227,
     40.526
    ],
-   "bytes": 1730716,
+   "bytes": 1761234,
    "counties": 115
   },
   {
@@ -1405,6 +1405,13 @@
     "many": "community improvement districts",
     "kind": "bid",
     "desc": "Districts whose owners or voters approve an added tax inside the boundary for improvements and services: in Missouri and Kansas usually an added sales tax (in Missouri also property taxes or special assessments), often for one shopping center or block; in Georgia an added property tax on commercial and industrial property for transportation, safety and upkeep (RSMo 67.1401 to 67.1571; K.S.A. 12-6a26 and after; Georgia Constitution art. IX, sec. VII)."
+   },
+   "tdd": {
+    "label": "Transportation development district (TDD)",
+    "one": "a transportation development district",
+    "many": "transportation development districts",
+    "kind": "bid",
+    "desc": "Missouri districts that add a sales tax of up to 1% (or a property tax or special assessment) inside the boundary to pay for roads, parking and other transportation projects, often for one shopping center (RSMo 238.200 to 238.275)."
    },
    "il_ssa": {
     "label": "Illinois special service area (outside Chicago)",
@@ -3264,6 +3271,42 @@
     "vintage": "county special tax districts, edited through December 2025",
     "url": "https://jcgis.jacksongov.org/arcgis/rest/services/Internal_Parcel_Viewer/SpecialTaxDistricts_Official/FeatureServer/35",
     "districts": 12
+   },
+   {
+    "id": "como_tdd",
+    "state": "29",
+    "program": "tdd",
+    "where": "City of Columbia, Missouri",
+    "vintage": "City layer, current (undated); districts checked against the DOR rate table of October 2026",
+    "url": "https://gis.gocolumbiamo.com/arcgis/rest/services/View_Services/Special_Tax_Areas/MapServer/1",
+    "districts": 15
+   },
+   {
+    "id": "stl_cid",
+    "state": "29",
+    "program": "cid",
+    "where": "City of St. Louis (St. Louis Development Corporation)",
+    "vintage": "City layer, edited 2020 and after (drawn from legal descriptions, for reference)",
+    "url": "https://maps8.stlouis-mo.gov/arcgis/rest/services/SLDC/Local_Taxing_Districts/MapServer/0",
+    "districts": 70
+   },
+   {
+    "id": "stl_tdd",
+    "state": "29",
+    "program": "tdd",
+    "where": "City of St. Louis (St. Louis Development Corporation)",
+    "vintage": "City layer, edited 2020 and after (drawn from legal descriptions, for reference)",
+    "url": "https://maps8.stlouis-mo.gov/arcgis/rest/services/SLDC/Local_Taxing_Districts/MapServer/0",
+    "districts": 31
+   },
+   {
+    "id": "stl_sbd",
+    "state": "29",
+    "program": "bid",
+    "where": "City of St. Louis (St. Louis Development Corporation)",
+    "vintage": "City layer, edited 2020 and after (drawn from legal descriptions, for reference)",
+    "url": "https://maps8.stlouis-mo.gov/arcgis/rest/services/SLDC/Local_Taxing_Districts/MapServer/0",
+    "districts": 13
    },
    {
     "id": "boone_cid",
@@ -5234,7 +5277,7 @@
    "dda27": "HUD 2027 list (FY2026 rents and income limits)",
    "hubzone": "SBA HUBZone map, current designations",
    "transit": "stations as of 2026-10-26",
-   "oz2n": "state lists as of 2026-10-28"
+   "oz2n": "state lists as of 2026-10-29"
   },
   "hubzone_fetched": "2026-10-26",
   "transit": {
@@ -5328,6 +5371,7 @@
    "45": "the state's map of its nominations disagrees with itself (113 or 115 tracts) and its page still says the list is under review, so no tract is shown as nominated",
    "39": "the state has published a 130-tract list under review, not its final nominations, and says it will publish the final list once the Treasury confirms it, so no tract is shown as nominated",
    "55": "the state has published its finalists, not its final nominations, so no tract is shown as nominated",
+   "29": "the Department of Economic Development received 221 intake forms and took public comment from July 17 to 31, 2026, but has published no nominations, so no tract is shown as nominated",
    "24": "the state sent 114 nominations to Treasury on October 9, 2026, as reported, but has not published which tracts they are, so no tract is shown as nominated",
    "30": "the state's map still shows four tracts under discussion, so its list is not final and no tract is shown as nominated"
   }
@@ -5832,7 +5876,7 @@
   },
   "MO": {
    "rates": "current",
-   "rate_gaps": 3,
+   "rate_gaps": 6,
    "check": {
     "status": "not usable",
     "source": "https://dor.mo.gov/",
