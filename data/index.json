@@ -571,7 +571,7 @@
     -78.604,
     35.176
    ],
-   "bytes": 1230728,
+   "bytes": 1290397,
    "counties": 46
   },
   {
@@ -5404,7 +5404,7 @@
    "34": "the Governor may nominate up to 129 tracts, and the Department of Community Affairs says the state will submit its nominations by the extended federal deadline of October 28, 2026; no list has been published, so no tract is shown as nominated",
    "26": "the Michigan Economic Development Corporation has not published its nominations (its page still describes the September process), so no tract is shown as nominated",
    "37": "the Department of Commerce has chosen its tracts (up to 202 under its preliminary allocation) and says it will share them once the Treasury certifies them, so no tract is shown as nominated",
-   "45": "the state's map of its nominations disagrees with itself (113 or 115 tracts) and its page still says the list is under review, so no tract is shown as nominated",
+   "45": "the Governor submitted the state's nominations to Treasury on September 23, 2026, but the state has not published a final list (its Department of Commerce map shows 113 or 115 recommended tracts, depending on the field), so no tract is shown as nominated",
    "39": "the state has published a 130-tract list under review, not its final nominations, and says it will publish the final list once the Treasury confirms it, so no tract is shown as nominated",
    "55": "the state has published its finalists, not its final nominations, so no tract is shown as nominated",
    "29": "the Department of Economic Development received 221 intake forms and took public comment from July 17 to 31, 2026, but has published no nominations, so no tract is shown as nominated",
@@ -6169,7 +6169,7 @@
   },
   "SC": {
    "rates": "current",
-   "rate_gaps": 4,
+   "rate_gaps": 6,
    "check": {
     "status": "no local data published",
     "source": "https://dor.sc.gov/",
