@@ -1984,7 +1984,7 @@ function figsHTML(r) {
 function summaryText(r) {
   const T = r.tot, gapLo = Math.min(T.gL, T.gZ), gapHi = Math.max(T.gL, T.gZ);
   // no households (a park, an airport, a business district): nothing to compare local sales with
-  if (!(T.D > 0)) return {lead: `No households live in this selection, so there is no resident spending to compare with its stores' sales (${rangeUSD(T.sL, T.sZ)} a year). Add neighboring tracts to see the area around it.`, w: []};
+  if (!(T.D > 0)) return {lead: `No households live in this selection, so there is no resident spending to compare with its stores' sales (${rangeUSD(T.sL, T.sZ)} a year). Add neighboring tracts to see the area around it.`, w: placeNotes(sel, 'warn')};
   const gapTxt = gapHi <= 0 ? (drawInResidents(r) ? `Counted in residents' own spending, category by category, the area draws in more than it loses: a net <strong>${rangeUSD(-T.gL, -T.gZ)} a year</strong>.`
       : `Overall, local stores sell more than the national pattern predicts for residents, so the area draws shoppers in.`)
     : gapLo >= 0 ? `Projected leakage is a net <strong>${rangeUSD(T.gL,T.gZ)} a year</strong>: residents' spending the area would keep at the national norm but doesn't.`

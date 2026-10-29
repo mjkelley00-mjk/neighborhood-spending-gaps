@@ -222,6 +222,13 @@
     "url": "https://www.chfainfo.com/rental-housing",
     "what": "Housing tax credits and multifamily loans for rental developers",
     "checked": "200"
+   },
+   {
+    "name": "Sales and use tax rates",
+    "agency": "Colorado Department of Revenue",
+    "url": "https://tax.colorado.gov/how-to-look-up-sales-use-tax-rates",
+    "what": "State, county, city and district sales tax rates by location, and the rate workbook",
+    "checked": "browser"
    }
   ],
   "09": [

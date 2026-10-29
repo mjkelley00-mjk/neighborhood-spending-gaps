@@ -81,7 +81,7 @@
     -102.151,
     40.894
    ],
-   "bytes": 1402477,
+   "bytes": 1480508,
    "counties": 64
   },
   {
@@ -459,7 +459,7 @@
     -71.915,
     44.979
    ],
-   "bytes": 5193297,
+   "bytes": 5193954,
    "counties": 62
   },
   {
@@ -3399,6 +3399,69 @@
     "districts": 1
    },
    {
+    "id": "den_ura",
+    "state": "08",
+    "program": "tif",
+    "where": "Denver Urban Renewal Authority",
+    "vintage": "areas with a tax increment in the Assessor's 2025 abstract",
+    "url": "https://services1.arcgis.com/VUSzNYOdgI3G8eFJ/arcgis/rest/services/URAs/FeatureServer/0",
+    "districts": 20
+   },
+   {
+    "id": "aurora_ura",
+    "state": "08",
+    "program": "tif",
+    "where": "City of Aurora",
+    "vintage": "city layer; active areas per the 2025 Aurora Urban Renewal Update (August 2026)",
+    "url": "https://ags.auroragov.org/aurora/rest/services/OpenData/MapServer/17",
+    "districts": 34
+   },
+   {
+    "id": "lakewood_lra_wcolfax",
+    "state": "08",
+    "program": "tif",
+    "where": "Lakewood Reinvestment Authority",
+    "vintage": "LRA 2027 budget",
+    "url": "https://services.arcgis.com/PFikmPaTMlt2KX1O/arcgis/rest/services/ED_LRA_WColfax/FeatureServer/0",
+    "districts": 1
+   },
+   {
+    "id": "lakewood_lra_union",
+    "state": "08",
+    "program": "tif",
+    "where": "Lakewood Reinvestment Authority",
+    "vintage": "adopted 2025 (Resolution 2025-1)",
+    "url": "https://services.arcgis.com/PFikmPaTMlt2KX1O/arcgis/rest/services/City_of_Lakewood_Union_Reinvestment_District_%E2%80%94_LRA__Hosted_Feature_Layer_/FeatureServer/0",
+    "districts": 1
+   },
+   {
+    "id": "arvada_ura",
+    "state": "08",
+    "program": "tif",
+    "where": "City of Arvada (Arvada Urban Renewal Authority)",
+    "vintage": "city layer; terms per the AURA 2026 budget",
+    "url": "https://maps.arvada.org/arcgis/rest/services/Planning/PlanOverlays/MapServer/3",
+    "districts": 5
+   },
+   {
+    "id": "westminster_ura",
+    "state": "08",
+    "program": "tif",
+    "where": "City of Westminster (Westminster Economic Development Authority)",
+    "vintage": "city layer; last tax years per WEDA (fourth quarter 2025)",
+    "url": "https://maps.cityofwestminster.us/server/rest/services/Economic_Development/GID_URA/MapServer/1",
+    "districts": 7
+   },
+   {
+    "id": "loveland_ura",
+    "state": "08",
+    "program": "tif",
+    "where": "City of Loveland",
+    "vintage": "city layer (adopted areas)",
+    "url": "https://mapserv.cityofloveland.org/arcgis/rest/services/layers/URA/MapServer/0",
+    "districts": 3
+   },
+   {
     "id": "montrose_ura",
     "state": "08",
     "program": "tif",
@@ -5537,7 +5600,7 @@
   },
   "CO": {
    "rates": "state rate only",
-   "rate_gaps": 3,
+   "rate_gaps": 5,
    "check": {
     "status": "checked",
     "source": "https://cdor.colorado.gov/retail-sales-reports",
