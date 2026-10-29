@@ -655,7 +655,7 @@
     -75.293,
     39.341
    ],
-   "bytes": 2129614,
+   "bytes": 2129632,
    "counties": 133
   },
   {
@@ -697,7 +697,7 @@
     -87.07,
     46.853
    ],
-   "bytes": 1485358,
+   "bytes": 1497487,
    "counties": 72
   },
   {
@@ -1747,9 +1747,9 @@
     "state": "55",
     "program": "tif",
     "where": "City of Milwaukee",
-    "vintage": "active districts, October 2025",
-    "url": "https://services1.arcgis.com/5ly0cVV70qsN8Soc/arcgis/rest/services/activeTIDs/FeatureServer/13",
-    "districts": 73
+    "vintage": "City layer, current (through TID 136, 2026)",
+    "url": "https://milwaukeemaps.milwaukee.gov/arcgis/rest/services/planning/special_districts/MapServer/8",
+    "districts": 79
    },
    {
     "id": "msn_tid",
@@ -1758,7 +1758,7 @@
     "where": "City of Madison",
     "vintage": "current",
     "url": "https://maps.cityofmadison.com/arcgis/rest/services/Public/OPEN_DATA_PLANNING/MapServer/8",
-    "districts": 16
+    "districts": 14
    },
    {
     "id": "dal_tif",
@@ -3963,7 +3963,7 @@
     "where": "Brown County, Wisconsin (Green Bay area)",
     "vintage": "county layer, parcels edited through September 2025",
     "url": "https://gis.browncountywi.gov/arcgis/rest/services/TaxIncrementalDistricts/MapServer/4",
-    "districts": 49
+    "districts": 47
    },
    {
     "id": "sheboygan_tid",
@@ -3981,7 +3981,7 @@
     "where": "City of Marshfield",
     "vintage": "updated March 2025",
     "url": "https://services2.arcgis.com/SZYqn7iYnvAZ1Q4U/arcgis/rest/services/TIDs/FeatureServer/0",
-    "districts": 9
+    "districts": 8
    },
    {
     "id": "whitewater_tid",
@@ -4026,7 +4026,7 @@
     "where": "City of Elroy",
     "vintage": "updated November 2025",
     "url": "https://services3.arcgis.com/fG0wlSudAkEi5Jdl/arcgis/rest/services/TID_Boundaries_view/FeatureServer/0",
-    "districts": 5
+    "districts": 4
    },
    {
     "id": "hillsboro_tid",
@@ -4035,7 +4035,7 @@
     "where": "City of Hillsboro, Wisconsin",
     "vintage": "updated July 2025",
     "url": "https://services7.arcgis.com/1FkMXRw840ul2jcI/arcgis/rest/services/TID_Viewing/FeatureServer/0",
-    "districts": 2
+    "districts": 1
    },
    {
     "id": "newlisbon_tid",
@@ -4044,7 +4044,7 @@
     "where": "City of New Lisbon",
     "vintage": "updated July 2024",
     "url": "https://services7.arcgis.com/M6G5iEO3XfYCP7A8/arcgis/rest/services/TIF_View/FeatureServer/0",
-    "districts": 6
+    "districts": 4
    },
    {
     "id": "oconomowoc_tid",
@@ -4053,7 +4053,7 @@
     "where": "City of Oconomowoc",
     "vintage": "updated February 2026",
     "url": "https://services7.arcgis.com/Z2kjnwbHdLo56fuu/arcgis/rest/services/TIDs/FeatureServer/0",
-    "districts": 5
+    "districts": 3
    },
    {
     "id": "fdl_bid",
@@ -4179,42 +4179,6 @@
     "where": "City of La Crosse",
     "vintage": "updated September 2026",
     "url": "https://services5.arcgis.com/vwNkSCPYyA8kVRT7/arcgis/rest/services/Tax_Increment_Finance_Districts_New/FeatureServer/40",
-    "districts": 1
-   },
-   {
-    "id": "adams_tid0",
-    "state": "55",
-    "program": "tif",
-    "where": "City of Adams",
-    "vintage": "updated December 2025",
-    "url": "https://services9.arcgis.com/xvpIhHR1R7shnhSg/arcgis/rest/services/TID_Boundaries_View/FeatureServer/0",
-    "districts": 1
-   },
-   {
-    "id": "adams_tid1",
-    "state": "55",
-    "program": "tif",
-    "where": "City of Adams",
-    "vintage": "updated December 2025",
-    "url": "https://services9.arcgis.com/xvpIhHR1R7shnhSg/arcgis/rest/services/TID_Boundaries_View/FeatureServer/1",
-    "districts": 1
-   },
-   {
-    "id": "adams_tid2",
-    "state": "55",
-    "program": "tif",
-    "where": "City of Adams",
-    "vintage": "updated December 2025",
-    "url": "https://services9.arcgis.com/xvpIhHR1R7shnhSg/arcgis/rest/services/TID_Boundaries_View/FeatureServer/2",
-    "districts": 1
-   },
-   {
-    "id": "adams_tid4",
-    "state": "55",
-    "program": "tif",
-    "where": "City of Adams",
-    "vintage": "updated December 2025",
-    "url": "https://services9.arcgis.com/xvpIhHR1R7shnhSg/arcgis/rest/services/TID_Boundaries_View/FeatureServer/4",
     "districts": 1
    },
    {
@@ -6268,7 +6232,7 @@
   },
   "WI": {
    "rates": "current",
-   "rate_gaps": 2,
+   "rate_gaps": 3,
    "check": {
     "status": "checked",
     "source": "https://www.revenue.wi.gov/DORReports/SalesUseTaxRptCalendarYr2019.pdf",
