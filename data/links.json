@@ -394,6 +394,13 @@
     "url": "https://www.in.gov/ihcda/developers/",
     "what": "Housing tax credits and HOME/Trust Fund financing for rental developers",
     "checked": "200"
+   },
+   {
+    "name": "Food and beverage tax",
+    "agency": "Indiana Department of Revenue",
+    "url": "https://www.in.gov/dor/i-am-a/business-corp/food-and-beverage-tax/",
+    "what": "County and city food and beverage tax rates on restaurant meals",
+    "checked": "200"
    }
   ],
   "19": [

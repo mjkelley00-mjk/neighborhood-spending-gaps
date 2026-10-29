@@ -207,7 +207,7 @@
     -84.824,
     41.753
    ],
-   "bytes": 1588289,
+   "bytes": 1601817,
    "counties": 92
   },
   {
@@ -1851,6 +1851,15 @@
     "vintage": "SAGIS layer, current",
     "url": "https://pub.sagis.org/arcgis/rest/services/Savannah/UrbanRevelopmentAdaptiveReuseIncentives_MapService/MapServer/2",
     "districts": 3
+   },
+   {
+    "id": "indy_eid",
+    "state": "18",
+    "program": "bid",
+    "where": "City of Indianapolis (Department of Metropolitan Development)",
+    "vintage": "City layer, current (undated)",
+    "url": "https://gis.indy.gov/server/rest/services/DMDPortal/SpecialDistricts/MapServer/7",
+    "districts": 2
    },
    {
     "id": "indy_tif",
