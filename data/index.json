@@ -81,7 +81,7 @@
     -102.151,
     40.894
    ],
-   "bytes": 1480508,
+   "bytes": 1480493,
    "counties": 64
   },
   {
@@ -333,7 +333,7 @@
     -90.12,
     49.067
    ],
-   "bytes": 1510901,
+   "bytes": 1525839,
    "counties": 87
   },
   {
@@ -1722,7 +1722,7 @@
     "where": "City of Saint Paul",
     "vintage": "updated July 2026",
     "url": "https://services1.arcgis.com/9meaaHE3uiba0zr8/arcgis/rest/services/TIF_For_Open_Info_DM/FeatureServer/1",
-    "districts": 60
+    "districts": 64
    },
    {
     "id": "kc_tif",
@@ -2271,7 +2271,7 @@
     "where": "Hennepin County (Minneapolis and suburbs)",
     "vintage": "county base map, current",
     "url": "https://gis.hennepin.us/arcgis/rest/services/Maps/ANNOTATION_BASE/MapServer/78",
-    "districts": 247
+    "districts": 243
    },
    {
     "id": "dsm_ura",
@@ -4830,13 +4830,22 @@
     "districts": 1
    },
    {
-    "id": "mpls_did",
+    "id": "mpls_ssd",
     "state": "27",
     "program": "bid",
     "where": "City of Minneapolis",
-    "vintage": "as mapped in 2023",
-    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Downtown_Improvement_District_Boundary/FeatureServer/0",
-    "districts": 1
+    "vintage": "as mapped in April 2023",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Special_Service_Districts_Map/FeatureServer/1",
+    "districts": 16
+   },
+   {
+    "id": "goldenvalley_tif",
+    "state": "27",
+    "program": "tif",
+    "where": "City of Golden Valley",
+    "vintage": "city layer, edited February 2026",
+    "url": "https://gis.goldenvalleymn.gov/server/rest/services/GoldenMap/Golden_Planning/FeatureServer/571",
+    "districts": 4
    },
    {
     "id": "albanyny_bid",
@@ -5400,6 +5409,7 @@
    "55": "the state has published its finalists, not its final nominations, so no tract is shown as nominated",
    "29": "the Department of Economic Development received 221 intake forms and took public comment from July 17 to 31, 2026, but has published no nominations, so no tract is shown as nominated",
    "24": "the state sent 114 nominations to Treasury on October 9, 2026, as reported, but has not published which tracts they are, so no tract is shown as nominated",
+   "27": "the Department of Employment and Economic Development has published no 2027 nominations (its Opportunity Zones page, updated June 2026, describes only the 2018 zones), so no tract is shown as nominated",
    "30": "the state's map still shows four tracts under discussion, so its list is not final and no tract is shown as nominated"
   }
  },
@@ -5882,7 +5892,7 @@
   },
   "MN": {
    "rates": "current",
-   "rate_gaps": 2,
+   "rate_gaps": 3,
    "check": {
     "status": "checked",
     "source": "https://www.revenue.state.mn.us/2024-sales-and-use-tax-revenue-county",
