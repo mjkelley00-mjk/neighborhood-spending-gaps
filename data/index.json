@@ -291,7 +291,7 @@
     -75.066,
     39.708
    ],
-   "bytes": 1433782,
+   "bytes": 1446187,
    "counties": 24
   },
   {
@@ -1853,6 +1853,15 @@
     "districts": 3
    },
    {
+    "id": "moco_ud",
+    "state": "24",
+    "program": "bid",
+    "where": "Montgomery County",
+    "vintage": "County layer, current (undated)",
+    "url": "https://gis4.montgomerycountymd.gov/arcgis/rest/services/general/urban_districts/MapServer/0",
+    "districts": 4
+   },
+   {
     "id": "indy_eid",
     "state": "18",
     "program": "bid",
@@ -2858,7 +2867,7 @@
     "where": "Maryland Department of Housing and Community Development (MD iMAP)",
     "vintage": "MD iMAP, current",
     "url": "https://mdgeodata.md.gov/imap/rest/services/BusinessEconomy/MD_IncentiveZones/FeatureServer/6",
-    "districts": 102
+    "districts": 126
    },
    {
     "id": "md_brni",
@@ -5319,6 +5328,7 @@
    "45": "the state's map of its nominations disagrees with itself (113 or 115 tracts) and its page still says the list is under review, so no tract is shown as nominated",
    "39": "the state has published a 130-tract list under review, not its final nominations, and says it will publish the final list once the Treasury confirms it, so no tract is shown as nominated",
    "55": "the state has published its finalists, not its final nominations, so no tract is shown as nominated",
+   "24": "the state sent 114 nominations to Treasury on October 9, 2026, as reported, but has not published which tracts they are, so no tract is shown as nominated",
    "30": "the state's map still shows four tracts under discussion, so its list is not final and no tract is shown as nominated"
   }
  },
