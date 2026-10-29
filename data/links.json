@@ -934,6 +934,20 @@
     "url": "https://thda.org/rental-housing-partn/rental-housing-developers/",
     "what": "Housing tax credits, bonds and gap financing for rental developers",
     "checked": "200"
+   },
+   {
+    "name": "Tourism Development Zones",
+    "agency": "Tennessee Comptroller of the Treasury",
+    "url": "https://www.comptroller.tn.gov/content/dam/cot/lgf/documents/resources/tdzs/TDZlist.pdf",
+    "what": "The Comptroller's list of the state's tourism development zones",
+    "checked": "200"
+   },
+   {
+    "name": "Local sales tax",
+    "agency": "Tennessee Department of Revenue",
+    "url": "https://www.tn.gov/revenue/taxes/sales-and-use-tax/local-sales-tax.html",
+    "what": "Local sales tax rates by city and county, with the rate map and boundary files",
+    "checked": "200"
    }
   ],
   "48": [

@@ -193,7 +193,7 @@
     -87.53,
     42.488
    ],
-   "bytes": 3309158,
+   "bytes": 3303650,
    "counties": 102
   },
   {
@@ -487,7 +487,7 @@
     -96.606,
     48.91
    ],
-   "bytes": 290857,
+   "bytes": 291015,
    "counties": 53
   },
   {
@@ -515,7 +515,7 @@
     -94.456,
     36.965
    ],
-   "bytes": 1286329,
+   "bytes": 1282268,
    "counties": 77
   },
   {
@@ -599,7 +599,7 @@
     -81.752,
     36.637
    ],
-   "bytes": 1605676,
+   "bytes": 1617881,
    "counties": 95
   },
   {
@@ -669,7 +669,7 @@
     -117.05,
     48.989
    ],
-   "bytes": 1700920,
+   "bytes": 1700988,
    "counties": 39
   },
   {
@@ -697,7 +697,7 @@
     -87.07,
     46.853
    ],
-   "bytes": 1485272,
+   "bytes": 1485358,
    "counties": 72
   },
   {
@@ -816,6 +816,13 @@
     "many": "Oregon Enterprise Zones",
     "kind": "zone",
     "desc": "Zones sponsored by cities, counties, ports and tribes where new business investment is exempt from local property tax for three to five years, longer in some rural zones (Business Oregon)."
+   },
+   "tn_tdz": {
+    "label": "Tennessee Tourism Development Zone",
+    "one": "a Tourism Development Zone",
+    "many": "Tourism Development Zones",
+    "kind": "zone",
+    "desc": "Zones around a convention center or other public use facility where the growth in state and local sales tax collected inside the zone is set aside to pay for the facility (Convention Center and Tourism Development Financing Act), administered by the Department of Revenue."
    },
    "va_tz": {
     "label": "Virginia technology zone",
@@ -1880,6 +1887,15 @@
     "vintage": "updated April 2026",
     "url": "https://services1.arcgis.com/79kfd2K6fskCAkyg/arcgis/rest/services/Local_Only_TIFs/FeatureServer/0",
     "districts": 14
+   },
+   {
+    "id": "tn_tdz",
+    "state": "47",
+    "program": "tn_tdz",
+    "where": "Tennessee Department of Revenue",
+    "vintage": "Department of Revenue layer, current",
+    "url": "https://tnmap.tn.gov/arcgis/rest/services/COMMUNITY/REVENUE_TAX_RATE_BOUNDARIES/MapServer/2",
+    "districts": 9
    },
    {
     "id": "nash_rd",
@@ -5865,7 +5881,7 @@
   },
   "ND": {
    "rates": "current",
-   "rate_gaps": 2,
+   "rate_gaps": 3,
    "check": {
     "status": "no local data published",
     "source": "https://www.tax.nd.gov/",
@@ -6001,7 +6017,7 @@
   },
   "OK": {
    "rates": "current",
-   "rate_gaps": 2,
+   "rate_gaps": 3,
    "check": {
     "status": "no local data published",
     "source": "https://oklahoma.gov/tax.html",
@@ -6087,7 +6103,7 @@
   },
   "TN": {
    "rates": "current",
-   "rate_gaps": 5,
+   "rate_gaps": 2,
    "check": {
     "status": "no local data published",
     "source": "https://www.tn.gov/revenue.html",
@@ -6168,7 +6184,7 @@
   },
   "WA": {
    "rates": "current",
-   "rate_gaps": 4,
+   "rate_gaps": 5,
    "check": {
     "status": "checked",
     "source": "https://apps.dor.wa.gov/ResearchStats/Content/QuarterlyBusinessReview/Report.aspx",
@@ -6189,7 +6205,7 @@
   },
   "WI": {
    "rates": "current",
-   "rate_gaps": 1,
+   "rate_gaps": 2,
    "check": {
     "status": "checked",
     "source": "https://www.revenue.wi.gov/DORReports/SalesUseTaxRptCalendarYr2019.pdf",
