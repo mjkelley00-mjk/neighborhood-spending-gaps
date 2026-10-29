@@ -515,7 +515,7 @@
     -94.456,
     36.965
    ],
-   "bytes": 1282268,
+   "bytes": 1306093,
    "counties": 77
   },
   {
@@ -2053,7 +2053,7 @@
     "where": "City of Oklahoma City",
     "vintage": "updated October 2026",
     "url": "https://utility.arcgis.com/usrsvcs/servers/08ededb10dcf458ba9ac5588d6d6296a/rest/services/OpenData/Finance/FeatureServer/0",
-    "districts": 11
+    "districts": 13
    },
    {
     "id": "rockford_tif",
@@ -5384,7 +5384,7 @@
    "oz1": "2018 Qualified Opportunity Zone (Notices 2018-48 and 2019-42; CDFI Fund list of 2010 tracts, carried to 2020 tracts)",
    "oz2e": "Eligible for nomination as a 2027 Qualified Opportunity Zone (Treasury list, September 2026 update; 2020-2024 ACS, 2020 tracts). Designations by Treasury had not been published when this was built.",
    "oz2e_rural": "Eligible 2027 QOZ tract made up entirely of a rural area (as Treasury flags it)",
-   "oz2n": "Nominated by its governor for a 2027 Qualified Opportunity Zone (Arizona, 127 tracts (125 nominated July 7, 2026, then replacements and additions sent October 26); Colorado, 91 tracts, submitted September 28, 2026; Delaware, 25 tracts, announced September 28, 2026; Georgia, 238 tracts on the state's map, edited October 2026; its September 28 list had 235; Idaho, 25 tracts, certified by Treasury as designated zones October 1, 2026; Indiana, 126 tracts, published September 25, 2026; Massachusetts, 104 tracts, nominated October 2, 2026; Nebraska, 28 tracts, submitted July 22, 2026; Texas, 608 tracts, submitted September 4, 2026; Utah, 37 tracts, announced September 24, 2026; Washington, 99 tracts, announced October 8, 2026)",
+   "oz2n": "Nominated by its governor for a 2027 Qualified Opportunity Zone (Arizona, 127 tracts (125 nominated July 7, 2026, then replacements and additions sent October 26); Colorado, 91 tracts, submitted September 28, 2026; Delaware, 25 tracts, announced September 28, 2026; Georgia, 238 tracts on the state's map, edited October 2026; its September 28 list had 235; Idaho, 25 tracts, certified by Treasury as designated zones October 1, 2026; Indiana, 126 tracts, published September 25, 2026; Massachusetts, 104 tracts, nominated October 2, 2026; Nebraska, 28 tracts, submitted July 22, 2026; Oklahoma, 104 tracts selected for nomination and submitted by the Governor (the Department of Commerce map, October 2026); Texas, 608 tracts, submitted September 4, 2026; Utah, 37 tracts, announced September 24, 2026; Washington, 99 tracts, announced October 8, 2026)",
    "nmtc": "New Markets Tax Credit low-income community (CDFI Fund, 2016-2020 ACS, 2020 tracts; includes high-migration rural tracts)",
    "nmtc_sd": "NMTC low-income community meeting a primary severe-distress test: poverty above 30%, median family income at or below 60% of the benchmark, or unemployment at least 1.5 times the national rate. Other routes to that status are not computed.",
    "cdfi_ia": "CDFI Program Investment Area (CDFI Fund, 2016-2020 ACS, 2020 tracts)",
@@ -5473,6 +5473,12 @@
     "count": 28
    },
    {
+    "state": "40",
+    "name": "Oklahoma",
+    "status": "104 tracts selected for nomination and submitted by the Governor (the Department of Commerce map, October 2026)",
+    "count": 104
+   },
+   {
     "state": "48",
     "name": "Texas",
     "status": "608 tracts, submitted September 4, 2026",
@@ -5496,7 +5502,6 @@
    "06": "the Department of Finance and GO-Biz published a draft list of 560 recommended tracts for public comment in August 2026, but the final nominations have not been published, so no tract is shown as nominated",
    "02": "the state has sent its nominations to Treasury but has not published which tracts they are",
    "20": "the state has sent its nominations to Treasury but has not published which tracts they are",
-   "40": "the state has sent its nominations to Treasury but has not published which tracts they are",
    "51": "the Department of Housing and Community Development and the Virginia Economic Development Partnership ran the state's nomination process and have published no list (VEDP's 'Nominated Tracts' map layer is the 2018 list of 212), so no tract is shown as nominated",
    "34": "the Governor may nominate up to 129 tracts, and the Department of Community Affairs says the state will submit its nominations by the extended federal deadline of October 28, 2026; no list has been published, so no tract is shown as nominated",
    "26": "the Michigan Economic Development Corporation has not published its nominations (its page still describes the September process), so no tract is shown as nominated",
@@ -6218,7 +6223,7 @@
   },
   "OK": {
    "rates": "current",
-   "rate_gaps": 3,
+   "rate_gaps": 5,
    "check": {
     "status": "no local data published",
     "source": "https://oklahoma.gov/tax.html",
