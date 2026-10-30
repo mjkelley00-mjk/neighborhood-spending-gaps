@@ -179,7 +179,7 @@
     -111.076,
     48.852
    ],
-   "bytes": 498533,
+   "bytes": 498535,
    "counties": 44
   },
   {
@@ -389,7 +389,7 @@
     -95.59,
     42.913
    ],
-   "bytes": 673551,
+   "bytes": 673563,
    "counties": 93
   },
   {
@@ -683,7 +683,7 @@
     -77.769,
     40.598
    ],
-   "bytes": 610033,
+   "bytes": 633741,
    "counties": 55
   },
   {
@@ -5674,7 +5674,7 @@
    "46": "the Governor's Office of Economic Development has published no 2027 nominations, so no tract is shown as nominated",
    "47": "the Department of Economic and Community Development has published no 2027 nominations (its page describes only the 2018 zones), so no tract is shown as nominated",
    "50": "the Agency of Commerce and Community Development published draft recommendations for public input in July 2026 but has not published final nominations, so no tract is shown as nominated",
-   "54": "the Department of Economic Development closed local nominations on July 1, 2026 and said the Governor would submit by September 28, but has published no list, so no tract is shown as nominated",
+   "54": "the Division of Economic Development closed local nominations on July 1, 2026 and said the Governor would submit by September 28 (up to 52 of 207 eligible tracts), but has published no list, so no tract is shown as nominated",
    "56": "the Wyoming Business Council shows only a preliminary eligibility map and no final nominations, so no tract is shown as nominated"
   }
  },
@@ -6591,7 +6591,7 @@
   },
   "WV": {
    "rates": "current",
-   "rate_gaps": 2,
+   "rate_gaps": 3,
    "check": {
     "status": "no local data published",
     "source": "https://tax.wv.gov/",
