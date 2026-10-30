@@ -445,7 +445,7 @@
     -103.1,
     36.931
    ],
-   "bytes": 604182,
+   "bytes": 627412,
    "counties": 33
   },
   {
@@ -5640,7 +5640,7 @@
    "28": "the Mississippi Development Authority said it would recommend 101 tracts and has closed public comment, but has published no nominations, so no tract is shown as nominated",
    "32": "the Governor's Office of Economic Development's page shows only a draft list put out for comment (up to 49 of 195 eligible tracts) and no final nominations, so no tract is shown as nominated",
    "33": "the Governor announced on October 27, 2026, as reported, that the Treasury approved 25 nominated tracts; the state's list has not yet been read into this site, so no tract is shown as nominated",
-   "35": "the Economic Development Department has published no 2027 nominations (its page shows the nomination process and an eligibility map only), so no tract is shown as nominated",
+   "35": "the Economic Development Department could nominate up to 65 tracts and its timeline set July 1, 2026 to finalize the list, but it has published no 2027 nominations (its page shows the nomination process and an eligibility map only), so no tract is shown as nominated",
    "36": "Empire State Development has published no 2027 nominations (its Opportunity Zones page describes only the 2018 zones), so no tract is shown as nominated",
    "38": "the Department of Commerce has posted a map of 25 'final candidate' tracts but has not published its nominations, so no tract is shown as nominated",
    "44": "Rhode Island Commerce says the Governor will nominate 25 tracts but has published no list, so no tract is shown as nominated",
@@ -6279,7 +6279,7 @@
   },
   "NM": {
    "rates": "current",
-   "rate_gaps": 2,
+   "rate_gaps": 4,
    "check": {
     "status": "checked",
     "source": "https://www.tax.newmexico.gov/all-nm-taxes/gross-receipts-taxes-overview/quarterly-rp-80-reports-gross-receipts-by-geographic-area-and-naics-code/",
