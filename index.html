@@ -687,8 +687,19 @@ function buildSearch() {
     if (alias) SEARCH.push(Object.assign({}, it, {key:alias.toLowerCase(), via:'also called ' + alias}));
     if (ST.fips === '17' && kind === 'Community area') for (const nb of CHI_INCLUDES[n] || []) SEARCH.push(Object.assign({}, it, {key:nb.toLowerCase(), via:'includes ' + nb}));
   }
+  // a name two places share in this state ("Kailua" and "Waimea" in Hawaii) carries its county in the label (reviewbot, Hawaii)
+  const nameCount = {};
+  const countyOf = ts => { const n = {}; for (const t of ts) n[t.slice(0, 5)] = (n[t.slice(0, 5)] || 0) + 1; return Object.keys(n).sort((a, b) => n[b] - n[a])[0]; };
+  for (const p of Object.values(ST.places)) {
+    const b = placeName(p.name).base.toLowerCase(), bc = b + '|' + countyOf(p.tracts);
+    nameCount[b] = (nameCount[b] || 0) + 1; nameCount[bc] = (nameCount[bc] || 0) + 1;
+  }
   for (const [g, p] of Object.entries(ST.places)) {
-    const pn = placeName(p.name), it = {kind:pn.kind, label:pn.base, tracts:p.tracts, key:pn.base.toLowerCase(), full:pn.full.toLowerCase(), src:'place', ...(p.part ? {part:p.part} : {})};
+    // in the same county too (Waukesha city and village), the place's type tells them apart
+    const pn = placeName(p.name), c = countyOf(p.tracts), b = pn.base.toLowerCase();
+    const kindWord = {'Community (unincorporated)': 'unincorporated community', 'City / town': 'city'}[pn.kind] || pn.kind.toLowerCase();
+    const cn = nameCount[b] < 2 ? '' : nameCount[b + '|' + c] > 1 ? kindWord : (ST.counties[c] || kindWord);
+    const it = {kind:pn.kind, label:cn ? `${pn.base} (${cn})` : pn.base, tracts:p.tracts, key:pn.base.toLowerCase(), full:pn.full.toLowerCase(), src:'place', ...(p.part ? {part:p.part} : {})};
     SEARCH.push(it);
     // the name people use where the Census name differs ("Boise City" is Boise; reviewbot, Idaho)
     if (PLACE_ALIASES[g]) SEARCH.push(Object.assign({}, it, {key:PLACE_ALIASES[g].toLowerCase(), full:'', via:'also called ' + PLACE_ALIASES[g]}));

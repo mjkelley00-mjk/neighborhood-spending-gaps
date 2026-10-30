@@ -165,7 +165,7 @@
     -154.903,
     28.388
    ],
-   "bytes": 393363,
+   "bytes": 411212,
    "counties": 5
   },
   {
@@ -935,7 +935,7 @@
     "one": "a Hawaii Enterprise Zone",
     "many": "Hawaii Enterprise Zones",
     "kind": "zone",
-    "desc": "Zones where eligible businesses can get state general excise and income tax relief for up to seven years (Hawaii Department of Business, Economic Development and Tourism)."
+    "desc": "Zones where eligible businesses can get state general excise and income tax relief for up to seven years; for businesses joining from July 1, 2026, up to nine years, or twelve for manufacturing and agriculture (Act 182 of 2026; Hawaii Department of Business, Economic Development and Tourism)."
    },
    "ny_boa": {
     "label": "New York Brownfield Opportunity Area",
@@ -1174,6 +1174,20 @@
     "many": "Tobacco Region localities",
     "kind": "desig",
     "desc": "The 40 counties and cities where projects can get Tobacco Region Revitalization Commission grants, including its performance-based Tobacco Region Opportunity Fund."
+   },
+   "hi_hcda": {
+    "label": "Hawaii Community Development Authority district",
+    "one": "a Hawaii Community Development Authority district",
+    "many": "Hawaii Community Development Authority districts",
+    "kind": "desig",
+    "desc": "State community development districts where the Hawaii Community Development Authority, not the county, plans and zones land and guides redevelopment (HRS chapter 206E); He\u2018eia's district is for agriculture and Native Hawaiian culture."
+   },
+   "hnl_tod": {
+    "label": "Honolulu TOD special district",
+    "one": "a Honolulu TOD special district",
+    "many": "Honolulu TOD special districts",
+    "kind": "tod",
+    "desc": "Rail station areas where the City and County of Honolulu has adopted transit-oriented development special district rules by ordinance, which set the zoning and design standards for new building (Department of Planning and Permitting)."
    },
    "id_ura": {
     "label": "Idaho urban renewal area",
@@ -2835,6 +2849,24 @@
     "vintage": "updated January 2026",
     "url": "https://services2.arcgis.com/Gqyymy5JISeLzyNM/arcgis/rest/services/RuralZonestoagol/FeatureServer/0",
     "districts": 37
+   },
+   {
+    "id": "hi_hcda",
+    "state": "15",
+    "program": "hi_hcda",
+    "where": "Hawaii Statewide GIS Program (districts of the Hawaii Community Development Authority)",
+    "vintage": "as of July 2026",
+    "url": "https://geodata.hawaii.gov/arcgis/rest/services/AdminBnd/MapServer/22",
+    "districts": 6
+   },
+   {
+    "id": "hnl_tod",
+    "state": "15",
+    "program": "hnl_tod",
+    "where": "City and County of Honolulu (Department of Planning and Permitting)",
+    "vintage": "edited August 2026 (adopted districts only)",
+    "url": "https://services.arcgis.com/tNJpAOha4mODLkXz/arcgis/rest/services/TOD_Special_District_and_Zone_Change/FeatureServer/2",
+    "districts": 6
    },
    {
     "id": "id_ura",
@@ -5661,7 +5693,7 @@
    "09": "the Department of Economic and Community Development has published no 2027 nominations (its Opportunity Zones page still describes the 72 zones of 2018), so no tract is shown as nominated",
    "11": "the Deputy Mayor for Planning and Economic Development published 25 preliminary recommendations for public comment in July 2026 but has not published its final nominations, so no tract is shown as nominated",
    "12": "FloridaCommerce has published no 2027 nominations, so no tract is shown as nominated",
-   "15": "the Department of Business, Economic Development and Tourism says the Governor will nominate 25 tracts but has published no list, so no tract is shown as nominated",
+   "15": "the Department of Business, Economic Development and Tourism says the Governor will nominate 25 of 88 eligible tracts but has published no list, so no tract is shown as nominated",
    "17": "the Governor said in August 2026 that the state would submit 238 tracts by the end of September, but the Department of Commerce and Economic Opportunity has published no list, so no tract is shown as nominated",
    "23": "the Department of Economic and Community Development has published no 2027 nominations, so no tract is shown as nominated",
    "28": "the Mississippi Development Authority said it would recommend 101 tracts and has closed public comment, but has published no nominations, so no tract is shown as nominated",
