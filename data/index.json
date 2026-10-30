@@ -347,7 +347,7 @@
     -88.149,
     34.991
    ],
-   "bytes": 837450,
+   "bytes": 861542,
    "counties": 82
   },
   {
@@ -6164,7 +6164,7 @@
   },
   "MS": {
    "rates": "current",
-   "rate_gaps": 5,
+   "rate_gaps": 6,
    "check": {
     "status": "checked",
     "source": "https://www.dor.ms.gov/sites/default/files/statistics/stats_sales%20by%20co%20by%20ind0625.pdf",
