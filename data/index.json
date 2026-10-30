@@ -67,7 +67,7 @@
     -114.273,
     41.852
    ],
-   "bytes": 8921614,
+   "bytes": 8922060,
    "counties": 58
   },
   {
@@ -221,7 +221,7 @@
     -90.189,
     43.457
    ],
-   "bytes": 982744,
+   "bytes": 983078,
    "counties": 99
   },
   {
@@ -389,7 +389,7 @@
     -95.59,
     42.913
    ],
-   "bytes": 632261,
+   "bytes": 673551,
    "counties": 93
   },
   {
@@ -403,7 +403,7 @@
     -114.056,
     41.652
    ],
-   "bytes": 683658,
+   "bytes": 683735,
    "counties": 17
   },
   {
@@ -445,7 +445,7 @@
     -103.1,
     36.931
    ],
-   "bytes": 627412,
+   "bytes": 627513,
    "counties": 33
   },
   {
@@ -473,7 +473,7 @@
     -75.543,
     36.544
    ],
-   "bytes": 2561325,
+   "bytes": 2561924,
    "counties": 100
   },
   {
@@ -5454,6 +5454,33 @@
     "vintage": "city layer, current",
     "url": "https://maps.topeka.gov/arcgis/rest/services/TaxAssessment/Tax_Districts/MapServer/7",
     "districts": 3
+   },
+   {
+    "id": "omaha_bid",
+    "state": "31",
+    "program": "bid",
+    "where": "Douglas County and City of Omaha (DOGIS)",
+    "vintage": "edited December 2025",
+    "url": "https://dcgis.org/server/rest/services/Hosted/Business_Improvement_Districts_(source)_view/FeatureServer/0",
+    "districts": 9
+   },
+   {
+    "id": "omaha_tifd",
+    "state": "31",
+    "program": "tif",
+    "where": "Douglas County and City of Omaha (DOGIS)",
+    "vintage": "city layer, current",
+    "url": "https://dcgis.org/server/rest/services/Hosted/Tax_Increment_Financing_Districts_view/FeatureServer/0",
+    "districts": 4
+   },
+   {
+    "id": "lincoln_bid",
+    "state": "31",
+    "program": "bid",
+    "where": "City of Lincoln (Urban Development)",
+    "vintage": "city layer, current (expired districts left out)",
+    "url": "https://gis.lincoln.ne.gov/public/rest/services/UrbanDevelopment/DevelopmentUserSupport/MapServer/15",
+    "districts": 7
    }
   ],
   "rule": "percent of each tract's area inside each district and inside each program's districts taken together (equal-area projection, generalized 2024 tract shapes); shares that round to 1% or more kept",
@@ -6232,7 +6259,7 @@
   },
   "NE": {
    "rates": "current",
-   "rate_gaps": 3,
+   "rate_gaps": 4,
    "check": {
     "status": "checked",
     "source": "https://revenue.nebraska.gov/sites/default/files/doc/research/annual_report/03%20Sales%20Tax%20by%20Business%20Classification%202025.xls",
