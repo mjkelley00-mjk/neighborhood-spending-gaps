@@ -95,7 +95,7 @@
     -71.814,
     42.023
    ],
-   "bytes": 823318,
+   "bytes": 823326,
    "counties": 9
   },
   {
@@ -179,7 +179,7 @@
     -111.076,
     48.852
    ],
-   "bytes": 467759,
+   "bytes": 498533,
    "counties": 44
   },
   {
@@ -221,7 +221,7 @@
     -90.189,
     43.457
    ],
-   "bytes": 983078,
+   "bytes": 983051,
    "counties": 99
   },
   {
@@ -235,7 +235,7 @@
     -94.604,
     39.921
    ],
-   "bytes": 882278,
+   "bytes": 882285,
    "counties": 105
   },
   {
@@ -515,7 +515,7 @@
     -94.456,
     36.965
    ],
-   "bytes": 1306266,
+   "bytes": 1306300,
    "counties": 77
   },
   {
@@ -529,7 +529,7 @@
     -116.899,
     46.185
    ],
-   "bytes": 1030222,
+   "bytes": 1030229,
    "counties": 36
   },
   {
@@ -2843,7 +2843,7 @@
     "where": "Idaho State Tax Commission (statewide)",
     "vintage": "updated March 2026",
     "url": "https://services.arcgis.com/91hXl6NfvLGEi8x5/arcgis/rest/services/Idaho_City_Taxing_Districts/FeatureServer/27",
-    "districts": 110
+    "districts": 113
    },
    {
     "id": "ks_roz",
@@ -6015,7 +6015,7 @@
   },
   "ID": {
    "rates": "current",
-   "rate_gaps": 1,
+   "rate_gaps": 2,
    "check": {
     "status": "no local data published",
     "source": "https://tax.idaho.gov/",
