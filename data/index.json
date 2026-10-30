@@ -11,7 +11,7 @@
     -84.955,
     34.977
    ],
-   "bytes": 1451771,
+   "bytes": 1451935,
    "counties": 67
   },
   {
@@ -39,7 +39,7 @@
     -109.133,
     36.989
    ],
-   "bytes": 1587696,
+   "bytes": 1587931,
    "counties": 15
   },
   {
@@ -53,7 +53,7 @@
     -89.855,
     36.484
    ],
-   "bytes": 892950,
+   "bytes": 893009,
    "counties": 75
   },
   {
@@ -81,7 +81,7 @@
     -102.151,
     40.894
    ],
-   "bytes": 1480493,
+   "bytes": 1480575,
    "counties": 64
   },
   {
@@ -95,7 +95,7 @@
     -71.814,
     42.023
    ],
-   "bytes": 823275,
+   "bytes": 823318,
    "counties": 9
   },
   {
@@ -207,7 +207,7 @@
     -84.824,
     41.753
    ],
-   "bytes": 1601817,
+   "bytes": 1602047,
    "counties": 92
   },
   {
@@ -235,7 +235,7 @@
     -94.604,
     39.921
    ],
-   "bytes": 901372,
+   "bytes": 882278,
    "counties": 105
   },
   {
@@ -249,7 +249,7 @@
     -82.121,
     39.117
    ],
-   "bytes": 1280842,
+   "bytes": 1281007,
    "counties": 120
   },
   {
@@ -263,7 +263,7 @@
     -89.397,
     33.003
    ],
-   "bytes": 1412393,
+   "bytes": 1412475,
    "counties": 64
   },
   {
@@ -291,7 +291,7 @@
     -75.066,
     39.708
    ],
-   "bytes": 1446187,
+   "bytes": 1446416,
    "counties": 24
   },
   {
@@ -305,7 +305,7 @@
     -69.956,
     42.867
    ],
-   "bytes": 1566602,
+   "bytes": 1566860,
    "counties": 14
   },
   {
@@ -319,7 +319,7 @@
     -82.425,
     48.045
    ],
-   "bytes": 2587860,
+   "bytes": 2587918,
    "counties": 83
   },
   {
@@ -333,7 +333,7 @@
     -90.12,
     49.067
    ],
-   "bytes": 1525839,
+   "bytes": 1526581,
    "counties": 87
   },
   {
@@ -361,7 +361,7 @@
     -89.227,
     40.526
    ],
-   "bytes": 1761234,
+   "bytes": 1761355,
    "counties": 115
   },
   {
@@ -431,7 +431,7 @@
     -73.922,
     41.293
    ],
-   "bytes": 2309887,
+   "bytes": 2310004,
    "counties": 21
   },
   {
@@ -473,7 +473,7 @@
     -75.543,
     36.544
    ],
-   "bytes": 2561266,
+   "bytes": 2561325,
    "counties": 100
   },
   {
@@ -501,7 +501,7 @@
     -80.541,
     41.957
    ],
-   "bytes": 2920268,
+   "bytes": 2920325,
    "counties": 88
   },
   {
@@ -515,7 +515,7 @@
     -94.456,
     36.965
    ],
-   "bytes": 1306093,
+   "bytes": 1306266,
    "counties": 77
   },
   {
@@ -529,7 +529,7 @@
     -116.899,
     46.185
    ],
-   "bytes": 1030056,
+   "bytes": 1030222,
    "counties": 36
   },
   {
@@ -571,7 +571,7 @@
     -78.604,
     35.176
    ],
-   "bytes": 1290397,
+   "bytes": 1290456,
    "counties": 46
   },
   {
@@ -599,7 +599,7 @@
     -81.752,
     36.637
    ],
-   "bytes": 1617881,
+   "bytes": 1618062,
    "counties": 95
   },
   {
@@ -627,7 +627,7 @@
     -109.273,
     41.944
    ],
-   "bytes": 736490,
+   "bytes": 736630,
    "counties": 29
   },
   {
@@ -655,7 +655,7 @@
     -75.293,
     39.341
    ],
-   "bytes": 2129632,
+   "bytes": 2129725,
    "counties": 133
   },
   {
@@ -669,7 +669,7 @@
     -117.05,
     48.989
    ],
-   "bytes": 1700988,
+   "bytes": 1701221,
    "counties": 39
   },
   {
@@ -697,7 +697,7 @@
     -87.07,
     46.853
    ],
-   "bytes": 1497487,
+   "bytes": 1497546,
    "counties": 72
   },
   {
@@ -2850,9 +2850,9 @@
     "state": "20",
     "program": "ks_roz",
     "where": "Kansas Department of Commerce (map by the Kansas GIS)",
-    "vintage": "updated June 2026",
+    "vintage": "county list edited 2018, matching the Department of Commerce's current 77",
     "url": "https://services1.arcgis.com/q2CglofYX6ACNEeu/arcgis/rest/services/Rural_Opportunity_Zones/FeatureServer/0",
-    "districts": 105
+    "districts": 77
    },
    {
     "id": "la_cd",
@@ -3851,7 +3851,7 @@
     "where": "City of Wichita",
     "vintage": "City layer, current",
     "url": "https://gismaps.wichita.gov/ageweb/rest/services/MISC/Redevelopment/FeatureServer/19",
-    "districts": 15
+    "districts": 16
    },
    {
     "id": "wichita_ssmid",
@@ -5400,6 +5400,60 @@
     "vintage": "as mapped in 2019",
     "url": "https://maps.boonecountyil.org/arcgis/rest/services/Belvidere_TIF_Districts/MapServer/0",
     "districts": 1
+   },
+   {
+    "id": "topeka_tif",
+    "state": "20",
+    "program": "tif",
+    "where": "City of Topeka",
+    "vintage": "city layer, current",
+    "url": "https://maps.topeka.gov/arcgis/rest/services/TaxAssessment/Tax_Districts/MapServer/1",
+    "districts": 4
+   },
+   {
+    "id": "topeka_star",
+    "state": "20",
+    "program": "tif",
+    "where": "City of Topeka",
+    "vintage": "city layer, current",
+    "url": "https://maps.topeka.gov/arcgis/rest/services/TaxAssessment/Tax_Districts/MapServer/2",
+    "districts": 1
+   },
+   {
+    "id": "topeka_rhid",
+    "state": "20",
+    "program": "tif",
+    "where": "City of Topeka",
+    "vintage": "city layer, current",
+    "url": "https://maps.topeka.gov/arcgis/rest/services/TaxAssessment/Tax_Districts/MapServer/4",
+    "districts": 7
+   },
+   {
+    "id": "topeka_bid",
+    "state": "20",
+    "program": "bid",
+    "where": "City of Topeka",
+    "vintage": "city layer, current",
+    "url": "https://maps.topeka.gov/arcgis/rest/services/TaxAssessment/Tax_Districts/MapServer/5",
+    "districts": 3
+   },
+   {
+    "id": "topeka_cid",
+    "state": "20",
+    "program": "cid",
+    "where": "City of Topeka",
+    "vintage": "city layer, current",
+    "url": "https://maps.topeka.gov/arcgis/rest/services/TaxAssessment/Tax_Districts/MapServer/6",
+    "districts": 9
+   },
+   {
+    "id": "topeka_tifcid",
+    "state": "20",
+    "program": "cid",
+    "where": "City of Topeka",
+    "vintage": "city layer, current",
+    "url": "https://maps.topeka.gov/arcgis/rest/services/TaxAssessment/Tax_Districts/MapServer/7",
+    "districts": 3
    }
   ],
   "rule": "percent of each tract's area inside each district and inside each program's districts taken together (equal-area projection, generalized 2024 tract shapes); shares that round to 1% or more kept",
@@ -5981,7 +6035,7 @@
   },
   "KS": {
    "rates": "current",
-   "rate_gaps": 4,
+   "rate_gaps": 2,
    "check": {
     "status": "no local data published",
     "source": "https://www.ksrevenue.gov/",
