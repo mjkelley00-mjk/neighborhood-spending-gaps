@@ -11,7 +11,7 @@
     -84.955,
     34.977
    ],
-   "bytes": 1451935,
+   "bytes": 1451946,
    "counties": 67
   },
   {
@@ -25,7 +25,7 @@
     -130.137,
     71.214
    ],
-   "bytes": 373446,
+   "bytes": 373457,
    "counties": 30
   },
   {
@@ -39,7 +39,7 @@
     -109.133,
     36.989
    ],
-   "bytes": 1587931,
+   "bytes": 1587942,
    "counties": 15
   },
   {
@@ -53,7 +53,7 @@
     -89.855,
     36.484
    ],
-   "bytes": 893009,
+   "bytes": 893020,
    "counties": 75
   },
   {
@@ -67,7 +67,7 @@
     -114.273,
     41.852
    ],
-   "bytes": 8922060,
+   "bytes": 8922071,
    "counties": 58
   },
   {
@@ -81,7 +81,7 @@
     -102.151,
     40.894
    ],
-   "bytes": 1480575,
+   "bytes": 1480586,
    "counties": 64
   },
   {
@@ -95,7 +95,7 @@
     -71.814,
     42.023
    ],
-   "bytes": 823326,
+   "bytes": 838597,
    "counties": 9
   },
   {
@@ -109,7 +109,7 @@
     -75.056,
     39.832
    ],
-   "bytes": 234299,
+   "bytes": 234310,
    "counties": 3
   },
   {
@@ -123,7 +123,7 @@
     -76.919,
     38.983
    ],
-   "bytes": 236697,
+   "bytes": 236708,
    "counties": 1
   },
   {
@@ -137,7 +137,7 @@
     -80.038,
     30.976
    ],
-   "bytes": 4624827,
+   "bytes": 4624838,
    "counties": 67
   },
   {
@@ -151,7 +151,7 @@
     -80.85,
     34.979
    ],
-   "bytes": 2676013,
+   "bytes": 2676024,
    "counties": 159
   },
   {
@@ -165,7 +165,7 @@
     -154.903,
     28.388
    ],
-   "bytes": 411212,
+   "bytes": 411223,
    "counties": 5
   },
   {
@@ -179,7 +179,7 @@
     -111.076,
     48.852
    ],
-   "bytes": 498535,
+   "bytes": 498546,
    "counties": 44
   },
   {
@@ -193,7 +193,7 @@
     -87.53,
     42.488
    ],
-   "bytes": 3303650,
+   "bytes": 3303661,
    "counties": 102
   },
   {
@@ -207,7 +207,7 @@
     -84.824,
     41.753
    ],
-   "bytes": 1602047,
+   "bytes": 1602058,
    "counties": 92
   },
   {
@@ -221,7 +221,7 @@
     -90.189,
     43.457
    ],
-   "bytes": 983051,
+   "bytes": 983062,
    "counties": 99
   },
   {
@@ -235,7 +235,7 @@
     -94.604,
     39.921
    ],
-   "bytes": 882285,
+   "bytes": 882296,
    "counties": 105
   },
   {
@@ -249,7 +249,7 @@
     -82.121,
     39.117
    ],
-   "bytes": 1281007,
+   "bytes": 1281018,
    "counties": 120
   },
   {
@@ -263,7 +263,7 @@
     -89.397,
     33.003
    ],
-   "bytes": 1412475,
+   "bytes": 1412486,
    "counties": 64
   },
   {
@@ -277,7 +277,7 @@
     -67.018,
     47.295
    ],
-   "bytes": 425697,
+   "bytes": 463028,
    "counties": 16
   },
   {
@@ -291,7 +291,7 @@
     -75.066,
     39.708
    ],
-   "bytes": 1446416,
+   "bytes": 1446427,
    "counties": 24
   },
   {
@@ -305,7 +305,7 @@
     -69.956,
     42.867
    ],
-   "bytes": 1566860,
+   "bytes": 1591578,
    "counties": 14
   },
   {
@@ -319,7 +319,7 @@
     -82.425,
     48.045
    ],
-   "bytes": 2587918,
+   "bytes": 2698601,
    "counties": 83
   },
   {
@@ -333,7 +333,7 @@
     -90.12,
     49.067
    ],
-   "bytes": 1526581,
+   "bytes": 1681411,
    "counties": 87
   },
   {
@@ -347,7 +347,7 @@
     -88.149,
     34.991
    ],
-   "bytes": 861542,
+   "bytes": 861553,
    "counties": 82
   },
   {
@@ -361,7 +361,7 @@
     -89.227,
     40.526
    ],
-   "bytes": 1761355,
+   "bytes": 1761366,
    "counties": 115
   },
   {
@@ -375,7 +375,7 @@
     -104.094,
     48.934
    ],
-   "bytes": 401122,
+   "bytes": 401133,
    "counties": 56
   },
   {
@@ -389,7 +389,7 @@
     -95.59,
     42.913
    ],
-   "bytes": 673563,
+   "bytes": 673574,
    "counties": 93
   },
   {
@@ -403,7 +403,7 @@
     -114.056,
     41.652
    ],
-   "bytes": 683735,
+   "bytes": 683746,
    "counties": 17
   },
   {
@@ -417,7 +417,7 @@
     -70.732,
     45.106
    ],
-   "bytes": 370104,
+   "bytes": 406317,
    "counties": 10
   },
   {
@@ -431,7 +431,7 @@
     -73.922,
     41.293
    ],
-   "bytes": 2310004,
+   "bytes": 2340109,
    "counties": 21
   },
   {
@@ -445,7 +445,7 @@
     -103.1,
     36.931
    ],
-   "bytes": 627513,
+   "bytes": 627524,
    "counties": 33
   },
   {
@@ -459,7 +459,7 @@
     -71.915,
     44.979
    ],
-   "bytes": 5193954,
+   "bytes": 5318797,
    "counties": 62
   },
   {
@@ -473,7 +473,7 @@
     -75.543,
     36.544
    ],
-   "bytes": 2561924,
+   "bytes": 2561935,
    "counties": 100
   },
   {
@@ -487,7 +487,7 @@
     -96.606,
     48.91
    ],
-   "bytes": 291015,
+   "bytes": 291026,
    "counties": 53
   },
   {
@@ -501,7 +501,7 @@
     -80.541,
     41.957
    ],
-   "bytes": 2920325,
+   "bytes": 2920336,
    "counties": 88
   },
   {
@@ -515,7 +515,7 @@
     -94.456,
     36.965
    ],
-   "bytes": 1306300,
+   "bytes": 1306311,
    "counties": 77
   },
   {
@@ -529,7 +529,7 @@
     -116.899,
     46.185
    ],
-   "bytes": 1030229,
+   "bytes": 1030209,
    "counties": 36
   },
   {
@@ -543,7 +543,7 @@
     -74.7,
     42.216
    ],
-   "bytes": 3325920,
+   "bytes": 3463783,
    "counties": 67
   },
   {
@@ -557,7 +557,7 @@
     -71.163,
     42.014
    ],
-   "bytes": 227386,
+   "bytes": 230820,
    "counties": 5
   },
   {
@@ -571,7 +571,7 @@
     -78.604,
     35.176
    ],
-   "bytes": 1290456,
+   "bytes": 1290467,
    "counties": 46
   },
   {
@@ -585,7 +585,7 @@
     -96.494,
     45.805
    ],
-   "bytes": 324784,
+   "bytes": 324795,
    "counties": 66
   },
   {
@@ -599,7 +599,7 @@
     -81.752,
     36.637
    ],
-   "bytes": 1618062,
+   "bytes": 1618073,
    "counties": 95
   },
   {
@@ -613,7 +613,7 @@
     -93.699,
     36.41
    ],
-   "bytes": 6515282,
+   "bytes": 6515293,
    "counties": 254
   },
   {
@@ -627,7 +627,7 @@
     -109.273,
     41.944
    ],
-   "bytes": 736630,
+   "bytes": 736641,
    "counties": 29
   },
   {
@@ -641,7 +641,7 @@
     -71.675,
     44.978
    ],
-   "bytes": 226351,
+   "bytes": 245913,
    "counties": 14
   },
   {
@@ -655,7 +655,7 @@
     -75.293,
     39.341
    ],
-   "bytes": 2129725,
+   "bytes": 2129736,
    "counties": 133
   },
   {
@@ -669,7 +669,7 @@
     -117.05,
     48.989
    ],
-   "bytes": 1701221,
+   "bytes": 1701232,
    "counties": 39
   },
   {
@@ -683,7 +683,7 @@
     -77.769,
     40.598
    ],
-   "bytes": 633741,
+   "bytes": 633752,
    "counties": 55
   },
   {
@@ -697,7 +697,7 @@
     -87.07,
     46.853
    ],
-   "bytes": 1497546,
+   "bytes": 1598340,
    "counties": 72
   },
   {
@@ -711,7 +711,7 @@
     -104.106,
     44.832
    ],
-   "bytes": 185570,
+   "bytes": 185581,
    "counties": 23
   }
  ],
@@ -1103,7 +1103,7 @@
     "one": "an Economic Revitalization Zone",
     "many": "Economic Revitalization Zones",
     "kind": "zone",
-    "desc": "Zones where projects that create jobs can get business profits and business enterprise tax credits (RSA 162-N)."
+    "desc": "Zones where projects that create jobs can get business profits and business enterprise tax credits (RSA 162-N); the program runs until January 1, 2028, and each zone is reviewed every five years (Department of Business and Economic Affairs)."
    },
    "nh_79e": {
     "label": "New Hampshire 79-E district",
@@ -3010,7 +3010,7 @@
     "where": "NH Office of Planning and Development",
     "vintage": "updated August 2026",
     "url": "https://services5.arcgis.com/8QEgIgadpceTLwC5/arcgis/rest/services/ERZs_share_view/FeatureServer/0",
-    "districts": 239
+    "districts": 238
    },
    {
     "id": "nh_tif",
@@ -5698,7 +5698,7 @@
    "23": "the Department of Economic and Community Development has published no 2027 nominations, so no tract is shown as nominated",
    "28": "the Mississippi Development Authority said it would recommend 101 tracts and has closed public comment, but has published no nominations, so no tract is shown as nominated",
    "32": "the Governor's Office of Economic Development's page shows only a draft list put out for comment (up to 49 of 195 eligible tracts) and no final nominations, so no tract is shown as nominated",
-   "33": "the Governor announced on October 27, 2026, as reported, that the Treasury approved 25 nominated tracts; the state's list has not yet been read into this site, so no tract is shown as nominated",
+   "33": "the Treasury approved 25 of the 53 eligible tracts New Hampshire nominated, as reported on October 27, 2026; the state hasn't published the list, so no tract is shown as nominated",
    "35": "the Economic Development Department could nominate up to 65 tracts and its timeline set July 1, 2026 to finalize the list, but it has published no 2027 nominations (its page shows the nomination process and an eligibility map only), so no tract is shown as nominated",
    "36": "Empire State Development has published no 2027 nominations (its Opportunity Zones page describes only the 2018 zones), so no tract is shown as nominated",
    "38": "the Department of Commerce has posted a map of 25 'final candidate' tracts but has not published its nominations, so no tract is shown as nominated",
