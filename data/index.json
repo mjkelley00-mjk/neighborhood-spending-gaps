@@ -403,7 +403,7 @@
     -114.056,
     41.652
    ],
-   "bytes": 674436,
+   "bytes": 683658,
    "counties": 17
   },
   {
@@ -4733,6 +4733,24 @@
     "where": "City of Elko",
     "vintage": "updated January 2026",
     "url": "https://services.arcgis.com/xgGzkdHemXBBqR4p/arcgis/rest/services/City_of_Elko___Redevelopment_Map_WFL1/FeatureServer/0",
+    "districts": 1
+   },
+   {
+    "id": "reno_rda1",
+    "state": "32",
+    "program": "tif",
+    "where": "City of Reno",
+    "vintage": "updated July 2025",
+    "url": "https://services5.arcgis.com/RjM4BJrv5ZkqP4XC/ArcGIS/rest/services/Redevelopment_Areas/FeatureServer/147",
+    "districts": 1
+   },
+   {
+    "id": "reno_rda2",
+    "state": "32",
+    "program": "tif",
+    "where": "City of Reno",
+    "vintage": "updated July 2025",
+    "url": "https://services5.arcgis.com/RjM4BJrv5ZkqP4XC/ArcGIS/rest/services/Redevelopment_Areas/FeatureServer/151",
     "districts": 1
    },
    {
