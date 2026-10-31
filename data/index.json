@@ -25,7 +25,7 @@
     -130.137,
     71.214
    ],
-   "bytes": 401542,
+   "bytes": 510919,
    "counties": 30
   },
   {
@@ -123,7 +123,7 @@
     -76.919,
     38.983
    ],
-   "bytes": 236791,
+   "bytes": 236191,
    "counties": 1
   },
   {
@@ -1455,6 +1455,13 @@
     "kind": "tif",
     "desc": "Districts where an Illinois city or village can add up to 1% to the sales tax and up to 1% to the hotel tax and spend the revenue on the district's redevelopment plan, for up to 23 years (Business District Development and Redevelopment Law, 65 ILCS 5/11-74.3)."
    },
+   "dc_ms": {
+    "label": "DC Main Streets corridor",
+    "one": "a DC Main Streets corridor",
+    "many": "DC Main Streets corridors",
+    "kind": "desig",
+    "desc": "Neighborhood commercial corridors in DC Main Streets (Department of Small and Local Business Development), whose nonprofit programs get yearly District grants for business support, events and storefront improvements."
+   },
    "ia_ms": {
     "label": "Main Street Iowa district",
     "one": "a Main Street Iowa district",
@@ -2036,7 +2043,7 @@
     "where": "District of Columbia (DC GIS)",
     "vintage": "updated February 2026",
     "url": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Business_Incentives_WebMercator/MapServer/26",
-    "districts": 9
+    "districts": 10
    },
    {
     "id": "dc_tif_dt",
@@ -3954,6 +3961,24 @@
     "vintage": "Metro tax districts, current",
     "url": "https://maps.nashville.gov/arcgis/rest/services/Boundaries/TaxDistricts/MapServer/0",
     "districts": 4
+   },
+   {
+    "id": "dc_ms",
+    "state": "11",
+    "program": "dc_ms",
+    "where": "DC Department of Small and Local Business Development (DC GIS)",
+    "vintage": "29 active corridors, matching DSLBD's list (October 2026)",
+    "url": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Business_Betterment_Areas_WebMercator/MapServer/16",
+    "districts": 29
+   },
+   {
+    "id": "anc_did",
+    "state": "02",
+    "program": "bid",
+    "where": "Municipality of Anchorage",
+    "vintage": "Municipality layer, published October 2026",
+    "url": "https://services2.arcgis.com/Ce3DhLRthdwbHlfF/arcgis/rest/services/Tax_Assessment_Districts/FeatureServer/0",
+    "districts": 1
    },
    {
     "id": "dc_bid",
@@ -5940,7 +5965,7 @@
    "27": "the Department of Employment and Economic Development has published no 2027 nominations (its Opportunity Zones page, updated June 2026, describes only the 2018 zones), so no tract is shown as nominated",
    "30": "the Department of Commerce's map (September 22, 2026) shows 20 of the 58 eligible tracts selected by the Governor and 4 still under discussion, so its list is not final and no tract is shown as nominated",
    "09": "the Department of Economic and Community Development has published no 2027 nominations (its Opportunity Zones page still describes the 72 zones of 2018), so no tract is shown as nominated",
-   "11": "the Deputy Mayor for Planning and Economic Development published 25 preliminary recommendations for public comment in July 2026 but has not published its final nominations, so no tract is shown as nominated",
+   "11": "the Deputy Mayor for Planning and Economic Development published 25 preliminary recommendations from the 66 tracts it counted as eligible (presentation of July 15, 2026; Treasury's eligible list of September 23, 2026, shown on the map, has 69 for DC, and the two counts weren't reconciled), but its Opportunity Zones page (read October 31, 2026) shows no final nominations, so no tract is shown as nominated",
    "12": "FloridaCommerce has published no 2027 nominations (its page still says it is reviewing eligible tracts and links only a list of candidate tracts), so no tract is shown as nominated",
    "15": "the Department of Business, Economic Development and Tourism says the Governor will nominate 25 of 88 eligible tracts but has published no list, so no tract is shown as nominated",
    "17": "the Governor said in August 2026 that the state would submit 238 tracts by the end of September, but the Department of Commerce and Economic Opportunity has published no list, so no tract is shown as nominated",
@@ -6083,7 +6108,7 @@
  "coverage": {
   "AK": {
    "rates": "current",
-   "rate_gaps": 7,
+   "rate_gaps": 5,
    "check": {
     "status": "no sales tax",
     "source": "https://www.commerce.alaska.gov/web/dcra/AlaskaSalesTaxInformation.aspx",
@@ -6213,12 +6238,12 @@
    "rate_gaps": 1,
    "check": {
     "status": "no local data published",
-    "source": "https://otr.cfo.dc.gov/",
+    "source": "https://ora-cfo.dc.gov/blog/dc-restaurant-sector-lags-hotel-and-other-retail-post-pandemic-recovery",
     "year": null,
     "geography": null,
     "restaurants": null,
     "store_goods": null,
-    "note": "One taxing jurisdiction; no sub-areas to compare."
+    "note": "One taxing jurisdiction, with no sales by area. The Office of Revenue Analysis publishes DC-wide collections by kind of tax (fiscal 2025): about $5.68 billion of taxable restaurant meals and drinks served (10%) and $408 million of alcohol bought in stores (10.25%, $41.9 million collected). Measured as in the other states' checks (the model's 2024 figures), the model's DC store alcohol sales come to about 1.1 times ORA's figure, and its restaurant meals and drinks served to about 0.79 times ORA's, which also counts hotel restaurants, caterers and stores' prepared food."
    }
   },
   "DE": {
