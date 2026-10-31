@@ -11,7 +11,7 @@
     -84.955,
     34.977
    ],
-   "bytes": 1471884,
+   "bytes": 1471589,
    "counties": 67
   },
   {
@@ -25,7 +25,7 @@
     -130.137,
     71.214
    ],
-   "bytes": 401536,
+   "bytes": 401542,
    "counties": 30
   },
   {
@@ -39,7 +39,7 @@
     -109.133,
     36.989
    ],
-   "bytes": 1588078,
+   "bytes": 1587920,
    "counties": 15
   },
   {
@@ -53,7 +53,7 @@
     -89.855,
     36.484
    ],
-   "bytes": 901435,
+   "bytes": 901126,
    "counties": 75
   },
   {
@@ -67,7 +67,7 @@
     -114.273,
     41.852
    ],
-   "bytes": 8921648,
+   "bytes": 8921493,
    "counties": 58
   },
   {
@@ -81,7 +81,7 @@
     -102.151,
     40.894
    ],
-   "bytes": 1540064,
+   "bytes": 1536946,
    "counties": 64
   },
   {
@@ -109,7 +109,7 @@
     -75.056,
     39.832
    ],
-   "bytes": 248115,
+   "bytes": 248183,
    "counties": 3
   },
   {
@@ -151,7 +151,7 @@
     -80.85,
     34.979
    ],
-   "bytes": 2682699,
+   "bytes": 2682697,
    "counties": 159
   },
   {
@@ -179,7 +179,7 @@
     -111.076,
     48.852
    ],
-   "bytes": 499679,
+   "bytes": 499683,
    "counties": 44
   },
   {
@@ -193,7 +193,7 @@
     -87.53,
     42.488
    ],
-   "bytes": 3321516,
+   "bytes": 3321203,
    "counties": 102
   },
   {
@@ -207,7 +207,7 @@
     -84.824,
     41.753
    ],
-   "bytes": 1601786,
+   "bytes": 1601785,
    "counties": 92
   },
   {
@@ -221,7 +221,7 @@
     -90.189,
     43.457
    ],
-   "bytes": 983744,
+   "bytes": 980230,
    "counties": 99
   },
   {
@@ -249,7 +249,7 @@
     -82.121,
     39.117
    ],
-   "bytes": 1356124,
+   "bytes": 1356130,
    "counties": 120
   },
   {
@@ -263,7 +263,7 @@
     -89.397,
     33.003
    ],
-   "bytes": 1415952,
+   "bytes": 1415973,
    "counties": 64
   },
   {
@@ -333,7 +333,7 @@
     -90.12,
     49.067
    ],
-   "bytes": 1684444,
+   "bytes": 1684442,
    "counties": 87
   },
   {
@@ -347,7 +347,7 @@
     -88.149,
     34.991
    ],
-   "bytes": 862816,
+   "bytes": 857643,
    "counties": 82
   },
   {
@@ -361,7 +361,7 @@
     -89.227,
     40.526
    ],
-   "bytes": 1762933,
+   "bytes": 1762486,
    "counties": 115
   },
   {
@@ -389,7 +389,7 @@
     -95.59,
     42.913
    ],
-   "bytes": 676181,
+   "bytes": 676212,
    "counties": 93
   },
   {
@@ -431,7 +431,7 @@
     -73.922,
     41.293
    ],
-   "bytes": 2340325,
+   "bytes": 2340520,
    "counties": 21
   },
   {
@@ -445,7 +445,7 @@
     -103.1,
     36.931
    ],
-   "bytes": 628411,
+   "bytes": 628250,
    "counties": 33
   },
   {
@@ -459,7 +459,7 @@
     -71.915,
     44.979
    ],
-   "bytes": 5316191,
+   "bytes": 5316038,
    "counties": 62
   },
   {
@@ -487,7 +487,7 @@
     -96.606,
     48.91
    ],
-   "bytes": 292210,
+   "bytes": 352367,
    "counties": 53
   },
   {
@@ -501,7 +501,7 @@
     -80.541,
     41.957
    ],
-   "bytes": 2918637,
+   "bytes": 2918636,
    "counties": 88
   },
   {
@@ -515,7 +515,7 @@
     -94.456,
     36.965
    ],
-   "bytes": 1307394,
+   "bytes": 1307243,
    "counties": 77
   },
   {
@@ -571,7 +571,7 @@
     -78.604,
     35.176
    ],
-   "bytes": 1308076,
+   "bytes": 1305233,
    "counties": 46
   },
   {
@@ -585,7 +585,7 @@
     -96.494,
     45.805
    ],
-   "bytes": 324876,
+   "bytes": 405529,
    "counties": 66
   },
   {
@@ -599,7 +599,7 @@
     -81.752,
     36.637
    ],
-   "bytes": 1618428,
+   "bytes": 1618274,
    "counties": 95
   },
   {
@@ -613,7 +613,7 @@
     -93.699,
     36.41
    ],
-   "bytes": 6512793,
+   "bytes": 6509377,
    "counties": 254
   },
   {
@@ -655,7 +655,7 @@
     -75.293,
     39.341
    ],
-   "bytes": 2179128,
+   "bytes": 2179078,
    "counties": 133
   },
   {
@@ -669,7 +669,7 @@
     -117.05,
     48.989
    ],
-   "bytes": 1704383,
+   "bytes": 1704382,
    "counties": 39
   },
   {
@@ -683,7 +683,7 @@
     -77.769,
     40.598
    ],
-   "bytes": 634602,
+   "bytes": 634447,
    "counties": 55
   },
   {
@@ -697,7 +697,7 @@
     -87.07,
     46.853
    ],
-   "bytes": 1599772,
+   "bytes": 1599771,
    "counties": 72
   },
   {
@@ -711,7 +711,7 @@
     -104.106,
     44.832
    ],
-   "bytes": 185612,
+   "bytes": 185512,
    "counties": 23
   }
  ],
@@ -5657,6 +5657,24 @@
     "districts": 1
    },
    {
+    "id": "fargo_bid",
+    "state": "38",
+    "program": "bid",
+    "where": "City of Fargo",
+    "vintage": "City layer, current (undated)",
+    "url": "https://gis.cityoffargo.com/arcgis/rest/services/General/BIDBoundaries/MapServer/0",
+    "districts": 1
+   },
+   {
+    "id": "siouxfalls_bid",
+    "state": "46",
+    "program": "bid",
+    "where": "City of Sioux Falls",
+    "vintage": "City layer, current (undated)",
+    "url": "https://gis.siouxfalls.gov/arcgis/rest/services/Data/Community/MapServer/6",
+    "districts": 1
+   },
+   {
     "id": "kzo_dda",
     "state": "26",
     "program": "tif",
@@ -6537,7 +6555,7 @@
   },
   "ND": {
    "rates": "current",
-   "rate_gaps": 3,
+   "rate_gaps": 4,
    "check": {
     "status": "no local data published",
     "source": "https://www.tax.nd.gov/data",
@@ -6545,7 +6563,7 @@
     "geography": null,
     "restaurants": null,
     "store_goods": null,
-    "note": "Taxable sales by city and county are published as totals; the industry table is statewide."
+    "note": "Taxable sales and purchases by city (51 cities, quarterly to 2026 Q2) and county are published as totals only; the industry table is statewide (Tax Commissioner statistical report, updated August 2026)."
    }
   },
   "NE": {
@@ -6750,7 +6768,7 @@
   },
   "SD": {
    "rates": "current",
-   "rate_gaps": 1,
+   "rate_gaps": 3,
    "check": {
     "status": "checked",
     "source": "https://dor.sd.gov/media/0ctjsild/cy2024municipalmonthlytaxbysic.pdf",
@@ -6927,7 +6945,7 @@
   },
   "WY": {
    "rates": "current",
-   "rate_gaps": 2,
+   "rate_gaps": 1,
    "check": {
     "status": "checked",
     "source": "https://ai.wyo.gov/divisions/economic-analysis/revenue/sales-and-use",
