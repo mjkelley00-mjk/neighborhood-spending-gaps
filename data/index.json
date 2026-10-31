@@ -109,7 +109,7 @@
     -75.056,
     39.832
    ],
-   "bytes": 234223,
+   "bytes": 248115,
    "counties": 3
   },
   {
@@ -305,7 +305,7 @@
     -69.956,
     42.867
    ],
-   "bytes": 1591005,
+   "bytes": 1591465,
    "counties": 14
   },
   {
@@ -333,7 +333,7 @@
     -90.12,
     49.067
    ],
-   "bytes": 1683904,
+   "bytes": 1684444,
    "counties": 87
   },
   {
@@ -431,7 +431,7 @@
     -73.922,
     41.293
    ],
-   "bytes": 2340006,
+   "bytes": 2340325,
    "counties": 21
   },
   {
@@ -459,7 +459,7 @@
     -71.915,
     44.979
    ],
-   "bytes": 5315704,
+   "bytes": 5316191,
    "counties": 62
   },
   {
@@ -543,7 +543,7 @@
     -74.7,
     42.216
    ],
-   "bytes": 3482889,
+   "bytes": 3483327,
    "counties": 67
   },
   {
@@ -557,7 +557,7 @@
     -71.163,
     42.014
    ],
-   "bytes": 230773,
+   "bytes": 242244,
    "counties": 5
   },
   {
@@ -641,7 +641,7 @@
     -71.675,
     44.978
    ],
-   "bytes": 246257,
+   "bytes": 246866,
    "counties": 14
   },
   {
@@ -956,7 +956,7 @@
     "one": "a Delaware Downtown Development District",
     "many": "Delaware Downtown Development Districts",
     "kind": "zone",
-    "desc": "Downtown districts designated by the state where private investment can get a state rebate of part of its cost, plus local incentives (Delaware State Housing Authority)."
+    "desc": "Downtown districts designated by the state (at most 15 at a time) where private investment can get a state rebate of up to 20% of its qualified cost, plus local incentives (Delaware State Housing Authority)."
    },
    "ca_eifd": {
     "label": "California Enhanced Infrastructure Financing District (EIFD)",
@@ -5700,6 +5700,24 @@
     "vintage": "City layer, edited July 2022",
     "url": "https://services3.arcgis.com/EgnL1bB7VxL4zhx7/ArcGIS/rest/services/TaxIncrementDistricts/FeatureServer/0",
     "districts": 5
+   },
+   {
+    "id": "wilmde_dbid",
+    "state": "10",
+    "program": "bid",
+    "where": "City of Wilmington, Delaware",
+    "vintage": "City layer, edited November 2017",
+    "url": "https://services.arcgis.com/hQ3wdpbjO3fPf612/arcgis/rest/services/Downtown_BID_Boundary/FeatureServer/0",
+    "districts": 1
+   },
+   {
+    "id": "wilmde_rbid",
+    "state": "10",
+    "program": "bid",
+    "where": "City of Wilmington, Delaware",
+    "vintage": "City layer, edited January 2026",
+    "url": "https://services.arcgis.com/hQ3wdpbjO3fPf612/arcgis/rest/services/Riverfront_BID/FeatureServer/0",
+    "districts": 1
    }
   ],
   "rule": "percent of each tract's area inside each district and inside each program's districts taken together (equal-area projection, generalized 2024 tract shapes); shares that round to 1% or more kept",
@@ -5727,7 +5745,7 @@
    "oz1": "2018 Qualified Opportunity Zone (Notices 2018-48 and 2019-42; CDFI Fund list of 2010 tracts, carried to 2020 tracts)",
    "oz2e": "Eligible for nomination as a 2027 Qualified Opportunity Zone (Treasury list, September 2026 update; 2020-2024 ACS, 2020 tracts). Designations by Treasury had not been published when this was built.",
    "oz2e_rural": "Eligible 2027 QOZ tract made up entirely of a rural area (as Treasury flags it)",
-   "oz2n": "Nominated by its governor for a 2027 Qualified Opportunity Zone (Alaska, 25 tracts, the Governor's nominations announced October 13, 2026 (listed by area and tract number); Arizona, 127 tracts (125 nominated July 7, 2026, then replacements and additions sent October 26); Colorado, 91 tracts, submitted September 28, 2026; Delaware, 25 tracts, announced September 28, 2026; Georgia, 238 tracts on the state's map, edited October 2026; its September 28 list had 235; Idaho, 25 tracts, certified by Treasury as designated zones October 1, 2026; Indiana, 126 tracts, published September 25, 2026; Iowa, 44 tracts, approved by the Treasury as of October 29, 2026 (the state's page); Kentucky, 137 tracts, the final list submitted by the Governor (the Cabinet's file, October 13, 2026); Massachusetts, 104 tracts, nominated October 2, 2026; awaiting Treasury certification (mass.gov, October 30, 2026); Nebraska, 28 tracts, submitted July 22, 2026; New Hampshire, 25 tracts, as confirmed in the federal submission portal on September 29, 2026; New Jersey, 130 tracts (the most allowed, of 518 eligible), submitted for federal designation (announced October 29, 2026); Oklahoma, 104 tracts selected for nomination and submitted by the Governor (the Department of Commerce map, October 2026); Oregon, 58 tracts, the Governor's final list submitted to the Treasury for certification (October 29, 2026); Pennsylvania, 218 tracts, submitted to the Treasury (October 29, 2026); South Carolina, 113 tracts, the list the Department of Commerce posts with the Governor's nominations (submitted September 10, 2026; list dated October 21, 2026, replacing the 112-tract recommendations of September 22); Texas, 608 tracts, submitted September 4, 2026; Utah, 37 tracts, announced September 24, 2026; Washington, 99 tracts, announced October 8, 2026)",
+   "oz2n": "Nominated by its governor for a 2027 Qualified Opportunity Zone (Alaska, 25 tracts, the Governor's nominations announced October 13, 2026 (listed by area and tract number); Arizona, 127 tracts (125 nominated July 7, 2026, then replacements and additions sent October 26); Colorado, 91 tracts, submitted September 28, 2026; Delaware, 25 of 61 eligible tracts (12 rural), announced September 28, 2026; not yet certified by Treasury; Georgia, 238 tracts on the state's map, edited October 2026; its September 28 list had 235; Idaho, 25 tracts, certified by Treasury as designated zones October 1, 2026; Indiana, 126 tracts, published September 25, 2026; Iowa, 44 tracts, approved by the Treasury as of October 29, 2026 (the state's page); Kentucky, 137 tracts, the final list submitted by the Governor (the Cabinet's file, October 13, 2026); Massachusetts, 104 tracts, nominated October 2, 2026; awaiting Treasury certification (mass.gov, October 30, 2026); Nebraska, 28 tracts, submitted July 22, 2026; New Hampshire, 25 tracts, as confirmed in the federal submission portal on September 29, 2026; New Jersey, 130 tracts (the most allowed, of 518 eligible), submitted for federal designation (announced October 29, 2026); Oklahoma, 104 tracts selected for nomination and submitted by the Governor (the Department of Commerce map, October 2026); Oregon, 58 tracts, the Governor's final list submitted to the Treasury for certification (October 29, 2026); Pennsylvania, 218 tracts, submitted to the Treasury (October 29, 2026); South Carolina, 113 tracts, the list the Department of Commerce posts with the Governor's nominations (submitted September 10, 2026; list dated October 21, 2026, replacing the 112-tract recommendations of September 22); Texas, 608 tracts, submitted September 4, 2026; Utah, 37 tracts, announced September 24, 2026; Washington, 99 tracts, announced October 8, 2026)",
    "nmtc": "New Markets Tax Credit low-income community (CDFI Fund, 2016-2020 ACS, 2020 tracts; includes high-migration rural tracts)",
    "nmtc_sd": "NMTC low-income community meeting a primary severe-distress test: poverty above 30%, median family income at or below 60% of the benchmark, or unemployment at least 1.5 times the national rate. Other routes to that status are not computed.",
    "cdfi_ia": "CDFI Program Investment Area (CDFI Fund, 2016-2020 ACS, 2020 tracts)",
@@ -5788,7 +5806,7 @@
    {
     "state": "10",
     "name": "Delaware",
-    "status": "25 tracts, announced September 28, 2026",
+    "status": "25 of 61 eligible tracts (12 rural), announced September 28, 2026; not yet certified by Treasury",
     "count": 25
    },
    {
@@ -5914,7 +5932,7 @@
    "35": "the Economic Development Department could nominate up to 65 tracts and its timeline set July 1, 2026 to finalize the list, but it has published no 2027 nominations (its page shows the nomination process and an eligibility map only), so no tract is shown as nominated",
    "36": "Empire State Development has published no 2027 nominations (its Opportunity Zones page describes only the 2018 zones), so no tract is shown as nominated",
    "38": "the Department of Commerce has posted a map of 25 'final candidate' tracts but has not published its nominations, so no tract is shown as nominated",
-   "44": "Rhode Island Commerce says the Governor will nominate 25 tracts but has published no list, so no tract is shown as nominated",
+   "44": "Rhode Island Commerce says the Governor will nominate 25 of the state's 55 eligible tracts for 2027 through 2036 but has published no list, so no tract is shown as nominated",
    "46": "the Governor's Office of Economic Development has published no 2027 nominations, so no tract is shown as nominated",
    "47": "the Department of Economic and Community Development has published no 2027 nominations (its page describes only the 2018 zones), so no tract is shown as nominated",
    "50": "the Agency of Commerce and Community Development published draft recommendations for public input in July 2026 but has not published final nominations, so no tract is shown as nominated",
