@@ -146,20 +146,27 @@
     "agency": "Arizona Commerce Authority",
     "url": "https://www.azcommerce.com/incentives/military-reuse-zone",
     "what": "Tax incentives for aviation and aerospace companies in the zones at Phoenix-Mesa Gateway and Phoenix-Goodyear airports",
-    "checked": "unverified"
+    "checked": "browser"
    },
    {
     "name": "Arizona Opportunity Zones",
     "agency": "Arizona Commerce Authority",
     "url": "https://www.azcommerce.com/arizona-opportunity-zones/",
     "what": "The state's Opportunity Zone nominations and program information",
-    "checked": "unverified"
+    "checked": "browser"
    },
    {
     "name": "Transaction privilege tax rate tables",
     "agency": "Arizona Department of Revenue",
     "url": "https://azdor.gov/business/transaction-privilege-tax/tax-rate-table",
     "what": "State, county and city TPT rates by business class, including cities' food and restaurant rates"
+   },
+   {
+    "name": "Rental development",
+    "agency": "Arizona Department of Housing (Arizona Housing Finance Authority)",
+    "url": "https://housing.az.gov/programs/rental-development",
+    "what": "Housing tax credits and other financing for rental housing developers",
+    "checked": "browser"
    }
   ],
   "05": [
@@ -323,6 +330,13 @@
     "url": "https://georgia.org/business-support/incentives",
     "what": "State job tax credits, sales tax exemptions and other business incentives",
     "checked": "browser"
+   },
+   {
+    "name": "Housing development",
+    "agency": "Georgia Department of Community Affairs (Georgia Housing and Finance Authority)",
+    "url": "https://dca.georgia.gov/affordable-housing/housing-development",
+    "what": "Housing tax credits, HOME and other financing for rental housing developers",
+    "checked": "200"
    }
   ],
   "15": [
@@ -603,6 +617,13 @@
     "url": "https://mississippi.org/doing-business/incentives/",
     "what": "State tax credits, exemptions, rebates and MFLEX incentive program",
     "checked": "200"
+   },
+   {
+    "name": "Rental development",
+    "agency": "Mississippi Home Corporation",
+    "url": "https://www.mshomecorp.com/developers/rental-development/",
+    "what": "Housing tax credits and other financing for rental housing developers",
+    "checked": "200"
    }
   ],
   "29": [
@@ -627,6 +648,13 @@
     "agency": "Montana Department of Commerce",
     "url": "https://commerce.mt.gov/Business/Programs-and-Services/",
     "what": "State business loans, tax credits, C-PACE and other business programs",
+    "checked": "200"
+   },
+   {
+    "name": "Developers",
+    "agency": "Montana Board of Housing (Montana Department of Commerce)",
+    "url": "https://commerce.mt.gov/Housing/Developers/",
+    "what": "Housing credits and other financing for rental housing developers",
     "checked": "200"
    }
   ],
@@ -653,6 +681,13 @@
     "url": "https://goed.nv.gov/incentives/",
     "what": "State tax abatements and other incentives for business location and expansion",
     "checked": "200"
+   },
+   {
+    "name": "Multi-family programs",
+    "agency": "Nevada Housing Division",
+    "url": "https://housing.nv.gov/Programs/Multi-Family_Programs/",
+    "what": "Housing tax credits, bonds and other financing for multifamily developers",
+    "checked": "200"
    }
   ],
   "33": [
@@ -677,6 +712,13 @@
     "agency": "New Jersey Economic Development Authority",
     "url": "https://www.njeda.gov/financing-and-incentives/",
     "what": "State loans, grants, tax credits and incentive programs for businesses and developers",
+    "checked": "200"
+   },
+   {
+    "name": "Funding",
+    "agency": "New Jersey Business Action Center (business.nj.gov)",
+    "url": "https://business.nj.gov/pages/funding",
+    "what": "The state's guide to grants, loans and incentives for businesses",
     "checked": "200"
    },
    {
@@ -758,6 +800,13 @@
     "agency": "Empire State Development",
     "url": "https://esd.ny.gov/growth-support",
     "what": "State grants, loans and funds for business expansion and capital investment",
+    "checked": "200"
+   },
+   {
+    "name": "Multifamily development",
+    "agency": "New York State Homes and Community Renewal (Housing Finance Agency)",
+    "url": "https://hcr.ny.gov/multifamily",
+    "what": "Housing tax credits, bonds and subsidies for multifamily developers",
     "checked": "200"
    }
   ],
@@ -890,6 +939,13 @@
     "agency": "Pennsylvania Department of Community and Economic Development",
     "url": "https://dced.pa.gov/programs/keystone-opportunity-zones-kozs/",
     "what": "State and local tax abatements for businesses in designated KOZ parcels",
+    "checked": "200"
+   },
+   {
+    "name": "Multifamily housing",
+    "agency": "Pennsylvania Housing Finance Agency",
+    "url": "https://www.phfa.org/mhp/",
+    "what": "Housing tax credits and financing for multifamily developers",
     "checked": "200"
    }
   ],
@@ -1161,6 +1217,13 @@
     "agency": "Wyoming Business Council",
     "url": "https://wyomingbusiness.org/business/financing/",
     "what": "State business loans, grants, equity and financial incentives",
+    "checked": "200"
+   },
+   {
+    "name": "Affordable housing",
+    "agency": "Wyoming Community Development Authority",
+    "url": "https://www.wyomingcda.com/affordable-housing/",
+    "what": "Housing tax credits and multifamily development financing",
     "checked": "200"
    }
   ]
@@ -1522,7 +1585,8 @@
      "name": "Business Improvement Areas",
      "agency": "City of Seattle Office of Economic Development",
      "url": "https://www.seattle.gov/economic-development/business-districts/business-improvement-areas-",
-     "what": "The city's business improvement areas, their services and how one is formed"
+     "what": "The city's business improvement areas, their services and how one is formed",
+     "checked": "200"
     }
    ]
   },
@@ -2472,7 +2536,7 @@
      "agency": "City of Norfolk Department of Economic Development",
      "url": "https://norfolkdevelopment.com/resources/incentives-and-capital-overview/",
      "what": "Local incentives and sources of capital for businesses in Norfolk",
-     "checked": "unverified"
+     "checked": "browser"
     }
    ]
   },
@@ -2487,7 +2551,7 @@
      "agency": "City of Roanoke",
      "url": "https://www.roanokeva.gov/2941/Incentive-Programs",
      "what": "City incentive programs for businesses in Roanoke",
-     "checked": "unverified"
+     "checked": "browser"
     }
    ]
   },
@@ -2502,6 +2566,88 @@
      "agency": "City of Bellevue Economic Development",
      "url": "https://bellevuewa.gov/city-government/departments/community-development/economic-development/business-districts",
      "what": "Downtown, BelRed, Wilburton and other districts, with the Grand Connection and other major projects"
+    }
+   ]
+  },
+  "Spokane, WA": {
+   "state": "53",
+   "place_names": [
+    "Spokane city"
+   ],
+   "links": [
+    {
+     "name": "Incentives",
+     "agency": "City of Spokane Economic Development",
+     "url": "https://my.spokanecity.org/economicdevelopment/incentives/",
+     "what": "City incentive programs for businesses and development in Spokane",
+     "checked": "browser"
+    },
+    {
+     "name": "Downtown Spokane Parking and Business Improvement Area",
+     "agency": "City of Spokane",
+     "url": "https://my.spokanecity.org/bcc/boards/downtown-business-improvement-district-board/",
+     "what": "The downtown business improvement area's board",
+     "checked": "browser"
+    }
+   ]
+  },
+  "Everett, WA": {
+   "state": "53",
+   "place_names": [
+    "Everett city"
+   ],
+   "links": [
+    {
+     "name": "Business and economic development",
+     "agency": "City of Everett",
+     "url": "https://www.everettwa.gov/1993/Business",
+     "what": "City business resources, taxes and incentives",
+     "checked": "browser"
+    }
+   ]
+  },
+  "Boise, ID": {
+   "state": "16",
+   "place_names": [
+    "Boise City city"
+   ],
+   "links": [
+    {
+     "name": "Urban renewal districts",
+     "agency": "Capital City Development Corporation (CCDC, Boise's urban renewal agency)",
+     "url": "https://ccdcboise.com/urban-renewal-districts/",
+     "what": "Boise's urban renewal districts and the projects and programs in them",
+     "checked": "200"
+    }
+   ]
+  },
+  "Coeur d'Alene, ID": {
+   "state": "16",
+   "place_names": [
+    "Coeur d'Alene city"
+   ],
+   "links": [
+    {
+     "name": "Districts",
+     "agency": "ignite cda (Coeur d'Alene's urban renewal agency)",
+     "url": "https://ignitecda.org/districts/",
+     "what": "Coeur d'Alene's urban renewal districts",
+     "checked": "200"
+    }
+   ]
+  },
+  "Meridian, ID": {
+   "state": "16",
+   "place_names": [
+    "Meridian city"
+   ],
+   "links": [
+    {
+     "name": "Meridian Development Corporation",
+     "agency": "Meridian Development Corporation (Meridian's urban renewal agency)",
+     "url": "https://meridiandevelopmentcorp.com/",
+     "what": "Meridian's urban renewal districts and projects",
+     "checked": "200"
     }
    ]
   }
