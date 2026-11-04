@@ -25,7 +25,7 @@
     -130.137,
     71.214
    ],
-   "bytes": 510919,
+   "bytes": 510923,
    "counties": 30
   },
   {
@@ -39,7 +39,7 @@
     -109.133,
     36.989
    ],
-   "bytes": 1587920,
+   "bytes": 1587969,
    "counties": 15
   },
   {
@@ -81,7 +81,7 @@
     -102.151,
     40.894
    ],
-   "bytes": 1536946,
+   "bytes": 1537058,
    "counties": 64
   },
   {
@@ -137,7 +137,7 @@
     -80.038,
     30.976
    ],
-   "bytes": 4623381,
+   "bytes": 4623389,
    "counties": 67
   },
   {
@@ -151,7 +151,7 @@
     -80.85,
     34.979
    ],
-   "bytes": 2682697,
+   "bytes": 2682752,
    "counties": 159
   },
   {
@@ -165,7 +165,7 @@
     -154.903,
     28.388
    ],
-   "bytes": 412297,
+   "bytes": 412305,
    "counties": 5
   },
   {
@@ -179,7 +179,7 @@
     -111.076,
     48.852
    ],
-   "bytes": 499683,
+   "bytes": 499701,
    "counties": 44
   },
   {
@@ -235,7 +235,7 @@
     -94.604,
     39.921
    ],
-   "bytes": 884008,
+   "bytes": 884064,
    "counties": 105
   },
   {
@@ -263,7 +263,7 @@
     -89.397,
     33.003
    ],
-   "bytes": 1415973,
+   "bytes": 1415989,
    "counties": 64
   },
   {
@@ -347,7 +347,7 @@
     -88.149,
     34.991
    ],
-   "bytes": 857643,
+   "bytes": 857651,
    "counties": 82
   },
   {
@@ -361,7 +361,7 @@
     -89.227,
     40.526
    ],
-   "bytes": 1762486,
+   "bytes": 1762550,
    "counties": 115
   },
   {
@@ -389,7 +389,7 @@
     -95.59,
     42.913
    ],
-   "bytes": 676212,
+   "bytes": 676268,
    "counties": 93
   },
   {
@@ -473,7 +473,7 @@
     -75.543,
     36.544
    ],
-   "bytes": 2562926,
+   "bytes": 2562958,
    "counties": 100
   },
   {
@@ -515,7 +515,7 @@
     -94.456,
     36.965
    ],
-   "bytes": 1307243,
+   "bytes": 1307281,
    "counties": 77
   },
   {
@@ -529,7 +529,7 @@
     -116.899,
     46.185
    ],
-   "bytes": 1030196,
+   "bytes": 1030212,
    "counties": 36
   },
   {
@@ -571,7 +571,7 @@
     -78.604,
     35.176
    ],
-   "bytes": 1305233,
+   "bytes": 1305353,
    "counties": 46
   },
   {
@@ -599,7 +599,7 @@
     -81.752,
     36.637
    ],
-   "bytes": 1618274,
+   "bytes": 1618282,
    "counties": 95
   },
   {
@@ -627,7 +627,7 @@
     -109.273,
     41.944
    ],
-   "bytes": 736886,
+   "bytes": 736942,
    "counties": 29
   },
   {
@@ -641,7 +641,7 @@
     -71.675,
     44.978
    ],
-   "bytes": 246866,
+   "bytes": 265980,
    "counties": 14
   },
   {
@@ -655,7 +655,7 @@
     -75.293,
     39.341
    ],
-   "bytes": 2179078,
+   "bytes": 2179462,
    "counties": 133
   },
   {
@@ -669,7 +669,7 @@
     -117.05,
     48.989
    ],
-   "bytes": 1704382,
+   "bytes": 1704454,
    "counties": 39
   },
   {
@@ -711,7 +711,7 @@
     -104.106,
     44.832
    ],
-   "bytes": 185512,
+   "bytes": 206299,
    "counties": 23
   }
  ],
@@ -1306,7 +1306,7 @@
     "one": "a Vermont designated area",
     "many": "Vermont designated areas",
     "kind": "desig",
-    "desc": "Designated downtowns, village centers, new town centers, growth centers and neighborhood development areas: tax credits for historic, code and facade work, priority for state grants, and permit relief for housing (24 V.S.A. ch. 76A). Act 181 of 2024 is replacing these designations; their benefits continue during the change."
+    "desc": "Designated downtowns, village centers, new town centers, growth centers and neighborhood development areas: tax credits for historic, code and facade work, priority for state grants, and permit relief for housing (24 V.S.A. ch. 76A). Act 181 of 2024 is replacing these designations: each region's designations end when its future land use map is approved, and on December 31, 2026 at the latest; benefits of designations the new maps drop continue to July 1, 2034 (centers) or December 31, 2034 (growth centers and neighborhood development areas) (24 V.S.A. 5803(e), 5804(b))."
    },
    "fl_bfa": {
     "label": "Florida designated brownfield area",
@@ -4881,6 +4881,24 @@
     "districts": 1
    },
    {
+    "id": "wy_dda",
+    "state": "56",
+    "program": "bid",
+    "where": "Wyoming Department of Revenue (Miscellaneous Districts, 2026)",
+    "vintage": "tax year 2026 (edited February 2026)",
+    "url": "https://services3.arcgis.com/r0iJ85SKZ4zAzz3P/arcgis/rest/services/2026_Miscellaneous_Districts/FeatureServer/0",
+    "districts": 3
+   },
+   {
+    "id": "cheyenne_ura",
+    "state": "56",
+    "program": "tif",
+    "where": "Cheyenne and Laramie County GIS Cooperative (Cheyenne Urban Renewal Authority)",
+    "vintage": "updated April 2025",
+    "url": "https://services1.arcgis.com/e5t4ywWgRBNUuDeU/arcgis/rest/services/URA_Plans_Projects/FeatureServer/106",
+    "districts": 4
+   },
+   {
     "id": "harris_tirz",
     "state": "48",
     "program": "tif",
@@ -5980,7 +5998,7 @@
    "47": "the Department of Economic and Community Development has published no 2027 nominations (its page describes only the 2018 zones), so no tract is shown as nominated",
    "50": "the Agency of Commerce and Community Development published draft recommendations for public input in July 2026 but has not published final nominations, so no tract is shown as nominated",
    "54": "the Division of Economic Development closed local nominations on July 1, 2026 and said the Governor would submit by September 28 (up to 52 of 207 eligible tracts), but has published no list, so no tract is shown as nominated",
-   "56": "the Wyoming Business Council shows only a preliminary eligibility map and no final nominations, so no tract is shown as nominated"
+   "56": "the Wyoming Business Council shows only a preliminary eligibility map and the Governor's press releases name no nominations (both read October 31, 2026), so no tract is shown as nominated"
   }
  },
  "stores": {
@@ -6898,19 +6916,19 @@
   },
   "VT": {
    "rates": "current",
-   "rate_gaps": 2,
+   "rate_gaps": 5,
    "check": {
     "status": "checked",
-    "source": "https://tax.vermont.gov/sites/tax/files/documents/12312024MRTStatsAnnualReport180Day.xlsx",
-    "year": 2024,
+    "source": "https://tax.vermont.gov/document/meals-and-rooms-tax-statistics-cy-2025-update",
+    "year": "2024-2025 mean",
     "geography": "town",
     "restaurants": {
-     "areas": 37,
-     "corr": 0.91,
+     "areas": 35,
+     "corr": 0.92,
      "median": 0.77
     },
     "store_goods": null,
-    "note": "Taxable meals and alcohol served by town (meals and rooms tax), 2024; the sales tax report has no kind of business, so store goods are not compared."
+    "note": "Taxable meals and alcohol served by town (meals and rooms tax, Department of Taxes), mean of calendar 2024 and 2025 (both from the 2025 annual report); the sales tax report has no kind of business, so store goods are not compared."
    }
   },
   "WA": {
@@ -6970,7 +6988,7 @@
   },
   "WY": {
    "rates": "current",
-   "rate_gaps": 1,
+   "rate_gaps": 4,
    "check": {
     "status": "checked",
     "source": "https://ai.wyo.gov/divisions/economic-analysis/revenue/sales-and-use",
