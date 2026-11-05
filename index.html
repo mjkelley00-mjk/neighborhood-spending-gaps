@@ -333,6 +333,7 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,su
     <div class="namebox" id="namebox"><h1 id="selTitle">Loading the figures…</h1><button class="linkbtn" id="rename" type="button">Rename</button><label class="vh" for="selname">Name for this selection</label><input id="selname" type="text" maxlength="80" autocomplete="off"></div>
     <div class="warn" id="notice" role="status" hidden></div>
     <p class="say" id="headline"></p>
+    <p class="fitnote" id="relLine" hidden></p>
     <div class="stats" id="stats" hidden></div>
     <div class="incbox"><div id="incomeViz" hidden></div><p class="fine" id="incomeCap" hidden></p></div>
     <p class="fitnote" id="shareNote" hidden></p>
@@ -351,7 +352,7 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,su
 </section>
 <section class="card guide" id="guide" aria-labelledby="guideTitle">
   <div class="ghead"><h2 id="guideTitle">How to read this page</h2><button class="btn slim" type="button" id="guideToggle" aria-controls="guideBody">Hide the guide</button></div>
-  <div class="gbody" id="guideBody"><div><h3>What it measures</h3><p>For any group of census tracts, we estimate what residents spend in each category, using national spending patterns for households at their incomes, and what stores located there sell. Both come from public data: Census and BLS surveys of households, and Census counts of stores and jobs. It is not card data, so it shows where spending <em>likely</em> goes, not where residents actually shop.</p></div><div><h3>How to read it</h3><p>The <strong>retention rate</strong> is local store sales divided by what the national pattern predicts from residents' spending. <strong>1.0</strong> is the national norm, an average over every place in the country. Downtowns, malls and corridors that draw shoppers from elsewhere pull it up, so residential neighborhoods usually fall below it, while regional towns and small cities that serve the countryside around them often sit above it. The page therefore compares each area first with <strong>similar places</strong> (the same kind of area, setting and size across the US). A category in the bottom quarter of similar places is where residents' spending goes elsewhere; in the top quarter, the area draws shoppers in. <strong>More leaves than in the typical one</strong> is the dollars of residents' spending the typical similar place keeps but this area doesn't; <strong>leakage at the national norm</strong> is the same measure against the national average, shown as a second yardstick. Figures are ranges because store sales are estimated two ways, and real uncertainty is wider. Store counts say whether the gap is room for more stores or stores already here that are short of customers. Treat all of it as a planning estimate, not a sales forecast. <a href="#method" id="guideMethod">Full method and limits</a></p></div></div>
+  <div class="gbody" id="guideBody"><div><h3>What it measures</h3><p>For any group of census tracts, we estimate what residents spend in each category, using national spending patterns for households at their incomes, and what stores located there sell. Both come from public data: Census and BLS surveys of households, and Census counts of stores and jobs. It is not card data, so it shows where spending <em>likely</em> goes, not where residents actually shop.</p></div><div><h3>How to read it</h3><p>The <strong>retention rate</strong> is local store sales divided by what the national pattern predicts from residents' spending. <strong>1.0</strong> is the national norm, an average over every place in the country. Downtowns, malls and corridors that draw shoppers from elsewhere pull it up, so residential neighborhoods usually fall below it, while regional towns and small cities that serve the countryside around them often sit above it. The page therefore compares each area first with <strong>similar places</strong> (the same kind of area, setting and size across the US). A category in the bottom quarter of similar places is where residents' spending goes elsewhere; in the top quarter, the area draws shoppers in. <strong>More leaves than in the typical one</strong> is the dollars of residents' spending the typical similar place keeps but this area doesn't; <strong>leakage at the national norm</strong> is the same measure against the national average, shown as a second yardstick. Figures are ranges because store sales are estimated two ways: a range shows how far the two estimates differ, not a margin of error, and real uncertainty is wider. The reliability line under the summary says how far to trust an area's figures. Store counts say whether the gap is room for more stores or stores already here that are short of customers. Treat all of it as a planning estimate, not a sales forecast. <a href="#method" id="guideMethod">Full method and limits</a></p></div></div>
 </section>
 <div id="res">
   <section id="gapSect" aria-labelledby="gp"><h2 id="gp">Biggest gaps first</h2>
@@ -456,7 +457,7 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,su
           <h4>Census tracts</h4>
           <p>Census tracts are small areas the Census Bureau draws to hold about 4,000 people each (1,200 to 8,000). Every figure here is added up from tracts, so a named neighborhood, city or ZIP code is approximated by the tracts that lie mostly inside it; the fit note under each area says how closely.</p>
           <h4>Household income</h4>
-          <p>Total household income is the ACS aggregate household income (B19025), before taxes, in 2024 dollars; where the Census does not publish a tract's total, it is estimated from the households in each income bracket, and the page says so. The median is estimated from the households in each income bracket (B19001), within the bracket that holds the middle household ("$200,000 or more" when it falls in the top bracket); the Census' own tract medians cannot be added up across tracts. The income chart compares the share of households in each bracket with the US.</p>
+          <p>Total household income is the ACS aggregate household income (B19025), before taxes, in 2024 dollars; where the Census does not publish a tract's total, it is estimated from the households in each income bracket, and the page says so. The median is estimated from the households in each income bracket (B19001), within the bracket that holds the middle household ("$200,000 or more" when it falls in the top bracket); the Census' own tract medians cannot be added up across tracts. The income chart compares the share of households in each bracket with the US. The Census Bureau withheld its 2020–2024 figures for 14 tracts in Suffolk County, New York (Brentwood, Wyandanch and parts of the towns of Islip and Babylon) after a data collection error in 2020 (ACS errata note 148); their figures here come from the 2018–2022 survey, the latest that publishes them, with incomes restated to 2024 dollars, and every page that includes one of them says so.</p>
           <h4>Resident demand</h4>
           <p>Residents are each tract's total population and households its occupied housing units (ACS 2020–2024 five-year, tables B01003 and B19001). Residents include people living in group quarters, such as dorms, prisons and nursing homes, who are not households and are not counted in demand; a tract that is mostly group quarters can show many residents and little or no demand. Demand is households by income bracket in each tract (B19001) times what US households at each income spend by category (BLS Consumer Expenditure Surveys 2024 and 2025, averaged, 2025 restated to 2024 dollars with CPI-U; auto repair from 2025 alone, since BLS moved vehicle parts, accessories and fluid to the Diary Survey in 2025, which measures them much higher), interpolated at each bracket's midpoint. The top bracket's mean is solved from aggregate household income (B19025), held between $200K and $1M. The total household income in the sentence at the top is that same aggregate (2024 dollars, before taxes; for the few tracts where the Census does not publish it, it is estimated from the income brackets): what residents earn, not what they spend, given only for scale, along with the share of it the measured categories take. Spending here is the model's estimate from the survey, which runs below actual spending, so the share leans low; where many households report little income (students, people living on savings, aid or benefits not counted as income) it can approach or pass all of reported income, as the survey itself shows at low incomes. Gasoline uses the 2025 survey's “Gasoline” by income (incomes restated to 2024 dollars with CPI-U), restated at 2024 pump prices. Gas, auto repair and vehicle purchases are scaled by the tract's vehicles per household (B25046) against what the survey shows at the same incomes, between 0.2 and 2.5 times.</p>
           <p>Rural households spend differently from what their incomes alone predict. The survey's urban and rural tables (2015–2019, the latest by area on FRED) show them spending less on restaurants, alcohol, personal care and apparel, and more on tobacco, after income is accounted for two ways (the tracts' own incomes, and the survey's rural and urban mean incomes). Each tract's demand in those categories is multiplied by 1 − r + r × f, where r is its rural share (the part of its 2020 population outside Census urban areas) and f is the category's factor: restaurants 0.82, alcohol 0.60, personal care 0.74, apparel 0.78 and tobacco 1.78. A fully rural tract takes the whole factor; a fully urban one is unchanged. Groceries are not adjusted: rural households spend on food at home about what their incomes predict, and the survey leaves out food people grow themselves. A factor is used only where both ways put it at least 0.1 away from 1 on the same side and rural households spend less (or more) than urban ones in every one of the five years; the other categories are left unadjusted.</p>
@@ -479,11 +480,11 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,su
           <p>For Chicago's South Shore (the City's 15 tracts), this page finds 25,043 households (CMAP's figure is 26,470) and $316M of resident demand in the five categories the hand-built South Shore baseline measured: everyday goods (groceries, household supplies, and pets, toys and books), restaurants, apparel, gasoline, and auto parts and repair. The baseline has $352M, $36M more: about $18M of that is the household count, and the rest comes from the baseline's survey item for gasoline (gasoline, other fuels and motor oil, where this page uses gasoline alone), its assumption for top-bracket income, and its single car-ownership adjustment to gasoline and auto repair for the whole area, where this page adjusts tract by tract. The baseline compared local sales with demand directly, found local sales at 63%–75% of demand and a gap of $88M–$129M; it could not measure home furnishings, personal care or alcohol from public data. This page measures 13 categories in its total against the national norm and splits store sales by what each kind of store sells, so its figures are larger and not directly comparable: a net projected leakage of $244M–$280M, with retention rates of 0.39–0.46 for groceries, 0.05–0.11 for full-service dining, 0.21–0.45 for quick-service food and 0.21–0.30 for home furnishings. The two agree on where the biggest gaps are: restaurants and everyday goods (here groceries, household supplies, and pets, toys and books).</p>
           <h4>Check against states' sales-tax records</h4>
           <p id="checkSummary">Many states publish taxable sales by city or county and by kind of business. Where they do, the estimates here are compared with them.</p>
-          <p>Restaurants and bars are the cleanest comparison, since restaurant meals are taxed in every state with a sales tax. Store goods compare less directly: taxable sales leave out groceries in most states and include goods outside the categories here (electronics, sporting goods, jewelry and more), so the estimates usually come to less than taxable sales there, and the correlation is the test. The largest misses are small towns where tract lines cut through the commercial district, warehouse towns, and places whose sales come mostly from hotels and conventions, like Rosemont, Illinois.</p>
+          <p>Restaurants and bars are the cleanest comparison, since restaurant meals are taxed in every state with a sales tax. Store goods compare less directly: taxable sales leave out groceries in most states and include goods outside the categories here (electronics, sporting goods, jewelry and more), so the estimates usually come to less than taxable sales there. The test is skill against a naive baseline that predicts each area's sales from its number of households alone: areas differ a hundredfold in size, so a correlation of sales across areas is mostly a matter of size, and household counts alone already score high on it. Around each state's typical ratio of estimate to reported sales, the estimates' spread is a median 0.39 of the baseline's for restaurants and bars (0.18–0.84 across 30 states; below 1 is better) and 0.56 for store goods (0.31–1.67 across 25 states), and their correlation with sales per household, which household counts can't predict, runs 0.57–0.96 for restaurants and bars and 0.32–0.96 for store goods. For store goods in Arkansas, Colorado, Illinois, Nebraska, Nevada, North Carolina, South Dakota and Utah, the estimates correlate with taxable sales no better than household counts do, and in Colorado and Nevada their spread is wider than the baseline's too. The check is at city, town and county level: it does not test how sales are placed among a city's tracts, which neighborhood figures depend on, and a county check is partly met in advance, because store jobs are held to County Business Patterns' count in each county. The largest misses are small towns where tract lines cut through the commercial district, warehouse towns, and places whose sales come mostly from hotels and conventions, like Rosemont, Illinois.</p>
           <details class="cov"><summary>State by state: sales-tax rates and checks</summary><div class="tablewrap"><table id="coverage"></table></div></details>
           <h4>Similar places, the surrounding region and visitors</h4>
           <ul>
-            <li><strong>Similar places:</strong> every Census place (tracts at least half in it), county and named neighborhood in the US with at least 300 households is grouped by kind, setting and population; neighborhoods are filtered as the search filters them, and neighborhoods that cover the same tracts count once. Setting is the county's: in a metropolitan or micropolitan area, or neither (OMB delineation, July 2023); a neighborhood's setting is whether the city holding most of its households has 250,000 people or more. Groups with fewer than 30 areas are merged with a neighboring population band. Small towns count only when a tract lies at least half inside them, so the groups for towns under 2,500 people are small (about 100–550 places) and lean toward towns that fill a whole tract. A ZIP code or hand-picked selection is compared as a neighborhood when most of its households live in such a city, or in a smaller city with at least twice its residents (then with neighborhoods of smaller cities), otherwise as a city or town; a suggested area is compared as a neighborhood. The page leads with this comparison: a category's gap against similar places is resident spending × (their median retention − retention here), each counted as at most 1.0: a rate above 1.0 means a place also draws in shoppers from elsewhere, which is not its residents' spending, so the gap compares only how much of residents' own spending stays and never exceeds what they spend; and its rank among them (bottom quarter, middle half, top quarter) decides whether spending reads as going elsewhere or drawing shoppers in. The national norm stays beside it as a second yardstick: higher than the typical one for most neighborhoods, lower for many regional towns and small cities. A total against similar places adds up each category's own gap; it is not the total of any one typical place.</li>
+            <li><strong>Similar places:</strong> every Census place (the tracts with at least half their residents in it), county and named neighborhood in the US with at least 300 households is grouped by kind, setting and population; neighborhoods are filtered as the search filters them, and neighborhoods that cover the same tracts count once. Setting is the county's: in a metropolitan or micropolitan area, or neither (OMB delineation, July 2023); a neighborhood's setting is whether the city holding most of its households has 250,000 people or more. Groups with fewer than 30 areas are merged with a neighboring population band. Small towns count only when they hold at least half of a tract's residents, so the groups for towns under 2,500 people are small (about 200–650 places) and lean toward towns that fill a whole tract. A ZIP code or hand-picked selection is compared as a neighborhood when most of its households live in such a city, or in a smaller city with at least twice its residents (then with neighborhoods of smaller cities), otherwise as a city or town; a suggested area is compared as a neighborhood. The page leads with this comparison: a category's gap against similar places is resident spending × (their median retention − retention here), each counted as at most 1.0: a rate above 1.0 means a place also draws in shoppers from elsewhere, which is not its residents' spending, so the gap compares only how much of residents' own spending stays and never exceeds what they spend; and its rank among them (bottom quarter, middle half, top quarter) decides whether spending reads as going elsewhere or drawing shoppers in. The national norm stays beside it as a second yardstick: higher than the typical one for most neighborhoods, lower for many regional towns and small cities. A total against similar places adds up each category's own gap; it is not the total of any one typical place.</li>
             <li><strong>The surrounding region</strong> sums the projected leakage of every tract whose interior point lies within 10, 25 or 50 miles of a selected tract's, including neighboring states.</li>
             <li><strong>Visitor economy:</strong> an area is flagged when at least 50 of its homes are seasonal or vacation homes and they are at least 3 times the national share of housing (ACS 2020–2024, B25004 and B25001), or when it has at least 5 hotels, motels and other lodging places and as many per resident as the top 5% of US places with 1,000 or more residents (Overture Maps, October 2026).</li>
           </ul>
@@ -494,7 +495,7 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,su
             <li><strong>Jobs located here</strong> come from the same LEHD LODES files, by workplace and all 20 industry sectors. <strong>Jobs held by residents</strong> come from LODES residence files, wherever those jobs are. Both count jobs, not people, so their difference is net commuting. Self-employed people are not in either.</li>
             <li><strong>Hospitals</strong> are every hospital on Medicare's list (CMS Hospital General Information, October 2026), placed by the Census Geocoder or, where it can't place the address, by matching the name to a hospital listing on Overture Maps in the same ZIP code (or the same county, where the ZIP is a post-office box or single-site ZIP with no area of its own); about 5% can't be placed either way and are left out. Map listings alone count a hospital's departments and offices as separate hospitals. <strong>Community health centers</strong> are HRSA's active, permanent health center sites, including school-based ones (not mobile vans or seasonal sites). Doctors' offices and clinics, dentists, urgent care and mental health clinics are Overture Maps listings, private and public alike.</li>
             <li><strong>Stores here:</strong> food stores are USDA's list of every store authorized to take SNAP (downloaded October 2026). Other kinds are places listed in Overture Maps (October 2026 release, places with a confidence score of at least 0.9 and not marked closed), an open dataset compiled from several map sources; it lists more salons, bars and home furnishings stores than Census business counts, so treat those rows as indications. National rates per 10,000 residents use the same sources. The store section splits each tract's listed restaurants into full and quick service by the mix of employer restaurants in its ZIP codes (ZIP Business Patterns 2023), since the listings sort restaurants by cuisine, and the US counts the same way; it compares gyms and studios by count only, since golf, bowling, skiing and lessons are not listed.</li>
-            <li><strong>Sales tax on spending that leaves</strong> leaves out fitness and child care, which states tax very differently (gym memberships in some, lessons in fewer, child care almost nowhere) and which the rate tables here do not cover yet. It applies each state's combined state and local sales-tax rates, category by category, to the spending that leaves beyond what the typical similar place loses (only in the categories that fall short of it) and, beside that, to projected leakage at the national norm: the rate where the selected tracts are (the city's when at least half a tract is in it, otherwise the town's or the county's; in Washington, where transit districts set different rates within a county, a tract that isn't at least half in one city takes the average rate where all its residents live, in cities or not, from the Department of Revenue's location-code map and 2020 census block population), and only on what each state taxes. Groceries, gas, salon services and repair labor are exempt or taxed differently in many states; personal care, apparel and auto are split between goods and services by the services' national share of sales, and alcohol between bottles bought in stores and drinks served by their national shares of sales (2022 Economic Census product lines), each part taking its own rate. Auto repair shops' receipts take the treatment of repair labor: the Economic Census reports the parts they install inside the repair line, so where a state taxes installed parts but not labor, the tax on auto repair is a lower bound. Rates come from each state's revenue department (or the Streamlined Sales Tax files its members publish), as of October 2026. Where part of a place or county carries a higher rate, from a transit or special district or from another county the place extends into, the rate shown runs up to it as a range (in Arizona, a city's part in each county, where it holds at least half a tract, takes that county's rate). Restaurant meals taxes are included: state meals taxes in Connecticut, DC, Maine, New Hampshire and Vermont, local ones where a state publishes them (Massachusetts, Mississippi, Rhode Island and Utah) and, in Alabama, Arizona, Arkansas, Colorado, Florida, Idaho, Illinois, Indiana, Kentucky, Louisiana, Maryland, Minnesota, Missouri, Montana, Nebraska, New Jersey, North Carolina, North Dakota, Oregon, South Carolina, South Dakota, Tennessee, Vermont, Virginia and Wisconsin, where the state, county or city gives the rate; each state's notes name them, and they apply to drinks served as well as food, except Arkansas' local restaurant taxes, 8 Kentucky cities' restaurant taxes, 4 North Dakota cities' and Ramsey County's restaurant taxes and the restaurant tax of Eagle Butte, South Dakota, which leave drinks out (the notes say so). Local meals taxes whose rate no state, county or city publishes are not counted. One rule decides what else counts: a tax charged as a percent of the retail price, whether the buyer pays it at the register or the seller pays it on its retail receipts, is counted; a tax by the unit (per pack, gallon or liter) or on the wholesale price, paid before the retail sale, is not, nor are lodging, car rental and admissions taxes or caps on single purchases. A percent-of-price tax that falls on only part of a category is counted on that part's share of sales where an official figure gives one: nationally, drinks served by kind (spirits 43%, wine 27% and beer 30% of drinks served), liquor stores' share of alcohol bought in stores, for a tax on what one kind of store sells (47%), and jewelry and watches' share of clothing, shoe and jewelry sales (13%), where clothing is exempt but jewelry isn't (Massachusetts, Minnesota, New Jersey, New York, Pennsylvania, Rhode Island and Vermont), all from the 2022 Economic Census product lines; or the state's own official figure where it publishes one: beer's share of liquor stores' alcohol sales in 2024, from Rhode Island's Division of Taxation. Otherwise it is named in the state's notes and not counted: taxes on vapor products (no official figure gives their share of tobacco sales), taxes on spirits or wine bought in stores where the state gives no split (the Census doesn't split alcohol bought in stores by kind, and liquor stores' share counts beer and wine shops too), and, where clothing is exempt, the part of an item's price over a cap and other taxed accessories. Counted this way, beyond each state's general and restaurant-meals rates, are state taxes on alcohol served in Arkansas, Kansas, Maryland, Minnesota, North Dakota, Oklahoma, South Carolina, Tennessee, Texas and Vermont, and bought in stores in Arkansas, the District of Columbia, Kansas, Maryland, Minnesota and North Dakota, and local taxes on alcohol or tobacco in Alabama (Jefferson County and 35 cities and towns); Alaska (Anchorage Municipality, Denali Borough, Fairbanks North Star Borough, Juneau City and Borough and 13 cities and towns); Arkansas (Fayetteville and Little Rock); Georgia (8 cities and towns); Illinois (Chicago, Evanston and Rockford); Mississippi (Hattiesburg and Oxford); New Jersey (Atlantic City); Pennsylvania (Allegheny County and Philadelphia County); South Dakota (93 cities and towns); Wisconsin (9 cities and towns); cigarette and gallonage excises are not. Where a state's local rates differ by kind of purchase, as New York's do for clothing, New York City's for personal services and motor fuel, Georgia's for motor fuel, Arizona and Idaho cities' for groceries and restaurants, Denver's, Boulder's and Telluride's for food and drinks served to eat there, and Oxford, Alabama's for alcohol, each kind takes its own rate. Gaps for each state are listed with the figures and in the table below.</li>
+            <li><strong>Sales tax on spending that leaves</strong> leaves out fitness and child care, which states tax very differently (gym memberships in some, lessons in fewer, child care almost nowhere) and which the rate tables here do not cover yet. It applies each state's combined state and local sales-tax rates, category by category, to the spending that leaves beyond what the typical similar place loses (only in the categories that fall short of it) and, beside that, to projected leakage at the national norm: the rates where the selected tracts are, and only on what each state taxes. Sales tax is charged where purchases are made, so a tract split between places with different rates (a city or town with rates of its own and the area around it, two county parts of a city, or two towns) takes each one's rates for the share of the tract's jobs located there: its store jobs for purchases in stores, and its jobs at restaurants, bars and hotels for restaurant meals and drinks served (LEHD LODES 2023; Alaska 2016, Michigan 2021 workplace jobs by census block); a tract with no such jobs takes them by its residents (2020 census), and the notes say where that happens. LODES gives jobs by sector only, so store jobs here are all retail trade jobs, car dealers, gas stations and the warehouses of online and catalog sellers among them, and the restaurant count includes hotel jobs; a tract's split can lean toward a car lot or a hotel that sells little of what a category covers. A city's or town's own page uses its own rates instead: sales inside a city are taxed at the city's rate, so the page takes the rates inside it, weighed across its county parts and towns by its own store jobs (restaurant, bar and hotel jobs for meals and drinks served; its residents where it has none), with a district's higher rate shown as a range as below, whatever the tracts around it charge. An unincorporated community's page (a Census designated place) takes the rates inside it the same way. The page says whose rates they are: the city's or town's own where it has a rate of its own on the state's list, or else those in force where it lies, naming the county (or the town with rates of its own), as for an unincorporated community, which levies none, or a city or town with no rate of its own (Florida's cities, New York's towns), or the state's alone where no local rate applies there; a city whose only levy is a restaurant meals tax is named for that. Any other selection (a neighborhood, a ZIP code, a county, tracts picked on the map) takes each tract's rates as described here, and the page says which applies. In Washington, where transit districts set different rates within a county, each tract takes the average rate over its stores (restaurants, bars and hotels for meals), in cities or not, from the Department of Revenue's location-code map. Groceries, gas, salon services and repair labor are exempt or taxed differently in many states; personal care, apparel and auto are split between goods and services by the services' national share of sales, and alcohol between bottles bought in stores and drinks served by their national shares of sales (2022 Economic Census product lines), each part taking its own rate. Auto repair shops' receipts take the treatment of repair labor: the Economic Census reports the parts they install inside the repair line, so where a state taxes installed parts but not labor, the tax on auto repair is a lower bound. Spending won back from stores elsewhere in the same state already pays the state's share there, so the page leads with the local share, the area's own gain, and calls the state's share mostly moved rather than new. Online orders are a different case: in states that tax a delivered order at the rate where it is delivered (destination sourcing, the rule of the Streamlined Sales Tax agreement), an order shipped to a home here already pays the local rate here, so the part of a gap that is online shopping beyond the national norm would bring in little new local tax if won back. Rates come from each state's revenue department (or the Streamlined Sales Tax files its members publish), as of October 2026. A city in more than one county takes, in each tract, the rates of its part in that tract's county. Where part of a place or county carries a higher rate, from a transit or special district, the rate shown runs up to it as a range. Restaurant meals taxes are included: state meals taxes in Connecticut, DC, Maine, New Hampshire and Vermont, local ones where a state publishes them (Massachusetts, Mississippi, Rhode Island and Utah) and, in Alabama, Arizona, Arkansas, Colorado, Florida, Idaho, Illinois, Indiana, Kentucky, Louisiana, Maryland, Minnesota, Missouri, Montana, Nebraska, New Jersey, North Carolina, North Dakota, Oregon, South Carolina, South Dakota, Tennessee, Vermont, Virginia and Wisconsin, where the state, county or city gives the rate; each state's notes name them, and they apply to drinks served as well as food, except Arkansas' local restaurant taxes, 8 Kentucky cities' restaurant taxes, 4 North Dakota cities' and Ramsey County's restaurant taxes, the restaurant taxes of Ashland and Yachats (Oregon) and the restaurant tax of Eagle Butte (South Dakota), which leave drinks out (the notes say so). Local meals taxes whose rate no state, county or city publishes are not counted. One rule decides what else counts: a tax charged as a percent of the retail price, whether the buyer pays it at the register or the seller pays it on its retail receipts, is counted; a tax by the unit (per pack, gallon or liter) or on the wholesale price, paid before the retail sale, is not, nor are lodging, car rental and admissions taxes or caps on single purchases. A percent-of-price tax that falls on only part of a category is counted on that part's share of sales where an official figure gives one: nationally, drinks served by kind (spirits 43%, wine 27% and beer 30% of drinks served), liquor stores' share of alcohol bought in stores, for a tax on what one kind of store sells (47%), and jewelry and watches' share of clothing, shoe and jewelry sales (13%), where clothing is exempt but jewelry isn't (Massachusetts, Minnesota, New Jersey, New York, Pennsylvania, Rhode Island and Vermont), all from the 2022 Economic Census product lines; or the state's own official figure where it publishes one: beer's share of liquor stores' alcohol sales in 2024, from Rhode Island's Division of Taxation. Otherwise it is named in the state's notes and not counted: taxes on vapor products (no official figure gives their share of tobacco sales), taxes on spirits or wine bought in stores where the state gives no split (the Census doesn't split alcohol bought in stores by kind, and liquor stores' share counts beer and wine shops too), and, where clothing is exempt, the part of an item's price over a cap and other taxed accessories. Counted this way, beyond each state's general and restaurant-meals rates, are state taxes on alcohol served in Arkansas, Kansas, Maryland, Minnesota, North Dakota, Oklahoma, South Carolina, Tennessee, Texas and Vermont, and bought in stores in Arkansas, the District of Columbia, Kansas, Maryland, Minnesota and North Dakota, and local taxes on alcohol or tobacco in Alabama (Jefferson County and 35 cities and towns); Alaska (Anchorage Municipality, Denali Borough, Fairbanks North Star Borough, Juneau City and Borough and 13 cities and towns); Arkansas (Fayetteville and Little Rock); Georgia (8 cities and towns); Illinois (Chicago, Evanston and Rockford); Mississippi (Hattiesburg and Oxford); New Jersey (Atlantic City); Pennsylvania (Allegheny County and Philadelphia County); South Dakota (93 cities and towns); Wisconsin (9 cities and towns); cigarette and gallonage excises are not. Where a state's local rates differ by kind of purchase, as New York's do for clothing, New York City's for personal services and motor fuel, Georgia's for motor fuel, Arizona and Idaho cities' for groceries and restaurants, Denver's, Boulder's and Telluride's for food and drinks served to eat there, and Oxford, Alabama's for alcohol, each kind takes its own rate. Gaps for each state are listed with the figures and in the table below.</li>
             <li><strong>Programs and designations</strong> come from the agencies' tract lists: Treasury's 2018 Opportunity Zones and its September 2026 list of tracts eligible for 2027 zones, with the tracts governors have nominated where a state has published its final list (20 states as of October 30, 2026, named in the table; elsewhere the page says the list is not published; Treasury designates the zones, so a nomination is not a designation); the CDFI Fund's New Markets Tax Credit and CDFI Investment Area eligibility (2016–2020 ACS); USDA's food access maps (2019 supermarket access; 2025 access to any SNAP store); and HUD's Qualified Census Tracts and Difficult Development Areas for the Low-Income Housing Tax Credit (2026 and 2027 lists). Difficult Development Areas are drawn by ZIP area in metro areas and by county elsewhere, so a tract counts when at least half its land lies in one (a ZIP area split between HUD metro areas counts only when every part of it is designated). Lists drawn on 2010 tracts are carried to a 2020 tract when at least half its land lies in listed 2010 tracts. "Severely distressed" here applies the three main NMTC tests only; a tract can also qualify in other ways. <strong>HUBZones</strong> come from SBA's HUBZone map service (its current Qualified Census Tracts and Non-Metropolitan Counties, governor-designated and disaster areas, and Indian lands, a tract counting for Indian lands when at least half of its area is inside).</li>
             <li><strong>State and local programs</strong> (enterprise zones and other state incentive areas, tax increment financing districts, special service areas and business improvement districts, brownfield areas, state designations such as Main Street, cultural and downtown programs, transit-oriented designations, and designated sites) come from the official boundary layers that states, counties, cities and regional agencies publish, read when the site is built. Each district's share of a selection is the part of the selected tracts' land inside it, measured on the generalized 2024 tract shapes in an equal-area projection (shares that round to 1% of a tract or more); a program's total counts land in two overlapping districts once, and districts past their last year in force are left out. Designated sites (points) are listed by the tract they sit in. Coverage is growing place by place, and the programs section names the sources covered in the selected state, so a missing district elsewhere does not mean there is none. South Carolina, Mississippi, Arkansas, Tennessee, North Carolina and Georgia rank every county into tiers for job tax credits and similar incentives, Virginia's Commission on Local Government classes every county and independent city by fiscal stress, Washington lists its distressed counties (Employment Security Department) and its rural counties (Office of Financial Management), and Alabama's targeted and jumpstart counties are Enterprise Zones county-wide; in those states every county a selection touches is listed with its tier or designation from the state's current list, with its share of the selection's households.</li>
             <li><strong>Public and land-bank property</strong> counts the parcels that 49 large cities publish in their official GIS layers as held by a land bank or land reutilization authority, owned by the city, county or another public agency (surplus land included), or vacant (citywide vacant-lot or vacant-building layers). Where an owner field mixes public agencies and private owners, only public and land-bank parcels are counted, and no owner names are kept. A parcel listed twice counts once, in the tract that holds it. Each city's layer is taken as it stands, so what is counted differs by city and a tract outside these cities has no count; a city list from before 2024 is counted with its year shown, and the page names the layers each area's counts come from. Charlotte's layer is linked rather than counted, because its terms limit reuse.</li>
@@ -502,11 +503,11 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,su
           </ul>
           <h4>Neighborhoods and other areas</h4>
           <ul>
-            <li><strong>Neighborhoods</strong> outside Chicago come from Who's On First, an open gazetteer. In some cities its boundaries come from the city's own planning or GIS office (Atlanta, Baltimore, Boston, Denver, Los Angeles, New Orleans, Oakland, Portland, San Diego, San Francisco, Seattle and others) or from published maps (Philadelphia, Washington, New York); elsewhere most come from Zetashapes and Quattroshapes, algorithmic boundaries assembled from crowd-sourced place data. Each result names its source. There is no official national neighborhood map, so coverage and quality are uneven. Algorithmic boundaries (Zetashapes, Quattroshapes) that tracts trace poorly (fit under 30%) are left out as noise. Boundaries from every other source are kept at any fit, with a warning when the tracts trace them poorly. Where one city has two overlapping boundaries with the same name, the City's or a city office's own boundary is kept, then the one the tracts trace better; same-name places that do not overlap, such as two Koreatowns in New York, are both kept.</li>
+            <li><strong>Neighborhoods</strong> outside Chicago come from Who's On First, an open gazetteer. In some cities its boundaries come from the city's own planning or GIS office (Atlanta, Baltimore, Boston, Denver, Los Angeles, New Orleans, Oakland, Portland, San Diego, San Francisco, Seattle and others) or from published maps (Philadelphia, Washington, New York); elsewhere most come from Zetashapes and Quattroshapes, algorithmic boundaries assembled from crowd-sourced place data. Each result names its source. There is no official national neighborhood map, so coverage and quality are uneven. Boundaries from every source are kept at any fit, with a warning when the tracts trace them poorly; many algorithmic ones are much smaller than a census tract, so their figures describe the whole tract around them, as the page says. Where one city has two overlapping boundaries with the same name, the City's or a city office's own boundary is kept, then the one the tracts trace better; same-name places that do not overlap, such as two Koreatowns in New York, are both kept.</li>
             <li><strong>Chicago</strong> has the City's 77 community areas (from the City's 2020 tract assignments; eight tracts missing from that file, three of them in South Shore, are placed in the community area that holds most of their area) and the City's 98 neighborhoods; a few, such as Magnificent Mile, are much smaller than a tract and carry the same warning. Names in common use that are not official, such as Pilsen, come from Who's On First, and searching one that sits inside a community area, such as Pilsen in Lower West Side, also offers the community area.</li>
             <li><strong>Fit</strong> measures how well the tracts trace a boundary, not whether the boundary itself is right: their overlap as a share of the area and the tracts combined (100% is exact). Each area takes the tracts with at least half their area inside it, or the one tract that covers most of it. The page also says what share of the area the tracts cover and what share of the tracts lies inside it.</li>
             <li><strong>ZIP codes</strong> are Census ZCTAs: the tracts with at least half their land in the ZCTA, or the one tract that covers most of it, with fit measured on land area. They will not match postal ZIPs exactly.</li>
-            <li><strong>Cities and towns</strong> are Census places: the tracts with at least half their blocks in the place. A town that makes up less than half of every tract it touches (most towns under a few thousand people, and a few spread-out places) opens the tract that holds the most of it, and the page says the figures cover that whole tract and, when that tract holds under half the town, how much of it. In the twelve states where towns and townships are local governments (Connecticut, Maine, Massachusetts, Michigan, Minnesota, New Hampshire, New Jersey, New York, Pennsylvania, Rhode Island, Vermont and Wisconsin), a town or township that isn't also a Census place (Edison Township, New Jersey; Middletown, Rhode Island) is found the same way, from the census blocks in it.</li>
+            <li><strong>Cities and towns</strong> are Census places: the tracts with at least half their residents in the place (2020 census block counts; census blocks for a tract with no residents). A town that holds less than half of the residents of every tract it touches (most towns under a few thousand people, and a few spread-out places) opens the tract that holds the most of its residents, and the page says the figures cover that whole tract and, when that tract holds under half the town, how much of it. Where a place's own tracts hold under half of its residents, or have no households (a prison, campus or base tract), the tracts holding the most of the rest of its residents are added until the page holds at least half of them. In the twelve states where towns and townships are local governments (Connecticut, Maine, Massachusetts, Michigan, Minnesota, New Hampshire, New Jersey, New York, Pennsylvania, Rhode Island, Vermont and Wisconsin), a town or township that isn't also a Census place (Edison Township, New Jersey; Middletown, Rhode Island) is found the same way, from the residents of the census blocks in it.</li>
             <li><strong>Suggested areas:</strong> anyone can suggest a selection of tracts as a named area. It shows in their own search on that device at once, and in everyone's once it is reviewed and approved, labeled as a suggestion. The page does not ask who is suggesting and saves nothing about them.</li>
             <li>Boundaries are 2024 Census cartographic files (2020 tracts), simplified for the map. Tracts that are only water have no households and are not drawn.</li>
             <li><strong>Streets</strong> on the map come from OpenStreetMap. Pointing at a tract (or tapping it on a phone), zoomed in to street level, lists the named streets that run along its edges, matched within about 45 meters of the simplified tract lines, so now and then a name is missed or a nearby parallel street is listed. Only streets in the part of the map on screen are checked.</li>
@@ -521,7 +522,9 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,su
             <li>Sales per employee and the benchmark store's sales come from the 2022 Economic Census store industries, which code online sellers by what they sell, so for some store types they pool online sellers with stores, raising some types' figures and lowering others'; the cap on local rates trims only the extremes.</li>
             <li>Holding each county to County Business Patterns' store jobs raises an estimate by at most 5% for a type (the 2022 Census' higher counts include online sellers) but lowers it without a floor where County Business Patterns counts fewer, so a type whose industry code changed between the 2017 and 2022 classifications (convenience stores, food trucks) can lose jobs that moved to another type.</li>
             <li>Online spending is inside every gap; no neighborhood captures all of it.</li>
-            <li>The ranges show only how far the two supply estimates disagree, and the two share inputs (each uses the ZIP's industry mix and tract job shares). Demand is a single estimate. Real uncertainty is wider than the ranges.</li>
+            <li>The ranges show only how far the two supply estimates disagree, and the two share inputs (each uses the ZIP's industry mix and tract job shares); they are not a margin of error. Demand is a single estimate. Real uncertainty is wider than the ranges.</li>
+            <li>Every selection carries a reliability label, from its households and census tracts. The survey behind residents' spending samples households, so spending modeled from it carries sampling error: for a typical single tract, a 90% margin of about ±13–21% on its spending in the store and restaurant categories, from the ACS margins of error on its household count (the lower figure) and on its households by income bracket, summed by the ACS Handbook's method, which runs high (the upper figure); 55% of tracts are above ±20% by the upper figure. That is about as large as the model's own regional error (below). The margin shrinks with the square root of the households (checked on the 1,310 counties of 5,000 to 20,000 households, summed tract by tract: a median of ±7% against ±8% from the scaling). <strong>Low</strong>: a single tract or fewer than 1,500 households (about ±13–20% at 1,500), where one store can also swing a category. <strong>High</strong>: at least 10,000 households in 5 or more tracts, where sampling error is about ±5–8% or less, below the model's regional error, which is then the larger part. <strong>Medium</strong>: everything between. The label states the selection's own sampling margin, scaled from the tracts' median. Error in the spending survey's own averages and the model's error come on top.</li>
+            <li>Residents' spending uses national spending curves by income in every tract; regional prices and habits are not adjusted for. BEA's state consumer spending (2024) shows how far states depart from those curves: between the 10th and 90th percentile of states, spending runs groceries 0.87–1.14, restaurants 0.82–1.11, apparel 0.83–1.10, home furnishings 0.87–1.09, gasoline 0.73–1.23 and personal care 0.66–1.18 times the national pattern, roughly ±11–26% by category. A state's departure passes into its retention rates and its places' ranks among similar places. BEA's state figures also count shopping across state lines, so they are not applied; spending curves by region and income, which BLS publishes, are the planned upgrade.</li>
             <li>For a county or a larger selection the two supply estimates nearly agree, because both are held to County Business Patterns' store jobs in each county, so the range there shows almost none of the uncertainty.</li>
             <li>Tobacco sales include cannabis where it is sold legally; the survey's tobacco line does not.</li>
             <li>Totals net categories against each other; read the category rows before siting any one kind of store.</li>
@@ -691,8 +694,15 @@ function placeName(n) {
 }
 function buildSearch() {
   SEARCH = [];
+  const areaN = {}, areaC = {}, ctyOf = ts => { const n = {}; for (const t of ts) n[t.slice(0, 5)] = (n[t.slice(0, 5)] || 0) + 1; return Object.keys(n).sort((a, b) => n[b] - n[a] || (a < b ? -1 : 1))[0]; };
+  for (const [n, city, kind, , ts] of ST.areas || []) { const k = n + '|' + city + '|' + kind; areaN[k] = (areaN[k] || 0) + 1; (areaC[k] ||= new Set()).add(ctyOf(ts)); }
+  const tractNo = t => { const b = parseInt(t.slice(5, 9), 10), x = t.slice(9); return x === '00' ? String(b) : b + '.' + x; };
+  const areaLabel = (n, city, kind, ts) => { const k = n + '|' + city + '|' + kind; if (!(areaN[k] > 1)) return n;
+    if (areaC[k].size === areaN[k] && ST.counties[ctyOf(ts)]) return `${n} (${ST.counties[ctyOf(ts)]})`;
+    const nos = ts.map(tractNo).sort((a, b) => parseFloat(a) - parseFloat(b));
+    return `${n} (${nos.length === 1 ? `census tract ${nos[0]}` : nos.length <= 3 ? `census tracts ${nos.slice(0, -1).join(', ')} and ${nos[nos.length - 1]}` : `${nos.length} census tracts, ${nos[0]} to ${nos[nos.length - 1]}`})`; };
   for (const [n, city, kind, src, ts, fit, cover, inside, alias] of ST.areas || []) {
-    const it = {kind, label:n, city, tracts:ts, fit, cover, inside, src, key:n.toLowerCase(), alias};
+    const it = {kind, label:areaLabel(n, city, kind, ts), city, tracts:ts, fit, cover, inside, src, key:n.toLowerCase(), alias};
     SEARCH.push(it);
     if (alias) SEARCH.push(Object.assign({}, it, {key:alias.toLowerCase(), via:'also called ' + alias}));
     if (ST.fips === '17' && kind === 'Community area') for (const nb of CHI_INCLUDES[n] || []) SEARCH.push(Object.assign({}, it, {key:nb.toLowerCase(), via:'includes ' + nb}));
@@ -709,7 +719,7 @@ function buildSearch() {
     const pn = placeName(p.name), c = countyOf(p.tracts), b = pn.base.toLowerCase();
     const kindWord = {'Community (unincorporated)': 'unincorporated community', 'City / town': 'city'}[pn.kind] || pn.kind.toLowerCase();
     const cn = nameCount[b] < 2 ? '' : nameCount[b + '|' + c] > 1 ? kindWord : (ST.counties[c] || kindWord);
-    const it = {kind:pn.kind, label:cn ? `${pn.base} (${cn})` : pn.base, tracts:p.tracts, key:pn.base.toLowerCase(), full:pn.full.toLowerCase(), src:'place', place:g, ...(p.part ? {part:p.part} : {})};
+    const it = {kind:pn.kind, label:cn ? `${pn.base} (${cn})` : pn.base, tracts:p.tracts, key:pn.base.toLowerCase(), full:pn.full.toLowerCase(), src:'place', place:g, ...(p.part ? {part:p.part} : {}), ...(p.cover ? {cover:p.cover} : {}), ...(p.pb ? {pb:1} : {}), ...(p.wide ? {wide:p.wide} : {}), ...(p.res ? {res:p.res} : {})};
     SEARCH.push(it);
     // the name people use where the Census name differs ("Boise City" is Boise; reviewbot, Idaho)
     if (PLACE_ALIASES[g]) SEARCH.push(Object.assign({}, it, {key:PLACE_ALIASES[g].toLowerCase(), full:'', via:'also called ' + PLACE_ALIASES[g]}));
@@ -718,7 +728,7 @@ function buildSearch() {
   for (const [g, p] of Object.entries(ST.towns || {})) {
     const c = countyOf(p.tracts), b = p.name.toLowerCase(), kw = p.kind.toLowerCase();
     const cn = nameCount[b] < 2 ? '' : nameCount[b + '|' + c] > 1 ? kw : (ST.counties[c] || kw);
-    const it = {kind:p.kind, label:cn ? `${p.name} (${cn})` : p.name, base:p.name, tracts:p.tracts, key:b, full:b + ' ' + kw, src:'town', town:g, ...(p.part ? {part:p.part} : {})};
+    const it = {kind:p.kind, label:cn ? `${p.name} (${cn})` : p.name, base:p.name, tracts:p.tracts, key:b, full:b + ' ' + kw, src:'town', town:g, ...(p.part ? {part:p.part} : {}), ...(p.cover ? {cover:p.cover} : {}), ...(p.pb ? {pb:1} : {}), ...(p.wide ? {wide:p.wide} : {}), ...(p.res ? {res:p.res} : {})};
     SEARCH.push(it);
     if (PLACE_ALIASES[g]) SEARCH.push(Object.assign({}, it, {key:PLACE_ALIASES[g].toLowerCase(), full:'', via:'also called ' + PLACE_ALIASES[g]}));
   }
@@ -1554,29 +1564,57 @@ function zbpUnnamedText(ids) {
 // xf groceries (where the state's file gives a separate local food rate), xm local restaurant-meals tax (xmd its part
 // that reaches drinks served, where a place's tax leaves alcoholic drinks out), xh the upper
 // end of the local rate where it is uncertain (Texas transit and special districts), xc local rates by category where
-// they differ from the general one (New York's clothing, city services and motor fuel).
+// they differ from the general one (New York's clothing, city services and motor fuel), xr (and xrh, its upper end) the
+// general local rate on restaurant meals and drinks served where it differs from x: a tract split between places with
+// different rates weighs each one's rates by the tract's store jobs in it for store purchases, and by its jobs at
+// restaurants, bars and hotels for meals and drinks served (build_site_data.tract_blend). T.cats[c][4] is the part of
+// the category's local share bought where it is served.
 // A category's rate for a selection is averaged over its tracts, weighted by residents' spending there. Categories
 // the tables do not cover (fitness and child care) carry null and are listed as not included.
 const GROC = 0;                       // SUP index of groceries
 function tractCatLocal(T, t, i, hi) {
   if (!T.cats[SUP[i]]) return 0;
-  const [, fl, fx, mw] = T.cats[SUP[i]];
+  const [, fl, fx, mw, fls = 0] = T.cats[SUP[i]];
   const x = hi && t.xh != null ? t.xh : t.x;
-  let v = t.xc && t.xc[SUP[i]] != null ? t.xc[SUP[i]] : (i === GROC && t.xf != null) ? t.xf : fl * x + fx;
-  if (mw && t.xm) v += mw * (SUP[i] === 'alcohol' && t.xmd != null ? t.xmd : t.xm);
-  return v;
+  const xrLo = t.xr != null ? t.xr : t.x, xrHi = t.xrh != null ? t.xrh : t.xr != null ? t.xr : (t.xh != null ? t.xh : t.x);
+  const xr = hi ? xrHi : xrLo;
+  let v = t.xc && t.xc[SUP[i]] != null ? t.xc[SUP[i]] : (i === GROC && t.xf != null) ? t.xf : (fl - fls) * x + fls * xr + fx;
+  return v + tractCatMeals(T, t, i);
+}
+// the part of a category's local rate that is a restaurant meals tax (xm, on drinks served at xmd where a place's tax
+// treats them apart): it reaches meals and, in the alcohol category, only the drinks served there
+function tractCatMeals(T, t, i) {
+  const c = T.cats[SUP[i]]; if (!c || !c[3] || !t.xm) return 0;
+  return c[3] * (SUP[i] === 'alcohol' && t.xmd != null ? t.xmd : t.xm);
+}
+// A city's or town's own page (the selection is exactly its page's tracts) shows its own rates, not its tracts' blend:
+// sales inside a city are taxed at the city's rate. P.r holds them as a tract's rate keys, weighed across the city's
+// county parts and districts by where its stores are (build_site_data.place_rates); P.rb says where by residents.
+function ownRates(ids) {
+  const g = selMeta && (selMeta.place || selMeta.town); if (!g || !ST) return null;
+  const P = ST.places[g] || (ST.towns || {})[g]; if (!P || !P.r) return null;
+  const s = ids instanceof Set ? ids : new Set(ids);
+  if (s.size !== P.tracts.length || !P.tracts.every(t => s.has(t))) return null;
+  return {g, P};
 }
 function taxRates(ids) {
   const T = ST.tax; if (!T) return null;
-  const w = new Array(NS).fill(0), wl = new Array(NS).fill(0), wh = new Array(NS).fill(0);
+  const O = ownRates(ids);
+  if (O) {
+    const n = [...ids].filter(g => ST.tracts[g]).length;
+    const rate = SUP.map((c, i) => ({c, covered: !!T.cats[c], state: T.cats[c] ? T.cats[c][0] : 0,
+      local: tractCatLocal(T, O.P.r, i, false), localHi: tractCatLocal(T, O.P.r, i, true), meals: tractCatMeals(T, O.P.r, i)}));
+    return {rate, withRate: n, n, own: O};
+  }
+  const w = new Array(NS).fill(0), wl = new Array(NS).fill(0), wh = new Array(NS).fill(0), wm = new Array(NS).fill(0);
   let withRate = 0, n = 0;
   for (const g of ids) {
     const t = ST.tracts[g]; if (!t) continue; n++;
     if (t.x == null) continue;
     withRate++;
-    for (let i = 0; i < NS; i++) { w[i] += t.d[i]; wl[i] += t.d[i] * tractCatLocal(T, t, i, false); wh[i] += t.d[i] * tractCatLocal(T, t, i, true); }
+    for (let i = 0; i < NS; i++) { w[i] += t.d[i]; wl[i] += t.d[i] * tractCatLocal(T, t, i, false); wh[i] += t.d[i] * tractCatLocal(T, t, i, true); wm[i] += t.d[i] * tractCatMeals(T, t, i); }
   }
-  const rate = SUP.map((c, i) => ({c, covered: !!T.cats[c], state: T.cats[c] ? T.cats[c][0] : 0, local: w[i] > 0 ? wl[i] / w[i] : 0, localHi: w[i] > 0 ? wh[i] / w[i] : 0}));
+  const rate = SUP.map((c, i) => ({c, covered: !!T.cats[c], state: T.cats[c] ? T.cats[c][0] : 0, local: w[i] > 0 ? wl[i] / w[i] : 0, localHi: w[i] > 0 ? wh[i] / w[i] : 0, meals: w[i] > 0 ? wm[i] / w[i] : 0}));
   return {rate, withRate, n};
 }
 // The tax on spending that leaves: with similar places to compare with, on what leaves beyond the typical similar
@@ -1597,7 +1635,9 @@ function taxOf(r) {
   const ahead = !!B && rows.some(x => !OUT_OF_TOTAL.has(x.c) && x.covered && x.hi < 0);
   return {R, B, rows, ahead, tLo: sum('tLo'), tHi: sum('tHi'), sLo: sum('sLo'), sHi: sum('sHi'), nLoT: sum('nLoT'), nHiT: sum('nHiT')};
 }
-const pctOne = v => v <= 0.0005 ? '' : parseFloat(v.toFixed(2)) + '%';
+// rates to two decimals, half up: 4.225% + 4.25% shows as 8.48%, as the Department of Revenue rounds 8.475%, not 8.47% (toFixed
+// rounds the binary 8.4749999... down; Lee's Summit, Missouri)
+const pctOne = v => v <= 0.0005 ? '' : Math.round(v * 100 + 1e-6) / 100 + '%';
 const pctTxt = (a, b) => { const A = pctOne(a), B = pctOne(b); return !B ? 'not taxed' : A === B || !A ? B : `${A}–${B}`; };
 // "about $1.2M – $1.5M", or "up to $754K" when the low estimate finds no leakage
 const amt = (lo, hi, strong) => { const v = lo <= 0.5 ? `up to ${fmtUSD(hi)}` : `about ${rangeUSD(lo, hi)}`; return strong ? `<strong>${v}</strong>` : v; };
@@ -1607,32 +1647,90 @@ function split(X) {
   if (X.sHi < 0.5) return ', all of it to local governments';
   return `: ${amt(X.sLo, X.sHi).replace(/^about /, '')} to the state and ${amt(lLo, lHi).replace(/^about /, '')} to counties, cities and local districts`;
 }
+// What catching up would bring in, local share first: spending won back from stores elsewhere in the same state already
+// pays the state's share there, so that share is mostly moved, not new (new only where the spending now crosses state
+// lines or goes untaxed); the local share is the area's own gain. `at` is "at Illinois' rates".
+const STATE_MOVED = 'is mostly collected elsewhere in the state today, and is new to the state only where the spending now crosses state lines or goes untaxed';
+function gainSay(X, kind, at) {
+  const lLo = X.tLo - X.sLo, lHi = X.tHi - X.sHi;
+  if (X.sHi < 0.5) return `would bring in ${amt(X.tLo, X.tHi, true)} more a year in ${kind} ${at}, all of it to local governments.`;
+  if (lHi < 0.5) return `would bring in ${amt(X.tLo, X.tHi, true)} more a year in ${kind} ${at}, all of it state tax, which ${STATE_MOVED}.`;
+  return `would bring counties, cities and local districts ${amt(lLo, lHi, true)} more a year in ${kind} ${at}. The state's share, ${amt(X.sLo, X.sHi)}, ${STATE_MOVED}.`;
+}
 // local taxes known but not counted (ST.tax.area: place or county GEOID -> notes), for the cities and counties the
 // selection reaches, so a place's own gap is named where someone looks at it
 function areaTaxNotes(ids) {
-  const A = (ST.tax && ST.tax.area) || {}, out = [];
+  const A = (ST.tax && ST.tax.area) || {}, AX = (ST.tax && ST.tax.areax) || {}, out = [];
+  const own = ownRates(ids);
   for (const [g, notes] of Object.entries(A)) {
     const pl = ST.places[g] || (ST.towns || {})[g], hit = g.length === 5 ? [...ids].some(t => t.startsWith(g)) : pl && pl.tracts.some(t => ids.has(t));
-    if (hit) out.push(...notes);
+    // a place's note on what "is counted here" holds on its own page; elsewhere its wording for every page (areax)
+    if (hit) out.push(...(AX[g] && !(own && own.g === g) ? AX[g] : notes));
+  }
+  // how a selection of whole tracts counts a small place's own rates: only on a selection that takes each tract's
+  // rates, never on a city's or town's own page, which uses that city's own rates (reviewbot, national rebuild 2, item 2:
+  // Andalusia's page said both)
+  for (const [g, notes] of Object.entries((ST.tax && ST.tax.blend) || {})) {
+    const pl = ST.places[g] || (ST.towns || {})[g];
+    if (!own && pl && pl.tracts.some(t => ids.has(t))) out.push(...notes);
   }
   return out;
+}
+// which rates the figures use, in one clause: the place's own on its own page, else each tract's
+function rateBasis(X) {
+  if (X.R.own) {
+    const nm = esc(String(selMeta.base || selMeta.label).replace(/ \([^)]*\)$/, '')), rb = X.R.own.P.rb;
+    const by = rb && rb[0] === 'residents' ? (rb[1] === 'residents' ? 'its residents (it has no store or restaurant jobs on record)' : 'its residents for store purchases (it has no store jobs on record)')
+      : rb && rb[1] === 'residents' ? 'its store jobs, and its residents for restaurant meals (it has no restaurant jobs on record)'
+      : rb ? 'its store jobs in each' : '';
+    // whose rates they are: the place's own where it levies a rate of its own on the state's list; else those in force
+    // where it lies (P.ri: its counties, or its towns with rates of their own), for an unincorporated community (CDP),
+    // which levies nothing (reviewbot, national rebuild 3, item 3: Steinhatchee, Florida), and for a city or town with no
+    // rate of its own (Miami, Florida; Islip, New York), with its own meals tax where that is all it levies (P.lv 'm':
+    // Miami Beach)
+    const P = X.R.own.P, ri = P.ri, poss = nm + (/s$/.test(nm) ? "'" : "'s"), wb = by ? `, its parts weighed by ${by}` : '';
+    if (ri && ri.length) {
+      const cdp = / CDP(, [A-Z]{2})?$/.test(P.name || ''), r = P.r || {};
+      // no local rate at all where it lies (Connecticut, a Massachusetts town without a meals tax): the state's alone,
+      // not "in force where it lies, in Capitol Planning Region"
+      if (!r.x && !r.xm && !r.xh && !r.xf && !r.xr && !(r.xc && Object.values(r.xc).some(v => v > 0)))
+        return ` ${nm} ${cdp ? 'is unincorporated' : "has no sales-tax rate of its own on the state's rate list"}, and no local rate applies where it lies, so the rates are the state's alone.`;
+      const where = ri.length === 1 ? esc(ri[0]) : ri.slice(0, -1).map(esc).join(', ') + ' and ' + esc(ri[ri.length - 1]);
+      if (cdp) return ` ${nm} is unincorporated, so the rates are those in force where it lies, in ${where}${wb}.`;
+      if (P.lv === 'm') return ` The rates are those in force where ${nm} lies, in ${where}, with ${poss} own meals tax${wb}.`;
+      return ` ${nm} has no sales-tax rate of its own on the state's rate list, so the rates are those in force where it lies, in ${where}${wb}.`;
+    }
+    return ` The rates are ${nm}${/s$/.test(nm) ? "'" : "'s"} own${by ? `, its parts weighed by ${by}` : ''}.`;
+  }
+  return ' The rates are each census tract\'s; a tract shared by places counts each one\'s for the share of the tract\'s store jobs located there.';
 }
 function taxSection(r) {
   const T = ST.tax, X = taxOf(r);
   if (!T || !X) return {lead: `Sales-tax rates for ${esc(ST.name)} are not available yet.`, table: '', notes: []};
   const part = new Set(T.partial || []);
   const anyLeak = X.tHi > 0;
-  const loc = X.R.withRate === 0 ? ' Local rates for these tracts are not available, so only the state\'s share is counted.'
+  const locGap = X.R.withRate === 0 ? ' Local rates for these tracts are not available, so only the state\'s share is counted.'
     : X.R.withRate < X.R.n ? ` ${X.R.n - X.R.withRate} of the ${X.R.n} tracts have no local rate on file, so they count the state's share only.` : '';
+  const loc = locGap + (X.R.withRate > 0 ? rateBasis(X) : '');
   const none = X.rows.every(x => !x.covered || x.q.state + x.q.localHi <= 0.0005);
-  // New Hampshire's only tax counted here is its meals tax
-  const kind = T.general ? 'sales tax' : (T.cats && T.cats.fsr && T.cats.fsr[0] > 0) ? 'meals tax' : 'local sales tax', Kind = kind[0].toUpperCase() + kind.slice(1);
+  // New Hampshire's only tax counted here is its meals tax.
+  // A state with no general sales tax whose only tax counted here is a restaurant meals tax (Oregon's city food and
+  // beverage taxes, Montana's resort taxes on meals) calls it a meals tax (reviewbot, national rebuild 2, item 11:
+  // Ashland): at least one row taxed by a meals tax, and no row taxed by anything else. A tax on alcohol bought in stores
+  // is not one (Utqiaġvik's 3% alcohol sales tax): the alcohol row counts as meals-taxed only for the part on drinks
+  // served (reviewbot, national rebuild 3, item 2). With no tax at all, the table's columns name none.
+  const taxedBy = x => x.covered && x.q.state + x.q.localHi > 0.0005;
+  const mealsOnly = !T.general && X.rows.some(x => taxedBy(x) && x.q.meals > 0.0005)
+    && X.rows.every(x => !taxedBy(x) || x.q.state + x.q.localHi - x.q.meals <= 0.0005);
+  const kind = T.general ? 'sales tax' : (T.cats && T.cats.fsr && T.cats.fsr[0] > 0) || mealsOnly ? 'meals tax' : 'local sales tax';
+  const Kind = none ? 'Tax' : kind[0].toUpperCase() + kind.slice(1);
+  const atRates = T.general ? `at ${esc(ST.name)}${/s$/.test(ST.name) ? "'" : "'s"} rates` : 'at the rates here';
   const nat = X.B && X.nHiT > 0.5 ? ` Measured against the national norm instead, the projected leakage would have paid ${amt(X.nLoT, X.nHiT)} a year.` : '';
-  const lead = none ? `There is no sales tax here, so spending that leaves costs no sales-tax revenue.${loc}` : !anyLeak
+  const lead = none ? `There is no sales tax here, so spending that leaves costs no sales-tax revenue.${locGap}` : !anyLeak
     ? (X.B ? `Stores here keep at least as much as ${esc(X.B.many)} typically do in every taxed category, so no ${kind} is lost beyond what the typical one loses.${nat}${loc}`
       : `Local stores sell at least what the national pattern predicts in every taxed category here, so no ${kind} is lost to leakage.${loc}`)
-    : X.B ? `In the categories where stores here keep less than ${esc(X.B.many)} typically do, catching up to the typical rate would bring in ${amt(X.tLo, X.tHi, true)} more a year in ${kind} at ${esc(ST.name)}${/s$/.test(ST.name) ? "'" : "'s"} rates${split(X)}.${X.ahead ? ` (Other categories here already keep more than the typical one; this counts only the ones that fall short.)` : ''}${nat}${loc}`
-    : `At ${esc(ST.name)}${/s$/.test(ST.name) ? "'" : "'s"} tax rates, the projected leakage would have paid ${amt(X.tLo, X.tHi, true)} a year in ${kind}${split(X)}.${loc}`;
+    : X.B ? `In the categories where stores here keep less than ${esc(X.B.many)} typically do, catching up to the typical rate ${gainSay(X, kind, atRates)}${X.ahead ? ` (Other categories here already keep more than the typical one; this counts only the ones that fall short.)` : ''}${nat}${loc}`
+    : `${atRates[0].toUpperCase() + atRates.slice(1)}, the projected leakage would have paid ${amt(X.tLo, X.tHi, true)} a year in ${kind}${split(X)}.${loc}`;
   const colA = X.B ? `More leaves than in the typical ${esc(X.B.one)}` : 'Projected leakage';
   const table = `<thead><tr><th>Category</th><th>Tax rate here</th><th>${colA}</th><th>${Kind} on it</th>${X.B ? `<th>${Kind} on leakage at the national norm</th>` : ''}</tr></thead><tbody>` +
     X.rows.map(x => { const taxed = x.covered && x.q.state + x.q.localHi > 0.0005;
@@ -1649,8 +1747,12 @@ const RATE_STATUS = {'current': 'Current', 'state rate only': 'State rate only; 
 function renderCoverage() {
   const C = IDX.coverage; if (!C) return;
   const name = Object.fromEntries(IDX.states.map(s => [s.usps, s.name]));
+  // one kind's result: skill against the households-only baseline (state_validate.skill) where scored
+  const kindTxt = (label, k) => !k ? '' : `${label} ${k.areas} areas, ` + (k.skill
+    ? `spread ${k.skill.spread_ratio.toFixed(2)} times the households-only baseline's, correlation per household ${k.skill.perhh_corr.toFixed(2)}, median ratio ${k.median.toFixed(2)}${k.skill.corr_no_better && k.skill.spread_no_better ? ' (no better than households alone on either measure)' : k.skill.corr_no_better ? ' (correlation no better than households alone)' : k.skill.spread_no_better ? ' (spread no better than households alone)' : ''}`
+    : `correlation ${k.corr.toFixed(2)}, median ratio ${k.median.toFixed(2)} (too few areas to score against households alone)`);
   const chk = c => !c ? '—' : c.status === 'checked'
-    ? `Checked (${c.year}${c.year < 2024 ? ', restated to 2024 dollars' : ''}, by ${c.geography}): restaurants ${c.restaurants.areas} areas, correlation ${c.restaurants.corr.toFixed(2)}, median ratio ${c.restaurants.median.toFixed(2)}`
+    ? `Checked (${c.year}${c.year < 2024 ? ', restated to 2024 dollars' : ''}, by ${c.geography}): ${[kindTxt('restaurants', c.restaurants), kindTxt('store goods', c.store_goods)].filter(Boolean).join('; ')}`
     : c.status === 'no sales tax' ? 'No sales tax' : c.status === 'not usable' ? 'Published, but it cannot answer this check (reason below)'
     : c.status === 'pending' ? 'Published; not yet assembled for this check' : c.status === 'removed' ? 'Published earlier, since taken down; requested from the state'
     : 'No local sales by kind of business published';
@@ -1661,10 +1763,10 @@ function renderCoverage() {
     }).join('') + '</tbody>';
   const ch = Object.values(C).filter(c => c.check && c.check.status === 'checked' && c.check.restaurants);
   if (ch.length) {
-    const corr = ch.map(c => c.check.restaurants.corr), med = ch.map(c => c.check.restaurants.median).sort((a, b) => a - b);
+    const sr = ch.map(c => c.check.restaurants.skill).filter(Boolean).map(k => k.spread_ratio), med = ch.map(c => c.check.restaurants.median).sort((a, b) => a - b);
     const mid = med[Math.floor(med.length / 2)];
     const pend = Object.values(C).filter(c => c.check && (c.check.status === 'pending' || c.check.status === 'removed')).length;
-    $('checkSummary').textContent = `The estimates here are compared with the local sales by kind of business that ${ch.length} states publish${pend ? ` (${pend} more publish such data that are not yet in the comparison; see the table)` : ''}. For restaurants and bars, the correlation with the state's figures runs from ${Math.min(...corr).toFixed(2)} to ${Math.max(...corr).toFixed(2)} on a log scale, and the typical state's median ratio of estimate to reported sales is ${mid.toFixed(2)}. Ratios run lower in states whose restaurant category also counts grocery stores or hotels (Georgia, North Carolina, Mississippi).`;
+    $('checkSummary').textContent = `The estimates here are compared with the local sales by kind of business that ${ch.length} states publish${pend ? ` (${pend} more publish such data that are not yet in the comparison; see the table)` : ''}.${sr.length ? ` For restaurants and bars, the estimates' spread around each state's typical ratio runs from ${Math.min(...sr).toFixed(2)} to ${Math.max(...sr).toFixed(2)} times that of a baseline that predicts sales from household counts alone (below 1, the estimates do better).` : ''} The typical state's median ratio of estimate to reported restaurant sales is ${mid.toFixed(2)}. Ratios run lower in states whose restaurant category also counts grocery stores or hotels (Georgia, North Carolina, Mississippi).`;
   }
 }
 
@@ -1962,8 +2064,8 @@ const Gate = (() => {
 // ---------- render ----------
 function fitText(m) {
   if (!m || m.src === 'county') return '';
-  if (m.src === 'place') return m.part ? (m.part >= 50 ? 'Census place smaller than its census tract: the tract that holds most of the town, which also takes in the area around it.' : `Census place spread over several census tracts without making up half of any: the tract that holds the most of it (${m.part}% of its census blocks), which also takes in the area around it.`) : 'Census place: the tracts with at least half their blocks in the city or town. Edges follow tract lines, not the city limit.';
-  if (m.src === 'town') { const w = m.kind.toLowerCase(); return m.part ? (m.part >= 50 ? `${m.kind} smaller than its census tract: the tract that holds most of the ${w}, which also takes in the area around it.` : `${m.kind} spread over several census tracts without making up half of any: the tract that holds the most of it (${m.part}% of its census blocks), which also takes in the area around it.`) : `${m.kind} (a county subdivision, not a Census place): the tracts with at least half their blocks in the ${w}. Edges follow tract lines, not the ${w} line.`; }
+  if (m.src === 'place') return m.part ? (m.part >= 50 ? 'Census place smaller than its census tract: the tract that holds most of the town, which also takes in the area around it.' : `Census place spread over several census tracts without holding half the residents of any: the tract that holds the most of it (${m.part}% of its ${m.pb ? 'census blocks' : 'residents'}), which also takes in the area around it.`) : `Census place: the tracts with at least half their ${m.pb ? 'census blocks' : 'residents'} in the city or town${m.wide ? `, and the ${m.wide > 1 ? 'tracts' : 'tract'} holding the most of the rest of its ${m.pb ? 'census blocks' : 'residents'}` : ''}${m.cover ? ` (together ${m.cover}% of them)` : ''}. Edges follow tract lines, not the city limit.`;
+  if (m.src === 'town') { const w = m.kind.toLowerCase(); return m.part ? (m.part >= 50 ? `${m.kind} smaller than its census tract: the tract that holds most of the ${w}, which also takes in the area around it.` : `${m.kind} spread over several census tracts without holding half the residents of any: the tract that holds the most of it (${m.part}% of its ${m.pb ? 'census blocks' : 'residents'}), which also takes in the area around it.`) : `${m.kind} (a county subdivision, not a Census place): the tracts with at least half their ${m.pb ? 'census blocks' : 'residents'} in the ${w}${m.wide ? `, and the ${m.wide > 1 ? 'tracts' : 'tract'} holding the most of the rest of its ${m.pb ? 'census blocks' : 'residents'}` : ''}${m.cover ? ` (together ${m.cover}% of them)` : ''}. Edges follow tract lines, not the ${w} line.`; }
   if (m.src === 'suggested') return `A suggested area, approved for the page; the tracts are exactly the ones suggested.`;
   if (m.src === 'suggested-pending') return `A suggested area that ${m.status === 'declined' ? 'was not approved' : m.status === 'removed' ? 'was taken out of the site\'s search' : 'has not been reviewed yet'}; the tracts are exactly the ones suggested.`;
   if (m.fit == null) return '';
@@ -2030,7 +2132,7 @@ function figsHTML(r) {
 function summaryText(r) {
   const T = r.tot, gapLo = Math.min(T.gL, T.gZ), gapHi = Math.max(T.gL, T.gZ);
   // no households (a park, an airport, a business district): nothing to compare local sales with
-  if (!(T.D > 0)) return {lead: `No households live in this selection, so there is no resident spending to compare with its stores' sales (${rangeUSD(T.sL, T.sZ)} a year). Add neighboring tracts to see the area around it.`, w: placeNotes(sel, 'warn')};
+  if (!(T.D > 0)) return {lead: `No households live in this selection, so there is no resident spending to compare with its stores' sales (${rangeUSD(T.sL, T.sZ)} a year). Add neighboring tracts to see the area around it.`, w: [...placeNotes(sel, 'warn'), acsSupplementText(sel)].filter(Boolean)};
   const gapTxt = gapHi <= 0 ? (drawInResidents(r) ? `Counted in residents' own spending, category by category, the area draws in more than it loses: a net <strong>${rangeUSD(-T.gL, -T.gZ)} a year</strong>.`
       : `Overall, local stores sell more than the national pattern predicts for residents, so the area draws shoppers in.`)
     : gapLo >= 0 ? `Projected leakage is a net <strong>${rangeUSD(T.gL,T.gZ)} a year</strong>: residents' spending the area would keep at the national norm but doesn't.`
@@ -2046,7 +2148,26 @@ function summaryText(r) {
   const vt = visitorText(visitorInfo(sel, r)); if (vt) w.push(vt);
   for (const zt of zbpUnnamedText(sel)) w.push(zt);
   for (const pn of placeNotes(sel, 'warn', {visitor: !!vt})) w.push(pn);
-  if (selMeta && selMeta.part) w.unshift(selMeta.part >= 50 ? `${esc(selMeta.label)} is smaller than a census tract, the smallest area these figures cover, so these are the figures for the census tract that holds most of it, which also takes in the area around it.` : `${esc(selMeta.label)} is spread over several census tracts, the smallest areas these figures cover, without making up half of any, so these are the figures for the tract that holds the most of it (${selMeta.part}% of its census blocks), which also takes in the area around it.`);
+  { const at = acsSupplementText(sel); if (at) w.push(at); }
+  if (selMeta && selMeta.part) w.unshift(selMeta.part >= 50 ? `${esc(selMeta.label)} is smaller than a census tract, the smallest area these figures cover, so these are the figures for the census tract that holds most of it, which also takes in the area around it.` : `${esc(selMeta.label)} is spread over several census tracts, the smallest areas these figures cover, without holding half the residents of any, so these are the figures for the tract that holds the most of it (${selMeta.part}% of its ${selMeta.pb ? 'census blocks' : 'residents'}), which also takes in the area around it.`);
+  // a city or town page whose tracts leave out at least one in ten of its residents, or hold at least one in ten people
+  // who live outside it ('res': [its residents in the page's tracts, all their residents, all its residents], 2020
+  // census): both shares, so the count of its residents here isn't read as its size (reviewbot, national rebuild 2,
+  // item 7: Winter Haven's 9 tracts hold 62% of its 51,000 residents; Marfa's tract holds more people than Marfa)
+  else if (selMeta && selMeta.res && (selMeta.src === 'place' || selMeta.src === 'town')) { const nm = esc(String(selMeta.base || selMeta.label).replace(/ \([^)]*\)$/, '')), [mine, all, tot] = selMeta.res, n = (selMeta.tracts || []).length;
+    const about = v => fmtN(v >= 1000 ? Number(v.toPrecision(2)) : Math.round(v / 10) * 10), pct = (a, b) => Math.round(100 * a / b), poss = nm + (/s$/.test(nm) ? "'" : "'s");
+    const pAll = pct(mine, all), pTot = tot ? pct(mine, tot) : 100;
+    // each count is given before the sentence after it refers to it ("Those 12,000 are ..."; reviewbot, national rebuild 3,
+    // item 5: College Park, Georgia)
+    const here = mine < 0.9 * all ? `about ${about(mine)} of them (${pAll}%) live in ${nm}` : pAll >= 100 && mine >= all ? `all of them live in ${nm}`
+      : `nearly all of them (${pAll}%)${about(mine) !== about(all) ? `, about ${about(mine)},` : ''} live in ${nm}`;
+    const of = !tot ? '' : mine < 0.9 * tot ? ` Those ${about(mine)} are ${pTot}% of ${poss} ${about(tot)} residents; the rest live in census tracts mostly outside ${nm}.`
+      : ` That is ${mine >= tot ? 'all' : `nearly all (${pTot}%)`} of ${poss} ${about(tot)} residents.`;
+    w.unshift(`${poss} figures cover ${n === 1 ? 'its census tract, which holds' : `its ${n} census tracts, which hold`} about ${about(all)} residents: ${here}.${of} (These are 2020 census counts; the residents and households shown above are the American Community Survey's 2020–2024 estimates.)`); }
+  // a place or town page whose tracts still hold under half of its residents (none at present: the build adds tracts until
+  // they hold half); a county, ZIP code or area carries 'cover' with other meanings and never gets this line (reviewbot,
+  // national rebuild 2, item 1: South Shore read "hold only 0.97%")
+  else if (selMeta && (selMeta.src === 'place' || selMeta.src === 'town') && selMeta.cover) w.unshift(`The census tracts these figures cover hold only ${selMeta.cover}% of ${esc(selMeta.label)}${/s$/.test(selMeta.label) ? "'" : "'s"} ${selMeta.pb ? 'census blocks' : 'residents (2020 census)'}: the tracts with at least half their ${selMeta.pb ? 'census blocks' : 'residents'} in it${selMeta.wide ? ', and the tracts holding the most of the rest that have figures here' : ''}. The rest of it lies in tracts with no figures on this site.`);
   return {lead, w};
 }
 // LODES workplace sectors CNS01-CNS20, in Census order; the three the store-sales estimate draws on are flagged
@@ -2568,6 +2689,18 @@ function placeNotes(ids, sec, ctx = {}) {
   }
   return out.filter(ok).map(n => typeof n === 'string' ? n : n.text);
 }
+// Census tracts whose 2020-2024 ACS figures the Census Bureau withheld (errata note 148: 14 tracts in Suffolk County,
+// New York), carried from the 2018-2022 release (tract flag 'as'): every selection holding one says how many and how
+// much of it they are, whatever page it is (a town, the county, a neighborhood, a ZIP code)
+function acsSupplementText(ids) {
+  let n = 0, k = 0, h = 0, hk = 0;
+  for (const g of ids) { const t = ST.tracts[g]; if (!t) continue; n++; h += t.h || 0; if (t.as) { k++; hk += t.h || 0; } }
+  if (!k) return '';
+  const A = (IDX && IDX.acs_supplement) || {}, all = k === n;
+  const which = all ? (n === 1 ? 'The census tract here has' : `All ${n} census tracts here have`)
+    : `${k} of the ${n} census tracts here, holding ${h > 0 ? Math.max(1, Math.round(100 * hk / h)) : 0}% of the households here, ${k === 1 ? 'has' : 'have'}`;
+  return `${which} figures from the 2018–2022 American Community Survey rather than the 2020–2024 one: the Census Bureau withheld its 2020–2024 figures for ${k === 1 ? 'that tract' : 'these tracts'} after a data collection error in 2020 (ACS errata note 148). ${k === 1 ? 'Its' : 'Their'} residents, households, incomes and homes come from the earlier survey, with incomes restated to 2024 dollars; the Census Bureau says to use that release's figures for ${k === 1 ? 'the tract' : 'these tracts'} with caution.`;
+}
 // where this state's programs come from; an empty result is not proof there is no TIF where coverage is partial
 function localCoverage() {
   const S = ((IDX.local || {}).sources || []).filter(s => ST && s.state === ST.fips);
@@ -2751,18 +2884,31 @@ const Compare = (() => {
     return m.key && tot > 0 && m.share * inPlace / tot > 0.5 ? {name: placeBase(ST.places[m.key]), key: m.key} : null;
   }
   // the city's neighborhoods, one set of them (a source and a kind: Chicago's 77 community areas are one set, its
-  // neighborhoods another): the selection's own set, or else the city's own map before a crowd-sourced one, the
-  // largest first; a city without three or more gets its ZIP codes
+  // neighborhoods another): the selection's own set, or else the city's own map before a crowd-sourced one and an
+  // algorithmic one (Zetashapes, Quattroshapes) last, the largest first; a city without three or more gets its ZIP codes.
+  // Names whose tracts are exactly the same are one row (the best-fitting boundary's name, the others listed under it as
+  // also known as): their figures are identical (Michael, November 4, 2026: every name stays searchable)
+  const ALGO_SRC = new Set(['wof:zetashapes', 'wof:quattroshapes']);
+  const setRank = k => k.startsWith('wof:') ? (ALGO_SRC.has(k.split('|')[0]) ? 2 : 1) : 0;
+  function oneRowPerTracts(u) {
+    const by = new Map();
+    for (const a of u) { const k = [...a[4]].sort().join(','); if (!by.has(k)) by.set(k, []); by.get(k).push(a); }
+    return [...by.values()].map(g => {
+      g.sort((a, b) => (b[5] ?? 0) - (a[5] ?? 0) || a[0].localeCompare(b[0]));
+      const [n, c, kind, s, ts, fit, cover, inside] = g[0], aka = g.slice(1).map(a => a[0]);
+      const sub = !aka.length ? '' : 'also ' + (aka.length <= 3 ? aka.join(', ') : `${aka.slice(0, 3).join(', ')} and ${aka.length - 3} more`);
+      return {label: n, ids: ts, sub, aka, meta: {kind, label: n, city: c, src: s, tracts: ts, fit, cover, inside}};
+    });
+  }
   function cityUnits(city) {
     const A = (ST.areas || []).filter(a => a[1] === city.name && NB_KINDS.has(a[2])), setOf = a => a[3] + '|' + a[2];
     const bySet = new Map(); for (const a of A) bySet.set(setOf(a), (bySet.get(setOf(a)) || 0) + 1);
     const mine = selMeta && NB_KINDS.has(selMeta.kind) ? selMeta.src + '|' + selMeta.kind : '';
-    const sets = [...bySet].filter(([, n]) => n >= 3).sort((a, b) => (a[0].startsWith('wof:') ? 1 : 0) - (b[0].startsWith('wof:') ? 1 : 0) || b[1] - a[1]);
+    const sets = [...bySet].filter(([, n]) => n >= 3).sort((a, b) => setRank(a[0]) - setRank(b[0]) || b[1] - a[1]);
     if (sets.length) {
       const key = bySet.get(mine) >= 3 ? mine : sets[0][0];
       const u = A.filter(a => setOf(a) === key);
-      return {unit: u[0][2] === 'Community area' ? 'community areas' : 'neighborhoods', items: u.map(([n, c, kind, s, ts, fit, cover, inside]) =>
-        ({label: n, ids: ts, meta: {kind, label: n, city: c, src: s, tracts: ts, fit, cover, inside}}))};
+      return {unit: u[0][2] === 'Community area' ? 'community areas' : 'neighborhoods', items: oneRowPerTracts(u)};
     }
     if (!city.key) return {unit: 'ZIP codes', items: []};
     const items = [];
@@ -2824,7 +2970,7 @@ const Compare = (() => {
     const lead = `Of ${ok.length} ${esc(unit)} in ${esc(title)}, each measured against places like it, ${esc(best.label)} ranks first (keeping ${timesTxt(best.relLo, best.relHi)} times what its similar places keep) and ${esc(worst.label)} last (${timesTxt(worst.relLo, worst.relHi)}).${pos}`;
     const note = [small ? `${small} more ${small === 1 ? 'is' : 'are'} too small to compare with similar places (fewer than ${IDX.peers.min_households} households) and ${small === 1 ? 'is' : 'are'} left out.` : '',
       'Areas are ranked at the middle of the two estimates; where two areas\' ranges overlap, their order is not a clear difference. A negative dollar figure means less leaves than in the typical similar place.',
-      unit === 'cities and towns' ? 'A city or town is counted when it makes up most of at least one census tract, and its figures cover those whole tracts; smaller towns are part of the tracts around them and are not listed.' : ''].filter(Boolean).join(' ');
+      unit === 'cities and towns' ? 'A city or town is counted when it holds at least half of the residents of at least one census tract, and its figures cover those whole tracts; smaller towns are part of the tracts around them and are not listed.' : ''].filter(Boolean).join(' ');
     return {lead, chart, table, note, n: ok.length};
   }
   async function renderCity() {
@@ -2843,7 +2989,7 @@ const Compare = (() => {
       const city = cityOf();
       if (!city) { box.innerHTML = `<p class="sub">No single city holds most of this area's households. Pick the metro view, or open a neighborhood, city or ZIP code.</p>`; lastCity = ''; return; }
       const U = cityUnits(city); title = city.name; unit = U.unit;
-      scored = U.items.map(x => score(ST, x.ids, x.meta, x.label));
+      scored = U.items.map(x => Object.assign(score(ST, x.ids, x.meta, x.label), {sub: x.sub || ''}));
     }
     for (const x of scored) delete x.r;
     const R = rankHTML(scored, title, unit);
@@ -2903,8 +3049,8 @@ const Compare = (() => {
   async function buildList(fips) {
     if (listFips === fips) return; const S = await stateData(fips); listFips = fips; list = [];
     for (const [n, city, kind, src, ts, fit, cover, inside] of S.areas || []) list.push({label: n, kind, city, ids: ts, meta: {kind, label: n, city, src, tracts: ts, fit, cover, inside}});
-    for (const [g, p] of Object.entries(S.places)) { const pn = placeName(p.name); list.push({label: pn.base, kind: pn.kind, ids: p.tracts, meta: {kind: pn.kind, label: pn.base, src: 'place', place: g, tracts: p.tracts, ...(p.part ? {part: p.part} : {})}}); }
-    for (const [g, p] of Object.entries(S.towns || {})) list.push({label: p.name, kind: p.kind, ids: p.tracts, meta: {kind: p.kind, label: p.name, base: p.name, src: 'town', town: g, tracts: p.tracts, ...(p.part ? {part: p.part} : {})}});
+    for (const [g, p] of Object.entries(S.places)) { const pn = placeName(p.name); list.push({label: pn.base, kind: pn.kind, ids: p.tracts, meta: {kind: pn.kind, label: pn.base, src: 'place', place: g, tracts: p.tracts, ...(p.part ? {part: p.part} : {}), ...(p.cover ? {cover: p.cover} : {}), ...(p.pb ? {pb: 1} : {}), ...(p.wide ? {wide: p.wide} : {}), ...(p.res ? {res: p.res} : {})}}); }
+    for (const [g, p] of Object.entries(S.towns || {})) list.push({label: p.name, kind: p.kind, ids: p.tracts, meta: {kind: p.kind, label: p.name, base: p.name, src: 'town', town: g, tracts: p.tracts, ...(p.part ? {part: p.part} : {}), ...(p.cover ? {cover: p.cover} : {}), ...(p.pb ? {pb: 1} : {}), ...(p.wide ? {wide: p.wide} : {}), ...(p.res ? {res: p.res} : {})}});
     const byC = {}; for (const g of Object.keys(S.tracts)) (byC[g.slice(0, 5)] ||= []).push(g);
     for (const [k, n] of Object.entries(S.counties)) if (byC[k]) list.push({label: n, kind: 'County', ids: byC[k], meta: {kind: 'County', label: n, src: 'county', tracts: byC[k]}});
     for (const [z, v] of Object.entries(S.zips)) list.push({label: 'ZIP ' + z, kind: 'ZIP code', ids: v[0], meta: {kind: 'ZIP code', label: z, src: 'zcta', tracts: v[0], fit: v[1], cover: v[2], inside: v[3]}});
@@ -3161,6 +3307,24 @@ function incomeCaption(r) {
   const pull = isFinite(a) && !m.top && a > 1.25 * m.v ? ' The average runs well above the median: a smaller number of high incomes pulls it up.' : '';
   return `Median ${fmtMedian(m)}${isFinite(a) ? ` · average $${fmtN(Math.round(a / 100) * 100)}${est}` : ''}.${pull}`;
 }
+// How far to trust a selection's figures (index.json reliability: demand_moe.py's thresholds and the tracts' median
+// sampling variance per household; bea_analysis.py's spread of states around the national spending curves). The
+// selection's own 90% sampling margin on residents' spending is 1.645 × sqrt(rv / households), from the household
+// count's margin (floor) and the income brackets' (upper). Low: one tract or under low_hh households; high: at least
+// high_hh households in high_tracts or more tracts; medium between.
+function reliability(r) {
+  const R = IDX.reliability;
+  if (!R || !r.n || !(r.h > 0)) return null;
+  const T = R.thresholds, pc = x => Math.round(x * 100), rg = (x, y) => pc(x) === pc(y) ? `±${pc(y)}%` : `±${pc(x)}–${pc(y)}%`;
+  const m = k => 1.645 * Math.sqrt(R.rv[k] / r.h);
+  // a margin that rounds to 0% reads "under ±1%", never "±0%" (reviewbot, national rebuild 2, item 10: Los Angeles County)
+  const moe = pc(m('upper')) < 1 ? 'under ±1%' : pc(m('floor')) < 1 ? `about ±${pc(m('upper'))}% or less` : 'about ' + rg(m('floor'), m('upper')), me = rg(R.model_err[0], R.model_err[1]);
+  const level = r.n === 1 || r.h < T.low_hh ? 'low' : r.h >= T.high_hh && r.n >= T.high_tracts ? 'high' : 'medium';
+  const why = level === 'low' ? `${r.n === 1 ? 'a single census tract' : `fewer than ${fmtN(T.low_hh)} households`}. The survey's sampling error alone on residents' spending is ${moe} here (90% margin), ${m('upper') >= R.model_err[0] ? `as large as the model's own regional error (${me})` : `with the model's own regional error (${me}) on top`}, and one store can swing a category; read the figures as rough indications.`
+    : level === 'high' ? `${fmtN(r.h)} households in ${fmtN(r.n)} tracts. The survey's sampling error on residents' spending is small here, ${moe} (90% margin); the model's own error, about ${me} by region and category, is the larger part.`
+    : `the survey's sampling error alone on residents' spending is ${moe} here (90% margin), and the model's own regional error (${me}) comes on top.`;
+  return {level, text: `Reliability: ${level}${level === 'medium' ? ';' : ','} ${why} The ranges show how far the two estimates of local sales differ; they are not a margin of error.`};
+}
 function whereLine(v) { return selMeta && selMeta.src === 'county' ? v.where : `${v.kind} in ${v.where}`; }
 
 // the parts that need a selection
@@ -3178,7 +3342,7 @@ function render() {
     $('selTitle').textContent = 'Pick a place';
     $('selwhere').textContent = ST ? ST.name : '';
     $('headline').textContent = 'Search for a neighborhood, city or town, county or ZIP code above, or click census tracts on the map.';
-    for (const id of ['stats', 'incomeViz', 'incomeCap', 'shareNote', 'warn', 'fitbox']) { $(id).innerHTML = ''; $(id).hidden = true; }
+    for (const id of ['stats', 'incomeViz', 'incomeCap', 'shareNote', 'warn', 'fitbox', 'relLine']) { $(id).innerHTML = ''; $(id).hidden = true; }
     for (const id of RES_IDS) $(id).innerHTML = '';
     $('progLinksBox').hidden = true; linksTok++;
     if (ST) syncLocalOptions();
@@ -3193,6 +3357,7 @@ function render() {
   const ft = fitText(selMeta);
   $('fitbox').hidden = !ft; $('fitbox').textContent = ft;
   $('headline').innerHTML = heroSay(v);
+  { const rl = reliability(r); $('relLine').hidden = !rl; $('relLine').textContent = rl ? rl.text : ''; $('relLine').dataset.level = rl ? rl.level : ''; }
   $('stats').hidden = false; $('stats').innerHTML = statsHTML(r);
   const iv = incomeChart(r); $('incomeViz').hidden = !iv; $('incomeViz').innerHTML = iv ? `<h3>Households by income</h3>${iv}` : '';
   const ic = incomeCaption(r); $('incomeCap').hidden = !ic; $('incomeCap').textContent = ic;
@@ -3597,11 +3762,11 @@ function reportHTML(r) {
     sec('summary', 'Summary', `<p class="lead">${heroSay(v)}</p>
       <div class="kpis"><div><b>${fmtUSD(T.D)}</b><span>residents' spending a year, ${NT} categories in the total</span></div>${v.H ? `<div><b>${T.D > 0 ? rangeUSD(v.H.L, v.H.Z) : '—'}</b><span>a year more leaving than if each category kept as much as in the typical ${esc(v.B.one)} (negative: this area keeps more)</span></div>` : ''}<div><b>${T.D > 0 ? rangeUSD(T.gL, T.gZ) : '—'}</b><span>projected leakage a year at the national norm (negative: a net draw)</span></div><div><b>${retFig(T.pfL, T.pfZ)}</b><span>retention rate; 1.0 is the national norm${v.H ? `; ${fmtPF(v.H.ret)} for ${esc(v.B.many)}, each category's typical rate weighted by its expected sales` : ''}</span></div>
       <div><b>${fmtN(r.p)}</b><span>residents</span></div><div><b>${fmtN(r.h)}</b><span>households</span></div><div><b>${fmtN(r.n)}</b><span>census tract${r.n === 1 ? '' : 's'} (Census Bureau areas of about 4,000 people)</span></div><div><b>${fmtN(r.ja)}</b><span>jobs located here</span></div><div><b>${fmtMedian(m)}</b><span>median household income${m ? ', estimated from income brackets' : ''}</span></div></div>
-      ${fitText(selMeta) ? `<p class="fine">${esc(fitText(selMeta))}</p>` : ''}${v.share.note ? `<p class="fine">${esc(v.share.note)}</p>` : ''}${v.st.w.length ? `<ul class="warn">${v.st.w.map(w => `<li>${w}</li>`).join('')}</ul>` : ''}`),
+      ${(rl => rl ? `<p class="fine">${esc(rl.text)}</p>` : '')(reliability(r))}${fitText(selMeta) ? `<p class="fine">${esc(fitText(selMeta))}</p>` : ''}${v.share.note ? `<p class="fine">${esc(v.share.note)}</p>` : ''}${v.st.w.length ? `<ul class="warn">${v.st.w.map(w => `<li>${w}</li>`).join('')}</ul>` : ''}`),
     r.h > 0 ? sec('income', 'Households by income', `<p>${esc(incomeCaption(r))}</p>${incomeChart(r)}<p class="fine">Households by income bracket, American Community Survey ${'2020–2024'}. The median is estimated from the brackets${m && m.top ? '; it falls in the top bracket' : ''}.</p>`) : '',
     has('gaps') && T.D > 0 ? sec('gaps', 'Biggest gaps first', `<p class="fine">${v.B ? `The categories in the bottom quarter of ${esc(v.B.txt)}, furthest short in dollars first. ` : ''}Each row of dots shows how many of every 10 dollars expected at the national norm local stores capture, to the nearest half, at the middle of the two estimates${v.B ? '; ringed dots are the further dollars the typical similar place keeps' : ''}.</p>${gapCards(vk)}`) : '',
     has('categories') && T.D > 0 ? sec('categories', `All ${SUP.length} categories`, (g => g.html + g.key)(glanceChart(vk)) + fewer +
-      tbl(filtRows(figuresTable(v), row => /class="tot"/.test(row) || catRow(row))) + `<p class="fine">Annual, 2024 dollars. Each range runs between two estimates of local sales: one placed by jobs at stores (LEHD), one by store payrolls by ZIP (ZIP Business Patterns). ${v.B ? ' "More leaves than in the typical one" is resident spending × (typical retention for similar places − retention here).' : ''} Leakage at the national norm is resident spending × (1 − retention rate); the national norm averages in downtowns, malls and corridors that draw shoppers from elsewhere.</p>`) : '',
+      tbl(filtRows(figuresTable(v), row => /class="tot"/.test(row) || catRow(row))) + `<p class="fine">Annual, 2024 dollars. Each range runs between two estimates of local sales: one placed by jobs at stores (LEHD), one by store payrolls by ZIP (ZIP Business Patterns); it is not a margin of error. ${v.B ? ' "More leaves than in the typical one" is resident spending × (typical retention for similar places − retention here).' : ''} Leakage at the national norm is resident spending × (1 − retention rate); the national norm averages in downtowns, malls and corridors that draw shoppers from elsewhere.</p>`) : '',
     sec('room', 'Stores: room for more, or spending elsewhere', `<p>${esc(storeSpendLead(r, keepC))}</p>${roomChart(r, keepC)}${tbl(filtRows(pills(storeSpendTable(r)), row => { const x = storeSpendRows(r).find(x => row.includes('>' + esc(x.label) + '<')); return !x || x.cats.some(keepC); }))}
       <p class="fine">${esc(READINGS_LEAD)} ${READINGS.map(([k, t]) => `<b>${VERDICT[k]}</b>: ${esc(t)}.`).join(' ')} "Carried at the national norm" is how many stores residents' spending would carry at the US ratio of stores to spending; ${v.B ? '"carried at the rate similar places keep" scales that by their median retention, and "room for more" is that figure minus the stores here.' : 'with no similar places to compare this selection with, "room for more" is that figure minus the stores here.'} Restaurants are split into full and quick service by the mix of restaurants in each tract's ZIP codes (ZIP Business Patterns), since map listings sort them by cuisine. Planning estimates from public data, not a market study.</p>`),
     sec('peers', 'Compared with similar places', `<p>${pe.lead}</p>${pe.table ? peersChart(r, keepC) + tbl(filtRows(pills(pe.table), catRow)) + '<p class="fine">Typical is the median retention rate of similar places (same kind, setting and population band, across the US); the middle half runs from the 25th to the 75th percentile.</p>' : ''}`),
