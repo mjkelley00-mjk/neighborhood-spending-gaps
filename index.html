@@ -401,7 +401,7 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,su
     <p class="sub" id="regionLead"></p>
     <div id="regionViz"></div>
     <div class="tw" tabindex="0" role="region" aria-label="Surrounding region table"><table id="regionTbl"></table></div>
-    <p class="fine">Projected leakage of the area within 10, 25 and 50 miles of the selection (straight line from the nearest selected tract, the selection itself left out), at the middle of the two estimates; a surplus means its stores sell more than its residents' spending supports. "Balanced by" is the nearest ring whose leakage (or surplus) is at least as large as this area's surplus (or leakage). It shows where offsetting spending could come from or go, not where any one shopper goes, and it leaves out online spending and travel.</p>
+    <p class="fine">Projected leakage of the area within 10, 25 and 50 miles of the selection (straight line from the nearest selected tract, the selection itself left out), at the middle of the two estimates; a surplus means its stores sell more than its residents' spending supports. "Balanced by" is the nearest ring whose leakage (or surplus) is at least as large as this area's surplus (or leakage). It shows where offsetting spending could come from or go, not where any one shopper goes, and it leaves out online spending and travel. Tracts that live off visitors (flagged as visitor economies on their own, with a large share of lodging jobs or of seasonal homes; see the method) add no surplus. "Main work areas" adds up the same figure over the tracts where residents most often work (LEHD LODES origin-destination jobs; see the method); it shows whether stores where residents work could absorb what leaks, not how much residents spend there.</p>
   </section>
   <section aria-labelledby="mo"><h2 id="mo">More about this area</h2><p class="sub">Open any of these; all of it is also in the report and downloads.</p>
     <div class="ctxs">
@@ -485,8 +485,10 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,su
           <h4>Similar places, the surrounding region and visitors</h4>
           <ul>
             <li><strong>Similar places:</strong> every Census place (the tracts with at least half their residents in it), county and named neighborhood in the US with at least 300 households is grouped by kind, setting and population; neighborhoods are filtered as the search filters them, and neighborhoods that cover the same tracts count once. Setting is the county's: in a metropolitan or micropolitan area, or neither (OMB delineation, July 2023); a neighborhood's setting is whether the city holding most of its households has 250,000 people or more. Groups with fewer than 30 areas are merged with a neighboring population band. Small towns count only when they hold at least half of a tract's residents, so the groups for towns under 2,500 people are small (about 200–650 places) and lean toward towns that fill a whole tract. A ZIP code or hand-picked selection is compared as a neighborhood when most of its households live in such a city, or in a smaller city with at least twice its residents (then with neighborhoods of smaller cities), otherwise as a city or town; a suggested area is compared as a neighborhood. The page leads with this comparison: a category's gap against similar places is resident spending × (their median retention − retention here), each counted as at most 1.0: a rate above 1.0 means a place also draws in shoppers from elsewhere, which is not its residents' spending, so the gap compares only how much of residents' own spending stays and never exceeds what they spend; and its rank among them (bottom quarter, middle half, top quarter) decides whether spending reads as going elsewhere or drawing shoppers in. The national norm stays beside it as a second yardstick: higher than the typical one for most neighborhoods, lower for many regional towns and small cities. A total against similar places adds up each category's own gap; it is not the total of any one typical place.</li>
-            <li><strong>The surrounding region</strong> sums the projected leakage of every tract whose interior point lies within 10, 25 or 50 miles of a selected tract's, including neighboring states.</li>
-            <li><strong>Visitor economy:</strong> an area is flagged when at least 50 of its homes are seasonal or vacation homes and they are at least 3 times the national share of housing (ACS 2020–2024, B25004 and B25001), or when it has at least 5 hotels, motels and other lodging places and as many per resident as the top 5% of US places with 1,000 or more residents (Overture Maps, October 2026).</li>
+            <li><strong>The surrounding region</strong> sums the projected leakage of every tract whose interior point lies within 10, 25 or 50 miles of a selected tract's, including neighboring states. A tract adds no surplus when it flags as a visitor economy on its own (below) and lives off visitors: its hotel and other lodging jobs are at least 10% of the jobs located there (about 8.3 times the US share) or its seasonal homes at least 3 times the US share. Lodging jobs by tract are an estimate: each county's lodging employment (Census County Business Patterns) spread to its ZIP codes by their lodging businesses (ZIP Code Business Patterns) and to tracts by their hotel and restaurant jobs (LODES), among the ZIP's tracts that hold a lodging listing other than a campground, RV park or rental in Overture's places data, at Overture's confidence of 0.5 or more (the lodging places counted on the pages use 0.9), when any does. So a resort's or casino's sales to visitors aren't read as absorbing a neighborhood's leakage, while a downtown whose hotels sit among many offices, or a mall's restaurants, stay in (the visitor score alone would flag 23% of all tracts, mostly restaurant and shopping tracts that serve residents; with the visitor signal it flags 10%). ZIP Code Business Patterns leaves out an industry with fewer than 3 businesses in a ZIP code, so a resort alone in its ZIP has no row and its county's lodging jobs go to the county's other ZIP codes, and some resorts are missing from Overture's listing: a few casino and resort tracts show few or no lodging jobs and aren't flagged, while a few others show more than they hold (each tract is capped at its LODES hotel and restaurant jobs).</li>
+            <li><strong>Where residents work</strong> comes from the LEHD LODES origin-destination files (2024; Alaska 2016, Michigan 2021; all jobs, every state's residents followed across state lines): each tract's jobs held by its residents, by straight-line distance from home to the work tract, and the tracts holding at least 1.5% of a home tract's jobs (up to eight), whose leakage and surplus are added up as "main work areas". Distances run between tracts' interior points, so in very large tracts (much of Alaska and the rural West) a job can show as farther from home than it is; and LODES places some jobs at an employer's reporting address rather than at the site where the work is done, so it shows less commuting within a county and longer commutes than the American Community Survey does for the same workers (Census Bureau Center for Economic Studies working paper 17-34, 2017): read the farther shares as high. A tract's residents who work in another state are counted in that state's LODES year. LODES counts jobs, so a resident with two jobs counts twice. Where the main work areas are compared, the page also gives an upper bound for restaurant spending near work: residents' restaurant spending × the share of restaurant spending that is weekday lunch at fast-food and full-service restaurants bought by households with a worker (16%: in the Consumer Expenditure Diary of 2021, the last year it recorded meal type before its 2022 redesign kept only the kind of place, lunch was 28% of working households' weekday fast-food and full-service spending; 2021 was a year of more working from home than usual, so the share may run low: the 2019 diary would give 17%; that part is assumed to hold, and is applied each year to the weekday share of working households in the current diaries (2024 and 2025); vending is left out throughout) × the share of residents' jobs outside the area. It also counts lunches by household members who don't work, on days off and near home, so it is a rough upper bound (rough because the 2021 share may run low, above); it is never taken out of the leakage figures. No such share exists for stores, so for stores the page says only which leaks the stores where residents work could absorb.</li>
+
+            <li><strong>Visitor economy:</strong> the measure USDA's Economic Research Service uses for its recreation counties (County Typology Codes, 2025 edition; after Johnson and Beale). A whole county is flagged when ERS classes it as high recreation. Any other area is scored the same way on the public figures below the county: jobs in arts, entertainment and recreation, hotels and restaurants, and real estate and rental as a share of all jobs (LODES 2024; Alaska 2016, Michigan 2021; weight 0.6, since earnings by industry aren't published below the county and ERS weights earnings and jobs 0.3 each) and homes held for seasonal or occasional use as a share of all homes (ACS 2020–2024; weight 0.4), each measured against the mean and spread of nonmetro counties on the same figures; the area is flagged at ERS's cutoff, a weighted score of 0.67 or more, when a sign of visitors joins the score, since below the county a high share of restaurant and real-estate jobs can come from a small job base in a bedroom suburb: lodging jobs (by tract an estimate, as described above) at least twice the US share (2.4% of all jobs), seasonal homes at least the nonmetro county average (8.3% of homes), or at least 5 lodging places and as many per resident as the top 5% of places with 1,000 or more residents (2.2 per 1,000 residents). Scored this way, counties agree with ERS's own codes 94% of the time, most of that among the many counties neither flags: the score finds 295 of ERS's 431 high-recreation counties and adds 47; LODES leaves out the self-employed, so the score runs a little under ERS's for places with many proprietors. Where an area isn't flagged but has at least 5 lodging places and as many per resident as the top 5% of places with 1,000 or more residents (2.2 per 1,000 residents), or at least 50 seasonal homes and at least 3 times the US share of homes (9.9%), the page shows a visitor caution instead of the flag (the site's earlier visitor test); a whole county ERS doesn't class gets the caution when the score and a visitor signal, measured the same way as below the county, would flag it.</li>
           </ul>
           <h4>What this site keeps</h4>
           <p>The first download in a browser asks for an email address; role, organization and an updates opt-in are optional. They go to the site's spreadsheet, with what was downloaded and the area; only the site's owner and the people they ask to review suggested areas can open it, and the first download from an address is also emailed to the owner. This browser remembers the address. Messages and suggested areas go to the same spreadsheet. The site also counts which areas are looked at and downloaded (the date, state, area name and number of tracts), with no address or identifier, though a counted download can be matched to its download record by date and area. Updates go only to addresses that have confirmed they want them. Page visits are counted by Cloudflare Web Analytics, which sets no cookies and keeps no personal data. Nothing is sold or shared.</p>
@@ -1862,21 +1864,104 @@ function peerSection(r, keep = () => true) {
 // Rates compared with similar places, for residents' spending that stays or leaves: capped at 1 on both sides, since a
 // rate above 1 means a place also draws in shoppers from elsewhere, which is not its residents' spending
 const peerBench = med => Math.min(med, 1);
+// the rule (national/visitor_rule.py, which national/test/check_visitor_rule.py compares with this): USDA ERS's
+// recreation measure. A whole county takes ERS's own code; any other area the same weighted score on the public
+// measures below the county (recreation, hotel and restaurant, and real-estate jobs over all jobs, LODES; seasonal homes
+// over all homes, ACS), against nonmetro counties' mean and spread, at ERS's cutoff
+function visitorScore(a) {
+  const V = IDX.visitor, C = V.ers_cal, F = V.flag;
+  if (!(a.jobs > 0) || !(a.units > 0)) return null;
+  return F.w_jobs * ((100 * a.rec / a.jobs - C.mj) / C.sj) + F.w_housing * ((100 * a.seas / a.units - C.mh) / C.sh);
+}
+// below the county the score must be joined by a visitor signal (visitor_rule.guard): lodging jobs at least
+// guard_lodging_multiple times the US share of jobs, seasonal homes at least the nonmetro mean, or many lodging places
+function visitorGuard(a) {
+  const V = IDX.visitor;
+  return (a.jobs > 0 && (a.ljobs || 0) / a.jobs >= V.flag.guard_lodging_multiple * V.us_lodging_job_share) ||
+    (a.units > 0 && 100 * a.seas / a.units >= V.ers_cal.mh) ||
+    ((a.lodge || 0) >= V.flag.min_lodging_places && a.pop > 0 && a.lodge / a.pop * 1000 >= V.lodging_per_1000_p95);
+}
+function visitorFlags(a) {
+  const z = visitorScore(a);
+  return {...a, z, recShare: a.jobs > 0 ? a.rec / a.jobs : 0, share: a.units > 0 ? a.seas / a.units : 0,
+    flag: a.county != null ? !!a.ersCounty : z != null && z >= IDX.visitor.flag.cutoff && visitorGuard(a)};
+}
 function visitorInfo(ids, r) {
-  const V = IDX.visitor; if (!V) return null;
-  let seas = 0, units = 0, lodge = 0;
-  for (const g of ids) { const t = ST.tracts[g]; if (t && t.s) { seas += t.s[0]; units += t.s[1]; lodge += t.s[2]; } }
-  const share = units > 0 ? seas / units : 0, per1k = r.p > 0 ? lodge / r.p * 1000 : 0;
-  const bySeason = seas >= V.flag.min_seasonal_units && share >= V.flag.seasonal_multiple * V.national_seasonal_share;
-  const byLodging = lodge >= V.flag.min_lodging_places && per1k >= V.lodging_per_1000_p95;
-  return {seas, units, lodge, share, per1k, bySeason, byLodging, flag: bySeason || byLodging};
+  const V = IDX.visitor; if (!V || !V.ers_cal) return null;
+  const a = {seas: 0, units: 0, rec: 0, jobs: 0, ljobs: 0, lodge: 0, pop: r.p || 0};
+  for (const g of ids) { const t = ST.tracts[g]; if (!t) continue;
+    if (t.j) { a.rec += (t.j[11] || 0) + (t.j[17] || 0) + (t.j[18] || 0); a.jobs += t.j[0] || 0; }
+    if (t.s) { a.seas += t.s[0]; a.units += t.s[1]; a.lodge += t.s[2]; a.ljobs += t.s[4] || 0; } }
+  // a selection that is one whole county takes ERS's published code
+  const cs = new Set([...ids].map(g => g.slice(0, 5)));
+  if (cs.size === 1) { const c = [...cs][0], all = Object.keys(ST.tracts).filter(g => g.startsWith(c));
+    if (all.length === ids.size) { a.county = c; a.ersCounty = V.ers_counties.includes(c); } }
+  return visitorFlags(a);
+}
+// an area the flag leaves out that still shows signs of visitors (visitor_rule.caution; Michael, November 6, 2026): many
+// lodging places for its residents, or many seasonal homes
+function visitorCaution(v) {
+  if (!v || v.flag) return null;
+  const V = IDX.visitor, F = V.flag;
+  // a whole county ERS doesn't class, that the site's own score and guard would flag (casino and base counties;
+  // reviewbot features2 item 4: the recommended option, to confirm with Michael)
+  if (v.county != null && v.z != null && v.z >= F.cutoff && visitorGuard(v)) return 'score';
+  const L = (v.lodge || 0) >= F.min_lodging_places && v.pop > 0 && v.lodge / v.pop * 1000 >= V.lodging_per_1000_p95;
+  const S = (v.seas || 0) >= F.caution_min_seasonal && v.units > 0 && v.seas / v.units >= F.caution_seasonal_multiple * V.national_seasonal_share;
+  return L && S ? 'both' : L ? 'lodging' : S ? 'seasonal' : null;
+}
+function visitorCautionText(v) {
+  const k = visitorCaution(v); if (!k) return '';
+  const V = IDX.visitor, C = V.ers_cal, pct = x => (x * 100).toFixed(x < 0.1 ? 1 : 0) + '%';
+  const end = ' Where visitors shop here, the retention rates overstate how much of residents\' own spending stays local.';
+  if (k === 'score') return `Visitor caution: USDA's Economic Research Service doesn't class ${visitorCountyName(v.county || '')} as a high recreation county (2025), but on ERS's recreation measure applied to the site's own figures it scores ${v.z.toFixed(2)}, over ERS's ${V.flag.cutoff} cutoff (recreation, hotel and restaurant, and real-estate jobs are ${pct(v.recShare)} of its jobs, against ${C.mj.toFixed(0)}% in the average rural county, and ${pct(v.share)} of its homes are seasonal or vacation homes, against ${C.mh.toFixed(1)}%), and ${visitorSignal(v)}, so visitors may be part of local sales here.` + end;
+  const bits = [];
+  if (k !== 'seasonal') bits.push(`it has ${fmtN(v.lodge)} hotels, motels and other lodging places (${(v.lodge / v.pop * 1000).toFixed(1)} per 1,000 residents, as many as the top 5% of places with 1,000 or more residents)`);
+  if (k !== 'lodging') bits.push(`${pct(v.share)} of its homes are seasonal or vacation homes (${pct(V.national_seasonal_share)} nationally)`);
+  const not = v.county != null ? `USDA's Economic Research Service doesn't class ${visitorCountyName(v.county || '')} as a high recreation county (2025)`
+    : "it isn't flagged as a visitor economy on the measure USDA's Economic Research Service uses for recreation counties";
+  return `Visitor caution: ${bits.join(", and ")}, though ${not}, so visitors may be part of local sales here.` + end;
+}
+// the county a page covers in full, as the text names it: a town or city page can be one whole county (King Salmon)
+// (Virginia's independent cities, Baltimore, St. Louis and Carson City are county equivalents: county codes 510 and up)
+const visitorCountyName = (c = '') => /^(51[5-8]\d\d|24510|29510|32510)$/.test(c) ? 'this independent city, which federal statistics treat as a county,'
+  : selMeta && (selMeta.place || selMeta.town) ? 'the county this page covers in full' : 'this county';
+// the visitor signal that joined the score (visitor_rule.guard), named in the flag's line
+function visitorSignal(v) {
+  const V = IDX.visitor, F = V.flag, pct = x => (x * 100).toFixed(x < 0.1 ? 1 : 0) + '%';
+  if (v.jobs > 0 && (v.ljobs || 0) / v.jobs >= F.guard_lodging_multiple * V.us_lodging_job_share)
+    return `lodging jobs are an estimated ${pct(v.ljobs / v.jobs)} of its jobs, at least ${F.guard_lodging_multiple === 2 ? 'twice' : F.guard_lodging_multiple + ' times'} the US share`;
+  if (v.units > 0 && 100 * v.seas / v.units >= V.ers_cal.mh) return `that seasonal share is at least the rural county average`;
+  return `it has ${fmtN(v.lodge)} lodging places, ${(v.lodge / v.pop * 1000).toFixed(1)} per 1,000 residents, as many as the top 5% of places with 1,000 or more residents`;
 }
 function visitorText(v) {
   if (!v || !v.flag) return '';
-  const bits = [];
-  if (v.bySeason) bits.push(`${Math.round(v.share * 100)}% of homes here are seasonal or vacation homes (${(IDX.visitor.national_seasonal_share * 100).toFixed(1)}% nationally)`);
-  if (v.byLodging) bits.push(`there ${v.lodge === 1 ? 'is' : 'are'} ${fmtN(v.lodge)} hotels, motels and other lodging places, ${v.per1k.toFixed(1)} per 1,000 residents (${IDX.visitor.national_lodging_per_1000.toFixed(1)} nationally)`);
-  return `This looks like a visitor economy: ${bits.join(', and ')}. Visitors' spending is part of local sales here, so the retention rates overstate how much of residents' own spending stays local.`;
+  const C = IDX.visitor.ers_cal, pct = x => (x * 100).toFixed(x < 0.1 ? 1 : 0) + '%';
+  const why = `recreation, hotel and restaurant, and real-estate jobs are ${pct(v.recShare)} of the jobs here (${C.mj.toFixed(0)}% in the average rural county) and ${pct(v.share)} of homes are seasonal or vacation homes (${C.mh.toFixed(1)}%)`;
+  const lead = v.county != null ? `This looks like a visitor economy: USDA's Economic Research Service classes ${visitorCountyName(v.county || '')} as a high recreation county (2025), and ${why}.`
+    : `This looks like a visitor economy by the measure USDA's Economic Research Service uses for recreation counties: ${why}, and ${visitorSignal(v)}.`;
+  return `${lead} Visitors' spending is part of local sales here, so the retention rates overstate how much of residents' own spending stays local.`;
+}
+
+// why an area isn't flagged, written from the same figures as visitorText (a place's visitor note carries
+// "{visitor_why}" instead of hand-typed figures, so the note and the page always agree; national/place_notes.py)
+function visitorWhyNot(v, ids) {
+  if (!v) return 'its figures are missing';
+  const V = IDX.visitor, C = V.ers_cal, F = V.flag, pct = x => (x * 100).toFixed(x < 0.1 ? 1 : 0) + '%';
+  const meas = `recreation, hotel and restaurant, and real-estate jobs are ${pct(v.recShare)} of its jobs (${C.mj.toFixed(0)}% in the average rural county) and ${pct(v.share)} of its homes are seasonal or vacation homes (${C.mh.toFixed(1)}%)`;
+  let s;
+  if (v.county != null) s = `USDA's Economic Research Service doesn't class ${visitorCountyName(v.county || '') === 'this county' ? 'it' : visitorCountyName(v.county || '')} as a high recreation county (2025); by the site's figures, ${meas}`;
+  else if (v.z == null) s = "it has too few jobs or homes to score on the measure USDA's Economic Research Service uses for recreation counties";
+  else if (v.z < F.cutoff) s = `on the measure USDA's Economic Research Service uses for recreation counties it scores ${v.z.toFixed(2)}, under the ${F.cutoff} cutoff: ${meas}`;
+  else s = `it scores ${v.z.toFixed(2)} on the measure USDA's Economic Research Service uses for recreation counties, over the ${F.cutoff} cutoff, but nothing else marks it as a visitor economy: lodging jobs are an estimated ${pct(v.jobs > 0 ? (v.ljobs || 0) / v.jobs : 0)} of its jobs (the flag looks for ${pct(F.guard_lodging_multiple * V.us_lodging_job_share)}), ${pct(v.share)} of its homes are seasonal (${C.mh.toFixed(1)}%), and it has fewer than ${F.min_lodging_places} lodging places or fewer per resident than the top 5% of places with 1,000 or more residents`;
+  let n = 0, k = 0;
+  for (const g of ids) { const t = ST.tracts[g]; if (!t) continue; n++;
+    const a = {seas: 0, units: 0, rec: 0, jobs: 0, ljobs: 0, lodge: 0, pop: t.p || 0};
+    if (t.j) { a.rec = (t.j[11] || 0) + (t.j[17] || 0) + (t.j[18] || 0); a.jobs = t.j[0] || 0; }
+    if (t.s) { a.seas = t.s[0]; a.units = t.s[1]; a.lodge = t.s[2]; a.ljobs = t.s[4] || 0; }
+    if (visitorFlags(a).flag) k++; }
+  if (k && n > 1) s += `, though ${k === 1 ? 'one' : k} of its ${n} census tracts ${k === 1 ? 'is' : 'are'} flagged on ${k === 1 ? 'its' : 'their'} own`;
+  return s;
 }
 
 // ---- the yardstick the page leads with: what similar places typically keep. The national norm averages over every
@@ -1903,7 +1988,13 @@ const posOf = (v, q) => !isFinite(v) || !q ? '' : v < q[1] || (q[1] <= 0 && v <=
 // over its tracts, here the midpoint of the two estimates; the selection's own figure is computed the same way, so an
 // area with no households shows its sales as a surplus. A surplus here (stores sell more than residents' spending supports) is matched against leakage from the
 // rings; leakage here against the rings' surplus. Neighboring states' tracts are fetched when a ring crosses into them.
+// Tracts that live off visitors (visitorOut: flagged on their own by ERS's recreation measure, with lodging jobs a large
+// share of the jobs there or many seasonal homes; index.json visitor) add no surplus: a resort's sales to visitors aren't read as absorbing
+// residents' leakage. Where residents work (od/<fips>.json, LEHD LODES origin-destination, commute.py) adds their jobs
+// by distance and their main work tracts, whose surplus is added up as a ring's is. Border notes (index.json border):
+// a neighboring state within border.miles of the selection whose tax on gas, tobacco or alcohol is markedly lower.
 const RINGS = [10, 25, 50];
+const WORK_MIN_SHARE = 0.10;   // main work areas are compared with leakage only when they hold at least this share of residents' jobs
 const miles = (a, b) => {
   const R = 3958.8, rad = Math.PI / 180, dLat = (b[1] - a[1]) * rad, dLon = (b[0] - a[0]) * rad;
   const h = Math.sin(dLat / 2) ** 2 + Math.cos(a[1] * rad) * Math.cos(b[1] * rad) * Math.sin(dLon / 2) ** 2;
@@ -1918,8 +2009,22 @@ async function stateData(fips) {
   }
   return d;
 }
+const odCache = new Map();
+async function odData(fips) {               // where the state's residents work; null where the file is missing
+  if (!odCache.has(fips)) odCache.set(fips, fetch('data/od/' + fips + '.json').then(r => r.ok ? r.json() : null).catch(() => null));
+  return odCache.get(fips);
+}
 function selPoints(ids) { const pts = []; for (const g of ids) { const t = ST.tracts[g]; if (t && t.c) pts.push(t.c); } return pts; }
 const tractGap = (t, i, c) => t.d[i] - (t.l[i] / IDX.calib[c].lodes + t.z[i] / IDX.calib[c].zbp) / 2;   // $ thousands
+// a tract whose surplus the region leaves out (visitor_rule.region_out): it flags on ERS's recreation measure and lives
+// off visitors, with lodging jobs at least region_lodging_share of its jobs or seasonal homes at least
+// region_seasonal_multiple times the national share (the measure alone also flags local restaurant and mall tracts)
+function visitorOut(t) {
+  const V = IDX.visitor; if (!V || !V.ers_cal || !t.s || !t.j) return false;
+  const a = {rec: (t.j[11] || 0) + (t.j[17] || 0) + (t.j[18] || 0), jobs: t.j[0] || 0, seas: t.s[0], units: t.s[1]};
+  const z = visitorScore(a); if (z == null || z < V.flag.cutoff || !visitorGuard({...a, ljobs: t.s[4] || 0, lodge: t.s[2] || 0, pop: t.p || 0})) return false;   // visitor_rule.region_out: it flags first
+  return (a.jobs > 0 && (t.s[4] || 0) / a.jobs >= V.flag.region_lodging_share) || (a.units > 0 && a.seas / a.units >= V.flag.region_seasonal_multiple * V.national_seasonal_share);
+}
 let regionKey = '', regionResult = null, regionError = false, regionToken = 0;
 async function computeRegion(ids) {
   const pts = selPoints(ids); if (!pts.length) return null;
@@ -1928,19 +2033,130 @@ async function computeRegion(ids) {
   const box = [Math.min(...pts.map(c => c[0])) - dLon, Math.min(...pts.map(c => c[1])) - dLat, Math.max(...pts.map(c => c[0])) + dLon, Math.max(...pts.map(c => c[1])) + dLat];
   const near = IDX.states.filter(s => s.bbox && s.bbox[0] <= box[2] && s.bbox[2] >= box[0] && s.bbox[1] <= box[3] && s.bbox[3] >= box[1]).map(s => s.fips);
   if (!near.includes(ST.fips)) near.push(ST.fips);
-  const states = await Promise.all(near.map(f => f === ST.fips ? ST : stateData(f)));
+  const [states, od] = await Promise.all([Promise.all(near.map(f => f === ST.fips ? ST : stateData(f))), odData(ST.fips)]);
   // nearest selected point, by a flat-earth distance first (cheap), then the exact one for the nearest
   const kx = 69 * Math.cos(lat0 * Math.PI / 180);
   const gap = RINGS.map(() => new Array(NS).fill(0)), pop = RINGS.map(() => 0);
+  const vis = {n: 0, sur: new Array(NS).fill(0)};          // visitor tracts within 50 miles and the surplus left out
   for (const S of states) for (const [g, t] of Object.entries(S.tracts)) {
     if (!t.c || ids.has(g) || t.c[0] < box[0] || t.c[0] > box[2] || t.c[1] < box[1] || t.c[1] > box[3]) continue;
     let best = Infinity, bp = null;
     for (const c of pts) { const dx = (t.c[0] - c[0]) * kx, dy = (t.c[1] - c[1]) * 69, d = dx * dx + dy * dy; if (d < best) { best = d; bp = c; } }
     const m = miles(bp, t.c); if (m > R) continue;
-    for (let k = 0; k < RINGS.length; k++) if (m <= RINGS[k]) { pop[k] += t.p || 0; for (let i = 0; i < NS; i++) gap[k][i] += tractGap(t, i, SUP[i]); }
+    const out = visitorOut(t); if (out) vis.n++;
+    for (let i = 0; i < NS; i++) {
+      const v = tractGap(t, i, SUP[i]);
+      if (out && v < 0) { vis.sur[i] -= v; continue; }
+      for (let k = 0; k < RINGS.length; k++) if (m <= RINGS[k]) gap[k][i] += v;
+    }
+    for (let k = 0; k < RINGS.length; k++) if (m <= RINGS[k]) pop[k] += t.p || 0;
   }
-  return {gap, pop, states: near};
+  return {gap, pop, states: near, vis, work: workOf(ids, od, states), border: borderOf(ids, states)};
 }
+// where residents work: jobs by distance from home, the main work tracts (each holding at least commute.top_share of a
+// home tract's jobs) named by neighborhood, place or county, and the surplus of those tracts outside the selection
+function workOf(ids, od, states) {
+  if (!od || !od.t) return null;
+  const b = [0, 0, 0, 0, 0], dest = new Map();
+  let inside = 0;                                   // in the selection's other tracts (listed flows only: at least)
+  for (const g of ids) {
+    const v = od.t[g]; if (!v) continue;
+    for (let k = 0; k < 5; k++) b[k] += v[k];
+    for (let k = 5; k + 1 < v.length; k += 2) { const w = od.dests[v[k]]; if (ids.has(w)) inside += v[k + 1]; else dest.set(w, (dest.get(w) || 0) + v[k + 1]); }
+  }
+  const jobs = b.reduce((a, x) => a + x, 0); if (!(jobs > 0)) return null;
+  const byFips = new Map(states.map(S => [S.fips, S]));
+  const gap = new Array(NS).fill(0), names = new Map();
+  let inMain = 0, placed = 0, out = 0;
+  for (const [w, n] of dest) {
+    inMain += n;
+    const S = byFips.get(w.slice(0, 2)), t = S && S.tracts[w];
+    if (!t) continue;
+    placed++;
+    if (visitorOut(t)) out++;
+    for (let i = 0; i < NS; i++) { const v = tractGap(t, i, SUP[i]); if (!(visitorOut(t) && v < 0)) gap[i] += v; }
+    const nm = workAreaName(S, w); names.set(nm, (names.get(nm) || 0) + n);
+  }
+  const top = [...names].sort((a, b2) => b2[1] - a[1]).slice(0, 3);
+  return {jobs, b, inside: b[0] + inside, multi: ids.size > 1, n: dest.size, placed, out, inMain, gap, top, year: od.year,
+    use: dest.size > 0 && inMain >= WORK_MIN_SHARE * jobs && out < placed};
+}
+// a work tract's name: in a city of 50 or more tracts its neighborhood (the city's own community areas or neighborhood
+// layer first, then Who's On First's districts and neighborhoods), elsewhere its city or town, else its county
+const areaIdx = new Map(), BIG_CITY_TRACTS = 50;
+function workAreaName(S, w) {
+  let ix = areaIdx.get(S.fips);
+  if (!ix) {
+    ix = {area: new Map(), place: new Map()};
+    const plain = n => n.replace(/ (city|town|village|borough|CDP|municipality|city and borough|urban county|consolidated government \(balance\)|metro government \(balance\)),/, ',');
+    for (const p of Object.values(S.places || {})) for (const g of p.tracts) if (!ix.place.has(g)) ix.place.set(g, {name: plain(p.name), big: p.tracts.length >= BIG_CITY_TRACTS});
+    const rank = a => /community area/i.test(a[2]) ? 0 : !/^wof:/.test(a[3]) ? 1 : /district/i.test(a[2]) ? 2 : 3;
+    const as = (S.areas || []).filter(a => !/unclaimed|#\d/i.test(a[0])).sort((a, b) => rank(a) - rank(b));
+    for (const a of as) for (const g of a[4]) if (!ix.area.has(g)) ix.area.set(g, a[1] ? `${a[0]}, ${a[1]}` : a[0]);
+    areaIdx.set(S.fips, ix);
+  }
+  const pl = ix.place.get(w), ar = ix.area.get(w);
+  if (pl && pl.big && ar) return /, /.test(ar) ? ar : `${ar}, ${pl.name.replace(/, [A-Z]{2}$/, '')}`;
+  if (pl) return S.fips === ST.fips ? pl.name.replace(/, [A-Z]{2}$/, '') : pl.name;
+  return `${S.counties[w.slice(0, 5)] || 'a nearby county'}${S.fips !== ST.fips ? ', ' + S.usps : ''}`;
+}
+// border notes: a neighboring state within border.miles whose state tax on gas, cigarettes or alcohol bought in stores
+// is markedly lower; sales tax from both states' rate tables (state and local: here the selection's tracts weighted
+// by residents' spending, there the neighbor's tracts within border.miles weighted by their stores' sales), per-gallon and per-pack taxes only where both states'
+// rates are confirmed on their own pages (border_rates.py)
+const BORDER_CATS = [['gas', 'gas', 'gas'], ['tobacco', 'cig', 'cigarettes and tobacco'], ['alcohol', null, 'alcohol bought in stores']];
+function salesRate(T, t, c) {
+  // alcohol: bought in stores only (T.alcohol_store), not the category's blend with drinks served
+  const q = c === 'alcohol' ? T && T.alcohol_store : T && T.cats && T.cats[c]; if (!q) return null;
+  const [st, fl, fx] = q;
+  return st + (t && t.x != null ? (t.xc && t.xc[c] != null ? t.xc[c] : fl * t.x + fx) : 0);
+}
+// a temporary or scheduled rate (border_rates.py): "(temporary, through November 30, 2026; 41.0¢ from December 1)"
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const longDate = (d, y) => { const [yy, mm, dd] = d.split('-').map(Number); return `${MONTHS[mm - 1]} ${dd}${y ? ', ' + yy : ''}`; };
+function tempNote(r, unit) {
+  if (!r || !r.through) return '';
+  const nx = r.next ? `; ${unit === '$' ? '$' + r.next.rate.toFixed(2) : r.next.rate.toFixed(1) + '¢'} from ${longDate(r.next.start, false)}` : '';
+  return ` (temporary, through ${longDate(r.through, true)}${nx})`;
+}
+function borderOf(ids, states) {
+  const B = IDX.border; if (!B || !B.complete) return [];      // held until every state's rates are confirmed
+  const nb = new Map();
+  for (const g of ids) { const t = ST.tracts[g]; if (t && t.bd) for (const [fp, m] of Object.entries(t.bd)) nb.set(fp, Math.min(m, nb.has(fp) ? nb.get(fp) : Infinity)); }
+  const pts = selPoints(ids), out = [];
+  for (const [fp, m] of [...nb].sort((a, b) => a[1] - b[1])) {
+    const S = states.find(x => x.fips === fp); if (!S) continue;
+    // here: residents' own tracts, weighted by spending in the category; there: the lowest rate within reach
+    const lines = [];
+    for (const [c, ex, label] of BORDER_CATS) {
+      const i = SUP.indexOf(c);
+      let w = 0, sum = 0; for (const g of ids) { const t = ST.tracts[g], r = salesRate(ST.tax, t, c); if (t && r != null) { w += t.d[i]; sum += t.d[i] * r; } }
+      const here = w > 0 ? sum / w : salesRate(ST.tax, null, c);
+      // there: the neighbor's tracts within reach that have a known local rate, weighted by their stores' sales in the
+      // category (where buyers would shop), or equally where none sells it
+      let ws = 0, rs = 0, n0 = 0, r0 = 0;
+      for (const t of Object.values(S.tracts)) {
+        if (!t.c || t.x == null || !t.bd || !(ST.fips in t.bd) || !pts.some(p => miles(p, t.c) <= B.miles)) continue;
+        const r = salesRate(S.tax, t, c); if (r == null) continue;
+        const v = (t.l[i] || 0) + (t.z[i] || 0); ws += v; rs += v * r; n0++; r0 += r;
+      }
+      const there = ws > 0 ? rs / ws : n0 ? r0 / n0 : null;   // no tract within reach with a known rate: not compared
+      // gas and cigarettes are taxed mostly per gallon or pack: compared only where both states' rates are confirmed,
+      // and noted only where that tax is lower there (a lower sales tax alone can hide a higher per-unit tax)
+      const rh = ex && B.rates[ST.usps] && B.rates[ST.usps][ex], rn = ex && B.rates[S.usps] && B.rates[S.usps][ex];
+      if (ex && !(rh && rn)) continue;
+      const bits = [], salesLower = here != null && there != null && here - there >= B.marked.sales_points;
+      if (ex === 'gas' && rh.rate - rn.rate >= B.marked.gas_cents) bits.push(`state gas tax ${rn.rate.toFixed(1)}¢ a gallon${tempNote(rn, '¢')} against ${rh.rate.toFixed(1)}¢ here${tempNote(rh, '¢')}`);
+      if (ex === 'cig' && rh.rate - rn.rate >= B.marked.cig_dollars) bits.push(`state cigarette tax $${rn.rate.toFixed(2)} a pack${tempNote(rn, '$')} against $${rh.rate.toFixed(2)} here${tempNote(rh, '$')}`);
+      if (ex && !bits.length) continue;
+      if (salesLower) bits.push(`${there > 0 ? 'sales tax ' + fmtPct(there) : 'no sales tax'} against ${fmtPct(here)} here`);
+      if (bits.length) lines.push(`${label} (${bits.join('; ')}${ex ? '' : '; per-gallon alcohol taxes not compared'})`);
+    }
+    if (lines.length) out.push(`${esc(S.name)} is ${m < 1 ? 'less than a mile' : Math.round(m) + (Math.round(m) === 1 ? ' mile' : ' miles')} away at its nearest point, and its taxes are markedly lower on ${listJoin(lines)}. Some of residents' spending on ${lines.length > 1 ? 'these' : 'it'} likely crosses the state line; the site doesn't estimate how much.`);
+  }
+  return out;
+}
+const fmtPct = v => String(Math.round(v * 100) / 100) + '%';
 // how far out the balancing spending reaches, per category
 function regionRows(r, R) {
   return r.cats.map((x, i) => {
@@ -1949,10 +2165,22 @@ function regionRows(r, R) {
     let reach = null, kind = 'even';
     if (here < -small) { kind = 'surplus'; const k = ring.findIndex(v => v >= -here); reach = k < 0 ? 'beyond' : RINGS[k]; }
     else if (here > small) { kind = 'leak'; const k = ring.findIndex(v => v <= -here); reach = k < 0 ? 'beyond' : RINGS[k]; }
-    return {c: x.c, here, ring, kind, reach};
+    const work = R.work && R.work.use ? R.work.gap[i] : null;
+    return {c: x.c, here, ring, kind, reach, work, atWork: kind === 'leak' && work != null && work <= -here};
   });
 }
 const gapCell = v => v >= 0 ? fmtUSD(v) : `<span class="inflow">${fmtUSD(-v)}<span class="sl">surplus</span></span>`;
+const pctOfJobs = (n, d) => { const p = n / d * 100; return p > 0 && p < 1 ? 'under 1%' : Math.round(p) + '%'; };
+function workText(W) {
+  if (!W) return '';
+  const p = k => pctOfJobs(W.b[k], W.jobs);
+  // by distance from each resident's home tract (the bands add up to all their jobs); for a selection of several tracts,
+  // the jobs in its other tracts are known only for the listed main work tracts, so that share is a minimum
+  const s = [`Residents hold ${fmtN(W.jobs)} jobs (LODES ${W.year}): ${p(0)} in ${W.multi ? 'their own census tract' : 'the area itself'}, ${p(1)} elsewhere within 10 miles of home, ${p(2)} 10 to 25 miles away, ${p(3)} 25 to 50 miles away and ${p(4)} farther (LODES places some jobs at an employer's reporting address rather than where the work is done, so the farther shares run high).`];
+  if (W.multi && W.inside > W.b[0]) s.push(`At least ${pctOfJobs(W.inside, W.jobs)} are inside the area itself.`);
+  if (W.top.length) s.push(`The largest work areas outside it are ${listJoin(W.top.map(([n, k]) => `${esc(n)} (${pctOfJobs(k, W.jobs)})`))}.`);
+  return s.join(' ');
+}
 function regionSection(r, R, keep = () => true) {
   if (!R) return {lead: regionError ? 'The surrounding area could not be loaded. Try picking the area again.' : 'The surrounding region cannot be placed for this selection.', table: '', rows: []};
   const rows = regionRows(r, R), show = rows.filter(x => !MINOR.has(x.c));
@@ -1967,9 +2195,32 @@ function regionSection(r, R, keep = () => true) {
   if (lkB.length) s.push(`For ${listJoin(lkB)}, stores within 50 miles do not sell enough extra to absorb what leaks, so that spending likely goes farther away or online.`);
   if (!(r.tot.D > 0)) s.unshift('No households live here, so every sale here comes from people who live elsewhere.');
   else if (!s.length) s.push('Local sales and residents\' spending roughly balance in every category, so there is little to trace to the surrounding area.');
+  // where residents work, and which leaks the stores there could absorb (context: no dollars are split out)
+  const W = R.work, wt = workText(W);
+  if (wt && r.tot.D > 0) {
+    s.push(wt);
+    const leaks = told.filter(x => x.kind === 'leak' && x.work != null);
+    const atW = leaks.filter(x => x.atWork).map(x => SHORT[x.c].toLowerCase()), notW = leaks.filter(x => !x.atWork).map(x => SHORT[x.c].toLowerCase());
+    if (W.n && !W.use) s.push(W.out >= W.placed && W.placed ? 'Those work areas live off visitors (resorts, casino hotels), so their surplus is left out and not compared with what leaks here.'
+      : `Residents' jobs are spread out: the tracts where they most often work hold ${pctOfJobs(W.inMain, W.jobs)} of their jobs, too few to say whether stores where they work could absorb what leaks.`);
+    if (W.use && W.out) s.push(`${fmtN(W.out)} of those ${fmtN(W.placed)} work tracts ${W.out === 1 ? 'lives' : 'live'} off visitors, and ${W.out === 1 ? 'its' : 'their'} surplus is left out.`);
+    if (W.use && atW.length) s.push(`Stores in those main work areas sell enough beyond their own residents' spending to absorb what leaks for ${listJoin(atW)}, so some of that may be spending near work.`);
+    if (W.use && notW.length) s.push(`For ${listJoin(notW)}, ${atW.length ? 'they' : 'stores in those main work areas'} don't, which points more to stores missing nearby, or to spending that goes farther or online.`);
+    // up to: residents' restaurant spending that is weekday lunch bought by households with a worker (BLS CE Diary,
+    // index.json commute.near_work), for the part of residents' jobs outside the area; never taken out of the leakage
+    const NWK = IDX.commute && IDX.commute.near_work, rest = r.cats.filter(x => x.c === 'fsr' || x.c === 'qsr');
+    const restLeak = rows.some(y => (y.c === 'fsr' || y.c === 'qsr') && y.kind === 'leak');
+    if (W.use && NWK && restLeak) {
+      const D = rest.reduce((a, x) => a + x.D, 0), outside = Math.max(0, 1 - W.inside / W.jobs), upTo = D * NWK.share * outside;
+      if (upTo >= 50) s.push(`Up to ${fmtUSD(upTo)} a year of residents' restaurant spending is weekday lunch bought by households with a worker whose job is outside the area (about ${Math.round(NWK.share * 100)}% of restaurant spending: BLS's spending diaries last recorded meal type in ${NWK.anchor_year}; the share is anchored to that year and updated with each year's diary, now ${NWK.years.join(' and ')}; it is applied to residents' jobs outside the area, ${W.multi ? 'at most ' : ''}${pctOfJobs(W.jobs - W.inside, W.jobs)} of them); some of it is likely spent near work. It is a rough upper bound, and the leakage figures above are not reduced by it.`);
+    }
+  }
+  if (R.vis && R.vis.n) s.push(`${fmtN(R.vis.n)} ${R.vis.n === 1 ? 'tract' : 'tracts'} within 50 miles that live off visitors (resorts, casino hotels, vacation homes) ${R.vis.n === 1 ? 'is' : 'are'} left out of the nearby surplus, so ${R.vis.n === 1 ? 'its' : 'their'} sales to visitors aren't read as absorbing residents' leakage.`);
+  for (const b of R.border || []) s.push(b);
   const REACH = {10: 'Within 10 miles', 25: 'Within 25 miles', 50: 'Within 50 miles', beyond: 'Beyond 50 miles'};
-  const tr = x => `<tr${MINOR.has(x.c) ? ` class="minor"${showMinor ? '' : ' hidden'}` : ''}><td>${LABEL[x.c]}</td><td class="num">${gapCell(x.here)}</td>${x.ring.map(v => `<td class="num">${gapCell(v)}</td>`).join('')}<td>${x.kind === 'even' ? '—' : REACH[x.reach]}</td></tr>`;
-  const table = `<thead><tr><th>Category</th><th>Here</th>${RINGS.map((m, k) => `<th>Within ${m} miles<span class="pnote">${fmtN(R.pop[k])} residents</span></th>`).join('')}<th>Balanced by</th></tr></thead><tbody>` +
+  const wcol = W && W.use;
+  const tr = x => `<tr${MINOR.has(x.c) ? ` class="minor"${showMinor ? '' : ' hidden'}` : ''}><td>${LABEL[x.c]}</td><td class="num">${gapCell(x.here)}</td>${x.ring.map(v => `<td class="num">${gapCell(v)}</td>`).join('')}${wcol ? `<td class="num">${gapCell(x.work)}</td>` : ''}<td>${x.kind === 'even' ? '—' : REACH[x.reach]}</td></tr>`;
+  const table = `<thead><tr><th>Category</th><th>Here</th>${RINGS.map((m, k) => `<th>Within ${m} miles<span class="pnote">${fmtN(R.pop[k])} residents</span></th>`).join('')}${wcol ? `<th>Main work areas<span class="pnote">${fmtN(W.n)} ${W.n === 1 ? 'tract' : 'tracts'}, ${pctOfJobs(W.inMain, W.jobs)} of residents' jobs</span></th>` : ''}<th>Balanced by</th></tr></thead><tbody>` +
     show.map(tr).join('') + rows.filter(x => MINOR.has(x.c)).map(tr).join('') + '</tbody>';
   return {lead: s.join(' '), table, rows};
 }
@@ -2145,9 +2396,9 @@ function summaryText(r) {
   const big = r.cats.filter(x => !MINOR.has(x.c) && !OUT_OF_TOTAL.has(x.c) && Math.round(Math.max(x.pfL,x.pfZ) * 100) > 300).map(x => SHORT[x.c].toLowerCase());
   if (big.length) w.push(`Sales more than 3 times the national norm on either estimate (${big.join('; ')}) usually mean a regional destination, a highway corner or a business district, where most buyers live elsewhere.`);
   if (gapHi <= 0 && pos.length) w.push(`The overall figure nets categories against each other: ${drawInResidents(r) ? "counted in residents' spending, " : ''}the area draws shoppers in overall but still falls short in the categories listed above.`);
-  const vt = visitorText(visitorInfo(sel, r)); if (vt) w.push(vt);
+  const vi = visitorInfo(sel, r), vt = visitorText(vi), vc = vt ? '' : visitorCautionText(vi); if (vt) w.push(vt); if (vc) w.push(vc);
   for (const zt of zbpUnnamedText(sel)) w.push(zt);
-  for (const pn of placeNotes(sel, 'warn', {visitor: !!vt})) w.push(pn);
+  for (const pn of placeNotes(sel, 'warn', {visitor: !!vt, caution: !!vc, vi})) w.push(pn);
   { const at = acsSupplementText(sel); if (at) w.push(at); }
   if (selMeta && selMeta.part) w.unshift(selMeta.part >= 50 ? `${esc(selMeta.label)} is smaller than a census tract, the smallest area these figures cover, so these are the figures for the census tract that holds most of it, which also takes in the area around it.` : `${esc(selMeta.label)} is spread over several census tracts, the smallest areas these figures cover, without holding half the residents of any, so these are the figures for the tract that holds the most of it (${selMeta.part}% of its ${selMeta.pb ? 'census blocks' : 'residents'}), which also takes in the area around it.`);
   // a city or town page whose tracts leave out at least one in ten of its residents, or hold at least one in ten people
@@ -2386,7 +2637,7 @@ function regionNow(r, keep) {
 function summaryCSV(r) {
   const rows = [['category','measured_both_sides','resident_demand_usd','local_sales_jobs_based_usd','local_sales_zip_based_usd','expected_sales_jobs_based_usd','expected_sales_zip_based_usd','retention_rate_jobs_based','retention_rate_zip_based','projected_leakage_jobs_based_usd','projected_leakage_zip_based_usd']];
   rows[0].push('similar_places', 'similar_places_typical_retention', 'similar_places_p25', 'similar_places_p75', 'position_among_similar_places', 'more_leaving_than_typical_similar_place_usd',
-    'projected_leakage_midpoint_usd', 'leakage_within_10mi_usd', 'leakage_within_25mi_usd', 'leakage_within_50mi_usd', 'balanced_within', 'area_household_income_usd', 'area_households_in_tracts_with_estimated_income', 'spending_share_of_household_income', 'median_household_income_usd_estimated_from_brackets', 'average_household_income_usd');
+    'projected_leakage_midpoint_usd', 'leakage_within_10mi_usd', 'leakage_within_25mi_usd', 'leakage_within_50mi_usd', 'leakage_main_work_areas_usd', 'balanced_within', 'area_household_income_usd', 'area_households_in_tracts_with_estimated_income', 'spending_share_of_household_income', 'median_household_income_usd_estimated_from_brackets', 'average_household_income_usd');
   const pe = peerSection(r), byC = Object.fromEntries(pe.rows.map(x => [x.c, x])), clsName = pe.cls ? classTxt(pe.cls) : '';
   const rg = regionNow(r), rgC = Object.fromEntries((rg.rows || []).map(x => [x.c, x]));
   const POS = {low: 'bottom quarter', mid: 'middle half', high: 'top quarter'};
@@ -2394,10 +2645,10 @@ function summaryCSV(r) {
   const extra = x => { const q = byC[x.c], g = rgC[x.c], c = x.c;
     const mid = x.D - (x.sL / IDX.calib[c].lodes + x.sZ / IDX.calib[c].zbp) / 2;
     return [q ? clsName : '', q ? pf3(q.med) : '', q ? pf3(q.p25) : '', q ? pf3(q.p75) : '', q ? POS[q.where] || '' : '', q && x.D > 0 && isFinite(q.v) ? usd(x.D * (q.med - q.v)) : '',
-      usd(mid), ...(g ? g.ring.map(usd) : [notYet, notYet, notYet]), g ? (g.kind === 'even' ? '' : g.reach === 'beyond' ? 'beyond 50 mi' : g.reach + ' mi') : notYet]; };
-  const blank = new Array(11).fill(''), none3 = ['', '', '', '', ''];
+      usd(mid), ...(g ? g.ring.map(usd) : [notYet, notYet, notYet]), g ? (g.work != null ? usd(g.work) : '') : notYet, g ? (g.kind === 'even' ? '' : g.reach === 'beyond' ? 'beyond 50 mi' : g.reach + ' mi') : notYet]; };
+  const blank = new Array(12).fill(''), none3 = ['', '', '', '', ''];
   for (const x of r.cats) rows.push([LABEL[x.c],'yes',usd(x.D),usd(x.sL),usd(x.sZ),usd(x.eL),usd(x.eZ),pf3(x.pfL),pf3(x.pfZ),usd(x.gL),usd(x.gZ), ...extra(x), ...none3]);
-  const T = r.tot; rows.push([`All ${NT} categories in the total (net; child care is not in it)`,'yes',usd(T.D),usd(T.sL),usd(T.sZ),usd(T.eL),usd(T.eZ),pf3(T.pfL),pf3(T.pfZ),usd(T.gL),usd(T.gZ), '', '', '', '', '', pe.cls ? usd(r.cats.filter(x => !OUT_OF_TOTAL.has(x.c) && byC[x.c] && isFinite(byC[x.c].v) && x.D > 0).reduce((a, x) => a + x.D * (byC[x.c].med - byC[x.c].v), 0)) : '', '', '', '', '', '', r.i > 0 ? usd(r.i) : '', r.h > 0 ? r.ie : '', r.i > 0 && T.D > 0 && r.ie <= 0.1 * r.h ? (T.D / r.i).toFixed(3) : '', (m => m ? (m.top ? '200000+' : Math.round(m.v)) : '')(medianIncome(r)), r.h > 0 && r.i > 0 ? Math.round(r.i * 1000 / r.h) : '']);
+  const T = r.tot; rows.push([`All ${NT} categories in the total (net; child care is not in it)`,'yes',usd(T.D),usd(T.sL),usd(T.sZ),usd(T.eL),usd(T.eZ),pf3(T.pfL),pf3(T.pfZ),usd(T.gL),usd(T.gZ), '', '', '', '', '', pe.cls ? usd(r.cats.filter(x => !OUT_OF_TOTAL.has(x.c) && byC[x.c] && isFinite(byC[x.c].v) && x.D > 0).reduce((a, x) => a + x.D * (byC[x.c].med - byC[x.c].v), 0)) : '', '', '', '', '', '', '', r.i > 0 ? usd(r.i) : '', r.h > 0 ? r.ie : '', r.i > 0 && T.D > 0 && r.ie <= 0.1 * r.h ? (T.D / r.i).toFixed(3) : '', (m => m ? (m.top ? '200000+' : Math.round(m.v)) : '')(medianIncome(r)), r.h > 0 && r.i > 0 ? Math.round(r.i * 1000 / r.h) : '']);
   DEM.slice(NS).forEach((c,i) => rows.push([LABEL[c],'no (demand only)',usd(r.d[NS+i]),'','','','','','','','', ...blank, ...none3]));
   rows.push(['Vehicle purchases (excluded)','no (demand only)',usd(r.v),'','','','','','','','', ...blank, ...none3]);
   return csv(rows);
@@ -2670,24 +2921,26 @@ const localPct = v => v < 0.005 ? 'under 1%' : Math.round(v * 100) + '%';
 // when the selection reaches it. A note may hold only when the visitor-economy flag is shown (ctx.visitor) or isn't.
 function placeNotes(ids, sec, ctx = {}) {
   const P = (ST && ST.pnotes) || {};
-  const ok = n => typeof n === 'string' || n.when === (ctx.visitor ? 'flagged' : 'not_flagged');
+  // (a call that doesn't say whether the flag shows, such as a selection with no households, shows no flag note)
+  // a 'caution' note goes with the caution an unflagged area with many lodging places or seasonal homes carries
+  const ok = n => typeof n === 'string' || ('visitor' in ctx && (n.when === 'caution' ? !!ctx.caution : n.when === (ctx.visitor ? 'flagged' : 'not_flagged')));
   const out = [...((P.state || {})[sec] || [])];
   for (const [g, by] of Object.entries(P.area || {})) {
     if (!by[sec]) continue;
     const pl = ST.places[g] || (ST.towns || {})[g];
     const has = g.length === 5 ? t => t.startsWith(g) : t => !!pl && pl.tracts.includes(t);
     if (![...ids].some(has)) continue;
-    // a note that depends on the visitor flag carries its area's own figures and names it, so it shows on that area's
-    // own page; on a city or town's page, only that area's and its county's, never another place's that shares its
-    // tract (Valentine's page doesn't show Cody's caution); on any other selection (a neighborhood, a ZIP code, tracts
-    // picked on the map), only an area's that holds the whole selection and isn't a small place read from a larger
-    // tract. Other notes show wherever the selection reaches the area
-    const inside = [...ids].every(has);
+    // a note that depends on the visitor flag speaks of its own area's flag and figures ({visitor_why} is filled from the
+    // selection's), so it shows only where the selection is that area: its own city or town page, or the county's own
+    // page (all of its tracts), never a county's note on a city inside it, nor a city's on a neighborhood or ZIP code
+    // inside it, whose flag can differ (reviewbot, November 6, 2026: Clark County's note on Las Vegas). Other notes
+    // show wherever the selection reaches the area
     const own = selMeta && (selMeta.place || selMeta.town);
-    const show = own ? g === own || (g.length === 5 && inside) : inside && !(pl && pl.part);
+    const whole = g.length === 5 && !own && Object.keys(ST.tracts).filter(t => t.startsWith(g)).length === ids.size && [...ids].every(has);
+    const show = own ? g === own : whole;
     out.push(...by[sec].filter(n => typeof n === 'string' || show));
   }
-  return out.filter(ok).map(n => typeof n === 'string' ? n : n.text);
+  return out.filter(ok).map(n => typeof n === 'string' ? n : n.text.replace('{visitor_why}', () => visitorWhyNot(ctx.vi, ids)));
 }
 // Census tracts whose 2020-2024 ACS figures the Census Bureau withheld (errata note 148: 14 tracts in Suffolk County,
 // New York), carried from the 2018-2022 release (tract flag 'as'): every selection holding one says how many and how
@@ -3771,7 +4024,7 @@ function reportHTML(r) {
       <p class="fine">${esc(READINGS_LEAD)} ${READINGS.map(([k, t]) => `<b>${VERDICT[k]}</b>: ${esc(t)}.`).join(' ')} "Carried at the national norm" is how many stores residents' spending would carry at the US ratio of stores to spending; ${v.B ? '"carried at the rate similar places keep" scales that by their median retention, and "room for more" is that figure minus the stores here.' : 'with no similar places to compare this selection with, "room for more" is that figure minus the stores here.'} Restaurants are split into full and quick service by the mix of restaurants in each tract's ZIP codes (ZIP Business Patterns), since map listings sort them by cuisine. Planning estimates from public data, not a market study.</p>`),
     sec('peers', 'Compared with similar places', `<p>${pe.lead}</p>${pe.table ? peersChart(r, keepC) + tbl(filtRows(pills(pe.table), catRow)) + '<p class="fine">Typical is the median retention rate of similar places (same kind, setting and population band, across the US); the middle half runs from the 25th to the 75th percentile.</p>' : ''}`),
     sec('compare', 'Comparisons', (h => h ? pills(h) : '')(Compare.reportHTML())),
-    sec('region', 'The surrounding region', `<p>${rg.lead}</p>${rg.table ? regionChart(rg, keepC) + tbl(filtRows(rg.table, catRow)) + '<p class="fine">Projected leakage within 10, 25 and 50 miles of the selection, the selection left out, at the middle of the two estimates; a surplus means stores there sell more than residents\' spending supports. It shows where offsetting spending could come from or go, not where any one shopper goes.</p>' : ''}`),
+    sec('region', 'The surrounding region', `<p>${rg.lead}</p>${rg.table ? regionChart(rg, keepC) + tbl(filtRows(rg.table, catRow)) + '<p class="fine">Projected leakage within 10, 25 and 50 miles of the selection, the selection left out, and in the tracts where residents most often work (LEHD LODES), at the middle of the two estimates; a surplus means stores there sell more than residents\' spending supports, and tracts that live off visitors add none. It shows where offsetting spending could come from or go, not where any one shopper goes.</p>' : ''}`),
     sec('tax', 'Sales tax on spending that leaves', `<p>${tx.lead}</p>${taxChart(r, keepC)}${tbl(filtRows(tx.table, row => /class="tot"/.test(row) || catRow(row)).replace('<td>Categories where spending leaks</td>', allC ? '<td>Categories where spending leaks</td>' : '<td>All categories where spending leaks, including those not shown</td>'))}${tx.notes.length ? `<ul class="fine">${tx.notes.map(x => `<li>${esc(/[.!?)]$/.test(x) ? x : x + '.')}</li>`).join('')}</ul>` : ''}`),
     sec('stores', 'Stores here', `${storesHereChart(sel)}${tbl(storesTable(sel))}<p class="fine">${esc(storesNote(sel))} Food stores: USDA's list of stores that take SNAP. Other places: Overture Maps, which runs high for some kinds.</p>`),
     sec('programs', 'Programs and designations', `${programsChart(sel)}${tbl(programsTable(sel))}${(t => t ? `<h3>Public and land-bank property</h3><p>${t}</p>` : '')(pubPropText(sel))}${(t => t ? `<h3>Near transit</h3><p>${esc(t)}</p>` : '')(transitText(sel))}${(lx => `<h3>State and local programs</h3><p>${lx.lead}</p>${lx.tier ? `<p>${lx.tier}</p>` : ''}${localChart(sel)}${tbl(lx.table)}${(ST.local || []).length ? `<p class="fine">${localCoverage()}</p>` : ''}`)(localSection(sel))}${(h => h ? `<h3>Where to find programs</h3>${h}` : '')(linksHTML(sel))}<p class="fine">From the agencies' tract and ZIP-area lists; confirm a site's eligibility on the agency's own map. ${hzFine()}</p>`),

@@ -11,7 +11,8 @@
     -84.955,
     34.977
    ],
-   "bytes": 1646180,
+   "bytes": 1659406,
+   "od_bytes": 137726,
    "counties": 67
   },
   {
@@ -25,7 +26,8 @@
     -130.137,
     71.214
    ],
-   "bytes": 572813,
+   "bytes": 560069,
+   "od_bytes": 14800,
    "counties": 30
   },
   {
@@ -39,7 +41,8 @@
     -109.133,
     36.989
    ],
-   "bytes": 1654986,
+   "bytes": 1663751,
+   "od_bytes": 145564,
    "counties": 15
   },
   {
@@ -53,7 +56,8 @@
     -89.855,
     36.484
    ],
-   "bytes": 1045865,
+   "bytes": 1054715,
+   "od_bytes": 80133,
    "counties": 75
   },
   {
@@ -67,7 +71,8 @@
     -114.273,
     41.852
    ],
-   "bytes": 9216468,
+   "bytes": 9257813,
+   "od_bytes": 710436,
    "counties": 58
   },
   {
@@ -81,7 +86,8 @@
     -102.151,
     40.894
    ],
-   "bytes": 1756870,
+   "bytes": 1763971,
+   "od_bytes": 120284,
    "counties": 64
   },
   {
@@ -95,7 +101,8 @@
     -71.814,
     42.023
    ],
-   "bytes": 885376,
+   "bytes": 899048,
+   "od_bytes": 78880,
    "counties": 9
   },
   {
@@ -109,7 +116,8 @@
     -75.056,
     39.832
    ],
-   "bytes": 257695,
+   "bytes": 264820,
+   "od_bytes": 22570,
    "counties": 3
   },
   {
@@ -123,7 +131,8 @@
     -76.919,
     38.983
    ],
-   "bytes": 236421,
+   "bytes": 242359,
+   "od_bytes": 16151,
    "counties": 1
   },
   {
@@ -137,7 +146,8 @@
     -80.038,
     30.976
    ],
-   "bytes": 4930332,
+   "bytes": 4958932,
+   "od_bytes": 446375,
    "counties": 67
   },
   {
@@ -151,7 +161,8 @@
     -80.85,
     34.979
    ],
-   "bytes": 2796050,
+   "bytes": 2818240,
+   "od_bytes": 239928,
    "counties": 159
   },
   {
@@ -165,7 +176,8 @@
     -154.903,
     28.388
    ],
-   "bytes": 461439,
+   "bytes": 459405,
+   "od_bytes": 36793,
    "counties": 5
   },
   {
@@ -179,7 +191,8 @@
     -111.076,
     48.852
    ],
-   "bytes": 521200,
+   "bytes": 522771,
+   "od_bytes": 42516,
    "counties": 44
   },
   {
@@ -193,7 +206,8 @@
     -87.53,
     42.488
    ],
-   "bytes": 3472657,
+   "bytes": 3513371,
+   "od_bytes": 277139,
    "counties": 102
   },
   {
@@ -207,7 +221,8 @@
     -84.824,
     41.753
    ],
-   "bytes": 1676057,
+   "bytes": 1695587,
+   "od_bytes": 162439,
    "counties": 92
   },
   {
@@ -221,7 +236,8 @@
     -90.189,
     43.457
    ],
-   "bytes": 1084092,
+   "bytes": 1091194,
+   "od_bytes": 87202,
    "counties": 99
   },
   {
@@ -235,7 +251,8 @@
     -94.604,
     39.921
    ],
-   "bytes": 991952,
+   "bytes": 1000465,
+   "od_bytes": 77215,
    "counties": 105
   },
   {
@@ -249,7 +266,8 @@
     -82.121,
     39.117
    ],
-   "bytes": 1402529,
+   "bytes": 1421495,
+   "od_bytes": 124804,
    "counties": 120
   },
   {
@@ -263,7 +281,8 @@
     -89.397,
     33.003
    ],
-   "bytes": 1510159,
+   "bytes": 1519544,
+   "od_bytes": 129067,
    "counties": 64
   },
   {
@@ -277,7 +296,8 @@
     -67.018,
     47.295
    ],
-   "bytes": 551728,
+   "bytes": 551716,
+   "od_bytes": 38391,
    "counties": 16
   },
   {
@@ -291,7 +311,8 @@
     -75.066,
     39.708
    ],
-   "bytes": 1493370,
+   "bytes": 1519672,
+   "od_bytes": 120380,
    "counties": 24
   },
   {
@@ -305,7 +326,8 @@
     -69.956,
     42.867
    ],
-   "bytes": 1698550,
+   "bytes": 1721025,
+   "od_bytes": 141913,
    "counties": 14
   },
   {
@@ -319,7 +341,8 @@
     -82.425,
     48.045
    ],
-   "bytes": 2826271,
+   "bytes": 2841373,
+   "od_bytes": 259525,
    "counties": 83
   },
   {
@@ -333,7 +356,8 @@
     -90.12,
     49.067
    ],
-   "bytes": 1799197,
+   "bytes": 1811659,
+   "od_bytes": 137593,
    "counties": 87
   },
   {
@@ -347,7 +371,8 @@
     -88.149,
     34.991
    ],
-   "bytes": 897177,
+   "bytes": 903263,
+   "od_bytes": 84708,
    "counties": 82
   },
   {
@@ -361,7 +386,8 @@
     -89.227,
     40.526
    ],
-   "bytes": 2007979,
+   "bytes": 2032278,
+   "od_bytes": 157537,
    "counties": 115
   },
   {
@@ -375,7 +401,8 @@
     -104.094,
     48.934
    ],
-   "bytes": 462490,
+   "bytes": 462954,
+   "od_bytes": 29623,
    "counties": 56
   },
   {
@@ -389,7 +416,8 @@
     -95.59,
     42.913
    ],
-   "bytes": 774166,
+   "bytes": 778706,
+   "od_bytes": 52266,
    "counties": 93
   },
   {
@@ -403,7 +431,8 @@
     -114.056,
     41.652
    ],
-   "bytes": 703143,
+   "bytes": 709865,
+   "od_bytes": 67768,
    "counties": 17
   },
   {
@@ -417,7 +446,8 @@
     -70.732,
     45.106
    ],
-   "bytes": 453124,
+   "bytes": 457352,
+   "od_bytes": 33747,
    "counties": 10
   },
   {
@@ -431,7 +461,8 @@
     -73.922,
     41.293
    ],
-   "bytes": 2456652,
+   "bytes": 2496909,
+   "od_bytes": 155490,
    "counties": 21
   },
   {
@@ -445,7 +476,8 @@
     -103.1,
     36.931
    ],
-   "bytes": 680760,
+   "bytes": 685157,
+   "od_bytes": 55043,
    "counties": 33
   },
   {
@@ -459,7 +491,8 @@
     -71.915,
     44.979
    ],
-   "bytes": 5592606,
+   "bytes": 5682735,
+   "od_bytes": 405229,
    "counties": 62
   },
   {
@@ -473,7 +506,8 @@
     -75.543,
     36.544
    ],
-   "bytes": 2795109,
+   "bytes": 2820791,
+   "od_bytes": 245344,
    "counties": 100
   },
   {
@@ -487,7 +521,8 @@
     -96.606,
     48.91
    ],
-   "bytes": 405319,
+   "bytes": 405386,
+   "od_bytes": 21379,
    "counties": 53
   },
   {
@@ -501,7 +536,8 @@
     -80.541,
     41.957
    ],
-   "bytes": 3024878,
+   "bytes": 3055830,
+   "od_bytes": 306110,
    "counties": 88
   },
   {
@@ -515,7 +551,8 @@
     -94.456,
     36.965
    ],
-   "bytes": 1474452,
+   "bytes": 1481073,
+   "od_bytes": 113388,
    "counties": 77
   },
   {
@@ -529,7 +566,8 @@
     -116.899,
     46.185
    ],
-   "bytes": 1057031,
+   "bytes": 1072392,
+   "od_bytes": 92983,
    "counties": 36
   },
   {
@@ -543,7 +581,8 @@
     -74.7,
     42.216
    ],
-   "bytes": 3834025,
+   "bytes": 3883940,
+   "od_bytes": 319913,
    "counties": 67
   },
   {
@@ -557,7 +596,8 @@
     -71.163,
     42.014
    ],
-   "bytes": 256020,
+   "bytes": 261802,
+   "od_bytes": 21513,
    "counties": 5
   },
   {
@@ -571,7 +611,8 @@
     -78.604,
     35.176
    ],
-   "bytes": 1382437,
+   "bytes": 1395497,
+   "od_bytes": 125545,
    "counties": 46
   },
   {
@@ -585,7 +626,8 @@
     -96.494,
     45.805
    ],
-   "bytes": 497956,
+   "bytes": 497104,
+   "od_bytes": 22578,
    "counties": 66
   },
   {
@@ -599,7 +641,8 @@
     -81.752,
     36.637
    ],
-   "bytes": 1699143,
+   "bytes": 1723263,
+   "od_bytes": 160705,
    "counties": 95
   },
   {
@@ -613,7 +656,8 @@
     -93.699,
     36.41
    ],
-   "bytes": 6876406,
+   "bytes": 6913681,
+   "od_bytes": 578619,
    "counties": 254
   },
   {
@@ -627,7 +671,8 @@
     -109.273,
     41.944
    ],
-   "bytes": 850493,
+   "bytes": 854388,
+   "od_bytes": 65000,
    "counties": 29
   },
   {
@@ -641,7 +686,8 @@
     -71.675,
     44.978
    ],
-   "bytes": 308666,
+   "bytes": 310784,
+   "od_bytes": 18981,
    "counties": 14
   },
   {
@@ -655,7 +701,8 @@
     -75.293,
     39.341
    ],
-   "bytes": 2281053,
+   "bytes": 2313406,
+   "od_bytes": 195500,
    "counties": 133
   },
   {
@@ -669,7 +716,8 @@
     -117.05,
     48.989
    ],
-   "bytes": 1817930,
+   "bytes": 1830707,
+   "od_bytes": 166273,
    "counties": 39
   },
   {
@@ -683,7 +731,8 @@
     -77.769,
     40.598
    ],
-   "bytes": 676709,
+   "bytes": 683210,
+   "od_bytes": 54020,
    "counties": 55
   },
   {
@@ -697,7 +746,8 @@
     -87.07,
     46.853
    ],
-   "bytes": 1711159,
+   "bytes": 1722186,
+   "od_bytes": 148385,
    "counties": 72
   },
   {
@@ -711,7 +761,8 @@
     -104.106,
     44.832
    ],
-   "bytes": 220576,
+   "bytes": 220597,
+   "od_bytes": 14981,
    "counties": 23
   }
  ],
@@ -7856,15 +7907,462 @@
   ]
  },
  "visitor": {
-  "rule": "an area (its tracts summed) has a visitor economy when at least 50 of its homes are seasonal and they are at least 3 times the national share of housing units, or it has at least 5 lodging places and lodging places per 1,000 residents are at or above the 95th percentile of places with 1,000+ residents",
+  "rule": "USDA Economic Research Service's recreation measure (County Typology Codes, 2025): a county is flagged when ERS classes it as high recreation concentration; any other area when its weighted score on the same measures is at least 0.67 standard deviations above the mean of nonmetro counties: jobs in arts, entertainment and recreation, hotels and restaurants, and real estate as a share of all jobs (LODES; weight 0.6, standing in for ERS's earnings and jobs shares) and homes held for seasonal or occasional use as a share of all homes (ACS; weight 0.4), joined by a visitor signal: lodging jobs at least twice the US share of jobs, seasonal homes at least the nonmetro county average, or at least 5 lodging places and as many per resident as the top 5% of places",
   "flag": {
-   "seasonal_multiple": 3,
-   "min_seasonal_units": 50,
-   "min_lodging_places": 5
+   "w_jobs": 0.6,
+   "w_housing": 0.4,
+   "cutoff": 0.67,
+   "guard_lodging_multiple": 2.0,
+   "min_lodging_places": 5,
+   "region_lodging_share": 0.1,
+   "region_seasonal_multiple": 3,
+   "caution_seasonal_multiple": 3,
+   "caution_min_seasonal": 50
   },
   "national_seasonal_share": 0.03299,
   "national_lodging_per_1000": 0.4117,
-  "lodging_per_1000_p95": 2.1658
+  "lodging_per_1000_p95": 2.1658,
+  "ers_cal": {
+   "mj": 10.3798,
+   "sj": 6.9134,
+   "mh": 8.291,
+   "sh": 10.3573,
+   "nonmetro_counties": 1958
+  },
+  "us_lodging_job_share": 0.012109,
+  "ers_counties": [
+   "01003",
+   "02060",
+   "02066",
+   "02068",
+   "02100",
+   "02105",
+   "02122",
+   "02130",
+   "02164",
+   "02170",
+   "02230",
+   "02282",
+   "04005",
+   "04007",
+   "04012",
+   "04015",
+   "04017",
+   "04021",
+   "04025",
+   "04027",
+   "05023",
+   "05051",
+   "05097",
+   "06003",
+   "06005",
+   "06009",
+   "06017",
+   "06027",
+   "06041",
+   "06043",
+   "06045",
+   "06051",
+   "06053",
+   "06055",
+   "06057",
+   "06061",
+   "06063",
+   "06065",
+   "06079",
+   "06083",
+   "06087",
+   "06091",
+   "06097",
+   "06105",
+   "06109",
+   "08007",
+   "08015",
+   "08019",
+   "08023",
+   "08027",
+   "08029",
+   "08033",
+   "08037",
+   "08045",
+   "08047",
+   "08049",
+   "08051",
+   "08053",
+   "08055",
+   "08057",
+   "08065",
+   "08067",
+   "08069",
+   "08079",
+   "08091",
+   "08093",
+   "08097",
+   "08105",
+   "08107",
+   "08111",
+   "08113",
+   "08117",
+   "08119",
+   "10005",
+   "12005",
+   "12011",
+   "12015",
+   "12017",
+   "12021",
+   "12035",
+   "12037",
+   "12045",
+   "12055",
+   "12061",
+   "12071",
+   "12081",
+   "12085",
+   "12087",
+   "12089",
+   "12091",
+   "12095",
+   "12097",
+   "12099",
+   "12103",
+   "12109",
+   "12111",
+   "12113",
+   "12115",
+   "12119",
+   "12127",
+   "12131",
+   "13085",
+   "13111",
+   "13123",
+   "13127",
+   "13133",
+   "13145",
+   "13181",
+   "13191",
+   "13227",
+   "13237",
+   "13241",
+   "13281",
+   "13291",
+   "13311",
+   "15001",
+   "15005",
+   "15007",
+   "15009",
+   "16003",
+   "16007",
+   "16013",
+   "16015",
+   "16017",
+   "16037",
+   "16043",
+   "16055",
+   "16059",
+   "16079",
+   "16081",
+   "16085",
+   "17085",
+   "18013",
+   "18061",
+   "18115",
+   "18117",
+   "18151",
+   "18155",
+   "18181",
+   "19059",
+   "21039",
+   "21081",
+   "21143",
+   "22071",
+   "23005",
+   "23007",
+   "23009",
+   "23013",
+   "23015",
+   "23017",
+   "23021",
+   "23027",
+   "23031",
+   "24009",
+   "24023",
+   "24029",
+   "24035",
+   "24041",
+   "24047",
+   "25001",
+   "25003",
+   "25007",
+   "25019",
+   "26001",
+   "26003",
+   "26009",
+   "26011",
+   "26015",
+   "26019",
+   "26021",
+   "26023",
+   "26027",
+   "26029",
+   "26031",
+   "26033",
+   "26035",
+   "26039",
+   "26047",
+   "26051",
+   "26053",
+   "26055",
+   "26069",
+   "26071",
+   "26079",
+   "26083",
+   "26085",
+   "26089",
+   "26095",
+   "26097",
+   "26101",
+   "26103",
+   "26105",
+   "26119",
+   "26127",
+   "26129",
+   "26131",
+   "26135",
+   "26137",
+   "26141",
+   "26143",
+   "26153",
+   "27001",
+   "27005",
+   "27021",
+   "27031",
+   "27035",
+   "27041",
+   "27057",
+   "27061",
+   "27071",
+   "27075",
+   "27077",
+   "27111",
+   "27115",
+   "27137",
+   "28045",
+   "28047",
+   "28143",
+   "29015",
+   "29029",
+   "29085",
+   "29141",
+   "29153",
+   "29209",
+   "29213",
+   "30001",
+   "30007",
+   "30009",
+   "30029",
+   "30031",
+   "30039",
+   "30047",
+   "30053",
+   "30057",
+   "30059",
+   "30061",
+   "30063",
+   "30067",
+   "30081",
+   "30089",
+   "30097",
+   "31073",
+   "31091",
+   "31101",
+   "32003",
+   "32005",
+   "32007",
+   "32031",
+   "33001",
+   "33003",
+   "33007",
+   "33009",
+   "33015",
+   "34001",
+   "34009",
+   "34025",
+   "34029",
+   "34037",
+   "35007",
+   "35027",
+   "35049",
+   "35051",
+   "35055",
+   "36021",
+   "36031",
+   "36039",
+   "36041",
+   "36077",
+   "36097",
+   "36099",
+   "36105",
+   "36111",
+   "36113",
+   "36123",
+   "37005",
+   "37009",
+   "37011",
+   "37019",
+   "37021",
+   "37031",
+   "37039",
+   "37043",
+   "37053",
+   "37055",
+   "37075",
+   "37087",
+   "37095",
+   "37099",
+   "37113",
+   "37125",
+   "37129",
+   "37137",
+   "37141",
+   "37149",
+   "37173",
+   "37175",
+   "37189",
+   "38007",
+   "39043",
+   "39073",
+   "39123",
+   "40041",
+   "40085",
+   "40091",
+   "40125",
+   "41007",
+   "41015",
+   "41017",
+   "41027",
+   "41031",
+   "41041",
+   "41057",
+   "41063",
+   "41069",
+   "42025",
+   "42089",
+   "42103",
+   "42113",
+   "42127",
+   "44001",
+   "44005",
+   "44009",
+   "45013",
+   "45019",
+   "45043",
+   "45051",
+   "46033",
+   "46081",
+   "46107",
+   "46119",
+   "47137",
+   "47155",
+   "48007",
+   "48019",
+   "48031",
+   "48043",
+   "48053",
+   "48091",
+   "48149",
+   "48167",
+   "48171",
+   "48221",
+   "48243",
+   "48265",
+   "48267",
+   "48299",
+   "48319",
+   "48327",
+   "48363",
+   "48377",
+   "48385",
+   "49001",
+   "49009",
+   "49017",
+   "49019",
+   "49021",
+   "49025",
+   "49031",
+   "49033",
+   "49043",
+   "49051",
+   "49053",
+   "49055",
+   "50003",
+   "50009",
+   "50013",
+   "50015",
+   "50019",
+   "50021",
+   "50025",
+   "50027",
+   "51017",
+   "51095",
+   "51103",
+   "51115",
+   "51119",
+   "51125",
+   "51127",
+   "51131",
+   "51133",
+   "51139",
+   "51157",
+   "51193",
+   "51810",
+   "51830",
+   "53007",
+   "53013",
+   "53017",
+   "53029",
+   "53031",
+   "53037",
+   "53043",
+   "53045",
+   "53049",
+   "53051",
+   "53055",
+   "53059",
+   "53073",
+   "54025",
+   "54037",
+   "54065",
+   "54075",
+   "54093",
+   "55001",
+   "55007",
+   "55013",
+   "55021",
+   "55029",
+   "55031",
+   "55037",
+   "55041",
+   "55047",
+   "55051",
+   "55057",
+   "55067",
+   "55075",
+   "55077",
+   "55083",
+   "55085",
+   "55095",
+   "55111",
+   "55113",
+   "55125",
+   "55127",
+   "55129",
+   "55137",
+   "56007",
+   "56019",
+   "56029",
+   "56035",
+   "56039"
+  ]
  },
  "peers": {
   "big_city": 250000,
@@ -19548,5 +20046,908 @@
     "micro"
    ]
   }
+ },
+ "commute": {
+  "bands": [
+   10,
+   25,
+   50
+  ],
+  "top_share": 0.015,
+  "top_n": 8,
+  "years": [
+   2016,
+   2021,
+   2024
+  ],
+  "year_by_state": {
+   "AL": 2024,
+   "AK": 2016,
+   "AZ": 2024,
+   "AR": 2024,
+   "CA": 2024,
+   "CO": 2024,
+   "CT": 2024,
+   "DE": 2024,
+   "DC": 2024,
+   "FL": 2024,
+   "GA": 2024,
+   "HI": 2024,
+   "ID": 2024,
+   "IL": 2024,
+   "IN": 2024,
+   "IA": 2024,
+   "KS": 2024,
+   "KY": 2024,
+   "LA": 2024,
+   "ME": 2024,
+   "MD": 2024,
+   "MA": 2024,
+   "MI": 2021,
+   "MN": 2024,
+   "MS": 2024,
+   "MO": 2024,
+   "MT": 2024,
+   "NE": 2024,
+   "NV": 2024,
+   "NH": 2024,
+   "NJ": 2024,
+   "NM": 2024,
+   "NY": 2024,
+   "NC": 2024,
+   "ND": 2024,
+   "OH": 2024,
+   "OK": 2024,
+   "OR": 2024,
+   "PA": 2024,
+   "RI": 2024,
+   "SC": 2024,
+   "SD": 2024,
+   "TN": 2024,
+   "TX": 2024,
+   "UT": 2024,
+   "VT": 2024,
+   "VA": 2024,
+   "WA": 2024,
+   "WV": 2024,
+   "WI": 2024,
+   "WY": 2024
+  },
+  "jobs": 152951612,
+  "jobs_home_not_in_tracts": 0,
+  "jobs_work_not_in_tracts": 0,
+  "near_work": {
+   "share": 0.1626,
+   "anchor_year": 2021,
+   "years": [
+    2024,
+    2025
+   ],
+   "a": 0.2838
+  }
+ },
+ "border": {
+  "miles": 20,
+  "marked": {
+   "sales_points": 3.0,
+   "gas_cents": 10.0,
+   "cig_dollars": 0.5
+  },
+  "rates": {
+   "AK": {
+    "cig": {
+     "rate": 2.0,
+     "effective": "2007-07-01",
+     "source": "https://tax.alaska.gov/programs/programs/reports/Historical.aspx?60170",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 8.0,
+     "effective": "current (read 2026-11-04)",
+     "source": "https://tax.alaska.gov/programs/programs/reports/Historical.aspx?60210",
+     "through": null,
+     "next": null
+    }
+   },
+   "AL": {
+    "cig": {
+     "rate": 0.675,
+     "effective": "current (read 2026-11-04)",
+     "source": "https://www.revenue.alabama.gov/tobacco-tax-rates/",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 30.0,
+     "effective": "2025-07-01",
+     "source": "https://www.revenue.alabama.gov/tax-types/terminal-excise-tax-gasoline-and-diesel-fuel-taxes/",
+     "through": null,
+     "next": null
+    }
+   },
+   "AR": {
+    "cig": {
+     "rate": 1.15,
+     "effective": "current (read 2026-11-04)",
+     "source": "https://www.dfa.arkansas.gov/office/taxes/excise-tax-administration/miscellaneous-tax/arkansas-miscellaneous-tax-laws/cigarettes/",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 24.7,
+     "effective": "2026-10-01",
+     "source": "https://www.dfa.arkansas.gov/wp-content/uploads/2026MotorFuelsTaxRateAnnouncement.pdf",
+     "through": null,
+     "next": null
+    }
+   },
+   "AZ": {
+    "cig": {
+     "rate": 2.0,
+     "effective": "current (read 2026-11-04)",
+     "source": "https://azdor.gov/business/tobacco-luxury-tax/tobacco-luxury-tax-faqs",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 18.0,
+     "effective": "statute (A.R.S. 28-5606)",
+     "source": "https://www.azleg.gov/ars/28/05606.htm",
+     "through": null,
+     "next": null
+    }
+   },
+   "CA": {
+    "cig": {
+     "rate": 2.87,
+     "effective": "2026-07-01 (row; rate unchanged since 2017)",
+     "source": "https://www.cdtfa.ca.gov/taxes-and-fees/special-taxes-and-fees-tax-rates/",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 63.4,
+     "effective": "2026-07-01",
+     "source": "https://cdtfa.ca.gov/formspubs/jun26tib.pdf",
+     "through": null,
+     "next": null
+    }
+   },
+   "CO": {
+    "cig": {
+     "rate": 2.24,
+     "effective": "2024-07-01",
+     "source": "https://tax.colorado.gov/cigarette-tax",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 28.0,
+     "effective": "2026-07-01 to 2027-06-30 (22c tax + 6c road usage fee)",
+     "source": "https://tax.colorado.gov/fuel-tax-and-fee-rates",
+     "through": null,
+     "next": null
+    }
+   },
+   "CT": {
+    "cig": {
+     "rate": 4.35,
+     "effective": "current (read 2026-11-04)",
+     "source": "https://portal.ct.gov/DRS/Taxes/Cigarette-Tax/Tax-Information",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 25.0,
+     "effective": "2000-07-01",
+     "source": "https://www.cga.ct.gov/current/pub/chap_221.htm",
+     "through": null,
+     "next": null
+    }
+   },
+   "DC": {
+    "cig": {
+     "rate": 5.08,
+     "effective": "2026-10-01 (Tax Year 2027)",
+     "source": "https://otr.cfo.dc.gov/sites/default/files/dc/sites/otr/documents/Notice%20of%20Change%20in%20the%20Surtax%20on%20Cigarette%20Packages%20for%20the%20Tax%20Year%202027.pdf",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 35.7,
+     "effective": "Tax Year 2026 (October 1, 2025 to September 30, 2026); the latest posted: OTR and the DC Register had no Tax Year 2027 amount on November 5, 2026",
+     "source": "https://otr.cfo.dc.gov/page/motor-vehicle-fuel-tax",
+     "through": null,
+     "next": null
+    }
+   },
+   "DE": {
+    "cig": {
+     "rate": 2.1,
+     "effective": "2017-09-01",
+     "source": "https://revenue.delaware.gov/frequently-asked-questions/cigarette-and-tobacco-tax-faqs",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 23.0,
+     "effective": "1995-01-01 (statute)",
+     "source": "https://delcode.delaware.gov/title30/c051/sc01/index.html",
+     "through": null,
+     "next": null
+    }
+   },
+   "FL": {
+    "cig": {
+     "rate": 1.339,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://www.flsenate.gov/Laws/Statutes/2026/210.02",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 38.025,
+     "effective": "2026-01-01 (statewide minimum total); state part 22.0",
+     "source": "https://floridarevenue.com/taxes/tips/Documents/TIP_25B05-05.pdf",
+     "through": null,
+     "next": null
+    }
+   },
+   "GA": {
+    "cig": {
+     "rate": 0.37,
+     "effective": "current (read 2026-11-04)",
+     "source": "https://dor.georgia.gov/alcohol-tobacco/excise-taxes/tobacco-excise-taxes",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 33.3,
+     "effective": "2026-01-01 to 2026-12-31",
+     "source": "https://dor.georgia.gov/node/60006",
+     "through": null,
+     "next": null
+    }
+   },
+   "HI": {
+    "cig": {
+     "rate": 3.6,
+     "effective": "2026-01-01 (Act 95, 2025)",
+     "source": "https://files.hawaii.gov/tax/news/announce/ann25-06_amended.pdf",
+     "through": null,
+     "next": null
+    }
+   },
+   "IA": {
+    "cig": {
+     "rate": 1.36,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://www.legis.iowa.gov/docs/code/453A.6.pdf",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 30.0,
+     "effective": "current; unchanged July 1, 2026",
+     "source": "https://revenue.iowa.gov/press-release/2026-01-27/iowa-fuel-tax-rate-change-effective-july-1-2026",
+     "through": null,
+     "next": null
+    }
+   },
+   "ID": {
+    "cig": {
+     "rate": 0.57,
+     "effective": "2005-07-01 (statute)",
+     "source": "https://legislature.idaho.gov/statutesrules/idstat/title63/t63ch25/sect63-2506/",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 32.0,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://legislature.idaho.gov/statutesrules/idstat/title63/t63ch24/sect63-2402/",
+     "through": null,
+     "next": null
+    }
+   },
+   "IL": {
+    "cig": {
+     "rate": 2.98,
+     "effective": "2019-07-01",
+     "source": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=003501300K2",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 48.3,
+     "effective": "2026-07-01",
+     "source": "https://tax.illinois.gov/research/publications/bulletins/fy-2026-23.html",
+     "through": null,
+     "next": null
+    }
+   },
+   "IN": {
+    "cig": {
+     "rate": 2.995,
+     "effective": "2025-07-01",
+     "source": "https://www.in.gov/dor/files/gb205.pdf",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 37.0,
+     "effective": "2026-07-01",
+     "source": "https://www.in.gov/dor/files/dn43.pdf",
+     "through": null,
+     "next": null
+    }
+   },
+   "KS": {
+    "cig": {
+     "rate": 1.29,
+     "effective": "2015-07-01 (statute)",
+     "source": "https://www.ksrevisor.gov/statutes/chapters/ch79/079_033_0010.html",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 24.0,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://www.ksrevisor.gov/statutes/chapters/ch79/079_034_0141.html",
+     "through": null,
+     "next": null
+    }
+   },
+   "KY": {
+    "cig": {
+     "rate": 1.1,
+     "effective": "2018-07-01 (statute)",
+     "source": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=57929",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 26.4,
+     "effective": "2026-07-01 (frozen; emergency reg 103 KAR 43:341E)",
+     "source": "https://apps.legislature.ky.gov/law/kar/downloads/docs/18041/document.engrossed.pdf",
+     "through": null,
+     "next": null
+    }
+   },
+   "LA": {
+    "cig": {
+     "rate": 1.08,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://legis.la.gov/Legis/Law.aspx?d=102594",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 20.0,
+     "effective": "current (read 2026-11-04)",
+     "source": "https://revenue.louisiana.gov/tax-education-and-faqs/faqs/excise-taxes/motor-fuel-taxes/what-is-the-tax-rate-on-gasoline-diesel-and-special-fuels",
+     "through": null,
+     "next": null
+    }
+   },
+   "MA": {
+    "cig": {
+     "rate": 3.51,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter64C/Section6",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 24.0,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter64A/Section1",
+     "through": null,
+     "next": null
+    }
+   },
+   "MD": {
+    "cig": {
+     "rate": 5.0,
+     "effective": "2025-07-01 (statute)",
+     "source": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gtg&section=12-105",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 46.6,
+     "effective": "2026-07-01",
+     "source": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/alerts/tax-alert-maryland-motor-fuel-tax-rate-changes-fy27.pdf",
+     "through": null,
+     "next": null
+    }
+   },
+   "ME": {
+    "cig": {
+     "rate": 3.5,
+     "effective": "2026-01-05 (statute, PL 2025)",
+     "source": "https://legislature.maine.gov/statutes/36/title36sec4365-2.html",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 30.0,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://legislature.maine.gov/statutes/36/title36sec2903.html",
+     "through": null,
+     "next": null
+    }
+   },
+   "MI": {
+    "cig": {
+     "rate": 2.0,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-205-427",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 52.4,
+     "effective": "2026-01-01",
+     "source": "https://www.michigan.gov/taxes/business-taxes/motor-fuel/current-tax-rates-for-motor-fuel-and-alternative-fuel",
+     "through": null,
+     "next": null
+    }
+   },
+   "MN": {
+    "cig": {
+     "rate": 3.88,
+     "effective": "2026-01-01 to 2026-12-31",
+     "source": "https://www.revenue.state.mn.us/mndor-pp/726?type=html",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 32.6,
+     "effective": "2026-01-01 to 2026-12-31",
+     "source": "https://www.revenue.state.mn.us/petroleum-tax-fuel-excise-tax-rates-and-fees",
+     "through": null,
+     "next": null
+    }
+   },
+   "MO": {
+    "cig": {
+     "rate": 0.17,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://revisor.mo.gov/main/OneSection.aspx?section=149.015",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 29.5,
+     "effective": "2025-07-01 (statute)",
+     "source": "https://revisor.mo.gov/main/OneSection.aspx?section=142.803",
+     "through": null,
+     "next": null
+    }
+   },
+   "MS": {
+    "cig": {
+     "rate": 0.68,
+     "effective": "current (read 2026-11-04)",
+     "source": "https://www.dor.ms.gov/business/tobacco",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 24.0,
+     "effective": "2026-07-01 to 2027-06-30",
+     "source": "https://www.dor.ms.gov/sites/default/files/notices-technical-bulletins/Petroleum%20Distributors%27%20Information%20Bulletin%20Rev.%206-25.pdf",
+     "through": null,
+     "next": null
+    }
+   },
+   "MT": {
+    "cig": {
+     "rate": 1.7,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://archive.legmt.gov/bills/mca/title_0160/chapter_0110/part_0010/section_0110/0160-0110-0010-0110.html",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 33.0,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://archive.legmt.gov/bills/mca/title_0150/chapter_0700/part_0040/section_0030/0150-0700-0040-0030.html",
+     "through": null,
+     "next": null
+    }
+   },
+   "NC": {
+    "cig": {
+     "rate": 0.45,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_105/GS_105-113.5.html",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 0.0,
+     "effective": "2026-10-10",
+     "source": "https://www.ncdor.gov/important-notice-temporary-suspension-motor-fuel-excise-tax-and-dyed-diesel-enforcement",
+     "through": "2026-11-30",
+     "next": {
+      "rate": 41.0,
+      "start": "2026-12-01"
+     }
+    }
+   },
+   "ND": {
+    "cig": {
+     "rate": 0.44,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://ndlegis.gov/cencode/t57c36.pdf",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 23.0,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://ndlegis.gov/cencode/t57c43-1.pdf",
+     "through": null,
+     "next": null
+    }
+   },
+   "NE": {
+    "cig": {
+     "rate": 0.64,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://nebraskalegislature.gov/laws/statutes.php?statute=77-2602",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 31.8,
+     "effective": "2026-07-01 to 2026-12-31",
+     "source": "https://revenue.nebraska.gov/sites/default/files/doc/news-release/fuels/mfrate_6-2026.pdf",
+     "through": null,
+     "next": null
+    }
+   },
+   "NH": {
+    "cig": {
+     "rate": 1.78,
+     "effective": "",
+     "source": "https://gc.nh.gov/rsa/html/V/78/78-mrg.htm",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 22.2,
+     "effective": "2014-07-01",
+     "source": "https://www.gc.nh.gov/lba/Revenues/FY%2026-27/HWM%20Agency%20Presentations/DOS%20House%20Ways%20and%20Means%20Presentation%20Final%20-%20with%20Correction.pdf",
+     "through": null,
+     "next": null
+    }
+   },
+   "NJ": {
+    "cig": {
+     "rate": 3.0,
+     "effective": "2025-08-01 (P.L. 2025, c. 68)",
+     "source": "https://www.nj.gov/treasury/taxation/cigarette.shtml",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 49.1,
+     "effective": "2026-01-01",
+     "source": "https://www.nj.gov/treasury/news/2025/12012025.shtml",
+     "through": null,
+     "next": null
+    }
+   },
+   "NM": {
+    "cig": {
+     "rate": 2.0,
+     "effective": "2019-07-01",
+     "source": "https://nmonesource.com/",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 17.0,
+     "effective": "current (read 2026-11-04)",
+     "source": "https://www.tax.newmexico.gov/businesses/gasoline-tax/",
+     "through": null,
+     "next": null
+    }
+   },
+   "NV": {
+    "cig": {
+     "rate": 1.8,
+     "effective": "current (read 2026-11-04)",
+     "source": "https://tax.nv.gov/tax-types/cigarette-other-tobacco-products/",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 24.0,
+     "effective": "statute (NRS chapter 365, read 2026-11-04)",
+     "source": "https://www.leg.state.nv.us/nrs/nrs-365.html",
+     "through": null,
+     "next": null
+    }
+   },
+   "NY": {
+    "cig": {
+     "rate": 5.35,
+     "effective": "current (read 2026-11-04)",
+     "source": "https://www.tax.ny.gov/bus/cig/cigidx.htm",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 23.85,
+     "effective": "2026-01-01 to 2026-12-31",
+     "source": "https://tax.ny.gov/pubs_and_bulls/publications/pub-908.htm",
+     "through": null,
+     "next": null
+    }
+   },
+   "OH": {
+    "cig": {
+     "rate": 1.6,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://codes.ohio.gov/ohio-revised-code/section-5743.02",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 38.5,
+     "effective": "2019-07-01 (statute)",
+     "source": "https://codes.ohio.gov/ohio-revised-code/section-5735.05",
+     "through": null,
+     "next": null
+    }
+   },
+   "OK": {
+    "cig": {
+     "rate": 2.03,
+     "effective": "2018-08-24",
+     "source": "https://www.oscn.net/applications/oscn/index.asp?ftdb=STOKST68&level=1",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 19.0,
+     "effective": "current (read 2026-11-04)",
+     "source": "https://oklahoma.gov/content/sok-tax/en/businesses/other-taxes.html",
+     "through": null,
+     "next": null
+    }
+   },
+   "OR": {
+    "cig": {
+     "rate": 3.33,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://www.oregonlegislature.gov/bills_laws/ors/ors323.html",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 40.0,
+     "effective": "2024-01-01",
+     "source": "https://www.oregon.gov/odot/FTG/Pages/Current%20Fuel%20Tax%20Rates.aspx",
+     "through": null,
+     "next": null
+    }
+   },
+   "PA": {
+    "cig": {
+     "rate": 2.6,
+     "effective": "2016-08-01",
+     "source": "https://www.pa.gov/agencies/revenue/resources/tax-types-and-information/tobacco-products/cigarette-tax",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 57.6,
+     "effective": "2026-01-01 (calendar 2026)",
+     "source": "https://www.pa.gov/agencies/revenue/resources/tax-rates/motor-fuel-tax-rates.html",
+     "through": null,
+     "next": null
+    }
+   },
+   "RI": {
+    "cig": {
+     "rate": 4.5,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://webserver.rilegislature.gov/Statutes/TITLE44/44-20/44-20-12.htm",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 40.0,
+     "effective": "2025-07-01",
+     "source": "https://tax.ri.gov/sites/g/files/xkgbur541/files/2025-06/ADV_2025_11_Motor_Fuel_Increase.pdf",
+     "through": null,
+     "next": null
+    }
+   },
+   "SC": {
+    "cig": {
+     "rate": 0.57,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://www.scstatehouse.gov/code/t12c021.php",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 28.0,
+     "effective": "2022-07-01",
+     "source": "https://dor.sc.gov/tax/motor-fuel",
+     "through": null,
+     "next": null
+    }
+   },
+   "SD": {
+    "cig": {
+     "rate": 1.53,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://sdlegislature.gov/api/Statutes/10-50-3.html",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 28.0,
+     "effective": "2015-04-01 (statute)",
+     "source": "https://sdlegislature.gov/api/Statutes/10-47B-4.2.html",
+     "through": null,
+     "next": null
+    }
+   },
+   "TN": {
+    "cig": {
+     "rate": 0.62,
+     "effective": "2007-07-01",
+     "source": "https://www.tn.gov/content/dam/tn/revenue/documents/tax_manuals/june-2025/Tobacco-Tax.pdf",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 26.0,
+     "effective": "statute; manual August 2025",
+     "source": "https://www.tn.gov/content/dam/tn/revenue/documents/tax_manuals/Motor-Fuel-Manual-Aug-2025.pdf",
+     "through": null,
+     "next": null
+    }
+   },
+   "TX": {
+    "cig": {
+     "rate": 1.41,
+     "effective": "Comptroller FY2025 revenue guide",
+     "source": "https://Comptroller.Texas.Gov/transparency/revenue/docs/96-1774.pdf",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 20.0,
+     "effective": "statute (Tax Code 162.102); Comptroller FY2025 revenue guide",
+     "source": "https://Comptroller.Texas.Gov/transparency/revenue/docs/96-1774.pdf",
+     "through": null,
+     "next": null
+    }
+   },
+   "UT": {
+    "cig": {
+     "rate": 2.2,
+     "effective": "2026-07-01 (H.B. 337, 2026)",
+     "source": "https://tax.utah.gov/forms-pubs/pubs/pub-65",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 31.9,
+     "effective": "2026-07-01 to 2026-12-31 (separate motor fuel rate)",
+     "source": "https://tax.utah.gov/fuel/rates",
+     "through": null,
+     "next": null
+    }
+   },
+   "VA": {
+    "cig": {
+     "rate": 0.6,
+     "effective": "current (read 2026-11-04)",
+     "source": "https://www.tax.virginia.gov/cigarette-tax",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 32.6,
+     "effective": "2026-07-01 to 2027-06-30",
+     "source": "https://www.dmv.virginia.gov/businesses/tax-act/fuels/tax-rates",
+     "through": null,
+     "next": null
+    }
+   },
+   "VT": {
+    "cig": {
+     "rate": 3.08,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://legislature.vermont.gov/statutes/section/32/205/07771",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 33.84,
+     "effective": "2026-10-01",
+     "source": "https://dmv.vermont.gov/CVO/fuel-tax/mftia-mfta-quarterly-fees",
+     "through": null,
+     "next": null
+    }
+   },
+   "WA": {
+    "cig": {
+     "rate": 3.025,
+     "effective": "current (read 2026-11-04)",
+     "source": "https://dor.wa.gov/taxes-rates/other-taxes/cigarette-tax",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 56.5,
+     "effective": "2026-07-01",
+     "source": "https://dol.wa.gov/ru/node/3202",
+     "through": null,
+     "next": null
+    }
+   },
+   "WI": {
+    "cig": {
+     "rate": 2.52,
+     "effective": "current (read 2026-11-04)",
+     "source": "https://revenue.wi.gov/Pages/FAQS/ise-cigar.aspx",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 30.9,
+     "effective": "statute (read 2026-11-04)",
+     "source": "https://www.revenue.wi.gov/Pages/FAQS/ise-mofuel.aspx",
+     "through": null,
+     "next": null
+    }
+   },
+   "WV": {
+    "cig": {
+     "rate": 1.2,
+     "effective": "2016-07-01 (statute)",
+     "source": "https://code.wvlegislature.gov/11-17-3/",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 35.7,
+     "effective": "2026-01-01 to 2026-12-31",
+     "source": "https://tax.wv.gov/Documents/MotorFuel/2026/MotorFuelRates.2026.pdf",
+     "through": null,
+     "next": null
+    }
+   },
+   "WY": {
+    "cig": {
+     "rate": 0.6,
+     "effective": "statute (Wyoming Statutes Title 39, read 2026-11-04)",
+     "source": "https://wyoleg.gov/statutes/compress/title39.pdf",
+     "through": null,
+     "next": null
+    },
+    "gas": {
+     "rate": 24.0,
+     "effective": "statute (Wyoming Statutes Title 39, read 2026-11-04)",
+     "source": "https://wyoleg.gov/statutes/compress/title39.pdf",
+     "through": null,
+     "next": null
+    }
+   }
+  },
+  "unconfirmed": 0,
+  "complete": false
  }
 }
