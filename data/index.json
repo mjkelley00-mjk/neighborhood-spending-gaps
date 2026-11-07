@@ -11,7 +11,7 @@
     -84.955,
     34.977
    ],
-   "bytes": 1659406,
+   "bytes": 1659147,
    "od_bytes": 137726,
    "counties": 67
   },
@@ -26,7 +26,7 @@
     -130.137,
     71.214
    ],
-   "bytes": 560069,
+   "bytes": 560013,
    "od_bytes": 14800,
    "counties": 30
   },
@@ -41,7 +41,7 @@
     -109.133,
     36.989
    ],
-   "bytes": 1663751,
+   "bytes": 1663440,
    "od_bytes": 145564,
    "counties": 15
   },
@@ -56,7 +56,7 @@
     -89.855,
     36.484
    ],
-   "bytes": 1054715,
+   "bytes": 1054531,
    "od_bytes": 80133,
    "counties": 75
   },
@@ -71,7 +71,7 @@
     -114.273,
     41.852
    ],
-   "bytes": 9257813,
+   "bytes": 9256208,
    "od_bytes": 710436,
    "counties": 58
   },
@@ -86,7 +86,7 @@
     -102.151,
     40.894
    ],
-   "bytes": 1763971,
+   "bytes": 1763734,
    "od_bytes": 120284,
    "counties": 64
   },
@@ -101,7 +101,7 @@
     -71.814,
     42.023
    ],
-   "bytes": 899048,
+   "bytes": 898946,
    "od_bytes": 78880,
    "counties": 9
   },
@@ -116,7 +116,7 @@
     -75.056,
     39.832
    ],
-   "bytes": 264820,
+   "bytes": 264779,
    "od_bytes": 22570,
    "counties": 3
   },
@@ -131,7 +131,7 @@
     -76.919,
     38.983
    ],
-   "bytes": 242359,
+   "bytes": 242311,
    "od_bytes": 16151,
    "counties": 1
   },
@@ -146,7 +146,7 @@
     -80.038,
     30.976
    ],
-   "bytes": 4958932,
+   "bytes": 4958200,
    "od_bytes": 446375,
    "counties": 67
   },
@@ -161,7 +161,7 @@
     -80.85,
     34.979
    ],
-   "bytes": 2818240,
+   "bytes": 2817697,
    "od_bytes": 239928,
    "counties": 159
   },
@@ -176,7 +176,7 @@
     -154.903,
     28.388
    ],
-   "bytes": 459405,
+   "bytes": 459293,
    "od_bytes": 36793,
    "counties": 5
   },
@@ -191,7 +191,7 @@
     -111.076,
     48.852
    ],
-   "bytes": 522771,
+   "bytes": 522719,
    "od_bytes": 42516,
    "counties": 44
   },
@@ -206,7 +206,7 @@
     -87.53,
     42.488
    ],
-   "bytes": 3513371,
+   "bytes": 3512889,
    "od_bytes": 277139,
    "counties": 102
   },
@@ -221,7 +221,7 @@
     -84.824,
     41.753
    ],
-   "bytes": 1695587,
+   "bytes": 1695373,
    "od_bytes": 162439,
    "counties": 92
   },
@@ -236,7 +236,7 @@
     -90.189,
     43.457
    ],
-   "bytes": 1091194,
+   "bytes": 1091036,
    "od_bytes": 87202,
    "counties": 99
   },
@@ -251,7 +251,7 @@
     -94.604,
     39.921
    ],
-   "bytes": 1000465,
+   "bytes": 1000335,
    "od_bytes": 77215,
    "counties": 105
   },
@@ -266,7 +266,7 @@
     -82.121,
     39.117
    ],
-   "bytes": 1421495,
+   "bytes": 1421221,
    "od_bytes": 124804,
    "counties": 120
   },
@@ -281,7 +281,7 @@
     -89.397,
     33.003
    ],
-   "bytes": 1519544,
+   "bytes": 1519173,
    "od_bytes": 129067,
    "counties": 64
   },
@@ -296,7 +296,7 @@
     -67.018,
     47.295
    ],
-   "bytes": 551716,
+   "bytes": 551576,
    "od_bytes": 38391,
    "counties": 16
   },
@@ -311,7 +311,7 @@
     -75.066,
     39.708
    ],
-   "bytes": 1519672,
+   "bytes": 1519373,
    "od_bytes": 120380,
    "counties": 24
   },
@@ -326,7 +326,7 @@
     -69.956,
     42.867
    ],
-   "bytes": 1721025,
+   "bytes": 1720752,
    "od_bytes": 141913,
    "counties": 14
   },
@@ -341,7 +341,7 @@
     -82.425,
     48.045
    ],
-   "bytes": 2841373,
+   "bytes": 2841038,
    "od_bytes": 259525,
    "counties": 83
   },
@@ -356,7 +356,7 @@
     -90.12,
     49.067
    ],
-   "bytes": 1811659,
+   "bytes": 1811478,
    "od_bytes": 137593,
    "counties": 87
   },
@@ -371,7 +371,7 @@
     -88.149,
     34.991
    ],
-   "bytes": 903263,
+   "bytes": 903034,
    "od_bytes": 84708,
    "counties": 82
   },
@@ -386,7 +386,7 @@
     -89.227,
     40.526
    ],
-   "bytes": 2032278,
+   "bytes": 2032030,
    "od_bytes": 157537,
    "counties": 115
   },
@@ -401,7 +401,7 @@
     -104.094,
     48.934
    ],
-   "bytes": 462954,
+   "bytes": 462902,
    "od_bytes": 29623,
    "counties": 56
   },
@@ -416,7 +416,7 @@
     -95.59,
     42.913
    ],
-   "bytes": 778706,
+   "bytes": 778632,
    "od_bytes": 52266,
    "counties": 93
   },
@@ -431,7 +431,7 @@
     -114.056,
     41.652
    ],
-   "bytes": 709865,
+   "bytes": 709770,
    "od_bytes": 67768,
    "counties": 17
   },
@@ -446,7 +446,7 @@
     -70.732,
     45.106
    ],
-   "bytes": 457352,
+   "bytes": 457314,
    "od_bytes": 33747,
    "counties": 10
   },
@@ -461,7 +461,7 @@
     -73.922,
     41.293
    ],
-   "bytes": 2496909,
+   "bytes": 2496501,
    "od_bytes": 155490,
    "counties": 21
   },
@@ -476,7 +476,7 @@
     -103.1,
     36.931
    ],
-   "bytes": 685157,
+   "bytes": 684943,
    "od_bytes": 55043,
    "counties": 33
   },
@@ -491,7 +491,7 @@
     -71.915,
     44.979
    ],
-   "bytes": 5682735,
+   "bytes": 5682033,
    "od_bytes": 405229,
    "counties": 62
   },
@@ -506,7 +506,7 @@
     -75.543,
     36.544
    ],
-   "bytes": 2820791,
+   "bytes": 2820356,
    "od_bytes": 245344,
    "counties": 100
   },
@@ -521,7 +521,7 @@
     -96.606,
     48.91
    ],
-   "bytes": 405386,
+   "bytes": 405365,
    "od_bytes": 21379,
    "counties": 53
   },
@@ -536,7 +536,7 @@
     -80.541,
     41.957
    ],
-   "bytes": 3055830,
+   "bytes": 3055376,
    "od_bytes": 306110,
    "counties": 88
   },
@@ -551,7 +551,7 @@
     -94.456,
     36.965
    ],
-   "bytes": 1481073,
+   "bytes": 1480951,
    "od_bytes": 113388,
    "counties": 77
   },
@@ -566,7 +566,7 @@
     -116.899,
     46.185
    ],
-   "bytes": 1072392,
+   "bytes": 1072140,
    "od_bytes": 92983,
    "counties": 36
   },
@@ -581,7 +581,7 @@
     -74.7,
     42.216
    ],
-   "bytes": 3883940,
+   "bytes": 3883329,
    "od_bytes": 319913,
    "counties": 67
   },
@@ -596,7 +596,7 @@
     -71.163,
     42.014
    ],
-   "bytes": 261802,
+   "bytes": 261781,
    "od_bytes": 21513,
    "counties": 5
   },
@@ -611,7 +611,7 @@
     -78.604,
     35.176
    ],
-   "bytes": 1395497,
+   "bytes": 1395178,
    "od_bytes": 125545,
    "counties": 46
   },
@@ -626,7 +626,7 @@
     -96.494,
     45.805
    ],
-   "bytes": 497104,
+   "bytes": 497077,
    "od_bytes": 22578,
    "counties": 66
   },
@@ -641,7 +641,7 @@
     -81.752,
     36.637
    ],
-   "bytes": 1723263,
+   "bytes": 1723064,
    "od_bytes": 160705,
    "counties": 95
   },
@@ -656,7 +656,7 @@
     -93.699,
     36.41
    ],
-   "bytes": 6913681,
+   "bytes": 6912412,
    "od_bytes": 578619,
    "counties": 254
   },
@@ -671,7 +671,7 @@
     -109.273,
     41.944
    ],
-   "bytes": 854388,
+   "bytes": 854293,
    "od_bytes": 65000,
    "counties": 29
   },
@@ -686,7 +686,7 @@
     -71.675,
     44.978
    ],
-   "bytes": 310784,
+   "bytes": 310766,
    "od_bytes": 18981,
    "counties": 14
   },
@@ -701,7 +701,7 @@
     -75.293,
     39.341
    ],
-   "bytes": 2313406,
+   "bytes": 2313022,
    "od_bytes": 195500,
    "counties": 133
   },
@@ -716,7 +716,7 @@
     -117.05,
     48.989
    ],
-   "bytes": 1830707,
+   "bytes": 1830404,
    "od_bytes": 166273,
    "counties": 39
   },
@@ -731,7 +731,7 @@
     -77.769,
     40.598
    ],
-   "bytes": 683210,
+   "bytes": 683106,
    "od_bytes": 54020,
    "counties": 55
   },
@@ -746,7 +746,7 @@
     -87.07,
     46.853
    ],
-   "bytes": 1722186,
+   "bytes": 1721990,
    "od_bytes": 148385,
    "counties": 72
   },
@@ -761,7 +761,7 @@
     -104.106,
     44.832
    ],
-   "bytes": 220597,
+   "bytes": 220590,
    "od_bytes": 14981,
    "counties": 23
   }
@@ -5838,9 +5838,8 @@
  "ovl": {
   "keys": [
    "oz1",
-   "oz2e",
-   "oz2e_rural",
-   "oz2n",
+   "oz2",
+   "oz2_rural",
    "nmtc",
    "nmtc_sd",
    "cdfi_ia",
@@ -5855,9 +5854,8 @@
   ],
   "flags": {
    "oz1": "2018 Qualified Opportunity Zone (Notices 2018-48 and 2019-42; CDFI Fund list of 2010 tracts, carried to 2020 tracts)",
-   "oz2e": "Eligible for nomination as a 2027 Qualified Opportunity Zone (Treasury list, September 2026 update; 2020-2024 ACS, 2020 tracts). Designations by Treasury had not been published when this was built.",
-   "oz2e_rural": "Eligible 2027 QOZ tract made up entirely of a rural area (as Treasury flags it)",
-   "oz2n": "Nominated by its governor for a 2027 Qualified Opportunity Zone (Alaska, 25 tracts, the Governor's nominations announced October 13, 2026 (listed by area and tract number); Arizona, 127 tracts (125 nominated July 7, 2026, then replacements and additions sent October 26); Colorado, 91 tracts, submitted September 28, 2026; Delaware, 25 of 61 eligible tracts (12 rural), announced September 28, 2026; not yet certified by Treasury; Georgia, 238 tracts on the state's map, edited October 2026; its September 28 list had 235; Idaho, 25 tracts, certified by Treasury as designated zones October 1, 2026; Indiana, 126 tracts, published September 25, 2026; Iowa, 44 tracts, approved by the Treasury as of October 29, 2026 (the state's page); Kentucky, 137 tracts, the final list submitted by the Governor (the Cabinet's file, October 13, 2026); Massachusetts, 104 tracts, nominated October 2, 2026; awaiting Treasury certification (mass.gov, October 30, 2026); Nebraska, 28 tracts, submitted July 22, 2026; New Hampshire, 25 tracts, as confirmed in the federal submission portal on September 29, 2026; New Jersey, 130 tracts (the most allowed, of 518 eligible), submitted for federal designation (announced October 29, 2026); Oklahoma, 104 tracts selected for nomination and submitted by the Governor (the Department of Commerce map, October 2026); Oregon, 58 tracts, the Governor's final list submitted to the Treasury for certification (October 29, 2026); Pennsylvania, 218 tracts, submitted to the Treasury (October 29, 2026); South Carolina, 113 tracts, the list the Department of Commerce posts with the Governor's nominations (submitted September 10, 2026; list dated October 21, 2026, replacing the 112-tract recommendations of September 22); Texas, 608 tracts, submitted September 4, 2026; Utah, 37 tracts, announced September 24, 2026; Washington, 99 tracts, announced October 8, 2026)",
+   "oz2": "Designated 2027 Qualified Opportunity Zone (Treasury; list published by the CDFI Fund November 5, 2026; effective January 1, 2027; 2020 tracts)",
+   "oz2_rural": "Designated 2027 QOZ that Treasury lists as a rural QOZ",
    "nmtc": "New Markets Tax Credit low-income community (CDFI Fund, 2016-2020 ACS, 2020 tracts; includes high-migration rural tracts)",
    "nmtc_sd": "NMTC low-income community meeting a primary severe-distress test: poverty above 30%, median family income at or below 60% of the benchmark, or unemployment at least 1.5 times the national rate. Other routes to that status are not computed.",
    "cdfi_ia": "CDFI Program Investment Area (CDFI Fund, 2016-2020 ACS, 2020 tracts)",
@@ -5872,7 +5870,7 @@
   },
   "vintages": {
    "oz1": "2018 designations (2011-2015 ACS, 2010 tracts)",
-   "oz2e": "2020-2024 ACS, September 2026 list",
+   "oz2": "published November 5, 2026 (effective January 1, 2027)",
    "nmtc": "2016-2020 ACS",
    "cdfi_ia": "2016-2020 ACS",
    "lila": "2019 (LRAM)",
@@ -5882,8 +5880,7 @@
    "dda26": "HUD 2026 list (FY2025 rents and income limits)",
    "dda27": "HUD 2027 list (FY2026 rents and income limits)",
    "hubzone": "SBA HUBZone map, current designations",
-   "transit": "stations as of 2026-10-26",
-   "oz2n": "state lists as of 2026-10-30"
+   "transit": "stations as of 2026-10-26"
   },
   "hubzone_fetched": "2026-10-26",
   "transit": {
@@ -5895,161 +5892,6 @@
    "brt": 239,
    "ntd_rail_added": 48,
    "rule": "percent of the tract's area within a half mile (804.67 m) of a rail or bus rapid transit station; a tract is flagged when that is half or more"
-  },
-  "oz_nominations": [
-   {
-    "state": "02",
-    "name": "Alaska",
-    "status": "25 tracts, the Governor's nominations announced October 13, 2026 (listed by area and tract number)",
-    "count": 25
-   },
-   {
-    "state": "04",
-    "name": "Arizona",
-    "status": "127 tracts (125 nominated July 7, 2026, then replacements and additions sent October 26)",
-    "count": 127
-   },
-   {
-    "state": "08",
-    "name": "Colorado",
-    "status": "91 tracts, submitted September 28, 2026",
-    "count": 91
-   },
-   {
-    "state": "10",
-    "name": "Delaware",
-    "status": "25 of 61 eligible tracts (12 rural), announced September 28, 2026; not yet certified by Treasury",
-    "count": 25
-   },
-   {
-    "state": "13",
-    "name": "Georgia",
-    "status": "238 tracts on the state's map, edited October 2026; its September 28 list had 235",
-    "count": 238
-   },
-   {
-    "state": "16",
-    "name": "Idaho",
-    "status": "25 tracts, certified by Treasury as designated zones October 1, 2026",
-    "count": 25
-   },
-   {
-    "state": "18",
-    "name": "Indiana",
-    "status": "126 tracts, published September 25, 2026",
-    "count": 126
-   },
-   {
-    "state": "19",
-    "name": "Iowa",
-    "status": "44 tracts, approved by the Treasury as of October 29, 2026 (the state's page)",
-    "count": 44
-   },
-   {
-    "state": "21",
-    "name": "Kentucky",
-    "status": "137 tracts, the final list submitted by the Governor (the Cabinet's file, October 13, 2026)",
-    "count": 137
-   },
-   {
-    "state": "25",
-    "name": "Massachusetts",
-    "status": "104 tracts, nominated October 2, 2026; awaiting Treasury certification (mass.gov, October 30, 2026)",
-    "count": 104
-   },
-   {
-    "state": "31",
-    "name": "Nebraska",
-    "status": "28 tracts, submitted July 22, 2026",
-    "count": 28
-   },
-   {
-    "state": "33",
-    "name": "New Hampshire",
-    "status": "25 tracts, as confirmed in the federal submission portal on September 29, 2026",
-    "count": 25
-   },
-   {
-    "state": "34",
-    "name": "New Jersey",
-    "status": "130 tracts (the most allowed, of 518 eligible), submitted for federal designation (announced October 29, 2026)",
-    "count": 130
-   },
-   {
-    "state": "40",
-    "name": "Oklahoma",
-    "status": "104 tracts selected for nomination and submitted by the Governor (the Department of Commerce map, October 2026)",
-    "count": 104
-   },
-   {
-    "state": "41",
-    "name": "Oregon",
-    "status": "58 tracts, the Governor's final list submitted to the Treasury for certification (October 29, 2026)",
-    "count": 58
-   },
-   {
-    "state": "42",
-    "name": "Pennsylvania",
-    "status": "218 tracts, submitted to the Treasury (October 29, 2026)",
-    "count": 218
-   },
-   {
-    "state": "45",
-    "name": "South Carolina",
-    "status": "113 tracts, the list the Department of Commerce posts with the Governor's nominations (submitted September 10, 2026; list dated October 21, 2026, replacing the 112-tract recommendations of September 22)",
-    "count": 113
-   },
-   {
-    "state": "48",
-    "name": "Texas",
-    "status": "608 tracts, submitted September 4, 2026",
-    "count": 608
-   },
-   {
-    "state": "49",
-    "name": "Utah",
-    "status": "37 tracts, announced September 24, 2026",
-    "count": 37
-   },
-   {
-    "state": "53",
-    "name": "Washington",
-    "status": "99 tracts, announced October 8, 2026",
-    "count": 99
-   }
-  ],
-  "oz_unpublished": {
-   "05": "the Governor selected 78 zones, which Treasury has certified, to take effect January 1, 2027, but the state has not published which tracts they are",
-   "06": "the Department of Finance and GO-Biz published a draft list of 560 recommended tracts for public comment in August 2026, but the final nominations have not been published, so no tract is shown as nominated",
-   "20": "the Department of Commerce says the nomination window has closed and expects about 53 tracts, but has published no list, so no tract is shown as nominated",
-   "51": "the Department of Housing and Community Development and the Virginia Economic Development Partnership ran the state's nomination process and have published no list (VEDP's 'Nominated Tracts' map layer is the 2018 list of 212), so no tract is shown as nominated",
-   "26": "the Michigan Economic Development Corporation has not published its nominations (its page still describes the September process), so no tract is shown as nominated",
-   "37": "the Department of Commerce has chosen its tracts (up to 202 under its preliminary allocation) and says it will share them once the Treasury certifies them, so no tract is shown as nominated",
-   "01": "the Alabama Department of Economic and Community Affairs has published no 2027 nominations (it took applications through July 31, 2026), so no tract is shown as nominated",
-   "22": "Louisiana Economic Development has published no 2027 nominations (its Opportunity Zones page describes only the federal timeline and the current zones), so no tract is shown as nominated",
-   "39": "the state has published a 130-tract list under review, not its final nominations, and says it will publish the final list once the Treasury confirms it, so no tract is shown as nominated",
-   "55": "the state has published its finalists, not its final nominations, so no tract is shown as nominated",
-   "29": "the Department of Economic Development received 221 intake forms and took public comment from July 17 to 31, 2026, but has published no nominations, so no tract is shown as nominated",
-   "24": "the Department of Housing and Community Development says the Governor must submit up to 113 of the state's 451 eligible tracts (114 nominations were reported sent to Treasury on October 9, 2026), but it has published no list, so no tract is shown as nominated",
-   "27": "the Department of Employment and Economic Development has published no 2027 nominations (its Opportunity Zones page, updated June 2026, describes only the 2018 zones), so no tract is shown as nominated",
-   "30": "the Department of Commerce's map (September 22, 2026) shows 20 of the 58 eligible tracts selected by the Governor and 4 still under discussion, so its list is not final and no tract is shown as nominated",
-   "09": "the Department of Economic and Community Development has published no 2027 nominations (its Opportunity Zones page still describes the 72 zones of 2018), so no tract is shown as nominated",
-   "11": "the Deputy Mayor for Planning and Economic Development published 25 preliminary recommendations from the 66 tracts it counted as eligible (presentation of July 15, 2026; Treasury's eligible list of September 23, 2026, shown on the map, has 69 for DC, and the two counts weren't reconciled), but its Opportunity Zones page (read October 31, 2026) shows no final nominations, so no tract is shown as nominated",
-   "12": "FloridaCommerce has published no 2027 nominations (its page still says it is reviewing eligible tracts and links only a list of candidate tracts), so no tract is shown as nominated",
-   "15": "the Department of Business, Economic Development and Tourism says the Governor will nominate 25 of 88 eligible tracts but has published no list, so no tract is shown as nominated",
-   "17": "the Governor said in August 2026 that the state would submit 238 tracts by the end of September, but the Department of Commerce and Economic Opportunity has published no list, so no tract is shown as nominated",
-   "23": "the Department of Economic and Community Development says the Governor must select 25 of Maine's 78 potentially eligible tracts, but it has published no nominations, so no tract is shown as nominated",
-   "28": "the Mississippi Development Authority said it would recommend 101 tracts and has closed public comment, but has published no nominations, so no tract is shown as nominated",
-   "32": "the Governor's Office of Economic Development's page shows only a draft list put out for comment (up to 49 of 195 eligible tracts) and no final nominations, so no tract is shown as nominated",
-   "35": "the Economic Development Department could nominate up to 65 tracts and its timeline set July 1, 2026 to finalize the list, but it has published no 2027 nominations (its page shows the nomination process and an eligibility map only), so no tract is shown as nominated",
-   "36": "Empire State Development has published no 2027 nominations (its Opportunity Zones page describes only the 2018 zones), so no tract is shown as nominated",
-   "38": "the Department of Commerce has posted a map of 25 'final candidate' tracts but has not published its nominations, so no tract is shown as nominated",
-   "44": "Rhode Island Commerce says the Governor will nominate 25 of the state's 55 eligible tracts for 2027 through 2036 but has published no list, so no tract is shown as nominated",
-   "46": "the Governor's Office of Economic Development has published no 2027 nominations, so no tract is shown as nominated",
-   "47": "the Department of Economic and Community Development has published no 2027 nominations (its page describes only the 2018 zones), so no tract is shown as nominated",
-   "50": "the Agency of Commerce and Community Development published draft recommendations for public input in July 2026 but has not published final nominations, so no tract is shown as nominated",
-   "54": "the Division of Economic Development closed local nominations on July 1, 2026 and said the Governor would submit by September 28 (up to 52 of 207 eligible tracts), but has published no list, so no tract is shown as nominated",
-   "56": "the Wyoming Business Council shows only a preliminary eligibility map and the Governor's press releases name no nominations (both read October 31, 2026), so no tract is shown as nominated"
   }
  },
  "stores": {
@@ -20126,6 +19968,134 @@
    "a": 0.2838
   }
  },
+ "data_dates": [
+  {
+   "key": "ce",
+   "label": "Residents' spending by income",
+   "source": "BLS Consumer Expenditure Survey (interview and diary)",
+   "covers": "2024 and 2025, averaged (2025 released October 29, 2026)",
+   "checked": "2026-11-06",
+   "next": "2026 data, about fall 2027",
+   "next_by": "2027-12-31"
+  },
+  {
+   "key": "acs",
+   "label": "Residents, households and income",
+   "source": "Census Bureau American Community Survey, 5-year estimates",
+   "covers": "2020\u20132024",
+   "checked": "2026-11-06",
+   "next": "2021\u20132025, usually released in December",
+   "next_by": "2026-12-31"
+  },
+  {
+   "key": "cbp",
+   "label": "Stores, restaurants and their jobs",
+   "source": "Census Bureau County and ZIP Code Business Patterns",
+   "covers": "2023",
+   "checked": "2026-11-06",
+   "next": "2024: the Census Bureau says it has no planned release date",
+   "next_by": ""
+  },
+  {
+   "key": "nes",
+   "label": "Self-employed sellers (no employees)",
+   "source": "Census Bureau Nonemployer Statistics",
+   "covers": "2024 (released September 29, 2026)",
+   "checked": "2026-11-06",
+   "next": "2025, about fall 2027",
+   "next_by": "2027-12-31"
+  },
+  {
+   "key": "econ",
+   "label": "Sales per store by kind of business",
+   "source": "Census Bureau Economic Census",
+   "covers": "2022",
+   "checked": "2026-10",
+   "next": "2027 census, results from about 2029",
+   "next_by": ""
+  },
+  {
+   "key": "lodes",
+   "label": "Where residents work and how far they commute",
+   "source": "Census Bureau LEHD Origin-Destination Employment Statistics (LODES 8)",
+   "covers": "2024 (Alaska 2016, Michigan 2021)",
+   "checked": "2026-11-05",
+   "next": "2025, usually in the fall",
+   "next_by": "2027-12-31"
+  },
+  {
+   "key": "rates",
+   "label": "Sales tax rates",
+   "source": "State revenue departments' rate tables and local governments' own pages",
+   "covers": "rates in effect in October 2026",
+   "checked": "2026-10",
+   "next": "January 1, 2027 changes (most states post them in December)",
+   "next_by": "2027-01-01"
+  },
+  {
+   "key": "oz",
+   "label": "Opportunity Zones",
+   "source": "Treasury and the CDFI Fund",
+   "covers": "2018 zones (through 2028); 2027 zones, published November 5, 2026, in effect from January 1, 2027",
+   "checked": "2026-11-06",
+   "next": "none scheduled (zones are redesignated every ten years)",
+   "next_by": ""
+  },
+  {
+   "key": "nmtc",
+   "label": "New Markets Tax Credit and CDFI Investment Areas",
+   "source": "CDFI Fund eligibility lists",
+   "covers": "2016\u20132020 ACS",
+   "checked": "2026-11-06",
+   "next": "when the CDFI Fund moves to a newer ACS",
+   "next_by": ""
+  },
+  {
+   "key": "hud",
+   "label": "Qualified Census Tracts and Difficult Development Areas",
+   "source": "HUD",
+   "covers": "2026 and 2027 lists",
+   "checked": "2026-11-06",
+   "next": "2028 lists, usually in the fall of 2027",
+   "next_by": "2027-12-31"
+  },
+  {
+   "key": "food",
+   "label": "Food access",
+   "source": "USDA Economic Research Service",
+   "covers": "supermarket access 2019; SNAP-store access 2025",
+   "checked": "2026-11-06",
+   "next": "next ERS update (none announced)",
+   "next_by": ""
+  },
+  {
+   "key": "ers",
+   "label": "Visitor flag (recreation counties)",
+   "source": "USDA ERS County Typology Codes; Census County Business Patterns (lodging jobs)",
+   "covers": "2025 edition; lodging jobs 2023",
+   "checked": "2026-11-05",
+   "next": "next ERS edition (every few years)",
+   "next_by": ""
+  },
+  {
+   "label": "HUBZones",
+   "source": "SBA's HUBZone map",
+   "next": "SBA redraws HUBZones every five years; governor-designated and disaster areas lapse on set dates",
+   "next_by": "",
+   "key": "hubzone",
+   "covers": "as fetched October 26, 2026",
+   "checked": "2026-10-26"
+  },
+  {
+   "label": "Rail and bus rapid transit stations",
+   "source": "USDOT National Transit Map and FTA National Transit Database",
+   "next": "refetched every few months",
+   "next_by": "",
+   "key": "transit",
+   "covers": "as fetched October 26, 2026",
+   "checked": "2026-10-26"
+  }
+ ],
  "border": {
   "miles": 20,
   "marked": {
