@@ -11,7 +11,7 @@
     -84.955,
     34.977
    ],
-   "bytes": 1663309,
+   "bytes": 1678957,
    "od_bytes": 137726,
    "counties": 67
   },
@@ -26,7 +26,7 @@
     -130.137,
     71.214
    ],
-   "bytes": 560013,
+   "bytes": 563239,
    "od_bytes": 14800,
    "counties": 30
   },
@@ -56,7 +56,7 @@
     -89.855,
     36.484
    ],
-   "bytes": 1055003,
+   "bytes": 1055929,
    "od_bytes": 80133,
    "counties": 75
   },
@@ -71,7 +71,7 @@
     -114.273,
     41.852
    ],
-   "bytes": 9256323,
+   "bytes": 9258519,
    "od_bytes": 710436,
    "counties": 58
   },
@@ -86,7 +86,7 @@
     -102.151,
     40.894
    ],
-   "bytes": 1763734,
+   "bytes": 1764719,
    "od_bytes": 120284,
    "counties": 64
   },
@@ -101,7 +101,7 @@
     -71.814,
     42.023
    ],
-   "bytes": 900046,
+   "bytes": 898926,
    "od_bytes": 78880,
    "counties": 9
   },
@@ -116,7 +116,7 @@
     -75.056,
     39.832
    ],
-   "bytes": 265098,
+   "bytes": 264835,
    "od_bytes": 22570,
    "counties": 3
   },
@@ -161,7 +161,7 @@
     -80.85,
     34.979
    ],
-   "bytes": 2825281,
+   "bytes": 2829919,
    "od_bytes": 239928,
    "counties": 159
   },
@@ -206,7 +206,7 @@
     -87.53,
     42.488
    ],
-   "bytes": 3515483,
+   "bytes": 3537012,
    "od_bytes": 277139,
    "counties": 102
   },
@@ -266,7 +266,7 @@
     -82.121,
     39.117
    ],
-   "bytes": 1421924,
+   "bytes": 1421914,
    "od_bytes": 124804,
    "counties": 120
   },
@@ -311,7 +311,7 @@
     -75.066,
     39.708
    ],
-   "bytes": 1519373,
+   "bytes": 1518923,
    "od_bytes": 120380,
    "counties": 24
   },
@@ -371,7 +371,7 @@
     -88.149,
     34.991
    ],
-   "bytes": 903034,
+   "bytes": 902881,
    "od_bytes": 84708,
    "counties": 82
   },
@@ -386,7 +386,7 @@
     -89.227,
     40.526
    ],
-   "bytes": 2089708,
+   "bytes": 2092292,
    "od_bytes": 157537,
    "counties": 115
   },
@@ -461,7 +461,7 @@
     -73.922,
     41.293
    ],
-   "bytes": 2496695,
+   "bytes": 2496541,
    "od_bytes": 155490,
    "counties": 21
   },
@@ -491,7 +491,7 @@
     -71.915,
     44.979
    ],
-   "bytes": 5689565,
+   "bytes": 5700646,
    "od_bytes": 405229,
    "counties": 62
   },
@@ -536,7 +536,7 @@
     -80.541,
     41.957
    ],
-   "bytes": 3072679,
+   "bytes": 3076531,
    "od_bytes": 306110,
    "counties": 88
   },
@@ -581,7 +581,7 @@
     -74.7,
     42.216
    ],
-   "bytes": 3883329,
+   "bytes": 3895624,
    "od_bytes": 319913,
    "counties": 67
   },
@@ -596,7 +596,7 @@
     -71.163,
     42.014
    ],
-   "bytes": 264757,
+   "bytes": 264661,
    "od_bytes": 21513,
    "counties": 5
   },
@@ -626,7 +626,7 @@
     -96.494,
     45.805
    ],
-   "bytes": 497077,
+   "bytes": 499768,
    "od_bytes": 22578,
    "counties": 66
   },
@@ -641,7 +641,7 @@
     -81.752,
     36.637
    ],
-   "bytes": 1733017,
+   "bytes": 1733099,
    "od_bytes": 160705,
    "counties": 95
   },
@@ -701,7 +701,7 @@
     -75.293,
     39.341
    ],
-   "bytes": 2313169,
+   "bytes": 2326217,
    "od_bytes": 195500,
    "counties": 133
   },
@@ -746,7 +746,7 @@
     -87.07,
     46.853
    ],
-   "bytes": 1721990,
+   "bytes": 1722301,
    "od_bytes": 148385,
    "counties": 72
   },
@@ -20640,6 +20640,15 @@
    "next_by": "2027-01-01"
   },
   {
+   "key": "border",
+   "label": "Gas and cigarette taxes (border notes)",
+   "source": "Energy Information Administration, motor fuel taxes; states' and localities' own pages for cigarettes",
+   "covers": "gas: July 1, 2026 table, with later state changes; cigarettes: rates read October and November 2026",
+   "checked": "2026-11-06",
+   "next": "EIA's January 2027 table, usually out by February",
+   "next_by": "2027-03-31"
+  },
+  {
    "key": "oz",
    "label": "Opportunity Zones",
    "source": "Treasury and the CDFI Fund",
@@ -20720,9 +20729,9 @@
      "next": null
     },
     "gas": {
-     "rate": 8.0,
-     "effective": "current (read 2026-11-04)",
-     "source": "https://tax.alaska.gov/programs/programs/reports/Historical.aspx?60210",
+     "rate": 8.95,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -20736,9 +20745,9 @@
      "next": null
     },
     "gas": {
-     "rate": 30.0,
-     "effective": "2025-07-01",
-     "source": "https://www.revenue.alabama.gov/tax-types/terminal-excise-tax-gasoline-and-diesel-fuel-taxes/",
+     "rate": 31.0,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -20752,9 +20761,9 @@
      "next": null
     },
     "gas": {
-     "rate": 24.7,
-     "effective": "2026-10-01",
-     "source": "https://www.dfa.arkansas.gov/wp-content/uploads/2026MotorFuelsTaxRateAnnouncement.pdf",
+     "rate": 25.0,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -20768,9 +20777,9 @@
      "next": null
     },
     "gas": {
-     "rate": 18.0,
-     "effective": "statute (A.R.S. 28-5606)",
-     "source": "https://www.azleg.gov/ars/28/05606.htm",
+     "rate": 19.0,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -20784,9 +20793,9 @@
      "next": null
     },
     "gas": {
-     "rate": 63.4,
+     "rate": 73.64,
      "effective": "2026-07-01",
-     "source": "https://cdtfa.ca.gov/formspubs/jun26tib.pdf",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -20800,9 +20809,9 @@
      "next": null
     },
     "gas": {
-     "rate": 28.0,
-     "effective": "2026-07-01 to 2027-06-30 (22c tax + 6c road usage fee)",
-     "source": "https://tax.colorado.gov/fuel-tax-and-fee-rates",
+     "rate": 30.18,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -20812,13 +20821,6 @@
      "rate": 4.35,
      "effective": "current (read 2026-11-04)",
      "source": "https://portal.ct.gov/DRS/Taxes/Cigarette-Tax/Tax-Information",
-     "through": null,
-     "next": null
-    },
-    "gas": {
-     "rate": 25.0,
-     "effective": "2000-07-01",
-     "source": "https://www.cga.ct.gov/current/pub/chap_221.htm",
      "through": null,
      "next": null
     }
@@ -20833,8 +20835,8 @@
     },
     "gas": {
      "rate": 35.7,
-     "effective": "Tax Year 2026 (October 1, 2025 to September 30, 2026); the latest posted: OTR and the DC Register had no Tax Year 2027 amount on November 5, 2026",
-     "source": "https://otr.cfo.dc.gov/page/motor-vehicle-fuel-tax",
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -20849,8 +20851,8 @@
     },
     "gas": {
      "rate": 23.0,
-     "effective": "1995-01-01 (statute)",
-     "source": "https://delcode.delaware.gov/title30/c051/sc01/index.html",
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -20864,9 +20866,9 @@
      "next": null
     },
     "gas": {
-     "rate": 38.025,
-     "effective": "2026-01-01 (statewide minimum total); state part 22.0",
-     "source": "https://floridarevenue.com/taxes/tips/Documents/TIP_25B05-05.pdf",
+     "rate": 40.1,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -20880,11 +20882,14 @@
      "next": null
     },
     "gas": {
-     "rate": 33.3,
-     "effective": "2026-01-01 to 2026-12-31",
-     "source": "https://dor.georgia.gov/node/60006",
+     "rate": 34.05,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
-     "next": null
+     "next": {
+      "rate": 35.15,
+      "start": "2027-01-01"
+     }
     }
    },
    "HI": {
@@ -20906,8 +20911,8 @@
     },
     "gas": {
      "rate": 30.0,
-     "effective": "current; unchanged July 1, 2026",
-     "source": "https://revenue.iowa.gov/press-release/2026-01-27/iowa-fuel-tax-rate-change-effective-july-1-2026",
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -20921,9 +20926,9 @@
      "next": null
     },
     "gas": {
-     "rate": 32.0,
-     "effective": "statute (read 2026-11-04)",
-     "source": "https://legislature.idaho.gov/statutesrules/idstat/title63/t63ch24/sect63-2402/",
+     "rate": 33.0,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -20937,10 +20942,10 @@
      "next": null
     },
     "gas": {
-     "rate": 48.3,
+     "rate": 70.4,
      "effective": "2026-07-01",
-     "source": "https://tax.illinois.gov/research/publications/bulletins/fy-2026-23.html",
-     "through": null,
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
+     "through": "2026-12-31",
      "next": null
     }
    },
@@ -20953,9 +20958,9 @@
      "next": null
     },
     "gas": {
-     "rate": 37.0,
+     "rate": 64.5,
      "effective": "2026-07-01",
-     "source": "https://www.in.gov/dor/files/dn43.pdf",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -20969,9 +20974,9 @@
      "next": null
     },
     "gas": {
-     "rate": 24.0,
-     "effective": "statute (read 2026-11-04)",
-     "source": "https://www.ksrevisor.gov/statutes/chapters/ch79/079_034_0141.html",
+     "rate": 25.03,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -20986,8 +20991,8 @@
     },
     "gas": {
      "rate": 26.4,
-     "effective": "2026-07-01 (frozen; emergency reg 103 KAR 43:341E)",
-     "source": "https://apps.legislature.ky.gov/law/kar/downloads/docs/18041/document.engrossed.pdf",
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21001,9 +21006,9 @@
      "next": null
     },
     "gas": {
-     "rate": 20.0,
-     "effective": "current (read 2026-11-04)",
-     "source": "https://revenue.louisiana.gov/tax-education-and-faqs/faqs/excise-taxes/motor-fuel-taxes/what-is-the-tax-rate-on-gasoline-diesel-and-special-fuels",
+     "rate": 20.93,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21017,9 +21022,9 @@
      "next": null
     },
     "gas": {
-     "rate": 24.0,
-     "effective": "statute (read 2026-11-04)",
-     "source": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter64A/Section1",
+     "rate": 27.56,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21033,9 +21038,9 @@
      "next": null
     },
     "gas": {
-     "rate": 46.6,
+     "rate": 46.81,
      "effective": "2026-07-01",
-     "source": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/alerts/tax-alert-maryland-motor-fuel-tax-rate-changes-fy27.pdf",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21049,9 +21054,9 @@
      "next": null
     },
     "gas": {
-     "rate": 30.0,
-     "effective": "statute (read 2026-11-04)",
-     "source": "https://legislature.maine.gov/statutes/36/title36sec2903.html",
+     "rate": 31.45,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21065,9 +21070,9 @@
      "next": null
     },
     "gas": {
-     "rate": 52.4,
-     "effective": "2026-01-01",
-     "source": "https://www.michigan.gov/taxes/business-taxes/motor-fuel/current-tax-rates-for-motor-fuel-and-alternative-fuel",
+     "rate": 53.4,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21081,11 +21086,14 @@
      "next": null
     },
     "gas": {
-     "rate": 32.6,
-     "effective": "2026-01-01 to 2026-12-31",
-     "source": "https://www.revenue.state.mn.us/petroleum-tax-fuel-excise-tax-rates-and-fees",
+     "rate": 32.7,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
-     "next": null
+     "next": {
+      "rate": 32.9,
+      "start": "2027-01-01"
+     }
     }
    },
    "MO": {
@@ -21097,9 +21105,9 @@
      "next": null
     },
     "gas": {
-     "rate": 29.5,
-     "effective": "2025-07-01 (statute)",
-     "source": "https://revisor.mo.gov/main/OneSection.aspx?section=142.803",
+     "rate": 29.99,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21113,9 +21121,9 @@
      "next": null
     },
     "gas": {
-     "rate": 24.0,
-     "effective": "2026-07-01 to 2027-06-30",
-     "source": "https://www.dor.ms.gov/sites/default/files/notices-technical-bulletins/Petroleum%20Distributors%27%20Information%20Bulletin%20Rev.%206-25.pdf",
+     "rate": 24.4,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21129,9 +21137,9 @@
      "next": null
     },
     "gas": {
-     "rate": 33.0,
-     "effective": "statute (read 2026-11-04)",
-     "source": "https://archive.legmt.gov/bills/mca/title_0150/chapter_0700/part_0040/section_0030/0150-0700-0040-0030.html",
+     "rate": 33.75,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21145,12 +21153,12 @@
      "next": null
     },
     "gas": {
-     "rate": 0.0,
+     "rate": 0.25,
      "effective": "2026-10-10",
-     "source": "https://www.ncdor.gov/important-notice-temporary-suspension-motor-fuel-excise-tax-and-dyed-diesel-enforcement",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": "2026-11-30",
      "next": {
-      "rate": 41.0,
+      "rate": 41.25,
       "start": "2026-12-01"
      }
     }
@@ -21164,9 +21172,9 @@
      "next": null
     },
     "gas": {
-     "rate": 23.0,
-     "effective": "statute (read 2026-11-04)",
-     "source": "https://ndlegis.gov/cencode/t57c43-1.pdf",
+     "rate": 23.03,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21180,9 +21188,9 @@
      "next": null
     },
     "gas": {
-     "rate": 31.8,
-     "effective": "2026-07-01 to 2026-12-31",
-     "source": "https://revenue.nebraska.gov/sites/default/files/doc/news-release/fuels/mfrate_6-2026.pdf",
+     "rate": 32.7,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21196,9 +21204,9 @@
      "next": null
     },
     "gas": {
-     "rate": 22.2,
-     "effective": "2014-07-01",
-     "source": "https://www.gc.nh.gov/lba/Revenues/FY%2026-27/HWM%20Agency%20Presentations/DOS%20House%20Ways%20and%20Means%20Presentation%20Final%20-%20with%20Correction.pdf",
+     "rate": 23.75,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21212,9 +21220,9 @@
      "next": null
     },
     "gas": {
-     "rate": 49.1,
-     "effective": "2026-01-01",
-     "source": "https://www.nj.gov/treasury/news/2025/12012025.shtml",
+     "rate": 49.15,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21228,9 +21236,9 @@
      "next": null
     },
     "gas": {
-     "rate": 17.0,
-     "effective": "current (read 2026-11-04)",
-     "source": "https://www.tax.newmexico.gov/businesses/gasoline-tax/",
+     "rate": 18.88,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21244,9 +21252,9 @@
      "next": null
     },
     "gas": {
-     "rate": 24.0,
-     "effective": "statute (NRS chapter 365, read 2026-11-04)",
-     "source": "https://www.leg.state.nv.us/nrs/nrs-365.html",
+     "rate": 23.8,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21260,9 +21268,9 @@
      "next": null
     },
     "gas": {
-     "rate": 23.85,
-     "effective": "2026-01-01 to 2026-12-31",
-     "source": "https://tax.ny.gov/pubs_and_bulls/publications/pub-908.htm",
+     "rate": 32.18,
+     "effective": "2026-01-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21277,8 +21285,8 @@
     },
     "gas": {
      "rate": 38.5,
-     "effective": "2019-07-01 (statute)",
-     "source": "https://codes.ohio.gov/ohio-revised-code/section-5735.05",
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21292,9 +21300,9 @@
      "next": null
     },
     "gas": {
-     "rate": 19.0,
-     "effective": "current (read 2026-11-04)",
-     "source": "https://oklahoma.gov/content/sok-tax/en/businesses/other-taxes.html",
+     "rate": 20.0,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21309,8 +21317,8 @@
     },
     "gas": {
      "rate": 40.0,
-     "effective": "2024-01-01",
-     "source": "https://www.oregon.gov/odot/FTG/Pages/Current%20Fuel%20Tax%20Rates.aspx",
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21324,9 +21332,9 @@
      "next": null
     },
     "gas": {
-     "rate": 57.6,
-     "effective": "2026-01-01 (calendar 2026)",
-     "source": "https://www.pa.gov/agencies/revenue/resources/tax-rates/motor-fuel-tax-rates.html",
+     "rate": 58.7,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21340,9 +21348,9 @@
      "next": null
     },
     "gas": {
-     "rate": 40.0,
-     "effective": "2025-07-01",
-     "source": "https://tax.ri.gov/sites/g/files/xkgbur541/files/2025-06/ADV_2025_11_Motor_Fuel_Increase.pdf",
+     "rate": 41.12,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21356,9 +21364,9 @@
      "next": null
     },
     "gas": {
-     "rate": 28.0,
-     "effective": "2022-07-01",
-     "source": "https://dor.sc.gov/tax/motor-fuel",
+     "rate": 28.75,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21372,9 +21380,9 @@
      "next": null
     },
     "gas": {
-     "rate": 28.0,
-     "effective": "2015-04-01 (statute)",
-     "source": "https://sdlegislature.gov/api/Statutes/10-47B-4.2.html",
+     "rate": 30.0,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21388,9 +21396,9 @@
      "next": null
     },
     "gas": {
-     "rate": 26.0,
-     "effective": "statute; manual August 2025",
-     "source": "https://www.tn.gov/content/dam/tn/revenue/documents/tax_manuals/Motor-Fuel-Manual-Aug-2025.pdf",
+     "rate": 27.4,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21405,8 +21413,8 @@
     },
     "gas": {
      "rate": 20.0,
-     "effective": "statute (Tax Code 162.102); Comptroller FY2025 revenue guide",
-     "source": "https://Comptroller.Texas.Gov/transparency/revenue/docs/96-1774.pdf",
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21420,10 +21428,10 @@
      "next": null
     },
     "gas": {
-     "rate": 31.9,
-     "effective": "2026-07-01 to 2026-12-31 (separate motor fuel rate)",
-     "source": "https://tax.utah.gov/fuel/rates",
-     "through": null,
+     "rate": 32.55,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
+     "through": "2026-12-31",
      "next": null
     }
    },
@@ -21436,9 +21444,9 @@
      "next": null
     },
     "gas": {
-     "rate": 32.6,
-     "effective": "2026-07-01 to 2027-06-30",
-     "source": "https://www.dmv.virginia.gov/businesses/tax-act/fuels/tax-rates",
+     "rate": 42.4,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21454,7 +21462,7 @@
     "gas": {
      "rate": 33.84,
      "effective": "2026-10-01",
-     "source": "https://dmv.vermont.gov/CVO/fuel-tax/mftia-mfta-quarterly-fees",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21468,9 +21476,9 @@
      "next": null
     },
     "gas": {
-     "rate": 56.5,
+     "rate": 60.17,
      "effective": "2026-07-01",
-     "source": "https://dol.wa.gov/ru/node/3202",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21484,9 +21492,9 @@
      "next": null
     },
     "gas": {
-     "rate": 30.9,
-     "effective": "statute (read 2026-11-04)",
-     "source": "https://www.revenue.wi.gov/Pages/FAQS/ise-mofuel.aspx",
+     "rate": 32.9,
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21501,8 +21509,8 @@
     },
     "gas": {
      "rate": 35.7,
-     "effective": "2026-01-01 to 2026-12-31",
-     "source": "https://tax.wv.gov/Documents/MotorFuel/2026/MotorFuelRates.2026.pdf",
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
@@ -21517,14 +21525,14 @@
     },
     "gas": {
      "rate": 24.0,
-     "effective": "statute (Wyoming Statutes Title 39, read 2026-11-04)",
-     "source": "https://wyoleg.gov/statutes/compress/title39.pdf",
+     "effective": "2026-07-01",
+     "source": "https://www.eia.gov/petroleum/marketing/monthly/xls/fueltaxes.xlsx",
      "through": null,
      "next": null
     }
    }
   },
   "unconfirmed": 0,
-  "complete": false
+  "complete": true
  }
 }
